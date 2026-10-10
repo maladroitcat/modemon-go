@@ -14,7 +14,7 @@ The Overpass query requests objects with at least one of: `amenity`, `shop`, `of
 
 ## Exclusion Logic
 
-Filtering is centralized in `is_meaningful_candidate()`. Named POIs are generally retained unless they are low-value infrastructure. Unnamed features are retained only when their source category is inherently meaningful, such as hospitals, pharmacies, schools, libraries, museums, transit stations, and similar places. Low-value objects such as benches, trash cans, post boxes, toilets, recycling points, generic parking, street lamps, utility-like railway features, and unnamed line features are excluded.
+Filtering is centralized in `is_meaningful_candidate()`. Named POIs are generally retained unless they are low-value infrastructure. Public transport platforms and stop positions are excluded; transit stations, stop areas, and bus stations remain eligible. Railway track/infrastructure values such as rail, abandoned, disused, signal, signal_box, switch, level_crossing, and miniature are excluded even when named; railway stations and halts remain eligible. Unnamed sports pitches are excluded, while named pitches, stadiums, sports centres, and named recreation facilities remain eligible. Other unnamed features are retained only when their source category is inherently meaningful, such as hospitals, pharmacies, schools, libraries, museums, and similar places. Low-value objects such as benches, trash cans, post boxes, toilets, recycling points, generic parking, street lamps, utility-like railway features, and unnamed line features are excluded.
 
 ## Spatial Assignment
 
@@ -26,7 +26,7 @@ Each candidate keeps its original OSM geometry when practical. A representative 
 
 ## Deduplication
 
-POIs are never merged solely because names match. Primary identity is deterministic by region plus OSM type and ID: `REGION_osm_TYPE_ID`. `possible_duplicate_pois.csv` reports likely real-world duplicates using normalized name, proximity, brand/operator, and address signals for manual review.
+POIs are never merged solely because names match. Primary identity is deterministic by region plus OSM type and ID: `REGION_osm_TYPE_ID`. `possible_duplicate_pois.csv` reports likely real-world duplicates for manual review only. Duplicate candidates are restricted to the same `region_id`; normalized names must match; and at least one condition must hold: representative points are within 150 feet, exact non-empty normalized addresses match, or points are within 300 feet and share brand or operator. Same brand or same operator alone is not sufficient.
 
 ## Outputs
 
@@ -35,7 +35,8 @@ POIs are never merged solely because names match. Primary identity is determinis
 - `data/processed/poi_counts_by_region.csv`: count summary by gameplay region
 - `data/processed/poi_counts_by_osm_category.csv`: source category counts by region
 - `data/processed/possible_duplicate_pois.csv`: likely duplicate candidates, not merged
-- `data/processed/excluded_poi_candidates.csv`: excluded candidate audit sample/source table
+- `data/processed/excluded_poi_candidates.csv`: excluded candidates only
+- `data/processed/poi_candidate_audit.csv`: full retained/excluded candidate audit trail
 - `data/processed/poi_ingestion_report.csv`: QA report by region
 - `output/poi_validation_raleigh.png` and `output/poi_validation_durham.png`: region boundaries and retained representative points
 

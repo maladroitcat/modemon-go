@@ -127,10 +127,28 @@ LOW_VALUE_KEY_VALUES = {
     ("amenity", "vending_machine"),
     ("amenity", "waste_basket"),
     ("leisure", "picnic_table"),
+    ("public_transport", "platform"),
     ("public_transport", "stop_position"),
+    ("railway", "abandoned"),
+    ("railway", "disused"),
     ("railway", "level_crossing"),
+    ("railway", "miniature"),
+    ("railway", "rail"),
     ("railway", "signal"),
+    ("railway", "signal_box"),
     ("railway", "switch"),
+}
+
+PUBLIC_TRANSPORT_INFRASTRUCTURE = {"platform", "stop_position"}
+RAILWAY_TRACK_INFRASTRUCTURE = {
+    "abandoned",
+    "disused",
+    "level_crossing",
+    "miniature",
+    "rail",
+    "signal",
+    "signal_box",
+    "switch",
 }
 
 INHERENTLY_MEANINGFUL = {
@@ -171,7 +189,6 @@ INHERENTLY_MEANINGFUL = {
     ("healthcare", "pharmacy"),
     ("leisure", "fitness_centre"),
     ("leisure", "park"),
-    ("leisure", "pitch"),
     ("leisure", "sports_centre"),
     ("public_transport", "station"),
     ("railway", "halt"),
@@ -488,6 +505,10 @@ def address_from_tags(tags: dict[str, Any]) -> str:
     return "; ".join(parts)
 
 
+def normalized_address(value: Any) -> str:
+    return normalize_name(value)
+
+
 def has_name(tags: dict[str, Any]) -> bool:
     return any(str(tags.get(key, "")).strip() for key in ["name", "brand", "operator"])
 
@@ -497,6 +518,12 @@ def is_meaningful_candidate(tags: dict[str, Any], geom: Any) -> tuple[bool, str]
     if not primary_key or not primary_value:
         return False, "no_target_tag"
     value = primary_value.lower()
+    if primary_key == "public_transport" and value in PUBLIC_TRANSPORT_INFRASTRUCTURE:
+        return False, "transport_platform_infrastructure"
+    if primary_key == "railway" and value in RAILWAY_TRACK_INFRASTRUCTURE:
+        return False, "railway_track_infrastructure"
+    if primary_key == "leisure" and value == "pitch" and not has_name(tags):
+        return False, "unnamed_pitch"
     if (primary_key, value) in LOW_VALUE_KEY_VALUES or value in LOW_VALUE_VALUES:
         return False, "low_value_category"
     if primary_key == "amenity" and value in {"parking", "parking_space", "bicycle_parking"}:
@@ -659,11 +686,12 @@ def validate_pois(pois: gpd.GeoDataFrame, regions: gpd.GeoDataFrame) -> None:
 def possible_duplicates(pois: gpd.GeoDataFrame) -> pd.DataFrame:
     rows = []
     if pois.empty:
-        return pd.DataFrame(columns=["poi_id_a", "poi_id_b", "normalized_name", "distance_feet", "reason"])
+        return pd.DataFrame(columns=["poi_id_a", "poi_id_b", "region_id_a", "region_id_b", "normalized_name", "distance_feet", "reason"])
     projected = pois.to_crs(AREA_CRS).copy()
     projected["rep_geometry"] = gpd.points_from_xy(projected["representative_longitude"], projected["representative_latitude"], crs=FINAL_CRS).to_crs(AREA_CRS)
-    grouped = projected[projected["normalized_name"].fillna("") != ""].groupby("normalized_name")
-    for normalized_name, group in grouped:
+    projected["normalized_address"] = projected["address"].map(normalized_address)
+    grouped = projected[projected["normalized_name"].fillna("") != ""].groupby(["region_id", "normalized_name"])
+    for (region_id, normalized_name), group in grouped:
         records = list(group.itertuples())
         if len(records) < 2:
             continue
@@ -672,22 +700,29 @@ def possible_duplicates(pois: gpd.GeoDataFrame) -> pd.DataFrame:
                 distance = a.rep_geometry.distance(b.rep_geometry)
                 same_brand = bool(a.brand) and a.brand == b.brand
                 same_operator = bool(a.operator) and a.operator == b.operator
-                same_address = bool(a.address) and a.address == b.address
-                if distance <= 100 or same_brand or same_operator or same_address:
-                    rows.append(
-                        {
-                            "poi_id_a": a.poi_id,
-                            "poi_id_b": b.poi_id,
-                            "region_id_a": a.region_id,
-                            "region_id_b": b.region_id,
-                            "normalized_name": normalized_name,
-                            "distance_feet": round(distance, 1),
-                            "same_brand": same_brand,
-                            "same_operator": same_operator,
-                            "same_address": same_address,
-                            "reason": "same normalized name with proximity/brand/operator/address signal",
-                        }
-                    )
+                same_address = bool(a.normalized_address) and a.normalized_address == b.normalized_address
+                if distance <= 150:
+                    reason = "same normalized name within 150 feet"
+                elif same_address:
+                    reason = "same normalized name and exact normalized address"
+                elif distance <= 300 and (same_brand or same_operator):
+                    reason = "same normalized name within 300 feet with same brand/operator"
+                else:
+                    continue
+                rows.append(
+                    {
+                        "poi_id_a": a.poi_id,
+                        "poi_id_b": b.poi_id,
+                        "region_id_a": a.region_id,
+                        "region_id_b": b.region_id,
+                        "normalized_name": normalized_name,
+                        "distance_feet": round(distance, 1),
+                        "same_brand": same_brand,
+                        "same_operator": same_operator,
+                        "same_address": same_address,
+                        "reason": reason,
+                    }
+                )
     return pd.DataFrame(rows)
 
 
@@ -722,7 +757,12 @@ def write_outputs(pois: gpd.GeoDataFrame, excluded: pd.DataFrame, qa: pd.DataFra
     for col in EXCLUDED_CANDIDATE_COLUMNS:
         if col not in excluded_out.columns:
             excluded_out[col] = None
-    excluded_out[EXCLUDED_CANDIDATE_COLUMNS].to_csv(PROCESSED / "excluded_poi_candidates.csv", index=False)
+    candidate_audit = excluded_out[EXCLUDED_CANDIDATE_COLUMNS].copy()
+    candidate_audit.to_csv(PROCESSED / "poi_candidate_audit.csv", index=False)
+    excluded_only = candidate_audit[
+        ~candidate_audit["exclusion_reason"].fillna("").astype(str).str.startswith("retained:")
+    ].copy()
+    excluded_only.to_csv(PROCESSED / "excluded_poi_candidates.csv", index=False)
     qa["possible_duplicate_count"] = qa["region_id"].map(
         lambda rid: int(((dupes.get("region_id_a") == rid) | (dupes.get("region_id_b") == rid)).sum()) if not dupes.empty else 0
     )
@@ -733,7 +773,8 @@ def write_outputs(pois: gpd.GeoDataFrame, excluded: pd.DataFrame, qa: pd.DataFra
         "counts": counts,
         "category_counts": category_counts,
         "duplicates": dupes,
-        "excluded": excluded_out,
+        "excluded": excluded_only,
+        "candidate_audit": candidate_audit,
         "qa": qa,
     }
 
@@ -783,7 +824,7 @@ The Overpass query requests objects with at least one of: `amenity`, `shop`, `of
 
 ## Exclusion Logic
 
-Filtering is centralized in `is_meaningful_candidate()`. Named POIs are generally retained unless they are low-value infrastructure. Unnamed features are retained only when their source category is inherently meaningful, such as hospitals, pharmacies, schools, libraries, museums, transit stations, and similar places. Low-value objects such as benches, trash cans, post boxes, toilets, recycling points, generic parking, street lamps, utility-like railway features, and unnamed line features are excluded.
+Filtering is centralized in `is_meaningful_candidate()`. Named POIs are generally retained unless they are low-value infrastructure. Public transport platforms and stop positions are excluded; transit stations, stop areas, and bus stations remain eligible. Railway track/infrastructure values such as rail, abandoned, disused, signal, signal_box, switch, level_crossing, and miniature are excluded even when named; railway stations and halts remain eligible. Unnamed sports pitches are excluded, while named pitches, stadiums, sports centres, and named recreation facilities remain eligible. Other unnamed features are retained only when their source category is inherently meaningful, such as hospitals, pharmacies, schools, libraries, museums, and similar places. Low-value objects such as benches, trash cans, post boxes, toilets, recycling points, generic parking, street lamps, utility-like railway features, and unnamed line features are excluded.
 
 ## Spatial Assignment
 
@@ -795,7 +836,7 @@ Each candidate keeps its original OSM geometry when practical. A representative 
 
 ## Deduplication
 
-POIs are never merged solely because names match. Primary identity is deterministic by region plus OSM type and ID: `REGION_osm_TYPE_ID`. `possible_duplicate_pois.csv` reports likely real-world duplicates using normalized name, proximity, brand/operator, and address signals for manual review.
+POIs are never merged solely because names match. Primary identity is deterministic by region plus OSM type and ID: `REGION_osm_TYPE_ID`. `possible_duplicate_pois.csv` reports likely real-world duplicates for manual review only. Duplicate candidates are restricted to the same `region_id`; normalized names must match; and at least one condition must hold: representative points are within 150 feet, exact non-empty normalized addresses match, or points are within 300 feet and share brand or operator. Same brand or same operator alone is not sufficient.
 
 ## Outputs
 
@@ -804,7 +845,8 @@ POIs are never merged solely because names match. Primary identity is determinis
 - `data/processed/poi_counts_by_region.csv`: count summary by gameplay region
 - `data/processed/poi_counts_by_osm_category.csv`: source category counts by region
 - `data/processed/possible_duplicate_pois.csv`: likely duplicate candidates, not merged
-- `data/processed/excluded_poi_candidates.csv`: excluded candidate audit sample/source table
+- `data/processed/excluded_poi_candidates.csv`: excluded candidates only
+- `data/processed/poi_candidate_audit.csv`: full retained/excluded candidate audit trail
 - `data/processed/poi_ingestion_report.csv`: QA report by region
 - `output/poi_validation_raleigh.png` and `output/poi_validation_durham.png`: region boundaries and retained representative points
 

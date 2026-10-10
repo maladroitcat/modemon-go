@@ -1,11 +1,8 @@
 region_id,primary_osm_key,primary_osm_value,count
-DUR-01,public_transport,platform,63
 DUR-01,amenity,restaurant,41
 DUR-01,amenity,bar,24
-DUR-01,leisure,pitch,14
 DUR-01,tourism,hotel,8
 DUR-01,craft,brewery,7
-DUR-01,railway,rail,7
 DUR-01,amenity,bank,6
 DUR-01,amenity,place_of_worship,6
 DUR-01,amenity,pub,6
@@ -18,7 +15,6 @@ DUR-01,amenity,fast_food,4
 DUR-01,amenity,fuel,4
 DUR-01,leisure,fitness_centre,4
 DUR-01,office,lawyer,4
-DUR-01,railway,abandoned,4
 DUR-01,shop,bakery,4
 DUR-01,shop,tattoo,4
 DUR-01,tourism,artwork,4
@@ -27,6 +23,7 @@ DUR-01,amenity,ice_cream,3
 DUR-01,amenity,public_bookcase,3
 DUR-01,amenity,school,3
 DUR-01,historic,warehouse,3
+DUR-01,leisure,pitch,3
 DUR-01,office,company,3
 DUR-01,tourism,attraction,3
 DUR-01,amenity,arts_centre,2
@@ -42,7 +39,6 @@ DUR-01,leisure,playground,2
 DUR-01,leisure,sauna,2
 DUR-01,leisure,sports_centre,2
 DUR-01,leisure,stadium,2
-DUR-01,railway,disused,2
 DUR-01,shop,beauty,2
 DUR-01,shop,cannabis,2
 DUR-01,shop,convenience,2
@@ -99,9 +95,8 @@ DUR-01,shop,yes,1
 DUR-01,tourism,guest_house,1
 DUR-01,tourism,information,1
 DUR-01,tourism,museum,1
-DUR-02,public_transport,platform,68
-DUR-02,leisure,pitch,31
 DUR-02,amenity,fast_food,13
+DUR-02,leisure,pitch,11
 DUR-02,leisure,sports_centre,8
 DUR-02,leisure,park,7
 DUR-02,amenity,library,5
@@ -127,9 +122,7 @@ DUR-02,leisure,sports_hall,1
 DUR-02,leisure,track,1
 DUR-02,shop,yes,1
 DUR-02,tourism,museum,1
-RAL-01,public_transport,platform,106
 RAL-01,amenity,restaurant,83
-RAL-01,railway,rail,46
 RAL-01,amenity,bar,43
 RAL-01,amenity,cafe,20
 RAL-01,amenity,place_of_worship,16
@@ -145,7 +138,6 @@ RAL-01,tourism,museum,9
 RAL-01,amenity,pub,8
 RAL-01,amenity,theatre,8
 RAL-01,tourism,artwork,8
-RAL-01,leisure,pitch,7
 RAL-01,shop,clothes,7
 RAL-01,amenity,nightclub,6
 RAL-01,shop,art,6
@@ -162,7 +154,6 @@ RAL-01,amenity,library,3
 RAL-01,amenity,university,3
 RAL-01,historic,building,3
 RAL-01,leisure,sports_centre,3
-RAL-01,railway,signal_box,3
 RAL-01,shop,beauty,3
 RAL-01,shop,furniture,3
 RAL-01,shop,gift,3
@@ -254,10 +245,8 @@ RAL-02,leisure,dog_park,1
 RAL-02,leisure,garden,1
 RAL-02,leisure,sports_centre,1
 RAL-02,office,association,1
-RAL-02,railway,rail,1
 RAL-02,shop,convenience,1
-RAL-03A,leisure,pitch,32
-RAL-03A,public_transport,platform,24
+RAL-03A,leisure,pitch,9
 RAL-03A,leisure,park,5
 RAL-03A,leisure,sports_centre,5
 RAL-03A,tourism,information,5
@@ -273,9 +262,6 @@ RAL-03A,leisure,track,1
 RAL-03A,shop,books,1
 RAL-03A,shop,convenience,1
 RAL-03A,tourism,artwork,1
-RAL-03B,railway,miniature,9
-RAL-03B,leisure,pitch,8
-RAL-03B,public_transport,platform,3
 RAL-03B,amenity,theatre,2
 RAL-03B,amenity,bicycle_rental,1
 RAL-03B,amenity,community_centre,1
@@ -284,7 +270,6 @@ RAL-03B,leisure,sports_centre,1
 RAL-03B,tourism,attraction,1
 RAL-03B,tourism,picnic_site,1
 RAL-03B,tourism,theme_park,1
-RAL-04,public_transport,platform,15
 RAL-04,leisure,park,14
 RAL-04,amenity,cafe,4
 RAL-04,amenity,university,3
@@ -298,12 +283,10 @@ RAL-04,historic,tomb,1
 RAL-04,leisure,fishing,1
 RAL-04,leisure,garden,1
 RAL-04,leisure,golf_course,1
-RAL-04,leisure,pitch,1
 RAL-04,office,educational_institution,1
 RAL-04,office,government,1
 RAL-04,public_transport,stop_area,1
 RAL-04,tourism,artwork,1
 RAL-04,tourism,hotel,1
-RAL-05,public_transport,platform,6
 RAL-05,healthcare,doctor,2
 RAL-05,healthcare,hospital,1
