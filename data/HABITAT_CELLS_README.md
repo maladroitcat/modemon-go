@@ -46,16 +46,31 @@ contribution = weight * exp(-distance / radius)
 
 Distance is measured from each POI representative point to each cell centroid in EPSG:2264 feet. Tier weights and radii are configured for anchor, standard, and micro POIs. Secondary habitat contributions use the configured secondary multiplier.
 
-Repeated-feature dampening uses the configured `rank_sqrt` method. Within each cell, habitat, and OSM source-category group, contributions are sorted strongest first and divided by `sqrt(rank)`. This reduces the effect of many repeated nearby POIs with the same source category without removing them.
+POIs only contribute to a cell when the cell centroid is within the configured cutoff distance for that POI's tier:
+
+```text
+distance <= radius * distance_cutoff_multiplier
+```
+
+In the v1 baseline, `distance_cutoff_multiplier` is `3.0`, so anchor, standard, and micro POIs contribute within approximately 750 m, 375 m, and 180 m respectively.
+
+Repeated-feature dampening uses explicit configured multipliers. Within each cell, habitat, and OSM source-category group, contributions are sorted strongest first and multiplied by rank-specific values: rank 1 = `1.0`, rank 2 = `0.5`, rank 3 = `0.25`, and rank 4+ = `0.1`. This reduces the effect of many repeated nearby POIs with the same source category without removing them.
+
+Cell confidence uses the top-to-second score ratio. High confidence means the top score is at least 1.75x the second score, medium means at least 1.25x but less than 1.75x, and low means less than 1.25x. If no habitat reaches the configured minimum primary score, the cell remains unclassified and review-required.
 
 ## Outputs
 
 - `data/processed/habitat_cells.geojson`: canonical cell score layer in EPSG:4326.
 - `data/processed/habitat_cells.csv`: flat inspection table with cell geometry as WKT.
+- `data/processed/habitat_cell_contributions.csv`: one row per actual POI-to-cell contribution inside the cutoff, including raw contribution, secondary multiplier, repeated-subtype rank, dampening multiplier, and final contribution.
 - `data/processed/habitat_cell_counts_by_region.csv`: cell counts by region, primary habitat, and confidence.
 - `data/processed/habitat_cell_report.csv`: QA summary by region.
+- `data/processed/habitat_cell_summary_by_region.csv`: compact per-region summary with classified/unclassified counts, habitat counts, confidence counts, and mean contributing POIs.
+- `data/processed/habitat_cell_summary_global.csv`: global summary.
 - `output/habitat_cells_raleigh.png`: Raleigh cell QA map.
 - `output/habitat_cells_durham.png`: Durham cell QA map.
+- `output/habitat_cells_raleigh_confidence.png`: Raleigh confidence QA map.
+- `output/habitat_cells_durham_confidence.png`: Durham confidence QA map.
 
 ## Interpretation
 

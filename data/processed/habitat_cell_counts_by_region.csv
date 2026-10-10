@@ -1,54 +1,54 @@
 region_id,cell_habitat_primary,cell_confidence,cell_count
-DUR-01,Civic & Government,high,4
-DUR-01,Civic & Government,low,23
-DUR-01,Civic & Government,medium,18
-DUR-01,Education & Research,low,2
-DUR-01,Entertainment,high,14
-DUR-01,Entertainment,low,44
-DUR-01,Entertainment,medium,37
-DUR-01,Food & Hospitality,high,14
-DUR-01,Food & Hospitality,low,40
-DUR-01,Food & Hospitality,medium,17
+DUR-01,Civic & Government,high,30
+DUR-01,Civic & Government,low,9
+DUR-01,Civic & Government,medium,11
+DUR-01,Education & Research,low,1
+DUR-01,Education & Research,medium,2
+DUR-01,Entertainment,high,37
+DUR-01,Entertainment,low,26
+DUR-01,Entertainment,medium,34
+DUR-01,Food & Hospitality,high,20
+DUR-01,Food & Hospitality,low,22
+DUR-01,Food & Hospitality,medium,18
 DUR-01,Office & Business,low,2
-DUR-01,Office & Business,medium,1
-DUR-01,Retail,high,38
-DUR-01,Retail,low,28
-DUR-01,Retail,medium,18
-DUR-01,Transportation,high,3
-DUR-01,Transportation,low,16
-DUR-01,Transportation,medium,7
-DUR-02,Education & Research,high,51
-DUR-02,Education & Research,low,50
-DUR-02,Education & Research,medium,236
-DUR-02,Entertainment,high,8
-DUR-02,Entertainment,low,15
-DUR-02,Entertainment,medium,19
-DUR-02,Food & Hospitality,high,1
-DUR-02,Food & Hospitality,low,4
-DUR-02,Food & Hospitality,medium,3
-DUR-02,Healthcare,low,2
+DUR-01,Office & Business,medium,3
+DUR-01,Retail,high,48
+DUR-01,Retail,low,14
+DUR-01,Retail,medium,15
+DUR-01,Transportation,high,12
+DUR-01,Transportation,low,9
+DUR-01,Transportation,medium,13
+DUR-02,Education & Research,high,282
+DUR-02,Education & Research,low,22
+DUR-02,Education & Research,medium,44
+DUR-02,Entertainment,high,4
+DUR-02,Entertainment,low,12
+DUR-02,Entertainment,medium,21
+DUR-02,Food & Hospitality,low,3
+DUR-02,Healthcare,low,1
+RAL-01,,low,5
 RAL-01,Civic & Government,low,4
-RAL-01,Education & Research,low,18
-RAL-01,Education & Research,medium,2
-RAL-01,Entertainment,high,22
-RAL-01,Entertainment,low,45
-RAL-01,Entertainment,medium,55
-RAL-01,Food & Hospitality,high,70
-RAL-01,Food & Hospitality,low,58
-RAL-01,Food & Hospitality,medium,46
-RAL-01,Retail,high,1
-RAL-01,Retail,low,32
-RAL-01,Retail,medium,16
-RAL-01,Transportation,low,6
-RAL-01,Transportation,medium,1
-RAL-02,Entertainment,high,29
-RAL-02,Entertainment,low,3
-RAL-02,Entertainment,medium,119
-RAL-03A,Education & Research,high,65
-RAL-03A,Education & Research,low,8
-RAL-03A,Education & Research,medium,78
-RAL-03B,Entertainment,high,36
-RAL-03B,Entertainment,medium,5
-RAL-04,Education & Research,high,209
-RAL-04,Education & Research,medium,316
+RAL-01,Civic & Government,medium,1
+RAL-01,Education & Research,high,9
+RAL-01,Education & Research,low,9
+RAL-01,Education & Research,medium,8
+RAL-01,Entertainment,high,25
+RAL-01,Entertainment,low,36
+RAL-01,Entertainment,medium,57
+RAL-01,Food & Hospitality,high,62
+RAL-01,Food & Hospitality,low,37
+RAL-01,Food & Hospitality,medium,53
+RAL-01,Retail,high,6
+RAL-01,Retail,low,28
+RAL-01,Retail,medium,23
+RAL-01,Transportation,low,7
+RAL-01,Transportation,medium,6
+RAL-02,Entertainment,high,148
+RAL-02,Entertainment,medium,3
+RAL-03A,Education & Research,high,134
+RAL-03A,Education & Research,low,2
+RAL-03A,Education & Research,medium,15
+RAL-03B,Entertainment,high,41
+RAL-04,Education & Research,high,524
+RAL-04,Education & Research,medium,1
 RAL-05,Healthcare,high,39

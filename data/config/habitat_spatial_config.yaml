@@ -46,11 +46,15 @@ influence_tiers:
     weight: 0.5
     radius_meters: 60
 
-secondary_habitat_multiplier: 0.5
+secondary_habitat_multiplier: 0.4
+distance_cutoff_multiplier: 3.0
 
 repeated_feature_dampening:
-  method: rank_sqrt
-  notes: Within each cell/habitat/source-category group, repeated contributions are sorted strongest first and divided by sqrt(rank).
+  rank_1: 1.0
+  rank_2: 0.5
+  rank_3: 0.25
+  rank_4_plus: 0.1
+  notes: Within each cell/habitat/source-category group, repeated contributions are sorted strongest first and multiplied by the configured rank multiplier.
 
 tier_rules:
   anchor:
@@ -79,9 +83,6 @@ tier_rules:
 assignment:
   minimum_primary_score: 0.1
   secondary_minimum_score: 1.0
-  secondary_minimum_ratio: 0.3
-  high_confidence_min_score: 3.0
-  high_confidence_min_margin: 3.0
-  high_confidence_min_ratio: 1.75
-  medium_confidence_min_score: 1.5
-  medium_confidence_min_margin: 1.0
+  secondary_minimum_ratio: 0.4
+  high_confidence_ratio: 1.75
+  medium_confidence_ratio: 1.25

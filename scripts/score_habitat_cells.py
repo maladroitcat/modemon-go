@@ -19,7 +19,6 @@ import pandas as pd
 import yaml
 from matplotlib.lines import Line2D
 from shapely.geometry import Point, box
-from shapely.ops import unary_union
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -197,12 +196,24 @@ def decay_contribution(weight: float, radius_feet: float, distance_feet: float) 
     return weight * math.exp(-distance_feet / radius_feet)
 
 
+def dampening_multiplier(rank: int, config: dict[str, Any]) -> float:
+    dampening = config["repeated_feature_dampening"]
+    if rank == 1:
+        return float(dampening["rank_1"])
+    if rank == 2:
+        return float(dampening["rank_2"])
+    if rank == 3:
+        return float(dampening["rank_3"])
+    return float(dampening["rank_4_plus"])
+
+
 def cell_scores(
+    cell_id: str,
     cell_centroid,
     region_id: str,
     region_pois: gpd.GeoDataFrame,
     config: dict[str, Any],
-) -> tuple[dict[str, float], dict[str, Any]]:
+) -> tuple[dict[str, float], dict[str, Any], list[dict[str, Any]]]:
     habitats = list(config["habitats"])
     scores = {habitat: 0.0 for habitat in habitats}
     for habitat, value in config["regional_priors"].get(region_id, {}).items():
@@ -212,43 +223,99 @@ def cell_scores(
     tier_meta = config["influence_tiers"]
     meters_to_feet = float(config["grid"]["meters_to_feet"])
     secondary_multiplier = float(config["secondary_habitat_multiplier"])
+    cutoff_multiplier = float(config["distance_cutoff_multiplier"])
+    primary_poi_ids: set[str] = set()
+    secondary_poi_ids: set[str] = set()
 
     for poi in region_pois.itertuples():
         tier = poi.influence_tier
         weight = float(tier_meta[tier]["weight"])
-        radius_feet = float(tier_meta[tier]["radius_meters"]) * meters_to_feet
+        radius_meters = float(tier_meta[tier]["radius_meters"])
+        radius_feet = radius_meters * meters_to_feet
         distance = cell_centroid.distance(poi.geometry)
+        if distance > radius_feet * cutoff_multiplier:
+            continue
         base = decay_contribution(weight, radius_feet, distance)
         category = f"{poi.primary_osm_key}={poi.primary_osm_value}"
 
         if poi.habitat_primary:
+            primary_poi_ids.add(poi.poi_id)
             grouped[(poi.habitat_primary, category)].append(
                 {
                     "value": base,
                     "poi_id": poi.poi_id,
+                    "poi_name": poi.name,
+                    "primary_osm_key": poi.primary_osm_key,
+                    "primary_osm_value": poi.primary_osm_value,
+                    "poi_habitat_primary": poi.habitat_primary,
+                    "poi_habitat_secondary": poi.habitat_secondary,
                     "tier": tier,
                     "category": category,
                     "distance": distance,
+                    "tier_weight": weight,
+                    "tier_radius_meters": radius_meters,
+                    "habitat": poi.habitat_primary,
+                    "contribution_type": "primary",
+                    "secondary_multiplier": 1.0,
                 }
             )
         if poi.habitat_secondary:
+            secondary_poi_ids.add(poi.poi_id)
             grouped[(poi.habitat_secondary, category)].append(
                 {
                     "value": base * secondary_multiplier,
                     "poi_id": poi.poi_id,
+                    "poi_name": poi.name,
+                    "primary_osm_key": poi.primary_osm_key,
+                    "primary_osm_value": poi.primary_osm_value,
+                    "poi_habitat_primary": poi.habitat_primary,
+                    "poi_habitat_secondary": poi.habitat_secondary,
                     "tier": tier,
                     "category": category,
                     "distance": distance,
+                    "tier_weight": weight,
+                    "tier_radius_meters": radius_meters,
+                    "habitat": poi.habitat_secondary,
+                    "contribution_type": "secondary",
+                    "secondary_multiplier": secondary_multiplier,
                 }
             )
 
     habitat_contribs: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    audit_rows: list[dict[str, Any]] = []
     for (habitat, _category), contribs in grouped.items():
         ranked = sorted(contribs, key=lambda item: item["value"], reverse=True)
         for rank, contrib in enumerate(ranked, start=1):
-            damped = contrib["value"] / math.sqrt(rank)
+            multiplier = dampening_multiplier(rank, config)
+            damped = contrib["value"] * multiplier
             scores[habitat] += damped
             habitat_contribs[habitat].append({**contrib, "damped_value": damped})
+            audit_rows.append(
+                {
+                    "cell_id": cell_id,
+                    "region_id": region_id,
+                    "poi_id": contrib["poi_id"],
+                    "poi_name": contrib["poi_name"],
+                    "primary_osm_key": contrib["primary_osm_key"],
+                    "primary_osm_value": contrib["primary_osm_value"],
+                    "poi_habitat_primary": contrib["poi_habitat_primary"],
+                    "poi_habitat_secondary": contrib["poi_habitat_secondary"],
+                    "influence_tier": contrib["tier"],
+                    "distance_feet": round(contrib["distance"], 3),
+                    "distance_meters": round(contrib["distance"] / meters_to_feet, 3),
+                    "tier_weight": contrib["tier_weight"],
+                    "tier_radius_meters": contrib["tier_radius_meters"],
+                    "raw_spatial_contribution": round(
+                        contrib["value"] / contrib["secondary_multiplier"], 9
+                    ),
+                    "habitat_receiving_contribution": contrib["habitat"],
+                    "contribution_type": contrib["contribution_type"],
+                    "secondary_multiplier": contrib["secondary_multiplier"],
+                    "subtype_rank": rank,
+                    "dampening_multiplier": multiplier,
+                    "final_contribution": round(damped, 9),
+                }
+            )
 
     top_by_habitat = {}
     for habitat, contribs in habitat_contribs.items():
@@ -265,9 +332,11 @@ def cell_scores(
         ]
     meta = {
         "top_contributors_json": json.dumps(top_by_habitat, sort_keys=True),
-        "nearby_poi_count": int(len(region_pois)),
+        "contributing_poi_count": len(primary_poi_ids | secondary_poi_ids),
+        "primary_contributing_poi_count": len(primary_poi_ids),
+        "secondary_contributing_poi_count": len(secondary_poi_ids),
     }
-    return scores, meta
+    return scores, meta, audit_rows
 
 
 def assign_cell_habitats(scores: dict[str, float], config: dict[str, Any]) -> dict[str, Any]:
@@ -280,6 +349,8 @@ def assign_cell_habitats(scores: dict[str, float], config: dict[str, Any]) -> di
         primary = ""
         secondary = ""
         confidence = "low"
+        review_required = True
+        ratio = None
         reason = "No regional prior or POI influence reached the minimum score."
     else:
         if (
@@ -290,36 +361,30 @@ def assign_cell_habitats(scores: dict[str, float], config: dict[str, Any]) -> di
         else:
             chosen_secondary = ""
 
-        margin = primary_score - secondary_score
-        ratio = primary_score / secondary_score if secondary_score > 0 else float("inf")
-        if (
-            primary_score >= float(assignment["high_confidence_min_score"])
-            and (
-                margin >= float(assignment["high_confidence_min_margin"])
-                or ratio >= float(assignment["high_confidence_min_ratio"])
-            )
-        ):
+        ratio = primary_score / secondary_score if secondary_score > 0 else None
+        if ratio is None or ratio >= float(assignment["high_confidence_ratio"]):
             confidence = "high"
-        elif (
-            primary_score >= float(assignment["medium_confidence_min_score"])
-            and margin >= float(assignment["medium_confidence_min_margin"])
-        ):
+        elif ratio >= float(assignment["medium_confidence_ratio"]):
             confidence = "medium"
         else:
             confidence = "low"
+        review_required = confidence == "low"
         secondary = chosen_secondary
+        ratio_text = "inf" if ratio is None else f"{ratio:.2f}"
         reason = (
             f"Top score {primary_score:.2f}; second score {secondary_score:.2f}; "
-            f"margin {margin:.2f}; ratio {ratio:.2f}."
+            f"top-to-second ratio {ratio_text}."
         )
 
     return {
         "cell_habitat_primary": primary,
         "cell_habitat_secondary": secondary,
         "cell_confidence": confidence,
+        "cell_review_required": review_required,
         "cell_assignment_reason": reason,
         "top_score": round(primary_score, 6),
         "second_score": round(secondary_score, 6),
+        "top_to_second_ratio": round(ratio, 6) if ratio is not None else None,
     }
 
 
@@ -328,12 +393,13 @@ def build_cells(
     pois: gpd.GeoDataFrame,
     config: dict[str, Any],
     selected_region: str | None = None,
-) -> gpd.GeoDataFrame:
+) -> tuple[gpd.GeoDataFrame, pd.DataFrame]:
     habitats = list(config["habitats"])
     poi_points = representative_points(pois)
     poi_points["influence_tier"] = poi_points.apply(assign_tier, axis=1, config=config)
 
     rows: list[dict[str, Any]] = []
+    contribution_rows: list[dict[str, Any]] = []
     target_regions = regions
     if selected_region:
         if selected_region not in EXPECTED_REGIONS:
@@ -346,9 +412,12 @@ def build_cells(
         raw_cells = generate_region_cells(region.region_id, region_geom, config)
         for idx, cell in enumerate(raw_cells, start=1):
             centroid = cell["geometry"].centroid
-            scores, meta = cell_scores(centroid, region.region_id, region_pois, config)
-            assignment = assign_cell_habitats(scores, config)
             cell_id = f"{region.region_id}_cell_{idx:05d}"
+            scores, meta, audit_rows = cell_scores(
+                cell_id, centroid, region.region_id, region_pois, config
+            )
+            assignment = assign_cell_habitats(scores, config)
+            contribution_rows.extend(audit_rows)
             row = {
                 "cell_id": cell_id,
                 "region_id": region.region_id,
@@ -364,7 +433,9 @@ def build_cells(
                     config["regional_priors"].get(region.region_id, {}),
                     sort_keys=True,
                 ),
-                "nearby_poi_count": meta["nearby_poi_count"],
+                "contributing_poi_count": meta["contributing_poi_count"],
+                "primary_contributing_poi_count": meta["primary_contributing_poi_count"],
+                "secondary_contributing_poi_count": meta["secondary_contributing_poi_count"],
                 "top_contributors_json": meta["top_contributors_json"],
                 "geometry": cell["geometry"],
                 **assignment,
@@ -377,7 +448,8 @@ def build_cells(
     cells = gpd.GeoDataFrame(rows, geometry="geometry", crs=config["crs"]["analysis"])
     if cells.empty:
         raise ValueError("No habitat cells generated.")
-    return cells
+    contributions = pd.DataFrame(contribution_rows)
+    return cells, contributions
 
 
 def clip_output_to_regions(
@@ -396,7 +468,17 @@ def clip_output_to_regions(
     return clipped
 
 
-def write_outputs(cells: gpd.GeoDataFrame, regions: gpd.GeoDataFrame, config: dict[str, Any]) -> None:
+def summary_dict(series: pd.Series) -> str:
+    counts = series.replace("", pd.NA).dropna().value_counts().to_dict()
+    return json.dumps({str(k): int(v) for k, v in counts.items()}, sort_keys=True)
+
+
+def write_outputs(
+    cells: gpd.GeoDataFrame,
+    contributions: pd.DataFrame,
+    regions: gpd.GeoDataFrame,
+    config: dict[str, Any],
+) -> None:
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_crs = config["crs"]["output"]
@@ -406,6 +488,7 @@ def write_outputs(cells: gpd.GeoDataFrame, regions: gpd.GeoDataFrame, config: di
     csv_df = pd.DataFrame(cells_out.drop(columns="geometry"))
     csv_df["geometry_wkt"] = cells_out.geometry.to_wkt()
     csv_df.to_csv(PROCESSED_DIR / "habitat_cells.csv", index=False)
+    contributions.to_csv(PROCESSED_DIR / "habitat_cell_contributions.csv", index=False)
 
     summary = (
         cells.groupby(["region_id", "cell_habitat_primary", "cell_confidence"], dropna=False)
@@ -424,9 +507,43 @@ def write_outputs(cells: gpd.GeoDataFrame, regions: gpd.GeoDataFrame, config: di
                 "mean_retained_area_pct": round(group["retained_area_pct"].mean(), 3),
                 "low_confidence_cells": int((group["cell_confidence"] == "low").sum()),
                 "unclassified_cells": int((group["cell_habitat_primary"].fillna("") == "").sum()),
+                "mean_contributing_poi_count": round(group["contributing_poi_count"].mean(), 3),
+                "max_contributing_poi_count": int(group["contributing_poi_count"].max()),
             }
         )
     pd.DataFrame(rows).to_csv(PROCESSED_DIR / "habitat_cell_report.csv", index=False)
+
+    region_rows = []
+    for region_id, group in cells.groupby("region_id"):
+        classified = int((group["cell_habitat_primary"].fillna("") != "").sum())
+        region_rows.append(
+            {
+                "region_id": region_id,
+                "total_cells": len(group),
+                "classified_cells": classified,
+                "unclassified_cells": len(group) - classified,
+                "primary_habitat_counts": summary_dict(group["cell_habitat_primary"]),
+                "secondary_habitat_counts": summary_dict(group["cell_habitat_secondary"]),
+                "confidence_counts": summary_dict(group["cell_confidence"]),
+                "mean_contributing_poi_count": round(group["contributing_poi_count"].mean(), 3),
+            }
+        )
+    pd.DataFrame(region_rows).to_csv(
+        PROCESSED_DIR / "habitat_cell_summary_by_region.csv", index=False
+    )
+
+    classified = int((cells["cell_habitat_primary"].fillna("") != "").sum())
+    global_summary = {
+        "total_cells": len(cells),
+        "classified_cells": classified,
+        "unclassified_cells": len(cells) - classified,
+        "primary_habitat_counts": summary_dict(cells["cell_habitat_primary"]),
+        "secondary_habitat_counts": summary_dict(cells["cell_habitat_secondary"]),
+        "confidence_counts": summary_dict(cells["cell_confidence"]),
+    }
+    pd.DataFrame([global_summary]).to_csv(
+        PROCESSED_DIR / "habitat_cell_summary_global.csv", index=False
+    )
 
 
 def write_maps(cells: gpd.GeoDataFrame, regions: gpd.GeoDataFrame, config: dict[str, Any]) -> None:
@@ -494,6 +611,72 @@ def write_maps(cells: gpd.GeoDataFrame, regions: gpd.GeoDataFrame, config: dict[
         fig.savefig(OUTPUT_DIR / filename, dpi=200)
         plt.close(fig)
 
+    confidence_palette = {
+        "high": "#2ca25f",
+        "medium": "#feb24c",
+        "low": "#de2d26",
+        "unclassified": "#d9d9d9",
+    }
+    for city, filename in [
+        ("Raleigh", "habitat_cells_raleigh_confidence.png"),
+        ("Durham", "habitat_cells_durham_confidence.png"),
+    ]:
+        city_cells = cells_4326[cells_4326["parent_city"] == city].copy()
+        city_regions = regions_4326[regions_4326["parent_city"] == city]
+        fig, ax = plt.subplots(figsize=(14, 10))
+        unclassified_mask = city_cells["cell_habitat_primary"].fillna("") == ""
+        for confidence in ["high", "medium", "low"]:
+            subset = city_cells[(city_cells["cell_confidence"] == confidence) & ~unclassified_mask]
+            if not subset.empty:
+                subset.plot(
+                    ax=ax,
+                    color=confidence_palette[confidence],
+                    edgecolor="white",
+                    linewidth=0.15,
+                    alpha=0.76,
+                )
+        unclassified = city_cells[unclassified_mask]
+        if not unclassified.empty:
+            unclassified.plot(
+                ax=ax,
+                color=confidence_palette["unclassified"],
+                edgecolor="#999999",
+                linewidth=0.15,
+                alpha=0.85,
+            )
+        city_regions.boundary.plot(ax=ax, linewidth=1.4, edgecolor="#111111")
+        for region in city_regions.itertuples():
+            point = region.geometry.representative_point()
+            ax.text(point.x, point.y, region.region_id, fontsize=10, fontweight="bold", ha="center")
+        handles = [
+            Line2D(
+                [0],
+                [0],
+                marker="s",
+                color="none",
+                markerfacecolor=confidence_palette[key],
+                markersize=7,
+                label=label,
+            )
+            for key, label in [
+                ("high", "High"),
+                ("medium", "Medium"),
+                ("low", "Low"),
+                ("unclassified", "Unclassified"),
+            ]
+            if (
+                ((city_cells["cell_confidence"] == key) & ~unclassified_mask).any()
+                if key != "unclassified"
+                else unclassified_mask.any()
+            )
+        ]
+        ax.legend(handles=handles, loc="best", fontsize=8, frameon=True)
+        ax.set_title(f"{city} Habitat Cell Confidence QA")
+        ax.set_axis_off()
+        fig.tight_layout()
+        fig.savefig(OUTPUT_DIR / filename, dpi=200)
+        plt.close(fig)
+
 
 def validate_cells(cells: gpd.GeoDataFrame, regions: gpd.GeoDataFrame, config: dict[str, Any]) -> None:
     habitats = set(config["habitats"])
@@ -520,6 +703,9 @@ def validate_cells(cells: gpd.GeoDataFrame, regions: gpd.GeoDataFrame, config: d
 def print_summary(cells: gpd.GeoDataFrame) -> None:
     print("Habitat cell scoring complete")
     print(f"total_cells: {len(cells)}")
+    classified = int((cells["cell_habitat_primary"].fillna("") != "").sum())
+    print(f"classified_cells: {classified}")
+    print(f"unclassified_cells: {len(cells) - classified}")
     print("\nCells by region")
     print(cells.groupby("region_id").size().to_string())
     print("\nPrimary habitat cells")
@@ -528,15 +714,17 @@ def print_summary(cells: gpd.GeoDataFrame) -> None:
     print(cells["cell_confidence"].value_counts().to_string())
     print("\nTiny edge fragments by region")
     print(cells.groupby("region_id")["tiny_edge_fragment"].sum().astype(int).to_string())
+    print("\nMean contributing POIs by region")
+    print(cells.groupby("region_id")["contributing_poi_count"].mean().round(3).to_string())
 
 
 def main() -> None:
     args = parse_args()
     config = load_config()
     pois, regions = load_inputs(config, args.allow_count_change)
-    cells = build_cells(regions, pois, config, selected_region=args.region)
+    cells, contributions = build_cells(regions, pois, config, selected_region=args.region)
     validate_cells(cells, regions, config)
-    write_outputs(cells, regions, config)
+    write_outputs(cells, contributions, regions, config)
     write_maps(cells, regions, config)
     print_summary(cells)
 
