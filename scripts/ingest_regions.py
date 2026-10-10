@@ -78,6 +78,14 @@ def ensure_dirs() -> None:
         path.mkdir(parents=True, exist_ok=True)
 
 
+def cleanup_success_stale_outputs() -> None:
+    for path in [
+        PROCESSED / "regions_partial.geojson",
+        PROCESSED / "regions_summary_partial.csv",
+    ]:
+        path.unlink(missing_ok=True)
+
+
 def retrieved_at() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
@@ -574,6 +582,24 @@ def is_duke_university_area(tags: dict[str, Any]) -> bool:
     )
 
 
+def is_wakemed_healthcare_nominatim(item: dict[str, Any]) -> bool:
+    name_text = " ".join(str(item.get(k, "")) for k in ["name", "display_name"]).lower()
+    category = str(item.get("category", "")).lower()
+    item_type = str(item.get("type", "")).lower()
+    healthcare_types = {"hospital", "clinic", "doctors", "healthcare"}
+    reject_terms = {"building", "center", "clinic", "office"}
+    if category == "building" or any(term in str(item.get("name", "")).lower() for term in reject_terms):
+        return False
+    return (
+        "wakemed" in name_text
+        and (
+            item_type in healthcare_types
+            or category == "healthcare"
+            or (category == "amenity" and item_type == "hospital")
+        )
+    )
+
+
 def geocode_point(query: str, raw_path: Path) -> tuple[float, float] | None:
     response = requests_get(NOMINATIM, params={"q": query, "format": "jsonv2", "limit": 1})
     payload = response.json()
@@ -621,7 +647,7 @@ def fetch_osm_named_region(region: RegionSpec, raw_dir: Path, allow_overpass: bo
 
 
 def fetch_wakemed() -> dict[str, Any]:
-    spec = RegionSpec(
+    region = RegionSpec(
         "RAL-05",
         "Raleigh",
         "WakeMed Raleigh Campus",
@@ -631,10 +657,71 @@ def fetch_wakemed() -> dict[str, Any]:
         True,
         "OSM fallback; no authoritative public campus-perimeter layer identified.",
     )
-    try:
-        return fetch_osm_named_region(spec, RALEIGH_RAW, allow_overpass=True)
-    except IngestionError as first_error:
-        print(f"WakeMed named-campus OSM lookup failed: {first_error}")
+    retrieved = retrieved_at()
+    query = region.source_query_or_filter
+    response = requests_get(
+        NOMINATIM,
+        params={
+            "q": query,
+            "format": "jsonv2",
+            "polygon_geojson": 1,
+            "addressdetails": 1,
+            "namedetails": 1,
+            "limit": 10,
+        },
+    )
+    payload = response.json()
+    write_json(RALEIGH_RAW / "ral-05_nominatim.json", payload)
+    candidates = []
+    for item in payload:
+        geom_type = item.get("geojson", {}).get("type")
+        print(
+            f"RAL-05 Nominatim candidate: {item.get('display_name')} "
+            f"[{geom_type}] category={item.get('category')} type={item.get('type')} "
+            f"osm={item.get('osm_type')}/{item.get('osm_id')}"
+        )
+        if geom_type in {"Polygon", "MultiPolygon"} and is_wakemed_healthcare_nominatim(item):
+            candidates.append(item)
+    if len(candidates) == 1:
+        item = candidates[0]
+        geom = shape(item["geojson"])
+        print_osm_candidate(
+            "RAL-05 Nominatim accepted candidate",
+            item.get("osm_type"),
+            item.get("osm_id"),
+            {
+                "name": item.get("name"),
+                "category": item.get("category"),
+                "type": item.get("type"),
+                "osm_type": item.get("osm_type"),
+                "osm_id": item.get("osm_id"),
+                "display_name": item.get("display_name"),
+            },
+            geom,
+        )
+        return feature(
+            region,
+            geom,
+            FINAL_CRS,
+            retrieved,
+            {
+                "osm_display_name": item.get("display_name"),
+                "osm_type": item.get("osm_type"),
+                "osm_id": item.get("osm_id"),
+                "osm_name": item.get("name"),
+                "notes": f"{region.notes} Nominatim returned a WakeMed hospital/healthcare Polygon/MultiPolygon.",
+            },
+        )
+    if len(candidates) > 1:
+        candidate_labels = [
+            f"{item.get('osm_type')}/{item.get('osm_id')}:{item.get('name')}"
+            for item in candidates
+        ]
+        raise IngestionError(
+            f"RAL-05 Nominatim returned multiple defensible WakeMed healthcare polygons: "
+            f"{candidate_labels}"
+        )
+    print("RAL-05 Nominatim did not return a defensible WakeMed hospital/healthcare polygon; trying Overpass fallback")
     retrieved = retrieved_at()
     point = geocode_point("3000 New Bern Avenue, Raleigh, North Carolina", RALEIGH_RAW / "ral_05_3000_new_bern_geocode.json")
     if point is None:
@@ -816,6 +903,7 @@ def save_outputs(features: list[dict[str, Any]]) -> pd.DataFrame:
         "notes",
     ]
     summary[cols].to_csv(PROCESSED / "regions_summary.csv", index=False, quoting=csv.QUOTE_MINIMAL)
+    cleanup_success_stale_outputs()
     return summary[cols]
 
 
