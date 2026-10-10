@@ -1,0 +1,351 @@
+habitats:
+  - Healthcare
+  - Finance
+  - Retail
+  - Food & Hospitality
+  - Education & Research
+  - Transportation
+  - Civic & Government
+  - Entertainment
+  - Office & Business
+
+priority_order:
+  - highly specific overrides
+  - healthcare
+  - finance
+  - transportation
+  - civic government
+  - education research
+  - food hospitality
+  - entertainment
+  - office business
+  - generic shop fallback
+  - review fallback
+
+rules:
+  - rule_id: HC_001
+    priority: 110
+    any:
+      - key: healthcare
+        values: [hospital, clinic, doctor, dentist, rehabilitation]
+      - key: amenity
+        values: [hospital, clinic, doctors, dentist, veterinary]
+    habitat_primary: Healthcare
+    confidence: high
+    notes: Direct healthcare provider or facility tag.
+
+  - rule_id: HC_002
+    priority: 105
+    any:
+      - key: healthcare
+        values: [pharmacy]
+      - key: amenity
+        values: [pharmacy]
+      - key: shop
+        values: [chemist]
+    habitat_primary: Healthcare
+    habitat_secondary: Retail
+    confidence: high
+    notes: Pharmacy and chemist POIs are healthcare with a retail context.
+
+  - rule_id: HC_003
+    priority: 120
+    any:
+      - key: healthcare
+        values: ["yes"]
+    habitat_primary: Healthcare
+    confidence: medium
+    review_required: true
+    notes: Generic healthcare tag lacks a specific care type.
+
+  - rule_id: FIN_001
+    priority: 205
+    any:
+      - key: amenity
+        values: [bank, atm]
+    habitat_primary: Finance
+    confidence: high
+    notes: Direct banking or ATM tag.
+
+  - rule_id: FIN_002
+    priority: 210
+    any:
+      - key: office
+        values: [financial, insurance, accountant]
+    habitat_primary: Finance
+    habitat_secondary: Office & Business
+    confidence: high
+    notes: Professional financial office categories.
+
+  - rule_id: FIN_003
+    priority: 215
+    any:
+      - key: office
+        values: [estate_agent]
+    habitat_primary: Office & Business
+    habitat_secondary: Finance
+    confidence: high
+    notes: Estate agents are business offices with a finance-adjacent context.
+
+  - rule_id: TRN_001
+    priority: 305
+    any:
+      - key: public_transport
+        values: [station, stop_area]
+      - key: railway
+        values: [station, halt]
+      - key: amenity
+        values: [bus_station]
+    habitat_primary: Transportation
+    confidence: high
+    notes: Major transit station or stop-area facility.
+
+  - rule_id: TRN_002
+    priority: 310
+    any:
+      - key: amenity
+        values: [bicycle_rental, car_rental, fuel]
+    habitat_primary: Transportation
+    habitat_secondary: Retail
+    confidence: high
+    notes: Transportation service with retail/service context.
+
+  - rule_id: CIV_001
+    priority: 405
+    any:
+      - key: office
+        values: [government]
+    habitat_primary: Civic & Government
+    habitat_secondary: Office & Business
+    confidence: high
+    notes: Government office.
+
+  - rule_id: CIV_002
+    priority: 410
+    any:
+      - key: amenity
+        values: [courthouse, townhall, police, fire_station, prison, post_office]
+    habitat_primary: Civic & Government
+    confidence: high
+    notes: Direct civic/government amenity tag.
+
+  - rule_id: CIV_003
+    priority: 415
+    any:
+      - key: amenity
+        values: [community_centre]
+    habitat_primary: Civic & Government
+    habitat_secondary: Entertainment
+    confidence: high
+    notes: Community centre with public gathering context.
+
+  - rule_id: CIV_004
+    priority: 420
+    any:
+      - key: office
+        values: [ngo]
+    habitat_primary: Civic & Government
+    habitat_secondary: Office & Business
+    confidence: high
+    notes: NGO office.
+
+  - rule_id: CIV_005
+    priority: 425
+    any:
+      - key: office
+        values: [association, bail_bond_agent]
+    habitat_primary: Office & Business
+    habitat_secondary: Civic & Government
+    confidence: high
+    notes: Association or bail bond office; bail bonds are not finance.
+
+  - rule_id: EDU_001
+    priority: 505
+    any:
+      - key: amenity
+        values: [university, college, school, training]
+      - key: office
+        values: [research, educational_institution]
+      - key: leisure
+        values: [hackerspace]
+    habitat_primary: Education & Research
+    confidence: high
+    notes: Direct educational, training, or research source tag.
+
+  - rule_id: EDU_002
+    priority: 510
+    any:
+      - key: amenity
+        values: [library, public_bookcase]
+    habitat_primary: Education & Research
+    habitat_secondary: Civic & Government
+    confidence: high
+    notes: Libraries and public bookcases are education-first civic resources.
+
+  - rule_id: EDU_003
+    priority: 515
+    any:
+      - key: tourism
+        values: [information]
+    habitat_primary: Education & Research
+    habitat_secondary: Civic & Government
+    confidence: medium
+    notes: Tourist information is informational rather than a habitat zone.
+
+  - rule_id: FOOD_001
+    priority: 605
+    any:
+      - key: amenity
+        values: [restaurant, cafe, fast_food, food_court, ice_cream]
+      - key: tourism
+        values: [hotel, guest_house]
+    habitat_primary: Food & Hospitality
+    confidence: high
+    notes: Direct food service or lodging category.
+
+  - rule_id: FOOD_002
+    priority: 610
+    any:
+      - key: amenity
+        values: [bar, pub]
+      - key: craft
+        values: [brewery, distillery]
+    habitat_primary: Food & Hospitality
+    habitat_secondary: Entertainment
+    confidence: high
+    notes: Bars, pubs, breweries, and distilleries combine hospitality and entertainment.
+
+  - rule_id: FOOD_003
+    priority: 620
+    any:
+      - key: tourism
+        values: [apartment]
+    habitat_primary: Food & Hospitality
+    confidence: low
+    review_required: true
+    notes: Tourism apartment may be lodging, but needs review.
+
+  - rule_id: ENT_001
+    priority: 705
+    any:
+      - key: amenity
+        values: [theatre, cinema, arts_centre, events_venue, nightclub, conference_centre]
+      - key: tourism
+        values: [museum, gallery, attraction, artwork, picnic_site, theme_park]
+      - key: leisure
+        values: [stadium, sports_centre, sports_hall, escape_game, miniature_golf]
+    habitat_primary: Entertainment
+    confidence: high
+    notes: Direct arts, events, visitor, or recreation facility.
+
+  - rule_id: ENT_002
+    priority: 710
+    any:
+      - key: leisure
+        values: [park, garden, dog_park, playground, nature_reserve]
+    habitat_primary: Entertainment
+    habitat_secondary: Civic & Government
+    confidence: high
+    notes: Parks and public recreation spaces.
+
+  - rule_id: ENT_003
+    priority: 715
+    any:
+      - key: leisure
+        values: [pitch, track]
+    require_name: true
+    habitat_primary: Entertainment
+    confidence: high
+    notes: Named athletic field or track.
+
+  - rule_id: ENT_004
+    priority: 720
+    any:
+      - key: leisure
+        values: [recreation_ground, golf_course, fishing, swimming_pool, dance, fitness_centre, sauna]
+    habitat_primary: Entertainment
+    confidence: medium
+    notes: Recreation and fitness-oriented facilities; not healthcare by default.
+
+  - rule_id: OFF_001
+    priority: 805
+    any:
+      - key: office
+        values: [company, "yes", lawyer, architect, engineer, advertising_agency, it]
+    habitat_primary: Office & Business
+    confidence: high
+    notes: Professional office or business category.
+
+  - rule_id: OFF_002
+    priority: 810
+    any:
+      - key: office
+        values: [startup_incubator]
+    habitat_primary: Office & Business
+    habitat_secondary: Education & Research
+    confidence: high
+    notes: Startup incubator combines business and learning/research context.
+
+  - rule_id: RET_001
+    priority: 905
+    any:
+      - key: amenity
+        values: [marketplace]
+      - key: shop
+        values: [clothes, shoes, jewelry, gift, books, music, musical_instrument, art, supermarket, convenience, variety_store, furniture, hardware, doityourself, beauty, hairdresser, tattoo, antiques, second_hand, photo, frame, craft, fabric, florist, pet, outdoor, trophy, repair, mall, beverages, cannabis, tobacco, storage_rental]
+    habitat_primary: Retail
+    confidence: high
+    notes: Direct retail storefront or shopping category.
+
+  - rule_id: RET_002
+    priority: 910
+    any:
+      - key: shop
+        values: [bicycle, car_parts, motorcycle_repair]
+    habitat_primary: Retail
+    habitat_secondary: Transportation
+    confidence: high
+    notes: Transportation-related retail remains retail-first.
+
+  - rule_id: RET_003
+    priority: 915
+    any:
+      - key: shop
+        values: [coffee, bakery, pastry, chocolate, confectionery, wine]
+    habitat_primary: Retail
+    habitat_secondary: Food & Hospitality
+    confidence: high
+    notes: Food-related retail remains retail-first.
+
+  - rule_id: RET_004
+    priority: 950
+    any:
+      - key: shop
+        values: ["*"]
+    habitat_primary: Retail
+    confidence: medium
+    review_required: true
+    notes: Generic shop fallback; vague shop values remain reviewable.
+
+  - rule_id: CRAFT_001
+    priority: 960
+    any:
+      - key: craft
+        values: [electrician, floorer, roofer, tailor, window_construction]
+    habitat_primary: Office & Business
+    confidence: medium
+    review_required: true
+    notes: Trade craft businesses are treated as business services, with review.
+
+review_rules:
+  - rule_id: REV_001
+    any:
+      - key: amenity
+        values: [place_of_worship, social_facility, fountain, office]
+      - key: historic
+        values: ["*"]
+      - key: craft
+        values: ["yes"]
+      - key: leisure
+        values: [outdoor_seating]
+    reason: Ambiguous source category requires manual review for v1.

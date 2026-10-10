@@ -1,0 +1,73 @@
+region_id,habitat,primary_count,secondary_count
+DUR-01,Healthcare,4,0
+DUR-01,Finance,8,1
+DUR-01,Retail,49,6
+DUR-01,Food & Hospitality,98,4
+DUR-01,Education & Research,10,0
+DUR-01,Transportation,8,2
+DUR-01,Civic & Government,8,20
+DUR-01,Entertainment,46,38
+DUR-01,Office & Business,16,1
+DUR-02,Healthcare,8,0
+DUR-02,Finance,0,0
+DUR-02,Retail,1,0
+DUR-02,Food & Hospitality,20,0
+DUR-02,Education & Research,7,0
+DUR-02,Transportation,0,0
+DUR-02,Civic & Government,2,12
+DUR-02,Entertainment,42,0
+DUR-02,Office & Business,0,0
+RAL-01,Healthcare,10,0
+RAL-01,Finance,14,1
+RAL-01,Retail,78,20
+RAL-01,Food & Hospitality,187,10
+RAL-01,Education & Research,10,1
+RAL-01,Transportation,19,2
+RAL-01,Civic & Government,22,18
+RAL-01,Entertainment,66,54
+RAL-01,Office & Business,38,15
+RAL-02,Healthcare,1,0
+RAL-02,Finance,0,0
+RAL-02,Retail,1,1
+RAL-02,Food & Hospitality,1,0
+RAL-02,Education & Research,0,0
+RAL-02,Transportation,1,0
+RAL-02,Civic & Government,2,6
+RAL-02,Entertainment,16,0
+RAL-02,Office & Business,1,2
+RAL-03A,Healthcare,1,0
+RAL-03A,Finance,0,0
+RAL-03A,Retail,2,0
+RAL-03A,Food & Hospitality,3,0
+RAL-03A,Education & Research,6,0
+RAL-03A,Transportation,0,0
+RAL-03A,Civic & Government,0,11
+RAL-03A,Entertainment,26,0
+RAL-03A,Office & Business,0,0
+RAL-03B,Healthcare,0,0
+RAL-03B,Finance,0,0
+RAL-03B,Retail,0,1
+RAL-03B,Food & Hospitality,1,0
+RAL-03B,Education & Research,0,0
+RAL-03B,Transportation,1,0
+RAL-03B,Civic & Government,1,0
+RAL-03B,Entertainment,6,1
+RAL-03B,Office & Business,0,0
+RAL-04,Healthcare,0,0
+RAL-04,Finance,0,0
+RAL-04,Retail,0,0
+RAL-04,Food & Hospitality,6,0
+RAL-04,Education & Research,9,0
+RAL-04,Transportation,1,0
+RAL-04,Civic & Government,2,18
+RAL-04,Entertainment,18,1
+RAL-04,Office & Business,0,1
+RAL-05,Healthcare,3,0
+RAL-05,Finance,0,0
+RAL-05,Retail,0,0
+RAL-05,Food & Hospitality,0,0
+RAL-05,Education & Research,0,0
+RAL-05,Transportation,0,0
+RAL-05,Civic & Government,0,0
+RAL-05,Entertainment,0,0
+RAL-05,Office & Business,0,0
