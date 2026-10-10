@@ -1,9 +1,9 @@
 region_id,habitat,primary_count,secondary_count
 DUR-01,Healthcare,4,0
 DUR-01,Finance,8,1
-DUR-01,Retail,49,6
+DUR-01,Retail,49,7
 DUR-01,Food & Hospitality,98,4
-DUR-01,Education & Research,10,0
+DUR-01,Education & Research,10,3
 DUR-01,Transportation,8,2
 DUR-01,Civic & Government,8,20
 DUR-01,Entertainment,46,38
@@ -12,7 +12,7 @@ DUR-02,Healthcare,8,0
 DUR-02,Finance,0,0
 DUR-02,Retail,1,0
 DUR-02,Food & Hospitality,20,0
-DUR-02,Education & Research,7,0
+DUR-02,Education & Research,7,1
 DUR-02,Transportation,0,0
 DUR-02,Civic & Government,2,12
 DUR-02,Entertainment,42,0
@@ -20,8 +20,8 @@ DUR-02,Office & Business,0,0
 RAL-01,Healthcare,10,0
 RAL-01,Finance,14,1
 RAL-01,Retail,78,20
-RAL-01,Food & Hospitality,187,10
-RAL-01,Education & Research,10,1
+RAL-01,Food & Hospitality,187,16
+RAL-01,Education & Research,10,14
 RAL-01,Transportation,19,2
 RAL-01,Civic & Government,22,18
 RAL-01,Entertainment,66,54
@@ -37,9 +37,9 @@ RAL-02,Entertainment,16,0
 RAL-02,Office & Business,1,2
 RAL-03A,Healthcare,1,0
 RAL-03A,Finance,0,0
-RAL-03A,Retail,2,0
+RAL-03A,Retail,2,1
 RAL-03A,Food & Hospitality,3,0
-RAL-03A,Education & Research,6,0
+RAL-03A,Education & Research,6,2
 RAL-03A,Transportation,0,0
 RAL-03A,Civic & Government,0,11
 RAL-03A,Entertainment,26,0

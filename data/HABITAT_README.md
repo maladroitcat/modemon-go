@@ -40,13 +40,15 @@ Rule priority is deterministic. Lower numeric priority wins. The documented stra
 
 Specific rules intentionally override generic rules. For example, `amenity=pharmacy` is Healthcare primary and Retail secondary even if a POI also has shop-like tags.
 
+Some cultural and hospitality categories use specific rules to preserve approved secondary habitats: `tourism=museum`, `tourism=gallery`, and `amenity=arts_centre` are Entertainment primary with Education & Research secondary; `amenity=nightclub` is Entertainment primary with Food & Hospitality secondary; and `amenity=food_court` is Food & Hospitality primary with Retail secondary.
+
 ## Confidence
 
 - `high`: direct, unambiguous OSM source tag.
 - `medium`: reasonable source-data interpretation or broad fallback.
 - `low`: ambiguous or fallback classification; generally review-required.
 
-`habitat_review_required=true` is used for unclassified POIs, low-confidence POIs, ambiguous review categories, and conflicting top-priority matches.
+`habitat_review_required=true` is used for unclassified POIs, low-confidence POIs, ambiguous review categories, and conflicting top-priority matches. If a high-confidence functional rule classifies a POI, an incidental `historic=*` metadata tag alone does not force review; the historic review rule remains visible in candidate provenance without turning a clear classification into manual-review noise.
 
 ## Full OSM Tags
 

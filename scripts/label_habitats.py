@@ -143,6 +143,16 @@ def rule_matches(rule: dict[str, Any], row: pd.Series, tags: dict[str, str]) -> 
     return True
 
 
+def matching_condition_keys(
+    rule: dict[str, Any], row: pd.Series, tags: dict[str, str]
+) -> set[str]:
+    keys: set[str] = set()
+    for condition in rule.get("any", []) + rule.get("all", []):
+        if condition_matches(condition, row, tags):
+            keys.add(str(condition["key"]))
+    return keys
+
+
 def has_academic_healthcare_context(row: pd.Series, tags: dict[str, str]) -> bool:
     for key, value in ACADEMIC_HEALTHCARE_SIGNALS:
         if get_tag(tags, row, key) == value:
@@ -197,9 +207,21 @@ def classify_row(
             confidence = strongest_confidence(confidence, "medium")
             reason = f"{reason} Academic or research source tag adds Education & Research secondary."
 
-        if review_matches:
+        material_review_matches = review_matches
+        if (
+            confidence == "high"
+            and not selected.get("review_required", False)
+            and not conflict
+        ):
+            material_review_matches = [
+                rule
+                for rule in review_matches
+                if matching_condition_keys(rule, row, tags) != {"historic"}
+            ]
+
+        if material_review_matches:
             review_required = True
-            review_notes = "; ".join(r.get("reason", "") for r in review_matches)
+            review_notes = "; ".join(r.get("reason", "") for r in material_review_matches)
             reason = f"{reason} Review signal: {review_notes}".strip()
     else:
         primary = ""

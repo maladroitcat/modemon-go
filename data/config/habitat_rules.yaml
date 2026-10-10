@@ -196,12 +196,22 @@ rules:
     priority: 605
     any:
       - key: amenity
-        values: [restaurant, cafe, fast_food, food_court, ice_cream]
+        values: [restaurant, cafe, fast_food, ice_cream]
       - key: tourism
         values: [hotel, guest_house]
     habitat_primary: Food & Hospitality
     confidence: high
     notes: Direct food service or lodging category.
+
+  - rule_id: FOOD_004
+    priority: 600
+    any:
+      - key: amenity
+        values: [food_court]
+    habitat_primary: Food & Hospitality
+    habitat_secondary: Retail
+    confidence: high
+    notes: Food courts are food/hospitality venues with a retail context.
 
   - rule_id: FOOD_002
     priority: 610
@@ -229,14 +239,36 @@ rules:
     priority: 705
     any:
       - key: amenity
-        values: [theatre, cinema, arts_centre, events_venue, nightclub, conference_centre]
+        values: [theatre, cinema, events_venue, conference_centre]
       - key: tourism
-        values: [museum, gallery, attraction, artwork, picnic_site, theme_park]
+        values: [attraction, artwork, picnic_site, theme_park]
       - key: leisure
         values: [stadium, sports_centre, sports_hall, escape_game, miniature_golf]
     habitat_primary: Entertainment
     confidence: high
     notes: Direct arts, events, visitor, or recreation facility.
+
+  - rule_id: ENT_005
+    priority: 690
+    any:
+      - key: tourism
+        values: [museum, gallery]
+      - key: amenity
+        values: [arts_centre]
+    habitat_primary: Entertainment
+    habitat_secondary: Education & Research
+    confidence: high
+    notes: Museums, galleries, and arts centres are cultural venues with education/research context.
+
+  - rule_id: ENT_006
+    priority: 695
+    any:
+      - key: amenity
+        values: [nightclub]
+    habitat_primary: Entertainment
+    habitat_secondary: Food & Hospitality
+    confidence: high
+    notes: Nightclubs are entertainment venues with food/hospitality context.
 
   - rule_id: ENT_002
     priority: 710
