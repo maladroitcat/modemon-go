@@ -128,6 +128,22 @@ def dissolve_geometries(gdf: gpd.GeoDataFrame) -> Any:
     return unary_union([geom for geom in gdf.geometry if geom is not None and not geom.is_empty])
 
 
+def morphological_close_in_feet(gdf: gpd.GeoDataFrame, distance_feet: float) -> tuple[Any, str]:
+    if gdf.crs is None:
+        raise IngestionError("Cannot derive gameplay geometry from a GeoDataFrame with no CRS")
+    projected = gdf.to_crs(AREA_CRS)
+    dissolved = unary_union([geom for geom in projected.geometry if geom is not None and not geom.is_empty])
+    if dissolved.is_empty:
+        raise IngestionError("Cannot derive gameplay geometry from empty source geometry")
+    closed = unary_union([dissolved.buffer(distance_feet)]).buffer(-distance_feet)
+    if not closed.is_valid:
+        closed = make_valid(closed)
+    closed = only_polygons(closed)
+    if not closed.is_valid:
+        raise IngestionError("Derived gameplay geometry remains invalid after make_valid")
+    return closed, AREA_CRS
+
+
 def only_polygons(geom: Any) -> Any:
     if geom is None or geom.is_empty:
         raise IngestionError("Geometry is empty")
@@ -382,19 +398,21 @@ def fetch_durham_downtown() -> dict[str, Any]:
     print(f"DUR-01 PlaceType matches: {values}")
     if values != ["DT"]:
         raise IngestionError(f"DUR-01 did not uniquely return PlaceType='DT': {values}")
+    derived_geom_2264, derived_crs = morphological_close_in_feet(gdf, 50)
+    derived_geom_4326 = gpd.GeoSeries([derived_geom_2264], crs=derived_crs).to_crs(FINAL_CRS).iloc[0]
     return feature(
         RegionSpec(
             "DUR-01",
             "Durham",
             "Downtown Durham",
-            "City/County of Durham PublicServices/Planning Place Type",
-            "City/County of Durham GIS",
-            "PlaceType = 'DT'",
-            False,
-            "Dissolved Downtown Place Type polygons; not Bullpen social district.",
+            "Derived from City/County of Durham Downtown Place Type polygons",
+            "City/County of Durham GIS / derived gameplay geometry",
+            "PlaceType='DT'; dissolve; +50 ft buffer; union; -50 ft buffer",
+            True,
+            "Gameplay boundary derived from authoritative Downtown Place Type polygons. Morphological closing bridges normal street-width gaps; this is not represented as an official legal or administrative downtown boundary.",
         ),
-        dissolve_geometries(gdf.to_crs(FINAL_CRS)),
-        str(gdf.crs),
+        derived_geom_4326,
+        f"{gdf.crs}; derived in {derived_crs}",
         retrieved,
     )
 
@@ -986,7 +1004,12 @@ def write_readme(summary: pd.DataFrame, failures: list[str]) -> None:
     if not summary.empty:
         for _, row in summary.sort_values("region_id").iterrows():
             review = "yes" if row["review_required"] else "no"
-            authority = "OSM fallback" if row["source_authority"] == "OpenStreetMap" else "authoritative source"
+            if row["source_authority"] == "OpenStreetMap":
+                authority = "OSM fallback"
+            elif "derived" in str(row["source_authority"]).lower():
+                authority = "derived gameplay geometry"
+            else:
+                authority = "authoritative source"
             lines.extend(
                 [
                     f"### {row['region_id']} - {row['display_name']}",
