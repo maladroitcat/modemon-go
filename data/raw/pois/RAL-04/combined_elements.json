@@ -1,0 +1,3846 @@
+[
+  {
+    "id": 668387495,
+    "lat": 35.7736185,
+    "lon": -78.6790772,
+    "tags": {
+      "amenity": "parking_entrance",
+      "bicycle": "no",
+      "foot": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 668387547,
+    "lat": 35.7734225,
+    "lon": -78.6782848,
+    "tags": {
+      "amenity": "parking_entrance",
+      "bicycle": "no",
+      "foot": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1053135966,
+    "lat": 35.7711609,
+    "lon": -78.6787888,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "multi-storey"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1156532512,
+    "lat": 35.7745655,
+    "lon": -78.670215,
+    "tags": {
+      "alt_name": "centennial campus student parking",
+      "amenity": "bicycle_parking",
+      "capacity": "16",
+      "date": "16Feb11",
+      "name": "Bike Rack",
+      "source": "Garmin GPSmap 62s"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1156533023,
+    "lat": 35.7737664,
+    "lon": -78.6701276,
+    "tags": {
+      "alt_name": "centennial campus student parking",
+      "amenity": "bicycle_parking",
+      "capacity": "16",
+      "date": "16Feb11",
+      "name": "Bike Rack",
+      "source": "Garmin GPSmap 62s"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1156539403,
+    "lat": 35.7716375,
+    "lon": -78.6747734,
+    "tags": {
+      "alt_name": "Engineering building II courtyard",
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "10",
+      "covered": "no",
+      "date": "16Fed11",
+      "source": "Garmin GPSmap 62s"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1156539410,
+    "lat": 35.7717136,
+    "lon": -78.673954,
+    "tags": {
+      "alt_name": "Engineering building II courtyard",
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wall_loops",
+      "capacity": "22",
+      "covered": "no",
+      "date": "16Feb11",
+      "source": "Garmin GPSmap 62s"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1156539416,
+    "lat": 35.7721249,
+    "lon": -78.6739031,
+    "tags": {
+      "alt_name": "Engineering building II courtyard",
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "12",
+      "covered": "no",
+      "date": "16Feb11",
+      "source": "GPS"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1156539421,
+    "lat": 35.7710782,
+    "lon": -78.6739242,
+    "tags": {
+      "alt_name": "Engineering building II courtyard",
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "date": "16Feb11",
+      "fee": "no",
+      "source": "Garmin GPSmap 62s"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1156539426,
+    "lat": 35.7705635,
+    "lon": -78.6742921,
+    "tags": {
+      "alt_name": "Engineering building II courtyard",
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "8",
+      "covered": "no",
+      "date": "16Feb11",
+      "source": "Garmin GPSmap 62s"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1168858637,
+    "lat": 35.7724846,
+    "lon": -78.6748041,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "32",
+      "covered": "no",
+      "source": "Garmin62S"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1168865825,
+    "lat": 35.7724513,
+    "lon": -78.67474,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "6",
+      "covered": "no",
+      "source": "Garmin62S"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1168880156,
+    "lat": 35.7720085,
+    "lon": -78.6751851,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "6",
+      "check_date": "2023-10-26",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1168880161,
+    "lat": 35.7720646,
+    "lon": -78.6751429,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "6",
+      "check_date": "2023-10-26",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1439841728,
+    "lat": 35.7667283,
+    "lon": -78.6775211,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "1",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1439841747,
+    "lat": 35.7667935,
+    "lon": -78.6778215,
+    "tags": {
+      "amenity": "waste_basket",
+      "check_date": "2021-07-05"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1459173463,
+    "lat": 35.7640598,
+    "lon": -78.674583,
+    "tags": {
+      "check_date": "2022-07-03",
+      "information": "map",
+      "tourism": "information"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1459173466,
+    "lat": 35.7640882,
+    "lon": -78.6745864,
+    "tags": {
+      "amenity": "waste_basket",
+      "check_date": "2023-01-06"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1757823993,
+    "lat": 35.768908,
+    "lon": -78.6773773,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2104454759,
+    "lat": 35.7666882,
+    "lon": -78.6768523,
+    "tags": {
+      "information": "board",
+      "name": "Disc Golf Course",
+      "tourism": "information"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2104454809,
+    "lat": 35.7653068,
+    "lon": -78.6755297,
+    "tags": {
+      "amenity": "recycling",
+      "recycling:cans": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2190454252,
+    "lat": 35.7667311,
+    "lon": -78.6776953,
+    "tags": {
+      "fishing": "yes",
+      "leisure": "fishing",
+      "name": "Lake Raleigh Public Fishing Area"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2190454396,
+    "lat": 35.7714111,
+    "lon": -78.6759601,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "15",
+      "check_date": "2023-10-25",
+      "covered": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2470629835,
+    "lat": 35.7625465,
+    "lon": -78.6797849,
+    "tags": {
+      "amenity": "waste_disposal"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2470635859,
+    "lat": 35.7696433,
+    "lon": -78.6765448,
+    "tags": {
+      "amenity": "cafe",
+      "internet_access": "wlan",
+      "name": "Common Grounds Caf\u00e9 & Creamery",
+      "opening_hours": "Mo-Th 08:00-23:00; Fr 08:00-17:00; Sa 10:00-17:00; Su 12:00-23:00",
+      "source": "local knowledge",
+      "website": "https://www.ncsudining.com/locations/restaurants-cafes/hunt-library/",
+      "wheelchair": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2470637788,
+    "lat": 35.7717111,
+    "lon": -78.6738559,
+    "tags": {
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "internet_access": "wlan",
+      "name": "Port City Java Coffeehouse Caf\u00e9",
+      "opening_hours": "Tu-Sa 07:30-15:00"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2470661698,
+    "lat": 35.7586559,
+    "lon": -78.6880202,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:country": "US",
+      "addr:housenumber": "1890",
+      "addr:postcode": "27606",
+      "addr:state": "NC",
+      "addr:street": "Main Campus Drive",
+      "amenity": "university",
+      "name": "William and Ida Friday Institute for Educational Innovation",
+      "website": "https://www.fi.ncsu.edu/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2470669436,
+    "lat": 35.7710755,
+    "lon": -78.6738071,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:postcode": "27606",
+      "addr:state": "NC",
+      "amenity": "university",
+      "check_date": "2026-07-09",
+      "name": "Department of Mechanical and Aerospace Engineering",
+      "source": "local knowledge",
+      "website": "https://www.mae.ncsu.edu/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2967818350,
+    "lat": 35.7726913,
+    "lon": -78.678446,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 2967838837,
+    "lat": 35.7726854,
+    "lon": -78.6779008,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:country": "US",
+      "addr:housenumber": "920",
+      "addr:postcode": "27606",
+      "addr:state": "NC",
+      "addr:street": "Main Campus Drive",
+      "addr:unit": "101",
+      "check_date:opening_hours": "2023-10-26",
+      "name": "Skema Business School",
+      "office": "educational_institution",
+      "opening_hours:signed": "no",
+      "phone": "+1 919 535 5700",
+      "website": "https://www.skema.edu/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 3011712773,
+    "lat": 35.7702302,
+    "lon": -78.6744446,
+    "tags": {
+      "amenity": "restaurant",
+      "name": "On the Oval Culinary Creations"
+    },
+    "type": "node"
+  },
+  {
+    "id": 3599724848,
+    "lat": 35.7721751,
+    "lon": -78.6734612,
+    "tags": {
+      "public_transport": "stop_area",
+      "type": "public_transport"
+    },
+    "type": "node"
+  },
+  {
+    "id": 3739245357,
+    "lat": 35.7724331,
+    "lon": -78.6746818,
+    "tags": {
+      "amenity": "bicycle_repair_station",
+      "brand": "Dero",
+      "check_date:service:bicycle:pump": "2023-10-25",
+      "note": "Engineering Building",
+      "opening_hours": "24/7",
+      "service:bicycle:pump": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 4229001894,
+    "lat": 35.7667136,
+    "lon": -78.6778594,
+    "tags": {
+      "leisure": "slipway"
+    },
+    "type": "node"
+  },
+  {
+    "id": 4316533637,
+    "lat": 35.7708033,
+    "lon": -78.6747332,
+    "tags": {
+      "amenity": "university",
+      "check_date": "2024-07-11",
+      "name": "North Carolina State University (Centennial Campus)",
+      "website": "https://centennial.ncsu.edu/",
+      "wikidata": "Q24779",
+      "wikipedia": "en:Centennial Campus of North Carolina State University"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5257751409,
+    "lat": 35.7711259,
+    "lon": -78.6737611,
+    "tags": {
+      "amenity": "vending_machine",
+      "check_date": "2026-07-09",
+      "indoor": "yes",
+      "payment:campus_card": "yes",
+      "payment:cash": "yes",
+      "payment:coins": "yes",
+      "vending": "drinks,_snacks"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5267029052,
+    "lat": 35.7726648,
+    "lon": -78.6667851,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "705",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Barbour Drive",
+      "amenity": "community_centre",
+      "description": "Provides local cultural events and language classes.",
+      "email": "ncjapancenter@ncsu.edu",
+      "name": "NC Japan Center",
+      "operator": "NC State University",
+      "phone": "+1-919-515-3450",
+      "website": "https://japan.ncsu.edu/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5267029053,
+    "lat": 35.7720058,
+    "lon": -78.6669116,
+    "tags": {
+      "cemetery": "grave",
+      "historic": "tomb",
+      "name": "Theophilus Hunter, Sr.",
+      "website": "https://japan.ncsu.edu/spring-hill-house.html"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5840644055,
+    "lat": 35.7720856,
+    "lon": -78.6736499,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "Engineering II (COE)",
+      "network": "Wolfline",
+      "not:network:wikidata": "Q4750893",
+      "operator": "Transdev",
+      "passenger_information_display": "no",
+      "public_transport": "platform",
+      "ref": "135",
+      "shelter": "yes",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6223913718,
+    "lat": 35.7727694,
+    "lon": -78.6758115,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6240273034,
+    "lat": 35.7694687,
+    "lon": -78.6769455,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040602,
+    "lat": 35.7690566,
+    "lon": -78.6720968,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Wolf Ridge at Initiative Way (SB)",
+      "network": "Wolfline",
+      "not:network:wikidata": "Q4750893",
+      "operator": "Transdev",
+      "public_transport": "platform",
+      "ref": "253",
+      "shelter": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040607,
+    "lat": 35.7694717,
+    "lon": -78.6767433,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "Hunt Library at Partners Way",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "240",
+      "shelter": "no",
+      "tactile_paving": "no",
+      "wheelchair": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040609,
+    "lat": 35.774467,
+    "lon": -78.6763113,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Main Campus Dr at Partners II (Southbound)",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "230"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040611,
+    "lat": 35.7738207,
+    "lon": -78.6701112,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Centennial RS Lots (1st shelter)",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "208",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040613,
+    "lat": 35.7697734,
+    "lon": -78.6779881,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "Main Campus Dr at College of Textiles",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "204",
+      "shelter": "yes",
+      "tactile_paving": "no",
+      "wheelchair": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040615,
+    "lat": 35.7748521,
+    "lon": -78.6800096,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Varsity Dr at Avent Ferry Rd",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "202",
+      "shelter": "no",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040620,
+    "lat": 35.7746165,
+    "lon": -78.6703005,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Centennial RS Lots (2nd shelter)",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "193",
+      "wheelchair": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040639,
+    "lat": 35.772931,
+    "lon": -78.6773016,
+    "tags": {
+      "bench": "yes",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "Main Campus Dr at Venture Bldgs",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "157",
+      "shelter": "no",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040640,
+    "lat": 35.771942,
+    "lon": -78.675333,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "Partners Way at Varsity Dr (College of Engineering)",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "134",
+      "shelter": "yes",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040646,
+    "lat": 35.7663025,
+    "lon": -78.6741808,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "The Greens at Initiative Way",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "280"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040647,
+    "lat": 35.7735297,
+    "lon": -78.6704436,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Initiative Way at Main Campus Dr Lots",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "281"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040648,
+    "lat": 35.7737333,
+    "lon": -78.6667742,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Barbour Dr at Spring Hill Lot",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "278"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040649,
+    "lat": 35.7691296,
+    "lon": -78.671904,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Wolf Ridge at Initiative Way (NB)",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "279"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040651,
+    "lat": 35.7749099,
+    "lon": -78.6717507,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "Oval Dr at Main Campus Dr",
+      "network": "Wolfline",
+      "public_transport": "platform",
+      "ref": "264",
+      "shelter": "no",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7196414105,
+    "lat": 35.7735924,
+    "lon": -78.67424,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7196414107,
+    "lat": 35.7738823,
+    "lon": -78.6740331,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7196414108,
+    "lat": 35.7741643,
+    "lon": -78.6737944,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7259115690,
+    "lat": 35.7722591,
+    "lon": -78.6754301,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 9291626989,
+    "lat": 35.7668847,
+    "lon": -78.6779598,
+    "tags": {
+      "amenity": "waste_basket"
+    },
+    "type": "node"
+  },
+  {
+    "id": 9291626990,
+    "lat": 35.7669184,
+    "lon": -78.6779604,
+    "tags": {
+      "amenity": "bench"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859098,
+    "lat": 35.7733958,
+    "lon": -78.6738141,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "5",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859099,
+    "lat": 35.764211,
+    "lon": -78.6694794,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859100,
+    "lat": 35.7695984,
+    "lon": -78.6770936,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "10",
+      "covered": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859101,
+    "lat": 35.7701383,
+    "lon": -78.6773852,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "10",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859103,
+    "lat": 35.7698595,
+    "lon": -78.6786714,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859104,
+    "lat": 35.7701876,
+    "lon": -78.6781617,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "10",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859105,
+    "lat": 35.7707898,
+    "lon": -78.6807798,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "5",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859107,
+    "lat": 35.770184,
+    "lon": -78.6780904,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "16",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859109,
+    "lat": 35.7737015,
+    "lon": -78.6728725,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "6",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859110,
+    "lat": 35.7703776,
+    "lon": -78.6809869,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "5",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859111,
+    "lat": 35.7697432,
+    "lon": -78.6787155,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "4",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859113,
+    "lat": 35.7734851,
+    "lon": -78.6729181,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "24",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859114,
+    "lat": 35.7694716,
+    "lon": -78.6766502,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "15",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10049859115,
+    "lat": 35.7711077,
+    "lon": -78.6777796,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "2",
+      "covered": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200566,
+    "lat": 35.7666629,
+    "lon": -78.6734099,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200567,
+    "lat": 35.7661552,
+    "lon": -78.6733419,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200568,
+    "lat": 35.7663852,
+    "lon": -78.6733352,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "2",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200569,
+    "lat": 35.7665013,
+    "lon": -78.6733513,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "2",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200570,
+    "lat": 35.7663682,
+    "lon": -78.6727736,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "2",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200571,
+    "lat": 35.7666145,
+    "lon": -78.6728053,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "5",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200572,
+    "lat": 35.765852,
+    "lon": -78.6735828,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200573,
+    "lat": 35.7655874,
+    "lon": -78.6736255,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "2",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200574,
+    "lat": 35.765299,
+    "lon": -78.6736852,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200575,
+    "lat": 35.7653791,
+    "lon": -78.674231,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200576,
+    "lat": 35.7656496,
+    "lon": -78.6741673,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200577,
+    "lat": 35.7659132,
+    "lon": -78.6741151,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200578,
+    "lat": 35.7655379,
+    "lon": -78.6727716,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200579,
+    "lat": 35.7649768,
+    "lon": -78.6728727,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200580,
+    "lat": 35.7652729,
+    "lon": -78.6728137,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "2",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200581,
+    "lat": 35.7650613,
+    "lon": -78.6734102,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200582,
+    "lat": 35.7653466,
+    "lon": -78.6733513,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096200583,
+    "lat": 35.7656079,
+    "lon": -78.6733057,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "7",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096258315,
+    "lat": 35.7635337,
+    "lon": -78.6783219,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "loops",
+      "capacity": "10",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096258316,
+    "lat": 35.7637855,
+    "lon": -78.6777566,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "loops",
+      "capacity": "10",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096258317,
+    "lat": 35.7642601,
+    "lon": -78.6775866,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "loops",
+      "capacity": "6",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096258318,
+    "lat": 35.7603715,
+    "lon": -78.6775906,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "8",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096258319,
+    "lat": 35.7604011,
+    "lon": -78.6770391,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "8",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096258320,
+    "lat": 35.7590067,
+    "lon": -78.6879476,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wave",
+      "capacity": "13",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10096258321,
+    "lat": 35.7647144,
+    "lon": -78.6734936,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "2",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11161470206,
+    "lat": 35.7701476,
+    "lon": -78.678258,
+    "tags": {
+      "addr:housenumber": "1020",
+      "addr:street": "Main Campus Drive",
+      "amenity": "cafe",
+      "name": "Social Fabric",
+      "opening_hours": "Mo-Fr 07:30-15:00"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11195223019,
+    "lat": 35.7723633,
+    "lon": -78.680487,
+    "tags": {
+      "check_date:opening_hours": "2023-10-30",
+      "government": "public_service",
+      "name": "National Weather Service - Raleigh, NC",
+      "office": "government",
+      "opening_hours:signed": "no",
+      "operator": "National Weather Service",
+      "operator:short": "NWS",
+      "operator:wikidata": "Q1066823"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138242,
+    "lat": 35.7698797,
+    "lon": -78.6746948,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138243,
+    "lat": 35.7700098,
+    "lon": -78.6759457,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "18",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138244,
+    "lat": 35.7680076,
+    "lon": -78.6731834,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138245,
+    "lat": 35.7681709,
+    "lon": -78.6728524,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138246,
+    "lat": 35.768198,
+    "lon": -78.6735512,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138247,
+    "lat": 35.7685894,
+    "lon": -78.6732948,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "5",
+      "covered": "yes",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138248,
+    "lat": 35.768684,
+    "lon": -78.6732956,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "5",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138249,
+    "lat": 35.7686127,
+    "lon": -78.6731354,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138250,
+    "lat": 35.7693058,
+    "lon": -78.6729099,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138251,
+    "lat": 35.7690284,
+    "lon": -78.6726309,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "12",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138252,
+    "lat": 35.7689884,
+    "lon": -78.6735447,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138253,
+    "lat": 35.7691001,
+    "lon": -78.6736844,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138254,
+    "lat": 35.7695818,
+    "lon": -78.6736942,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138255,
+    "lat": 35.7698164,
+    "lon": -78.673663,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "25",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138256,
+    "lat": 35.7695532,
+    "lon": -78.6740157,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138257,
+    "lat": 35.7696355,
+    "lon": -78.673951,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138258,
+    "lat": 35.7709477,
+    "lon": -78.6733634,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "5",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138259,
+    "lat": 35.771158,
+    "lon": -78.6738685,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138260,
+    "lat": 35.7715489,
+    "lon": -78.6748434,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138261,
+    "lat": 35.771078,
+    "lon": -78.6753606,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "24",
+      "covered": "yes",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138262,
+    "lat": 35.7704181,
+    "lon": -78.6764412,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "12",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138263,
+    "lat": 35.7715049,
+    "lon": -78.6728755,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "7",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138264,
+    "lat": 35.7688881,
+    "lon": -78.6790846,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "30",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138265,
+    "lat": 35.7706947,
+    "lon": -78.6785516,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "10",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11292138266,
+    "lat": 35.772614,
+    "lon": -78.6806929,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "13",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12322545973,
+    "lat": 35.7713814,
+    "lon": -78.6731955,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12322545974,
+    "lat": 35.772758,
+    "lon": -78.6743369,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588764594,
+    "lat": 35.7713379,
+    "lon": -78.673156,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588764595,
+    "lat": 35.7739876,
+    "lon": -78.6729571,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588764596,
+    "lat": 35.7705526,
+    "lon": -78.6761085,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588764597,
+    "lat": 35.7709805,
+    "lon": -78.6770523,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588764598,
+    "lat": 35.7687166,
+    "lon": -78.6767025,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588764599,
+    "lat": 35.7688608,
+    "lon": -78.679395,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588764600,
+    "lat": 35.7691599,
+    "lon": -78.6792382,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588787601,
+    "lat": 35.7677437,
+    "lon": -78.673836,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588787602,
+    "lat": 35.7693684,
+    "lon": -78.6726863,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588787603,
+    "lat": 35.7701461,
+    "lon": -78.6739281,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588787604,
+    "lat": 35.7709619,
+    "lon": -78.6789043,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588787605,
+    "lat": 35.7733691,
+    "lon": -78.6754894,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12588787606,
+    "lat": 35.7737119,
+    "lon": -78.675468,
+    "tags": {
+      "amenity": "recycling",
+      "colour": "yellow",
+      "recycling:electrical_items": "yes",
+      "recycling_type": "container"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13063734961,
+    "lat": 35.7668366,
+    "lon": -78.6772705,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "wall_loops",
+      "capacity": "8",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13368817701,
+    "lat": 35.7687355,
+    "lon": -78.6837782,
+    "tags": {
+      "addr:housenumber": "739",
+      "addr:postcode": "27606",
+      "addr:street": "Chappell Drive",
+      "amenity": "school",
+      "name": "Tammy Lynn Center",
+      "phone": "+1-919-832-3909",
+      "website": "https://www.nctlc.org/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13706327099,
+    "lat": 35.772436,
+    "lon": -78.6779958,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "930",
+      "addr:postcode": "27606",
+      "addr:state": "NC",
+      "addr:street": "Main Campus Drive",
+      "addr:unit": "151",
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "description": "Casual, small coffee shop. Features a small but curated and well labeled menu of coffees, teas, and other beverages, as well as a selection of pastries and pre-made meals. Seating is available to work or meet.",
+      "internet_access": "yes",
+      "internet_access:fee": "no",
+      "name": "321 Coffee - NC State Centennial",
+      "opening_hours": "Mo-Fr 07:00-16:00",
+      "outdoor_seating": "yes",
+      "website": "https://321coffee.com"
+    },
+    "type": "node"
+  },
+  {
+    "center": {
+      "lat": 35.7727861,
+      "lon": -78.6787436
+    },
+    "id": 33069334,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "yes",
+      "name": "Venture Parking",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7750676,
+      "lon": -78.6781441
+    },
+    "id": 33076840,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "yes",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7749285,
+      "lon": -78.6773855
+    },
+    "id": 47700163,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "yes",
+      "name": "Keystone Deck",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7753133,
+      "lon": -78.6767902
+    },
+    "id": 164068765,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "yes",
+      "name": "Toxicology Deck",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7714246,
+      "lon": -78.6763438
+    },
+    "id": 164125158,
+    "tags": {
+      "access": "private",
+      "addr:city": "Raleigh",
+      "addr:postcode": "27606",
+      "addr:state": "NC",
+      "addr:street": "Partners Way",
+      "amenity": "parking",
+      "building": "yes",
+      "name": "Oval West Parking Deck",
+      "parking": "multi-storey",
+      "short_name": "PWD"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7693805,
+      "lon": -78.6786905
+    },
+    "id": 164125235,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "yes",
+      "building:levels": "1",
+      "building:levels:underground": "4",
+      "layer": "-1",
+      "location": "underground",
+      "name": "Monteith Deck",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7692962,
+      "lon": -78.6764433
+    },
+    "id": 177166351,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:country": "US",
+      "addr:housenumber": "1070",
+      "addr:postcode": "27606",
+      "addr:state": "NC",
+      "addr:street": "Partners Way",
+      "amenity": "library",
+      "building": "yes",
+      "building:levels": "5",
+      "contact:phone": "+1 919 515 7110",
+      "contact:website": "https://www.lib.ncsu.edu/huntlibrary",
+      "internet_access": "wlan",
+      "name": "James B. Hunt Jr. Library",
+      "opening_hours": "Mo-Th 00:00-24:00; Fr 00:00-22:00; Sa 09:00-22:00; Su 09:00-24:00",
+      "operator": "NC State",
+      "operator:type": "university",
+      "ref": "783A",
+      "short_name": "JHL",
+      "website": "https://www.lib.ncsu.edu/huntlibrary"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7700158,
+      "lon": -78.6574486
+    },
+    "id": 194996668,
+    "tags": {
+      "emergency": "no",
+      "leisure": "park",
+      "name": "Dorothea Dix Park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7654596,
+      "lon": -78.6758776
+    },
+    "id": 200456347,
+    "tags": {
+      "access": "unknown",
+      "contact:website": "http://www.ncsu.edu/facilities/buildings/disk_golf.html",
+      "leisure": "disc_golf_course",
+      "sport": "disc_golf",
+      "start_date": "2010"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.775314,
+      "lon": -78.6705986
+    },
+    "id": 235051706,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7749612,
+      "lon": -78.6701632
+    },
+    "id": 235051707,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7743877,
+      "lon": -78.6698014
+    },
+    "id": 235051708,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7738174,
+      "lon": -78.6697039
+    },
+    "id": 235051709,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7732371,
+      "lon": -78.6695433
+    },
+    "id": 235051710,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7727206,
+      "lon": -78.6696239
+    },
+    "id": 235051711,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.773823,
+      "lon": -78.6726041
+    },
+    "id": 235834661,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.772832,
+      "lon": -78.6733771
+    },
+    "id": 235834662,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7726812,
+      "lon": -78.673084
+    },
+    "id": 235834663,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7736729,
+      "lon": -78.6723154
+    },
+    "id": 235834664,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7619131,
+      "lon": -78.6801307
+    },
+    "id": 239240384,
+    "tags": {
+      "amenity": "parking",
+      "capacity": "200",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7714872,
+      "lon": -78.6726844
+    },
+    "id": 239261993,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "capacity": "9",
+      "parking": "surface",
+      "wheelchair": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7702336,
+      "lon": -78.6733857
+    },
+    "id": 239262362,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7714621,
+      "lon": -78.6742607
+    },
+    "id": 239262363,
+    "tags": {
+      "leisure": "park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7706046,
+      "lon": -78.6767792
+    },
+    "id": 239262849,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "source": "Bing imagery"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7607621,
+      "lon": -78.677525
+    },
+    "id": 239263106,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7608758,
+      "lon": -78.677409
+    },
+    "id": 239263107,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7610466,
+      "lon": -78.6772839
+    },
+    "id": 239263108,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7594422,
+      "lon": -78.6873593
+    },
+    "id": 239263425,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "source": "Bing imagery"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7680414,
+      "lon": -78.6731099
+    },
+    "id": 297300830,
+    "tags": {
+      "access": "permit",
+      "amenity": "parking",
+      "note": "Requires RC permit from NC State. Enforced M-F 7:00am to Midnight.",
+      "parking": "surface",
+      "supervised": "no"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7695648,
+      "lon": -78.6729803
+    },
+    "id": 297300831,
+    "tags": {
+      "access": "permit",
+      "amenity": "parking",
+      "parking": "surface",
+      "wheelchair": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7704772,
+      "lon": -78.6724224
+    },
+    "id": 297300832,
+    "tags": {
+      "access": "permit",
+      "amenity": "parking",
+      "name": "Oval East Lot",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7689736,
+      "lon": -78.6731175
+    },
+    "id": 297305755,
+    "tags": {
+      "leisure": "park",
+      "name": "The Cistern"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7680202,
+      "lon": -78.6726337
+    },
+    "id": 297307157,
+    "tags": {
+      "access": "permit",
+      "amenity": "parking",
+      "parking": "lane"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7668759,
+      "lon": -78.6736911
+    },
+    "id": 297307158,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7763216,
+      "lon": -78.6732012
+    },
+    "id": 297580267,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7760916,
+      "lon": -78.6723901
+    },
+    "id": 297580268,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7757823,
+      "lon": -78.6717704
+    },
+    "id": 297580269,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.765702,
+      "lon": -78.6742188
+    },
+    "id": 304460443,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7657812,
+      "lon": -78.6743483
+    },
+    "id": 304460444,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7661473,
+      "lon": -78.6740161
+    },
+    "id": 304460445,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7660425,
+      "lon": -78.6743016
+    },
+    "id": 304460446,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "sheds"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7655205,
+      "lon": -78.6744132
+    },
+    "id": 304460447,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "sheds"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7662234,
+      "lon": -78.6741367
+    },
+    "id": 304460448,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.766204,
+      "lon": -78.67366
+    },
+    "id": 304460449,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7661284,
+      "lon": -78.6737758
+    },
+    "id": 304460450,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7664638,
+      "lon": -78.6738649
+    },
+    "id": 304460451,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7666273,
+      "lon": -78.6737011
+    },
+    "id": 304460452,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "sheds"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7670483,
+      "lon": -78.6731633
+    },
+    "id": 304460453,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "sheds"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7658759,
+      "lon": -78.6729926
+    },
+    "id": 304460454,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7657607,
+      "lon": -78.6729912
+    },
+    "id": 304460455,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7653845,
+      "lon": -78.6734355
+    },
+    "id": 304460456,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7654073,
+      "lon": -78.6735831
+    },
+    "id": 304460457,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.765057,
+      "lon": -78.6739331
+    },
+    "id": 304460458,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7648577,
+      "lon": -78.6732079
+    },
+    "id": 304460459,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7647626,
+      "lon": -78.6733822
+    },
+    "id": 304460460,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7649649,
+      "lon": -78.6739666
+    },
+    "id": 304460461,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7647159,
+      "lon": -78.673131
+    },
+    "id": 304460462,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "sheds"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7646982,
+      "lon": -78.6729012
+    },
+    "id": 304460463,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7649013,
+      "lon": -78.672742
+    },
+    "id": 304460464,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7653935,
+      "lon": -78.6727382
+    },
+    "id": 304460465,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7654051,
+      "lon": -78.6725856
+    },
+    "id": 304460466,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7668481,
+      "lon": -78.6734302
+    },
+    "id": 304460467,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7663263,
+      "lon": -78.6735603
+    },
+    "id": 304460468,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7663938,
+      "lon": -78.6734168
+    },
+    "id": 304460469,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7661481,
+      "lon": -78.6730066
+    },
+    "id": 304460470,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7660292,
+      "lon": -78.6729929
+    },
+    "id": 304460471,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.765999,
+      "lon": -78.6726897
+    },
+    "id": 304460472,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7658855,
+      "lon": -78.6726819
+    },
+    "id": 304460473,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7661284,
+      "lon": -78.6725618
+    },
+    "id": 304460474,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.76581,
+      "lon": -78.6725364
+    },
+    "id": 304460475,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7709474,
+      "lon": -78.6660461
+    },
+    "id": 341862749,
+    "tags": {
+      "amenity": "training",
+      "name": "K9 Training Course",
+      "training": "K9"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7668182,
+      "lon": -78.6774249
+    },
+    "id": 352694264,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "yes",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.772512,
+      "lon": -78.6758861
+    },
+    "id": 378067835,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "yes",
+      "name": "Alliance Deck",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7745518,
+      "lon": -78.6792142
+    },
+    "id": 382297658,
+    "tags": {
+      "building": "commercial",
+      "information": "map",
+      "name": "Information Booth",
+      "nohousenumber": "yes",
+      "tourism": "information"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.773207,
+      "lon": -78.6803739
+    },
+    "id": 413129356,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7728088,
+      "lon": -78.6810062
+    },
+    "id": 413129357,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "yes",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7729693,
+      "lon": -78.6801395
+    },
+    "id": 413129358,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7758726,
+      "lon": -78.6770691
+    },
+    "id": 423487931,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7755542,
+      "lon": -78.6760441
+    },
+    "id": 423487932,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7760927,
+      "lon": -78.6761469
+    },
+    "id": 423487933,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7762622,
+      "lon": -78.6752194
+    },
+    "id": 423487934,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7759983,
+      "lon": -78.6766067
+    },
+    "id": 423487935,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7761812,
+      "lon": -78.6756894
+    },
+    "id": 423487936,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7762636,
+      "lon": -78.6747401
+    },
+    "id": 423487937,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7705113,
+      "lon": -78.6749236
+    },
+    "id": 426252345,
+    "tags": {
+      "landuse": "recreation_ground",
+      "leisure": "park",
+      "name": "The Oval"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7695799,
+      "lon": -78.6757292
+    },
+    "id": 426252349,
+    "tags": {
+      "leisure": "park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7694906,
+      "lon": -78.675452
+    },
+    "id": 426252350,
+    "tags": {
+      "leisure": "park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.771051,
+      "lon": -78.6745619
+    },
+    "id": 426252352,
+    "tags": {
+      "leisure": "park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7704272,
+      "lon": -78.6751571
+    },
+    "id": 426252353,
+    "tags": {
+      "leisure": "park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7581288,
+      "lon": -78.6792347
+    },
+    "id": 430436305,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1509",
+      "addr:postcode": "27606",
+      "addr:street": "Main Campus Drive",
+      "leisure": "golf_course",
+      "name": "Lonnie Poole Golf Course",
+      "phone": "+1 919 833 3338",
+      "website": "https://www.lonniepoolegolfcourse.com/",
+      "wikidata": "Q6674755"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7725223,
+      "lon": -78.6664857
+    },
+    "id": 544913146,
+    "tags": {
+      "access": "permissive",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7698726,
+      "lon": -78.6772494
+    },
+    "id": 584475101,
+    "tags": {
+      "leisure": "park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7687614,
+      "lon": -78.6760758
+    },
+    "id": 584475102,
+    "tags": {
+      "leisure": "park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7722866,
+      "lon": -78.6777477
+    },
+    "id": 584475103,
+    "tags": {
+      "leisure": "park",
+      "name": "Venture Courtyard"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7741502,
+      "lon": -78.6753413
+    },
+    "id": 584475104,
+    "tags": {
+      "leisure": "park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.76833,
+      "lon": -78.678466
+    },
+    "id": 584475823,
+    "tags": {
+      "leisure": "park",
+      "name": "Lake Raleigh Picnic Area"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7700732,
+      "lon": -78.678948
+    },
+    "id": 584475824,
+    "tags": {
+      "leisure": "park",
+      "name": "Textiles Courtyard"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7741586,
+      "lon": -78.666028
+    },
+    "id": 664887034,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7692337,
+      "lon": -78.6772119
+    },
+    "id": 666513374,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "building": "parking",
+      "fee": "no",
+      "fee:conditional": "yes @ (Mo-Fr 07:00-17:00)",
+      "name": "Poulton Deck",
+      "opening_hours": "Mo-Fr 07:00-17:00",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7737985,
+      "lon": -78.6700939
+    },
+    "id": 677320624,
+    "tags": {
+      "amenity": "shelter",
+      "building": "yes",
+      "shelter_type": "public_transport"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7641033,
+      "lon": -78.678102
+    },
+    "id": 677320792,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "2451",
+      "addr:postcode": "27606",
+      "addr:state": "NC",
+      "addr:street": "Alumni Drive",
+      "building": "yes",
+      "email": "info@stateviewhotel.com",
+      "fax": "+1-984-349-5143",
+      "internet_access": "wlan",
+      "internet_access:fee": "no",
+      "name": "The StateView Hotel, Autograph Collection",
+      "phone": "+1-919-743-0055",
+      "tourism": "hotel",
+      "website": "https://www.marriott.com/hotels/travel/rduas-the-stateview-hotel-autograph-collection/"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7746097,
+      "lon": -78.6702484
+    },
+    "id": 677320871,
+    "tags": {
+      "amenity": "shelter",
+      "building": "yes",
+      "shelter_type": "public_transport"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.75641,
+      "lon": -78.6884356
+    },
+    "id": 677320998,
+    "tags": {
+      "building": "yes",
+      "office": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7720478,
+      "lon": -78.6736389
+    },
+    "id": 677321002,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "building": "roof",
+      "building:levels": "1",
+      "capacity": "35",
+      "covered": "yes",
+      "roof:shape": "hipped"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7693804,
+      "lon": -78.6723144
+    },
+    "id": 686925988,
+    "tags": {
+      "access": "permit",
+      "amenity": "parking",
+      "capacity": "2",
+      "parking": "lane"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7701775,
+      "lon": -78.6714813
+    },
+    "id": 686925989,
+    "tags": {
+      "access": "permit",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7693562,
+      "lon": -78.6757826
+    },
+    "id": 688713586,
+    "tags": {
+      "leisure": "garden"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7693197,
+      "lon": -78.6755354
+    },
+    "id": 688713588,
+    "tags": {
+      "leisure": "garden"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7634064,
+      "lon": -78.677518
+    },
+    "id": 728199514,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7644733,
+      "lon": -78.6782907
+    },
+    "id": 728199516,
+    "tags": {
+      "leisure": "swimming_pool"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7614842,
+      "lon": -78.677463
+    },
+    "id": 728199519,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7606446,
+      "lon": -78.6777709
+    },
+    "id": 728199524,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7647856,
+      "lon": -78.6739348
+    },
+    "id": 736389955,
+    "tags": {
+      "leisure": "swimming_pool"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7664272,
+      "lon": -78.6737078
+    },
+    "id": 736389959,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.767111,
+      "lon": -78.6729945
+    },
+    "id": 736389997,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7669776,
+      "lon": -78.6730033
+    },
+    "id": 736389998,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.766877,
+      "lon": -78.6726752
+    },
+    "id": 736389999,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7669533,
+      "lon": -78.6728774
+    },
+    "id": 736390000,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7668935,
+      "lon": -78.6729955
+    },
+    "id": 736390001,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7667782,
+      "lon": -78.6731496
+    },
+    "id": 736390002,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.766424,
+      "lon": -78.6727299
+    },
+    "id": 736390003,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7701212,
+      "lon": -78.6789685
+    },
+    "id": 736390024,
+    "tags": {
+      "amenity": "fountain"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7712612,
+      "lon": -78.6790142
+    },
+    "id": 770943149,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "parking",
+      "name": "Center for Technology and Innovation Parking Deck",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7659424,
+      "lon": -78.6729797
+    },
+    "id": 779967278,
+    "tags": {
+      "leisure": "park",
+      "name": "The Greens Dog Park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7748948,
+      "lon": -78.67759
+    },
+    "id": 833627049,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "concrete"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7606287,
+      "lon": -78.6768928
+    },
+    "id": 940578212,
+    "tags": {
+      "building": "yes",
+      "office": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7605012,
+      "lon": -78.6768757
+    },
+    "id": 940578213,
+    "tags": {
+      "building": "yes",
+      "office": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7603145,
+      "lon": -78.6768347
+    },
+    "id": 940578214,
+    "tags": {
+      "building": "yes",
+      "office": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7703739,
+      "lon": -78.6819483
+    },
+    "id": 946861861,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "yes",
+      "operator": "North Carolina State University",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7690697,
+      "lon": -78.6761996
+    },
+    "id": 967122917,
+    "tags": {
+      "access": "yes",
+      "fee": "no",
+      "garden:type": "rain_garden",
+      "leisure": "garden",
+      "name": "Hunt Rain Garden",
+      "operator": "North Carolina State University",
+      "operator:type": "university"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7701123,
+      "lon": -78.6812102
+    },
+    "id": 1044483352,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7711874,
+      "lon": -78.6810167
+    },
+    "id": 1044483353,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7693548,
+      "lon": -78.6826514
+    },
+    "id": 1044483359,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7690493,
+      "lon": -78.68361
+    },
+    "id": 1044483360,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7688754,
+      "lon": -78.6828061
+    },
+    "id": 1044483368,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7690005,
+      "lon": -78.6810607
+    },
+    "id": 1044483369,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7703341,
+      "lon": -78.6731411
+    },
+    "id": 1073395772,
+    "tags": {
+      "amenity": "parking",
+      "parking": "lane",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7710718,
+      "lon": -78.6725724
+    },
+    "id": 1073395773,
+    "tags": {
+      "amenity": "parking",
+      "parking": "lane",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7697484,
+      "lon": -78.6754443
+    },
+    "id": 1219349711,
+    "tags": {
+      "area": "yes",
+      "artist_name": "Larry Bell",
+      "artwork_type": "installation",
+      "material": "glass",
+      "name": "Reds and Whites",
+      "source": "https://news.ncsu.edu/2024/05/reds-and-whites-artwork-larry-bell/",
+      "tourism": "artwork"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7559287,
+      "lon": -78.6926312
+    },
+    "id": 1231283097,
+    "tags": {
+      "addr:state": "NC",
+      "amenity": "fire_station",
+      "ele": "126",
+      "gnis:feature_id": "2454436",
+      "name": "Raleigh Fire Station Number 20",
+      "source": "USGS Geonames"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7592608,
+      "lon": -78.688677
+    },
+    "id": 1280036306,
+    "tags": {
+      "leisure": "track",
+      "sport": "running"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7682819,
+      "lon": -78.673187
+    },
+    "id": 1323093988,
+    "tags": {
+      "leisure": "pitch",
+      "sport": "beachvolleyball",
+      "surface": "sand"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7794699,
+      "lon": -78.6940244
+    },
+    "id": 6431764,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:postcode": "27695",
+      "addr:state": "NC",
+      "amenity": "university",
+      "ele": "118",
+      "name": "North Carolina State University",
+      "name:fr": "Universit\u00e9 d'\u00c9tat de Caroline du Nord",
+      "name:ru": "\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u0448\u0442\u0430\u0442\u0430 \u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u041a\u0430\u0440\u043e\u043b\u0438\u043d\u0430",
+      "short_name": "NC STATE",
+      "type": "multipolygon",
+      "website": "https://www.ncsu.edu/",
+      "website:mobile": "http://m.ncsu.edu",
+      "wikidata": "Q1132346",
+      "wikipedia": "en:North Carolina State University"
+    },
+    "type": "relation"
+  },
+  {
+    "center": {
+      "lat": 35.7721303,
+      "lon": -78.6735556
+    },
+    "id": 8545666,
+    "tags": {
+      "name": "College of Engineering EB II / Oval Dr",
+      "network": "Wolfline",
+      "operator": "Transdev",
+      "public_transport": "stop_area",
+      "type": "public_transport"
+    },
+    "type": "relation"
+  },
+  {
+    "center": {
+      "lat": 35.7735782,
+      "lon": -78.6746406
+    },
+    "id": 11511774,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "parking;yes",
+      "fee": "yes",
+      "fee:conditional": "yes @ (Mo-Fr 07:00-17:00)",
+      "layer": "1",
+      "name": "Partners Way Parking Deck",
+      "parking": "multi-storey",
+      "payment:credit_cards": "yes",
+      "type": "multipolygon"
+    },
+    "type": "relation"
+  }
+]

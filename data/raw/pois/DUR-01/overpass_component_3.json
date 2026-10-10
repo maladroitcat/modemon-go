@@ -1,0 +1,85 @@
+{
+  "elements": [
+    {
+      "id": 11429704989,
+      "lat": 35.9901365,
+      "lon": -78.9065352,
+      "tags": {
+        "amenity": "bicycle_parking"
+      },
+      "type": "node"
+    },
+    {
+      "center": {
+        "lat": 35.9907655,
+        "lon": -78.9061706
+      },
+      "id": 169601609,
+      "tags": {
+        "note:old_railway_operator": "Durham and South Carolina",
+        "old_railway_operator": "NS",
+        "railway": "abandoned"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.988557,
+        "lon": -78.9077212
+      },
+      "id": 357502148,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface",
+        "surface": "asphalt"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9895078,
+        "lon": -78.9067538
+      },
+      "id": 858704426,
+      "tags": {
+        "leisure": "nature_reserve",
+        "name": "Prairie Island / Carolina Xeriscape",
+        "operator": "Extra Terrestrial Projects",
+        "website": "https://carolinaxeriscape.org/about"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9904128,
+        "lon": -78.9067057
+      },
+      "id": 1167569352,
+      "tags": {
+        "leisure": "pitch",
+        "name": "Durham Bulls Miracle League Park",
+        "sport": "baseball",
+        "website": "https://www.mltriangle.com/"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.990407,
+        "lon": -78.9067589
+      },
+      "id": 1232250499,
+      "tags": {
+        "leisure": "track",
+        "sport": "running"
+      },
+      "type": "way"
+    }
+  ],
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "timestamp_osm_base": "2026-10-10T13:31:26Z"
+  },
+  "version": 0.6
+}

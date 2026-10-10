@@ -1,0 +1,532 @@
+[
+  {
+    "id": 607696788,
+    "lat": 35.7850892,
+    "lon": -78.586485,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900159552,
+    "lat": 35.7846451,
+    "lon": -78.5899939,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900159766,
+    "lat": 35.7822391,
+    "lon": -78.5888459,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900159895,
+    "lat": 35.7832712,
+    "lon": -78.5887882,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900159896,
+    "lat": 35.783195,
+    "lon": -78.5887302,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900159987,
+    "lat": 35.7824121,
+    "lon": -78.5879117,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900159988,
+    "lat": 35.7824333,
+    "lon": -78.5878688,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900160023,
+    "lat": 35.7821678,
+    "lon": -78.587024,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900160028,
+    "lat": 35.7818225,
+    "lon": -78.5871887,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900160029,
+    "lat": 35.7818412,
+    "lon": -78.5871524,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900187966,
+    "lat": 35.78537,
+    "lon": -78.58698,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5900187967,
+    "lat": 35.7853934,
+    "lon": -78.5869335,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5901928920,
+    "lat": 35.7817918,
+    "lon": -78.5877669,
+    "tags": {
+      "amenity": "parking_entrance"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6506991272,
+    "lat": 35.7845418,
+    "lon": -78.5863933,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "WakeMed at Wake Tech",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8632",
+      "shelter": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6507003664,
+    "lat": 35.7861199,
+    "lon": -78.5880196,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "WakeMed at the Andrews Center",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8633",
+      "shelter": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6507009224,
+    "lat": 35.7828862,
+    "lon": -78.5870372,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "WakeMed Perimeter Rd at Swinburne St",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "9415",
+      "shelter": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6507010163,
+    "lat": 35.786068,
+    "lon": -78.588989,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "New Bern Ave at Wake Med (EB)",
+      "network": "GoTriangle",
+      "network:wikidata": "Q7840091",
+      "network:wikipedia": "en:GoTriangle",
+      "public_transport": "platform",
+      "ref": "1891"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6507029747,
+    "lat": 35.784464,
+    "lon": -78.590762,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "New Bern Ave at West Campus Dr (EB)",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8330",
+      "shelter": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6507032866,
+    "lat": 35.78367,
+    "lon": -78.588958,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "West Campus Dr at Galahad Dr",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8631",
+      "shelter": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6717727139,
+    "lat": 35.7846543,
+    "lon": -78.5891359,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "3000",
+      "addr:postcode": "27610",
+      "addr:state": "NC",
+      "addr:street": "New Bern Avenue",
+      "amenity": "doctors",
+      "healthcare": "doctor",
+      "healthcare:speciality": "cardiology",
+      "name": "Wakemed Heart Center"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10304812051,
+    "lat": 35.7847565,
+    "lon": -78.5891127,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "3000",
+      "addr:postcode": "27610",
+      "addr:state": "NC",
+      "addr:street": "New Bern Avenue",
+      "addr:unit": "1100",
+      "amenity": "doctors",
+      "healthcare": "doctor",
+      "healthcare:speciality": "cardiology",
+      "name": "WakeMed Cardiovascular & Thoracic Surgery",
+      "phone": "+1-919-231-6333"
+    },
+    "type": "node"
+  },
+  {
+    "center": {
+      "lat": 35.7821915,
+      "lon": -78.5875173
+    },
+    "id": 47758565,
+    "tags": {
+      "amenity": "parking",
+      "building": "parking",
+      "parking": "multi-storey",
+      "source": "WakeGIS"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7852281,
+      "lon": -78.5867368
+    },
+    "id": 47776787,
+    "tags": {
+      "amenity": "parking",
+      "building": "parking",
+      "building:use": "commercial",
+      "parking": "multi-storey",
+      "source": "WakeGIS"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7827733,
+      "lon": -78.5888662
+    },
+    "id": 187536422,
+    "tags": {
+      "amenity": "parking",
+      "building": "parking",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7826265,
+      "lon": -78.5868458
+    },
+    "id": 187536434,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7830569,
+      "lon": -78.5879853
+    },
+    "id": 187536438,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7846185,
+      "lon": -78.584918
+    },
+    "id": 198165156,
+    "tags": {
+      "amenity": "college",
+      "name": "Wake Technical Community College: Perry Health Sciences Campus"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7825911,
+      "lon": -78.588128
+    },
+    "id": 198168608,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "3000",
+      "addr:postcode": "27610",
+      "addr:street": "New Bern Avenue",
+      "amenity": "hospital",
+      "beds": "628",
+      "emergency": "yes",
+      "healthcare": "hospital",
+      "name": "WakeMed Health & Hospitals: Raleigh Campus",
+      "opening_hours": "24/7",
+      "operator": "WakeMed Health & Hospitals",
+      "phone": "+1 919 350 8000",
+      "website": "https://www.wakemed.org/raleigh-campus"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7850065,
+      "lon": -78.5897429
+    },
+    "id": 624814390,
+    "tags": {
+      "amenity": "parking",
+      "building": "parking",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.786494,
+      "lon": -78.5881201
+    },
+    "id": 624816652,
+    "tags": {
+      "amenity": "parking",
+      "building": "parking",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7856185,
+      "lon": -78.5891826
+    },
+    "id": 624816655,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7841253,
+      "lon": -78.5903501
+    },
+    "id": 624816656,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7857828,
+      "lon": -78.5881015
+    },
+    "id": 624841606,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7856306,
+      "lon": -78.5887429
+    },
+    "id": 624841608,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7848569,
+      "lon": -78.5861338
+    },
+    "id": 624841619,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7816692,
+      "lon": -78.58654
+    },
+    "id": 625078185,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7819254,
+      "lon": -78.5864821
+    },
+    "id": 625078186,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7796864,
+      "lon": -78.5882103
+    },
+    "id": 1046176560,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7833531,
+      "lon": -78.5854877
+    },
+    "id": 1046176563,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "unpaved"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7830562,
+      "lon": -78.5859757
+    },
+    "id": 1046176564,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "unpaved"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7824039,
+      "lon": -78.5891987
+    },
+    "id": 8680926,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt",
+      "type": "multipolygon"
+    },
+    "type": "relation"
+  }
+]

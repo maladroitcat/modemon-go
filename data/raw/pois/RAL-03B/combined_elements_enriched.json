@@ -1,0 +1,1483 @@
+[
+  {
+    "id": 1837176659,
+    "lat": 35.7793401,
+    "lon": -78.6627856,
+    "tags": {
+      "railway": "crossing"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1837176682,
+    "lat": 35.7800654,
+    "lon": -78.6635398,
+    "tags": {
+      "crossing:barrier": "full",
+      "crossing:light": "yes",
+      "railway": "crossing",
+      "supervised": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5580314751,
+    "lat": 35.7794834,
+    "lon": -78.6631299,
+    "tags": {
+      "shop": "ticket"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5580314752,
+    "lat": 35.7793241,
+    "lon": -78.6632437,
+    "tags": {
+      "amenity": "toilets"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5835574321,
+    "lat": 35.7799755,
+    "lon": -78.663552,
+    "tags": {
+      "amenity": "drinking_water",
+      "fountain": "bubbler"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040696,
+    "lat": 35.7821052,
+    "lon": -78.665691,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "no",
+      "mapillary": "519056145930392",
+      "name": "Pullen Rd at Cates Ave",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "9810",
+      "shelter": "no",
+      "survey:date": "2018-12-20",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040763,
+    "lat": 35.7818834,
+    "lon": -78.6680286,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Cates Ave at Jensen Dr (EB)",
+      "network": "Wolfline;GoRaleigh",
+      "public_transport": "platform",
+      "ref": "9612",
+      "shelter": "yes",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7243433247,
+    "lat": 35.7799008,
+    "lon": -78.661702,
+    "tags": {
+      "amenity": "bicycle_rental",
+      "capacity": "16",
+      "name": "Pullen Park",
+      "network": "Citrix Cycle"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7251661517,
+    "lat": 35.7854454,
+    "lon": -78.6626165,
+    "tags": {
+      "amenity": "parking"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10046226181,
+    "lat": 35.7849246,
+    "lon": -78.6630332,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staples",
+      "capacity": "10",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10048398587,
+    "lat": 35.7793073,
+    "lon": -78.6629015,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "staple",
+      "capacity": "14",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10220370899,
+    "lat": 35.7813001,
+    "lon": -78.6617336,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "capacity": "15"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10909564564,
+    "lat": 35.7808672,
+    "lon": -78.6630761,
+    "tags": {
+      "amenity": "drinking_water"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12532421677,
+    "lat": 35.7799183,
+    "lon": -78.662763,
+    "tags": {
+      "amenity": "bench"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12532462641,
+    "lat": 35.7798976,
+    "lon": -78.6626775,
+    "tags": {
+      "amenity": "waste_basket"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13465226842,
+    "lat": 35.7804231,
+    "lon": -78.6626751,
+    "tags": {
+      "crossing:barrier": "full",
+      "crossing:bell": "yes",
+      "railway": "level_crossing"
+    },
+    "type": "node"
+  },
+  {
+    "center": {
+      "lat": 35.7799767,
+      "lon": -78.6623464
+    },
+    "id": 47776518,
+    "tags": {
+      "area": "yes",
+      "building:use": "commercial",
+      "highway": "footway",
+      "lit": "yes",
+      "name": "Train Station",
+      "public_transport": "platform",
+      "railway": "platform",
+      "source": "WakeGIS",
+      "surface": "concrete",
+      "train": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.784287,
+      "lon": -78.6624423
+    },
+    "id": 47776986,
+    "tags": {
+      "amenity": "theatre",
+      "building": "yes",
+      "building:use": "commercial",
+      "name": "Theater In The Park",
+      "ownership": "municipal",
+      "source": "NC Center for Geographic Information and Analysis, Raleigh, North Carolina (http://www.nconemap.com)"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7812108,
+      "lon": -78.6631424
+    },
+    "id": 47879772,
+    "tags": {
+      "amenity": "shelter",
+      "bin": "yes",
+      "building": "yes",
+      "building:use": "commercial",
+      "lit": "yes",
+      "name": "Shelter 4",
+      "operator": "Pullen Park Amusements",
+      "shelter_type": "picnic_shelter",
+      "source": "WakeGIS"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7792305,
+      "lon": -78.6630535
+    },
+    "id": 47933086,
+    "tags": {
+      "amenity": "fast_food",
+      "building": "commercial",
+      "building:use": "commercial",
+      "name": "Pullen Place",
+      "outdoor_seating": "yes",
+      "source": "WakeGIS",
+      "takeaway": "only"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7799362,
+      "lon": -78.6637855
+    },
+    "id": 47933092,
+    "tags": {
+      "building": "yes",
+      "building:use": "commercial",
+      "heritage": "2",
+      "heritage:operator": "nrhp",
+      "historic": "yes",
+      "name": "Carousel",
+      "operator": "Pullen Park Amusements",
+      "ref:nrhp": "76001344",
+      "source": "WakeGIS",
+      "start_date": "1924",
+      "tourism": "attraction",
+      "wikidata": "Q7259432",
+      "wikipedia": "en:Pullen Park Carousel"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7800996,
+      "lon": -78.6641447
+    },
+    "id": 47933095,
+    "tags": {
+      "amenity": "shelter",
+      "bin": "yes",
+      "building": "yes",
+      "building:use": "commercial",
+      "lit": "yes",
+      "name": "Carousel Pavilion",
+      "operator": "Pullen Park Amusements",
+      "shelter_type": "picnic_shelter",
+      "source": "WakeGIS"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7802894,
+      "lon": -78.6633541
+    },
+    "id": 172870047,
+    "tags": {
+      "foot": "no",
+      "name": "C P Huntington Train",
+      "railway": "miniature"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7792696,
+      "lon": -78.6649593
+    },
+    "id": 175904373,
+    "tags": {
+      "name": "C P Huntington Train",
+      "railway": "miniature"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7799148,
+      "lon": -78.6664664
+    },
+    "id": 175904374,
+    "tags": {
+      "bridge": "yes",
+      "layer": "1",
+      "name": "C P Huntington Train",
+      "railway": "miniature"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7788306,
+      "lon": -78.6633462
+    },
+    "id": 175904375,
+    "tags": {
+      "bridge": "yes",
+      "layer": "1",
+      "name": "C P Huntington Train",
+      "railway": "miniature"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7818659,
+      "lon": -78.6668513
+    },
+    "id": 236316164,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7813084,
+      "lon": -78.6620372
+    },
+    "id": 236486042,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7816604,
+      "lon": -78.6627984
+    },
+    "id": 236486043,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7809129,
+      "lon": -78.6606284
+    },
+    "id": 236486044,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7804485,
+      "lon": -78.6610822
+    },
+    "id": 236486045,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7794503,
+      "lon": -78.6623705
+    },
+    "id": 236486046,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7835417,
+      "lon": -78.6632226
+    },
+    "id": 257039734,
+    "tags": {
+      "leisure": "pitch",
+      "sport": "baseball"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7825266,
+      "lon": -78.6619058
+    },
+    "id": 257039735,
+    "tags": {
+      "leisure": "pitch",
+      "sport": "baseball"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7792759,
+      "lon": -78.6629214
+    },
+    "id": 317749127,
+    "tags": {
+      "name": "C P Huntington Train",
+      "railway": "miniature"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7797755,
+      "lon": -78.6624851
+    },
+    "id": 317749128,
+    "tags": {
+      "name": "C P Huntington Train",
+      "railway": "miniature",
+      "tunnel": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7813371,
+      "lon": -78.6636478
+    },
+    "id": 413192947,
+    "tags": {
+      "amenity": "shelter",
+      "building": "yes",
+      "name": "Shelter 2",
+      "operator": "Pullen Park Amusements",
+      "shelter_type": "picnic_shelter"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7833592,
+      "lon": -78.6707038
+    },
+    "id": 461320208,
+    "tags": {
+      "amenity": "university",
+      "name": "North Carolina State University Central Campus"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7796454,
+      "lon": -78.6641087
+    },
+    "id": 583700646,
+    "tags": {
+      "name": "Pullen Park Amusement Center",
+      "tourism": "theme_park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7799636,
+      "lon": -78.6657814
+    },
+    "id": 583700653,
+    "tags": {
+      "amenity": "shelter",
+      "bench": "yes",
+      "lit": "no",
+      "name": "Island Gazebo",
+      "shelter_type": "gazebo"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.779917,
+      "lon": -78.6633038
+    },
+    "id": 583700656,
+    "tags": {
+      "access": "yes",
+      "amenity": "toilets",
+      "building": "toilets",
+      "changing_table": "yes",
+      "fee": "no",
+      "female": "yes",
+      "male": "yes",
+      "toilets:disposal": "flush",
+      "wheelchair": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.780655,
+      "lon": -78.6608726
+    },
+    "id": 583703196,
+    "tags": {
+      "amenity": "community_centre",
+      "building": "yes",
+      "name": "Pullen Community Center"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7822604,
+      "lon": -78.6634538
+    },
+    "id": 583703197,
+    "tags": {
+      "internet_access": "wlan",
+      "leisure": "park",
+      "name": "Pullen Park",
+      "wikipedia": "en:Pullen Park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7802281,
+      "lon": -78.662537
+    },
+    "id": 583704398,
+    "tags": {
+      "access": "yes",
+      "leisure": "playground"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7796406,
+      "lon": -78.6628906
+    },
+    "id": 583704399,
+    "tags": {
+      "access": "yes",
+      "leisure": "playground"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7805142,
+      "lon": -78.6631029
+    },
+    "id": 632259614,
+    "tags": {
+      "amenity": "shelter",
+      "bin": "yes",
+      "building": "yes",
+      "lit": "no",
+      "name": "Shelter 1",
+      "operator": "Pullen Park Amusements",
+      "shelter_type": "picnic_shelter"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7803804,
+      "lon": -78.6640872
+    },
+    "id": 677320326,
+    "tags": {
+      "amenity": "shelter",
+      "bin": "yes",
+      "building": "yes",
+      "building:levels": "1",
+      "lit": "no",
+      "name": "Shelter 6",
+      "operator": "Pullen Park Amusements",
+      "shelter_type": "picnic_shelter"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7818686,
+      "lon": -78.6631309
+    },
+    "id": 677320617,
+    "tags": {
+      "amenity": "shelter",
+      "bin": "yes",
+      "building": "yes",
+      "lit": "no",
+      "name": "Shelter 5",
+      "operator": "Pullen Park Amusements",
+      "shelter_type": "picnic_shelter"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7799763,
+      "lon": -78.6623457
+    },
+    "id": 736925752,
+    "tags": {
+      "name": "C P Huntington Train",
+      "railway": "miniature",
+      "tunnel": "building_passage"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.781161,
+      "lon": -78.6637486
+    },
+    "id": 942676233,
+    "tags": {
+      "amenity": "shelter",
+      "bin": "yes",
+      "building": "yes",
+      "lit": "no",
+      "name": "Shelter 3",
+      "operator": "Pullen Park Amusements",
+      "shelter_type": "picnic_shelter"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7801414,
+      "lon": -78.6646975
+    },
+    "id": 942676234,
+    "tags": {
+      "access": "yes",
+      "name": "Fountain Terrace",
+      "operator": "Pullen Park Amusements",
+      "tourism": "picnic_site"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7852113,
+      "lon": -78.6615016
+    },
+    "id": 946755877,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:postcode": "27695",
+      "addr:state": "NC",
+      "amenity": "university",
+      "name": "North Carolina State University"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7803029,
+      "lon": -78.6646508
+    },
+    "id": 1089547287,
+    "tags": {
+      "bridge": "yes",
+      "layer": "1",
+      "name": "C P Huntington Train",
+      "railway": "miniature"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7802433,
+      "lon": -78.6655784
+    },
+    "id": 1089547288,
+    "tags": {
+      "name": "C P Huntington Train",
+      "railway": "miniature"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7822376,
+      "lon": -78.668348
+    },
+    "id": 1173751141,
+    "tags": {
+      "amenity": "parking"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7836506,
+      "lon": -78.6624437
+    },
+    "id": 1223817547,
+    "tags": {
+      "amenity": "parking"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7798113,
+      "lon": -78.6626404
+    },
+    "id": 1442028609,
+    "tags": {
+      "amenity": "theatre",
+      "theatre:type": "amphi"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7814126,
+      "lon": -78.6652672
+    },
+    "id": 1482695573,
+    "tags": {
+      "leisure": "pitch",
+      "lit": "yes",
+      "sport": "tennis"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7813917,
+      "lon": -78.6651067
+    },
+    "id": 1482695574,
+    "tags": {
+      "leisure": "pitch",
+      "lit": "yes",
+      "sport": "tennis"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7813708,
+      "lon": -78.664948
+    },
+    "id": 1482695575,
+    "tags": {
+      "leisure": "pitch",
+      "lit": "yes",
+      "sport": "tennis"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7817129,
+      "lon": -78.6648903
+    },
+    "id": 1482695576,
+    "tags": {
+      "leisure": "pitch",
+      "lit": "yes",
+      "sport": "tennis"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7817339,
+      "lon": -78.6650489
+    },
+    "id": 1482695577,
+    "tags": {
+      "leisure": "pitch",
+      "lit": "yes",
+      "sport": "tennis"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7817547,
+      "lon": -78.6652094
+    },
+    "id": 1482695578,
+    "tags": {
+      "leisure": "pitch",
+      "lit": "yes",
+      "sport": "tennis"
+    },
+    "type": "way"
+  },
+  {
+    "bounds": {
+      "maxlat": 35.7813105,
+      "maxlon": -78.6611016,
+      "minlat": 35.7805372,
+      "minlon": -78.6619303
+    },
+    "center": {
+      "lat": 35.7809239,
+      "lon": -78.6615159
+    },
+    "id": 8248496,
+    "members": [
+      {
+        "geometry": [
+          {
+            "lat": 35.7808439,
+            "lon": -78.6612882
+          },
+          {
+            "lat": 35.7806365,
+            "lon": -78.6614164
+          },
+          {
+            "lat": 35.7805372,
+            "lon": -78.6614798
+          },
+          {
+            "lat": 35.7806509,
+            "lon": -78.6617567
+          },
+          {
+            "lat": 35.780605,
+            "lon": -78.6617852
+          },
+          {
+            "lat": 35.7806544,
+            "lon": -78.6619056
+          },
+          {
+            "lat": 35.7806645,
+            "lon": -78.6619303
+          },
+          {
+            "lat": 35.7807333,
+            "lon": -78.6618878
+          },
+          {
+            "lat": 35.7809174,
+            "lon": -78.6617739
+          },
+          {
+            "lat": 35.7809502,
+            "lon": -78.6617989
+          },
+          {
+            "lat": 35.7809805,
+            "lon": -78.6617387
+          },
+          {
+            "lat": 35.7809715,
+            "lon": -78.6617166
+          },
+          {
+            "lat": 35.781095,
+            "lon": -78.6616403
+          },
+          {
+            "lat": 35.7811059,
+            "lon": -78.6616668
+          },
+          {
+            "lat": 35.7811576,
+            "lon": -78.6616349
+          },
+          {
+            "lat": 35.7811457,
+            "lon": -78.6616063
+          },
+          {
+            "lat": 35.7812551,
+            "lon": -78.6615385
+          },
+          {
+            "lat": 35.7813081,
+            "lon": -78.6615057
+          },
+          {
+            "lat": 35.7813105,
+            "lon": -78.6615042
+          },
+          {
+            "lat": 35.7811451,
+            "lon": -78.6611016
+          },
+          {
+            "lat": 35.781099,
+            "lon": -78.6611301
+          },
+          {
+            "lat": 35.7810908,
+            "lon": -78.6611102
+          },
+          {
+            "lat": 35.7809504,
+            "lon": -78.6611971
+          },
+          {
+            "lat": 35.780953,
+            "lon": -78.6612033
+          },
+          {
+            "lat": 35.7808703,
+            "lon": -78.6612575
+          },
+          {
+            "lat": 35.7808439,
+            "lon": -78.6612882
+          }
+        ],
+        "ref": 47759892,
+        "role": "outer",
+        "type": "way"
+      }
+    ],
+    "tags": {
+      "building": "commercial",
+      "leisure": "sports_centre",
+      "name": "Pullen Aquatic Center",
+      "source": "WakeGIS",
+      "sport": "swimming",
+      "type": "multipolygon"
+    },
+    "type": "relation"
+  },
+  {
+    "bounds": {
+      "maxlat": 35.7823228,
+      "maxlon": -78.6683555,
+      "minlat": 35.7810496,
+      "minlon": -78.6702196
+    },
+    "center": {
+      "lat": 35.7816862,
+      "lon": -78.6692876
+    },
+    "id": 14962502,
+    "members": [
+      {
+        "geometry": [
+          {
+            "lat": 35.7821427,
+            "lon": -78.6695633
+          },
+          {
+            "lat": 35.7821587,
+            "lon": -78.6696145
+          },
+          {
+            "lat": 35.7821666,
+            "lon": -78.6696477
+          },
+          {
+            "lat": 35.782171,
+            "lon": -78.669685
+          },
+          {
+            "lat": 35.7821725,
+            "lon": -78.6697189
+          },
+          {
+            "lat": 35.782171,
+            "lon": -78.6697599
+          },
+          {
+            "lat": 35.7821668,
+            "lon": -78.6698051
+          },
+          {
+            "lat": 35.7821567,
+            "lon": -78.6698496
+          },
+          {
+            "lat": 35.782146,
+            "lon": -78.6698862
+          },
+          {
+            "lat": 35.7821313,
+            "lon": -78.6699205
+          },
+          {
+            "lat": 35.7821081,
+            "lon": -78.669964
+          },
+          {
+            "lat": 35.7820833,
+            "lon": -78.6699991
+          },
+          {
+            "lat": 35.7820591,
+            "lon": -78.6700276
+          },
+          {
+            "lat": 35.7820297,
+            "lon": -78.6700552
+          },
+          {
+            "lat": 35.7819976,
+            "lon": -78.6700803
+          },
+          {
+            "lat": 35.7819683,
+            "lon": -78.6700986
+          },
+          {
+            "lat": 35.7819306,
+            "lon": -78.6701112
+          },
+          {
+            "lat": 35.7818938,
+            "lon": -78.6701194
+          },
+          {
+            "lat": 35.7818486,
+            "lon": -78.6701258
+          },
+          {
+            "lat": 35.7818092,
+            "lon": -78.6701249
+          },
+          {
+            "lat": 35.7817626,
+            "lon": -78.6701147
+          },
+          {
+            "lat": 35.7817297,
+            "lon": -78.6701013
+          },
+          {
+            "lat": 35.7816887,
+            "lon": -78.6700771
+          },
+          {
+            "lat": 35.7816579,
+            "lon": -78.6700563
+          },
+          {
+            "lat": 35.7816279,
+            "lon": -78.67003
+          },
+          {
+            "lat": 35.7816056,
+            "lon": -78.6700087
+          },
+          {
+            "lat": 35.781576,
+            "lon": -78.6699651
+          },
+          {
+            "lat": 35.7815419,
+            "lon": -78.6698928
+          },
+          {
+            "lat": 35.7812288,
+            "lon": -78.6690394
+          },
+          {
+            "lat": 35.7812163,
+            "lon": -78.6689913
+          },
+          {
+            "lat": 35.7812069,
+            "lon": -78.6689436
+          },
+          {
+            "lat": 35.7812015,
+            "lon": -78.6688929
+          },
+          {
+            "lat": 35.7812016,
+            "lon": -78.6688625
+          },
+          {
+            "lat": 35.7812025,
+            "lon": -78.66883
+          },
+          {
+            "lat": 35.7812068,
+            "lon": -78.6687986
+          },
+          {
+            "lat": 35.781215,
+            "lon": -78.6687606
+          },
+          {
+            "lat": 35.7812252,
+            "lon": -78.6687223
+          },
+          {
+            "lat": 35.7812421,
+            "lon": -78.6686774
+          },
+          {
+            "lat": 35.7812621,
+            "lon": -78.6686381
+          },
+          {
+            "lat": 35.7812884,
+            "lon": -78.6685986
+          },
+          {
+            "lat": 35.7813175,
+            "lon": -78.6685643
+          },
+          {
+            "lat": 35.7813446,
+            "lon": -78.6685394
+          },
+          {
+            "lat": 35.781369,
+            "lon": -78.6685213
+          },
+          {
+            "lat": 35.7813979,
+            "lon": -78.6685015
+          },
+          {
+            "lat": 35.7814309,
+            "lon": -78.6684878
+          },
+          {
+            "lat": 35.7814662,
+            "lon": -78.6684767
+          },
+          {
+            "lat": 35.7815018,
+            "lon": -78.6684691
+          },
+          {
+            "lat": 35.7815342,
+            "lon": -78.6684688
+          },
+          {
+            "lat": 35.7815677,
+            "lon": -78.6684713
+          },
+          {
+            "lat": 35.7816006,
+            "lon": -78.6684765
+          },
+          {
+            "lat": 35.7816326,
+            "lon": -78.6684893
+          },
+          {
+            "lat": 35.7816694,
+            "lon": -78.6685065
+          },
+          {
+            "lat": 35.7817014,
+            "lon": -78.668528
+          },
+          {
+            "lat": 35.7817306,
+            "lon": -78.6685518
+          },
+          {
+            "lat": 35.7817522,
+            "lon": -78.6685723
+          },
+          {
+            "lat": 35.7817728,
+            "lon": -78.6685967
+          },
+          {
+            "lat": 35.7817933,
+            "lon": -78.668622
+          },
+          {
+            "lat": 35.7818056,
+            "lon": -78.668645
+          },
+          {
+            "lat": 35.7818269,
+            "lon": -78.668689
+          },
+          {
+            "lat": 35.7821427,
+            "lon": -78.6695633
+          }
+        ],
+        "ref": 238490950,
+        "role": "inner",
+        "type": "way"
+      },
+      {
+        "geometry": [
+          {
+            "lat": 35.7823228,
+            "lon": -78.6698254
+          },
+          {
+            "lat": 35.7817906,
+            "lon": -78.6683555
+          },
+          {
+            "lat": 35.7817167,
+            "lon": -78.6683934
+          },
+          {
+            "lat": 35.7817344,
+            "lon": -78.6684433
+          },
+          {
+            "lat": 35.7817134,
+            "lon": -78.6684256
+          },
+          {
+            "lat": 35.781684,
+            "lon": -78.6684102
+          },
+          {
+            "lat": 35.7816585,
+            "lon": -78.6683987
+          },
+          {
+            "lat": 35.7816269,
+            "lon": -78.6683885
+          },
+          {
+            "lat": 35.7815845,
+            "lon": -78.6683796
+          },
+          {
+            "lat": 35.7815402,
+            "lon": -78.6683751
+          },
+          {
+            "lat": 35.7814966,
+            "lon": -78.6683757
+          },
+          {
+            "lat": 35.7814549,
+            "lon": -78.6683845
+          },
+          {
+            "lat": 35.7814166,
+            "lon": -78.6683973
+          },
+          {
+            "lat": 35.7813849,
+            "lon": -78.668409
+          },
+          {
+            "lat": 35.7813422,
+            "lon": -78.6684312
+          },
+          {
+            "lat": 35.781311,
+            "lon": -78.6684528
+          },
+          {
+            "lat": 35.7812731,
+            "lon": -78.6684831
+          },
+          {
+            "lat": 35.7812418,
+            "lon": -78.668517
+          },
+          {
+            "lat": 35.7812186,
+            "lon": -78.6685499
+          },
+          {
+            "lat": 35.7811864,
+            "lon": -78.668611
+          },
+          {
+            "lat": 35.7811656,
+            "lon": -78.6686606
+          },
+          {
+            "lat": 35.7811452,
+            "lon": -78.6687224
+          },
+          {
+            "lat": 35.7811339,
+            "lon": -78.6687715
+          },
+          {
+            "lat": 35.7811197,
+            "lon": -78.6687295
+          },
+          {
+            "lat": 35.7810496,
+            "lon": -78.6687668
+          },
+          {
+            "lat": 35.7814715,
+            "lon": -78.6699309
+          },
+          {
+            "lat": 35.7814983,
+            "lon": -78.6699939
+          },
+          {
+            "lat": 35.7815284,
+            "lon": -78.6700425
+          },
+          {
+            "lat": 35.7815602,
+            "lon": -78.6700844
+          },
+          {
+            "lat": 35.7815964,
+            "lon": -78.670123
+          },
+          {
+            "lat": 35.7816348,
+            "lon": -78.670151
+          },
+          {
+            "lat": 35.7816696,
+            "lon": -78.6701727
+          },
+          {
+            "lat": 35.7817115,
+            "lon": -78.6701911
+          },
+          {
+            "lat": 35.7817547,
+            "lon": -78.6702069
+          },
+          {
+            "lat": 35.7817927,
+            "lon": -78.6702165
+          },
+          {
+            "lat": 35.7818351,
+            "lon": -78.6702196
+          },
+          {
+            "lat": 35.7818722,
+            "lon": -78.670217
+          },
+          {
+            "lat": 35.781906,
+            "lon": -78.670214
+          },
+          {
+            "lat": 35.781937,
+            "lon": -78.6702064
+          },
+          {
+            "lat": 35.7819749,
+            "lon": -78.6701926
+          },
+          {
+            "lat": 35.7820033,
+            "lon": -78.6701789
+          },
+          {
+            "lat": 35.7820355,
+            "lon": -78.6701596
+          },
+          {
+            "lat": 35.7820627,
+            "lon": -78.6701403
+          },
+          {
+            "lat": 35.782092,
+            "lon": -78.6701139
+          },
+          {
+            "lat": 35.7821213,
+            "lon": -78.6700829
+          },
+          {
+            "lat": 35.7821489,
+            "lon": -78.6700478
+          },
+          {
+            "lat": 35.782172,
+            "lon": -78.6700107
+          },
+          {
+            "lat": 35.7821901,
+            "lon": -78.6699767
+          },
+          {
+            "lat": 35.7822041,
+            "lon": -78.6699411
+          },
+          {
+            "lat": 35.7822194,
+            "lon": -78.6699025
+          },
+          {
+            "lat": 35.7822297,
+            "lon": -78.6698674
+          },
+          {
+            "lat": 35.7822383,
+            "lon": -78.6698227
+          },
+          {
+            "lat": 35.782254,
+            "lon": -78.6698669
+          },
+          {
+            "lat": 35.7823228,
+            "lon": -78.6698254
+          }
+        ],
+        "ref": 1118991261,
+        "role": "outer",
+        "type": "way"
+      }
+    ],
+    "tags": {
+      "lanes": "8",
+      "leisure": "track",
+      "name": "Paul Derr Track",
+      "sport": "running",
+      "surface": "tartan",
+      "type": "multipolygon",
+      "width": "8.75"
+    },
+    "type": "relation"
+  }
+]

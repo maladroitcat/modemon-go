@@ -1,0 +1,13 @@
+poi_id_a,poi_id_b,region_id_a,region_id_b,normalized_name,distance_feet,same_brand,same_operator,same_address,reason
+DUR-01_osm_way_67861976,DUR-01_osm_way_67861979,DUR-01,DUR-01,central park,433.3,False,True,True,same normalized name and exact normalized address
+DUR-01_osm_node_1764663734,DUR-01_osm_way_44481452,DUR-01,DUR-01,cooperativa latina,59.2,False,False,False,same normalized name within 150 feet
+DUR-01_osm_relation_74128,DUR-01_osm_way_170285382,DUR-01,DUR-01,duke tower,132.3,False,False,False,same normalized name within 150 feet
+DUR-01_osm_node_7024572472,DUR-01_osm_relation_10358993,DUR-01,DUR-01,durham,265.4,False,False,True,same normalized name and exact normalized address
+DUR-01_osm_way_433493705,DUR-01_osm_way_57377599,DUR-01,DUR-01,durham bulls athletic park,68.2,False,False,False,same normalized name within 150 feet
+DUR-01_osm_node_7115942134,DUR-01_osm_way_1257259441,DUR-01,DUR-01,mount merrill,10.2,False,False,False,same normalized name within 150 feet
+DUR-01_osm_node_6600829206,DUR-01_osm_node_922818428,DUR-01,DUR-01,ninth street bakery,28.3,False,False,False,same normalized name within 150 feet
+RAL-01_osm_node_7243381845,RAL-01_osm_way_99028919,RAL-01,RAL-01,goraleigh station,124.8,False,False,False,same normalized name within 150 feet
+RAL-01_osm_node_1216186268,RAL-01_osm_node_3691453629,RAL-01,RAL-01,la placita,45.7,False,False,False,same normalized name within 150 feet
+RAL-01_osm_way_135692670,RAL-01_osm_way_135692672,RAL-01,RAL-01,red hat amphitheater,61.3,False,False,False,same normalized name within 150 feet
+RAL-01_osm_node_2921397007,RAL-01_osm_node_2921397011,RAL-01,RAL-01,split,14.5,False,False,False,same normalized name within 150 feet
+RAL-01_osm_node_8059696634,RAL-01_osm_way_47663082,RAL-01,RAL-01,wake county office building,11.4,False,False,False,same normalized name within 150 feet

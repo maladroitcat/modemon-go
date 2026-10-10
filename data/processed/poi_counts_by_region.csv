@@ -1,0 +1,9 @@
+region_id,parent_city,total_pois,named_pois,unnamed_meaningful_pois
+DUR-01,Durham,264,256,8
+DUR-02,Durham,82,80,2
+RAL-01,Raleigh,470,463,7
+RAL-02,Raleigh,24,23,1
+RAL-03A,Raleigh,38,38,0
+RAL-03B,Raleigh,9,8,1
+RAL-04,Raleigh,37,29,8
+RAL-05,Raleigh,3,3,0

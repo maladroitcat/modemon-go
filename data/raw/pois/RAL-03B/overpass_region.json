@@ -1,0 +1,894 @@
+{
+  "elements": [
+    {
+      "id": 1837176659,
+      "lat": 35.7793401,
+      "lon": -78.6627856,
+      "tags": {
+        "railway": "crossing"
+      },
+      "type": "node"
+    },
+    {
+      "id": 1837176682,
+      "lat": 35.7800654,
+      "lon": -78.6635398,
+      "tags": {
+        "crossing:barrier": "full",
+        "crossing:light": "yes",
+        "railway": "crossing",
+        "supervised": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 5580314751,
+      "lat": 35.7794834,
+      "lon": -78.6631299,
+      "tags": {
+        "shop": "ticket"
+      },
+      "type": "node"
+    },
+    {
+      "id": 5580314752,
+      "lat": 35.7793241,
+      "lon": -78.6632437,
+      "tags": {
+        "amenity": "toilets"
+      },
+      "type": "node"
+    },
+    {
+      "id": 5835574321,
+      "lat": 35.7799755,
+      "lon": -78.663552,
+      "tags": {
+        "amenity": "drinking_water",
+        "fountain": "bubbler"
+      },
+      "type": "node"
+    },
+    {
+      "id": 6510040696,
+      "lat": 35.7821052,
+      "lon": -78.665691,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "mapillary": "519056145930392",
+        "name": "Pullen Rd at Cates Ave",
+        "network": "GoRaleigh",
+        "network:wikidata": "Q5035469",
+        "network:wikipedia": "en:GoRaleigh",
+        "public_transport": "platform",
+        "ref": "9810",
+        "shelter": "no",
+        "survey:date": "2018-12-20",
+        "tactile_paving": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 6510040763,
+      "lat": 35.7818834,
+      "lon": -78.6680286,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Cates Ave at Jensen Dr (EB)",
+        "network": "Wolfline;GoRaleigh",
+        "public_transport": "platform",
+        "ref": "9612",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 7243433247,
+      "lat": 35.7799008,
+      "lon": -78.661702,
+      "tags": {
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "name": "Pullen Park",
+        "network": "Citrix Cycle"
+      },
+      "type": "node"
+    },
+    {
+      "id": 7251661517,
+      "lat": 35.7854454,
+      "lon": -78.6626165,
+      "tags": {
+        "amenity": "parking"
+      },
+      "type": "node"
+    },
+    {
+      "id": 10046226181,
+      "lat": 35.7849246,
+      "lon": -78.6630332,
+      "tags": {
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "staples",
+        "capacity": "10",
+        "covered": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 10048398587,
+      "lat": 35.7793073,
+      "lon": -78.6629015,
+      "tags": {
+        "amenity": "bicycle_parking",
+        "bicycle_parking": "staple",
+        "capacity": "14",
+        "covered": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 10220370899,
+      "lat": 35.7813001,
+      "lon": -78.6617336,
+      "tags": {
+        "amenity": "bicycle_parking",
+        "capacity": "15"
+      },
+      "type": "node"
+    },
+    {
+      "id": 10909564564,
+      "lat": 35.7808672,
+      "lon": -78.6630761,
+      "tags": {
+        "amenity": "drinking_water"
+      },
+      "type": "node"
+    },
+    {
+      "id": 12532421677,
+      "lat": 35.7799183,
+      "lon": -78.662763,
+      "tags": {
+        "amenity": "bench"
+      },
+      "type": "node"
+    },
+    {
+      "id": 12532462641,
+      "lat": 35.7798976,
+      "lon": -78.6626775,
+      "tags": {
+        "amenity": "waste_basket"
+      },
+      "type": "node"
+    },
+    {
+      "id": 13465226842,
+      "lat": 35.7804231,
+      "lon": -78.6626751,
+      "tags": {
+        "crossing:barrier": "full",
+        "crossing:bell": "yes",
+        "railway": "level_crossing"
+      },
+      "type": "node"
+    },
+    {
+      "center": {
+        "lat": 35.7799767,
+        "lon": -78.6623464
+      },
+      "id": 47776518,
+      "tags": {
+        "area": "yes",
+        "building:use": "commercial",
+        "highway": "footway",
+        "lit": "yes",
+        "name": "Train Station",
+        "public_transport": "platform",
+        "railway": "platform",
+        "source": "WakeGIS",
+        "surface": "concrete",
+        "train": "yes"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.784287,
+        "lon": -78.6624423
+      },
+      "id": 47776986,
+      "tags": {
+        "amenity": "theatre",
+        "building": "yes",
+        "building:use": "commercial",
+        "name": "Theater In The Park",
+        "ownership": "municipal",
+        "source": "NC Center for Geographic Information and Analysis, Raleigh, North Carolina (http://www.nconemap.com)"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7812108,
+        "lon": -78.6631424
+      },
+      "id": 47879772,
+      "tags": {
+        "amenity": "shelter",
+        "bin": "yes",
+        "building": "yes",
+        "building:use": "commercial",
+        "lit": "yes",
+        "name": "Shelter 4",
+        "operator": "Pullen Park Amusements",
+        "shelter_type": "picnic_shelter",
+        "source": "WakeGIS"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7792305,
+        "lon": -78.6630535
+      },
+      "id": 47933086,
+      "tags": {
+        "amenity": "fast_food",
+        "building": "commercial",
+        "building:use": "commercial",
+        "name": "Pullen Place",
+        "outdoor_seating": "yes",
+        "source": "WakeGIS",
+        "takeaway": "only"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7799362,
+        "lon": -78.6637855
+      },
+      "id": 47933092,
+      "tags": {
+        "building": "yes",
+        "building:use": "commercial",
+        "heritage": "2",
+        "heritage:operator": "nrhp",
+        "historic": "yes",
+        "name": "Carousel",
+        "operator": "Pullen Park Amusements",
+        "ref:nrhp": "76001344",
+        "source": "WakeGIS",
+        "start_date": "1924",
+        "tourism": "attraction",
+        "wikidata": "Q7259432",
+        "wikipedia": "en:Pullen Park Carousel"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7800996,
+        "lon": -78.6641447
+      },
+      "id": 47933095,
+      "tags": {
+        "amenity": "shelter",
+        "bin": "yes",
+        "building": "yes",
+        "building:use": "commercial",
+        "lit": "yes",
+        "name": "Carousel Pavilion",
+        "operator": "Pullen Park Amusements",
+        "shelter_type": "picnic_shelter",
+        "source": "WakeGIS"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7802894,
+        "lon": -78.6633541
+      },
+      "id": 172870047,
+      "tags": {
+        "foot": "no",
+        "name": "C P Huntington Train",
+        "railway": "miniature"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7792696,
+        "lon": -78.6649593
+      },
+      "id": 175904373,
+      "tags": {
+        "name": "C P Huntington Train",
+        "railway": "miniature"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7799148,
+        "lon": -78.6664664
+      },
+      "id": 175904374,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "name": "C P Huntington Train",
+        "railway": "miniature"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7788306,
+        "lon": -78.6633462
+      },
+      "id": 175904375,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "name": "C P Huntington Train",
+        "railway": "miniature"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7818659,
+        "lon": -78.6668513
+      },
+      "id": 236316164,
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7813084,
+        "lon": -78.6620372
+      },
+      "id": 236486042,
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "parking": "surface"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7816604,
+        "lon": -78.6627984
+      },
+      "id": 236486043,
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "parking": "surface"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7809129,
+        "lon": -78.6606284
+      },
+      "id": 236486044,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7804485,
+        "lon": -78.6610822
+      },
+      "id": 236486045,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7794503,
+        "lon": -78.6623705
+      },
+      "id": 236486046,
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "parking": "surface"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7835417,
+        "lon": -78.6632226
+      },
+      "id": 257039734,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "baseball"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7825266,
+        "lon": -78.6619058
+      },
+      "id": 257039735,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "baseball"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7792759,
+        "lon": -78.6629214
+      },
+      "id": 317749127,
+      "tags": {
+        "name": "C P Huntington Train",
+        "railway": "miniature"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7797755,
+        "lon": -78.6624851
+      },
+      "id": 317749128,
+      "tags": {
+        "name": "C P Huntington Train",
+        "railway": "miniature",
+        "tunnel": "yes"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7813371,
+        "lon": -78.6636478
+      },
+      "id": 413192947,
+      "tags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "name": "Shelter 2",
+        "operator": "Pullen Park Amusements",
+        "shelter_type": "picnic_shelter"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7833592,
+        "lon": -78.6707038
+      },
+      "id": 461320208,
+      "tags": {
+        "amenity": "university",
+        "name": "North Carolina State University Central Campus"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7796454,
+        "lon": -78.6641087
+      },
+      "id": 583700646,
+      "tags": {
+        "name": "Pullen Park Amusement Center",
+        "tourism": "theme_park"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7799636,
+        "lon": -78.6657814
+      },
+      "id": 583700653,
+      "tags": {
+        "amenity": "shelter",
+        "bench": "yes",
+        "lit": "no",
+        "name": "Island Gazebo",
+        "shelter_type": "gazebo"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.779917,
+        "lon": -78.6633038
+      },
+      "id": 583700656,
+      "tags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "toilets",
+        "changing_table": "yes",
+        "fee": "no",
+        "female": "yes",
+        "male": "yes",
+        "toilets:disposal": "flush",
+        "wheelchair": "yes"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.780655,
+        "lon": -78.6608726
+      },
+      "id": 583703196,
+      "tags": {
+        "amenity": "community_centre",
+        "building": "yes",
+        "name": "Pullen Community Center"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7822604,
+        "lon": -78.6634538
+      },
+      "id": 583703197,
+      "tags": {
+        "internet_access": "wlan",
+        "leisure": "park",
+        "name": "Pullen Park",
+        "wikipedia": "en:Pullen Park"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7802281,
+        "lon": -78.662537
+      },
+      "id": 583704398,
+      "tags": {
+        "access": "yes",
+        "leisure": "playground"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7796406,
+        "lon": -78.6628906
+      },
+      "id": 583704399,
+      "tags": {
+        "access": "yes",
+        "leisure": "playground"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7805142,
+        "lon": -78.6631029
+      },
+      "id": 632259614,
+      "tags": {
+        "amenity": "shelter",
+        "bin": "yes",
+        "building": "yes",
+        "lit": "no",
+        "name": "Shelter 1",
+        "operator": "Pullen Park Amusements",
+        "shelter_type": "picnic_shelter"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7803804,
+        "lon": -78.6640872
+      },
+      "id": 677320326,
+      "tags": {
+        "amenity": "shelter",
+        "bin": "yes",
+        "building": "yes",
+        "building:levels": "1",
+        "lit": "no",
+        "name": "Shelter 6",
+        "operator": "Pullen Park Amusements",
+        "shelter_type": "picnic_shelter"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7818686,
+        "lon": -78.6631309
+      },
+      "id": 677320617,
+      "tags": {
+        "amenity": "shelter",
+        "bin": "yes",
+        "building": "yes",
+        "lit": "no",
+        "name": "Shelter 5",
+        "operator": "Pullen Park Amusements",
+        "shelter_type": "picnic_shelter"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7799763,
+        "lon": -78.6623457
+      },
+      "id": 736925752,
+      "tags": {
+        "name": "C P Huntington Train",
+        "railway": "miniature",
+        "tunnel": "building_passage"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.781161,
+        "lon": -78.6637486
+      },
+      "id": 942676233,
+      "tags": {
+        "amenity": "shelter",
+        "bin": "yes",
+        "building": "yes",
+        "lit": "no",
+        "name": "Shelter 3",
+        "operator": "Pullen Park Amusements",
+        "shelter_type": "picnic_shelter"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7801414,
+        "lon": -78.6646975
+      },
+      "id": 942676234,
+      "tags": {
+        "access": "yes",
+        "name": "Fountain Terrace",
+        "operator": "Pullen Park Amusements",
+        "tourism": "picnic_site"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7852113,
+        "lon": -78.6615016
+      },
+      "id": 946755877,
+      "tags": {
+        "addr:city": "Raleigh",
+        "addr:postcode": "27695",
+        "addr:state": "NC",
+        "amenity": "university",
+        "name": "North Carolina State University"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7803029,
+        "lon": -78.6646508
+      },
+      "id": 1089547287,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "name": "C P Huntington Train",
+        "railway": "miniature"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7802433,
+        "lon": -78.6655784
+      },
+      "id": 1089547288,
+      "tags": {
+        "name": "C P Huntington Train",
+        "railway": "miniature"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7822376,
+        "lon": -78.668348
+      },
+      "id": 1173751141,
+      "tags": {
+        "amenity": "parking"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7836506,
+        "lon": -78.6624437
+      },
+      "id": 1223817547,
+      "tags": {
+        "amenity": "parking"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7798113,
+        "lon": -78.6626404
+      },
+      "id": 1442028609,
+      "tags": {
+        "amenity": "theatre",
+        "theatre:type": "amphi"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7814126,
+        "lon": -78.6652672
+      },
+      "id": 1482695573,
+      "tags": {
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "tennis"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7813917,
+        "lon": -78.6651067
+      },
+      "id": 1482695574,
+      "tags": {
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "tennis"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7813708,
+        "lon": -78.664948
+      },
+      "id": 1482695575,
+      "tags": {
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "tennis"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7817129,
+        "lon": -78.6648903
+      },
+      "id": 1482695576,
+      "tags": {
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "tennis"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7817339,
+        "lon": -78.6650489
+      },
+      "id": 1482695577,
+      "tags": {
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "tennis"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7817547,
+        "lon": -78.6652094
+      },
+      "id": 1482695578,
+      "tags": {
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "tennis"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.7809239,
+        "lon": -78.6615159
+      },
+      "id": 8248496,
+      "tags": {
+        "building": "commercial",
+        "leisure": "sports_centre",
+        "name": "Pullen Aquatic Center",
+        "source": "WakeGIS",
+        "sport": "swimming",
+        "type": "multipolygon"
+      },
+      "type": "relation"
+    },
+    {
+      "center": {
+        "lat": 35.7816862,
+        "lon": -78.6692876
+      },
+      "id": 14962502,
+      "tags": {
+        "lanes": "8",
+        "leisure": "track",
+        "name": "Paul Derr Track",
+        "sport": "running",
+        "surface": "tartan",
+        "type": "multipolygon",
+        "width": "8.75"
+      },
+      "type": "relation"
+    }
+  ],
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "timestamp_osm_base": "2026-10-10T13:45:46Z"
+  },
+  "version": 0.6
+}

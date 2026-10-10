@@ -1,0 +1,4100 @@
+[
+  {
+    "id": 195468802,
+    "lat": 35.7775763,
+    "lon": -78.6501497,
+    "tags": {
+      "railway": "railway_crossing"
+    },
+    "type": "node"
+  },
+  {
+    "id": 195742271,
+    "lat": 35.7770663,
+    "lon": -78.6488038,
+    "tags": {
+      "railway": "signal",
+      "railway:signal:direction": "forward"
+    },
+    "type": "node"
+  },
+  {
+    "id": 357769061,
+    "lat": 35.7743183,
+    "lon": -78.6505591,
+    "tags": {
+      "amenity": "school",
+      "ele": "99",
+      "gnis:feature_id": "981795",
+      "name": "Boylan Heights School"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1156429204,
+    "lat": 35.7679568,
+    "lon": -78.6650673,
+    "tags": {
+      "amenity": "bicycle_parking"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1172629812,
+    "lat": 35.7774056,
+    "lon": -78.6509352,
+    "tags": {
+      "railway": "switch"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1172629868,
+    "lat": 35.7776312,
+    "lon": -78.649948,
+    "tags": {
+      "railway": "railway_crossing"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1172630182,
+    "lat": 35.7773211,
+    "lon": -78.6495561,
+    "tags": {
+      "railway": "switch"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1172630405,
+    "lat": 35.7775564,
+    "lon": -78.6502339,
+    "tags": {
+      "railway": "railway_crossing"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1236250447,
+    "lat": 35.7664366,
+    "lon": -78.6599163,
+    "tags": {
+      "crossing:barrier": "no",
+      "railway": "level_crossing"
+    },
+    "type": "node"
+  },
+  {
+    "id": 1877261917,
+    "lat": 35.7768649,
+    "lon": -78.6502591,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "236",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "S Boylan Ave",
+      "amenity": "post_box",
+      "collection_times": "Mo-Fr 11:30; Sa 10:00",
+      "operator": "United States Postal Service",
+      "operator:short": "USPS",
+      "operator:type": "public",
+      "operator:website": "https://www.usps.com",
+      "operator:wikidata": "Q668687",
+      "operator:wikipedia": "en:United States Postal Service",
+      "short_name": "USPS"
+    },
+    "type": "node"
+  },
+  {
+    "id": 4100383254,
+    "lat": 35.7774702,
+    "lon": -78.6504821,
+    "tags": {
+      "railway": "signal",
+      "railway:signal:direction": "forward",
+      "railway:signal:position": "overhead"
+    },
+    "type": "node"
+  },
+  {
+    "id": 4100383255,
+    "lat": 35.7775062,
+    "lon": -78.6504928,
+    "tags": {
+      "railway": "signal",
+      "railway:signal:direction": "forward",
+      "railway:signal:position": "overhead"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5653278642,
+    "lat": 35.7633344,
+    "lon": -78.6497182,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1230",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "South Saunders Street",
+      "name": "Toxic Customs",
+      "shop": "car_repair",
+      "website": "https://toxiccustoms.com/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5760381222,
+    "lat": 35.7771471,
+    "lon": -78.6486415,
+    "tags": {
+      "railway": "signal",
+      "railway:signal:direction": "forward"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5760381223,
+    "lat": 35.777384,
+    "lon": -78.6494292,
+    "tags": {
+      "railway": "switch"
+    },
+    "type": "node"
+  },
+  {
+    "id": 5760381224,
+    "lat": 35.777188,
+    "lon": -78.6486407,
+    "tags": {
+      "railway": "signal",
+      "railway:signal:direction": "forward"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6502766737,
+    "lat": 35.7775222,
+    "lon": -78.6625593,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Western Boulevard & Ashe Avenue",
+      "network": "GoRaleigh;GoTriangle",
+      "operator": "GoRaleigh;GoTriangle",
+      "passenger_information_display": "no",
+      "public_transport": "platform",
+      "ref": "8568",
+      "shelter": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6502766738,
+    "lat": 35.7776818,
+    "lon": -78.6622316,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "no",
+      "name": "Western Boulevard & Ashe Avenue",
+      "network": "GoRaleigh;GoTriangle",
+      "operator": "GoRaleigh;GoTriangle",
+      "passenger_information_display": "no",
+      "public_transport": "platform",
+      "ref": "8524",
+      "shelter": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6502766739,
+    "lat": 35.7755817,
+    "lon": -78.6588116,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "departures_board": "no",
+      "highway": "bus_stop",
+      "name": "Western Blvd at Hunt Dr (Governor Morehead School)",
+      "network": "GoRaleigh;GoTriangle",
+      "operator": "GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8523",
+      "shelter": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6502777512,
+    "lat": 35.7745634,
+    "lon": -78.6564621,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "departures_board": "no",
+      "highway": "bus_stop",
+      "name": "Western Blvd at Hunt Dr (EB)",
+      "network": "GoRaleigh;GoTriangle",
+      "operator": "GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8569",
+      "shelter": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6502777514,
+    "lat": 35.771842,
+    "lon": -78.6531922,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Western Boulevard & Boylan Avenue",
+      "network": "GoTriangle",
+      "network:wikidata": "Q7840091",
+      "network:wikipedia": "en:GoTriangle",
+      "operator": "GoTriangle",
+      "passenger_information_display": "no",
+      "public_transport": "platform",
+      "ref": "1299",
+      "shelter": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6502777515,
+    "lat": 35.7713785,
+    "lon": -78.6530287,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Western Boulevard & Boylan Avenue",
+      "network": "GoTriangle",
+      "network:wikidata": "Q7840091",
+      "network:wikipedia": "en:GoTriangle",
+      "operator": "GoTriangle",
+      "passenger_information_display": "no",
+      "public_transport": "platform",
+      "ref": "1281",
+      "shelter": "no",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6507403838,
+    "lat": 35.762884,
+    "lon": -78.658098,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "Lake Wheeler Rd at Goode St",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8835",
+      "shelter": "yes",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6507404644,
+    "lat": 35.7630724,
+    "lon": -78.6492363,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "no",
+      "name": "South Saunders Street & Prospect Avenue",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "operator": "GoRaleigh",
+      "passenger_information_display": "no",
+      "public_transport": "platform",
+      "ref": "8398",
+      "shelter": "no",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040495,
+    "lat": 35.7752349,
+    "lon": -78.6569466,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "Western Blvd at Hunt Dr (WB)",
+      "network": "GoRaleigh;GoTriangle",
+      "public_transport": "platform",
+      "ref": "9809",
+      "shelter": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040608,
+    "lat": 35.7659393,
+    "lon": -78.6535182,
+    "tags": {
+      "bench": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "no",
+      "name": "Lake Wheeler Rd at Grissom St",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "9239",
+      "shelter": "no",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040695,
+    "lat": 35.77307,
+    "lon": -78.650759,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "mapillary": "286824003061573",
+      "name": "S Boylan Ave at W Lenoir St",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "9808",
+      "shelter": "no",
+      "survey:date": "2019-01-27"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040710,
+    "lat": 35.7646426,
+    "lon": -78.6554742,
+    "tags": {
+      "bench": "no",
+      "bus": "yes",
+      "check_date:shelter": "2021-06-27",
+      "highway": "bus_stop",
+      "lit": "no",
+      "name": "Lake Wheeler Rd at Daladams St",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8836",
+      "shelter": "no",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040712,
+    "lat": 35.7668854,
+    "lon": -78.6521462,
+    "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "no",
+      "mapillary": "2773081499670983",
+      "name": "Lake Wheeler Rd at Fuller St",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8837",
+      "shelter": "no",
+      "survey:date": "2019-01-20",
+      "tactile_paving": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040770,
+    "lat": 35.773323,
+    "lon": -78.648592,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "mapillary": "910799536135957",
+      "name": "W Lenoir St at S Saunders St",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "9601",
+      "shelter": "no",
+      "survey:date": "2020-10-24"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040777,
+    "lat": 35.7717607,
+    "lon": -78.6529368,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "S Boylan Ave at Dorothea Dr (Outbound)",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "9600",
+      "shelter": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040795,
+    "lat": 35.7724719,
+    "lon": -78.650258,
+    "tags": {
+      "bench": "no",
+      "bin": "yes",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "mapillary": "914665889321260",
+      "name": "South St at Florence St",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8570",
+      "shelter": "no",
+      "survey:date": "2019-01-27"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6510040800,
+    "lat": 35.7717735,
+    "lon": -78.6525283,
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "mapillary": "535603034489530",
+      "name": "S Boylan Ave at Dorothea Dr (Inbound)",
+      "network": "GoRaleigh",
+      "network:wikidata": "Q5035469",
+      "network:wikipedia": "en:GoRaleigh",
+      "public_transport": "platform",
+      "ref": "8559",
+      "shelter": "no",
+      "survey:date": "2019-06-01"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6573312267,
+    "lat": 35.7725001,
+    "lon": -78.6487113,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6738684892,
+    "lat": 35.7651814,
+    "lon": -78.6497028,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1126",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "South Saunders Street",
+      "air_conditioning": "yes",
+      "brand": "Harley-Davidson",
+      "brand:wikidata": "Q192814",
+      "name": "Tobacco Road Harley-Davidson",
+      "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-17:00; Su 12:00-16:00",
+      "parts": "brand",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "phone": "+1 919 832 2261",
+      "shop": "motorcycle",
+      "website": "https://www.tobaccoroadhd.com"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6738686462,
+    "lat": 35.7653642,
+    "lon": -78.6495231,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1126",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "South Saunders Street",
+      "air_conditioning": "yes",
+      "brand": "Triumph",
+      "brand:wikidata": "Q1140383",
+      "name": "Triumph Raleigh",
+      "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-17:00; Su 12:00-16:00",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "phone": "+1-919-832-2261",
+      "shop": "motorcycle"
+    },
+    "type": "node"
+  },
+  {
+    "id": 6738711976,
+    "lat": 35.7642152,
+    "lon": -78.649701,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1202",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "South Saunders Street",
+      "check_date": "2024-10-07",
+      "internet_access": "wlan",
+      "internet_access:fee": "customers",
+      "name": "Murray's Tire & Auto, Inc",
+      "opening_hours": "Mo-Fr 08:00-18:00; Sa 08:00-17:00",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "phone": "+1-919-821-0573",
+      "shop": "tyres",
+      "wheelchair": "limited"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7243433246,
+    "lat": 35.7708043,
+    "lon": -78.6641965,
+    "tags": {
+      "amenity": "bicycle_rental",
+      "bicycle_rental": "docking_station",
+      "capacity": "16",
+      "name": "Dorothea Dix Park",
+      "network": "Citrix Cycle"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7637260749,
+    "lat": 35.7650022,
+    "lon": -78.6497118,
+    "tags": {
+      "brand": "Harley-Davidson",
+      "brand:wikidata": "Q192814",
+      "name": "Harley-Davidson",
+      "phone": "+1 919-750-0970",
+      "shop": "motorcycle_repair",
+      "website": "https://www.tobaccoroadhd.com/service/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7637260750,
+    "lat": 35.7654119,
+    "lon": -78.6498365,
+    "tags": {
+      "name": "Triumph Raleigh Service",
+      "phone": "+1-919-832-2261",
+      "shop": "motorcycle_repair",
+      "website": "https://www.triumphraleigh.com/we-repair-your-motorcycle--service"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7696242816,
+    "lat": 35.7775978,
+    "lon": -78.6500687,
+    "tags": {
+      "railway": "railway_crossing"
+    },
+    "type": "node"
+  },
+  {
+    "id": 7696242817,
+    "lat": 35.7776806,
+    "lon": -78.6503165,
+    "tags": {
+      "railway": "switch"
+    },
+    "type": "node"
+  },
+  {
+    "id": 8412019819,
+    "lat": 35.776909,
+    "lon": -78.6496447,
+    "tags": {
+      "name": "Rebus Works and pH seven",
+      "opening_hours": "Mo-We 08:00-15:00; Th-Sa 08:00-19:00; Su 10:00-15:00",
+      "shop": "art"
+    },
+    "type": "node"
+  },
+  {
+    "id": 8412038451,
+    "lat": 35.7755353,
+    "lon": -78.6486234,
+    "tags": {
+      "name": "Raleigh Embroidery",
+      "shop": "craft"
+    },
+    "type": "node"
+  },
+  {
+    "id": 8786724894,
+    "lat": 35.7690985,
+    "lon": -78.6623781,
+    "tags": {
+      "leisure": "park",
+      "name": "Big Field"
+    },
+    "type": "node"
+  },
+  {
+    "id": 9398111456,
+    "lat": 35.7714404,
+    "lon": -78.652948,
+    "tags": {
+      "bus": "yes",
+      "name": "Western Boulevard & Boylan Avenue",
+      "network": "GoTriangle",
+      "operator": "GoTriangle",
+      "public_transport": "stop_position",
+      "ref": "1281"
+    },
+    "type": "node"
+  },
+  {
+    "id": 9398111457,
+    "lat": 35.7718006,
+    "lon": -78.6532241,
+    "tags": {
+      "bus": "yes",
+      "name": "Western Boulevard & Boylan Avenue",
+      "network": "GoTriangle",
+      "operator": "GoTriangle",
+      "public_transport": "stop_position",
+      "ref": "1299"
+    },
+    "type": "node"
+  },
+  {
+    "id": 9398111458,
+    "lat": 35.7775981,
+    "lon": -78.6625025,
+    "tags": {
+      "bus": "yes",
+      "name": "Western Boulevard & Ashe Avenue",
+      "network": "GoRaleigh;GoTriangle",
+      "operator": "GoRaleigh;GoTriangle",
+      "public_transport": "stop_position",
+      "ref": "8568"
+    },
+    "type": "node"
+  },
+  {
+    "id": 9398111459,
+    "lat": 35.7776315,
+    "lon": -78.6622889,
+    "tags": {
+      "bus": "yes",
+      "name": "Western Boulevard & Ashe Avenue",
+      "network": "GoRaleigh",
+      "operator": "GoRaleigh",
+      "public_transport": "stop_position",
+      "ref": "8524"
+    },
+    "type": "node"
+  },
+  {
+    "id": 9398252613,
+    "lat": 35.7630701,
+    "lon": -78.6491491,
+    "tags": {
+      "bus": "yes",
+      "name": "South Saunders Street & Prospect Avenue",
+      "network": "GoRaleigh",
+      "operator": "GoRaleigh",
+      "public_transport": "stop_position",
+      "ref": "8398"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10040092139,
+    "lat": 35.7642207,
+    "lon": -78.6630553,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1209",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Agricultural Street",
+      "name": "Nancy Jo's Homemade of Raleigh",
+      "opening_hours": "We-Mo 09:00-17:00",
+      "phone": "+19842000437",
+      "shop": "pastry"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10040092140,
+    "lat": 35.7647605,
+    "lon": -78.6621134,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1109",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Agricultural Street",
+      "name": "Earth Family Organics",
+      "phone": "+19198337559",
+      "shop": "farm"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10040092141,
+    "lat": 35.765172,
+    "lon": -78.6613429,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1109",
+      "addr:postcode": "27695",
+      "addr:state": "NC",
+      "addr:street": "Agriculture Street",
+      "name": "Fords Produce Company, Inc.",
+      "phone": "+18008213673",
+      "shop": "farm"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10040092142,
+    "lat": 35.7642795,
+    "lon": -78.6612243,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1225",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Farmers Market Drive",
+      "name": "Alvarado & sons produce",
+      "phone": "+19196026480",
+      "shop": "farm"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10040092143,
+    "lat": 35.7641031,
+    "lon": -78.661547,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1225",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Farmers Market Drive",
+      "name": "Jones Fruit & Produce",
+      "phone": "+19198349122",
+      "shop": "farm"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10116967594,
+    "lat": 35.7709156,
+    "lon": -78.6527834,
+    "tags": {
+      "amenity": "waste_basket"
+    },
+    "type": "node"
+  },
+  {
+    "id": 10601893466,
+    "lat": 35.7773051,
+    "lon": -78.6661635,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "4",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11045427405,
+    "lat": 35.7763527,
+    "lon": -78.6484856,
+    "tags": {
+      "addr:housenumber": "328",
+      "addr:postcode": "27603",
+      "addr:street": "Dupont Circle",
+      "air_conditioning": "yes",
+      "name": "Boulted Bread",
+      "opening_hours": "We-Fr 07:00-16:00; Sa-Su 08:00-16:00; Mo-Tu off",
+      "payment:cash": "yes",
+      "payment:contactless": "yes",
+      "payment:credit_cards": "yes",
+      "shop": "bakery",
+      "website": "https://boultedbread.com/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11061707678,
+    "lat": 35.7716983,
+    "lon": -78.6484759,
+    "tags": {
+      "amenity": "parking"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11092335076,
+    "lat": 35.7712941,
+    "lon": -78.6615605,
+    "tags": {
+      "amenity": "shelter",
+      "shelter_type": "picnic_shelter"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11092511813,
+    "lat": 35.7719151,
+    "lon": -78.6619609,
+    "tags": {
+      "amenity": "charging_station",
+      "brand": "PowerCharge",
+      "capacity": "2",
+      "covered": "no",
+      "operator": "EV Connect"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11298465195,
+    "lat": 35.7725525,
+    "lon": -78.6487725,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "stands",
+      "capacity": "6",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11298465198,
+    "lat": 35.7627678,
+    "lon": -78.6635905,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "bicycle_parking": "rack",
+      "capacity": "20",
+      "covered": "no",
+      "fee": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11680855211,
+    "lat": 35.7640307,
+    "lon": -78.6496371,
+    "tags": {
+      "name": "Reliable Collision and Painting",
+      "shop": "car_repair"
+    },
+    "type": "node"
+  },
+  {
+    "id": 11680855212,
+    "lat": 35.76405,
+    "lon": -78.6494939,
+    "tags": {
+      "name": "Motor Electric Repair Service",
+      "shop": "car_repair"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12018688069,
+    "lat": 35.7712836,
+    "lon": -78.6615632,
+    "tags": {
+      "amenity": "shelter",
+      "name": "Magnolia Room Picnic Shelter"
+    },
+    "type": "node"
+  },
+  {
+    "id": 12242532064,
+    "lat": 35.7772726,
+    "lon": -78.6487097,
+    "tags": {
+      "location": "outdoor",
+      "name": "BOYLAN",
+      "operator": "Norfolk Southern Railway",
+      "railway": "signal_box",
+      "railway:position": "mi:80.8",
+      "railway:ref": "BOYLAN",
+      "railway:signal_box": "yes",
+      "railway_milepost": "NC"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13057025697,
+    "lat": 35.7662491,
+    "lon": -78.6536735,
+    "tags": {
+      "amenity": "bicycle_parking"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13057025698,
+    "lat": 35.7661098,
+    "lon": -78.655049,
+    "tags": {
+      "amenity": "bicycle_parking"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13057036553,
+    "lat": 35.7671328,
+    "lon": -78.6526267,
+    "tags": {
+      "amenity": "bicycle_rental"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13197511935,
+    "lat": 35.7706356,
+    "lon": -78.6549196,
+    "tags": {
+      "amenity": "toilets"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13252685393,
+    "lat": 35.7703625,
+    "lon": -78.6542298,
+    "tags": {
+      "artist_name": "Dewitt Godfrey",
+      "artwork_type": "sculpture",
+      "material": "steel",
+      "name": "Attun",
+      "tourism": "artwork",
+      "website": "https://www.dixparkconservancy.org/art/attun"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13252685394,
+    "lat": 35.7675583,
+    "lon": -78.6533432,
+    "tags": {
+      "artwork_type": "sculpture",
+      "material": "metal",
+      "tourism": "artwork"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13252685395,
+    "lat": 35.767544,
+    "lon": -78.6534245,
+    "tags": {
+      "artwork_type": "sculpture",
+      "material": "metal",
+      "tourism": "artwork"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376129843,
+    "lat": 35.7687903,
+    "lon": -78.6511445,
+    "tags": {
+      "amenity": "shelter",
+      "shelter_type": "gazebo"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376150908,
+    "lat": 35.7672693,
+    "lon": -78.6525445,
+    "tags": {
+      "amenity": "drinking_water",
+      "fountain": "bubbler"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376150909,
+    "lat": 35.7672398,
+    "lon": -78.6525936,
+    "tags": {
+      "amenity": "bicycle_parking",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376172195,
+    "lat": 35.7671408,
+    "lon": -78.6531729,
+    "tags": {
+      "addr:housenumber": "701",
+      "addr:street": "Palmer Drive",
+      "amenity": "cafe",
+      "check_date": "2025-12-14",
+      "name": "Coffee Bar"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376172196,
+    "lat": 35.7671396,
+    "lon": -78.6530342,
+    "tags": {
+      "addr:housenumber": "701",
+      "addr:street": "Palmer Drive",
+      "check_date": "2025-12-15",
+      "name": "House of Many Porches Market",
+      "shop": "convenience",
+      "toilets": "yes",
+      "website": "https://dixpark.org/houseofmanyporches",
+      "wheelchair": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376182641,
+    "lat": 35.7697926,
+    "lon": -78.6590565,
+    "tags": {
+      "bench": "yes",
+      "covered": "no",
+      "leisure": "picnic_table",
+      "lit": "no",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376186273,
+    "lat": 35.7712061,
+    "lon": -78.6633931,
+    "tags": {
+      "bench": "yes",
+      "leisure": "picnic_table",
+      "lit": "no",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376186789,
+    "lat": 35.7685034,
+    "lon": -78.6512945,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "no",
+      "backrest": "yes",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376186790,
+    "lat": 35.7686058,
+    "lon": -78.6513461,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "no",
+      "backrest": "yes",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376186791,
+    "lat": 35.7687732,
+    "lon": -78.6512718,
+    "tags": {
+      "amenity": "bbq",
+      "covered": "no"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376186792,
+    "lat": 35.7685594,
+    "lon": -78.6508021,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "no",
+      "backrest": "yes",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376186793,
+    "lat": 35.7685567,
+    "lon": -78.6508352,
+    "tags": {
+      "amenity": "drinking_water"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376189193,
+    "lat": 35.7694174,
+    "lon": -78.6613106,
+    "tags": {
+      "artist_name": "Thomas Dambo",
+      "artwork_type": "sculpture",
+      "material": "wood",
+      "name": "Dux",
+      "tourism": "artwork",
+      "website": "https://trollmap.com/#/@35.7694x-78.6612z16"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376202119,
+    "lat": 35.7697596,
+    "lon": -78.6572668,
+    "tags": {
+      "artist_name": "Lamar Whidbee",
+      "artwork_type": "mural",
+      "fixme": "Please merge me into a nearby wall",
+      "name": "Get Well Soon",
+      "tourism": "artwork"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376217657,
+    "lat": 35.7695446,
+    "lon": -78.6532619,
+    "tags": {
+      "artist_name": "Thomas Bambo",
+      "artwork_type": "sculpture",
+      "material": "wood",
+      "name": "Daddy Bird Eye",
+      "tourism": "artwork",
+      "website": "https://trollmap.com/#/@35.7697x-78.6531z16.25s"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376218671,
+    "lat": 35.7701474,
+    "lon": -78.6604854,
+    "tags": {
+      "amenity": "shelter",
+      "bench": "yes",
+      "shelter_type": "gazebo"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376218672,
+    "lat": 35.7702086,
+    "lon": -78.6603363,
+    "tags": {
+      "bench": "yes",
+      "leisure": "picnic_table",
+      "lit": "no",
+      "material": "concrete"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376218674,
+    "lat": 35.7704297,
+    "lon": -78.6607841,
+    "tags": {
+      "bench": "yes",
+      "leisure": "picnic_table",
+      "lit": "no",
+      "material": "concrete"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376218675,
+    "lat": 35.7701572,
+    "lon": -78.6607107,
+    "tags": {
+      "bench": "yes",
+      "leisure": "picnic_table",
+      "lit": "no",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376218994,
+    "lat": 35.7713097,
+    "lon": -78.6613461,
+    "tags": {
+      "amenity": "drinking_water"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376218995,
+    "lat": 35.7713589,
+    "lon": -78.6611436,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "no",
+      "backrest": "no",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376218996,
+    "lat": 35.7712289,
+    "lon": -78.6611149,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "no",
+      "backrest": "no",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376234927,
+    "lat": 35.773642,
+    "lon": -78.6630628,
+    "tags": {
+      "artist_name": "Thomas Dambo",
+      "artwork_type": "sculpture",
+      "material": "wood",
+      "name": "Dix",
+      "tourism": "artwork",
+      "website": "https://trollmap.com/#/@35.7737x-78.6635z16"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376238496,
+    "lat": 35.7696669,
+    "lon": -78.6614762,
+    "tags": {
+      "artist_name": "Thomas Dambo",
+      "artwork_type": "sculpture",
+      "name": "Dax",
+      "tourism": "artwork",
+      "website": "https://trollmap.com/#/@35.7699x-78.6616z16"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376247839,
+    "lat": 35.7708903,
+    "lon": -78.6623727,
+    "tags": {
+      "amenity": "shelter",
+      "shelter_type": "gazebo"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376265868,
+    "lat": 35.7743622,
+    "lon": -78.6628792,
+    "tags": {
+      "artist_name": "Thomas Dambo",
+      "artwork_type": "sculpture",
+      "material": "wood",
+      "name": "Mother Strong Tail",
+      "tourism": "artwork",
+      "website": "https://trollmap.com/#/@35.7746x-78.6632z16"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376276535,
+    "lat": 35.7714223,
+    "lon": -78.6613673,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "no",
+      "backrest": "yes",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376276536,
+    "lat": 35.7712664,
+    "lon": -78.6615101,
+    "tags": {
+      "amenity": "shelter",
+      "bench": "yes",
+      "shelter_type": "gazebo"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376276537,
+    "lat": 35.7712421,
+    "lon": -78.6612906,
+    "tags": {
+      "amenity": "shelter",
+      "bench": "yes",
+      "shelter_type": "gazebo"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376276663,
+    "lat": 35.7672638,
+    "lon": -78.6547954,
+    "tags": {
+      "leisure": "playground"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376299175,
+    "lat": 35.7680139,
+    "lon": -78.657865,
+    "tags": {
+      "amenity": "shelter",
+      "bench": "yes",
+      "shelter_type": "gazebo"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376301178,
+    "lat": 35.7668189,
+    "lon": -78.6544764,
+    "tags": {
+      "amenity": "drinking_water"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376307907,
+    "lat": 35.766237,
+    "lon": -78.6545652,
+    "tags": {
+      "amenity": "drinking_water"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376312154,
+    "lat": 35.7671874,
+    "lon": -78.6549732,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "yes",
+      "backrest": "yes",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376314073,
+    "lat": 35.7675511,
+    "lon": -78.6546366,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "yes",
+      "backrest": "yes",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376314676,
+    "lat": 35.7668609,
+    "lon": -78.6542847,
+    "tags": {
+      "access": "yes",
+      "addr:housenumber": "715",
+      "addr:street": "Biggs Drive",
+      "amenity": "toilets",
+      "changing_table": "yes",
+      "check_date": "2025-12-14",
+      "toilets:disposal": "flush",
+      "wheelchair": "yes"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376339202,
+    "lat": 35.7677433,
+    "lon": -78.6541731,
+    "tags": {
+      "amenity": "drinking_water"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13376341238,
+    "lat": 35.7672025,
+    "lon": -78.6545226,
+    "tags": {
+      "amenity": "bench",
+      "armrest": "yes",
+      "backrest": "yes",
+      "material": "wood"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13474668908,
+    "lat": 35.7637883,
+    "lon": -78.6495648,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1224",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "South Saunders Street",
+      "check_date": "2026-01-21",
+      "name": "Reliable Collision & Painting",
+      "opening_hours": "Mo-Fr 08:00-17:30",
+      "phone": "+19198348216",
+      "shop": "car_repair",
+      "website": "https://www.autobodyrepairraleigh.com/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13483083802,
+    "lat": 35.7704812,
+    "lon": -78.6568231,
+    "tags": {
+      "addr:housenumber": "1030",
+      "addr:postcode": "27603",
+      "addr:street": "Richardson Drive",
+      "amenity": "place_of_worship",
+      "name": "Greg Poole Jr all faiths chapel",
+      "religion": "christian"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13484828949,
+    "lat": 35.769458,
+    "lon": -78.6553442,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "820",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "South Boylan Avenue",
+      "government": "healthcare",
+      "name": "NC Department of Health and Human Services Social Services",
+      "office": "government"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13484828950,
+    "lat": 35.7693151,
+    "lon": -78.6550747,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "820",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "South Boylan Avenue",
+      "amenity": "doctors",
+      "check_date": "2026-01-25",
+      "healthcare": "doctor",
+      "healthcare:speciality": "psychiatry",
+      "name": "Melissa Nelson, LCSW",
+      "phone": "+19197335154"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13484860955,
+    "lat": 35.7697945,
+    "lon": -78.6565647,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1050",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Umstead Drive",
+      "check_date": "2026-01-25",
+      "name": "N. C. Department of Health and Human Services",
+      "office": "government",
+      "phone": "+19198553700"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13484966804,
+    "lat": 35.7632038,
+    "lon": -78.6570525,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1515",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Lake Wheeler Road",
+      "check_date": "2026-01-25",
+      "craft": "roofer",
+      "name": "Peak Metal Products",
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "phone": "+19192562270",
+      "website": "http://www.peakmetal.com/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13484966805,
+    "lat": 35.7635939,
+    "lon": -78.6566266,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1509",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Lake Wheeler Road",
+      "check_date": "2026-01-25",
+      "name": "Barnett's Suzuki Ducati",
+      "opening_hours": "Mo-Fr 09:30-18:00; Sa 09:00-15:00",
+      "phone": "+19198335575",
+      "second_hand": "yes",
+      "shop": "car",
+      "website": "http://barnettsuzuki.com/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13484966806,
+    "lat": 35.7627281,
+    "lon": -78.6574279,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "613",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Mercury Street",
+      "check_date": "2026-01-25",
+      "name": "Raleigh Pro",
+      "opening_hours": "Mo-Su 08:00-18:00",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "phone": "+19198498973",
+      "shop": "car_repair",
+      "website": "https://raleighncmobilemechanics.com/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13500714420,
+    "lat": 35.7706244,
+    "lon": -78.6550012,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "900",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Umstead Drive",
+      "check_date": "2026-01-26",
+      "name": "Dix Park Conservancy",
+      "office": "association",
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "phone": "+19199871380",
+      "website": "https://www.dixparkconservancy.org/"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13719651863,
+    "lat": 35.7646704,
+    "lon": -78.655744,
+    "tags": {
+      "artist_name": "Thomas Sayre",
+      "artwork_type": "sculpture",
+      "material": "stainless_steel",
+      "name": "Sunflower Power Poles",
+      "tourism": "artwork"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13719651864,
+    "lat": 35.765447,
+    "lon": -78.6545913,
+    "tags": {
+      "artist_name": "Thomas Sayre",
+      "artwork_type": "sculpture",
+      "material": "stainless_steel",
+      "name": "Sunflower Power Poles",
+      "tourism": "artwork"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13719651865,
+    "lat": 35.766157,
+    "lon": -78.653476,
+    "tags": {
+      "artist_name": "Thomas Sayre",
+      "artwork_type": "sculpture",
+      "material": "stainless_steel",
+      "name": "Sunflower Power Poles",
+      "tourism": "artwork"
+    },
+    "type": "node"
+  },
+  {
+    "id": 13719651866,
+    "lat": 35.7669173,
+    "lon": -78.6523624,
+    "tags": {
+      "artist_name": "Thomas Sayre",
+      "artwork_type": "sculpture",
+      "material": "stainless_steel",
+      "name": "Sunflower Power Poles",
+      "tourism": "artwork"
+    },
+    "type": "node"
+  },
+  {
+    "center": {
+      "lat": 35.7767753,
+      "lon": -78.6500411
+    },
+    "id": 33106184,
+    "tags": {
+      "leisure": "park",
+      "name": "Raymond G. Lanier Park",
+      "operator": "City or Raleigh Parks, Recreation and Cultural Resources",
+      "ownership": "municipal",
+      "source": "NCOnemap;City or Raleigh Parks Recreation and Cultural Resources"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7735197,
+      "lon": -78.6487369
+    },
+    "id": 33106252,
+    "tags": {
+      "access": "yes",
+      "leisure": "park",
+      "name": "Lenoir Street Park",
+      "ownership": "municipal",
+      "source": "NCOnemap"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7636309,
+      "lon": -78.6627008
+    },
+    "id": 47732815,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1201",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Agricultural Street",
+      "amenity": "restaurant",
+      "building": "yes",
+      "building:use": "commercial",
+      "name": "N.C. Seafood Restaurant at the Farmers Market",
+      "phone": "+19198334661",
+      "source": "WakeGIS"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7630802,
+      "lon": -78.6485891
+    },
+    "id": 47759489,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "210",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Prospect Avenue",
+      "amenity": "cafe",
+      "building": "yes",
+      "building:use": "commercial",
+      "cuisine": "coffee_shop",
+      "description": "Purr Cup Cafe is a unique and comfortable adoption center where local rescue kitties can thrive, and find their forever homes! We also welcome community space for all cat-lovers. Whether you adopt or not, a visit to Purr Cup Cafe, support",
+      "diet:dairy_free": "yes",
+      "diet:plant-based": "yes",
+      "diet:vegan": "only",
+      "diet:vegetarian": "only",
+      "name": "Purr Cup Cafe",
+      "opening_hours": "Mo 15:00-19:00; We-Th 09:00-19:00; Fr-Sa 09:00-20:30; Su 09:00-18:00",
+      "outdoor_seating": "yes",
+      "phone": "+1 919 322 4003",
+      "source": "WakeGIS;local knowledge",
+      "theme": "cat",
+      "website": "https://purrcupcafe.com/"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7630448,
+      "lon": -78.6649575
+    },
+    "id": 47759490,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1208",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Farmers Market Drive",
+      "building": "yes",
+      "building:use": "commercial",
+      "name": "Logans Garden Shop",
+      "opening_hours": "Mo-Sa 09:00-18:00",
+      "phone": "+19198330466",
+      "shop": "garden_centre",
+      "source": "WakeGIS",
+      "website": "https://www.logantrd.com/"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7722482,
+      "lon": -78.6627409
+    },
+    "id": 47759582,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1985",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Umstead Drive",
+      "building": "yes",
+      "building:use": "commercial",
+      "historic": "yes",
+      "source": "WakeGIS"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7688539,
+      "lon": -78.6487683
+    },
+    "id": 47759757,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1004",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "South Saunders Street",
+      "amenity": "cafe",
+      "building": "yes",
+      "building:use": "commercial",
+      "check_date": "2026-01-21",
+      "name": "Willow House",
+      "opening_hours": "Mo-Fr 07:00-14:00; Sa 08:00-15:00",
+      "phone": "+19193419360",
+      "source": "WakeGIS",
+      "website": "https://willowhousecoffee.com/"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7726886,
+      "lon": -78.6490618
+    },
+    "id": 47759950,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "620",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "West South Street",
+      "building": "yes",
+      "building:use": "commercial",
+      "name": "Hartwell",
+      "shop": "repair",
+      "source": "WakeGIS"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.770252,
+      "lon": -78.6609976
+    },
+    "id": 47776350,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1800",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Umstead Drive",
+      "building": "yes",
+      "building:use": "commercial",
+      "historic": "yes",
+      "source": "WakeGIS"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7810089,
+      "lon": -78.6487977
+    },
+    "id": 52629117,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "maxspeed": "10 mph",
+      "maxspeed:freight": "10 mph",
+      "name": "Raleigh West District - Varina Branch",
+      "old_railway_operator": "NS",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "Norfolk Southern Railway",
+      "railway": "rail",
+      "railway:atc": "no",
+      "railway:ctc": "no",
+      "railway:preferred_direction": "both",
+      "railway:ptc": "no",
+      "railway:track_class": "1",
+      "railway:track_ref": "Main Track",
+      "railway:traffic_mode": "freight",
+      "railway:twc": "yes",
+      "railway_milepost": "NS",
+      "ref": "62CF",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7743889,
+      "lon": -78.6557375
+    },
+    "id": 52629118,
+    "tags": {
+      "bridge": "yes",
+      "electrified": "no",
+      "gauge": "1435",
+      "layer": "1",
+      "maxspeed": "25 mph",
+      "maxspeed:freight": "25 mph",
+      "name": "Raleigh and Fayetteville Railroad",
+      "old_name": "NS-Line",
+      "old_railway_operator": "NS",
+      "operator": "R.J. Corman Railroad Group",
+      "owner": "Norfolk Southern Railway",
+      "railway": "rail",
+      "railway:atc": "no",
+      "railway:ctc": "no",
+      "railway:preferred_direction": "both",
+      "railway:ptc": "no",
+      "railway:track_class": "2",
+      "railway:track_ref": "Main Track",
+      "railway:traffic_mode": "freight",
+      "railway:twc": "yes",
+      "railway_milepost": "NS",
+      "ref": "RFCC",
+      "reporting_marks": "RFCC",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7773999,
+      "lon": -78.6502457
+    },
+    "id": 101545330,
+    "tags": {
+      "railway": "rail",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7666678,
+      "lon": -78.6581159
+    },
+    "id": 130346312,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "maxspeed": "25 mph",
+      "maxspeed:freight": "25 mph",
+      "name": "Raleigh and Fayetteville Railroad",
+      "old_name": "NS-Line",
+      "old_railway_operator": "NS",
+      "operator": "R.J. Corman Railroad Group",
+      "owner": "Norfolk Southern Railway",
+      "railway": "rail",
+      "railway:atc": "no",
+      "railway:ctc": "no",
+      "railway:preferred_direction": "both",
+      "railway:ptc": "no",
+      "railway:track_class": "2",
+      "railway:track_ref": "Main Track",
+      "railway:traffic_mode": "freight",
+      "railway:twc": "yes",
+      "railway_milepost": "NS",
+      "ref": "RFCC",
+      "reporting_marks": "RFCC",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7768442,
+      "lon": -78.6485441
+    },
+    "id": 140352570,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "maxspeed": "20 mph",
+      "name": "H-Line",
+      "note:old_railway_operator": "North Carolina Railroad",
+      "old_railway_operator": "Southern",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "North Carolina Railroad",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "railway_milepost": "NC",
+      "ref": "NCRR",
+      "usage": "main"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.778217,
+      "lon": -78.6595213
+    },
+    "id": 194727749,
+    "tags": {
+      "amenity": "school",
+      "name": "Governor Morehead School for the Blind"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.763704,
+      "lon": -78.6618896
+    },
+    "id": 194981757,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1201",
+      "addr:postcode": "27603",
+      "addr:state": "NC",
+      "addr:street": "Agricultural Street",
+      "amenity": "marketplace",
+      "name": "State Farmers Market",
+      "website": "https://www.ncagr.gov/markets/facilities/markets/raleigh/index.htm"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7700158,
+      "lon": -78.6574486
+    },
+    "id": 194996668,
+    "tags": {
+      "emergency": "no",
+      "leisure": "park",
+      "name": "Dorothea Dix Park"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7709474,
+      "lon": -78.6660461
+    },
+    "id": 341862749,
+    "tags": {
+      "amenity": "training",
+      "name": "K9 Training Course",
+      "training": "K9"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7738489,
+      "lon": -78.6498261
+    },
+    "id": 368154912,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.777563,
+      "lon": -78.650106
+    },
+    "id": 408467593,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "maxspeed": "20 mph",
+      "name": "H-Line",
+      "note:old_railway_operator": "North Carolina Railroad",
+      "old_railway_operator": "Southern",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "North Carolina Railroad",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "railway_milepost": "NC",
+      "ref": "NCRR",
+      "usage": "main"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7769378,
+      "lon": -78.6488725
+    },
+    "id": 408467595,
+    "tags": {
+      "gauge": "1435",
+      "old_railway_operator": "Southern",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "North Carolina Railroad",
+      "railway": "rail",
+      "service": "siding",
+      "tiger:cfcc": "B11",
+      "tiger:county": "Wake, NC",
+      "tiger:name_base": "Southern Railway"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7709596,
+      "lon": -78.652935
+    },
+    "id": 424454987,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "street_side"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7775678,
+      "lon": -78.6550302
+    },
+    "id": 439082076,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:country": "US",
+      "addr:housenumber": "1300",
+      "addr:postcode": "27606",
+      "addr:state": "NC",
+      "addr:street": "Western Boulevard",
+      "amenity": "prison",
+      "fax": "+1 919 715 2645",
+      "name": "Central Prison",
+      "operator": "North Carolina Department of Correction",
+      "phone": "+1 919 733 0800",
+      "website": "https://www2.ncdps.gov/index2.cfm?a=000003,002240,002381,002252",
+      "wikidata": "Q5061708",
+      "wikipedia": "en:Central Prison"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7725223,
+      "lon": -78.6664857
+    },
+    "id": 544913146,
+    "tags": {
+      "access": "permissive",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7674255,
+      "lon": -78.6559506
+    },
+    "id": 583066751,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7667061,
+      "lon": -78.6558078
+    },
+    "id": 583066752,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7664418,
+      "lon": -78.6566804
+    },
+    "id": 583066753,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "street_side"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7657396,
+      "lon": -78.6568341
+    },
+    "id": 583066761,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.766117,
+      "lon": -78.6581159
+    },
+    "id": 583066762,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "name": "Broughton Parking Lot",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.767159,
+      "lon": -78.6573078
+    },
+    "id": 583066765,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7677496,
+      "lon": -78.65747
+    },
+    "id": 583066766,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7680236,
+      "lon": -78.6575224
+    },
+    "id": 583066768,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7691149,
+      "lon": -78.6568103
+    },
+    "id": 583066773,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7692488,
+      "lon": -78.6565911
+    },
+    "id": 583066774,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7689021,
+      "lon": -78.6569797
+    },
+    "id": 583066775,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7681196,
+      "lon": -78.657095
+    },
+    "id": 583066784,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7682733,
+      "lon": -78.6563659
+    },
+    "id": 583066786,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7679586,
+      "lon": -78.6561106
+    },
+    "id": 583070182,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7688197,
+      "lon": -78.6581016
+    },
+    "id": 583070183,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7684189,
+      "lon": -78.6582251
+    },
+    "id": 583070184,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7709323,
+      "lon": -78.6561172
+    },
+    "id": 583070191,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.771467,
+      "lon": -78.6577182
+    },
+    "id": 583070208,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7710849,
+      "lon": -78.6579641
+    },
+    "id": 583070209,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7708524,
+      "lon": -78.6574365
+    },
+    "id": 583070210,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7668685,
+      "lon": -78.6538661
+    },
+    "id": 583072635,
+    "tags": {
+      "leisure": "park",
+      "lit": "no",
+      "name": "Gipson Play Plaza",
+      "sport": "multi",
+      "surface": "grass",
+      "website": "https://dixpark.org/gipsonplayplaza"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7675706,
+      "lon": -78.6516001
+    },
+    "id": 583072639,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7680391,
+      "lon": -78.650884
+    },
+    "id": 583072644,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7684906,
+      "lon": -78.6541664
+    },
+    "id": 583072650,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "street_side"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7677464,
+      "lon": -78.6522982
+    },
+    "id": 583072656,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "street_side",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7699592,
+      "lon": -78.655635
+    },
+    "id": 583072658,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7701485,
+      "lon": -78.6553496
+    },
+    "id": 583074413,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7716886,
+      "lon": -78.6573423
+    },
+    "id": 583074423,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7713861,
+      "lon": -78.6564482
+    },
+    "id": 583074429,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7740966,
+      "lon": -78.6593947
+    },
+    "id": 583695573,
+    "tags": {
+      "leisure": "sports_centre",
+      "sport": "soccer"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.776042,
+      "lon": -78.6571478
+    },
+    "id": 593174592,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7754857,
+      "lon": -78.6555281
+    },
+    "id": 593174596,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7763637,
+      "lon": -78.6538141
+    },
+    "id": 593174597,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7773217,
+      "lon": -78.6524607
+    },
+    "id": 593174598,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7727559,
+      "lon": -78.6483269
+    },
+    "id": 604046022,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7770737,
+      "lon": -78.6485622
+    },
+    "id": 607928724,
+    "tags": {
+      "gauge": "1435",
+      "maxspeed": "25 mph",
+      "name": "H-Line",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "North Carolina Railroad",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "railway:track_ref": "2",
+      "railway_milepost": "NC",
+      "ref": "NCRR",
+      "usage": "main"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7762087,
+      "lon": -78.6474779
+    },
+    "id": 607928740,
+    "tags": {
+      "gauge": "1435",
+      "maxspeed": "25 mph",
+      "name": "H-Line",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "North Carolina Railroad",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "railway:track_ref": "1",
+      "railway_milepost": "NC",
+      "ref": "NCRR",
+      "usage": "main"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7626031,
+      "lon": -78.6498297
+    },
+    "id": 662979068,
+    "tags": {
+      "building": "yes",
+      "name": "Coat's Auto Body and Paint",
+      "shop": "car_repair"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7741586,
+      "lon": -78.666028
+    },
+    "id": 664887034,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7690319,
+      "lon": -78.6585498
+    },
+    "id": 664929378,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7704006,
+      "lon": -78.6614407
+    },
+    "id": 664929379,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7715008,
+      "lon": -78.6630292
+    },
+    "id": 664929380,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7717105,
+      "lon": -78.661789
+    },
+    "id": 664929382,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7717843,
+      "lon": -78.6622531
+    },
+    "id": 664929383,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7716013,
+      "lon": -78.6644067
+    },
+    "id": 664929385,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7713098,
+      "lon": -78.6640115
+    },
+    "id": 664929388,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7701803,
+      "lon": -78.6587924
+    },
+    "id": 664929391,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7778132,
+      "lon": -78.650802
+    },
+    "id": 683014924,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "maxspeed": "80 mph",
+      "name": "H-Line",
+      "note:old_railway_operator": "North Carolina Railroad",
+      "old_railway_operator": "Southern",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "North Carolina Railroad",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "railway_milepost": "NC",
+      "ref": "NCRR",
+      "usage": "main"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7778754,
+      "lon": -78.6508432
+    },
+    "id": 824313859,
+    "tags": {
+      "gauge": "1435",
+      "name": "H-Line",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "North Carolina Railroad",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "railway_milepost": "NC",
+      "ref": "NCRR",
+      "usage": "main"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7778249,
+      "lon": -78.6507751
+    },
+    "id": 873121718,
+    "tags": {
+      "electrified": "no",
+      "maxspeed": "30 mph",
+      "name": "Norfolk Southern - Amtrak",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "service": "crossover"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7778507,
+      "lon": -78.650659
+    },
+    "id": 873121719,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "maxspeed": "80 mph",
+      "name": "Aberdeen Subdivision",
+      "old_railway_operator": "SAL",
+      "operator": "CSX Transportation",
+      "operator:wikidata": "Q856783",
+      "railway": "rail",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7775323,
+      "lon": -78.6498729
+    },
+    "id": 873121720,
+    "tags": {
+      "gauge": "1435",
+      "name": "H-Line",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "owner": "North Carolina Railroad",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "railway_milepost": "NC",
+      "ref": "NCRR",
+      "usage": "main"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7625282,
+      "lon": -78.653857
+    },
+    "id": 998048831,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7625407,
+      "lon": -78.653064
+    },
+    "id": 998048832,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7627094,
+      "lon": -78.6559209
+    },
+    "id": 998048834,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7626564,
+      "lon": -78.655338
+    },
+    "id": 998048835,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7623332,
+      "lon": -78.65685
+    },
+    "id": 998048836,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7625447,
+      "lon": -78.6572619
+    },
+    "id": 998048837,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7626483,
+      "lon": -78.6621248
+    },
+    "id": 998048841,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7634122,
+      "lon": -78.6635308
+    },
+    "id": 998140277,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7630827,
+      "lon": -78.6632541
+    },
+    "id": 998145851,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7639686,
+      "lon": -78.6625337
+    },
+    "id": 998145861,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7636245,
+      "lon": -78.6622847
+    },
+    "id": 998145862,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7633943,
+      "lon": -78.6620971
+    },
+    "id": 998145863,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7628686,
+      "lon": -78.6629457
+    },
+    "id": 998145864,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7644181,
+      "lon": -78.6615288
+    },
+    "id": 998145865,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7694383,
+      "lon": -78.665718
+    },
+    "id": 998145885,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7688952,
+      "lon": -78.6659896
+    },
+    "id": 998145886,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7694028,
+      "lon": -78.6665574
+    },
+    "id": 998145887,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7648811,
+      "lon": -78.6624442
+    },
+    "id": 998145896,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7762064,
+      "lon": -78.6580281
+    },
+    "id": 1011447763,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7756646,
+      "lon": -78.6583284
+    },
+    "id": 1011447764,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7758104,
+      "lon": -78.6587011
+    },
+    "id": 1011447765,
+    "tags": {
+      "amenity": "parking",
+      "capacity": "3",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7669645,
+      "lon": -78.6633805
+    },
+    "id": 1016017357,
+    "tags": {
+      "amenity": "parking",
+      "parking": "lane",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7770882,
+      "lon": -78.659485
+    },
+    "id": 1017392725,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.778816,
+      "lon": -78.6484838
+    },
+    "id": 1018283001,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "maxspeed": "20 mph",
+      "maxspeed:freight": "20 mph",
+      "name": "Aberdeen Subdivision",
+      "old_railway_operator": "SAL",
+      "operator": "CSX Transportation",
+      "operator:wikidata": "Q856783",
+      "railway": "rail",
+      "railway:ctc": "yes",
+      "railway:etms": "yes",
+      "railway:ptc": "yes",
+      "railway:track_ref": "Main Track",
+      "railway_milepost": "S",
+      "ref": "AB",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.763405,
+      "lon": -78.6496295
+    },
+    "id": 1022958475,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7637033,
+      "lon": -78.6496293
+    },
+    "id": 1022958478,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7642817,
+      "lon": -78.6498455
+    },
+    "id": 1022958479,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7710093,
+      "lon": -78.6583723
+    },
+    "id": 1028728134,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "unpaved"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7711628,
+      "lon": -78.6588782
+    },
+    "id": 1028728136,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7712808,
+      "lon": -78.6585975
+    },
+    "id": 1028728137,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7716155,
+      "lon": -78.6582518
+    },
+    "id": 1028728138,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.771574,
+      "lon": -78.6586179
+    },
+    "id": 1028728139,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7693845,
+      "lon": -78.6574844
+    },
+    "id": 1028728140,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7679905,
+      "lon": -78.658129
+    },
+    "id": 1028728144,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7674755,
+      "lon": -78.6551766
+    },
+    "id": 1028728147,
+    "tags": {
+      "amenity": "parking",
+      "parking": "street_side",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7680103,
+      "lon": -78.6540869
+    },
+    "id": 1028728148,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7682097,
+      "lon": -78.6541832
+    },
+    "id": 1028728149,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7683148,
+      "lon": -78.6511051
+    },
+    "id": 1028728151,
+    "tags": {
+      "amenity": "parking",
+      "parking": "street_side",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7688035,
+      "lon": -78.6501891
+    },
+    "id": 1028728152,
+    "tags": {
+      "amenity": "parking",
+      "parking": "street_side",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.768705,
+      "lon": -78.654401
+    },
+    "id": 1028728154,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7686758,
+      "lon": -78.6547233
+    },
+    "id": 1028728155,
+    "tags": {
+      "amenity": "parking",
+      "parking": "street_side",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7690922,
+      "lon": -78.6547963
+    },
+    "id": 1028728156,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7701531,
+      "lon": -78.6567377
+    },
+    "id": 1028728157,
+    "tags": {
+      "amenity": "parking",
+      "parking": "street_side",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7701646,
+      "lon": -78.6576549
+    },
+    "id": 1028728158,
+    "tags": {
+      "amenity": "parking",
+      "parking": "street_side",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.767569,
+      "lon": -78.6643557
+    },
+    "id": 1067735086,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7780077,
+      "lon": -78.6484004
+    },
+    "id": 1069657810,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "unpaved"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7769821,
+      "lon": -78.6503188
+    },
+    "id": 1069657813,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7774476,
+      "lon": -78.6592539
+    },
+    "id": 1069657821,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7774894,
+      "lon": -78.6587622
+    },
+    "id": 1069657822,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7779574,
+      "lon": -78.6583557
+    },
+    "id": 1069657823,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7726187,
+      "lon": -78.6489953
+    },
+    "id": 1072162846,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7738287,
+      "lon": -78.65988
+    },
+    "id": 1079247650,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.772381,
+      "lon": -78.6598974
+    },
+    "id": 1079247651,
+    "tags": {
+      "leisure": "garden",
+      "name": "Sunflower Field"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7708442,
+      "lon": -78.6624865
+    },
+    "id": 1092763893,
+    "tags": {
+      "access": "yes",
+      "addr:city": "Raleigh",
+      "addr:housenumber": "1800",
+      "addr:postcode": "27695",
+      "addr:state": "NC",
+      "addr:street": "Umstead Drive",
+      "leisure": "dog_park",
+      "name": "Dog Park at Dix Park",
+      "website": "https://dixpark.org/dogpark",
+      "wheelchair": "yes"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7777485,
+      "lon": -78.6507485
+    },
+    "id": 1118637615,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "railway": "rail",
+      "tiger:cfcc": "B11",
+      "tiger:county": "Wake, NC",
+      "tiger:name_base": "Southern Railway"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7774875,
+      "lon": -78.6658467
+    },
+    "id": 1173751145,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7780463,
+      "lon": -78.6650731
+    },
+    "id": 1173751147,
+    "tags": {
+      "amenity": "parking"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7653542,
+      "lon": -78.6622294
+    },
+    "id": 1173751148,
+    "tags": {
+      "access": "customers",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7735335,
+      "lon": -78.6486308
+    },
+    "id": 1230462521,
+    "tags": {
+      "leisure": "pitch",
+      "sport": "basketball"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7735384,
+      "lon": -78.6488428
+    },
+    "id": 1230462522,
+    "tags": {
+      "leisure": "playground"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7759631,
+      "lon": -78.6534151
+    },
+    "id": 1231604478,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "maxspeed": "25 mph",
+      "maxspeed:freight": "25 mph",
+      "name": "Raleigh and Fayetteville Railroad",
+      "old_name": "NS-Line",
+      "old_railway_operator": "NS",
+      "operator": "R.J. Corman Railroad Group",
+      "owner": "Norfolk Southern Railway",
+      "railway": "rail",
+      "railway:atc": "no",
+      "railway:ctc": "no",
+      "railway:preferred_direction": "both",
+      "railway:ptc": "no",
+      "railway:track_class": "2",
+      "railway:track_ref": "Main Track",
+      "railway:traffic_mode": "freight",
+      "railway:twc": "yes",
+      "railway_milepost": "NS",
+      "ref": "RFCC",
+      "reporting_marks": "RFCC",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7772533,
+      "lon": -78.6514026
+    },
+    "id": 1231604479,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "layer": "-1",
+      "name": "NS-Line",
+      "old_railway_operator": "NS",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "railway": "rail",
+      "tunnel": "yes",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.777229,
+      "lon": -78.6514671
+    },
+    "id": 1231604480,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "layer": "-1",
+      "name": "NS-Line",
+      "old_railway_operator": "NS",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "railway": "rail",
+      "tunnel": "yes",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7771983,
+      "lon": -78.6515486
+    },
+    "id": 1231604481,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "layer": "-1",
+      "name": "NS-Line",
+      "old_railway_operator": "NS",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "railway": "rail",
+      "tunnel": "yes",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7772164,
+      "lon": -78.6515007
+    },
+    "id": 1231604482,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "name": "NS-Line",
+      "old_railway_operator": "NS",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "railway": "rail",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7771758,
+      "lon": -78.6516084
+    },
+    "id": 1231604483,
+    "tags": {
+      "electrified": "no",
+      "gauge": "1435",
+      "name": "NS-Line",
+      "old_railway_operator": "NS",
+      "operator": "Norfolk Southern Railway",
+      "operator:wikidata": "Q1321054",
+      "railway": "rail",
+      "usage": "branch"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7626177,
+      "lon": -78.6504199
+    },
+    "id": 1246725472,
+    "tags": {
+      "amenity": "parking"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7677209,
+      "lon": -78.6546128
+    },
+    "id": 1256461204,
+    "tags": {
+      "amenity": "parking_space",
+      "parking_space": "disabled"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.765603,
+      "lon": -78.6552122
+    },
+    "id": 1420828125,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "fee": "no",
+      "parking": "surface"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7670407,
+      "lon": -78.6528716
+    },
+    "id": 1420828150,
+    "tags": {
+      "leisure": "garden"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7682722,
+      "lon": -78.6482793
+    },
+    "id": 1420829885,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "yes",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7672804,
+      "lon": -78.6509263
+    },
+    "id": 1420830799,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "yes",
+      "parking": "multi-storey"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7737444,
+      "lon": -78.6584687
+    },
+    "id": 1510554883,
+    "tags": {
+      "access": "yes",
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "fine_gravel"
+    },
+    "type": "way"
+  },
+  {
+    "center": {
+      "lat": 35.7794699,
+      "lon": -78.6940244
+    },
+    "id": 6431764,
+    "tags": {
+      "addr:city": "Raleigh",
+      "addr:postcode": "27695",
+      "addr:state": "NC",
+      "amenity": "university",
+      "ele": "118",
+      "name": "North Carolina State University",
+      "name:fr": "Universit\u00e9 d'\u00c9tat de Caroline du Nord",
+      "name:ru": "\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u0448\u0442\u0430\u0442\u0430 \u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u041a\u0430\u0440\u043e\u043b\u0438\u043d\u0430",
+      "short_name": "NC STATE",
+      "type": "multipolygon",
+      "website": "https://www.ncsu.edu/",
+      "website:mobile": "http://m.ncsu.edu",
+      "wikidata": "Q1132346",
+      "wikipedia": "en:North Carolina State University"
+    },
+    "type": "relation"
+  },
+  {
+    "center": {
+      "lat": 35.7626099,
+      "lon": -78.6648403
+    },
+    "id": 13393998,
+    "tags": {
+      "amenity": "parking",
+      "type": "multipolygon"
+    },
+    "type": "relation"
+  },
+  {
+    "center": {
+      "lat": 35.7620396,
+      "lon": -78.6641532
+    },
+    "id": 14296512,
+    "tags": {
+      "amenity": "parking",
+      "parking": "surface",
+      "surface": "asphalt",
+      "type": "multipolygon"
+    },
+    "type": "relation"
+  }
+]
