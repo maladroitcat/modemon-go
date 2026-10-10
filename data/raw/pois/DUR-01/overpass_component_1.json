@@ -1,0 +1,248 @@
+{
+  "elements": [
+    {
+      "id": 4202449596,
+      "lat": 35.990232,
+      "lon": -78.8906036,
+      "tags": {
+        "addr:country": "US",
+        "addr:housenumber": "807",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "East Main Street",
+        "name": "Moshi Moshi",
+        "opening_hours": "Mo 09:00-19:00, Tu-Th 09:00-20:00, Fr 09:00-19:00, Sa 09:00-18:00",
+        "phone": "+1 919 564 1272",
+        "shop": "hairdresser",
+        "website": "https://www.moshimoshimeanshello.com/"
+      },
+      "type": "node"
+    },
+    {
+      "id": 4202449597,
+      "lat": 35.9899341,
+      "lon": -78.891248,
+      "tags": {
+        "addr:country": "US",
+        "addr:housenumber": "807",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "East Main Street",
+        "addr:suite": "7-100",
+        "name": "Shodor",
+        "office": "research",
+        "phone": "+1 919 560 1911",
+        "website": "https://www.shodor.org/"
+      },
+      "type": "node"
+    },
+    {
+      "id": 5923216528,
+      "lat": 35.990139,
+      "lon": -78.889397,
+      "tags": {
+        "amenity": "bicycle_parking",
+        "capacity": "6",
+        "covered": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 5923216530,
+      "lat": 35.990524,
+      "lon": -78.890627,
+      "tags": {
+        "amenity": "bicycle_parking",
+        "capacity": "4",
+        "covered": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 5923216532,
+      "lat": 35.989938,
+      "lon": -78.891111,
+      "tags": {
+        "amenity": "bicycle_parking",
+        "capacity": "4",
+        "covered": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 5923216574,
+      "lat": 35.990399,
+      "lon": -78.890242,
+      "tags": {
+        "amenity": "bicycle_parking",
+        "capacity": "4",
+        "covered": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 5923216579,
+      "lat": 35.990312,
+      "lon": -78.889901,
+      "tags": {
+        "amenity": "bicycle_parking",
+        "capacity": "4",
+        "covered": "no"
+      },
+      "type": "node"
+    },
+    {
+      "id": 12469564902,
+      "lat": 35.9914132,
+      "lon": -78.8900564,
+      "tags": {
+        "addr:postcode": "27701",
+        "amenity": "restaurant",
+        "cuisine": "italian;italian_pizza;pizza",
+        "name": "Cugino Forno Durham",
+        "website": "https://cuginoforno.com/"
+      },
+      "type": "node"
+    },
+    {
+      "id": 12469711101,
+      "lat": 35.9915501,
+      "lon": -78.8900259,
+      "tags": {
+        "addr:postcode": "27701",
+        "craft": "brewery",
+        "name": "Hi-Wire Brewing Durham",
+        "website": "https://hiwirebrewing.com/durham/"
+      },
+      "type": "node"
+    },
+    {
+      "id": 12561407598,
+      "lat": 35.9914803,
+      "lon": -78.8904395,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "800",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "Taylor Street",
+        "addr:unit": "Suite",
+        "amenity": "ice_cream",
+        "name": "Two Roosters Ice Cream Durham",
+        "opening_hours": "14:00 - 21:00"
+      },
+      "type": "node"
+    },
+    {
+      "id": 14165026701,
+      "lat": 35.9914114,
+      "lon": -78.8895724,
+      "tags": {
+        "addr:housenumber": "800",
+        "addr:street": "Taylor Street",
+        "amenity": "veterinary",
+        "name": "Urban Tails Veterinary Hospital",
+        "phone": "+19842192579"
+      },
+      "type": "node"
+    },
+    {
+      "center": {
+        "lat": 35.9904737,
+        "lon": -78.8882577
+      },
+      "id": 214518274,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "409",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "North Elm Street",
+        "amenity": "parking",
+        "source:addr": "Durham Open Data"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9905714,
+        "lon": -78.8898619
+      },
+      "id": 214518276,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "221",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "Belt Street",
+        "amenity": "parking",
+        "source:addr": "Durham Open Data"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9901804,
+        "lon": -78.8911411
+      },
+      "id": 214518277,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "901",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "Morning Glory Avenue",
+        "amenity": "parking",
+        "source:addr": "Durham Open Data"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9913595,
+        "lon": -78.8909595
+      },
+      "id": 682533685,
+      "tags": {
+        "railway": "abandoned",
+        "service": "spur",
+        "usage": "industrial"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9913544,
+        "lon": -78.889635
+      },
+      "id": 1324743532,
+      "tags": {
+        "access": "permissive",
+        "amenity": "parking",
+        "parking": "surface",
+        "surface": "asphalt"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9908047,
+        "lon": -78.8886826
+      },
+      "id": 1324743533,
+      "tags": {
+        "access": "permissive",
+        "amenity": "parking",
+        "parking": "surface",
+        "surface": "paved"
+      },
+      "type": "way"
+    }
+  ],
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "timestamp_osm_base": "2026-10-10T13:30:21Z"
+  },
+  "version": 0.6
+}

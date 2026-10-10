@@ -1,0 +1,297 @@
+poi_id_a,poi_id_b,region_id_a,region_id_b,normalized_name,distance_feet,same_brand,same_operator,same_address,reason
+RAL-01_osm_way_1018283001,RAL-01_osm_way_1018283002,RAL-01,RAL-01,aberdeen subdivision,831.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283001,RAL-01_osm_way_1323034185,RAL-01,RAL-01,aberdeen subdivision,2804.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283001,RAL-01_osm_way_1323034186,RAL-01,RAL-01,aberdeen subdivision,4840.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283001,RAL-01_osm_way_169601523,RAL-01,RAL-01,aberdeen subdivision,1873.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283001,RAL-01_osm_way_51816733,RAL-01,RAL-01,aberdeen subdivision,3514.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283001,RAL-01_osm_way_51816735,RAL-01,RAL-01,aberdeen subdivision,2960.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283001,RAL-01_osm_way_51816743,RAL-01,RAL-01,aberdeen subdivision,4035.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283002,RAL-01_osm_way_1323034185,RAL-01,RAL-01,aberdeen subdivision,1974.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283002,RAL-01_osm_way_1323034186,RAL-01,RAL-01,aberdeen subdivision,4011.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283002,RAL-01_osm_way_169601523,RAL-01,RAL-01,aberdeen subdivision,1041.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283002,RAL-01_osm_way_51816733,RAL-01,RAL-01,aberdeen subdivision,2683.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283002,RAL-01_osm_way_51816735,RAL-01,RAL-01,aberdeen subdivision,2131.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1018283002,RAL-01_osm_way_51816743,RAL-01,RAL-01,aberdeen subdivision,3203.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034185,RAL-01_osm_way_1323034186,RAL-01,RAL-01,aberdeen subdivision,2077.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034185,RAL-01_osm_way_169601523,RAL-01,RAL-01,aberdeen subdivision,937.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034185,RAL-01_osm_way_51816733,RAL-01,RAL-01,aberdeen subdivision,711.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034185,RAL-01_osm_way_51816735,RAL-01,RAL-01,aberdeen subdivision,162.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034185,RAL-01_osm_way_51816743,RAL-01,RAL-01,aberdeen subdivision,1243.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034186,RAL-01_osm_way_169601523,RAL-01,RAL-01,aberdeen subdivision,2973.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034186,RAL-01_osm_way_51816733,RAL-01,RAL-01,aberdeen subdivision,1384.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034186,RAL-01_osm_way_51816735,RAL-01,RAL-01,aberdeen subdivision,1941.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1323034186,RAL-01_osm_way_51816743,RAL-01,RAL-01,aberdeen subdivision,845.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169601523,RAL-01_osm_way_51816733,RAL-01,RAL-01,aberdeen subdivision,1643.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169601523,RAL-01_osm_way_51816735,RAL-01,RAL-01,aberdeen subdivision,1097.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169601523,RAL-01_osm_way_51816743,RAL-01,RAL-01,aberdeen subdivision,2161.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816733,RAL-01_osm_way_51816735,RAL-01,RAL-01,aberdeen subdivision,563.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816733,RAL-01_osm_way_51816743,RAL-01,RAL-01,aberdeen subdivision,540.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816735,RAL-01_osm_way_51816743,RAL-01,RAL-01,aberdeen subdivision,1102.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_239265422,RAL-01_osm_way_47777095,DUR-01,RAL-01,bp,108712.6,True,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-03B_osm_way_317749128,RAL-03B_osm_way_736925752,RAL-03B,RAL-03B,c p huntington train,84.0,False,False,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_67861976,DUR-01_osm_way_67861979,DUR-01,DUR-01,central park,433.3,False,True,True,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365410,RAL-01_osm_way_169365416,RAL-01,RAL-01,connection track,523.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365410,RAL-01_osm_way_562910021,RAL-01,RAL-01,connection track,470.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365410,RAL-01_osm_way_562910028,RAL-01,RAL-01,connection track,613.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365410,RAL-01_osm_way_562910033,RAL-01,RAL-01,connection track,310.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365410,RAL-01_osm_way_607928737,RAL-01,RAL-01,connection track,1134.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365416,RAL-01_osm_way_562910021,RAL-01,RAL-01,connection track,990.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365416,RAL-01_osm_way_562910028,RAL-01,RAL-01,connection track,1131.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365416,RAL-01_osm_way_562910033,RAL-01,RAL-01,connection track,833.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365416,RAL-01_osm_way_607928737,RAL-01,RAL-01,connection track,1635.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_562910021,RAL-01_osm_way_562910028,RAL-01,RAL-01,connection track,145.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_562910021,RAL-01_osm_way_562910033,RAL-01,RAL-01,connection track,161.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_562910021,RAL-01_osm_way_607928737,RAL-01,RAL-01,connection track,679.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_562910028,RAL-01_osm_way_562910033,RAL-01,RAL-01,connection track,307.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_562910028,RAL-01_osm_way_607928737,RAL-01,RAL-01,connection track,536.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_562910033,RAL-01_osm_way_607928737,RAL-01,RAL-01,connection track,839.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_node_1764663734,DUR-01_osm_way_44481452,DUR-01,DUR-01,cooperativa latina,59.2,False,False,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_127665464,RAL-01_osm_node_13030096288,DUR-01,RAL-01,domino s,116101.6,True,False,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_node_1814386593,DUR-01_osm_way_170285382,DUR-01,DUR-01,duke tower,301.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_node_7024572472,DUR-01_osm_relation_10358993,DUR-01,DUR-01,durham,265.4,False,False,True,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929510,DUR-01_osm_way_1412929512,DUR-01,DUR-01,durham beltline,470.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929510,DUR-01_osm_way_1412929513,DUR-01,DUR-01,durham beltline,846.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929510,DUR-01_osm_way_1412929514,DUR-01,DUR-01,durham beltline,1925.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929510,DUR-01_osm_way_65334692,DUR-01,DUR-01,durham beltline,1513.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929510,DUR-01_osm_way_818770511,DUR-01,DUR-01,durham beltline,2723.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929512,DUR-01_osm_way_1412929513,DUR-01,DUR-01,durham beltline,444.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929512,DUR-01_osm_way_1412929514,DUR-01,DUR-01,durham beltline,1487.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929512,DUR-01_osm_way_65334692,DUR-01,DUR-01,durham beltline,1073.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929512,DUR-01_osm_way_818770511,DUR-01,DUR-01,durham beltline,2299.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929513,DUR-01_osm_way_1412929514,DUR-01,DUR-01,durham beltline,1081.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929513,DUR-01_osm_way_65334692,DUR-01,DUR-01,durham beltline,673.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929513,DUR-01_osm_way_818770511,DUR-01,DUR-01,durham beltline,1877.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929514,DUR-01_osm_way_65334692,DUR-01,DUR-01,durham beltline,414.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_1412929514,DUR-01_osm_way_818770511,DUR-01,DUR-01,durham beltline,821.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_65334692,DUR-01_osm_way_818770511,DUR-01,DUR-01,durham beltline,1229.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_433493705,DUR-01_osm_way_57377599,DUR-01,DUR-01,durham bulls athletic park,68.2,False,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6507472657,RAL-01_osm_node_6512302844,RAL-01,RAL-01,goraleigh station,62.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6507472657,RAL-01_osm_node_6512302845,RAL-01,RAL-01,goraleigh station,113.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6507472657,RAL-01_osm_node_6512302846,RAL-01,RAL-01,goraleigh station,249.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6507472657,RAL-01_osm_node_6512302847,RAL-01,RAL-01,goraleigh station,234.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6507472657,RAL-01_osm_way_99028919,RAL-01,RAL-01,goraleigh station,125.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302844,RAL-01_osm_node_6512302845,RAL-01,RAL-01,goraleigh station,68.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302844,RAL-01_osm_node_6512302846,RAL-01,RAL-01,goraleigh station,207.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302844,RAL-01_osm_node_6512302847,RAL-01,RAL-01,goraleigh station,210.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302844,RAL-01_osm_way_99028919,RAL-01,RAL-01,goraleigh station,71.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302845,RAL-01_osm_node_6512302846,RAL-01,RAL-01,goraleigh station,241.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302845,RAL-01_osm_node_6512302847,RAL-01,RAL-01,goraleigh station,263.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302845,RAL-01_osm_way_99028919,RAL-01,RAL-01,goraleigh station,107.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302846,RAL-01_osm_node_6512302847,RAL-01,RAL-01,goraleigh station,80.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302846,RAL-01_osm_way_99028919,RAL-01,RAL-01,goraleigh station,138.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302847,RAL-01_osm_node_7243381845,RAL-01,RAL-01,goraleigh station,53.3,False,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_6512302847,RAL-01_osm_way_99028919,RAL-01,RAL-01,goraleigh station,157.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_1118637613,RAL-01,RAL-01,h line,1105.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_1275808329,RAL-01,RAL-01,h line,1231.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_1275808330,RAL-01,RAL-01,h line,1787.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_140352570,RAL-01,RAL-01,h line,1835.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_51816726,RAL-01,RAL-01,h line,711.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_51816728,RAL-01,RAL-01,h line,560.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_51816729,RAL-01,RAL-01,h line,444.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_51816730,RAL-01,RAL-01,h line,299.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,101.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,1914.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,494.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,1478.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,954.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,463.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_101545324,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,90.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_1275808329,RAL-01,RAL-01,h line,2332.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_1275808330,RAL-01,RAL-01,h line,2888.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_140352570,RAL-01,RAL-01,h line,746.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_51816726,RAL-01,RAL-01,h line,1813.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_51816728,RAL-01,RAL-01,h line,1662.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_51816729,RAL-01,RAL-01,h line,1547.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_51816730,RAL-01,RAL-01,h line,1402.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,1205.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,814.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,614.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,374.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,151.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,645.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1118637613,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,1014.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_1275808330,RAL-01,RAL-01,h line,556.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_140352570,RAL-01,RAL-01,h line,3047.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_51816726,RAL-01,RAL-01,h line,519.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_51816728,RAL-01,RAL-01,h line,671.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_51816729,RAL-01,RAL-01,h line,786.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_51816730,RAL-01,RAL-01,h line,931.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,1130.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,3133.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,1725.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,2702.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,2182.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,1694.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808329,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,1321.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_140352570,RAL-01,RAL-01,h line,3600.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_51816726,RAL-01,RAL-01,h line,1076.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_51816728,RAL-01,RAL-01,h line,1227.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_51816729,RAL-01,RAL-01,h line,1343.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_51816730,RAL-01,RAL-01,h line,1488.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,1686.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,3687.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,2282.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,3257.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,2738.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,2251.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_1275808330,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,1878.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_51816726,RAL-01,RAL-01,h line,2534.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_51816728,RAL-01,RAL-01,h line,2384.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_51816729,RAL-01,RAL-01,h line,2270.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_51816730,RAL-01,RAL-01,h line,2128.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,1934.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,115.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,1354.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,381.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,895.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,1385.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_140352570,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,1747.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_51816728,RAL-01,RAL-01,h line,151.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_51816729,RAL-01,RAL-01,h line,267.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_51816730,RAL-01,RAL-01,h line,412.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,610.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,2617.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,1205.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,2185.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,1663.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,1175.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816726,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,802.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_51816729,RAL-01,RAL-01,h line,115.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_51816730,RAL-01,RAL-01,h line,260.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,459.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,2467.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,1054.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,2034.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,1512.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,1023.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816728,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,650.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816729,RAL-01_osm_way_51816730,RAL-01,RAL-01,h line,145.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816729,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,343.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816729,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,2352.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816729,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,938.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816729,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,1919.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816729,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,1397.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816729,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,908.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816729,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,535.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816730,RAL-01_osm_way_51816731,RAL-01,RAL-01,h line,198.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816730,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,2209.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816730,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,793.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816730,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,1775.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816730,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,1252.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816730,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,763.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816730,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,390.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816731,RAL-01_osm_way_607928724,RAL-01,RAL-01,h line,2013.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816731,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,595.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816731,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,1578.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816731,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,1055.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816731,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,564.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51816731,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,191.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928724,RAL-01_osm_way_607928736,RAL-01,RAL-01,h line,1427.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928724,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,440.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928724,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,965.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928724,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,1459.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928724,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,1825.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928736,RAL-01_osm_way_607928740,RAL-01,RAL-01,h line,989.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928736,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,463.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928736,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,31.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928736,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,403.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928740,RAL-01_osm_way_873121716,RAL-01,RAL-01,h line,525.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928740,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,1020.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_607928740,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,1388.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_873121716,RAL-01_osm_way_873121717,RAL-01,RAL-01,h line,494.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_873121716,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,864.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_873121717,RAL-01_osm_way_962688943,RAL-01,RAL-01,h line,372.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_1216186268,RAL-01_osm_node_3691453629,RAL-01,RAL-01,la placita,45.7,False,False,False,same normalized name with proximity/brand/operator/address signal
+DUR-02_osm_node_6548008133,RAL-01_osm_node_1216186462,DUR-02,RAL-01,mcdonald s,115995.4,True,False,False,same normalized name with proximity/brand/operator/address signal
+DUR-02_osm_node_6548008133,RAL-01_osm_way_1017266990,DUR-02,RAL-01,mcdonald s,122310.1,True,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_1216186462,RAL-01_osm_way_1017266990,RAL-01,RAL-01,mcdonald s,6662.5,True,False,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_node_1605913948,RAL-01_osm_way_47777115,DUR-01,RAL-01,mellow mushroom,106451.5,True,False,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_node_7115942134,DUR-01_osm_way_1257259441,DUR-01,DUR-01,mount merrill,10.2,False,False,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_node_6600829206,DUR-01_osm_node_922818428,DUR-01,DUR-01,ninth street bakery,28.3,False,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365413,RAL-01_osm_way_408467595,RAL-01,RAL-01,norfolk southern railway,1817.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_169365413,RAL-01_osm_way_562910037,RAL-01,RAL-01,norfolk southern railway,3031.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_408467595,RAL-01_osm_way_562910037,RAL-01,RAL-01,norfolk southern railway,1798.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_16521704,DUR-01_osm_way_27466139,DUR-01,DUR-01,ns danville district h line,2452.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_16521704,DUR-01_osm_way_64970907,DUR-01,DUR-01,ns danville district h line,4313.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_16521704,DUR-01_osm_way_64972028,DUR-01,DUR-01,ns danville district h line,2595.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_16521704,DUR-01_osm_way_65144876,DUR-01,DUR-01,ns danville district h line,1307.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_16521704,DUR-01_osm_way_65155395,DUR-01,DUR-01,ns danville district h line,686.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_16521704,DUR-01_osm_way_65155397,DUR-01,DUR-01,ns danville district h line,1368.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_27466139,DUR-01_osm_way_64970907,DUR-01,DUR-01,ns danville district h line,6762.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_27466139,DUR-01_osm_way_64972028,DUR-01,DUR-01,ns danville district h line,5045.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_27466139,DUR-01_osm_way_65144876,DUR-01,DUR-01,ns danville district h line,3758.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_27466139,DUR-01_osm_way_65155395,DUR-01,DUR-01,ns danville district h line,1769.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_27466139,DUR-01_osm_way_65155397,DUR-01,DUR-01,ns danville district h line,1094.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_64970907,DUR-01_osm_way_64972028,DUR-01,DUR-01,ns danville district h line,1764.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_64970907,DUR-01_osm_way_65144876,DUR-01,DUR-01,ns danville district h line,3020.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_64970907,DUR-01_osm_way_65155395,DUR-01,DUR-01,ns danville district h line,4993.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_64970907,DUR-01_osm_way_65155397,DUR-01,DUR-01,ns danville district h line,5671.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_64972028,DUR-01_osm_way_65144876,DUR-01,DUR-01,ns danville district h line,1287.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_64972028,DUR-01_osm_way_65155395,DUR-01,DUR-01,ns danville district h line,3281.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_64972028,DUR-01_osm_way_65155397,DUR-01,DUR-01,ns danville district h line,3963.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_65144876,DUR-01_osm_way_65155395,DUR-01,DUR-01,ns danville district h line,1993.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_65144876,DUR-01_osm_way_65155397,DUR-01,DUR-01,ns danville district h line,2676.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_65155395,DUR-01_osm_way_65155397,DUR-01,DUR-01,ns danville district h line,682.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_68115248,RAL-01,RAL-01,ns line,1553.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_68115249,RAL-01,RAL-01,ns line,3086.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_77262837,RAL-01,RAL-01,ns line,3573.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_77262841,RAL-01,RAL-01,ns line,3857.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_77262843,RAL-01,RAL-01,ns line,4049.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_77262850,RAL-01,RAL-01,ns line,4430.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_77262858,RAL-01,RAL-01,ns line,4298.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_77262876,RAL-01,RAL-01,ns line,3312.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,3680.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_51812630,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,3766.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_68115249,RAL-01,RAL-01,ns line,1533.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_77262837,RAL-01,RAL-01,ns line,2020.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_77262841,RAL-01,RAL-01,ns line,2306.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_77262843,RAL-01,RAL-01,ns line,2499.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_77262850,RAL-01,RAL-01,ns line,2884.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_77262858,RAL-01,RAL-01,ns line,2751.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_77262876,RAL-01,RAL-01,ns line,1759.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,2128.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115248,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,2215.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115249,RAL-01_osm_way_77262837,RAL-01,RAL-01,ns line,495.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115249,RAL-01_osm_way_77262841,RAL-01,RAL-01,ns line,784.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115249,RAL-01_osm_way_77262843,RAL-01,RAL-01,ns line,981.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115249,RAL-01_osm_way_77262850,RAL-01,RAL-01,ns line,1371.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115249,RAL-01_osm_way_77262858,RAL-01,RAL-01,ns line,1237.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115249,RAL-01_osm_way_77262876,RAL-01,RAL-01,ns line,230.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115249,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,604.7,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_68115249,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,692.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262837,RAL-01_osm_way_77262841,RAL-01,RAL-01,ns line,289.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262837,RAL-01_osm_way_77262843,RAL-01,RAL-01,ns line,486.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262837,RAL-01_osm_way_77262850,RAL-01,RAL-01,ns line,877.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262837,RAL-01_osm_way_77262858,RAL-01,RAL-01,ns line,742.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262837,RAL-01_osm_way_77262876,RAL-01,RAL-01,ns line,265.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262837,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,109.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262837,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,197.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262841,RAL-01_osm_way_77262843,RAL-01,RAL-01,ns line,197.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262841,RAL-01_osm_way_77262850,RAL-01,RAL-01,ns line,588.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262841,RAL-01_osm_way_77262858,RAL-01,RAL-01,ns line,453.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262841,RAL-01_osm_way_77262876,RAL-01,RAL-01,ns line,554.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262841,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,179.9,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262841,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,92.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262843,RAL-01_osm_way_77262850,RAL-01,RAL-01,ns line,391.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262843,RAL-01_osm_way_77262858,RAL-01,RAL-01,ns line,256.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262843,RAL-01_osm_way_77262876,RAL-01,RAL-01,ns line,751.3,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262843,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,376.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262843,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,289.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262850,RAL-01_osm_way_77262858,RAL-01,RAL-01,ns line,134.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262850,RAL-01_osm_way_77262876,RAL-01,RAL-01,ns line,1142.0,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262850,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,767.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262850,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,680.1,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262858,RAL-01_osm_way_77262876,RAL-01,RAL-01,ns line,1007.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262858,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,633.2,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262858,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,545.5,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262876,RAL-01_osm_way_960868940,RAL-01,RAL-01,ns line,374.6,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_77262876,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,462.4,False,True,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_960868940,RAL-01_osm_way_960868941,RAL-01,RAL-01,ns line,87.8,False,True,False,same normalized name with proximity/brand/operator/address signal
+DUR-01_osm_way_30886227,RAL-01_osm_node_3248743361,DUR-01,RAL-01,pnc bank,112571.4,True,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_135692670,RAL-01_osm_way_135692672,RAL-01,RAL-01,red hat amphitheater,61.3,False,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_2921397007,RAL-01_osm_node_2921397011,RAL-01,RAL-01,split,14.5,False,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_2921397022,RAL-01_osm_way_47777255,RAL-01,RAL-01,starbucks,5805.7,True,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_2921397022,RAL-03A_osm_node_6993756773,RAL-01,RAL-03A,starbucks,9854.2,True,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_way_47777255,RAL-03A_osm_node_6993756773,RAL-01,RAL-03A,starbucks,7007.9,True,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_8059696634,RAL-01_osm_way_47663082,RAL-01,RAL-01,wake county office building,11.4,False,False,False,same normalized name with proximity/brand/operator/address signal
+RAL-01_osm_node_2782527698,RAL-01_osm_node_4533068540,RAL-01,RAL-01,wells fargo,3358.9,True,False,False,same normalized name with proximity/brand/operator/address signal

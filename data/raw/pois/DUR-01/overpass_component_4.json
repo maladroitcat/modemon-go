@@ -1,0 +1,482 @@
+{
+  "elements": [
+    {
+      "id": 2210536841,
+      "lat": 35.9878983,
+      "lon": -78.9004686,
+      "tags": {
+        "shop": "supermarket"
+      },
+      "type": "node"
+    },
+    {
+      "id": 3672062439,
+      "lat": 35.9856393,
+      "lon": -78.8980299,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "804",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "Fayetteville Street",
+        "amenity": "arts_centre",
+        "name": "St. Joseph's Historic Foundation Hayti Heritage Center"
+      },
+      "type": "node"
+    },
+    {
+      "id": 6507456779,
+      "lat": 35.9874556,
+      "lon": -78.9011027,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lakewood Ave at Roxboro St (Southside Lofts)",
+        "network": "GoDurham",
+        "network:wikidata": "Q5316462",
+        "public_transport": "platform",
+        "ref": "6442"
+      },
+      "type": "node"
+    },
+    {
+      "id": 6507463365,
+      "lat": 35.9887007,
+      "lon": -78.9066926,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Blackwell St at Forest Hills Apts (SB)",
+        "network": "GoDurham",
+        "network:wikidata": "Q5316462",
+        "public_transport": "platform",
+        "ref": "5113"
+      },
+      "type": "node"
+    },
+    {
+      "id": 6507463429,
+      "lat": 35.9875455,
+      "lon": -78.9009528,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lakewood Ave at Heritage Square",
+        "network": "GoDurham",
+        "network:wikidata": "Q5316462",
+        "public_transport": "platform",
+        "ref": "5337"
+      },
+      "type": "node"
+    },
+    {
+      "id": 6507463474,
+      "lat": 35.988711,
+      "lon": -78.9065059,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Blackwell St at Forest Hills Apts (NB)",
+        "network": "GoDurham",
+        "network:wikidata": "Q5316462",
+        "public_transport": "platform",
+        "ref": "6494"
+      },
+      "type": "node"
+    },
+    {
+      "id": 6507463552,
+      "lat": 35.9863608,
+      "lon": -78.8991402,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lakewood Ave at Fayetteville St",
+        "network": "GoDurham",
+        "network:wikidata": "Q5316462",
+        "public_transport": "platform",
+        "ref": "6330"
+      },
+      "type": "node"
+    },
+    {
+      "id": 7674513211,
+      "lat": 35.9855391,
+      "lon": -78.8993566,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "806",
+        "addr:postcode": "27707",
+        "addr:state": "NC",
+        "addr:street": "Fayetteville Street",
+        "alt_name": "Kentucky Fried Chicken",
+        "amenity": "fast_food",
+        "brand": "KFC",
+        "brand:wikidata": "Q524757",
+        "cuisine": "chicken",
+        "name": "KFC",
+        "source:addr": "Durham Open Data",
+        "takeaway": "yes",
+        "website": "https://locations.kfc.com/nc/durham/806-fayetteville-street"
+      },
+      "type": "node"
+    },
+    {
+      "id": 7674513212,
+      "lat": 35.9860014,
+      "lon": -78.8992866,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "710",
+        "addr:postcode": "27707",
+        "addr:state": "NC",
+        "addr:street": "Fayetteville Street",
+        "brand": "Walgreens",
+        "brand:wikidata": "Q1591889",
+        "name": "Walgreens",
+        "shop": "chemist",
+        "source:addr": "Durham Open Data",
+        "website": "https://www.walgreens.com/locator/walgreens-710+fayetteville+st-durham-nc-27701/id=16152"
+      },
+      "type": "node"
+    },
+    {
+      "id": 7674513435,
+      "lat": 35.9876878,
+      "lon": -78.9021291,
+      "tags": {
+        "amenity": "fountain"
+      },
+      "type": "node"
+    },
+    {
+      "id": 10127544338,
+      "lat": 35.9854364,
+      "lon": -78.8981173,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "902",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "Fayetteville Street",
+        "name": "Blackwell's Bail Bonding",
+        "office": "bail_bond_agent",
+        "opening_hours": "Mo-Su 09:00- 15:00",
+        "phone": "+1-919-688-7442",
+        "website": "https://blackwellsbonding.com"
+      },
+      "type": "node"
+    },
+    {
+      "center": {
+        "lat": 35.9869441,
+        "lon": -78.8991081
+      },
+      "id": 225497492,
+      "tags": {
+        "building": "supermarket",
+        "shop": "mall"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9879478,
+        "lon": -78.8998955
+      },
+      "id": 225497497,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "401",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "East Lakewood Avenue",
+        "building": "supermarket",
+        "shop": "mall",
+        "source:addr": "Durham Open Data"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9850602,
+        "lon": -78.8999491
+      },
+      "id": 225542517,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "826",
+        "addr:postcode": "27707",
+        "addr:state": "NC",
+        "addr:street": "Fayetteville Street",
+        "building": "supermarket",
+        "shop": "mall",
+        "source:addr": "Durham Open Data"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9856201,
+        "lon": -78.8997321
+      },
+      "id": 225542518,
+      "tags": {
+        "building": "supermarket",
+        "shop": "mall"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9874643,
+        "lon": -78.8997346
+      },
+      "id": 225542519,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9845545,
+        "lon": -78.8997586
+      },
+      "id": 225542521,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "908",
+        "addr:postcode": "27707",
+        "addr:state": "NC",
+        "addr:street": "Fayetteville Street",
+        "building": "supermarket",
+        "shop": "mall",
+        "source:addr": "Durham Open Data"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9875883,
+        "lon": -78.9068367
+      },
+      "id": 239265422,
+      "tags": {
+        "addr:housenumber": "220",
+        "addr:postcode": "27707",
+        "addr:street": "West Lakewood Avenue",
+        "amenity": "fuel",
+        "brand": "BP",
+        "brand:wikidata": "Q152057",
+        "building": "yes",
+        "fuel:diesel": "yes",
+        "fuel:kerosene": "yes",
+        "name": "BP",
+        "phone": "+1-919-682-6998",
+        "shop": "convenience"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9844471,
+        "lon": -78.8985172
+      },
+      "id": 239265423,
+      "tags": {
+        "addr:housenumber": "907",
+        "addr:postcode": "27707",
+        "addr:street": "Fayetteville Street",
+        "amenity": "fuel",
+        "building": "yes",
+        "fuel:diesel": "no",
+        "fuel:kerosene": "no",
+        "name": "In & Out Food Mart",
+        "phone": "+1-919-688-5948",
+        "shop": "convenience"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9892511,
+        "lon": -78.9028823
+      },
+      "id": 404801052,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "601",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "South Mangum Street",
+        "amenity": "bank",
+        "building": "yes",
+        "name": "Self-Help Credit Union",
+        "source:addr": "Durham Open Data"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9882575,
+        "lon": -78.9015809
+      },
+      "id": 611676563,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "531",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "South Roxboro Street",
+        "amenity": "place_of_worship",
+        "building": "yes",
+        "denomination": "african_methodist_episcopal_zion",
+        "name": "St. Mark A.M.E. Zion Church",
+        "religion": "christian",
+        "source:addr": "Durham Open Data"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9869485,
+        "lon": -78.8983725
+      },
+      "id": 821937893,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:country": "US",
+        "addr:housenumber": "606",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "Fayetteville Street",
+        "amenity": "restaurant",
+        "building": "yes",
+        "contact:phone": "+1-984-244-0174",
+        "cuisine": "shaved_ice",
+        "name": "Pelican's SnoBalls",
+        "opening_hours": "Jun-Sep Mo-Su 11:00-22:00",
+        "opening_hours:note": "The months are NOT ACCURATE! All information available about the months was \"Summer\".",
+        "source": "microsoft/BuildingFootprints",
+        "website": "https://pelicanssnoballs.com/locations/nc/durham/49/"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9869309,
+        "lon": -78.9020942
+      },
+      "id": 821937914,
+      "tags": {
+        "leisure": "swimming_pool"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9884454,
+        "lon": -78.9035401
+      },
+      "id": 1063459660,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "705",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "South Mangum Street",
+        "branch": "Durham City View",
+        "brand": "SpringHill Suites",
+        "brand:wikidata": "Q7580351",
+        "building": "yes",
+        "name": "SpringHill Suites Durham City View",
+        "official_name": "SpringHill Suites by Marriott",
+        "phone": "+1 984-983-8003",
+        "ref": "RDUSS",
+        "tourism": "hotel",
+        "website": "https://www.marriott.com/en-us/hotels/rduss-springhill-suites-durham-city-view/overview/"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9889656,
+        "lon": -78.9024267
+      },
+      "id": 1063459664,
+      "tags": {
+        "addr:city": "Durham",
+        "addr:housenumber": "355",
+        "addr:postcode": "27701",
+        "addr:state": "NC",
+        "addr:street": "Morehead Avenue",
+        "brand": "Extra Space Storage",
+        "brand:wikidata": "Q5422162",
+        "building": "yes",
+        "name": "Extra Space Storage",
+        "shop": "storage_rental"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.986082,
+        "lon": -78.8990896
+      },
+      "id": 1340429436,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface",
+        "surface": "asphalt"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9855026,
+        "lon": -78.8991447
+      },
+      "id": 1340429437,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface",
+        "surface": "asphalt"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9850491,
+        "lon": -78.8994198
+      },
+      "id": 1340429438,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface",
+        "surface": "asphalt"
+      },
+      "type": "way"
+    },
+    {
+      "center": {
+        "lat": 35.9844627,
+        "lon": -78.8996967
+      },
+      "id": 1340429439,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface",
+        "surface": "asphalt"
+      },
+      "type": "way"
+    }
+  ],
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "timestamp_osm_base": "2026-10-10T13:32:31Z"
+  },
+  "version": 0.6
+}
