@@ -1,0 +1,87 @@
+crs:
+  analysis: EPSG:2264
+  output: EPSG:4326
+
+grid:
+  cell_size_meters: 100
+  meters_to_feet: 3.280839895
+  minimum_retained_area_pct: 5
+  tiny_fragment_area_pct: 25
+
+habitats:
+  - Healthcare
+  - Finance
+  - Retail
+  - Food & Hospitality
+  - Education & Research
+  - Transportation
+  - Civic & Government
+  - Entertainment
+  - Office & Business
+
+regional_priors:
+  DUR-01: {}
+  RAL-01: {}
+  DUR-02:
+    Education & Research: 2.5
+  RAL-03A:
+    Education & Research: 2.5
+  RAL-04:
+    Education & Research: 2.5
+  RAL-02:
+    Entertainment: 2.0
+  RAL-03B:
+    Entertainment: 2.5
+  RAL-05:
+    Healthcare: 3.0
+
+influence_tiers:
+  anchor:
+    weight: 3.0
+    radius_meters: 250
+  standard:
+    weight: 1.5
+    radius_meters: 125
+  micro:
+    weight: 0.5
+    radius_meters: 60
+
+secondary_habitat_multiplier: 0.5
+
+repeated_feature_dampening:
+  method: rank_sqrt
+  notes: Within each cell/habitat/source-category group, repeated contributions are sorted strongest first and divided by sqrt(rank).
+
+tier_rules:
+  anchor:
+    - key: healthcare
+      values: [hospital]
+    - key: amenity
+      values: [hospital, university, college, bus_station, courthouse]
+    - key: shop
+      values: [mall]
+    - key: tourism
+      values: [museum]
+    - key: leisure
+      values: [stadium]
+    - key: public_transport
+      values: [station]
+    - key: railway
+      values: [station]
+  micro:
+    - key: amenity
+      values: [atm, public_bookcase]
+    - key: tourism
+      values: [artwork]
+    - key: leisure
+      values: [pitch, track]
+
+assignment:
+  minimum_primary_score: 0.1
+  secondary_minimum_score: 1.0
+  secondary_minimum_ratio: 0.3
+  high_confidence_min_score: 3.0
+  high_confidence_min_margin: 3.0
+  high_confidence_min_ratio: 1.75
+  medium_confidence_min_score: 1.5
+  medium_confidence_min_margin: 1.0
