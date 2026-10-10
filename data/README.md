@@ -1,6 +1,6 @@
 # Modemon GO Region Data
 
-Retrieval date: 2026-10-10T13:07:21Z
+Retrieval date: 2026-10-10T13:16:04Z
 
 These GeoJSON files are Modemon GO gameplay containers. They are not represented as legal municipal, property, university, or medical-campus boundaries unless the underlying authoritative dataset explicitly defines them that way.
 
@@ -22,10 +22,10 @@ Top-level regions are broad physical gameplay containers. They are not intended 
 - Represents: Downtown Durham gameplay container beneath Durham
 - Source: Derived from City/County of Durham Downtown Place Type polygons
 - Authority class: derived gameplay geometry
-- Query/filter: `PlaceType='DT'; dissolve; +50 ft buffer; union; -50 ft buffer`
-- Retrieved: 2026-10-10T13:07:20Z
+- Query/filter: `PlaceType='DT'; dissolve; +50 ft buffer; union; -50 ft buffer; fill interior holes`
+- Retrieved: 2026-10-10T13:16:02Z
 - Review required: yes
-- Notes: Gameplay boundary derived from authoritative Downtown Place Type polygons. Morphological closing bridges normal street-width gaps; this is not represented as an official legal or administrative downtown boundary.
+- Notes: Gameplay boundary derived from authoritative Downtown Place Type polygons. Morphological closing bridges normal street-width gaps and interior holes are filled so enclosed non-DT parcels do not create GPS dead zones. This is not represented as an official legal or administrative downtown boundary.
 
 ### DUR-02 - Duke University
 
@@ -33,7 +33,7 @@ Top-level regions are broad physical gameplay containers. They are not intended 
 - Source: OpenStreetMap
 - Authority class: OSM fallback
 - Query/filter: `Duke University, Durham, North Carolina`
-- Retrieved: 2026-10-10T13:07:20Z
+- Retrieved: 2026-10-10T13:16:03Z
 - Review required: yes
 - Notes: Broad physical gameplay container. Internal Duke campus, healthcare, research, and other gameplay subregions will be derived later.
 
@@ -43,7 +43,7 @@ Top-level regions are broad physical gameplay containers. They are not intended 
 - Source: City of Raleigh Municipal_Service_Districts
 - Authority class: authoritative source
 - Query/filter: `Name = 'Downtown'`
-- Retrieved: 2026-10-10T13:07:19Z
+- Retrieved: 2026-10-10T13:16:02Z
 - Review required: no
 - Notes: Downtown municipal service district, not police district or older downtown boundary.
 
@@ -53,7 +53,7 @@ Top-level regions are broad physical gameplay containers. They are not intended 
 - Source: City of Raleigh Developed_Parks
 - Authority class: authoritative source
 - Query/filter: `NAME contains 'Dix', selected NAME = 'Dix Park'`
-- Retrieved: 2026-10-10T13:07:19Z
+- Retrieved: 2026-10-10T13:16:02Z
 - Review required: no
 - Notes: Dissolved all polygons for selected park name without convex hull or simplification.
 
@@ -63,7 +63,7 @@ Top-level regions are broad physical gameplay containers. They are not intended 
 - Source: NC State Facilities Campus Perimeters shapefile
 - Authority class: authoritative source
 - Query/filter: `Precinct_N = 'Central Campus'`
-- Retrieved: 2026-10-10T13:07:20Z
+- Retrieved: 2026-10-10T13:16:02Z
 - Review required: no
 - Notes: Official NC State campus perimeter precinct record dissolved if multipart.
 
@@ -73,7 +73,7 @@ Top-level regions are broad physical gameplay containers. They are not intended 
 - Source: City of Raleigh Developed_Parks
 - Authority class: authoritative source
 - Query/filter: `NAME contains 'Pullen', selected NAME = 'Pullen'`
-- Retrieved: 2026-10-10T13:07:19Z
+- Retrieved: 2026-10-10T13:16:02Z
 - Review required: no
 - Notes: Dissolved all polygons for selected park name without convex hull or simplification.
 
@@ -83,7 +83,7 @@ Top-level regions are broad physical gameplay containers. They are not intended 
 - Source: NC State Facilities Campus Perimeters shapefile
 - Authority class: authoritative source
 - Query/filter: `Precinct_N = 'Centennial Campus'`
-- Retrieved: 2026-10-10T13:07:20Z
+- Retrieved: 2026-10-10T13:16:02Z
 - Review required: no
 - Notes: Official NC State campus perimeter precinct record dissolved if multipart.
 
@@ -93,7 +93,7 @@ Top-level regions are broad physical gameplay containers. They are not intended 
 - Source: OpenStreetMap polygon fallback
 - Authority class: OSM fallback
 - Query/filter: `WakeMed Raleigh Campus, Raleigh, North Carolina`
-- Retrieved: 2026-10-10T13:07:20Z
+- Retrieved: 2026-10-10T13:16:02Z
 - Review required: yes
 - Notes: OSM fallback; no authoritative public campus-perimeter layer identified. Nominatim returned a WakeMed hospital/healthcare Polygon/MultiPolygon.
 

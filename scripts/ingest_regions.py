@@ -18,7 +18,7 @@ import geopandas as gpd
 import pandas as pd
 import requests
 from shapely import force_2d, make_valid
-from shapely.geometry import Polygon, shape
+from shapely.geometry import MultiPolygon, Polygon, shape
 from shapely.ops import unary_union
 
 try:
@@ -142,6 +142,22 @@ def morphological_close_in_feet(gdf: gpd.GeoDataFrame, distance_feet: float) -> 
     if not closed.is_valid:
         raise IngestionError("Derived gameplay geometry remains invalid after make_valid")
     return closed, AREA_CRS
+
+
+def fill_polygon_holes(geom: Any) -> Any:
+    geom = only_polygons(geom)
+    if geom.geom_type == "Polygon":
+        filled = Polygon(geom.exterior)
+    elif geom.geom_type == "MultiPolygon":
+        filled = MultiPolygon([Polygon(poly.exterior) for poly in geom.geoms])
+    else:
+        raise IngestionError(f"Cannot fill holes for unsupported geometry type {geom.geom_type}")
+    if not filled.is_valid:
+        filled = make_valid(filled)
+    filled = only_polygons(filled)
+    if not filled.is_valid:
+        raise IngestionError("Hole-filled gameplay geometry remains invalid after make_valid")
+    return filled
 
 
 def only_polygons(geom: Any) -> Any:
@@ -399,6 +415,7 @@ def fetch_durham_downtown() -> dict[str, Any]:
     if values != ["DT"]:
         raise IngestionError(f"DUR-01 did not uniquely return PlaceType='DT': {values}")
     derived_geom_2264, derived_crs = morphological_close_in_feet(gdf, 50)
+    derived_geom_2264 = fill_polygon_holes(derived_geom_2264)
     derived_geom_4326 = gpd.GeoSeries([derived_geom_2264], crs=derived_crs).to_crs(FINAL_CRS).iloc[0]
     return feature(
         RegionSpec(
@@ -407,9 +424,9 @@ def fetch_durham_downtown() -> dict[str, Any]:
             "Downtown Durham",
             "Derived from City/County of Durham Downtown Place Type polygons",
             "City/County of Durham GIS / derived gameplay geometry",
-            "PlaceType='DT'; dissolve; +50 ft buffer; union; -50 ft buffer",
+            "PlaceType='DT'; dissolve; +50 ft buffer; union; -50 ft buffer; fill interior holes",
             True,
-            "Gameplay boundary derived from authoritative Downtown Place Type polygons. Morphological closing bridges normal street-width gaps; this is not represented as an official legal or administrative downtown boundary.",
+            "Gameplay boundary derived from authoritative Downtown Place Type polygons. Morphological closing bridges normal street-width gaps and interior holes are filled so enclosed non-DT parcels do not create GPS dead zones. This is not represented as an official legal or administrative downtown boundary.",
         ),
         derived_geom_4326,
         f"{gdf.crs}; derived in {derived_crs}",
