@@ -1,0 +1,10 @@
+region_id,shortlist_candidates,active,temporarily_impacted,relocated_renamed,closed,unknown,suitable,conditional,sensitive_not_recommended,primary,alternate,deferred,not_selected,rejected,suitability_not_assessed
+DUR-01,8,5,1,1,1,0,4,2,1,3,3,0,0,2,1
+DUR-02,8,6,1,0,0,1,4,3,1,3,2,1,0,2,0
+RAL-01,8,8,0,0,0,0,4,2,2,3,2,0,1,2,0
+RAL-02,4,3,0,1,0,0,1,2,0,2,1,0,0,1,1
+RAL-03A,5,5,0,0,0,0,2,2,1,2,1,0,1,1,0
+RAL-03B,3,2,1,0,0,0,2,1,0,2,1,0,0,0,0
+RAL-04,5,4,0,0,0,1,3,2,0,2,2,0,0,1,0
+RAL-05,1,1,0,0,0,0,0,0,1,0,0,0,0,1,0
+TOTAL,42,34,3,2,1,2,20,14,6,17,12,1,2,10,2

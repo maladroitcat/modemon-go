@@ -1,0 +1,424 @@
+version: 1
+review_basis: Human verification and selection supplied by the project team; no independent re-verification or rescoring.
+expected_shortlist_count: 42
+expected_primary_count: 17
+canonical_region_ids: [DUR-01, DUR-02, RAL-01, RAL-02, RAL-03A, RAL-03B, RAL-04, RAL-05]
+# IDs were resolved uniquely from region_id + exact existing candidate name.
+# Defaults apply to every decision; null means no replacement/evidence URL supplied.
+defaults:
+  verification_date: '2026-10-17'
+  verified_name: null
+  primary_rank: null
+  alternate_rank: null
+  verification_source_name: null
+  verification_source_url: null
+  association_anchor_note: null
+  additional_verification_sources_json: null
+decisions:
+  DUR-01_osm_node_3672062439:
+    region_id: DUR-01
+    candidate_name: St. Joseph's Historic Foundation Hayti Heritage Center
+    verified_name: Hayti Heritage Center
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 1
+    verification_note: Active cultural, historical, arts, and community institution.
+    selection_rationale: Strong educational destination with richer and less generic context than many downtown entertainment POIs.
+    verification_source_name: Hayti Heritage Center
+    verification_source_url: https://www.hayti.org/
+  DUR-01_osm_way_30886281:
+    region_id: DUR-01
+    candidate_name: The History Hub Museum
+    verified_name: Museum of Durham History
+    current_status: relocated_renamed
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 2
+    verification_note: The organization and venue are currently known as the Museum of Durham History; The History Hub is a stale mapped name.
+    selection_rationale: Free, public-facing local-history institution with strong educational context.
+    verification_source_name: Museum of Durham History
+    verification_source_url: https://www.museumofdurhamhistory.org/about/faqs
+  DUR-01_osm_node_5844548329:
+    region_id: DUR-01
+    candidate_name: Durham Station
+    current_status: temporarily_impacted
+    gameplay_suitability: conditional
+    selection_status: primary
+    primary_rank: 3
+    verification_note: Active GoDurham bus transit center at 515 W. Pettigrew Street, not the nearby Amtrak station; undergoing substantial renovation in October 2026.
+    selection_rationale: Excellent Transportation context for forecasting, scheduling, routing, optimization, anomaly detection, and demand modeling. Retain as a conditional primary.
+    verification_source_name: GoDurham Durham Station Renovations
+    verification_source_url: https://godurhamtransit.org/durham-station-renovations/
+  DUR-01_osm_way_99027985:
+    region_id: DUR-01
+    candidate_name: Durham Performing Arts Center
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: alternate
+    alternate_rank: 1
+    verification_note: Very active public cultural and event destination.
+    selection_rationale: Strong public cultural/event fallback.
+    verification_source_name: DPAC
+    verification_source_url: https://www.dpacnc.com/events
+  DUR-01_osm_way_32348044:
+    region_id: DUR-01
+    candidate_name: Durham County Library - Main Library
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: alternate
+    alternate_rank: 2
+    verification_note: Active public-facing educational and civic resource.
+    selection_rationale: Reliable public fallback, though less distinctive than the selected primary set.
+    verification_source_name: Durham County Library
+    verification_source_url: https://durhamcountylibrary.org/location/main-library/
+  DUR-01_osm_way_33052346:
+    region_id: DUR-01
+    candidate_name: Durham Athletic Park
+    verified_name: Historic Durham Athletic Park
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: alternate
+    alternate_rank: 3
+    verification_note: City-owned active facility, but interior access may depend on events.
+    selection_rationale: Athletic destination retained as an event-access-dependent fallback.
+  DUR-01_osm_way_79086576:
+    region_id: DUR-01
+    candidate_name: LGBTQ Center of Durham
+    current_status: active
+    gameplay_suitability: sensitive_not_recommended
+    selection_status: rejected
+    verification_note: Provides sensitive community services including support programming and resource services.
+    selection_rationale: Do not encourage unrelated players to linger at sensitive services. Retain the ordinary contextual POI unchanged.
+  DUR-01_osm_node_4202449597:
+    region_id: DUR-01
+    candidate_name: Shodor
+    current_status: closed
+    gameplay_suitability: null
+    selection_status: rejected
+    verification_note: Shodor officially ceased operations on June 30, 2024.
+    selection_rationale: Closed organization is not a viable special destination.
+    verification_source_name: Shodor
+    verification_source_url: https://shodor.org/
+  DUR-02_osm_way_30424777:
+    region_id: DUR-02
+    candidate_name: Nasher Museum of Art
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 1
+    verification_note: Active, highly public-facing educational and cultural destination.
+    selection_rationale: Strong visual, classification, recommendation, language, and interpretability educational contexts.
+    verification_source_name: Nasher Museum of Art
+    verification_source_url: https://nasher.duke.edu/hours-admission/
+  DUR-02_osm_way_391474817:
+    region_id: DUR-02
+    candidate_name: Perkins Library
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 2
+    verification_note: Public access during published public hours.
+    selection_rationale: Strong search, information retrieval, NLP, recommendation, and knowledge-system context.
+    verification_source_name: Duke University Libraries
+    verification_source_url: https://library.duke.edu/using/policies/access-and-security
+  DUR-02_osm_way_923463968:
+    region_id: DUR-02
+    candidate_name: Jack Katz Stadium
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 3
+    verification_note: Active athletics venue with unusually favorable public/event access.
+    selection_rationale: Distinct sports-AI educational context including tracking, computer vision, forecasting, optimization, classification, and performance analytics.
+  DUR-02_osm_node_4870054736:
+    region_id: DUR-02
+    candidate_name: R.J. Reynolds Industries Theater
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: alternate
+    alternate_rank: 1
+    verification_note: Active public cultural venue.
+    selection_rationale: Useful alternative arts and event environment.
+    verification_source_name: Duke Arts
+    verification_source_url: https://arts.duke.edu/places/reynolds-industries-theater/
+  DUR-02_osm_way_664165390:
+    region_id: DUR-02
+    candidate_name: Wallace Wade Stadium
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: alternate
+    alternate_rank: 2
+    verification_note: Active major stadium with event ticketing, crowds, and access controls.
+    selection_rationale: Less consistently suitable than Jack Katz Stadium; retain as a conditional fallback.
+  DUR-02_osm_way_305879102:
+    region_id: DUR-02
+    candidate_name: Duke University Hospital
+    current_status: active
+    gameplay_suitability: sensitive_not_recommended
+    selection_status: rejected
+    verification_note: Acute-care, patient, emergency, and restricted clinical contexts.
+    selection_rationale: Excellent ordinary Healthcare habitat, but inappropriate as a deliberate special-gameplay destination.
+  DUR-02_osm_way_27435263:
+    region_id: DUR-02
+    candidate_name: Lilly Library
+    current_status: temporarily_impacted
+    gameplay_suitability: conditional
+    selection_status: deferred
+    verification_note: Main building closed for renovation until Spring 2027; temporary operations were also disrupted in September 2026.
+    selection_rationale: Re-evaluate in a future data refresh; do not delete the underlying POI.
+    verification_source_name: Duke University Libraries
+    verification_source_url: https://library.duke.edu/lilly
+  DUR-02_osm_way_479409754:
+    region_id: DUR-02
+    candidate_name: Putman quad
+    current_status: unknown
+    gameplay_suitability: conditional
+    selection_status: rejected
+    verification_note: Mapped identity could not be independently corroborated strongly enough.
+    selection_rationale: Insufficient evidence for a special destination; retain the canonical OSM-derived POI unchanged.
+  RAL-01_osm_way_197842115:
+    region_id: RAL-01
+    candidate_name: North Carolina Museum of Natural Sciences
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 1
+    verification_note: Free, public-facing scientific, educational, research-oriented institution. Documented institutional AI work transcribes handwritten specimen records, not evidence of deployment at the player coordinate.
+    selection_rationale: Exceptionally rich scientific and educational AI/ML contexts without asserting exact-location deployment.
+    verification_source_name: North Carolina Museum of Natural Sciences
+    verification_source_url: https://naturalsciences.org/visit/hours-admission
+    additional_verification_sources_json: '[{"name":"Museum institutional AI research article","url":"https://www.naturalsciences.org/calendar/news/museum-unc-use-ai-to-transform-handwritten-records-about-fish/"}]'
+  RAL-01_osm_node_13659913892:
+    region_id: RAL-01
+    candidate_name: Raleigh Union Station Bus Facility
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 2
+    verification_note: Major active public transit hub.
+    selection_rationale: Distinct Transportation context for forecasting, routing, scheduling, optimization, anomaly detection, classification, and demand modeling.
+  RAL-01_osm_node_1055457677:
+    region_id: RAL-01
+    candidate_name: Artspace
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 3
+    verification_note: Active free/public arts environment.
+    selection_rationale: Strong computer vision, classification, recommendation, generative-AI, creativity, and human-versus-machine interpretation contexts.
+    verification_source_name: Artspace
+    verification_source_url: https://artspacenc.org/visit/
+  RAL-01_osm_way_47760082:
+    region_id: RAL-01
+    candidate_name: Marbles Kids Museum
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: alternate
+    alternate_rank: 1
+    verification_note: Legitimate active public interactive museum.
+    selection_rationale: Useful fallback; the three primary locations provide greater ecological variety.
+  RAL-01_osm_node_2335652065:
+    region_id: RAL-01
+    candidate_name: Betty Ray McCain Art Gallery
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: alternate
+    alternate_rank: 2
+    verification_note: Active cultural venue with limited or event-dependent public access windows.
+    selection_rationale: Retain as a conditional cultural fallback.
+  RAL-01_osm_node_367909237:
+    region_id: RAL-01
+    candidate_name: Finch Library
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: not_selected
+    verification_note: Academic library remains active, but ordinary public walk-in access was not established strongly enough.
+    selection_rationale: Better downtown candidates have clearer public-facing access; this is not a closed or sensitive designation.
+  RAL-01_osm_way_1342745978:
+    region_id: RAL-01
+    candidate_name: Express Library Fayetteville Street
+    current_status: active
+    gameplay_suitability: sensitive_not_recommended
+    selection_status: rejected
+    verification_note: Branch intentionally serves people navigating court matters, housing insecurity, homelessness, and related support needs.
+    selection_rationale: Remains a valid library/context POI, but should not be promoted as a special game-lingering destination.
+  RAL-01_osm_node_11484288969:
+    region_id: RAL-01
+    candidate_name: RUMAH
+    current_status: active
+    gameplay_suitability: sensitive_not_recommended
+    selection_status: rejected
+    verification_note: Active organization announced a move to a new location in late 2026.
+    selection_rationale: Mutual-aid/resource-distribution context and location instability make a poor special gameplay anchor; keep the underlying POI.
+  RAL-02_osm_node_8786724894:
+    region_id: RAL-02
+    candidate_name: Big Field
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 1
+    verification_note: Large, active public park and event environment.
+    selection_rationale: Flexible public park destination suitable for gameplay association.
+  RAL-02_osm_way_583072635:
+    region_id: RAL-02
+    candidate_name: Gipson Play Plaza
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: primary
+    primary_rank: 2
+    verification_note: Active public destination, conditional on associating gameplay with the broader plaza/garden/common-space environment rather than children's play equipment.
+    selection_rationale: Highly public and distinctive destination when the overall plaza is the association anchor, not a children's play structure.
+    verification_source_name: Dorothea Dix Park - Gipson Play Plaza
+    verification_source_url: https://dixpark.org/gipsonplayplaza
+    association_anchor_note: Associate gameplay with the broader public plaza/garden/common-space environment. Do not instruct players to approach, occupy, or linger around individual children's play equipment.
+  RAL-02_osm_way_1079247651:
+    region_id: RAL-02
+    candidate_name: Sunflower Field
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: alternate
+    alternate_rank: 1
+    verification_note: Seasonal public destination; do not assume blooming sunflowers are present year-round.
+    selection_rationale: Strong public fallback with seasonal limitations.
+  RAL-02_osm_node_13484828949:
+    region_id: RAL-02
+    candidate_name: NC Department of Health and Human Services Social Services
+    current_status: relocated_renamed
+    gameplay_suitability: null
+    selection_status: rejected
+    verification_note: Mapped Boylan Avenue location is stale for the current Division of Social Services physical address.
+    selection_rationale: Reject the stale anchor; do not redirect the old POI to a new address or modify its coordinates.
+    verification_source_name: North Carolina DHHS Division of Social Services
+    verification_source_url: https://www.ncdhhs.gov/divisions/social-services
+  RAL-03A_osm_node_14214327186:
+    region_id: RAL-03A
+    candidate_name: NC State Crafts Center
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 1
+    verification_note: Active creative/educational environment with public programming.
+    selection_rationale: Rich art, fabrication, visual-model, and human-creativity educational contexts.
+    verification_source_name: NC State Crafts Center
+    verification_source_url: https://crafts.arts.ncsu.edu/about/hours-of-operation/
+  RAL-03A_osm_node_13325136659:
+    region_id: RAL-03A
+    candidate_name: SOL Garden
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 2
+    verification_note: Active public/community educational garden.
+    selection_rationale: Broadens campus ecology beyond buildings with environmental, forecasting, classification, vision, and optimization contexts.
+  RAL-03A_osm_way_47948195:
+    region_id: RAL-03A
+    candidate_name: Price Music Center
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: alternate
+    alternate_rank: 1
+    verification_note: Active performing-arts facility, but parts of its functional space are student-oriented.
+    selection_rationale: Retain as a conditional performing-arts alternative.
+  RAL-03A_osm_way_47917752:
+    region_id: RAL-03A
+    candidate_name: Student Health Center
+    current_status: active
+    gameplay_suitability: sensitive_not_recommended
+    selection_status: rejected
+    verification_note: Student medical and mental-health clinical environment.
+    selection_rationale: Keep as Healthcare context, not as a deliberate special gameplay destination.
+  RAL-03A_osm_way_33076658:
+    region_id: RAL-03A
+    candidate_name: Weisiger Brown Athletic Facility
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: not_selected
+    verification_note: Active facility primarily supporting athletics administration and training.
+    selection_rationale: Not sufficiently public-facing as a visitor destination compared with the selected campus locations.
+  RAL-03B_osm_way_583700646:
+    region_id: RAL-03B
+    candidate_name: Pullen Park Amusement Center
+    current_status: temporarily_impacted
+    gameplay_suitability: conditional
+    selection_status: primary
+    primary_rank: 1
+    verification_note: Lake Howell shoreline work affects some surrounding paths in October 2026, but major Pullen attractions remain operational.
+    selection_rationale: Recognizable public-facing recreation destination; temporary nearby construction is not enough to remove it.
+  RAL-03B_osm_way_47776986:
+    region_id: RAL-03B
+    candidate_name: Theater In The Park
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 2
+    verification_note: Active public cultural and performance destination.
+    selection_rationale: Different educational context from the amusement area.
+  RAL-03B_osm_way_583703196:
+    region_id: RAL-03B
+    candidate_name: Pullen Community Center
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: alternate
+    alternate_rank: 1
+    verification_note: Active public recreation and community programming facility.
+    selection_rationale: Reliable public fallback destination.
+  RAL-04_osm_way_177166351:
+    region_id: RAL-04
+    candidate_name: James B. Hunt Jr. Library
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 1
+    verification_note: Active public educational destination with a publicly viewable bookBot.
+    selection_rationale: Strong search, NLP, retrieval, recommendation, automation, and information-system contexts in an engaging technological environment.
+    verification_source_name: NC State University Libraries
+    verification_source_url: https://www.lib.ncsu.edu/hunt/visit
+    additional_verification_sources_json: '[{"name":"Hunt Library bookBot","url":"https://www.lib.ncsu.edu/hunt/bookbot"}]'
+  RAL-04_osm_node_2470661698:
+    region_id: RAL-04
+    candidate_name: William and Ida Friday Institute for Educational Innovation
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: primary
+    primary_rank: 2
+    verification_note: Active institution with current documented AI-in-education research and programming; this is institution-level evidence, not exact-coordinate model deployment.
+    selection_rationale: Exceptionally strong AI-education context, without asserting deployment of a particular model at the player coordinate.
+    verification_source_name: Friday Institute
+    verification_source_url: https://fi.ncsu.edu/
+  RAL-04_osm_way_584475103:
+    region_id: RAL-04
+    candidate_name: Venture Courtyard
+    current_status: active
+    gameplay_suitability: suitable
+    selection_status: alternate
+    alternate_rank: 1
+    verification_note: Outdoor public campus gathering and event space.
+    selection_rationale: Useful fallback association anchor.
+  RAL-04_osm_node_5267029052:
+    region_id: RAL-04
+    candidate_name: NC Japan Center
+    current_status: active
+    gameplay_suitability: conditional
+    selection_status: alternate
+    alternate_rank: 2
+    verification_note: Active cultural/educational institution; visitors may need to call ahead or arrange access.
+    selection_rationale: Useful conditional cultural and educational alternative.
+    verification_source_name: NC Japan Center
+    verification_source_url: https://japan.ncsu.edu/
+  RAL-04_osm_way_297305755:
+    region_id: RAL-04
+    candidate_name: The Cistern
+    current_status: unknown
+    gameplay_suitability: conditional
+    selection_status: rejected
+    verification_note: Third-party mapping contains the feature, but a convincing current first-party NC State identity could not be established.
+    selection_rationale: Not distinctive or important enough to justify uncertainty; do not delete the canonical OSM-derived POI.
+  RAL-05_osm_way_198168608:
+    region_id: RAL-05
+    candidate_name: 'WakeMed Health & Hospitals: Raleigh Campus'
+    current_status: active
+    gameplay_suitability: sensitive_not_recommended
+    selection_status: rejected
+    verification_note: Active visitor-accessible major acute-care hospital with emergency, pediatric, patient, and clinical environments.
+    selection_rationale: Excellent ordinary Healthcare habitat but inappropriate for intentional special-gameplay traffic. RAL-05 intentionally has zero primary destinations; do not force one.
