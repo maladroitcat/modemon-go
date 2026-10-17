@@ -1,0 +1,5 @@
+zone_id_a,zone_id_b,region_id_a,region_id_b,overlap_area_sqft,overlap_area_acres,inherited_source_overlap_sqft,introduced_overlap_sqft,cross_region
+DUR-01_food_hospitality_66c4fc30d17a,DUR-02_education_research_8e27edf48ee5,DUR-01,DUR-02,16653.60889032763,0.3823142536806159,16653.60889032763,0.0,True
+DUR-01_retail_8355c45da0b9,DUR-02_education_research_8e27edf48ee5,DUR-01,DUR-02,18900.42634084494,0.4338940849597094,18900.42634084494,0.0,True
+RAL-02_entertainment_2d1b2b7ec190,RAL-04_education_research_896468efaa47,RAL-02,RAL-04,3660.8628887294435,0.08404184776697529,3660.8628887294435,0.0,True
+RAL-03A_education_research_b86247e5f553,RAL-03B_entertainment_23ac1adbb497,RAL-03A,RAL-03B,16193.243756188242,0.3717457244304004,16193.243756188242,0.0,True
