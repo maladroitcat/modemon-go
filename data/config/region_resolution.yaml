@@ -1,0 +1,26 @@
+canonical_region_ids:
+  - DUR-01
+  - DUR-02
+  - RAL-01
+  - RAL-02
+  - RAL-03A
+  - RAL-03B
+  - RAL-04
+  - RAL-05
+
+# Keep this inventory separate so deleting a precedence rule fails validation.
+known_overlap_pairs:
+  - [DUR-01, DUR-02]
+  - [RAL-02, RAL-04]
+  - [RAL-03A, RAL-03B]
+
+overlap_precedence:
+  - winner: DUR-02
+    loser: DUR-01
+    reason: Duke University is the more specific gameplay environment in the inherited overlap.
+  - winner: RAL-02
+    loser: RAL-04
+    reason: Dorothea Dix Park is the more specific recreational gameplay environment in the inherited overlap.
+  - winner: RAL-03B
+    loser: RAL-03A
+    reason: Pullen Park is the more specific recreational gameplay environment in the inherited overlap.
