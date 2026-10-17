@@ -75,12 +75,11 @@ For default canonical habitat lookup:
 python3 -B scripts/resolve_game_region.py --lat 35.8 --lon -78.6 --include-habitat-zone
 ```
 
-Missing zone files fail explicitly. At the branch's main baseline (`b80b48e`),
-the final Step 7B outputs from `27a096d` were not yet present on main. Integration
-QA therefore uses read-only temporary copies of the existing committed zone
-files from that commit. They are neither regenerated nor added to this branch.
-Default zone lookup will work once those canonical outputs are merged into the
-checkout; the resolver itself already uses main's canonical regions.
+Zone lookup and integration QA read the committed canonical files directly:
+`data/processed/habitat_zones.geojson` and
+`data/processed/habitat_unclassified_areas.geojson`. Both are available from
+updated `main`. Missing files fail explicitly; no alternate zone copies or
+environment-variable overrides are used.
 
 ## Reproducible QA
 
@@ -95,23 +94,16 @@ python3 -B -m unittest discover -s tests -v
 python3 -B scripts/qa_region_resolution.py
 ```
 
-When the canonical zone files are not in the checkout, prepare an unchanged
-temporary snapshot and run the complete integration suite as follows:
-
-```sh
-qa_dir=$(mktemp -d /tmp/modemon-region-resolution.XXXXXX)
-git archive 27a096d data/processed/habitat_zones.geojson data/processed/habitat_unclassified_areas.geojson | tar -x -C "$qa_dir"
-MODEMON_ZONE_QA_DIR="$qa_dir/data/processed" python3 -B -m unittest discover -s tests -v
-python3 -B scripts/qa_region_resolution.py --zone-qa-dir "$qa_dir/data/processed" --zone-source-commit 27a096d
-```
-
-Without canonical zone files or `MODEMON_ZONE_QA_DIR`, only the committed-zone
-snapshot integration test skips; synthetic parent/zone routing tests still run.
-The completed branch QA used the committed snapshot with no skipped tests.
+The integration test exercises the default habitat lookup paths for all three
+real overlaps and the canonical neutral area. Missing canonical data fails the
+test instead of skipping it. Synthetic tests separately cover unresolved parent
+overlaps and ambiguous shared zone boundaries.
 
 `output/region_resolution_qa.json` records each derived coordinate, full resolver
-and zone-lookup results, overlap areas, zone snapshot provenance, and source
-SHA-256 hashes. The CLI and QA runner hash all files under `data/processed`,
+and zone-lookup results, overlap areas, and source SHA-256 hashes. Zone provenance
+records repository paths, Git blob IDs, and the last content commit for the
+canonical files. The QA runner verifies their bytes match committed repository
+data. The CLI and QA runner hash all files under `data/processed`,
 `data/raw`, and `data/config` before and after, failing on any byte change,
 addition, or deletion. The tests exercise the mutation guard with temporary data.
 No spawn behavior or changes to analytical geography are part of this layer.

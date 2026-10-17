@@ -2,7 +2,6 @@
 
 import copy
 import json
-import os
 import sys
 import tempfile
 import unittest
@@ -207,24 +206,21 @@ class RegionResolutionTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "Canonical inputs changed"):
                 routing.assert_canonical_inputs_unchanged(before, root)
 
-    def test_committed_zone_snapshot_integration(self):
-        directory = Path(os.environ.get("MODEMON_ZONE_QA_DIR", routing.ROOT / "data/processed"))
-        if not (directory / "habitat_zones.geojson").exists():
-            self.skipTest("Canonical zone outputs missing; set MODEMON_ZONE_QA_DIR to a read-only Step 7B snapshot")
-        zones = gpd.read_file(directory / "habitat_zones.geojson")
-        neutral = gpd.read_file(directory / "habitat_unclassified_areas.geojson")
+    def test_canonical_committed_zone_integration(self):
+        zones = gpd.read_file(routing.ZONES_PATH)
+        neutral = gpd.read_file(routing.NEUTRAL_PATH)
         for rule in self.config["overlap_precedence"]:
             pair_overlap = self.regions.loc[rule["winner"]].geometry.intersection(self.regions.loc[rule["loser"]].geometry)
             available = unary_union(zones.loc[zones.region_id == rule["winner"]].geometry)
             point = pair_overlap.intersection(available).representative_point()
-            result = routing.resolve_habitat_zone(point.x, point.y, self.resolver, zones, neutral)
+            result = routing.resolve_habitat_zone(point.x, point.y, self.resolver)
             self.assertEqual(result["resolved_region_id"], rule["winner"])
             self.assertEqual(result["habitat_lookup_status"], "zone_match")
             owner = zones.loc[zones.zone_id == result["resolved_zone_id"], "region_id"].iloc[0]
             self.assertEqual(owner, rule["winner"])
         for area in neutral.itertuples():
             point = area.geometry.representative_point()
-            result = routing.resolve_habitat_zone(point.x, point.y, self.resolver, zones, neutral)
+            result = routing.resolve_habitat_zone(point.x, point.y, self.resolver)
             self.assertEqual(result["habitat_lookup_status"], "neutral_match")
 
 

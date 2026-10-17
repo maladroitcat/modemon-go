@@ -167,14 +167,24 @@
     "resolved_region_id": "RAL-05",
     "resolution_method": "single_match"
   },
-  "zone_snapshot_provenance": {
-    "source_commit": "27a096d",
-    "sha256": {
-      "habitat_zones.geojson": "4c5ba99a8c2dc5c0a0b1d24dfd2baf9edec458d8223ba6be6b9ea865a0012a00",
-      "habitat_unclassified_areas.geojson": "de587061d403dcae12b8647fbfe745e8fdcc1f57f3f7d31d7f5f7fbd574e49d4"
-    }
+  "zone_provenance": {
+    "source": "canonical_committed_repository_files",
+    "files": [
+      {
+        "repository_path": "data/processed/habitat_zones.geojson",
+        "sha256": "4c5ba99a8c2dc5c0a0b1d24dfd2baf9edec458d8223ba6be6b9ea865a0012a00",
+        "git_blob_id": "c6ef3d42e932aeaafb5466166643518de4f6b009",
+        "last_content_commit": "1480ceff0eb2ae39504853313a0662ac5c7aaf3a"
+      },
+      {
+        "repository_path": "data/processed/habitat_unclassified_areas.geojson",
+        "sha256": "de587061d403dcae12b8647fbfe745e8fdcc1f57f3f7d31d7f5f7fbd574e49d4",
+        "git_blob_id": "169033075e38ae4d5839e0983fbe7be41cb4f5e8",
+        "last_content_commit": "1480ceff0eb2ae39504853313a0662ac5c7aaf3a"
+      }
+    ]
   },
-  "canonical_input_file_count": 145,
+  "canonical_input_file_count": 152,
   "canonical_input_sha256": {
     "data/config/habitat_rules.yaml": "f84542bdc7a4bdadec52e4a9336ef8cc168ad7957b58fa6b96d651d1b532b84e",
     "data/config/habitat_spatial_config.yaml": "46706dcd29b8c735d070d90527f15c3664cfaac2abf17e39ca00961a03306511",
@@ -193,7 +203,14 @@
     "data/processed/habitat_counts_by_region.csv": "f8e939291b7bd6a3c0ed3de871b6ac764255f3d068a308f7bfa53070db65cfd0",
     "data/processed/habitat_labeling_report.csv": "275b83f8a143c0bf818fb33ffef7e9bc22133b9016d528324315b20a2abba1fc",
     "data/processed/habitat_review_queue.csv": "64f352d76f603ba99cc24322270da8f74804716d9c333f52c7571616abc4a7d8",
+    "data/processed/habitat_unclassified_areas.geojson": "de587061d403dcae12b8647fbfe745e8fdcc1f57f3f7d31d7f5f7fbd574e49d4",
+    "data/processed/habitat_zone_cell_membership.csv": "cb5d26cf3f3cd319338b3f85c0314959317663763785556c74ba9eef3ac44caa",
+    "data/processed/habitat_zone_coverage.csv": "61e47003c4f1efd970a37de906520574039f197450fbf93a194681a363806165",
     "data/processed/habitat_zone_overlap_diagnostics.csv": "279020e6e390419b750f2478aaa69311ec1d54f4ebbbe1222c534ff2c9f00223",
+    "data/processed/habitat_zone_summary_by_region.csv": "e36459a356ea1129353f04f2947180c49eb29093af40515257245703fe6e037b",
+    "data/processed/habitat_zone_summary_global.csv": "b16d1b6fc6d6780898fe442545a0f67221bcd1e13350e14eb4aa1d594b8d055a",
+    "data/processed/habitat_zones.csv": "d2e0fd08cc98541a485977a0fa9daf1a99884da086e7611a1b454e7d139ada9e",
+    "data/processed/habitat_zones.geojson": "4c5ba99a8c2dc5c0a0b1d24dfd2baf9edec458d8223ba6be6b9ea865a0012a00",
     "data/processed/poi_candidate_audit.csv": "1af72fa795543290c0e48b501b72c78468220a6e1529f8a07b9bb3eb2b3bf2af",
     "data/processed/poi_counts_by_osm_category.csv": "d0e2d4c1fc3a12e4481f17adaaa19f79c96b6301c7f3531d55423849f30608c2",
     "data/processed/poi_counts_by_region.csv": "f99bba20f47f7f51dc6daf5c5bb471d431a52a8835e1d7134bb71afd131ccf9e",
