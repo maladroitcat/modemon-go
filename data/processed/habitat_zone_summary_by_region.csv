@@ -1,0 +1,9 @@
+region_id,total_zones,zones_by_primary_habitat,total_classified_area_sqft,total_classified_area_acres,unclassified_area_sqft,micro_zone_count,review_required_zone_count,mean_zone_area_acres,median_zone_area_acres
+DUR-01,22,"{""Civic & Government"": 1, ""Education & Research"": 1, ""Entertainment"": 4, ""Food & Hospitality"": 7, ""Office & Business"": 2, ""Retail"": 5, ""Transportation"": 2}",28105557.07690835,645.2148089281072,0.0,8,18,29.327945860368512,8.773054995840644
+DUR-02,8,"{""Education & Research"": 3, ""Entertainment"": 3, ""Food & Hospitality"": 1, ""Healthcare"": 1}",34801378.112406425,798.9297087329298,0.0,3,8,99.86621359161623,21.003957424574295
+RAL-01,24,"{""Civic & Government"": 2, ""Education & Research"": 6, ""Entertainment"": 4, ""Food & Hospitality"": 3, ""Retail"": 7, ""Transportation"": 2}",34127080.950822115,783.4499759141901,261818.64676178547,7,21,32.643748996424584,8.317584102378744
+RAL-02,1,"{""Entertainment"": 1}",13392716.334793478,307.4544613129816,0.0,0,1,307.4544613129816,307.4544613129816
+RAL-03A,1,"{""Education & Research"": 1}",13067999.644819768,299.99999184618383,0.0,0,1,299.99999184618383,299.99999184618383
+RAL-03B,1,"{""Entertainment"": 1}",2875140.555242711,66.00414497802367,0.0,0,1,66.00414497802367,66.00414497802367
+RAL-04,4,"{""Education & Research"": 4}",48601157.46910909,1115.729051173303,0.0,0,4,278.9322627933258,13.550649590092117
+RAL-05,1,"{""Healthcare"": 1}",2822518.519448699,64.79610926190769,0.0,0,1,64.79610926190769,64.79610926190769
