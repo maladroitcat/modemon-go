@@ -1,0 +1,211 @@
+version: special_poi_candidates_v1
+expected_poi_count: 927
+analysis_crs: EPSG:2264
+habitats:
+  - Healthcare
+  - Finance
+  - Retail
+  - Food & Hospitality
+  - Education & Research
+  - Transportation
+  - Civic & Government
+  - Entertainment
+  - Office & Business
+canonical_region_ids: [DUR-01, DUR-02, RAL-01, RAL-02, RAL-03A, RAL-03B, RAL-04, RAL-05]
+
+dimension_bounds:
+  specialization: 35
+  habitat_distinctiveness: 25
+  discovery_value: 20
+  accessibility: 20
+
+# Specialization uses the strongest matching rule, not additive category votes.
+specialization:
+  default_points: 5
+  rules:
+    - {id: SP_RESEARCH, points: 35, any: [{key: office, values: [research]}, {key: research, exists: true}], reason: Explicit research function}
+    - {id: SP_HOSPITAL, points: 35, any: [{key: healthcare, values: [hospital]}, {key: amenity, values: [hospital]}], reason: Hospital environment}
+    - {id: SP_MUSEUM, points: 33, any: [{key: tourism, values: [museum]}], reason: Museum educational environment}
+    - {id: SP_UNIVERSITY, points: 30, any: [{key: amenity, values: [university, college]}, {key: office, values: [educational_institution]}], reason: Explicit higher-education institution}
+    - {id: SP_COURTHOUSE, points: 30, any: [{key: amenity, values: [courthouse, townhall]}], reason: Substantial civic institution}
+    - {id: SP_SCIENTIFIC, points: 32, any: [{key: man_made, values: [observatory]}, {key: office, values: [engineer]}], reason: Scientific or engineering function}
+    - {id: SP_INCUBATOR, points: 30, any: [{key: office, values: [startup_incubator]}], reason: Startup learning and business context}
+    - {id: SP_TRANSIT, points: 28, any: [{key: public_transport, values: [station]}, {key: railway, values: [station]}, {key: amenity, values: [bus_station]}], reason: Explicit station or bus-station facility context}
+    - {id: SP_TRANSIT_COMPLEX, points: 28, all: [{key: public_transport, values: [stop_area]}, {key: railway, values: [facility]}], reason: Stop area explicitly representing a railway facility}
+    - {id: SP_LOCAL_TRANSIT, points: 12, any: [{key: public_transport, values: [stop_area]}, {key: railway, values: [halt]}], reason: Local stop context alone does not establish a substantial destination}
+    - {id: SP_LIBRARY, points: 28, any: [{key: amenity, values: [library]}], reason: Library educational resources}
+    - {id: SP_CULTURE, points: 26, any: [{key: amenity, values: [arts_centre, theatre, cinema, conference_centre]}, {key: tourism, values: [gallery, theme_park]}], reason: Cultural or event destination}
+    - {id: SP_STADIUM, points: 27, any: [{key: leisure, values: [stadium]}], reason: Substantial athletic destination}
+    - {id: SP_HEALTH, points: 25, any: [{key: healthcare, values: [clinic, doctor, dentist, rehabilitation]}, {key: amenity, values: [clinic, doctors, dentist, veterinary]}], reason: Specialized care function; access separately reviewed}
+    - {id: SP_SPECIALIST_HEALTH, points: 29, any: [{key: 'healthcare:speciality', exists: true}], reason: Explicit healthcare speciality tag}
+    - {id: SP_SCHOOL, points: 24, any: [{key: amenity, values: [school, kindergarten, childcare, training]}], reason: Educational function; safeguarding checked separately}
+    - {id: SP_CIVIC, points: 24, any: [{key: amenity, values: [police, fire_station, prison]}, {key: office, values: [government]}], reason: Civic or public-safety function; access separately reviewed}
+    - {id: SP_EVENTS, points: 23, any: [{key: amenity, values: [events_venue]}, {key: leisure, values: [sports_centre, sports_hall, hackerspace]}], reason: Event or structured recreation environment}
+    - {id: SP_HISTORY, points: 21, any: [{key: historic, exists: true}, {key: tourism, values: [attraction]}], reason: Historic or visitor context; classification review still applies}
+    - {id: SP_PARK, points: 18, any: [{key: leisure, values: [park, garden, nature_reserve, recreation_ground]}], reason: Outdoor environmental context}
+    - {id: SP_FINANCE, points: 21, any: [{key: amenity, values: [bank]}, {key: office, values: [financial, accountant, insurance]}], reason: Specialized financial function}
+    - {id: SP_MALL, points: 21, any: [{key: shop, values: [mall]}, {key: amenity, values: [marketplace]}], reason: Multi-business market or shopping context}
+    - {id: SP_MAKING, points: 20, any: [{key: craft, values: [brewery, distillery, electrician, floorer, roofer, tailor, window_construction]}, {key: shop, values: [repair, motorcycle_repair, musical_instrument]}], reason: Explicit production or technical service context}
+    - {id: SP_COMMUNITY, points: 20, any: [{key: amenity, values: [community_centre]}], reason: Community gathering environment}
+    - {id: SP_SMALL_FEATURE, points: 10, any: [{key: tourism, values: [artwork]}, {key: leisure, values: [pitch, track]}, {key: amenity, values: [public_bookcase, atm]}], reason: Small local feature}
+    - {id: SP_EVERYDAY, points: 8, any: [{key: amenity, values: [restaurant, cafe, bar, pub, fast_food, nightclub]}, {key: office, values: [company, 'yes', lawyer, architect, advertising_agency, it]}], reason: Ordinary business context}
+
+distinctiveness:
+  primary_poi_rarity_points: 10
+  primary_zone_rarity_points: 10
+  secondary_context_points: 5
+  unavailable_zone_context_points: 0
+  reason: Rarity is one minus the primary-habitat frequency or area share; secondary context uses its primary frequency in the same region.
+
+discovery:
+  meaningful_name_points: 4
+  unique_name_points: 3
+  repeated_name_points: 1
+  non_generic_function_min_specialization: 18
+  non_generic_function_points: 6
+  wikidata_points: 2
+  wikipedia_points: 2
+  alternate_pair_points: 3
+  tagged_brand_penalty: 2
+  reason: Reward documented function and metadata; absent brand does not establish local ownership or non-chain status.
+
+names:
+  generic_names: ['yes', unknown, unnamed, no name, building, park, restaurant, cafe, shop, office, hospital, court, tennis court]
+  generic_patterns: ['^(court|pitch|field|track)\s*\d+$', '^unnamed\b']
+
+# First matching access rule wins. Restricted/safeguarding evidence precedes public tags.
+accessibility:
+  default_status: public_context_access_uncertain
+  default_points: 6
+  default_reason: No clear evidence of public-facing access in the source tags.
+  rules:
+    - id: AC_RESTRICTED
+      status: restricted_or_inappropriate
+      points: 0
+      any:
+        - {key: access, values: [private, 'no', staff, staff_only, restricted, permit, military, delivery]}
+        - {key: foot, values: [private, 'no']}
+        - {key: 'entrance:access', values: [private, 'no', staff]}
+        - {key: 'building:access', values: [private, 'no', staff]}
+        - {key: 'indoor:access', values: [private, 'no', staff]}
+      reason: Explicit restricted or non-pedestrian access; excluded from the shortlist.
+    - id: AC_SECURE
+      status: restricted_or_inappropriate
+      points: 0
+      any:
+        - {key: amenity, values: [prison, detention_centre]}
+        - {key: landuse, values: [military]}
+        - {key: military, exists: true}
+        - {key: security, values: [restricted, military, staff_only]}
+      reason: Secure detention or military/security context.
+    - id: AC_CHILDREN
+      status: restricted_or_inappropriate
+      points: 0
+      any:
+        - {key: amenity, values: [kindergarten, childcare]}
+        - {key: school, values: [primary, secondary, elementary, kindergarten]}
+        - {key: 'isced:level', tokens: ['0', '1', '2', '3']}
+      reason: Childcare or K-12 safeguarding context; unsuitable for lingering gameplay.
+    - id: AC_UNVERIFIED_SCHOOL
+      status: restricted_or_inappropriate
+      points: 0
+      any: [{key: amenity, values: [school]}]
+      reason: School education level is unverified; conservative safeguarding hold, not a claim that it is K-12.
+    - id: AC_EMERGENCY_ONLY
+      status: restricted_or_inappropriate
+      points: 0
+      any:
+        - {key: emergency, values: [emergency_ward_entrance, ambulance_station]}
+        - {key: healthcare, values: [emergency_ward]}
+        - {key: access, values: [emergency]}
+      reason: Emergency-only operational context. General hospital emergency=yes does not trigger this rule.
+    - id: AC_CONDITIONAL
+      status: public_context_access_uncertain
+      points: 6
+      any: [{key: 'access:conditional', exists: true}, {key: access, values: [destination, members, students, unknown]}]
+      reason: Conditional or limited access requires manual interpretation.
+    - id: AC_AGE
+      status: public_context_access_uncertain
+      points: 7
+      any:
+        - {key: min_age, exists: true}
+        - {key: amenity, values: [bar, pub, nightclub]}
+        - {key: shop, values: [cannabis, tobacco, wine]}
+      reason: Age-restricted or potentially age-limited venue; manual suitability review.
+    - id: AC_HEALTH
+      status: public_context_access_uncertain
+      points: 7
+      any:
+        - {key: healthcare, exists: true}
+        - {key: amenity, values: [hospital, clinic, doctors, dentist, veterinary]}
+        - {key: shop, values: [chemist]}
+      reason: Healthcare association may be useful, but the anchor may represent clinical or patient space.
+    - id: AC_PUBLIC_SAFETY
+      status: public_context_access_uncertain
+      points: 6
+      any: [{key: amenity, values: [police, fire_station]}]
+      reason: Public-safety operations require a verified non-interfering public approach.
+    - id: AC_EXPLICIT_PUBLIC
+      status: likely_public
+      points: 20
+      any: [{key: access, values: ['yes', public, permissive]}]
+      reason: Explicit public/permissive access tag; association anchor still needs human review.
+    - id: AC_CUSTOMERS
+      status: likely_public
+      points: 16
+      any: [{key: access, values: [customers]}]
+      reason: Customer access is explicitly indicated; entry conditions may apply.
+    - id: AC_CAMPUS
+      status: public_context_access_uncertain
+      points: 12
+      any: [{key: amenity, values: [university, college]}, {key: office, values: [educational_institution]}]
+      reason: University context is eligible, but public/common-space access at this anchor is unverified.
+    - id: AC_OFFICE
+      status: public_context_access_uncertain
+      points: 6
+      any: [{key: office, exists: true}, {key: craft, exists: true}]
+      reason: Office/research/trade function does not establish public access.
+    - id: AC_COURT
+      status: public_context_access_uncertain
+      points: 10
+      any: [{key: amenity, values: [courthouse, townhall]}]
+      reason: Civic destination with possible security and public-entry conditions.
+    - id: AC_PUBLIC_DESTINATION
+      status: likely_public
+      points: 18
+      any:
+        - {key: tourism, values: [museum, gallery, attraction, artwork, information, theme_park, picnic_site]}
+        - {key: amenity, values: [library, public_bookcase, arts_centre, theatre, cinema, community_centre, bus_station]}
+        - {key: leisure, values: [park, garden, nature_reserve, dog_park, playground, recreation_ground]}
+        - {key: public_transport, values: [station, stop_area]}
+        - {key: railway, values: [station, halt]}
+      reason: Public-facing cultural, outdoor, educational, or transit function is a proxy, not an access guarantee.
+    - id: AC_TICKETED
+      status: likely_public
+      points: 14
+      any: [{key: leisure, values: [stadium, sports_centre, sports_hall]}, {key: amenity, values: [events_venue, conference_centre]}]
+      reason: Public-facing event/recreation context; tickets or opening hours may limit access.
+    - id: AC_COMMERCE
+      status: likely_public
+      points: 16
+      any: [{key: shop, exists: true}, {key: amenity, values: [restaurant, cafe, fast_food, food_court, ice_cream, bank, atm, marketplace]}, {key: tourism, values: [hotel, guest_house]}]
+      reason: Public-facing customer venue; no claim of unrestricted entry.
+
+shortlist:
+  max_per_region: 8
+  minimum_raw_score: 55
+  minimum_specialization_score: 18
+  maximum_same_subtype: 2
+  preferred_spacing_meters: 250
+  relaxed_spacing_meters: 100
+  small_region_max_area_acres: 100
+  small_region_max_span_meters: 1000
+  new_habitat_priority_bonus: 3
+  weak_coverage_below_count: 3
+  reason: Quality thresholds precede diversity; the small habitat novelty bonus changes selection priority, never the raw score.
+
+review:
+  minimum_interesting_raw_score: 50
+  minimum_interesting_specialization: 20
+  high_scoring_restricted_threshold: 55
+  ambiguous_values: ['yes', office, apartment]

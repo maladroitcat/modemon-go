@@ -1,0 +1,9 @@
+region_id,parent_city,total_pois,eligible_candidate_pois,excluded_pois,access_uncertain_candidates,quality_threshold_candidates,shortlist_size,shortlist_habitat_distribution,shortlist_average_raw_score,spacing_preference_unmet_count,unshortlisted_strong_spacing_conflicts,weak_candidate_coverage
+DUR-01,Durham,264,230,34,76,56,8,"{""Civic & Government"": 1, ""Education & Research"": 2, ""Entertainment"": 4, ""Transportation"": 1}",79.198725,0,26,False
+DUR-02,Durham,82,69,13,16,40,8,"{""Education & Research"": 2, ""Entertainment"": 5, ""Healthcare"": 1}",75.788175,0,27,False
+RAL-01,Raleigh,470,427,43,148,93,8,"{""Civic & Government"": 1, ""Education & Research"": 2, ""Entertainment"": 4, ""Transportation"": 1}",83.7389,0,58,False
+RAL-02,Raleigh,24,22,2,5,7,4,"{""Civic & Government"": 1, ""Entertainment"": 3}",61.895849999999996,0,3,False
+RAL-03A,Raleigh,38,38,0,12,17,5,"{""Entertainment"": 4, ""Healthcare"": 1}",70.39998,0,12,False
+RAL-03B,Raleigh,9,8,1,1,4,3,"{""Civic & Government"": 1, ""Entertainment"": 2}",64.96296666666667,0,1,False
+RAL-04,Raleigh,37,27,10,8,14,5,"{""Civic & Government"": 1, ""Education & Research"": 2, ""Entertainment"": 2}",70.773,0,8,False
+RAL-05,Raleigh,3,3,0,3,1,1,"{""Healthcare"": 1}",55.0,0,0,True
