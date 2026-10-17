@@ -8,3 +8,5 @@ osmnx==1.9.4
 matplotlib==3.8.2
 contextily==1.6.2
 PyYAML==6.0.2
+jsonschema==4.26.0
+rfc3986-validator==0.1.1

@@ -1,0 +1,2154 @@
+{
+  "families": {
+    "anomaly": {
+      "base_modemon_id": "anomaly_base",
+      "core_job": "Notice when something is unusually different",
+      "name": "Anomaly Watcher",
+      "visual_family": "reptile"
+    },
+    "detector": {
+      "base_modemon_id": "detector_base",
+      "core_job": "Recognize or locate things",
+      "name": "Detector",
+      "visual_family": "eyeball_scanner"
+    },
+    "extractor": {
+      "base_modemon_id": "extractor_base",
+      "core_job": "Pull useful structured information from documents",
+      "name": "Document Extractor",
+      "visual_family": "small_rodent"
+    },
+    "forecast": {
+      "base_modemon_id": "forecast_base",
+      "core_job": "Predict what will be needed or happen next",
+      "name": "Demand Forecaster",
+      "visual_family": "ghost_spirit"
+    },
+    "generator": {
+      "base_modemon_id": "generator_base",
+      "core_job": "Create new content from instructions or context",
+      "name": "Generator",
+      "visual_family": "cat"
+    },
+    "recommender": {
+      "base_modemon_id": "recommender_base",
+      "core_job": "Select things likely to be useful or appealing",
+      "name": "Recommender",
+      "visual_family": "bird"
+    },
+    "retriever": {
+      "base_modemon_id": "retriever_base",
+      "core_job": "Find existing information relevant to a request",
+      "name": "Retriever",
+      "visual_family": "dog"
+    },
+    "scheduler": {
+      "base_modemon_id": "scheduler_base",
+      "core_job": "Allocate people, resources, routes, or time",
+      "name": "Scheduler",
+      "visual_family": "ocean_creature"
+    }
+  },
+  "modemon": {
+    "anomaly_base": {
+      "ai_tasks": [
+        "anomaly detection"
+      ],
+      "biases_limitations": [
+        "Unusual behavior is not automatically harmful",
+        "Normal behavior changes over time",
+        "Rare legitimate cases can trigger alerts",
+        "Poor baselines can make anomaly scores misleading"
+      ],
+      "dex_entry": "Quirkle's whole personality is \"...that's weird.\" It learns what normal-ish behavior looks like and raises a tiny reptilian eyebrow when something wanders off-pattern. It doesn't necessarily know what happened or why. It only knows that this case deserves another look.",
+      "evolves_from": null,
+      "explainability": [
+        "anomaly score inspection",
+        "comparison with normal examples",
+        "feature contribution analysis",
+        "threshold inspection"
+      ],
+      "family_id": "anomaly",
+      "habitats": [
+        "finance",
+        "healthcare",
+        "transportation",
+        "office_business",
+        "civic_government"
+      ],
+      "input_data": "Historical examples of normal behavior and new observations",
+      "models_algorithms": [
+        "Isolation Forest",
+        "one-class SVM",
+        "autoencoder",
+        "variational autoencoder",
+        "statistical thresholding"
+      ],
+      "name": "Quirkle",
+      "output_data": "Anomaly scores, alerts, or unusual-event flags",
+      "rarity": "common",
+      "role": "General Anomaly Watcher",
+      "signature": null,
+      "stage": 1
+    },
+    "anomaly_fraud": {
+      "ai_tasks": [
+        "anomaly detection",
+        "binary classification",
+        "risk scoring"
+      ],
+      "biases_limitations": [
+        "Fraud patterns change as attackers adapt",
+        "Legitimate unusual purchases can look suspicious",
+        "Historical labels can reflect uneven scrutiny",
+        "Fraud datasets are often highly imbalanced"
+      ],
+      "dex_entry": "Swindlisk hunts for transactions that don't smell right. A strange location, amount, or spending pattern might mean fraud, or it might mean you dared to go on vacation. Its job is usually to identify risk, not pronounce guilt.",
+      "evolves_from": "anomaly_base",
+      "explainability": [
+        "SHAP",
+        "feature attribution",
+        "counterfactual explanation",
+        "threshold analysis"
+      ],
+      "family_id": "anomaly",
+      "habitats": [
+        "finance"
+      ],
+      "input_data": "Transactions, account history, device information, location patterns, and customer behavior",
+      "models_algorithms": [
+        "logistic regression",
+        "gradient boosted trees",
+        "random forest",
+        "Isolation Forest",
+        "graph neural network",
+        "neural network"
+      ],
+      "name": "Swindlisk",
+      "output_data": "Fraud risk scores, suspicious-transaction flags, or review recommendations",
+      "rarity": "rare",
+      "role": "Fraud Watcher",
+      "signature": null,
+      "stage": 2
+    },
+    "anomaly_machine": {
+      "ai_tasks": [
+        "anomaly detection",
+        "predictive maintenance",
+        "risk prediction"
+      ],
+      "biases_limitations": [
+        "Failures can be too rare to model well",
+        "Different machine types have different normal behavior",
+        "Operating conditions can shift over time",
+        "Sensor failures can look like machine failures"
+      ],
+      "dex_entry": "Geargoyle hears the mechanical version of \"that noise wasn't there yesterday.\" Changes in vibration, heat, or other sensor patterns can reveal trouble before equipment fails dramatically. The trick is learning the difference between dangerous weird and perfectly normal weird.",
+      "evolves_from": "anomaly_base",
+      "explainability": [
+        "sensor trend inspection",
+        "feature attribution",
+        "reconstruction error",
+        "comparison with similar historical failures"
+      ],
+      "family_id": "anomaly",
+      "habitats": [
+        "transportation",
+        "office_business"
+      ],
+      "input_data": "Vibration, temperature, pressure, equipment logs, and other machine sensor readings",
+      "models_algorithms": [
+        "autoencoder",
+        "Isolation Forest",
+        "gradient boosted trees",
+        "survival model",
+        "sequence model"
+      ],
+      "name": "Geargoyle",
+      "output_data": "Abnormality scores, maintenance alerts, or failure-risk estimates",
+      "rarity": "rare",
+      "role": "Machine Watcher",
+      "signature": null,
+      "stage": 2
+    },
+    "anomaly_network": {
+      "ai_tasks": [
+        "cybersecurity anomaly detection"
+      ],
+      "biases_limitations": [
+        "Legitimate users can behave unpredictably",
+        "Attackers adapt to detection systems",
+        "High false-positive rates can overwhelm analysts",
+        "Monitoring can create privacy concerns"
+      ],
+      "dex_entry": "Netnark is a tiny digital snitch. Strange login times, odd traffic bursts, or unusual connections make it suspicious, but Steve working from Japan at 3 a.m. is not automatically a cyberattack. Good anomaly detection tells humans what deserves investigation.",
+      "evolves_from": "anomaly_base",
+      "explainability": [
+        "feature attribution",
+        "event timeline inspection",
+        "baseline comparison",
+        "peer-activity comparison"
+      ],
+      "family_id": "anomaly",
+      "habitats": [
+        "office_business",
+        "civic_government"
+      ],
+      "input_data": "Network traffic, login behavior, connection events, and system logs",
+      "models_algorithms": [
+        "Isolation Forest",
+        "one-class SVM",
+        "autoencoder",
+        "sequence model",
+        "classifier"
+      ],
+      "name": "Netnark",
+      "output_data": "Anomaly scores, suspicious-event alerts, or threat-priority flags",
+      "rarity": "rare",
+      "role": "Network Watcher",
+      "signature": null,
+      "stage": 2
+    },
+    "anomaly_vitals": {
+      "ai_tasks": [
+        "time-series anomaly detection"
+      ],
+      "biases_limitations": [
+        "Patient baselines differ",
+        "Sensors can be noisy",
+        "Too many alerts can cause alarm fatigue",
+        "Unusual measurements are not always dangerous"
+      ],
+      "dex_entry": "Beatling listens for the body getting out of rhythm. One unusual number may mean very little, so useful systems watch how measurements change over time and relative to context. Otherwise Beatling becomes the reptilian equivalent of a smoke detector screaming because you made toast.",
+      "evolves_from": "anomaly_base",
+      "explainability": [
+        "vital-sign trend plots",
+        "anomaly score inspection",
+        "time-window attribution",
+        "baseline comparison"
+      ],
+      "family_id": "anomaly",
+      "habitats": [
+        "healthcare"
+      ],
+      "input_data": "Heart rate, oxygen saturation, temperature, blood pressure, and other vital signs over time",
+      "models_algorithms": [
+        "statistical thresholding",
+        "Isolation Forest",
+        "autoencoder",
+        "LSTM",
+        "time-series transformer"
+      ],
+      "name": "Beatling",
+      "output_data": "Anomaly scores, physiological alerts, or unusual-trend flags",
+      "rarity": "rare",
+      "role": "Vital Watcher",
+      "signature": null,
+      "stage": 2
+    },
+    "detector_base": {
+      "ai_tasks": [
+        "image classification",
+        "object detection",
+        "image segmentation"
+      ],
+      "biases_limitations": [
+        "Performance can change with lighting",
+        "Occlusion can hide important visual information",
+        "Missing training examples can create blind spots",
+        "Models can learn visual shortcuts instead of meaningful features",
+        "False positives and false negatives are possible"
+      ],
+      "dex_entry": "Seeklet spots things humans might otherwise have to find themselves. Its huge eyes turn pixels into patterns and patterns into guesses about what is there. Change the lighting, hide half an object, or show it something unlike its training data, though, and those impressive eyes can get impressively confused.",
+      "evolves_from": null,
+      "explainability": [
+        "saliency maps",
+        "Grad-CAM",
+        "occlusion testing",
+        "confidence inspection"
+      ],
+      "family_id": "detector",
+      "habitats": [
+        "healthcare",
+        "transportation",
+        "retail",
+        "food_hospitality"
+      ],
+      "input_data": "Images and video frames",
+      "models_algorithms": [
+        "convolutional neural network",
+        "vision transformer",
+        "YOLO",
+        "Faster R-CNN",
+        "U-Net"
+      ],
+      "name": "Seeklet",
+      "output_data": "Labels, object locations, segmentation masks, and confidence scores",
+      "rarity": "common",
+      "role": "General Detector",
+      "signature": null,
+      "stage": 1
+    },
+    "detector_defect": {
+      "ai_tasks": [
+        "image classification",
+        "object detection",
+        "visual inspection"
+      ],
+      "biases_limitations": [
+        "New packaging can differ from training data",
+        "Subtle defects can be missed",
+        "Lighting changes can reduce performance",
+        "Poor training coverage can create blind spots"
+      ],
+      "dex_entry": "Inspectra is the picky quality-control cousin. It can check products, shelves, components, or food for things that look wrong. Give it a night shift that looks nothing like its pristine training photos, though, and suddenly the expert inspector may be staring confidently at shadows.",
+      "evolves_from": "detector_base",
+      "explainability": [
+        "saliency maps",
+        "bounding box inspection",
+        "false positive review",
+        "false negative review"
+      ],
+      "family_id": "detector",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ],
+      "input_data": "Images of products, shelves, food, or manufactured items",
+      "models_algorithms": [
+        "convolutional neural network",
+        "vision transformer",
+        "YOLO",
+        "visual anomaly detection model"
+      ],
+      "name": "Inspectra",
+      "output_data": "Product categories, defect flags, object locations, or quality assessments",
+      "rarity": "rare",
+      "role": "Product or Defect Detector",
+      "signature": null,
+      "stage": 2
+    },
+    "detector_disease": {
+      "ai_tasks": [
+        "medical image classification",
+        "object detection",
+        "image segmentation"
+      ],
+      "biases_limitations": [
+        "Performance can vary across hospitals and scanners",
+        "Underrepresented demographic groups can experience worse performance",
+        "Subtle disease patterns can be difficult to detect",
+        "Models can learn shortcuts unrelated to disease",
+        "False negatives can be especially costly"
+      ],
+      "dex_entry": "Pathogaze turns Seeklet's eyesight toward medicine. Some versions answer \"Does this scan look suspicious?\" while others locate or precisely outline abnormal tissue. Those are different AI tasks, and in healthcare a confident-looking mistake is still a mistake, so clinicians, validation, and explanation matter.",
+      "evolves_from": "detector_base",
+      "explainability": [
+        "saliency maps",
+        "Grad-CAM",
+        "segmentation overlays",
+        "subgroup sensitivity analysis"
+      ],
+      "family_id": "detector",
+      "habitats": [
+        "healthcare"
+      ],
+      "input_data": "Medical images such as MRI scans, CT scans, X-rays, and pathology images",
+      "models_algorithms": [
+        "convolutional neural network",
+        "vision transformer",
+        "U-Net",
+        "Mask R-CNN",
+        "Faster R-CNN"
+      ],
+      "name": "Pathogaze",
+      "output_data": "Disease probabilities, object locations, or tissue segmentation masks",
+      "rarity": "rare",
+      "role": "Disease Detector",
+      "signature": null,
+      "stage": 2
+    },
+    "detector_pedestrian": {
+      "ai_tasks": [
+        "object detection",
+        "computer vision"
+      ],
+      "biases_limitations": [
+        "Darkness can reduce detection performance",
+        "Weather can obscure visual information",
+        "Occlusion can hide people or vehicles",
+        "Distance can make small objects difficult to detect",
+        "Unusual clothing or poses can be poorly represented in training data"
+      ],
+      "dex_entry": "Crowdseer doesn't just ask whether a person exists somewhere in an image. It has to find where they are. Rain, darkness, crowds, and the delivery truck blocking half the sidewalk all make that harder than your eyeballs would suggest.",
+      "evolves_from": "detector_base",
+      "explainability": [
+        "bounding box inspection",
+        "confidence inspection",
+        "threshold analysis",
+        "error testing across environmental conditions"
+      ],
+      "family_id": "detector",
+      "habitats": [
+        "transportation"
+      ],
+      "input_data": "Camera images and video frames from streets or transportation environments",
+      "models_algorithms": [
+        "YOLO",
+        "Faster R-CNN",
+        "DETR"
+      ],
+      "name": "Crowdseer",
+      "output_data": "Pedestrian and vehicle locations, class labels, and confidence scores",
+      "rarity": "rare",
+      "role": "Pedestrian Detector",
+      "signature": null,
+      "stage": 2
+    },
+    "extractor_archive": {
+      "ai_tasks": [
+        "optical character recognition",
+        "handwriting text recognition",
+        "transcription"
+      ],
+      "biases_limitations": [
+        "Faded ink can reduce accuracy",
+        "Cursive handwriting is difficult to recognize",
+        "Damaged pages can remove information",
+        "Historical spelling and vocabulary can confuse models"
+      ],
+      "dex_entry": "Manusqueak turns old handwriting into searchable text. The farther a document gets from today's tidy digital fonts, the more every faded flourish becomes a tiny archaeological mystery.",
+      "evolves_from": "extractor_base",
+      "explainability": [
+        "side-by-side image and transcription",
+        "character confidence",
+        "word confidence",
+        "human correction"
+      ],
+      "family_id": "extractor",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ],
+      "input_data": "Scanned or photographed historical documents and handwritten records",
+      "models_algorithms": [
+        "OCR",
+        "handwriting text recognition model",
+        "vision-language model"
+      ],
+      "name": "Manusqueak",
+      "output_data": "Machine-readable transcriptions",
+      "rarity": "rare",
+      "role": "Archive Transcriber",
+      "signature": null,
+      "stage": 2
+    },
+    "extractor_base": {
+      "ai_tasks": [
+        "optical character recognition",
+        "information extraction",
+        "named entity recognition"
+      ],
+      "biases_limitations": [
+        "Poor scans can reduce accuracy",
+        "Handwriting can be difficult to interpret",
+        "Ambiguous language can produce incorrect extraction",
+        "Missing context can change meaning",
+        "Incorrect extracted facts can appear confident"
+      ],
+      "dex_entry": "Scribbit gnaws through paperwork and stores the useful facts in its cheeks. Extracting a date, medication, or name is different from understanding an entire document, and a confidently extracted wrong fact can be more dangerous than a blank field.",
+      "evolves_from": null,
+      "explainability": [
+        "source span highlighting",
+        "extraction confidence",
+        "field-level validation",
+        "human correction"
+      ],
+      "family_id": "extractor",
+      "habitats": [
+        "healthcare",
+        "civic_government",
+        "education_research"
+      ],
+      "input_data": "Text documents, scanned pages, forms, or document images",
+      "models_algorithms": [
+        "OCR",
+        "named entity recognition model",
+        "transformer",
+        "layout-aware model",
+        "large language model"
+      ],
+      "name": "Scribbit",
+      "output_data": "Structured fields, extracted entities, or machine-readable records",
+      "rarity": "common",
+      "role": "General Document Extractor",
+      "signature": null,
+      "stage": 1
+    },
+    "extractor_government": {
+      "ai_tasks": [
+        "optical character recognition",
+        "information extraction",
+        "form understanding"
+      ],
+      "biases_limitations": [
+        "Poor scans can create recognition errors",
+        "Handwriting quality varies",
+        "Unusual document layouts can confuse extraction",
+        "Language and accessibility differences can reduce performance"
+      ],
+      "dex_entry": "Bureaucritter bravely enters the paperwork maze so you don't have to. It converts boxes, scans, and forms into usable fields, but one misread digit can still transform helpful automation into an entirely new bureaucratic adventure.",
+      "evolves_from": "extractor_base",
+      "explainability": [
+        "source field highlighting",
+        "confidence inspection",
+        "validation rules",
+        "human correction"
+      ],
+      "family_id": "extractor",
+      "habitats": [
+        "civic_government"
+      ],
+      "input_data": "Scanned forms, PDFs, document images, and handwritten fields",
+      "models_algorithms": [
+        "OCR",
+        "layout-aware transformer",
+        "field detector",
+        "rule-based validation"
+      ],
+      "name": "Bureaucritter",
+      "output_data": "Names, dates, addresses, application fields, and other structured records",
+      "rarity": "rare",
+      "role": "Government Form Extractor",
+      "signature": null,
+      "stage": 2
+    },
+    "extractor_history": {
+      "ai_tasks": [
+        "text mining",
+        "information extraction",
+        "pattern discovery"
+      ],
+      "biases_limitations": [
+        "Historical records are incomplete",
+        "Historical records can reflect social and institutional bias",
+        "Public documentation does not specify the exact modeling algorithm",
+        "Detected patterns still require historical interpretation"
+      ],
+      "dex_entry": "Archivole burrows through whole archives instead of one document at a time. A Friday Institute project uses AI modeling software to help high-school history students investigate patterns across large collections of primary-source texts about redlining, patterns difficult to study one document at a time.",
+      "evolves_from": "extractor_research",
+      "explainability": [
+        "trace findings to source text",
+        "compare patterns across documents",
+        "expert interpretation",
+        "student interpretation"
+      ],
+      "family_id": "extractor",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Large collections of primary-source historical texts",
+      "models_algorithms": [
+        "text representation model",
+        "information extraction model",
+        "pattern analysis"
+      ],
+      "name": "Archivole",
+      "output_data": "Patterns, themes, or relationships for historical investigation",
+      "rarity": "signature",
+      "role": "History Pattern Miner",
+      "signature": {
+        "anchor_name": "Friday Institute",
+        "anchor_scope": "research_project",
+        "documented_technology": [],
+        "source_organization": "Friday Institute for Educational Innovation",
+        "source_title": "Machine Learning in the History Classroom: Using Artificial Intelligence for a Student-Led Inquiry into Redlining",
+        "source_url": "https://fi.ncsu.edu/projects/machine-learning-in-the-history-classroom-using-artificial-intelligence-for-a-student-led-inquiry-into-redlining/",
+        "verified_use": "AI-supported pattern investigation across primary-source texts about redlining"
+      },
+      "stage": 3
+    },
+    "extractor_medical": {
+      "ai_tasks": [
+        "clinical information extraction",
+        "named entity recognition"
+      ],
+      "biases_limitations": [
+        "Medical abbreviations are ambiguous",
+        "Negation can reverse the meaning of a finding",
+        "Documentation styles vary across clinicians",
+        "Health data is highly sensitive",
+        "Performance can differ across demographic groups"
+      ],
+      "dex_entry": "Clinink rummages through clinical notes for the facts humans need. \"History of pneumonia,\" \"possible pneumonia,\" and \"no pneumonia\" all contain the same tempting word, which is why context matters more than keyword hunting.",
+      "evolves_from": "extractor_base",
+      "explainability": [
+        "source highlighting",
+        "confidence inspection",
+        "error review by entity type",
+        "clinician validation"
+      ],
+      "family_id": "extractor",
+      "habitats": [
+        "healthcare"
+      ],
+      "input_data": "Clinical notes, medical reports, and other healthcare text",
+      "models_algorithms": [
+        "clinical named entity recognition model",
+        "transformer",
+        "rule-based system",
+        "clinical ontology",
+        "large language model"
+      ],
+      "name": "Clinink",
+      "output_data": "Diagnoses, medications, dates, procedures, and other structured clinical facts",
+      "rarity": "rare",
+      "role": "Medical Record Extractor",
+      "signature": null,
+      "stage": 2
+    },
+    "extractor_research": {
+      "ai_tasks": [
+        "named entity recognition",
+        "relation extraction",
+        "information extraction",
+        "topic discovery"
+      ],
+      "biases_limitations": [
+        "Published literature can contain publication bias",
+        "Terminology can be ambiguous across fields",
+        "Extraction can remove important context",
+        "Extracted information is not automatically true"
+      ],
+      "dex_entry": "Scholarat can chew through more papers than any reasonable human and drag useful facts back to the nest. Its advantage is scale, not magical truth. Anything it extracts still inherits the weaknesses of the source material.",
+      "evolves_from": "extractor_base",
+      "explainability": [
+        "source span inspection",
+        "entity confidence",
+        "relation confidence",
+        "provenance tracking",
+        "human source review"
+      ],
+      "family_id": "extractor",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Research papers, archival text, reports, and document collections",
+      "models_algorithms": [
+        "named entity recognition model",
+        "relation extraction model",
+        "transformer",
+        "topic model"
+      ],
+      "name": "Scholarat",
+      "output_data": "Concepts, entities, relationships, and structured facts",
+      "rarity": "rare",
+      "role": "Research Extractor",
+      "signature": null,
+      "stage": 2
+    },
+    "extractor_specimen": {
+      "ai_tasks": [
+        "handwriting text recognition",
+        "optical character recognition",
+        "information extraction"
+      ],
+      "biases_limitations": [
+        "Handwriting can be ambiguous",
+        "Scientific names can be difficult to transcribe",
+        "Historical terminology can differ from modern terminology",
+        "Transcription errors require curator review"
+      ],
+      "dex_entry": "Specimunk has graduated from old papers to old fish. The NC Museum of Natural Sciences holds about 1.5 million fish specimens, and UNC's Renaissance Computing Institute is working with the museum to reduce the time spent manually transferring handwritten specimen notes into electronic records using AI.",
+      "evolves_from": "extractor_archive",
+      "explainability": [
+        "side-by-side transcription review",
+        "uncertainty flags",
+        "source image inspection",
+        "curator validation"
+      ],
+      "family_id": "extractor",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Handwritten scientific specimen notes",
+      "models_algorithms": [
+        "handwriting text recognition model",
+        "OCR",
+        "information extraction model"
+      ],
+      "name": "Specimunk",
+      "output_data": "Electronic specimen records and machine-readable transcriptions",
+      "rarity": "signature",
+      "role": "Specimen Transcriber",
+      "signature": {
+        "anchor_name": "NC Museum of Natural Sciences",
+        "anchor_scope": "institution",
+        "documented_technology": [],
+        "source_organization": "NC Museum of Natural Sciences",
+        "source_title": "Museum, UNC Use AI to Transform Handwritten Records About Fish",
+        "source_url": "https://www.naturalsciences.org/calendar/news/museum-unc-use-ai-to-transform-handwritten-records-about-fish/",
+        "verified_use": "AI-assisted transcription of handwritten fish specimen records"
+      },
+      "stage": 3
+    },
+    "forecast_base": {
+      "ai_tasks": [
+        "forecasting",
+        "regression"
+      ],
+      "biases_limitations": [
+        "Sudden shocks can invalidate historical patterns",
+        "Behavior can drift over time",
+        "Poor seasonality assumptions can distort forecasts",
+        "Data leakage can make evaluation unrealistically optimistic"
+      ],
+      "dex_entry": "Forespirit peers into the future by studying the past. Trends, seasons, and context help it estimate what comes next, but it is not actually psychic. Pandemics, storms, and Beyoncé concerts remain formidable enemies of the forecasting arts.",
+      "evolves_from": null,
+      "explainability": [
+        "forecast plots",
+        "residual analysis",
+        "feature effect analysis",
+        "prediction intervals"
+      ],
+      "family_id": "forecast",
+      "habitats": [
+        "healthcare",
+        "transportation",
+        "retail",
+        "entertainment"
+      ],
+      "input_data": "Historical quantities, timestamps, seasonal patterns, and contextual variables",
+      "models_algorithms": [
+        "ARIMA",
+        "SARIMA",
+        "exponential smoothing",
+        "regression",
+        "gradient boosted trees",
+        "LSTM",
+        "time-series transformer"
+      ],
+      "name": "Forespirit",
+      "output_data": "Future quantity estimates, forecast ranges, or predicted demand",
+      "rarity": "common",
+      "role": "General Demand Forecaster",
+      "signature": null,
+      "stage": 1
+    },
+    "forecast_crowd": {
+      "ai_tasks": [
+        "attendance forecasting",
+        "demand forecasting"
+      ],
+      "biases_limitations": [
+        "Viral events can produce unexpected demand",
+        "Cancellations can invalidate predictions",
+        "Weather can change attendance abruptly",
+        "Human behavior can shift quickly"
+      ],
+      "dex_entry": "Gathergeist senses an incoming swarm of humans. Venues can use forecasts to prepare staffing, food, and safety resources, but crowds remain gloriously capable of ignoring smooth mathematical curves.",
+      "evolves_from": "forecast_base",
+      "explainability": [
+        "forecast ranges",
+        "feature effect analysis",
+        "residual analysis",
+        "historical error review"
+      ],
+      "family_id": "forecast",
+      "habitats": [
+        "entertainment"
+      ],
+      "input_data": "Ticket sales, historical attendance, calendar information, weather, and event characteristics",
+      "models_algorithms": [
+        "regression",
+        "gradient boosted trees",
+        "time-series model"
+      ],
+      "name": "Gathergeist",
+      "output_data": "Expected attendance or crowd volume",
+      "rarity": "rare",
+      "role": "Crowd Forecaster",
+      "signature": null,
+      "stage": 2
+    },
+    "forecast_patient": {
+      "ai_tasks": [
+        "forecasting",
+        "count prediction"
+      ],
+      "biases_limitations": [
+        "Outbreaks and emergencies are difficult to predict",
+        "Historical utilization can reflect unequal access to care",
+        "Operational changes can break historical relationships"
+      ],
+      "dex_entry": "Wardwisp tries to see a hospital rush before it arrives. Predicting patient volume can help prepare beds, staff, and supplies, but historical utilization also reflects who could and could not access care in the past.",
+      "evolves_from": "forecast_base",
+      "explainability": [
+        "forecast intervals",
+        "residual analysis",
+        "feature importance",
+        "subgroup error analysis",
+        "site-level error analysis"
+      ],
+      "family_id": "forecast",
+      "habitats": [
+        "healthcare"
+      ],
+      "input_data": "Historical patient visits, seasonal patterns, calendar information, and local conditions",
+      "models_algorithms": [
+        "ARIMA",
+        "count regression",
+        "gradient boosted trees",
+        "neural forecasting model"
+      ],
+      "name": "Wardwisp",
+      "output_data": "Expected patient volume, bed demand, or service demand",
+      "rarity": "rare",
+      "role": "Patient Demand Forecaster",
+      "signature": null,
+      "stage": 2
+    },
+    "forecast_stock": {
+      "ai_tasks": [
+        "demand forecasting",
+        "inventory forecasting"
+      ],
+      "biases_limitations": [
+        "New products have little historical data",
+        "Promotions can distort historical patterns",
+        "Previous stocking decisions can influence future training data",
+        "Sudden consumer trends can invalidate forecasts"
+      ],
+      "dex_entry": "Coinjurer predicts what the shelves will need before customers arrive. Too much stock wastes money and too little means empty shelves. The fun wrinkle is that yesterday's forecast changed yesterday's inventory, which can influence the data used for tomorrow's forecast.",
+      "evolves_from": "forecast_base",
+      "explainability": [
+        "forecast error by product",
+        "forecast error by store",
+        "feature effect analysis",
+        "prediction intervals"
+      ],
+      "family_id": "forecast",
+      "habitats": [
+        "retail"
+      ],
+      "input_data": "Sales history, promotions, prices, seasonal patterns, and inventory levels",
+      "models_algorithms": [
+        "ARIMA",
+        "gradient boosted trees",
+        "regression",
+        "neural forecasting model"
+      ],
+      "name": "Coinjurer",
+      "output_data": "Future units demanded or recommended inventory quantities",
+      "rarity": "rare",
+      "role": "Stock or Inventory Forecaster",
+      "signature": null,
+      "stage": 2
+    },
+    "forecast_transit": {
+      "ai_tasks": [
+        "time-series forecasting",
+        "spatiotemporal forecasting"
+      ],
+      "biases_limitations": [
+        "Construction can rapidly change travel patterns",
+        "Special events can create unusual demand",
+        "Route changes can invalidate old patterns",
+        "Long-term travel behavior can drift"
+      ],
+      "dex_entry": "Commutoracle sees rush hour coming. It combines old travel patterns with things like time, weather, and events to estimate future movement. Then somebody closes a road for construction and its crystal ball develops a stress rash.",
+      "evolves_from": "forecast_base",
+      "explainability": [
+        "forecast versus actual comparison",
+        "spatial error maps",
+        "feature effect analysis",
+        "uncertainty intervals"
+      ],
+      "family_id": "forecast",
+      "habitats": [
+        "transportation"
+      ],
+      "input_data": "Ridership, traffic, weather, calendar information, and route history",
+      "models_algorithms": [
+        "ARIMA",
+        "gradient boosted trees",
+        "LSTM",
+        "time-series transformer",
+        "spatiotemporal model"
+      ],
+      "name": "Commutoracle",
+      "output_data": "Future ridership, traffic volume, or station demand",
+      "rarity": "rare",
+      "role": "Transit Forecaster",
+      "signature": null,
+      "stage": 2
+    },
+    "generator_base": {
+      "ai_tasks": [
+        "text generation",
+        "image generation",
+        "audio generation",
+        "generative modeling"
+      ],
+      "biases_limitations": [
+        "Generated content can contain hallucinations",
+        "Training data can contain social and cultural bias",
+        "Provenance and copyright can be difficult to determine",
+        "Outputs can vary across repeated generations"
+      ],
+      "dex_entry": "Purrrompt doesn't just choose an answer. It makes something new. New, however, does not mean true. Generative AI can produce brilliant work, bland mush, or exquisitely phrased nonsense with exactly the same confidence.",
+      "evolves_from": null,
+      "explainability": [
+        "source grounding checks",
+        "prompt and output comparison",
+        "provenance inspection",
+        "factual verification"
+      ],
+      "family_id": "generator",
+      "habitats": [
+        "education_research",
+        "office_business",
+        "civic_government",
+        "retail",
+        "entertainment"
+      ],
+      "input_data": "Prompts, context, reference data, or random noise",
+      "models_algorithms": [
+        "large language model",
+        "transformer",
+        "diffusion model",
+        "generative adversarial network",
+        "variational autoencoder"
+      ],
+      "name": "Purrrompt",
+      "output_data": "Newly generated text, images, audio, or other media",
+      "rarity": "common",
+      "role": "General Generator",
+      "signature": null,
+      "stage": 1
+    },
+    "generator_catalog": {
+      "ai_tasks": [
+        "document generation",
+        "rewriting",
+        "information standardization",
+        "agent-assisted research"
+      ],
+      "biases_limitations": [
+        "Generated facts can be incorrect",
+        "Official sources can be outdated",
+        "Workflow-specific details can be misunderstood",
+        "Human review remains necessary"
+      ],
+      "dex_entry": "Catalogar is Quillcat with an actual library job. NC State Libraries used a GitHub Copilot agent powered by Claude Opus 4.6 to research and draft standardized descriptions for roughly 300 devices and 150 software titles, then had staff review the rewrites side-by-side before publication.",
+      "evolves_from": "generator_document",
+      "explainability": [
+        "side-by-side diff",
+        "source verification",
+        "approve-or-reject workflow",
+        "manual rewrite"
+      ],
+      "family_id": "generator",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Existing device and software catalog records, official documentation, and structured instructions",
+      "models_algorithms": [
+        "large language model",
+        "coding agent",
+        "structured generation workflow"
+      ],
+      "name": "Catalogar",
+      "output_data": "Standardized draft descriptions and example use cases for catalog items",
+      "rarity": "signature",
+      "role": "Catalog Curator",
+      "signature": {
+        "anchor_name": "NC State University Libraries",
+        "anchor_scope": "library_system",
+        "documented_technology": [
+          "GitHub Copilot",
+          "Claude Opus 4.6"
+        ],
+        "source_organization": "NC State University Libraries",
+        "source_title": "Refreshing Software and Technology Lending Descriptions with Agent-Based AI",
+        "source_url": "https://www.lib.ncsu.edu/projects/refreshing-software-and-technology-lending-descriptions-agent-based-ai",
+        "verified_use": "Agent-assisted rewriting and standardization of technology-lending catalog descriptions"
+      },
+      "stage": 3
+    },
+    "generator_classroom_chatbot": {
+      "ai_tasks": [
+        "conversational AI",
+        "chatbot design",
+        "text generation"
+      ],
+      "biases_limitations": [
+        "Chatbots can hallucinate",
+        "Training data and prompts can introduce bias",
+        "Friendly tone can be mistaken for accuracy",
+        "Human design decisions strongly shape chatbot behavior"
+      ],
+      "dex_entry": "Lecturlynx lets students look behind the chatbot curtain. Friday Institute researchers worked with middle- and high-school students to create, test, and revise language-model-powered chatbots, deliberately investigating hallucination, accuracy, trust, and how human design choices shape AI behavior.",
+      "evolves_from": "generator_conversational",
+      "explainability": [
+        "fact checking",
+        "cross-model comparison",
+        "prompt audit",
+        "configuration audit",
+        "trust calibration"
+      ],
+      "family_id": "generator",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Student-defined purpose, audience, prompts, rules, knowledge boundaries, and conversation",
+      "models_algorithms": [
+        "large language model",
+        "prompt-based chatbot system"
+      ],
+      "name": "Lecturlynx",
+      "output_data": "Chatbot responses within the configured educational purpose",
+      "rarity": "signature",
+      "role": "Classroom Chatbot",
+      "signature": {
+        "anchor_name": "Friday Institute",
+        "anchor_scope": "research_project",
+        "documented_technology": [
+          "large language model"
+        ],
+        "source_organization": "Friday Institute for Educational Innovation",
+        "source_title": "2025-2026 Catalyst Grant Symposium Features Projects that Advance AI Integration in Education",
+        "source_url": "https://fi.ncsu.edu/news/2025-2026-catalyst-grant-symposium-features-projects-that-advance-ai-integration-in-education/",
+        "verified_use": "Student construction and evaluation of language-model-powered chatbots"
+      },
+      "stage": 3
+    },
+    "generator_conversational": {
+      "ai_tasks": [
+        "conversational AI",
+        "text generation",
+        "question answering"
+      ],
+      "biases_limitations": [
+        "Responses can contain hallucinations",
+        "Small prompt changes can alter behavior",
+        "Retrieved information can be stale or incorrect",
+        "Fluent language can cause users to overtrust the system"
+      ],
+      "dex_entry": "Meowlogue turns generation into a conversation. It can answer, clarify, and sometimes use tools, but a friendly voice makes it remarkably easy to forget that fluent language is not the same thing as reliable knowledge.",
+      "evolves_from": "generator_base",
+      "explainability": [
+        "citation inspection",
+        "source inspection",
+        "conversation trace",
+        "tool log inspection",
+        "factual verification"
+      ],
+      "family_id": "generator",
+      "habitats": [
+        "education_research",
+        "office_business",
+        "civic_government",
+        "retail"
+      ],
+      "input_data": "Conversation history, user requests, contextual information, and optional external tools or sources",
+      "models_algorithms": [
+        "decoder-only large language model",
+        "retrieval-augmented generation",
+        "tool-calling agent"
+      ],
+      "name": "Meowlogue",
+      "output_data": "Natural-language responses, clarifying questions, or requested actions",
+      "rarity": "rare",
+      "role": "Conversational Assistant",
+      "signature": null,
+      "stage": 2
+    },
+    "generator_creative": {
+      "ai_tasks": [
+        "image generation",
+        "text generation",
+        "audio generation",
+        "multimodal generation"
+      ],
+      "biases_limitations": [
+        "Training data can contain bias",
+        "Provenance can be unclear",
+        "Outputs can contain visual or factual artifacts",
+        "Generated work can imitate styles found in training data",
+        "Results are sensitive to prompts"
+      ],
+      "dex_entry": "Articlaw is the flashy cousin: pictures, stories, music, and other creative media on command. A convincing generated image tells you that a model can make convincing pixels, not that the thing pictured ever existed.",
+      "evolves_from": "generator_base",
+      "explainability": [
+        "prompt and output comparison",
+        "provenance review",
+        "artifact testing",
+        "bias testing",
+        "human review"
+      ],
+      "family_id": "generator",
+      "habitats": [
+        "entertainment"
+      ],
+      "input_data": "Text prompts, image prompts, audio prompts, reference media, or creative constraints",
+      "models_algorithms": [
+        "diffusion model",
+        "transformer",
+        "generative adversarial network",
+        "multimodal generative model"
+      ],
+      "name": "Articlaw",
+      "output_data": "Generated images, stories, music, audio, or other creative media",
+      "rarity": "rare",
+      "role": "Creative Generator",
+      "signature": null,
+      "stage": 2
+    },
+    "generator_document": {
+      "ai_tasks": [
+        "document generation",
+        "rewriting",
+        "summarization",
+        "information transformation"
+      ],
+      "biases_limitations": [
+        "Generated details can be incorrect",
+        "Source material can be outdated",
+        "Style can be inconsistent",
+        "Fluent output can encourage automation bias"
+      ],
+      "dex_entry": "Quillcat is less \"write me a dragon poem\" and more \"please rewrite these 450 terrible descriptions before I perish.\" It excels at repetitive drafting when humans keep ownership of factual correctness.",
+      "evolves_from": "generator_base",
+      "explainability": [
+        "source tracking",
+        "original-to-generated diff",
+        "factual review",
+        "approval workflow"
+      ],
+      "family_id": "generator",
+      "habitats": [
+        "office_business",
+        "education_research"
+      ],
+      "input_data": "Existing records, instructions, source documents, reference material, and formatting constraints",
+      "models_algorithms": [
+        "large language model",
+        "encoder-decoder transformer",
+        "retrieval-augmented generation",
+        "template-driven generation"
+      ],
+      "name": "Quillcat",
+      "output_data": "Draft documents, rewrites, summaries, or standardized descriptions",
+      "rarity": "rare",
+      "role": "Document Generator",
+      "signature": null,
+      "stage": 2
+    },
+    "generator_learning": {
+      "ai_tasks": [
+        "instructional text generation",
+        "question generation",
+        "educational content generation"
+      ],
+      "biases_limitations": [
+        "Generated facts can be wrong",
+        "Content can be pedagogically weak",
+        "Material can be inappropriate for a learner's context",
+        "Overreliance can reduce human judgment"
+      ],
+      "dex_entry": "Learnx can draft explanations, questions, and activities faster than a teacher can open seventeen tabs. But sounding educational and actually helping someone understand are two very different achievements.",
+      "evolves_from": "generator_base",
+      "explainability": [
+        "source grounding",
+        "curriculum alignment",
+        "factual verification",
+        "teacher review",
+        "learning outcome evaluation"
+      ],
+      "family_id": "generator",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Learning goals, source material, learner context, and instructional prompts",
+      "models_algorithms": [
+        "large language model",
+        "encoder-decoder transformer",
+        "retrieval-augmented generation"
+      ],
+      "name": "Learnx",
+      "output_data": "Explanations, questions, activities, examples, or instructional drafts",
+      "rarity": "rare",
+      "role": "Learning Generator",
+      "signature": null,
+      "stage": 2
+    },
+    "generator_lesson_planner": {
+      "ai_tasks": [
+        "instructional planning",
+        "text generation",
+        "educational content generation"
+      ],
+      "biases_limitations": [
+        "Polished output can hide shallow reasoning",
+        "Generated pedagogy can be incorrect or inappropriate",
+        "Teacher expertise remains necessary for evaluation",
+        "Model suggestions can influence teacher decision-making"
+      ],
+      "dex_entry": "Planthera prowls the lesson-planning process beside the teacher. Friday Institute researchers had experienced elementary teachers use Gemini while planning phonics, fluency, and reading-comprehension lessons, studying not only the finished lesson but how teachers evaluated, revised, and rejected AI suggestions.",
+      "evolves_from": "generator_learning",
+      "explainability": [
+        "observe teacher and AI interaction",
+        "verify generated content",
+        "compare teacher revisions",
+        "expert review"
+      ],
+      "family_id": "generator",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Grade level, classroom context, student performance, instructional goals, and teacher prompts",
+      "models_algorithms": [
+        "large language model"
+      ],
+      "name": "Planthera",
+      "output_data": "Lesson ideas, instructional drafts, activities, and lesson-plan components",
+      "rarity": "signature",
+      "role": "Lesson Planner",
+      "signature": {
+        "anchor_name": "Friday Institute",
+        "anchor_scope": "research_project",
+        "documented_technology": [
+          "Google Gemini"
+        ],
+        "source_organization": "Friday Institute for Educational Innovation",
+        "source_title": "2025-2026 Catalyst Grant Symposium Features Projects that Advance AI Integration in Education",
+        "source_url": "https://fi.ncsu.edu/news/2025-2026-catalyst-grant-symposium-features-projects-that-advance-ai-integration-in-education/",
+        "verified_use": "Generative AI-assisted elementary lesson planning research"
+      },
+      "stage": 3
+    },
+    "recommender_adaptive_learning": {
+      "ai_tasks": [
+        "adaptive learning",
+        "personalization",
+        "recommendation",
+        "text generation"
+      ],
+      "biases_limitations": [
+        "Language models can produce incorrect feedback",
+        "Learner models are incomplete representations of understanding",
+        "Over-personalization can limit productive challenge",
+        "Teacher oversight remains important"
+      ],
+      "dex_entry": "Mentamorph changes its feathers as the learner changes. In EcoJourneys, the Friday Institute and collaborators added language-model capability that evaluates individual and group activity and provides tailored feedback during a science problem-solving game. That's personalized AI responding while learning is happening, not merely recommending the next video.",
+      "evolves_from": "recommender_learning",
+      "explainability": [
+        "feedback comparison with learner evidence",
+        "teacher review",
+        "learning outcome evaluation",
+        "failure-case analysis"
+      ],
+      "family_id": "recommender",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Individual and group gameplay activity, learner responses, and learning context",
+      "models_algorithms": [
+        "large language model",
+        "personalization model",
+        "recommendation model"
+      ],
+      "name": "Mentamorph",
+      "output_data": "Tailored feedback and responsive adaptations to the learning experience",
+      "rarity": "signature",
+      "role": "Adaptive Learning Guide",
+      "signature": {
+        "anchor_name": "Friday Institute",
+        "anchor_scope": "research_project",
+        "documented_technology": [
+          "large language model"
+        ],
+        "source_organization": "Friday Institute for Educational Innovation",
+        "source_title": "Friday Institute, Center for Educational Informatics and EngageAI Institute Collaborate to Advance AI in Education",
+        "source_url": "https://fi.ncsu.edu/news/friday-institute-center-for-educational-informatics-and-engageai-institute-collaborate-to-advance-ai-in-education/",
+        "verified_use": "Adaptive feedback in the EcoJourneys learning game"
+      },
+      "stage": 3
+    },
+    "recommender_ai_curator": {
+      "ai_tasks": [
+        "recommendation",
+        "information retrieval",
+        "ranking",
+        "text generation"
+      ],
+      "biases_limitations": [
+        "Generated information can be incorrect",
+        "Collection data can contain historical and cultural biases",
+        "Curatorial taste is subjective",
+        "The system has limited understanding of physical exhibition context"
+      ],
+      "dex_entry": "Muselect is Reelure with a museum key. Duke's Nasher Museum converted information about nearly 14,000 collection objects into machine-readable data for ChatGPT, which helped select artworks and create exhibition text and sequencing for an actual exhibition. The museum used the experiment to examine AI's usefulness and limitations in curatorial work.",
+      "evolves_from": "recommender_content",
+      "explainability": [
+        "prompt inspection",
+        "source inspection",
+        "selection comparison",
+        "human curator review"
+      ],
+      "family_id": "recommender",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ],
+      "input_data": "Machine-readable museum collection records and curatorial prompts",
+      "models_algorithms": [
+        "large language model",
+        "semantic representation",
+        "ranking model"
+      ],
+      "name": "Muselect",
+      "output_data": "Selected artworks, exhibition themes, interpretive text, and installation suggestions",
+      "rarity": "signature",
+      "role": "AI Curator",
+      "signature": {
+        "anchor_name": "Nasher Museum of Art",
+        "anchor_scope": "institution",
+        "documented_technology": [
+          "ChatGPT"
+        ],
+        "source_organization": "Nasher Museum of Art",
+        "source_title": "Act as if you are a curator",
+        "source_url": "https://nasher.duke.edu/exhibitions/act-as-if-you-are-a-curator-an-ai-generated-exhibition/",
+        "verified_use": "AI-assisted exhibition curation"
+      },
+      "stage": 3
+    },
+    "recommender_base": {
+      "ai_tasks": [
+        "recommendation",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "New users and items create cold-start problems",
+        "User feedback is often sparse",
+        "Popular items can dominate recommendations",
+        "Feedback loops can narrow exposure",
+        "Engagement is not the same as satisfaction"
+      ],
+      "dex_entry": "Suggestle studies a giant pile of choices and chirps, \"THIS ONE. YOU WANT THIS ONE.\" Recommendations can reduce overload beautifully, but repeatedly feeding people what they already clicked can turn personalization into a very comfortable little tunnel.",
+      "evolves_from": null,
+      "explainability": [
+        "recommendation reason",
+        "exposure analysis",
+        "coverage analysis",
+        "subgroup fairness analysis",
+        "ranking audit"
+      ],
+      "family_id": "recommender",
+      "habitats": [
+        "retail",
+        "entertainment",
+        "education_research",
+        "food_hospitality"
+      ],
+      "input_data": "User interactions, item information, preferences, and contextual signals",
+      "models_algorithms": [
+        "collaborative filtering",
+        "content-based filtering",
+        "matrix factorization",
+        "embedding model",
+        "ranking model"
+      ],
+      "name": "Suggestle",
+      "output_data": "Ranked personalized suggestions",
+      "rarity": "common",
+      "role": "General Recommender",
+      "signature": null,
+      "stage": 1
+    },
+    "recommender_content": {
+      "ai_tasks": [
+        "recommendation",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "Feedback loops can narrow exposure",
+        "Popular content can crowd out niche content",
+        "Engagement optimization can conflict with user well-being",
+        "Repeated recommendations can create filter bubbles"
+      ],
+      "dex_entry": "Reelure uses flashy plumage to tempt you toward the next song, movie, or article. The important question isn't just whether it predicts another click. It is whether more engagement is actually the outcome we wanted.",
+      "evolves_from": "recommender_base",
+      "explainability": [
+        "recommendation reason",
+        "diversity analysis",
+        "novelty analysis",
+        "exposure audit"
+      ],
+      "family_id": "recommender",
+      "habitats": [
+        "entertainment"
+      ],
+      "input_data": "Viewing history, listening history, clicks, ratings, and content metadata",
+      "models_algorithms": [
+        "collaborative filtering",
+        "embedding model",
+        "sequence model",
+        "ranking model"
+      ],
+      "name": "Reelure",
+      "output_data": "Ranked recommendations for media, art, articles, or entertainment",
+      "rarity": "rare",
+      "role": "Content Recommender",
+      "signature": null,
+      "stage": 2
+    },
+    "recommender_learning": {
+      "ai_tasks": [
+        "recommendation",
+        "personalization",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "Performance is not the same as understanding",
+        "Learner state is only partially observable",
+        "Personalization can narrow exploration",
+        "Historical learning data can reflect unequal opportunity"
+      ],
+      "dex_entry": "Curriquill wants to know what would help you learn next. It may offer another practice problem, a reading, or a different explanation, but students have motivations and misunderstandings that don't fit neatly into click histories.",
+      "evolves_from": "recommender_base",
+      "explainability": [
+        "recommendation reason",
+        "learning gain evaluation",
+        "subgroup performance analysis",
+        "resource diversity analysis"
+      ],
+      "family_id": "recommender",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Learner history, performance, interests, activity, and available learning resources",
+      "models_algorithms": [
+        "content-based recommendation",
+        "embedding model",
+        "ranking model",
+        "knowledge tracing",
+        "learner model"
+      ],
+      "name": "Curriquill",
+      "output_data": "Ranked learning resources or recommended next activities",
+      "rarity": "rare",
+      "role": "Learning Recommender",
+      "signature": null,
+      "stage": 2
+    },
+    "recommender_menu": {
+      "ai_tasks": [
+        "recommendation",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "Sparse history limits personalization",
+        "Preferences change with context",
+        "Popularity can dominate suggestions",
+        "Allergies and medical restrictions cannot be treated as probabilistic guesses"
+      ],
+      "dex_entry": "Nibblet flits around the menu asking, \"What sounds good today?\" Preference prediction is useful for taste. Allergies and medical restrictions are different. Those belong in hard safety constraints, not \"the bird thinks you'll probably be fine.\"",
+      "evolves_from": "recommender_base",
+      "explainability": [
+        "recommendation reason",
+        "constraint validation",
+        "diversity analysis",
+        "user correction"
+      ],
+      "family_id": "recommender",
+      "habitats": [
+        "food_hospitality"
+      ],
+      "input_data": "Past orders, stated preferences, dietary constraints, menu items, and current context",
+      "models_algorithms": [
+        "content-based filtering",
+        "collaborative filtering",
+        "ranking model",
+        "rule-based constraint system"
+      ],
+      "name": "Nibblet",
+      "output_data": "Ranked dish or service recommendations",
+      "rarity": "rare",
+      "role": "Menu Recommender",
+      "signature": null,
+      "stage": 2
+    },
+    "recommender_product": {
+      "ai_tasks": [
+        "recommendation",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "Popularity can dominate recommendation lists",
+        "Sparse histories make personalization difficult",
+        "Purchases are imperfect signals of preference",
+        "Recommendations can reinforce past behavior"
+      ],
+      "dex_entry": "Cartivore collects shiny products and pushes the promising ones toward you. One innocent lamp purchase may convince it that lamps are now your defining personality trait, because behavioral data is useful but not clairvoyant.",
+      "evolves_from": "recommender_base",
+      "explainability": [
+        "recommendation reason",
+        "diversity analysis",
+        "coverage analysis",
+        "exposure audit"
+      ],
+      "family_id": "recommender",
+      "habitats": [
+        "retail"
+      ],
+      "input_data": "Product views, purchases, ratings, user behavior, and product metadata",
+      "models_algorithms": [
+        "collaborative filtering",
+        "matrix factorization",
+        "content-based filtering",
+        "two-tower embedding model"
+      ],
+      "name": "Cartivore",
+      "output_data": "Ranked product recommendations",
+      "rarity": "rare",
+      "role": "Product Recommender",
+      "signature": null,
+      "stage": 2
+    },
+    "recommender_research": {
+      "ai_tasks": [
+        "recommendation",
+        "semantic similarity",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "Corpus coverage limits what can be recommended",
+        "Citation and popularity patterns can shape results",
+        "Semantic matching can misunderstand user intent",
+        "A recommendation is not evidence that a source is trustworthy"
+      ],
+      "dex_entry": "Referaptor swoops in carrying papers you didn't know you needed. NC State Libraries offers Keenious, an AI tool that analyzes writing or a text sample and recommends relevant scholarly publications. It can uncover literature beyond obvious keywords, but you still have to decide whether the papers are good evidence.",
+      "evolves_from": "recommender_learning",
+      "explainability": [
+        "query-to-source match inspection",
+        "source relevance review",
+        "coverage analysis",
+        "diversity analysis"
+      ],
+      "family_id": "recommender",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "User writing, thesis statements, outlines, or research topics",
+      "models_algorithms": [
+        "semantic embedding model",
+        "similarity search",
+        "ranking model"
+      ],
+      "name": "Referaptor",
+      "output_data": "Recommended academic publications",
+      "rarity": "signature",
+      "role": "Research Recommender",
+      "signature": {
+        "anchor_name": "NC State University Libraries",
+        "anchor_scope": "library_system",
+        "documented_technology": [
+          "Keenious"
+        ],
+        "source_organization": "NC State University Libraries",
+        "source_title": "Keenious Research Explorer",
+        "source_url": "https://www.lib.ncsu.edu/databases/keenious-research-explorer/guide",
+        "verified_use": "AI-assisted scholarly publication recommendation"
+      },
+      "stage": 3
+    },
+    "retriever_base": {
+      "ai_tasks": [
+        "information retrieval",
+        "semantic search"
+      ],
+      "biases_limitations": [
+        "Vocabulary mismatch can hide relevant results",
+        "Embeddings can reflect training-data bias",
+        "Incomplete indexes limit what can be found",
+        "Relevance is not the same as truth"
+      ],
+      "dex_entry": "Searchound's job is gloriously dog-like: go find the thing and bring it back. Modern search can compare meaning instead of exact words, but mathematically similar is still only a guess at what you actually needed.",
+      "evolves_from": null,
+      "explainability": [
+        "retrieval score inspection",
+        "source inspection",
+        "query-to-result comparison",
+        "recall testing"
+      ],
+      "family_id": "retriever",
+      "habitats": [
+        "education_research",
+        "civic_government",
+        "office_business",
+        "retail"
+      ],
+      "input_data": "Search queries and indexed documents, products, records, or other searchable items",
+      "models_algorithms": [
+        "BM25",
+        "TF-IDF",
+        "embedding model",
+        "cosine similarity",
+        "approximate nearest neighbors",
+        "reranking model"
+      ],
+      "name": "Searchound",
+      "output_data": "Ranked existing items or documents judged relevant to the query",
+      "rarity": "common",
+      "role": "General Retriever",
+      "signature": null,
+      "stage": 1
+    },
+    "retriever_knowledge": {
+      "ai_tasks": [
+        "enterprise search",
+        "semantic retrieval",
+        "retrieval-augmented generation support"
+      ],
+      "biases_limitations": [
+        "Documents can be stale",
+        "Organizational knowledge can be incomplete",
+        "Poor permission controls can expose restricted information",
+        "Bad retrieval can cause downstream systems to answer from the wrong source"
+      ],
+      "dex_entry": "Cognicollie herds scattered institutional knowledge into one place. Policies, manuals, and reports become searchable by meaning, but if it retrieves the wrong document, the chatbot sitting behind it may produce a beautifully written answer to the wrong question.",
+      "evolves_from": "retriever_base",
+      "explainability": [
+        "retrieved passage display",
+        "permission audit",
+        "source freshness check",
+        "relevance review"
+      ],
+      "family_id": "retriever",
+      "habitats": [
+        "office_business",
+        "education_research"
+      ],
+      "input_data": "User questions and indexed organizational documents, policies, manuals, reports, or knowledge-base content",
+      "models_algorithms": [
+        "embedding search",
+        "BM25",
+        "hybrid retrieval",
+        "vector index",
+        "retrieval-augmented generation pipeline"
+      ],
+      "name": "Cognicollie",
+      "output_data": "Relevant internal documents or passages",
+      "rarity": "rare",
+      "role": "Knowledge Retriever",
+      "signature": null,
+      "stage": 2
+    },
+    "retriever_product": {
+      "ai_tasks": [
+        "semantic product search",
+        "information retrieval",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "Catalog metadata can be incomplete",
+        "Synonyms can be represented poorly",
+        "Ranking incentives can conflict with relevance",
+        "Sponsored results can influence ordering"
+      ],
+      "dex_entry": "Bargainbeagle can sniff out \"comfortable black shoes for standing all day\" without needing an exact product name. Semantic search makes shopping queries more human, but the order of results can still reflect business incentives as well as relevance.",
+      "evolves_from": "retriever_base",
+      "explainability": [
+        "query-to-result relevance review",
+        "ranking audit",
+        "sponsored-result transparency"
+      ],
+      "family_id": "retriever",
+      "habitats": [
+        "retail"
+      ],
+      "input_data": "Shopper queries and indexed product catalogs",
+      "models_algorithms": [
+        "embedding model",
+        "lexical search",
+        "semantic search",
+        "approximate nearest neighbors",
+        "reranking model"
+      ],
+      "name": "Bargainbeagle",
+      "output_data": "Ranked products that match the shopper's request",
+      "rarity": "rare",
+      "role": "Product Retriever",
+      "signature": null,
+      "stage": 2
+    },
+    "retriever_records": {
+      "ai_tasks": [
+        "information retrieval",
+        "semantic search",
+        "records search"
+      ],
+      "biases_limitations": [
+        "Undigitized records cannot be retrieved",
+        "Poor metadata can hide relevant documents",
+        "Incomplete collections create blind spots",
+        "Finding a document does not determine its legal meaning"
+      ],
+      "dex_entry": "Dachshundex is long enough to crawl through the filing cabinet. It can find laws, permits, and public records more quickly, but finding a document that mentions your problem is very different from knowing what that document legally means.",
+      "evolves_from": "retriever_base",
+      "explainability": [
+        "source inspection",
+        "search log inspection",
+        "coverage review",
+        "query reformulation"
+      ],
+      "family_id": "retriever",
+      "habitats": [
+        "civic_government"
+      ],
+      "input_data": "User questions, search terms, and indexed laws, permits, or public records",
+      "models_algorithms": [
+        "BM25",
+        "metadata search",
+        "embedding model",
+        "reranking model"
+      ],
+      "name": "Dachshundex",
+      "output_data": "Ranked relevant public records, laws, permits, or government documents",
+      "rarity": "rare",
+      "role": "Records Retriever",
+      "signature": null,
+      "stage": 2
+    },
+    "retriever_research": {
+      "ai_tasks": [
+        "academic search",
+        "semantic retrieval",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "Database coverage limits what can be found",
+        "Publication and citation bias affect available literature",
+        "Queries can be interpreted incorrectly",
+        "Ranking bias can privilege already-prominent sources"
+      ],
+      "dex_entry": "Labraquery noses through scholarly literature using more than exact keywords. That helps when your wording differs from the papers you're looking for, but first result remains a ranking decision, not a certificate of truth.",
+      "evolves_from": "retriever_base",
+      "explainability": [
+        "query-to-result similarity",
+        "source relevance review",
+        "precision analysis",
+        "recall analysis",
+        "corpus coverage review"
+      ],
+      "family_id": "retriever",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Research questions, keywords, topics, and indexed scholarly literature",
+      "models_algorithms": [
+        "BM25",
+        "embedding search",
+        "vector index",
+        "cross-encoder reranker"
+      ],
+      "name": "Labraquery",
+      "output_data": "Ranked papers, books, or research sources",
+      "rarity": "rare",
+      "role": "Research Retriever",
+      "signature": null,
+      "stage": 2
+    },
+    "retriever_semantic_search": {
+      "ai_tasks": [
+        "semantic search",
+        "academic retrieval",
+        "ranking"
+      ],
+      "biases_limitations": [
+        "Search is limited by database coverage",
+        "Proprietary systems can be difficult to inspect",
+        "Semantic models can misunderstand user intent",
+        "AI suggestions still require source verification"
+      ],
+      "dex_entry": "Semantiff understands the scent of an idea, not just its exact spelling. Duke Libraries documents academic-search tools that use AI to interpret natural-language queries, surface related concepts, and suggest relevant sources. Here AI isn't writing the scholarship. It is helping researchers find their way to it.",
+      "evolves_from": "retriever_research",
+      "explainability": [
+        "inspect retrieved sources",
+        "reformulate query",
+        "compare conventional and semantic search results",
+        "source relevance review"
+      ],
+      "family_id": "retriever",
+      "habitats": [
+        "education_research"
+      ],
+      "input_data": "Natural-language research queries, article text, or research concepts",
+      "models_algorithms": [
+        "semantic search system",
+        "embedding model",
+        "ranking model"
+      ],
+      "name": "Semantiff",
+      "output_data": "Structured searches, related concepts, and ranked scholarly sources",
+      "rarity": "signature",
+      "role": "Semantic Search Scout",
+      "signature": {
+        "anchor_name": "Duke University Libraries",
+        "anchor_scope": "library_system",
+        "documented_technology": [
+          "Web of Science Smart Search",
+          "ProQuest AI-assisted discovery"
+        ],
+        "source_organization": "Duke University Libraries",
+        "source_title": "Artificial Intelligence Research Guide",
+        "source_url": "https://guides.library.duke.edu/c.php?g=1351161&p=10927310",
+        "verified_use": "AI-assisted semantic academic search and discovery"
+      },
+      "stage": 3
+    },
+    "scheduler_base": {
+      "ai_tasks": [
+        "scheduling",
+        "optimization",
+        "resource allocation"
+      ],
+      "biases_limitations": [
+        "A poorly chosen objective can optimize the wrong thing",
+        "Human needs may be missing from formal constraints",
+        "Large optimization problems can be computationally difficult",
+        "Efficient solutions are not automatically fair solutions"
+      ],
+      "dex_entry": "Plancton swims through the problem of \"too many things, not enough time.\" Unlike a forecaster, it doesn't merely predict what might happen. It chooses a plan. That means whoever defines \"best\" quietly defines what Plancton will optimize for.",
+      "evolves_from": null,
+      "explainability": [
+        "objective inspection",
+        "constraint inspection",
+        "alternative solution comparison",
+        "sensitivity analysis",
+        "trade-off analysis"
+      ],
+      "family_id": "scheduler",
+      "habitats": [
+        "healthcare",
+        "transportation",
+        "office_business",
+        "retail",
+        "food_hospitality",
+        "civic_government"
+      ],
+      "input_data": "Resources, jobs, timing constraints, operational constraints, and optimization objectives",
+      "models_algorithms": [
+        "linear programming",
+        "integer programming",
+        "constraint programming",
+        "heuristic search",
+        "metaheuristic optimization",
+        "reinforcement learning"
+      ],
+      "name": "Plancton",
+      "output_data": "Assignments, schedules, routes, or resource-allocation plans",
+      "rarity": "common",
+      "role": "General Scheduler",
+      "signature": null,
+      "stage": 1
+    },
+    "scheduler_delivery": {
+      "ai_tasks": [
+        "vehicle routing",
+        "delivery scheduling",
+        "assignment optimization"
+      ],
+      "biases_limitations": [
+        "Traffic changes quickly",
+        "Map data can be wrong",
+        "Unrealistic delivery windows can produce bad plans",
+        "Efficiency targets can create pressure on workers"
+      ],
+      "dex_entry": "Parcelprawn answers the deceptively horrible question \"Who delivers what, in what order, by which route?\" A handful of stops produces a shocking number of possible plans, which is why optimization gets invited to the party.",
+      "evolves_from": "scheduler_base",
+      "explainability": [
+        "route visualization",
+        "constraint inspection",
+        "alternative route comparison",
+        "service-level metrics"
+      ],
+      "family_id": "scheduler",
+      "habitats": [
+        "retail",
+        "food_hospitality",
+        "transportation"
+      ],
+      "input_data": "Orders, destinations, vehicle capacity, travel times, and delivery constraints",
+      "models_algorithms": [
+        "vehicle routing algorithm",
+        "integer programming",
+        "heuristic optimization",
+        "metaheuristic optimization"
+      ],
+      "name": "Parcelprawn",
+      "output_data": "Delivery routes, stop sequences, and order assignments",
+      "rarity": "rare",
+      "role": "Delivery Scheduler",
+      "signature": null,
+      "stage": 2
+    },
+    "scheduler_hospital": {
+      "ai_tasks": [
+        "scheduling",
+        "resource allocation",
+        "optimization"
+      ],
+      "biases_limitations": [
+        "Emergencies can invalidate plans",
+        "Important human constraints can be omitted",
+        "Efficiency can conflict with fairness or access",
+        "Resource shortages can make every available solution imperfect"
+      ],
+      "dex_entry": "Wardray plays very high-stakes Tetris with beds, staff, equipment, and time. A mathematically efficient schedule can still be terrible if the objective forgot something important about actual humans.",
+      "evolves_from": "scheduler_base",
+      "explainability": [
+        "constraint inspection",
+        "objective inspection",
+        "alternative schedule comparison",
+        "utilization metrics",
+        "fairness metrics"
+      ],
+      "family_id": "scheduler",
+      "habitats": [
+        "healthcare"
+      ],
+      "input_data": "Beds, staff availability, appointments, equipment availability, patient needs, and operational constraints",
+      "models_algorithms": [
+        "constraint programming",
+        "mixed-integer programming",
+        "forecast-driven optimization"
+      ],
+      "name": "Wardray",
+      "output_data": "Resource assignments and schedules",
+      "rarity": "rare",
+      "role": "Hospital Scheduler",
+      "signature": null,
+      "stage": 2
+    },
+    "scheduler_ride_booking": {
+      "ai_tasks": [
+        "conversational AI",
+        "trip scheduling",
+        "request interpretation"
+      ],
+      "biases_limitations": [
+        "Speech or language errors can create incorrect bookings",
+        "Accessibility needs can be complex",
+        "Unusual trip requests may require human help",
+        "A human or app fallback is important"
+      ],
+      "dex_entry": "Cabcrab takes reservations after the humans clock out. GoDurham documents an AI scheduler and calling system that can help eligible riders manage or book trips outside staffed reservation hours. This is conversational AI meeting a very practical scheduling job, where accessibility and an escape hatch to humans matter enormously.",
+      "evolves_from": "scheduler_transit",
+      "explainability": [
+        "confirmation read-back",
+        "booking detail audit",
+        "human fallback",
+        "error monitoring"
+      ],
+      "family_id": "scheduler",
+      "habitats": [
+        "transportation"
+      ],
+      "input_data": "Rider identity, pickup location, drop-off location, requested times, and trip details",
+      "models_algorithms": [
+        "conversational AI system",
+        "scheduling system"
+      ],
+      "name": "Cabcrab",
+      "output_data": "Scheduled trip details and booking confirmation",
+      "rarity": "signature",
+      "role": "Ride Booking Assistant",
+      "signature": {
+        "anchor_name": "GoDurham ACCESS",
+        "anchor_scope": "agency_service",
+        "documented_technology": [],
+        "source_organization": "GoDurham ACCESS",
+        "source_title": "GoDurham ACCESS ADA Paratransit",
+        "source_url": "https://godurhamaccess.org/godurham-access-ada-paratransit",
+        "verified_use": "After-hours AI-assisted trip scheduling"
+      },
+      "stage": 3
+    },
+    "scheduler_traffic_signal": {
+      "ai_tasks": [
+        "traffic perception",
+        "traffic estimation",
+        "signal optimization"
+      ],
+      "biases_limitations": [
+        "Camera blind spots can hide road users",
+        "Weather can reduce visual quality",
+        "Pilot results may not generalize everywhere",
+        "Traffic optimization creates trade-offs among road users",
+        "Camera-based systems can create privacy concerns even without identification"
+      ],
+      "dex_entry": "Signalquid glows red, yellow, and green for a reason. Raleigh's 2026 pilot uses AI to turn real-time traffic-camera video into data that transportation staff can use to improve signal timing and safety. The city says the pilot does not store video or collect identifying information.",
+      "evolves_from": "scheduler_transit",
+      "explainability": [
+        "detected traffic counts",
+        "comparison with manual counts",
+        "before-and-after traffic metrics",
+        "safety metrics"
+      ],
+      "family_id": "scheduler",
+      "habitats": [
+        "transportation",
+        "civic_government"
+      ],
+      "input_data": "Live traffic-camera video",
+      "models_algorithms": [
+        "computer vision model",
+        "traffic estimation model",
+        "optimization system"
+      ],
+      "name": "Signalquid",
+      "output_data": "Traffic measurements used to support signal-timing and safety decisions",
+      "rarity": "signature",
+      "role": "Traffic Signal Optimizer",
+      "signature": {
+        "anchor_name": "City of Raleigh Transportation",
+        "anchor_scope": "city_system",
+        "documented_technology": [],
+        "source_organization": "City of Raleigh",
+        "source_title": "AI Pilot Program: Raleigh on the Move",
+        "source_url": "https://raleighnc.gov/transportation/news/ai-pilot-program-raleigh-move",
+        "verified_use": "AI analysis of traffic-camera video for traffic data and signal-timing improvement"
+      },
+      "stage": 3
+    },
+    "scheduler_transit": {
+      "ai_tasks": [
+        "transit scheduling",
+        "route optimization",
+        "dispatch optimization"
+      ],
+      "biases_limitations": [
+        "Traffic conditions are uncertain",
+        "Accessibility needs must be represented explicitly",
+        "Service efficiency can conflict with geographic equity",
+        "Small delays can cascade through a transit network"
+      ],
+      "dex_entry": "Routeopus has eight metaphorical arms and all of them are holding a timetable. It coordinates vehicles, routes, and timing, asking not merely \"Will traffic be bad?\" but \"Given that, what should we do?\"",
+      "evolves_from": "scheduler_base",
+      "explainability": [
+        "route alternatives",
+        "constraint inspection",
+        "delay metrics",
+        "service metrics"
+      ],
+      "family_id": "scheduler",
+      "habitats": [
+        "transportation"
+      ],
+      "input_data": "Routes, vehicles, schedules, GPS positions, passenger demand, and traffic conditions",
+      "models_algorithms": [
+        "routing algorithm",
+        "mixed-integer programming",
+        "heuristic optimization",
+        "real-time optimization"
+      ],
+      "name": "Routeopus",
+      "output_data": "Routing, dispatch, timing, or vehicle-assignment decisions",
+      "rarity": "rare",
+      "role": "Transit Scheduler",
+      "signature": null,
+      "stage": 2
+    },
+    "scheduler_transit_flow": {
+      "ai_tasks": [
+        "real-time transit optimization",
+        "transit priority",
+        "operational decision support"
+      ],
+      "biases_limitations": [
+        "Public documentation does not specify the exact model",
+        "Priority for one vehicle can affect other road users",
+        "Benefits can vary by route and intersection",
+        "Limited deployment can make generalization difficult"
+      ],
+      "dex_entry": "Flowfin rides the current instead of merely planning it. GoDurham has experimented with AI-powered tools that process onboard GPS, schedule, and performance information to support transit priority and reduce travel time in heavy traffic. Durham Station is the gameplay anchor for this system-level example, not a claim that the AI exists only at that coordinate.",
+      "evolves_from": "scheduler_transit",
+      "explainability": [
+        "before-and-after travel time",
+        "on-time performance metrics",
+        "route-level comparison",
+        "intersection-level comparison",
+        "human operational review"
+      ],
+      "family_id": "scheduler",
+      "habitats": [
+        "transportation"
+      ],
+      "input_data": "Bus GPS positions, schedule data, and on-time performance data",
+      "models_algorithms": [
+        "real-time optimization",
+        "predictive model",
+        "decision support system"
+      ],
+      "name": "Flowfin",
+      "output_data": "Transit-priority information or operational decisions intended to reduce travel time",
+      "rarity": "signature",
+      "role": "Transit Flow Optimizer",
+      "signature": {
+        "anchor_name": "GoDurham",
+        "anchor_scope": "agency_system",
+        "documented_technology": [],
+        "source_organization": "Government Technology",
+        "source_title": "Durham, N.C., Looks to AI to Boost Transit Performance",
+        "source_url": "https://www.govtech.com/transportation/durham-n-c-looks-to-ai-to-boost-transit-performance",
+        "verified_use": "AI-supported transit signal priority and performance optimization"
+      },
+      "stage": 3
+    },
+    "scheduler_workforce": {
+      "ai_tasks": [
+        "workforce scheduling",
+        "resource allocation",
+        "optimization"
+      ],
+      "biases_limitations": [
+        "Worker preferences can be undervalued",
+        "Historical demand can reinforce chronic understaffing",
+        "Fairness across workers can conflict with efficiency",
+        "Schedule quality depends on accurate availability data"
+      ],
+      "dex_entry": "Shiftshark circles the roster until every shift is covered. Good scheduling balances demand, skills, laws, and worker preferences. Bad scheduling treats humans like identical puzzle pieces.",
+      "evolves_from": "scheduler_base",
+      "explainability": [
+        "objective inspection",
+        "constraint inspection",
+        "fairness metrics",
+        "alternative schedule comparison"
+      ],
+      "family_id": "scheduler",
+      "habitats": [
+        "office_business",
+        "retail",
+        "food_hospitality"
+      ],
+      "input_data": "Demand forecasts, worker availability, worker skills, preferences, and labor rules",
+      "models_algorithms": [
+        "integer programming",
+        "constraint programming",
+        "heuristic optimization",
+        "demand-forecast-driven optimization"
+      ],
+      "name": "Shiftshark",
+      "output_data": "Staff schedules and shift assignments",
+      "rarity": "rare",
+      "role": "Workforce Scheduler",
+      "signature": null,
+      "stage": 2
+    }
+  },
+  "version": 1
+}

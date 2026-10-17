@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Modemon GO Modedex",
+  "description": "Canonical educational content, not spawn configuration or deployment assertions.",
+  "type": "object",
+  "required": ["version", "families", "modemon"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"type": "integer", "const": 1},
+    "families": {
+      "type": "object",
+      "required": ["detector", "anomaly", "forecast", "recommender", "extractor", "scheduler", "generator", "retriever"],
+      "propertyNames": {"$ref": "#/$defs/familyId"},
+      "additionalProperties": {"$ref": "#/$defs/family"}
+    },
+    "modemon": {
+      "type": "object",
+      "propertyNames": {"$ref": "#/$defs/modemonId"},
+      "additionalProperties": {"$ref": "#/$defs/modemon"}
+    }
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "textArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/text"}
+    },
+    "familyId": {
+      "type": "string",
+      "enum": ["detector", "anomaly", "forecast", "recommender", "extractor", "scheduler", "generator", "retriever"]
+    },
+    "modemonId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)+$"
+    },
+    "habitatId": {
+      "type": "string",
+      "enum": ["healthcare", "finance", "retail", "food_hospitality", "education_research", "transportation", "civic_government", "entertainment", "office_business"]
+    },
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "base_modemon_id", "visual_family", "core_job"],
+      "properties": {
+        "name": {"$ref": "#/$defs/text"},
+        "base_modemon_id": {"$ref": "#/$defs/modemonId"},
+        "visual_family": {"$ref": "#/$defs/text"},
+        "core_job": {"$ref": "#/$defs/text"}
+      }
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["anchor_name", "anchor_scope", "verified_use", "documented_technology", "source_title", "source_organization", "source_url"],
+      "properties": {
+        "anchor_name": {"$ref": "#/$defs/text"},
+        "anchor_scope": {"$ref": "#/$defs/text"},
+        "verified_use": {"$ref": "#/$defs/text"},
+        "documented_technology": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+        "source_title": {"$ref": "#/$defs/text"},
+        "source_organization": {"$ref": "#/$defs/text"},
+        "source_url": {"type": "string", "minLength": 1, "format": "uri"}
+      }
+    },
+    "modemon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "family_id", "stage", "rarity", "evolves_from", "role", "habitats", "ai_tasks", "models_algorithms", "input_data", "output_data", "biases_limitations", "explainability", "dex_entry", "signature"],
+      "properties": {
+        "name": {"$ref": "#/$defs/text"},
+        "family_id": {"$ref": "#/$defs/familyId"},
+        "stage": {"type": "integer", "enum": [1, 2, 3]},
+        "rarity": {"type": "string", "enum": ["common", "rare", "signature"]},
+        "evolves_from": {"anyOf": [{"$ref": "#/$defs/modemonId"}, {"type": "null"}]},
+        "role": {"$ref": "#/$defs/text"},
+        "habitats": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/habitatId"}
+        },
+        "ai_tasks": {"$ref": "#/$defs/textArray"},
+        "models_algorithms": {"$ref": "#/$defs/textArray"},
+        "input_data": {"$ref": "#/$defs/text"},
+        "output_data": {"$ref": "#/$defs/text"},
+        "biases_limitations": {"$ref": "#/$defs/textArray"},
+        "explainability": {"$ref": "#/$defs/textArray"},
+        "dex_entry": {"$ref": "#/$defs/text"},
+        "signature": {"anyOf": [{"$ref": "#/$defs/signature"}, {"type": "null"}]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"stage": {"const": 1}}},
+          "then": {"properties": {"rarity": {"const": "common"}, "evolves_from": {"type": "null"}, "signature": {"type": "null"}}}
+        },
+        {
+          "if": {"properties": {"stage": {"const": 2}}},
+          "then": {"properties": {"rarity": {"const": "rare"}, "evolves_from": {"$ref": "#/$defs/modemonId"}, "signature": {"type": "null"}}}
+        },
+        {
+          "if": {"properties": {"stage": {"const": 3}}},
+          "then": {"properties": {"rarity": {"const": "signature"}, "evolves_from": {"$ref": "#/$defs/modemonId"}, "signature": {"$ref": "#/$defs/signature"}}}
+        }
+      ]
+    }
+  }
+}
