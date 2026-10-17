@@ -1,0 +1,9 @@
+region_id,total_cells,classified_cells,unclassified_cells,primary_habitat_counts,secondary_habitat_counts,confidence_counts,mean_contributing_poi_count
+DUR-01,326,326,0,"{""Civic & Government"": 50, ""Education & Research"": 3, ""Entertainment"": 97, ""Food & Hospitality"": 60, ""Office & Business"": 5, ""Retail"": 77, ""Transportation"": 34}","{""Civic & Government"": 14, ""Education & Research"": 3, ""Entertainment"": 48, ""Finance"": 2, ""Food & Hospitality"": 86, ""Healthcare"": 1, ""Office & Business"": 6, ""Retail"": 37, ""Transportation"": 9}","{""high"": 147, ""low"": 83, ""medium"": 96}",31.755
+DUR-02,389,389,0,"{""Education & Research"": 348, ""Entertainment"": 37, ""Food & Hospitality"": 3, ""Healthcare"": 1}","{""Civic & Government"": 1, ""Education & Research"": 41, ""Entertainment"": 69, ""Food & Hospitality"": 19, ""Healthcare"": 33}","{""high"": 286, ""low"": 38, ""medium"": 65}",8.005
+RAL-01,376,371,5,"{""Civic & Government"": 5, ""Education & Research"": 26, ""Entertainment"": 118, ""Food & Hospitality"": 152, ""Retail"": 57, ""Transportation"": 13}","{""Civic & Government"": 31, ""Education & Research"": 49, ""Entertainment"": 60, ""Food & Hospitality"": 48, ""Office & Business"": 4, ""Retail"": 75, ""Transportation"": 13}","{""high"": 102, ""low"": 126, ""medium"": 148}",52.053
+RAL-02,151,151,0,"{""Entertainment"": 151}","{""Civic & Government"": 7, ""Food & Hospitality"": 1, ""Office & Business"": 2, ""Transportation"": 1}","{""high"": 148, ""medium"": 3}",4.013
+RAL-03A,151,151,0,"{""Education & Research"": 151}","{""Entertainment"": 35, ""Food & Hospitality"": 1, ""Healthcare"": 1, ""Retail"": 1}","{""high"": 134, ""low"": 2, ""medium"": 15}",6.874
+RAL-03B,41,41,0,"{""Entertainment"": 41}",{},"{""high"": 41}",5.146
+RAL-04,525,525,0,"{""Education & Research"": 525}","{""Civic & Government"": 1, ""Entertainment"": 15}","{""high"": 524, ""medium"": 1}",3.522
+RAL-05,39,39,0,"{""Healthcare"": 39}",{},"{""high"": 39}",2.385
