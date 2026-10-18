@@ -63,7 +63,7 @@ one-metre guard. Captures/escapes remove markers; they never refill or reroll th
 world. Approved scheduled Signatures would need an explicit crosswalk and priority
 integration first; none is enabled in v1.
 
-Generated metric POI helper coordinates are rounded to one micrometre for stable
+Generated metric POI helper coordinates are rounded to one millimetre for stable
 macOS/Linux builds. Original latitude/longitude and all polygon geometry remain
 exact. The Python requirements pin Fiona 1.9.6 for GeoPandas 0.14 compatibility.
 

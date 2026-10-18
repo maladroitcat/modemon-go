@@ -27,7 +27,9 @@ class WebRuntimeTests(unittest.TestCase):
         self.assertEqual(self.payload, bridge.build_payload())
         expected = json.loads(bridge.DESTINATION.read_text())
         for index, poi in enumerate(self.payload['pois']):
-            self.assertEqual(poi, expected['pois'][index], f"POI mismatch: {poi['id']}")
+            for key, value in poi.items():
+                self.assertEqual(value, expected['pois'][index][key],
+                                 f"POI mismatch: {poi['id']}.{key}")
         self.assertEqual(self.payload, expected)
 
     def test_all_source_hashes_match_and_sources_unchanged(self):
