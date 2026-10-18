@@ -1,6 +1,13 @@
 import pointInPolygon from "@turf/boolean-point-in-polygon";
 import type { Feature, Polygon, MultiPolygon } from "geojson";
 import { rules } from "./rules.ts";
+import {
+  difficultyQuestionsFor,
+  isDifficulty,
+  quizModes,
+  type Difficulty,
+  type GroundedQuestion,
+} from "./quizzes.ts";
 
 export type Species = {
   name: string;
@@ -41,7 +48,10 @@ export type Poi = {
 };
 export type Runtime = {
   data_version: string;
-  modedex: { modemon: Record<string, Species> };
+  modedex: {
+    modemon: Record<string, Species>;
+    families?: Record<string, { name: string }>;
+  };
   regions: Area[];
   zones: Area[];
   neutral: Area[];
@@ -76,9 +86,12 @@ export type Attempt = {
   speciesId: string;
   poiName: string;
   date: string;
+  quiz_version?: 2;
+  difficulty?: Difficulty;
+  questions?: GroundedQuestion[];
 };
 export type Progress = {
-  version: 1;
+  version: 1 | 2;
   discovered: string[];
   attempts: Record<string, Attempt>;
 };
@@ -332,6 +345,91 @@ export function beginAttempt(progress: Progress, spawn: Spawn): Progress {
     },
   };
 }
+
+export function attemptRules(attempt: Attempt | null | undefined) {
+  if (
+    !attempt ||
+    (attempt.quiz_version === undefined &&
+      attempt.difficulty === undefined &&
+      attempt.questions === undefined)
+  )
+    return {
+      ...quizModes.novice,
+      difficulty: "novice" as Difficulty,
+      legacy: true,
+    };
+  if (
+    attempt.quiz_version !== 2 ||
+    !isDifficulty(attempt.difficulty) ||
+    !Array.isArray(attempt.questions)
+  )
+    throw Error(
+      "Saved quiz version or difficulty is unreadable. It was not overwritten.",
+    );
+  return {
+    ...quizModes[attempt.difficulty],
+    difficulty: attempt.difficulty,
+    legacy: false,
+  };
+}
+export function startAttempt(
+  progress: Progress,
+  spawn: Spawn,
+  data: Runtime,
+  difficulty: Difficulty = "novice",
+): Progress {
+  if (progress.attempts[spawn.id]) return progress;
+  const next = beginAttempt(progress, spawn);
+  return {
+    ...next,
+    version: 2,
+    attempts: {
+      ...next.attempts,
+      [spawn.id]: {
+        ...next.attempts[spawn.id],
+        quiz_version: 2,
+        difficulty,
+        questions: difficultyQuestionsFor(spawn, data, difficulty),
+      },
+    },
+  };
+}
+export function changeDifficulty(
+  progress: Progress,
+  spawn: Spawn,
+  data: Runtime,
+  difficulty: Difficulty,
+): Progress {
+  const attempt = progress.attempts[spawn.id];
+  if (
+    !attempt ||
+    attemptRules(attempt).legacy ||
+    attempt.status !== "in_progress" ||
+    attempt.answers.length
+  )
+    throw Error("Difficulty is locked for this encounter.");
+  if (attempt.difficulty === difficulty) return progress;
+  return {
+    ...progress,
+    attempts: {
+      ...progress.attempts,
+      [spawn.id]: {
+        ...attempt,
+        difficulty,
+        questions: difficultyQuestionsFor(spawn, data, difficulty),
+      },
+    },
+  };
+}
+export function questionsForAttempt(
+  spawn: Spawn,
+  data: Runtime,
+  attempt: Attempt,
+): Question[] {
+  return attemptRules(attempt).legacy
+    ? questionsFor(spawn, data)
+    : attempt.questions!;
+}
 export function answerQuestion(
   progress: Progress,
   spawn: Spawn,
@@ -339,25 +437,29 @@ export function answerQuestion(
   questions: Question[],
 ): Progress {
   const attempt = progress.attempts[spawn.id];
+  const mode = attemptRules(attempt);
   if (
     !attempt ||
     attempt.status !== "in_progress" ||
-    attempt.answers.length >= 3
+    attempt.answers.length >= mode.count
   )
     throw Error("This encounter cannot be answered again.");
   const q = questions[attempt.answers.length];
   if (
+    !q ||
     !Number.isInteger(answer) ||
     answer < 0 ||
     answer >= q.options.length ||
-    questions.length !== 3
+    questions.length !== mode.count ||
+    (!mode.legacy &&
+      JSON.stringify(questions) !== JSON.stringify(attempt.questions))
   )
     throw Error("Invalid question response");
   const answers = [...attempt.answers, answer];
   const correct = answers.filter((v, i) => v === questions[i].correct).length;
   const status =
-    answers.length === 3
-      ? correct >= 2
+    answers.length === mode.count
+      ? correct >= mode.required
         ? "captured"
         : "escaped"
       : "in_progress";
@@ -379,7 +481,8 @@ export function readProgress(
   if (!text) return emptyProgress();
   const p = JSON.parse(text) as Progress;
   if (
-    p.version !== 1 ||
+    !p ||
+    (p.version !== 1 && p.version !== 2) ||
     !Array.isArray(p.discovered) ||
     !p.discovered.every((id) => typeof id === "string" && id.length > 0) ||
     !p.attempts ||
@@ -388,9 +491,41 @@ export function readProgress(
   )
     throw Error("Saved progress is unreadable. It was not overwritten.");
   for (const a of Object.values(p.attempts)) {
+    const config = attemptRules(a);
+    if (!config.legacy && p.version !== 2)
+      throw Error(
+        "Difficulty-aware encounters require progress version 2. Nothing was overwritten.",
+      );
+    if (!config.legacy) {
+      const qs = a.questions!;
+      if (
+        qs.length !== config.count ||
+        qs.some(
+          (q) =>
+            !q ||
+            typeof q.id !== "string" ||
+            !q.id ||
+            typeof q.prompt !== "string" ||
+            !q.prompt.trim() ||
+            typeof q.explanation !== "string" ||
+            !q.explanation.trim() ||
+            !Array.isArray(q.options) ||
+            q.options.length !== 4 ||
+            q.options.some((v) => typeof v !== "string" || !v.trim()) ||
+            new Set(q.options).size !== 4 ||
+            !Number.isInteger(q.correct) ||
+            q.correct < 0 ||
+            q.correct > 3,
+        ) ||
+        new Set(qs.map((q) => q.id)).size !== qs.length
+      )
+        throw Error(
+          "Saved questions are unreadable. They were not overwritten.",
+        );
+    }
     if (
       !Array.isArray(a.answers) ||
-      a.answers.length > 3 ||
+      a.answers.length > config.count ||
       !a.answers.every((v) => Number.isInteger(v) && v >= 0 && v < 4) ||
       !["in_progress", "captured", "escaped"].includes(a.status)
     )
@@ -400,12 +535,22 @@ export function readProgress(
       typeof a.poiName !== "string" ||
       typeof a.date !== "string" ||
       (a.status === "in_progress"
-        ? a.answers.length === 3
-        : a.answers.length !== 3)
+        ? a.answers.length === config.count
+        : a.answers.length !== config.count)
     )
       throw Error(
         "Saved encounter metadata is unreadable. It was not overwritten.",
       );
+    if (!config.legacy && a.status !== "in_progress") {
+      const correct = a.answers.filter(
+        (v, i) => v === a.questions![i].correct,
+      ).length;
+      const expected = correct >= config.required ? "captured" : "escaped";
+      if (a.status !== expected)
+        throw Error(
+          "Saved quiz result is inconsistent. It was not overwritten.",
+        );
+    }
   }
   return p;
 }

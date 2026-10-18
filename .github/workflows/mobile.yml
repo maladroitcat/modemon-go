@@ -47,6 +47,8 @@ jobs:
       - run: npm run check
       - run: npm run check:playable
       - run: npm run test:playable
+      - run: node --experimental-strip-types web/scripts/validate-quizzes.ts --write
+      - run: git diff --exit-code -- web/quiz-audit.json
       - run: npx expo install --check
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:e2e
