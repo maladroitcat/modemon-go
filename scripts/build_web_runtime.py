@@ -88,7 +88,10 @@ def build_payload(root=ROOT):
         x, y = project.transform(lon, lat)
         anchors.append(dict(
             id=p['poi_id'], name=human.get('verified_name') or p['name'],
-            region=p['region_id'], lat=lat, lon=lon, x=x*unit_to_m, y=y*unit_to_m,
+            # Metric helper coordinates only: micrometre quantization removes
+            # platform libm residue, far below the one-metre density guard.
+            region=p['region_id'], lat=lat, lon=lon,
+            x=round(x*unit_to_m, 6), y=round(y*unit_to_m, 6),
             primary=HABITATS.get(p['habitat_primary']), secondary=HABITATS.get(p['habitat_secondary']),
             zone_ids=[z['zone_id'] for z in contexts],
             zone_habitats=sorted({HABITATS[z['habitat_primary']] for z in contexts}),

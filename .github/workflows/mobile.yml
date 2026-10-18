@@ -2,7 +2,7 @@ name: Mobile and playable web
 
 on:
   pull_request:
-    paths: ['mobile/**', 'scripts/build_web_runtime.py', 'tests/test_web_runtime.py', '.github/workflows/mobile.yml']
+    paths: ['mobile/**', 'scripts/build_web_runtime.py', 'tests/test_web_runtime.py', 'requirements.txt', '.github/workflows/mobile.yml']
   workflow_dispatch:
 
 permissions:
