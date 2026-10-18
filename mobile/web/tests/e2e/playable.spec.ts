@@ -1,6 +1,21 @@
 import { expect, test, type Page } from "@playwright/test";
 import { readFileSync } from "node:fs";
 import { buildWorld, questionsFor, type Runtime } from "../../src/engine";
+import { markerLabel, placeLabel } from "../../src/presentation";
+const legacy = JSON.parse(
+  readFileSync(
+    new URL("../fixtures/mvp-gameplay.json", import.meta.url),
+    "utf8",
+  ),
+) as {
+  saved_progress: import("../../src/engine").Progress;
+  saved_encounters: {
+    id: string;
+    poi_id: string;
+    name: string;
+    speciesId: string;
+  }[];
+};
 const data = JSON.parse(
   readFileSync(new URL("../../src/data/runtime.json", import.meta.url), "utf8"),
 ) as Runtime;
@@ -89,6 +104,21 @@ test("demo full capture survives reload; real collection stays separate", async 
     await page
       .getByRole("button", { name: q.options[q.correct], exact: true })
       .click();
+    await expect(page.locator(".feedback")).toHaveClass(/feedback--correct/);
+    await expect(page.locator(".feedback")).toHaveCSS(
+      "background-color",
+      "rgb(234, 244, 237)",
+    );
+    await expect(page.locator(".feedback")).toHaveCSS(
+      "border-left-color",
+      "rgb(20, 125, 101)",
+    );
+    await expect(page.locator(".feedback .lucide-circle-check")).toBeVisible();
+    if (i === 0)
+      await page.screenshot({
+        path: info.outputPath("feedback-correct.png"),
+        fullPage: true,
+      });
     await page
       .getByRole("button", {
         name: i === 2 ? "Show result" : "Next question",
@@ -114,7 +144,7 @@ test("demo full capture survives reload; real collection stays separate", async 
 });
 test("quiz progress cannot be reset by closing or reload; failed encounter remains escaped", async ({
   page,
-}) => {
+}, info) => {
   await demo(page);
   const s = await begin(page);
   await quiz(page);
@@ -126,6 +156,20 @@ test("quiz progress cannot be reset by closing or reload; failed encounter remai
     })
     .click();
   await expect(page.getByText(/Not quite. Correct answer:/)).toBeVisible();
+  await expect(page.locator(".feedback")).toHaveClass(/feedback--incorrect/);
+  await expect(page.locator(".feedback")).toHaveCSS(
+    "background-color",
+    "rgb(255, 240, 239)",
+  );
+  await expect(page.locator(".feedback")).toHaveCSS(
+    "border-left-color",
+    "rgb(172, 47, 47)",
+  );
+  await expect(page.locator(".feedback .lucide-circle-x")).toBeVisible();
+  await page.screenshot({
+    path: info.outputPath("feedback-incorrect.png"),
+    fullPage: true,
+  });
   await page.reload();
   await page
     .locator(".encounter-row")
@@ -216,7 +260,10 @@ test("both city demos and responsive street map remain usable", async ({
   await page
     .getByRole("combobox", { name: "Browse city" })
     .selectOption("Durham");
-  await expect(page.locator(".encounter-row").first()).toContainText("DUR-");
+  await expect(page.locator(".encounter-row").first()).toContainText(
+    /in (Downtown Durham|Duke University)/,
+  );
+  await expect(page.locator(".nearby")).not.toContainText(/\b(?:DUR|RAL)-\d/);
   for (const size of [
     { width: 320, height: 640 },
     { width: 844, height: 390 },
@@ -340,4 +387,174 @@ test("foreground GPS stops when hidden and no GPS history enters browser storage
   );
   expect(storage).not.toContain("35.7796");
   expect(storage).not.toContain("-78.6382");
+});
+
+test("tap dialogs and marker tooltips use friendly place, distance and safety wording", async ({
+  page,
+  context,
+}, info) => {
+  const s = buildWorld(data, "2026-10-17").find(
+    (s) => s.poi.region === "RAL-01",
+  )!;
+  await context.grantPermissions(["geolocation"]);
+  await context.setGeolocation({
+    latitude: s.poi.lat + 381 / 111195,
+    longitude: s.poi.lon,
+    accuracy: 12,
+  });
+  // Native geolocation timestamps use wall time; align this fixture with the
+  // frozen daily-rotation clock while retaining the browser's location API.
+  await page.addInitScript(() => {
+    const native = navigator.geolocation;
+    Object.defineProperty(navigator, 'geolocation', { configurable: true, value: {
+      watchPosition: (success: PositionCallback, error?: PositionErrorCallback, options?: PositionOptions) =>
+        native.watchPosition(p => success({coords:p.coords,timestamp:Date.now()} as GeolocationPosition), error, options),
+      clearWatch: native.clearWatch.bind(native),
+    }});
+  });
+  await onboard(page);
+  await page
+    .getByRole("button", { name: "Allow foreground location", exact: true })
+    .click();
+  await expect(page.getByText(/Real GPS · accuracy/)).toBeVisible();
+  await expect(
+    page.getByTitle(markerLabel(data, s), { exact: true }),
+  ).toHaveAttribute("aria-label", markerLabel(data, s));
+  const titles = await page
+    .locator(".encounter-pin")
+    .evaluateAll((nodes) => nodes.map((n) => n.getAttribute("title")));
+  expect(titles.every((t) => t && !/\b(?:RAL|DUR)-\d/.test(t))).toBe(true);
+  await page.locator(`[data-poi-id="${s.poi.id}"]`).click();
+  const modal = page.getByRole("dialog");
+  await expect(
+    modal.getByText(placeLabel(data, s.poi), { exact: true }),
+  ).toBeVisible();
+  await expect(modal).toContainText(
+    "You're about 380 m away. Get within roughly 75 m",
+  );
+  await expect(modal).toContainText(
+    "Stay in public areas; you don't need to enter the business.",
+  );
+  await expect(modal).not.toContainText(
+    /Association only|GPS tolerance|\b(?:RAL|DUR)-\d/,
+  );
+  await page.screenshot({
+    path: info.outputPath("friendly-location.png"),
+    fullPage: true,
+  });
+});
+
+test("long Modédex panels scroll and Capture stays reachable on small mobile screens", async ({
+  page,
+}, info) => {
+  const s = buildWorld(data, "2026-10-17")
+    .filter((s) => s.poi.region.startsWith("RAL"))
+    .sort(
+      (a, b) =>
+        data.modedex.modemon[b.speciesId].dex_entry.length -
+        data.modedex.modemon[a.speciesId].dex_entry.length,
+    )[0];
+  await demo(page);
+  for (const [index, viewport] of [
+    { width: 320, height: 568 },
+    { width: 393, height: 852 },
+    { width: 844, height: 390 },
+  ].entries()) {
+    await page.setViewportSize(viewport);
+    await page.locator(`[data-poi-id="${s.poi.id}"]`).click();
+    await expect(page.getByText(index===0
+      ? /Tap Simulate walking here to try this encounter without traveling/
+      : /Your simulated location is close enough/)).toBeVisible();
+    await page
+      .getByRole("button", {
+        name: "Simulate walking here (Demo)",
+        exact: true,
+      })
+      .click();
+    await expect(
+      page.getByText(/Your simulated location is close enough/),
+    ).toBeVisible();
+    await page
+      .getByRole("button", { name: "Enter encounter", exact: true })
+      .click();
+    await page.getByRole("button", { name: /^Inspect / }).click();
+    const modal = page.getByRole("dialog"),
+      capture = page.getByRole("button", {
+        name: "Capture · 3 questions",
+        exact: true,
+      });
+    expect(
+      await modal.evaluate((el) => el.scrollHeight > el.clientHeight),
+    ).toBe(true);
+    await capture.scrollIntoViewIfNeeded();
+    await expect(capture).toBeVisible();
+    const box = await capture.boundingBox(),
+      parent = await modal.boundingBox();
+    expect(box!.y + box!.height).toBeLessThanOrEqual(
+      parent!.y + parent!.height,
+    );
+    expect(
+      await modal.evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
+    ).toBe(true);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+    await page.screenshot({
+      path: info.outputPath(`intro-${viewport.width}x${viewport.height}.png`),
+      fullPage: true,
+    });
+    await capture.click();
+    await expect(
+      page.getByText("Question 1 of 3 · at least 2 correct to capture", {
+        exact: true,
+      }),
+    ).toBeVisible();
+    await page
+      .getByRole("button", { name: "Close encounter", exact: true })
+      .click();
+  }
+});
+
+test("pre-update captures, escape state and unfinished quiz survive the copy update", async ({
+  page,
+}) => {
+  await page.addInitScript((progress) => {
+    localStorage.setItem("modemon-go:playable:safety:v1", "1");
+    localStorage.setItem("modemon-go:playable:mode", "demo");
+    localStorage.setItem(
+      "modemon-go:playable:v1:progress:demo",
+      JSON.stringify(progress),
+    );
+  }, legacy.saved_progress);
+  await page.goto("/");
+  await expect(page.getByText("1 captured", { exact: true })).toBeVisible();
+  for (const saved of legacy.saved_encounters.slice(0, 2))
+    await expect(page.locator(`[data-poi-id="${saved.poi_id}"]`)).toHaveCount(
+      0,
+    );
+  const ongoing = legacy.saved_encounters[2];
+  await page.locator(`[data-poi-id="${ongoing.poi_id}"]`).click();
+  await page
+    .getByRole("button", { name: "Simulate walking here (Demo)", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Enter encounter", exact: true })
+    .click();
+  await quiz(page);
+  await expect(page.locator(".feedback")).toHaveClass(/feedback--correct/);
+  await page
+    .getByRole("button", { name: "Next question", exact: true })
+    .click();
+  await expect(
+    page.getByText("Question 2 of 3 · at least 2 correct to capture", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(() =>
+      JSON.parse(localStorage.getItem("modemon-go:playable:v1:progress:demo")!),
+    ),
+  ).toEqual(legacy.saved_progress);
 });

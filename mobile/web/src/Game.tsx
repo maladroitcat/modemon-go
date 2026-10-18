@@ -20,6 +20,17 @@ import type { FeatureCollection } from "geojson";
 import "leaflet/dist/leaflet.css";
 import "./style.css";
 import bundle from "./data/runtime.json";
+import QuizFeedback from "./QuizFeedback";
+import {
+  approximateDistance,
+  extraLocationSafety,
+  markerLabel,
+  placeLabel,
+  proximityCopy,
+  publicLocationSafety,
+  rarityLabel,
+  regionLabel,
+} from "./presentation";
 import { safetyNotice } from "../../src/content/safety";
 import {
   answerQuestion,
@@ -120,15 +131,13 @@ function Map({
       });
       const marker = L.marker([spawn.poi.lat, spawn.poi.lon], {
         icon,
-        alt: `Unknown ${spawn.rarity} encounter`,
-        title: `Unknown ${spawn.rarity} encounter`,
+        alt: markerLabel(data, spawn),
+        title: markerLabel(data, spawn),
       }).addTo(group);
       marker.on("click", () => onSelect(spawn));
-      marker.on("add", () => {
-        const el = marker.getElement();
-        el?.setAttribute("role", "button");
-        el?.setAttribute("aria-label", `Unknown ${spawn.rarity} encounter`);
-      });
+      const el = marker.getElement();
+      el?.setAttribute("role", "button");
+      el?.setAttribute("aria-label", markerLabel(data, spawn));
     }
     return () => {
       group.remove();
@@ -661,7 +670,9 @@ export default function App() {
                 </button>
               </>
             ) : (
-              <p>Choose an encounter, then simulate walking to it.</p>
+              <p>
+                Choose a mystery marker to try an encounter without traveling.
+              </p>
             )}
           </div>
           <Map world={active} position={position} onSelect={open} city={city} />
@@ -671,34 +682,38 @@ export default function App() {
             </p>
             <p className="muted">
               {local?.region
-                ? `${local.region} · ${local.zones.map((z) => z.properties.habitat_primary).join(", ") || "Neutral or uncovered area"}`
+                ? `${regionLabel(data, local.region)} · ${local.zones.map((z) => z.properties.habitat_primary).join(", ") || "No habitat identified here yet"}`
                 : position
-                  ? "Outside gameplay regions. No real encounters can be entered here."
-                  : "No player location selected."}
+                  ? "You're outside the game areas. Browse freely; real encounters still need a nearby phone location."
+                  : mode === "demo"
+                    ? "Choose an encounter to set a simulated location."
+                    : "Allow location access when you're ready to find a nearby encounter."}
             </p>
             <h2>Nearby encounters</h2>
             <p>
-              Anonymous until you enter. Green circle: Common · blue diamond:
-              Rare. Daily rotation: {day} (Eastern time).
+              Question marks hide the Modémon until you enter. Common markers
+              are green; Rare markers are blue. New encounters arrive each day (
+              {day}, Eastern time).
             </p>
             <div className="encounter-list">
               {available.map((s) => (
                 <button
                   className="encounter-row secondary"
+                  data-poi-id={s.poi.id}
                   key={s.id}
                   onClick={() => open(s)}
                 >
                   <span className={`rarity-dot ${s.rarity}`} />
                   <span>
-                    Unknown {s.rarity}
-                    <small>
-                      {s.poi.name} · {s.poi.region}
-                    </small>
+                    Mystery Modémon · {rarityLabel(s.rarity)}
+                    <small>{placeLabel(data, s.poi)}</small>
                   </span>
                   <span>
                     {position
-                      ? `${Math.round(distance(position, s.poi))} m`
-                      : "—"}
+                      ? `${approximateDistance(distance(position, s.poi))}${mode === "demo" ? " simulated" : ""}`
+                      : mode === "demo"
+                        ? "Try here"
+                        : "Location needed"}
                   </span>
                 </button>
               ))}
@@ -814,19 +829,32 @@ export default function App() {
             </button>
             <h2 id="encounter-title">
               {phase === "nearby"
-                ? "Unknown " + selected.rarity + " encounter"
+                ? "Mystery Modémon · " + rarityLabel(selected.rarity)
                 : data.modedex.modemon[selected.speciesId].name}
             </h2>
-            <p>
-              {selected.poi.name} · {selected.poi.region}
-            </p>
+            <p>{placeLabel(data, selected.poi)}</p>
             {mode === "demo" && (
               <p className="demo-inline">DEMO LOCATION — not your GPS</p>
             )}
             {phase === "nearby" && (
               <>
-                <p>{selected.poi.association_note}</p>
-                <p>{gate?.reason}</p>
+                <p>{publicLocationSafety}</p>
+                {extraLocationSafety(selected.poi) && (
+                  <p>{extraLocationSafety(selected.poi)}</p>
+                )}
+                {gate && (
+                  <p role="status">{proximityCopy(mode, position, gate)}</p>
+                )}
+                {mode === "real" &&
+                  position &&
+                  Number.isFinite(position.accuracy) &&
+                  position.accuracy >= 20 && (
+                    <p className="muted">
+                      Your phone&apos;s location estimate may be off by about{" "}
+                      {Math.round(position.accuracy)} m. Wait for a clearer
+                      signal if the distance seems wrong.
+                    </p>
+                  )}
                 {mode === "demo" && (
                   <button
                     className="secondary"
@@ -849,8 +877,9 @@ export default function App() {
                   Enter encounter
                 </button>
                 <p className="muted">
-                  Stop somewhere safe before entering. The coordinate is an
-                  association, not an instruction to enter a building.
+                  Stop somewhere safe before using your screen. Keep paths and
+                  entrances clear, and skip this encounter if you can&apos;t
+                  reach it safely.
                 </p>
               </>
             )}
@@ -882,21 +911,19 @@ export default function App() {
             {phase === "quiz" && (
               <>
                 {feedback !== null && attempt && (
-                  <div className="feedback" role="status">
-                    <strong>
-                      {attempt.answers[feedback] === quiz[feedback].correct
-                        ? "Correct."
-                        : "Not quite."}{" "}
-                      Correct answer:{" "}
-                      {quiz[feedback].options[quiz[feedback].correct]}
-                    </strong>
-                    <p>{quiz[feedback].explanation}</p>
-                    <button onClick={() => setFeedback(null)}>
-                      {attempt.status === "in_progress"
+                  <QuizFeedback
+                    correct={
+                      attempt.answers[feedback] === quiz[feedback].correct
+                    }
+                    answer={quiz[feedback].options[quiz[feedback].correct]}
+                    explanation={quiz[feedback].explanation}
+                    buttonLabel={
+                      attempt.status === "in_progress"
                         ? "Next question"
-                        : "Show result"}
-                    </button>
-                  </div>
+                        : "Show result"
+                    }
+                    onContinue={() => setFeedback(null)}
+                  />
                 )}
                 {feedback === null && attempt?.status === "in_progress" && (
                   <section>

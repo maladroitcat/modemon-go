@@ -240,8 +240,15 @@ small {
 }
 .encounter-row > span:last-child {
   margin-left: auto;
-  white-space: nowrap;
+  white-space: normal;
+  max-width: 80px;
+  flex-shrink: 0;
+  text-align: right;
   font-size: 12px;
+}
+.encounter-row > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
 }
 .encounter-row small {
   margin-top: 4px;
@@ -363,9 +370,35 @@ dd ul {
   min-height: 52px;
 }
 .feedback {
-  background: #eaf4ed;
-  border-left: 4px solid #147d65;
+  border-left: 4px solid;
   padding: 16px;
+}
+.feedback--correct {
+  background: #eaf4ed;
+  border-color: #147d65;
+  color: #123f2f;
+}
+.feedback--incorrect {
+  background: #fff0ef;
+  border-color: #ac2f2f;
+  color: #7f1d1d;
+}
+.feedback--incorrect button {
+  background: white;
+  border-color: #ac2f2f;
+  color: #7f1d1d;
+}
+.feedback-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.feedback-heading svg {
+  flex-shrink: 0;
+}
+.feedback-heading strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .dex-row {
   width: 100%;
