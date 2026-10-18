@@ -2,12 +2,11 @@
 """Verify/render pending external research, never add links to the app or canon."""
 import argparse
 import hashlib
-import io
 import json
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import urlsplit
 
 import requests
 import yaml
@@ -17,10 +16,59 @@ from scripts.build_workbook_research_review import ROOT, RESEARCH, csv_text, pro
 
 PENDING = "PENDING_OWNER_APPROVAL"
 # Network safety allowlist for this research only, NOT source-use approval.
-RESEARCH_HOSTS = {"developers.google.com", "huggingface.co", "web.stanford.edu"}
+RESEARCH_HOSTS = {"news.mit.edu", "www.ibm.com"}
 FIELDS = {"name", "approval_status", "publisher", "article_title", "proposed_url",
           "relevant_topic", "match_rationale", "confidence", "scope_label",
-          "why_workbooks_insufficient", "limitations", "verification_terms", "discovery_url"}
+          "why_workbooks_insufficient", "limitations", "verification_terms",
+          "audience", "resource_type", "accessibility_reason"}
+
+
+class ExternalPage(Page):
+    """Read semantic main content or IBM's explicitly marked article sections."""
+
+    def __init__(self):
+        super().__init__()
+        self.article_div_depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "div":
+            classes = dict(attrs).get("class", "").split()
+            if self.article_div_depth or any(c.startswith("body-article-") for c in classes):
+                self.article_div_depth += 1
+        super().handle_starttag(tag, attrs)
+
+    def handle_endtag(self, tag):
+        if tag == "div" and self.article_div_depth:
+            self.article_div_depth -= 1
+        super().handle_endtag(tag)
+
+    def handle_data(self, data):
+        if self.article_div_depth and not self.in_main and not self.skip:
+            self.parts.append(data)
+        super().handle_data(data)
+
+
+def reference_scope(workbooks, canon, review):
+    signatures = {key for key, row in canon["modemon"].items() if row["stage"] == 3}
+    initial = {key for key, row in review["species"].items() if row["previous_outcome"] == "unresolved"}
+    current = {key for key, row in workbooks["species"].items() if not row["primary_lesson"]}
+    return {
+        "policy": "Preserve every existing workbook match; outside research only for uncovered non-Signatures.",
+        "initial_workbook_matches": len(canon["modemon"]) - len(initial),
+        "initial_workbook_blanks": len(initial),
+        "initial_blank_signature_ids": sorted(initial & signatures),
+        "initial_blank_non_signature_ids": sorted(initial - signatures),
+        "current_workbook_matches": len(canon["modemon"]) - len(current),
+        "current_workbook_blanks": len(current),
+        "current_blank_signature_ids": sorted(current & signatures),
+        "outside_research_non_signature_ids": sorted(current - signatures),
+        "non_signature_count": len(canon["modemon"]) - len(signatures),
+        "non_signature_workbook_matches": len(set(canon["modemon"]) - signatures - current),
+        "signature_count": len(signatures),
+        "signature_policy": "Canonical real-project links are sufficient; no supplementary references proposed or researched.",
+        "canonical_signature_project_sources": {
+            key: canon["modemon"][key]["signature"]["source_url"] for key in sorted(signatures)},
+    }
 
 
 def read_yaml(path):
@@ -45,26 +93,31 @@ def load_inputs():
 def validate(data, workbooks, canon, review, evidence=None):
     if data["approval_status"] != PENDING:
         raise ValueError("Research cannot approve external references")
-    gaps = {k for k, r in review["species"].items() if r["outcome"] == "genuine_gap"}
+    gaps = set(reference_scope(workbooks, canon, review)["outside_research_non_signature_ids"])
+    if any(key in canon["modemon"] and canon["modemon"][key]["stage"] == 3 for key in data["proposals"]):
+        raise ValueError("Signature forms already have sufficient canonical project sources; no supplementary proposals")
     if set(data["proposals"]) != gaps:
-        raise ValueError("External proposals must correspond exactly to genuine reviewed workbook gaps")
+        raise ValueError("External proposals must correspond exactly to uncovered non-Signature workbook gaps")
+    if evidence is not None and set(evidence) != {row["proposed_url"] for row in data["proposals"].values()}:
+        raise ValueError("External evidence must cover only the current non-Signature proposals")
     for key, row in data["proposals"].items():
         if row["approval_status"] != PENDING:
             raise ValueError(f"Every external proposal must remain {PENDING}: {key}")
         if set(row) - FIELDS:
             raise ValueError(f"Unexpected field could masquerade as approved mapping: {key}")
-        for field in FIELDS - {"discovery_url", "verification_terms"}:
+        for field in FIELDS - {"verification_terms"}:
             if not isinstance(row.get(field), str) or not row[field].strip():
                 raise ValueError(f"Missing external review field {field}: {key}")
         if row["name"] != canon["modemon"][key]["name"] or workbooks["species"][key]["primary_lesson"]:
             raise ValueError(f"Must preserve canonical identity and unpopulated workbook gap: {key}")
         if row["confidence"] not in {"high", "medium", "low"}:
             raise ValueError(f"Invalid confidence: {key}")
+        if (row["audience"] != "general_public_no_ml_prerequisites"
+                or row["resource_type"] not in {"concept_overview", "plain_language_research_news"}):
+            raise ValueError(f"Outside sources must explain the AI job for a general audience, not implementation: {key}")
         if not row.get("verification_terms") or not all(isinstance(t, str) and t.strip() for t in row["verification_terms"]):
             raise ValueError(f"Missing content checks: {key}")
         check_external_url(row["proposed_url"])
-        if row.get("discovery_url"):
-            check_external_url(row["discovery_url"])
         if evidence is not None:
             item = evidence[row["proposed_url"]]
             if (item["approval_status"] != PENDING or item["http_status"] != 200
@@ -73,8 +126,6 @@ def validate(data, workbooks, canon, review, evidence=None):
                     or not all(item["verification_terms_found"].get(t) for t in row["verification_terms"])
                     or len(item["content_sha256"]) != 64 or not item["verified_at_utc"]):
                 raise ValueError(f"Invalid pending-source verification: {key}")
-            if row.get("discovery_url") and item.get("discovery_url") != row["discovery_url"]:
-                raise ValueError(f"Missing source TOC verification: {key}")
 
 
 def get(url):
@@ -95,44 +146,20 @@ def verify(data):
             continue
         time.sleep(.5)
         response = get(url)
-        pdf = response.content.startswith(b"%PDF")
-        if pdf:
-            try:
-                from pypdf import PdfReader
-            except ImportError as error:
-                raise RuntimeError("Live PDF audit requires pypdf; offline review/tests do not") from error
-            reader = PdfReader(io.BytesIO(response.content))
-            first_page = " ".join((reader.pages[0].extract_text() or "").split())
-            if row["article_title"] not in first_page:
-                raise ValueError("PDF first-page title mismatch")
-            text = " ".join(" ".join((page.extract_text() or "") for page in reader.pages).split())
-            observed = [row["article_title"]]
-        else:
-            page = Page()
-            page.feed(response.text)
-            observed = [heading for tag, heading in page.headings if tag == "h1"]
-            # Google puts collection-widget copy inside its H1. Keep the raw
-            # heading as evidence and remove only that known non-title suffix.
-            titles = [h.split(" Stay organized with collections", 1)[0] for h in observed]
-            if row["article_title"] not in titles:
-                raise ValueError(f"Actual article title mismatch: {url}; {observed}")
-            text = " ".join(" ".join(page.parts).split())
+        page = ExternalPage()
+        page.feed(response.text)
+        observed = [heading for tag, heading in page.headings if tag == "h1"]
+        if row["article_title"] not in observed:
+            raise ValueError(f"Actual article title mismatch: {url}; {observed}")
+        text = " ".join(" ".join(page.parts).split())
         terms = {term: term.casefold() in text.casefold() for term in row["verification_terms"]}
         if not all(terms.values()) or len(text) < 300:
             raise ValueError(f"External lesson topic mismatch: {url}; {terms}")
         item = {"approval_status": PENDING, "article_title": row["article_title"],
                 "observed_headings": observed, "http_status": response.status_code,
-                "final_url": response.url, "media_type": "pdf" if pdf else "html",
+                "final_url": response.url, "media_type": "html",
                 "verification_terms_found": terms, "content_sha256": hashlib.sha256(response.content).hexdigest(),
                 "verified_at_utc": datetime.now(timezone.utc).isoformat()}
-        if row.get("discovery_url"):
-            time.sleep(.5)
-            toc = get(row["discovery_url"])
-            page = Page()
-            page.feed(toc.text)
-            if url not in {urljoin(toc.url, href) for href, _ in page.links}:
-                raise ValueError("Reference is not linked from the claimed source TOC")
-            item["discovery_url"] = toc.url
         evidence[url] = item
     return evidence
 
@@ -147,20 +174,24 @@ def render(root=RESEARCH):
     root.mkdir(parents=True, exist_ok=True)
     (root / "modedex_external_owner_review.csv").write_text(csv_text(rows, fields), encoding="utf-8")
     lines = ["# Table B: External Fallbacks - PENDING_OWNER_APPROVAL", "",
-             "Every row is pending individual owner approval, including independently reviewed species sharing a URL. Verified does not mean approved. No row populates a Modedex, workbook-mapping, or runtime link.", "",
-             "These six proposals follow the full 360-lesson preferred-source review. The [preferred workbook table](modedex_learning_mapping.md) remains separate and its six genuine gaps remain blank.", "",
-             "| Species | Status | Exact proposed title / URL | Publisher | Topic / rationale | Confidence / scope | Why workbook coverage was insufficient | Limits |", "|---|---|---|---|---|---|---|---|"]
+             "Every row is PENDING_OWNER_APPROVAL. Verified does not mean approved. No row populates a Modedex, workbook-mapping, or runtime link.", "",
+             "Only four uncovered non-Signatures need outside references. All 45 existing workbook matches are unchanged, including component-level matches. All 12 Signatures already have sufficient canonical real-project sources and receive no supplementary proposals. See [scope accounting](modedex_reference_scope.json).", "",
+             "These public HTML articles explain what the AI-assisted job is, what it does, and where it is used; they are not implementation tutorials. Relevance and reading-level judgments remain reviewable.", "",
+             "| Species | Status | Exact proposed title / URL | Publisher | Topic / rationale | Confidence / scope | General-audience suitability | Why workbook coverage was insufficient | Limits |", "|---|---|---|---|---|---|---|---|---|"]
     def esc(value):
         return str(value).replace("|", "\\|").replace("\n", " ")
     for r in rows:
         cells = [f'`{r["species_id"]}` ({r["name"]})', r["approval_status"],
                  f'[{r["article_title"]}]({r["proposed_url"]})', r["publisher"],
                  r["relevant_topic"] + ": " + r["match_rationale"],
-                 r["confidence"] + ": " + r["scope_label"], r["why_workbooks_insufficient"], r["limitations"]]
+                 r["confidence"] + ": " + r["scope_label"], r["accessibility_reason"],
+                 r["why_workbooks_insufficient"], r["limitations"]]
         lines.append("| " + " | ".join(map(esc, cells)) + " |")
     lines += ["", "Confidence describes educational topic fit, not approval, clinical validity, production suitability, or proof of a Signature deployment. Source evidence is in external_reference_verification.json; existing Signature project URLs remain unchanged and separate.",
               "", "Owner decisions: accept/reject each species/reference pair or request alternatives. A future explicitly authorized change would be needed before any approved external link could enter the app. This research renderer has no approval or deployment command.", ""]
     (root / "modedex_external_owner_review.md").write_text("\n".join(lines), encoding="utf-8")
+    (root / "modedex_reference_scope.json").write_text(
+        json.dumps(reference_scope(workbooks, canon, review), indent=2, sort_keys=True) + "\n", encoding="utf-8")
     if protected_hashes() != before:
         raise ValueError("Protected canonical input changed during external research rendering")
     print(f"Rendered {len(rows)} external proposals, all {PENDING}; no approved links written.")

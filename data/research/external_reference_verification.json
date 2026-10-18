@@ -1,94 +1,74 @@
 {
-  "https://developers.google.com/optimization/routing": {
+  "https://news.mit.edu/2015/planning-algorithms-evaluate-probability-of-success-0115": {
     "approval_status": "PENDING_OWNER_APPROVAL",
-    "article_title": "Vehicle Routing",
-    "content_sha256": "81c7111f7dadbfca470932255dbda0a3846e90a1f49dccf3c39d3e59211bdc69",
-    "final_url": "https://developers.google.com/optimization/routing",
+    "article_title": "Software that knows the risks",
+    "content_sha256": "12d2e0415af69ab02e3236b34b8c1a7ad51559de4d053521203934c1d2e151a5",
+    "final_url": "https://news.mit.edu/2015/planning-algorithms-evaluate-probability-of-success-0115",
     "http_status": 200,
     "media_type": "html",
     "observed_headings": [
-      "Vehicle Routing Stay organized with collections Save and categorize content based on your preferences."
+      "Software that knows the risks"
     ],
     "verification_terms_found": {
+      "alternatives": true,
+      "bus": true,
       "constraints": true,
-      "fleet": true,
-      "time windows": true,
-      "vehicles": true
+      "planner": true
     },
-    "verified_at_utc": "2026-10-18T22:22:07.196708+00:00"
+    "verified_at_utc": "2026-10-18T22:59:52.556366+00:00"
   },
-  "https://developers.google.com/optimization/routing/vrptw": {
+  "https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713": {
     "approval_status": "PENDING_OWNER_APPROVAL",
-    "article_title": "Vehicle Routing Problem with Time Windows",
-    "content_sha256": "99eb267c6fb210eb4ce40431fbc863512487199574f56d82e3929376382cea14",
-    "final_url": "https://developers.google.com/optimization/routing/vrptw",
+    "article_title": "Robot helps nurses schedule tasks on labor floor",
+    "content_sha256": "1b5eb345aeb947b9c2f7750d9f5fee5045ac7c730021555be7ee4f998ff15a69",
+    "final_url": "https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713",
     "http_status": 200,
     "media_type": "html",
     "observed_headings": [
-      "Vehicle Routing Problem with Time Windows Stay organized with collections Save and categorize content based on your preferences."
+      "Robot helps nurses schedule tasks on labor floor"
     ],
     "verification_terms_found": {
-      "constraints": true,
-      "time windows": true,
-      "travel times": true,
-      "vehicles": true
+      "nurses": true,
+      "patients": true,
+      "recommendations": true,
+      "scheduling": true
     },
-    "verified_at_utc": "2026-10-18T22:22:12.127908+00:00"
+    "verified_at_utc": "2026-10-18T22:59:51.226251+00:00"
   },
-  "https://developers.google.com/optimization/scheduling/employee_scheduling": {
+  "https://www.ibm.com/think/topics/contact-center-workforce-optimization": {
     "approval_status": "PENDING_OWNER_APPROVAL",
-    "article_title": "Employee Scheduling",
-    "content_sha256": "80565157fc5ba627d3e6076c74b34c10f5d57a536fb79186e7a6f593c03be29c",
-    "final_url": "https://developers.google.com/optimization/scheduling/employee_scheduling",
+    "article_title": "What is contact center workforce optimization?",
+    "content_sha256": "643d5c89e948f84c87b280ffc5d215c67210f1275a26d1a7913c361865dbbf2e",
+    "final_url": "https://www.ibm.com/think/topics/contact-center-workforce-optimization",
     "http_status": 200,
     "media_type": "html",
     "observed_headings": [
-      "Employee Scheduling Stay organized with collections Save and categorize content based on your preferences."
+      "What is contact center workforce optimization?"
     ],
     "verification_terms_found": {
-      "CP-SAT": true,
-      "constraints": true,
-      "nurse": true,
-      "shift": true
+      "AI": true,
+      "preferences": true,
+      "scheduling": true,
+      "staffing": true
     },
-    "verified_at_utc": "2026-10-18T22:22:06.263172+00:00"
+    "verified_at_utc": "2026-10-18T22:59:54.186894+00:00"
   },
-  "https://huggingface.co/docs/transformers/model_doc/trocr": {
+  "https://www.ibm.com/think/topics/dispatch-management": {
     "approval_status": "PENDING_OWNER_APPROVAL",
-    "article_title": "TrOCR",
-    "content_sha256": "0e32e0c39effafc5bb26624ec6e23e0f6aa65558693466940c86312a07c4ee5c",
-    "final_url": "https://huggingface.co/docs/transformers/model_doc/trocr",
+    "article_title": "What is dispatch management?",
+    "content_sha256": "ec6649028b3da4a43abc4fc9caf31a186c2bb45ee0acb6f0c3a5e200ee98695b",
+    "final_url": "https://www.ibm.com/think/topics/dispatch-management",
     "http_status": 200,
     "media_type": "html",
     "observed_headings": [
-      "Transformers",
-      "TrOCR"
+      "What is dispatch management?"
     ],
     "verification_terms_found": {
-      "generated_text": true,
-      "optical character recognition": true,
-      "trocr-base-handwritten": true
+      "AI": true,
+      "delivery": true,
+      "human": true,
+      "route": true
     },
-    "verified_at_utc": "2026-10-18T22:22:05.182164+00:00"
-  },
-  "https://web.stanford.edu/~jurafsky/slp3/K.pdf": {
-    "approval_status": "PENDING_OWNER_APPROVAL",
-    "article_title": "Frame-Based Dialogue Systems",
-    "content_sha256": "6ddb59eb40d656a5c6241166625e3d5599bd8f5fad320b614bff8a08ba67596b",
-    "discovery_url": "https://web.stanford.edu/~jurafsky/slp3/index.html",
-    "final_url": "https://web.stanford.edu/~jurafsky/slp3/K.pdf",
-    "http_status": 200,
-    "media_type": "pdf",
-    "observed_headings": [
-      "Frame-Based Dialogue Systems"
-    ],
-    "verification_terms_found": {
-      "confirmation": true,
-      "dialogue": true,
-      "frame": true,
-      "slot": true,
-      "travel": true
-    },
-    "verified_at_utc": "2026-10-18T22:22:09.342269+00:00"
+    "verified_at_utc": "2026-10-18T22:59:54.932465+00:00"
   }
 }

@@ -1,0 +1,50 @@
+{
+  "canonical_signature_project_sources": {
+    "extractor_history": "https://fi.ncsu.edu/projects/machine-learning-in-the-history-classroom-using-artificial-intelligence-for-a-student-led-inquiry-into-redlining/",
+    "extractor_specimen": "https://www.naturalsciences.org/calendar/news/museum-unc-use-ai-to-transform-handwritten-records-about-fish/",
+    "generator_catalog": "https://www.lib.ncsu.edu/projects/refreshing-software-and-technology-lending-descriptions-agent-based-ai",
+    "generator_classroom_chatbot": "https://fi.ncsu.edu/news/2025-2026-catalyst-grant-symposium-features-projects-that-advance-ai-integration-in-education/",
+    "generator_lesson_planner": "https://fi.ncsu.edu/news/2025-2026-catalyst-grant-symposium-features-projects-that-advance-ai-integration-in-education/",
+    "recommender_adaptive_learning": "https://fi.ncsu.edu/news/friday-institute-center-for-educational-informatics-and-engageai-institute-collaborate-to-advance-ai-in-education/",
+    "recommender_ai_curator": "https://nasher.duke.edu/exhibitions/act-as-if-you-are-a-curator-an-ai-generated-exhibition/",
+    "recommender_research": "https://www.lib.ncsu.edu/databases/keenious-research-explorer/guide",
+    "retriever_semantic_search": "https://guides.library.duke.edu/c.php?g=1351161&p=10927310",
+    "scheduler_ride_booking": "https://godurhamaccess.org/godurham-access-ada-paratransit",
+    "scheduler_traffic_signal": "https://raleighnc.gov/transportation/news/ai-pilot-program-raleigh-move",
+    "scheduler_transit_flow": "https://www.govtech.com/transportation/durham-n-c-looks-to-ai-to-boost-transit-performance"
+  },
+  "current_blank_signature_ids": [
+    "extractor_specimen",
+    "scheduler_ride_booking"
+  ],
+  "current_workbook_blanks": 6,
+  "current_workbook_matches": 45,
+  "initial_blank_non_signature_ids": [
+    "extractor_archive",
+    "extractor_base",
+    "extractor_government",
+    "extractor_medical",
+    "scheduler_delivery",
+    "scheduler_hospital",
+    "scheduler_transit",
+    "scheduler_workforce"
+  ],
+  "initial_blank_signature_ids": [
+    "extractor_specimen",
+    "scheduler_ride_booking",
+    "scheduler_transit_flow"
+  ],
+  "initial_workbook_blanks": 11,
+  "initial_workbook_matches": 40,
+  "non_signature_count": 39,
+  "non_signature_workbook_matches": 35,
+  "outside_research_non_signature_ids": [
+    "scheduler_delivery",
+    "scheduler_hospital",
+    "scheduler_transit",
+    "scheduler_workforce"
+  ],
+  "policy": "Preserve every existing workbook match; outside research only for uncovered non-Signatures.",
+  "signature_count": 12,
+  "signature_policy": "Canonical real-project links are sufficient; no supplementary references proposed or researched."
+}
