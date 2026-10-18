@@ -318,6 +318,7 @@ export default function App() {
   const [ready, setReady] = useState(() => read(safetyKey) === "1");
   const [agreed, setAgreed] = useState(false),
     [showSafety, setShowSafety] = useState(false);
+  const [publicApproach, setPublicApproach] = useState(false);
   const [mode, setMode] = useState(() =>
     read(modeKey) === "demo" ? "demo" : "real",
   );
@@ -330,6 +331,7 @@ export default function App() {
   );
   const [day, setDay] = useState(dayKey()),
     [tab, setTab] = useState("map");
+  const [demoDay, setDemoDay] = useState("");
   const [progress, setProgress] = useState<Progress>(emptyProgress),
     [storageError, setStorageError] = useState("");
   const [selected, setSelected] = useState<Spawn | null>(null),
@@ -374,14 +376,17 @@ export default function App() {
       const next = dayKey();
       setClock(Date.now());
       setDay(next);
-      if (selected && selected.date !== next) {
+      if (
+        selected &&
+        selected.date !== (mode === "demo" && demoDay ? demoDay : next)
+      ) {
         setSelected(null);
         setPhase("nearby");
         setFeedback(null);
       }
     }, 1000);
     return () => clearInterval(t);
-  }, [selected]);
+  }, [selected, mode, demoDay]);
   useEffect(() => {
     if (!ready || !requestGPS || mode === "demo") return;
     let watch: number | undefined;
@@ -433,7 +438,11 @@ export default function App() {
       window.removeEventListener("pagehide", stop);
     };
   }, [ready, requestGPS, mode]);
-  const world = useMemo(() => buildWorld(data, day), [day]);
+  const worldDay = mode === "demo" && demoDay ? demoDay : day;
+  const world = useMemo(
+    () => buildWorld(data, worldDay, mode === "demo" ? "demo" : "real"),
+    [worldDay, mode],
+  );
   const active = useMemo(
     () =>
       world.filter(
@@ -453,6 +462,7 @@ export default function App() {
         : a.id.localeCompare(b.id),
     );
   const open = useCallback((s: Spawn) => {
+    setPublicApproach(false);
     setSelected(s);
     setPhase("nearby");
     setFeedback(null);
@@ -486,6 +496,7 @@ export default function App() {
   function enterEncounter() {
     if (
       selected &&
+      (mode === "demo" || selected.rarity !== "signature" || publicApproach) &&
       interaction(selected, position, clock).allowed &&
       !storageError &&
       save(startAttempt(progress, selected, data))
@@ -637,13 +648,37 @@ export default function App() {
                 </button>
               </>
             ) : (
-              <p>
-                Choose a mystery marker to try an encounter without traveling.
-              </p>
+              <label>
+                Demo rotation (simulated date)
+                <select
+                  aria-label="Demo rotation (simulated date)"
+                  value={demoDay}
+                  onChange={(event) => {
+                    setDemoDay(event.target.value);
+                    setDemoFix(null);
+                    close();
+                  }}
+                >
+                  <option value="">Today</option>
+                  {Array.from({ length: 16 }, (_, i) =>
+                    new Date(Date.parse(day + "T12:00:00Z") + i * 86400000)
+                      .toISOString().slice(0, 10),
+                  ).map((date) => (
+                    <option key={date} value={date}>{date} (preview)</option>
+                  ))}
+                </select>
+              </label>
             )}
           </div>
           <Map world={active} position={position} onSelect={open} city={city} />
           <main className="nearby">
+            {mode === "demo" && (
+              <p>
+                Simulated day: {worldDay}. Preview another day to explore the
+                rotation; saved attempts are never reset. Real encounters always
+                use today.
+              </p>
+            )}
             <p role="status">
               {mode === "demo" ? "Demo preset: " + city : locationStatus}
             </p>
@@ -714,8 +749,8 @@ export default function App() {
           ) : (
             <>
               <p>
-                Undiscovered entries remain hidden. Signature forms are not
-                enabled without an approved deployment-to-destination schedule.
+                Undiscovered entries remain hidden. Signature encounters appear
+                occasionally at approved project-associated destinations, not every day.
               </p>
               {progress.discovered.map((id) => (
                 <button
@@ -759,8 +794,9 @@ export default function App() {
             Read player-safety notice
           </button>
           <p>
-            Prototype limitations: artwork is unavailable pending approval; no
-            Signature encounters are scheduled. Browser progress is not
+            Prototype limitations: artwork is unavailable pending approval.
+            Durham Station Signatures are Demo-only while a safe approach is unverified during construction.
+            Browser progress is not
             synchronized across devices. Real-world access and opening hours are
             not guaranteed; skip unsafe or inaccessible places.
           </p>
@@ -812,6 +848,17 @@ export default function App() {
                 {extraLocationSafety(selected.poi) && (
                   <p>{extraLocationSafety(selected.poi)}</p>
                 )}
+                {selected.rarity === "signature" && mode === "real" && (
+                  <label className="safety-check">
+                    <input
+                      type="checkbox"
+                      checked={publicApproach}
+                      onChange={(event) => setPublicApproach(event.target.checked)}
+                    />
+                    I am stopped safely on an open public pedestrian approach.
+                    No closed, restricted or operating area is needed.
+                  </label>
+                )}
                 {gate && (
                   <p role="status">{proximityCopy(mode, position, gate)}</p>
                 )}
@@ -841,7 +888,10 @@ export default function App() {
                   </button>
                 )}
                 <button
-                  disabled={!gate?.allowed || !!storageError}
+                  disabled={
+                    !gate?.allowed || !!storageError ||
+                    (mode === "real" && selected.rarity === "signature" && !publicApproach)
+                  }
                   onClick={enterEncounter}
                 >
                   Enter encounter

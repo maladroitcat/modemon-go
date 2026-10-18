@@ -33,13 +33,15 @@ const baseline = JSON.parse(
 );
 const digest = (value: unknown) =>
   createHash("sha256").update(JSON.stringify(value)).digest("hex");
-const world = buildWorld(data, "2026-10-17"),
+// Freeze the ordinary generator separately from the newly approved Signature layer.
+const legacyData = { ...data, signatures: undefined };
+const world = buildWorld(legacyData, "2026-10-17"),
   spawn = world[0];
 
-test("all sixteen frozen daily worlds from PR 16 remain exactly unchanged", () => {
+test("all sixteen frozen ordinary daily worlds from PR 16 remain exactly unchanged", () => {
   assert.equal(data.data_version, baseline.data_version);
   for (const [date, hash] of Object.entries(baseline.world_sha256))
-    assert.equal(digest(buildWorld(data, date)), hash, date);
+    assert.equal(digest(buildWorld(legacyData, date)), hash, date);
 });
 test("all 39 quiz banks remain unchanged after introductory copy revisions", () => {
   const bank = Object.entries(data.modedex.modemon)

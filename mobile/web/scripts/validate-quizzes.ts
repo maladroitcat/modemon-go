@@ -11,9 +11,9 @@ const runtimeBytes = readFileSync(
   new URL("../src/data/runtime.json", import.meta.url),
 );
 const data = JSON.parse(runtimeBytes.toString()) as Runtime;
-const spawn = buildWorld(data, "2026-10-17")[0];
+const spawn = buildWorld({ ...data, signatures: undefined }, "2026-10-17")[0];
 const banks = Object.entries(data.modedex.modemon)
-  .filter(([, s]) => s.stage < 3)
+  .filter(([id, s]) => s.stage < 3 || data.signatures?.entries.some((e) => e.species_id === id))
   .flatMap(([speciesId, species]) =>
     (Object.keys(quizModes) as Difficulty[]).map((difficulty) => ({
       species_id: speciesId,
@@ -28,11 +28,11 @@ const banks = Object.entries(data.modedex.modemon)
     })),
   );
 if (
-  banks.length !== 117 ||
-  banks.reduce((n, b) => n + b.questions.length, 0) !== 585
+  banks.length !== 153 ||
+  banks.reduce((n, b) => n + b.questions.length, 0) !== 765
 )
   throw Error(
-    "Expected 39 species across 117 banks and 585 question instances",
+    "Expected 51 approved species across 153 banks and 765 question instances",
   );
 const report = {
   quiz_version: 2,
@@ -41,9 +41,9 @@ const report = {
     .digest("hex"),
   fixture_date: "2026-10-17",
   fixture_encounter_id: spawn.id,
-  enabled_species: 39,
+  enabled_species: 51,
   validated_banks: banks.length,
-  question_instances: 585,
+  question_instances: 765,
   unsupported_topics: [],
   duplicate_choices: [],
   excessive_options_over_180_characters: [],
@@ -62,5 +62,5 @@ if (process.argv.includes("--write"))
     JSON.stringify(report, null, 2) + "\n",
   );
 console.log(
-  `Validated ${banks.length} banks, 585 questions; max option ${report.maximum_option_characters} characters. No missing topics, duplicate choices, or excessive options.`,
+  `Validated ${banks.length} banks, 765 questions; max option ${report.maximum_option_characters} characters. No missing topics, duplicate choices, or excessive options.`,
 );

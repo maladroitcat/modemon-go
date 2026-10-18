@@ -75,7 +75,7 @@ test("all twelve Signature introductions name existing canonical project, use-ca
   assert.equal(JSON.stringify(data), before);
   assert.ok(
     buildWorld(data, "2026-10-17").every(
-      (s) => data.modedex.modemon[s.speciesId].stage < 3,
+      (s) => data.modedex.modemon[s.speciesId].stage < 3 || data.signatures?.entries.some((e) => e.species_id === s.speciesId && e.poi_id === s.poi.id),
     ),
   );
 });

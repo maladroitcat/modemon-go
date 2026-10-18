@@ -53,8 +53,8 @@ export default function DexEntry({
           )}
           <p>
             Real-world inspiration, not a claim that this system runs at your
-            location. Signature encounters remain unavailable until approved
-            place mappings exist.
+            location. Encounters use approved place associations and public
+            pedestrian approaches, subject to local signs, hours and closures.
           </p>
         </section>
       )}

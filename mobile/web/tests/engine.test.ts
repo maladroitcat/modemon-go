@@ -23,7 +23,7 @@ const data = JSON.parse(
 const date = "2026-10-17",
   world = buildWorld(data, date),
   spawn = world[0];
-test("canonical runtime counts, safe anchors, no Signature scheduling", () => {
+test("canonical runtime counts, safe anchors, only explicitly approved Signature scheduling", () => {
   assert.equal(Object.keys(data.modedex.modemon).length, 51);
   assert.equal(data.regions.length, 8);
   assert.equal(data.zones.length, 62);
@@ -31,7 +31,7 @@ test("canonical runtime counts, safe anchors, no Signature scheduling", () => {
   assert.ok(world.length > 0);
   for (const s of world) {
     assert.ok(s.poi.eligible);
-    assert.notEqual(s.rarity, "signature");
+    if (s.rarity === "signature") assert.ok(data.signatures?.entries.some((e) => e.species_id === s.speciesId && e.poi_id === s.poi.id && e.safety_status === "mapped_public_approach"));
     assert.ok(
       s.basis.some((h) =>
         data.modedex.modemon[s.speciesId].habitats.includes(h),

@@ -9,6 +9,11 @@ import yaml
 from pyproj import Transformer
 from shapely.geometry import Point, shape
 
+if __name__ == '__main__':
+    from signature_placements import build_signatures
+else:
+    from scripts.signature_placements import build_signatures
+
 ROOT = Path(__file__).resolve().parents[1]
 DESTINATION = ROOT / 'mobile/web/src/data/runtime.json'
 POLICY_VERSION = 'public-anchors-v1'
@@ -136,11 +141,14 @@ def build_payload(root=ROOT):
         zones=[compact(z, ['zone_id', 'region_id', 'habitat_primary', 'dominant_secondary_habitat']) for z in zones],
         neutral=[compact(n, ['region_id']) for n in neutral],
         precedence=precedence, habitats=HABITATS, pois=sorted(anchors, key=lambda p: p['id']),
-        signatures=dict(enabled=[], reason='No approved explicit Signature-to-destination schedule/crosswalk. All 12 forms remain disabled.'),
+        signatures=build_signatures(root, dex, anchors, curation, region_shapes,
+                                    precedence, project, unit_to_m),
         art=dict(approved={}, reason='Local Seeklet images are concepts awaiting approval; no final artwork is approved.'))
     if (hashes != {f: hashlib.sha256((root / f).read_bytes()).hexdigest() for f in INPUTS}
             or (root / WORLD_IDENTITY).read_bytes() != identity_bytes):
         raise RuntimeError('Canonical input changed during build')
+    result['source_hashes'].update(result['signatures']['source_hashes'])
+    result['content_version'] = hashlib.sha256(json.dumps(result['source_hashes'], sort_keys=True).encode()).hexdigest()[:16]
     return result
 
 
@@ -149,7 +157,8 @@ def main():
     DESTINATION.parent.mkdir(parents=True, exist_ok=True)
     DESTINATION.write_text(json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False) + '\n', encoding='utf-8')
     print(f"Runtime {result['data_version']}: 51 species, 8 regions, 62 zones, 927 POIs, "
-          f"{sum(p['eligible'] for p in result['pois'])} conservative public association anchors; signatures disabled")
+          f"{sum(p['eligible'] for p in result['pois'])} conservative public association anchors; "
+          f"{len(result['signatures']['enabled'])} real / 12 demo Signature associations")
 
 
 if __name__ == '__main__':
