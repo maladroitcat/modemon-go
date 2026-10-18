@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "timezone": "America/New_York",
   "data_version": "0f51a954e4340dea",
   "canonical": {
@@ -20,7 +20,11 @@
         "office_business",
         "civic_government"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "anomaly_fraud",
@@ -28,7 +32,11 @@
       "habitats": [
         "finance"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "anomaly_machine",
@@ -37,7 +45,11 @@
         "transportation",
         "office_business"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "anomaly_network",
@@ -46,7 +58,11 @@
         "office_business",
         "civic_government"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "anomaly_vitals",
@@ -54,7 +70,11 @@
       "habitats": [
         "healthcare"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "detector_base",
@@ -65,7 +85,11 @@
         "retail",
         "food_hospitality"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "detector_defect",
@@ -74,7 +98,11 @@
         "retail",
         "food_hospitality"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "detector_disease",
@@ -82,7 +110,11 @@
       "habitats": [
         "healthcare"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "detector_pedestrian",
@@ -90,7 +122,11 @@
       "habitats": [
         "transportation"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "extractor_archive",
@@ -99,7 +135,11 @@
         "education_research",
         "civic_government"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "extractor_base",
@@ -109,7 +149,11 @@
         "civic_government",
         "education_research"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "extractor_government",
@@ -117,7 +161,11 @@
       "habitats": [
         "civic_government"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "extractor_medical",
@@ -125,7 +173,11 @@
       "habitats": [
         "healthcare"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "extractor_research",
@@ -133,7 +185,11 @@
       "habitats": [
         "education_research"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "forecast_base",
@@ -144,7 +200,11 @@
         "retail",
         "entertainment"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "forecast_crowd",
@@ -152,7 +212,11 @@
       "habitats": [
         "entertainment"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "forecast_patient",
@@ -160,7 +224,11 @@
       "habitats": [
         "healthcare"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "forecast_stock",
@@ -168,7 +236,11 @@
       "habitats": [
         "retail"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "forecast_transit",
@@ -176,7 +248,11 @@
       "habitats": [
         "transportation"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "generator_base",
@@ -188,7 +264,11 @@
         "retail",
         "entertainment"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "generator_conversational",
@@ -199,7 +279,11 @@
         "civic_government",
         "retail"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "generator_creative",
@@ -207,7 +291,11 @@
       "habitats": [
         "entertainment"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "generator_document",
@@ -216,7 +304,11 @@
         "office_business",
         "education_research"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "generator_learning",
@@ -224,7 +316,11 @@
       "habitats": [
         "education_research"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "recommender_base",
@@ -235,7 +331,11 @@
         "education_research",
         "food_hospitality"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "recommender_content",
@@ -243,7 +343,11 @@
       "habitats": [
         "entertainment"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "recommender_learning",
@@ -251,7 +355,11 @@
       "habitats": [
         "education_research"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "recommender_menu",
@@ -259,7 +367,11 @@
       "habitats": [
         "food_hospitality"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "recommender_product",
@@ -267,7 +379,11 @@
       "habitats": [
         "retail"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "retriever_base",
@@ -278,7 +394,11 @@
         "office_business",
         "retail"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "retriever_knowledge",
@@ -287,7 +407,11 @@
         "office_business",
         "education_research"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "retriever_product",
@@ -295,7 +419,11 @@
       "habitats": [
         "retail"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "retriever_records",
@@ -303,7 +431,11 @@
       "habitats": [
         "civic_government"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "retriever_research",
@@ -311,7 +443,11 @@
       "habitats": [
         "education_research"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "scheduler_base",
@@ -324,7 +460,11 @@
         "food_hospitality",
         "civic_government"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "scheduler_delivery",
@@ -334,7 +474,11 @@
         "food_hospitality",
         "transportation"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "scheduler_hospital",
@@ -342,7 +486,11 @@
       "habitats": [
         "healthcare"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "scheduler_transit",
@@ -350,7 +498,11 @@
       "habitats": [
         "transportation"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     },
     {
       "id": "scheduler_workforce",
@@ -360,62 +512,271 @@
         "retail",
         "food_hospitality"
       ],
-      "question_count": 3
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
     }
   ],
   "signatures": {
-    "enabled": [],
-    "disabled": [
+    "version": "signature-associations-v1",
+    "schedule": {
+      "epoch": "2026-10-18",
+      "maximum_placement_offset_meters": 200,
+      "period_days": 4
+    },
+    "approved_mappings": [
       {
-        "id": "extractor_history",
-        "name": "Archivole"
+        "association_note": "Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.",
+        "blocked_dates": [],
+        "evidence_url": "https://fi.ncsu.edu/get-involved/contact-us/",
+        "osm_node_id": 3011702458,
+        "osm_way_id": 758590635,
+        "placement": {
+          "lat": 35.7591816,
+          "lon": -78.6864953,
+          "x": 637951.098,
+          "y": 222926.831
+        },
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "project_source_url": "https://fi.ncsu.edu/projects/machine-learning-in-the-history-classroom-using-artificial-intelligence-for-a-student-led-inquiry-into-redlining/",
+        "review_note": "Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "extractor_history"
       },
       {
-        "id": "extractor_specimen",
-        "name": "Specimunk"
+        "association_note": "Enjoy the public Bicentennial Mall pedestrian space near the museum. Stay clear of entrances and follow posted hours and closures; entering the museum is unnecessary. This is a project association, not a deployment coordinate.",
+        "blocked_dates": [],
+        "evidence_url": "https://naturalsciences.org/visit/hours-admission",
+        "osm_node_id": 2096744258,
+        "osm_way_id": 199747495,
+        "placement": {
+          "lat": 35.7819691,
+          "lon": -78.6390231,
+          "x": 642234.745,
+          "y": 225469.561
+        },
+        "poi_id": "RAL-01_osm_way_197842115",
+        "project_source_url": "https://www.naturalsciences.org/calendar/news/museum-unc-use-ai-to-transform-handwritten-records-about-fish/",
+        "review_note": "Named pedestrian mall outside the museum footprint; public visitor context confirmed by the museum. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "extractor_specimen"
       },
       {
-        "id": "generator_catalog",
-        "name": "Catalogar"
+        "association_note": "Use the outdoor pedestrian plaza near Hunt Library, not restricted library spaces. Respect campus signs, public hours and closures; you do not need to enter. This represents university-library projects, not technology installed at this point.",
+        "blocked_dates": [
+          "2026-10-19"
+        ],
+        "evidence_url": "https://www.lib.ncsu.edu/hunt/visit",
+        "osm_node_id": 3011697025,
+        "osm_way_id": 329540779,
+        "placement": {
+          "lat": 35.7693604,
+          "lon": -78.6760505,
+          "x": 638891.921,
+          "y": 224059.144
+        },
+        "poi_id": "RAL-04_osm_way_177166351",
+        "project_source_url": "https://www.lib.ncsu.edu/projects/refreshing-software-and-technology-lending-descriptions-agent-based-ai",
+        "review_note": "Outdoor paved pedestrian area; library public-access page also announces October 19 closure for electrical work. Suppress that date conservatively. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "generator_catalog"
       },
       {
-        "id": "generator_classroom_chatbot",
-        "name": "Lecturlynx"
+        "association_note": "Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.",
+        "blocked_dates": [],
+        "evidence_url": "https://fi.ncsu.edu/get-involved/contact-us/",
+        "osm_node_id": 3011702458,
+        "osm_way_id": 758590635,
+        "placement": {
+          "lat": 35.7591816,
+          "lon": -78.6864953,
+          "x": 637951.098,
+          "y": 222926.831
+        },
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "project_source_url": "https://fi.ncsu.edu/news/2025-2026-catalyst-grant-symposium-features-projects-that-advance-ai-integration-in-education/",
+        "review_note": "Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "generator_classroom_chatbot"
       },
       {
-        "id": "generator_lesson_planner",
-        "name": "Planthera"
+        "association_note": "Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.",
+        "blocked_dates": [],
+        "evidence_url": "https://fi.ncsu.edu/get-involved/contact-us/",
+        "osm_node_id": 3011702458,
+        "osm_way_id": 758590635,
+        "placement": {
+          "lat": 35.7591816,
+          "lon": -78.6864953,
+          "x": 637951.098,
+          "y": 222926.831
+        },
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "project_source_url": "https://fi.ncsu.edu/news/2025-2026-catalyst-grant-symposium-features-projects-that-advance-ai-integration-in-education/",
+        "review_note": "Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "generator_lesson_planner"
       },
       {
-        "id": "recommender_adaptive_learning",
-        "name": "Mentamorph"
+        "association_note": "Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.",
+        "blocked_dates": [],
+        "evidence_url": "https://fi.ncsu.edu/get-involved/contact-us/",
+        "osm_node_id": 3011702458,
+        "osm_way_id": 758590635,
+        "placement": {
+          "lat": 35.7591816,
+          "lon": -78.6864953,
+          "x": 637951.098,
+          "y": 222926.831
+        },
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "project_source_url": "https://fi.ncsu.edu/news/friday-institute-center-for-educational-informatics-and-engageai-institute-collaborate-to-advance-ai-in-education/",
+        "review_note": "Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "recommender_adaptive_learning"
       },
       {
-        "id": "recommender_ai_curator",
-        "name": "Muselect"
+        "association_note": "Stay on the outdoor museum sidewalk and respect visitor hours, signs and closures. Keep paths and entrances clear; no museum entry is required. The exhibition project inspired this encounter, not a claim that AI runs on this sidewalk.",
+        "blocked_dates": [],
+        "evidence_url": "https://nasher.duke.edu/hours-admission/",
+        "osm_node_id": 13295141461,
+        "osm_way_id": 667053135,
+        "placement": {
+          "lat": 35.9993455,
+          "lon": -78.9294714,
+          "x": 615960.12,
+          "y": 249530.353
+        },
+        "poi_id": "DUR-02_osm_way_30424777",
+        "project_source_url": "https://nasher.duke.edu/exhibitions/act-as-if-you-are-a-curator-an-ai-generated-exhibition/",
+        "review_note": "Mapped sidewalk outside the museum footprint with official public visitor context. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "recommender_ai_curator"
       },
       {
-        "id": "recommender_research",
-        "name": "Referaptor"
+        "association_note": "Use the outdoor pedestrian plaza near Hunt Library, not restricted library spaces. Respect campus signs, public hours and closures; you do not need to enter. This represents university-library projects, not technology installed at this point.",
+        "blocked_dates": [
+          "2026-10-19"
+        ],
+        "evidence_url": "https://www.lib.ncsu.edu/hunt/visit",
+        "osm_node_id": 3011697025,
+        "osm_way_id": 329540779,
+        "placement": {
+          "lat": 35.7693604,
+          "lon": -78.6760505,
+          "x": 638891.921,
+          "y": 224059.144
+        },
+        "poi_id": "RAL-04_osm_way_177166351",
+        "project_source_url": "https://www.lib.ncsu.edu/databases/keenious-research-explorer/guide",
+        "review_note": "Outdoor paved pedestrian area; library public-access page also announces October 19 closure for electrical work. Suppress that date conservatively. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "recommender_research"
       },
       {
-        "id": "retriever_semantic_search",
-        "name": "Semantiff"
+        "association_note": "Use the outdoor campus walkway near Perkins Library. Do not enter card-controlled or restricted areas; respect posted public hours and closures. Duke Libraries research discovery is the educational association, not a system installed at this point.",
+        "blocked_dates": [],
+        "evidence_url": "https://library.duke.edu/using/policies/access-and-security",
+        "osm_node_id": 1999513309,
+        "osm_way_id": 189308234,
+        "placement": {
+          "lat": 36.0026502,
+          "lon": -78.9388994,
+          "x": 615109.861,
+          "y": 249896.46
+        },
+        "poi_id": "DUR-02_osm_way_391474817",
+        "project_source_url": "https://guides.library.duke.edu/c.php?g=1351161&p=10927310",
+        "review_note": "Mapped footway outside building footprints; library policy includes public visitors with time restrictions. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "retriever_semantic_search"
       },
+      {
+        "association_note": "DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station.",
+        "blocked_dates": [],
+        "evidence_url": "https://godurhamtransit.org/durham-station-renovations/",
+        "osm_node_id": null,
+        "osm_way_id": null,
+        "placement": null,
+        "poi_id": "DUR-01_osm_node_5844548329",
+        "project_source_url": "https://godurhamaccess.org/godurham-access-ada-paratransit",
+        "review_note": "October 12 site update describes concrete work on the west and platform work on the north. The displaced passenger area and changing works do not establish a safe game-lingering location. A mapped footpath alone is insufficient here. Re-review individually before real activation.",
+        "safety_status": "withheld_pending_safe_approach",
+        "species_id": "scheduler_ride_booking"
+      },
+      {
+        "association_note": "Use the public West Street concrete sidewalk near RUS BUS. Stay out of bus lanes, roadways and operating areas, and keep entrances clear. Follow signs and closures. This is a Raleigh transportation-system association, not a claim about a particular signal or camera here.",
+        "blocked_dates": [],
+        "evidence_url": "https://raleighnc.gov/transportation/services/bus-service-raleigh-union-station",
+        "osm_node_id": 11048642686,
+        "osm_way_id": 196797586,
+        "placement": {
+          "lat": 35.7778597,
+          "lon": -78.6459797,
+          "x": 641607.473,
+          "y": 225011.379
+        },
+        "poi_id": "RAL-01_osm_node_13659913892",
+        "project_source_url": "https://raleighnc.gov/transportation/news/ai-pilot-program-raleigh-move",
+        "review_note": "Mapped concrete street sidewalk outside the station building, not the bus-station center. Official transit page provides public station context; no field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "scheduler_traffic_signal"
+      },
+      {
+        "association_note": "DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station.",
+        "blocked_dates": [],
+        "evidence_url": "https://godurhamtransit.org/durham-station-renovations/",
+        "osm_node_id": null,
+        "osm_way_id": null,
+        "placement": null,
+        "poi_id": "DUR-01_osm_node_5844548329",
+        "project_source_url": "https://www.govtech.com/transportation/durham-n-c-looks-to-ai-to-boost-transit-performance",
+        "review_note": "October 12 site update describes concrete work on the west and platform work on the north. The displaced passenger area and changing works do not establish a safe game-lingering location. A mapped footpath alone is insufficient here. Re-review individually before real activation.",
+        "safety_status": "withheld_pending_safe_approach",
+        "species_id": "scheduler_transit_flow"
+      }
+    ],
+    "real_enabled": [
+      "extractor_history",
+      "extractor_specimen",
+      "generator_catalog",
+      "generator_classroom_chatbot",
+      "generator_lesson_planner",
+      "recommender_adaptive_learning",
+      "recommender_ai_curator",
+      "recommender_research",
+      "retriever_semantic_search",
+      "scheduler_traffic_signal"
+    ],
+    "real_withheld": [
       {
         "id": "scheduler_ride_booking",
-        "name": "Cabcrab"
-      },
-      {
-        "id": "scheduler_traffic_signal",
-        "name": "Signalquid"
+        "name": "Cabcrab",
+        "reason": "DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station."
       },
       {
         "id": "scheduler_transit_flow",
-        "name": "Flowfin"
+        "name": "Flowfin",
+        "reason": "DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station."
       }
     ],
-    "reason": "No approved deployment-to-destination schedule/crosswalk."
+    "demo_observed": [
+      "extractor_history",
+      "extractor_specimen",
+      "generator_catalog",
+      "generator_classroom_chatbot",
+      "generator_lesson_planner",
+      "recommender_adaptive_learning",
+      "recommender_ai_curator",
+      "recommender_research",
+      "retriever_semantic_search",
+      "scheduler_ride_booking",
+      "scheduler_traffic_signal",
+      "scheduler_transit_flow"
+    ],
+    "reason": "Explicit owner-approved associations. Real placement requires reviewed outdoor access evidence; Durham Station remains Demo-only during construction."
   },
   "artwork": {
     "approved_creature_images": 0,
@@ -4952,85 +5313,70 @@
     }
   ],
   "daily_world": {
-    "total": 60,
+    "total": 56,
     "maximum_in_half_mile_circle": 7,
     "by_region": {
-      "DUR-01": 9,
-      "DUR-02": 15,
-      "RAL-01": 13,
+      "DUR-01": 10,
+      "DUR-02": 12,
+      "RAL-01": 11,
       "RAL-02": 7,
-      "RAL-03A": 8,
-      "RAL-03B": 1,
+      "RAL-03A": 7,
+      "RAL-03B": 2,
       "RAL-04": 7
     },
     "by_rarity": {
-      "common": 44,
-      "rare": 16
+      "common": 41,
+      "rare": 13,
+      "signature": 2
     },
     "spawns": [
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_13785804101",
-        "species_id": "detector_base",
-        "species_name": "Seeklet",
-        "poi_id": "RAL-01_osm_node_13785804101",
-        "poi_name": "Ammi's Dessert Boutique and Chai House",
+        "encounter_id": "playable-v1:signature-associations-v1:2026-10-18:RAL-01_osm_way_197842115:extractor_specimen",
+        "species_id": "extractor_specimen",
+        "species_name": "Specimunk",
+        "poi_id": "RAL-01_osm_way_197842115",
+        "poi_name": "North Carolina Museum of Natural Sciences",
         "region": "RAL-01",
-        "rarity": "common",
+        "rarity": "signature",
         "basis": [
-          "food_hospitality"
+          "education_research"
         ],
-        "latitude": 35.788582,
-        "longitude": -78.6400721
+        "latitude": 35.7819691,
+        "longitude": -78.6390231
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_way_47760017",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
-        "poi_id": "RAL-01_osm_way_47760017",
-        "poi_name": "One Of One Boutique",
-        "region": "RAL-01",
+        "encounter_id": "playable-v1:signature-associations-v1:2026-10-18:RAL-04_osm_way_177166351:generator_catalog",
+        "species_id": "generator_catalog",
+        "species_name": "Catalogar",
+        "poi_id": "RAL-04_osm_way_177166351",
+        "poi_name": "James B. Hunt Jr. Library",
+        "region": "RAL-04",
+        "rarity": "signature",
+        "basis": [
+          "education_research"
+        ],
+        "latitude": 35.7693604,
+        "longitude": -78.6760505
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_1437667189",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-03A_osm_node_1437667189",
+        "poi_name": "Wolfpack Outfitters",
+        "region": "RAL-03A",
         "rarity": "common",
         "basis": [
           "retail",
-          "food_hospitality"
-        ],
-        "latitude": 35.7742908,
-        "longitude": -78.6364895
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_3248743375",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-01_osm_node_3248743375",
-        "poi_name": "The PIzza Times",
-        "region": "RAL-01",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality",
-          "entertainment"
-        ],
-        "latitude": 35.7779011,
-        "longitude": -78.6383926
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_node_4870054740",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-02_osm_node_4870054740",
-        "poi_name": "James B. Duke",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
           "education_research"
         ],
-        "latitude": 36.0013138,
-        "longitude": -78.9390111
+        "latitude": 35.7836276,
+        "longitude": -78.6706981
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_3248743374",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743374",
+        "species_id": "retriever_base",
+        "species_name": "Searchound",
         "poi_id": "RAL-01_osm_node_3248743374",
         "poi_name": "The ZEN Succulent",
         "region": "RAL-01",
@@ -5043,590 +5389,200 @@
         "longitude": -78.6383899
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_way_36884459",
-        "species_id": "recommender_content",
-        "species_name": "Reelure",
-        "poi_id": "DUR-02_osm_way_36884459",
-        "poi_name": "Wilson Recreation Center",
-        "region": "DUR-02",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743362",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "RAL-01_osm_node_3248743362",
+        "poi_name": "ORO Restaurant & Lounge",
+        "region": "RAL-01",
         "rarity": "rare",
         "basis": [
+          "food_hospitality",
           "entertainment"
         ],
-        "latitude": 35.9968957,
-        "longitude": -78.94082888889724
+        "latitude": 35.7767563,
+        "longitude": -78.6385031
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_node_13339410049",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "DUR-02_osm_node_13339410049",
-        "poi_name": "Memorial Gym",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.007492,
-        "longitude": -78.9169166
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03A_osm_way_33076658",
-        "species_id": "generator_document",
-        "species_name": "Quillcat",
-        "poi_id": "RAL-03A_osm_way_33076658",
-        "poi_name": "Weisiger Brown Athletic Facility",
-        "region": "RAL-03A",
-        "rarity": "rare",
-        "basis": [
-          "entertainment",
-          "education_research"
-        ],
-        "latitude": 35.78061815,
-        "longitude": -78.6707557472042
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_node_4870054738",
-        "species_id": "recommender_content",
-        "species_name": "Reelure",
-        "poi_id": "DUR-02_osm_node_4870054738",
-        "poi_name": "Griffith Film Theater",
-        "region": "DUR-02",
-        "rarity": "rare",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.0011241,
-        "longitude": -78.9413499
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_way_400530129",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
-        "poi_id": "DUR-01_osm_way_400530129",
-        "poi_name": "Diamond View Park",
-        "region": "DUR-01",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "civic_government",
-          "food_hospitality"
-        ],
-        "latitude": 35.9935165,
-        "longitude": -78.90333394030111
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03B_osm_way_47776986",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "RAL-03B_osm_way_47776986",
-        "poi_name": "Theater In The Park",
-        "region": "RAL-03B",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.784287,
-        "longitude": -78.6624423
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-02_osm_way_583072635",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-02_osm_way_583072635",
-        "poi_name": "Gipson Play Plaza",
-        "region": "RAL-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "civic_government"
-        ],
-        "latitude": 35.7668685,
-        "longitude": -78.6538661
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_3305289271",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743375",
         "species_id": "detector_defect",
         "species_name": "Inspectra",
-        "poi_id": "RAL-01_osm_node_3305289271",
-        "poi_name": "DECO Raleigh",
+        "poi_id": "RAL-01_osm_node_3248743375",
+        "poi_name": "The PIzza Times",
         "region": "RAL-01",
         "rarity": "rare",
         "basis": [
-          "retail",
+          "food_hospitality",
           "entertainment"
         ],
-        "latitude": 35.7779855,
-        "longitude": -78.6400868
+        "latitude": 35.7779011,
+        "longitude": -78.6383926
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_way_209632643",
-        "species_id": "generator_creative",
-        "species_name": "Articlaw",
-        "poi_id": "RAL-01_osm_way_209632643",
-        "poi_name": "First Citizens Bank",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743361",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-01_osm_node_3248743361",
+        "poi_name": "PNC Bank",
         "region": "RAL-01",
-        "rarity": "rare",
+        "rarity": "common",
         "basis": [
           "finance",
           "entertainment"
         ],
-        "latitude": 35.7771121,
-        "longitude": -78.63889065000001
+        "latitude": 35.7766537,
+        "longitude": -78.639084
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_11680850865",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_2072382353",
         "species_id": "recommender_base",
         "species_name": "Suggestle",
-        "poi_id": "RAL-01_osm_node_11680850865",
-        "poi_name": "Little Native Coffee Co.",
+        "poi_id": "RAL-01_osm_node_2072382353",
+        "poi_name": "Flying Saucer Draught Emporium",
         "region": "RAL-01",
         "rarity": "common",
         "basis": [
           "food_hospitality"
         ],
-        "latitude": 35.7744102,
-        "longitude": -78.6353026
+        "latitude": 35.7799487,
+        "longitude": -78.6447955
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_3248743373",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "RAL-01_osm_node_3248743373",
-        "poi_name": "Unorthodox Vintage",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3796331874",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-01_osm_node_3796331874",
+        "poi_name": "Death & Taxes",
         "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "entertainment"
+        ],
+        "latitude": 35.7782232,
+        "longitude": -78.6404347
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2824997593",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-01_osm_node_2824997593",
+        "poi_name": "Bullseye Bicycle",
+        "region": "DUR-01",
         "rarity": "common",
         "basis": [
           "retail",
-          "entertainment"
-        ],
-        "latitude": 35.7780274,
-        "longitude": -78.6383864
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_way_433493705",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "DUR-01_osm_way_433493705",
-        "poi_name": "Durham Bulls Athletic Park",
-        "region": "DUR-01",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.9915839,
-        "longitude": -78.90391733102675
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_way_697187543",
-        "species_id": "retriever_base",
-        "species_name": "Searchound",
-        "poi_id": "DUR-02_osm_way_697187543",
-        "poi_name": "Twinnies Cafe",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality",
-          "education_research"
-        ],
-        "latitude": 36.0035049,
-        "longitude": -78.9398651
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_node_4870054737",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-02_osm_node_4870054737",
-        "poi_name": "Sheafer Laboratory Theater",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.0010538,
-        "longitude": -78.9416044
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_node_4870054736",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "DUR-02_osm_node_4870054736",
-        "poi_name": "R.J. Reynolds Industries Theater",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.0013822,
-        "longitude": -78.9415819
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03A_osm_node_14214327186",
-        "species_id": "generator_creative",
-        "species_name": "Articlaw",
-        "poi_id": "RAL-03A_osm_node_14214327186",
-        "poi_name": "NC State Crafts Center",
-        "region": "RAL-03A",
-        "rarity": "rare",
-        "basis": [
-          "entertainment",
-          "education_research"
-        ],
-        "latitude": 35.7828986,
-        "longitude": -78.667036
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03A_osm_node_14214327187",
-        "species_id": "extractor_base",
-        "species_name": "Scribbit",
-        "poi_id": "RAL-03A_osm_node_14214327187",
-        "poi_name": "NC State University Theatre",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "education_research"
-        ],
-        "latitude": 35.7830031,
-        "longitude": -78.6667963
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_node_7115942155",
-        "species_id": "generator_creative",
-        "species_name": "Articlaw",
-        "poi_id": "DUR-01_osm_node_7115942155",
-        "poi_name": "Pixel Wall Durham",
-        "region": "DUR-01",
-        "rarity": "rare",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.0010922,
-        "longitude": -78.9006605
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_4128436170",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "RAL-01_osm_node_4128436170",
-        "poi_name": "Cuya",
-        "region": "RAL-01",
-        "rarity": "common",
-        "basis": [
+          "transportation",
           "food_hospitality"
         ],
-        "latitude": 35.7855632,
-        "longitude": -78.647666
+        "latitude": 35.997173,
+        "longitude": -78.9037512
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_node_5791152077",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-02_osm_node_5791152077",
-        "poi_name": "Brody Theater",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.0094145,
-        "longitude": -78.9164733
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_node_2266164066",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-01_osm_node_2266164066",
-        "poi_name": "The Parlour",
-        "region": "DUR-01",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality"
-        ],
-        "latitude": 35.9966376,
-        "longitude": -78.9022334
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_way_32118755",
-        "species_id": "scheduler_workforce",
-        "species_name": "Shiftshark",
-        "poi_id": "DUR-01_osm_way_32118755",
-        "poi_name": "The Durham Hotel",
-        "region": "DUR-01",
-        "rarity": "rare",
-        "basis": [
-          "food_hospitality"
-        ],
-        "latitude": 35.9971951,
-        "longitude": -78.9009597
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_node_5108643821",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
-        "poi_id": "DUR-01_osm_node_5108643821",
-        "poi_name": "M Kokko",
-        "region": "DUR-01",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality"
-        ],
-        "latitude": 35.9973064,
-        "longitude": -78.9012335
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_node_7115942134",
-        "species_id": "extractor_archive",
-        "species_name": "Manusqueak",
-        "poi_id": "DUR-01_osm_node_7115942134",
-        "poi_name": "Mount Merrill",
-        "region": "DUR-01",
-        "rarity": "rare",
-        "basis": [
-          "entertainment",
-          "civic_government"
-        ],
-        "latitude": 36.0008383,
-        "longitude": -78.9011435
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_12677423101",
-        "species_id": "detector_defect",
-        "species_name": "Inspectra",
-        "poi_id": "RAL-01_osm_node_12677423101",
-        "poi_name": "LaGana Burgers",
-        "region": "RAL-01",
-        "rarity": "rare",
-        "basis": [
-          "food_hospitality"
-        ],
-        "latitude": 35.791372,
-        "longitude": -78.6442966
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03A_osm_way_238493964",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-03A_osm_way_238493964",
-        "poi_name": "Carmichael Gymnasium",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "education_research"
-        ],
-        "latitude": 35.7838306,
-        "longitude": -78.67313659530376
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03A_osm_node_12652673293",
-        "species_id": "extractor_base",
-        "species_name": "Scribbit",
-        "poi_id": "RAL-03A_osm_node_12652673293",
-        "poi_name": "Riparian Buffer",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "education_research",
-          "civic_government"
-        ],
-        "latitude": 35.7860253,
-        "longitude": -78.6802121
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03A_osm_way_238493965",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-03A_osm_way_238493965",
-        "poi_name": "Carmichael Gymnasium",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "education_research"
-        ],
-        "latitude": 35.78371555,
-        "longitude": -78.67254834159246
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_way_30424777",
-        "species_id": "extractor_base",
-        "species_name": "Scribbit",
-        "poi_id": "DUR-02_osm_way_30424777",
-        "poi_name": "Nasher Museum of Art",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "education_research"
-        ],
-        "latitude": 35.9990522,
-        "longitude": -78.9290629011139
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03A_osm_node_6993756773",
-        "species_id": "extractor_archive",
-        "species_name": "Manusqueak",
-        "poi_id": "RAL-03A_osm_node_6993756773",
-        "poi_name": "Starbucks",
-        "region": "RAL-03A",
-        "rarity": "rare",
-        "basis": [
-          "food_hospitality",
-          "education_research"
-        ],
-        "latitude": 35.7834778,
-        "longitude": -78.6707183
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-04_osm_node_3011712773",
-        "species_id": "generator_conversational",
-        "species_name": "Meowlogue",
-        "poi_id": "RAL-04_osm_node_3011712773",
-        "poi_name": "On the Oval Culinary Creations",
-        "region": "RAL-04",
-        "rarity": "rare",
-        "basis": [
-          "food_hospitality",
-          "education_research"
-        ],
-        "latitude": 35.7702302,
-        "longitude": -78.6744446
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_1216186410",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_515431845",
         "species_id": "detector_base",
         "species_name": "Seeklet",
-        "poi_id": "RAL-01_osm_node_1216186410",
-        "poi_name": "San Marcos Pizza and Wings",
-        "region": "RAL-01",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality"
-        ],
-        "latitude": 35.7884113,
-        "longitude": -78.6504037
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_node_3672062439",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "DUR-01_osm_node_3672062439",
-        "poi_name": "Hayti Heritage Center",
+        "poi_id": "DUR-01_osm_way_515431845",
+        "poi_name": "11-foot-8 Bridge",
         "region": "DUR-01",
         "rarity": "common",
         "basis": [
           "entertainment",
-          "education_research",
           "retail"
         ],
-        "latitude": 35.9856393,
-        "longitude": -78.8980299
+        "latitude": 35.9990755,
+        "longitude": -78.91013157889192
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-04_osm_node_2104454759",
-        "species_id": "anomaly_base",
-        "species_name": "Quirkle",
-        "poi_id": "RAL-04_osm_node_2104454759",
-        "poi_name": "Disc Golf Course",
-        "region": "RAL-04",
-        "rarity": "common",
-        "basis": [
-          "education_research",
-          "civic_government"
-        ],
-        "latitude": 35.7666882,
-        "longitude": -78.6768523
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-04_osm_way_967122917",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2881677872",
         "species_id": "recommender_base",
         "species_name": "Suggestle",
-        "poi_id": "RAL-04_osm_way_967122917",
-        "poi_name": "Hunt Rain Garden",
-        "region": "RAL-04",
+        "poi_id": "DUR-01_osm_node_2881677872",
+        "poi_name": "Mid-South Fencing Club",
+        "region": "DUR-01",
         "rarity": "common",
         "basis": [
           "entertainment",
-          "civic_government",
-          "education_research"
+          "retail"
         ],
-        "latitude": 35.7690697,
-        "longitude": -78.6761996
+        "latitude": 36.001588,
+        "longitude": -78.9085699
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-02_osm_node_13252685393",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "RAL-02_osm_node_13252685393",
-        "poi_name": "Attun",
-        "region": "RAL-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.7703625,
-        "longitude": -78.6542298
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-02_osm_way_1079247651",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "RAL-02_osm_way_1079247651",
-        "poi_name": "Sunflower Field",
-        "region": "RAL-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "civic_government"
-        ],
-        "latitude": 35.772381,
-        "longitude": -78.6598974
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_way_185378060",
-        "species_id": "recommender_content",
-        "species_name": "Reelure",
-        "poi_id": "DUR-02_osm_way_185378060",
-        "poi_name": "East Campus South Quad",
-        "region": "DUR-02",
-        "rarity": "rare",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.0068338,
-        "longitude": -78.91469929013562
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_way_923463968",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_13408586201",
         "species_id": "forecast_base",
         "species_name": "Forespirit",
-        "poi_id": "DUR-02_osm_way_923463968",
-        "poi_name": "Jack Katz Stadium",
+        "poi_id": "DUR-01_osm_node_13408586201",
+        "poi_name": "Press Coffee, Crepes & Cocktails",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "entertainment"
+        ],
+        "latitude": 35.9925892,
+        "longitude": -78.9042868
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_67861979",
+        "species_id": "extractor_base",
+        "species_name": "Scribbit",
+        "poi_id": "DUR-01_osm_way_67861979",
+        "poi_name": "Central Park",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government"
+        ],
+        "latitude": 36.0005859,
+        "longitude": -78.9007278
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2295007375",
+        "species_id": "scheduler_workforce",
+        "species_name": "Shiftshark",
+        "poi_id": "DUR-01_osm_node_2295007375",
+        "poi_name": "Loaf",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "retail",
+          "food_hospitality"
+        ],
+        "latitude": 35.9957292,
+        "longitude": -78.9006724
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_3403814894",
+        "species_id": "scheduler_workforce",
+        "species_name": "Shiftshark",
+        "poi_id": "DUR-01_osm_node_3403814894",
+        "poi_name": "21c Museum Hotel",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 35.9959825,
+        "longitude": -78.901846
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_10049645128",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "DUR-02_osm_node_10049645128",
+        "poi_name": "Panera Bread",
         "region": "DUR-02",
         "rarity": "common",
         "basis": [
-          "entertainment"
+          "food_hospitality"
         ],
-        "latitude": 36.0079144,
-        "longitude": -78.9189339
+        "latitude": 36.0006478,
+        "longitude": -78.9395462
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_way_625121109",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-02_osm_way_625121109",
-        "poi_name": "Baldwin Auditorium",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.0090688,
-        "longitude": -78.9146329
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-02_osm_way_1092763893",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_way_1092763893",
         "species_id": "scheduler_base",
         "species_name": "Plancton",
         "poi_id": "RAL-02_osm_way_1092763893",
@@ -5641,71 +5597,310 @@
         "longitude": -78.6624865
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-02_osm_node_13376202119",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "RAL-02_osm_node_13376202119",
-        "poi_name": "Get Well Soon",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_8786724894",
+        "species_id": "generator_creative",
+        "species_name": "Articlaw",
+        "poi_id": "RAL-02_osm_node_8786724894",
+        "poi_name": "Big Field",
         "region": "RAL-02",
-        "rarity": "common",
+        "rarity": "rare",
         "basis": [
-          "entertainment"
+          "entertainment",
+          "civic_government"
         ],
-        "latitude": 35.7697596,
-        "longitude": -78.6572668
+        "latitude": 35.7690985,
+        "longitude": -78.6623781
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_way_27466267",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-02_osm_way_27466267",
-        "poi_name": "Brodie Recreation Center",
-        "region": "DUR-02",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_426252345",
+        "species_id": "extractor_base",
+        "species_name": "Scribbit",
+        "poi_id": "RAL-04_osm_way_426252345",
+        "poi_name": "The Oval",
+        "region": "RAL-04",
         "rarity": "common",
         "basis": [
-          "entertainment"
+          "entertainment",
+          "civic_government",
+          "education_research"
         ],
-        "latitude": 36.00764395,
-        "longitude": -78.9170027935682
+        "latitude": 35.7705113,
+        "longitude": -78.6749236
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-02_osm_node_13376172195",
-        "species_id": "recommender_content",
-        "species_name": "Reelure",
-        "poi_id": "RAL-02_osm_node_13376172195",
-        "poi_name": "Coffee Bar",
-        "region": "RAL-02",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_821937893",
+        "species_id": "detector_defect",
+        "species_name": "Inspectra",
+        "poi_id": "DUR-01_osm_way_821937893",
+        "poi_name": "Pelican's SnoBalls",
+        "region": "DUR-01",
         "rarity": "rare",
         "basis": [
           "food_hospitality",
-          "entertainment"
+          "retail"
         ],
-        "latitude": 35.7671408,
-        "longitude": -78.6531729
+        "latitude": 35.9869655,
+        "longitude": -78.89836661942675
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-02_osm_node_13376172196",
-        "species_id": "forecast_crowd",
-        "species_name": "Gathergeist",
-        "poi_id": "RAL-02_osm_node_13376172196",
-        "poi_name": "House of Many Porches Market",
-        "region": "RAL-02",
-        "rarity": "rare",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_297307412",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-03A_osm_way_297307412",
+        "poi_name": "Wolf Plaza",
+        "region": "RAL-03A",
+        "rarity": "common",
         "basis": [
-          "retail",
-          "entertainment"
+          "entertainment",
+          "civic_government",
+          "education_research"
         ],
-        "latitude": 35.7671396,
-        "longitude": -78.6530342
+        "latitude": 35.7849862,
+        "longitude": -78.67201417096571
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_node_4870085351",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_36884323",
         "species_id": "recommender_base",
         "species_name": "Suggestle",
+        "poi_id": "DUR-02_osm_way_36884323",
+        "poi_name": "Card Gymnasium",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.9973603,
+        "longitude": -78.94141976428665
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_2915315335",
+        "species_id": "generator_conversational",
+        "species_name": "Meowlogue",
+        "poi_id": "RAL-03A_osm_node_2915315335",
+        "poi_name": "Floodplains",
+        "region": "RAL-03A",
+        "rarity": "rare",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 35.7802182,
+        "longitude": -78.6686583
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_36884382",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "DUR-02_osm_way_36884382",
+        "poi_name": "Sheffield Tennis Center",
+        "region": "DUR-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.9969604,
+        "longitude": -78.93949360279355
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_2915315336",
+        "species_id": "anomaly_base",
+        "species_name": "Quirkle",
+        "poi_id": "RAL-03A_osm_node_2915315336",
+        "poi_name": "Urban Wildlife",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 35.7806993,
+        "longitude": -78.669533
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_13339410049",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "DUR-02_osm_node_13339410049",
+        "poi_name": "Memorial Gym",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.007492,
+        "longitude": -78.9169166
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4376977802",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "DUR-02_osm_node_4376977802",
+        "poi_name": "R. David Thomas Executive Conference Center",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "education_research"
+        ],
+        "latitude": 36.0032833,
+        "longitude": -78.9423809
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_44055992",
+        "species_id": "extractor_base",
+        "species_name": "Scribbit",
+        "poi_id": "DUR-02_osm_way_44055992",
+        "poi_name": "Bostock Library",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 36.002964,
+        "longitude": -78.938293
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4376977801",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-02_osm_node_4376977801",
+        "poi_name": "JB Duke Hotel",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "education_research"
+        ],
+        "latitude": 35.9976328,
+        "longitude": -78.9466296
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_119349698",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-01_osm_way_119349698",
+        "poi_name": "Mezcalito Durham",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 35.98910765,
+        "longitude": -78.89554118956246
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_44055991",
+        "species_id": "anomaly_base",
+        "species_name": "Quirkle",
+        "poi_id": "DUR-02_osm_way_44055991",
+        "poi_name": "Rubenstein Library",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 36.0018044,
+        "longitude": -78.93868538995032
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_47948195",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-03A_osm_way_47948195",
+        "poi_name": "Price Music Center",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "education_research"
+        ],
+        "latitude": 35.78407955,
+        "longitude": -78.67171719877949
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_625075122",
+        "species_id": "generator_creative",
+        "species_name": "Articlaw",
+        "poi_id": "DUR-02_osm_way_625075122",
+        "poi_name": "Duke Softball Stadium",
+        "region": "DUR-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0089418,
+        "longitude": -78.91825358810799
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_239913307",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-03A_osm_way_239913307",
+        "poi_name": "Lee Field",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government",
+          "education_research"
+        ],
+        "latitude": 35.7866641,
+        "longitude": -78.6786312905521
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_382297658",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "RAL-04_osm_way_382297658",
+        "poi_name": "Information Booth",
+        "region": "RAL-04",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 35.7745518,
+        "longitude": -78.6792142
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_625121109",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "DUR-02_osm_way_625121109",
+        "poi_name": "Baldwin Auditorium",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0090688,
+        "longitude": -78.9146329
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_node_2104454759",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-04_osm_node_2104454759",
+        "poi_name": "Disc Golf Course",
+        "region": "RAL-04",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 35.7666882,
+        "longitude": -78.6768523
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4870085351",
+        "species_id": "recommender_content",
+        "species_name": "Reelure",
         "poi_id": "DUR-02_osm_node_4870085351",
         "poi_name": "B.N. Duke",
         "region": "DUR-02",
-        "rarity": "common",
+        "rarity": "rare",
         "basis": [
           "entertainment"
         ],
@@ -5713,97 +5908,112 @@
         "longitude": -78.9146492
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-04_osm_node_11161470206",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_relation_8545666",
         "species_id": "retriever_base",
         "species_name": "Searchound",
-        "poi_id": "RAL-04_osm_node_11161470206",
-        "poi_name": "Social Fabric",
+        "poi_id": "RAL-04_osm_relation_8545666",
+        "poi_name": "College of Engineering EB II / Oval Dr",
         "region": "RAL-04",
         "rarity": "common",
         "basis": [
-          "food_hospitality",
+          "transportation",
           "education_research"
         ],
-        "latitude": 35.7701476,
-        "longitude": -78.678258
+        "latitude": 35.7721303,
+        "longitude": -78.6735556
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-03A_osm_node_13256603674",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
-        "poi_id": "RAL-03A_osm_node_13256603674",
-        "poi_name": "Wolf Village Market",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "retail",
-          "education_research"
-        ],
-        "latitude": 35.7861204,
-        "longitude": -78.6851183
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-04_osm_node_2470635859",
-        "species_id": "detector_base",
-        "species_name": "Seeklet",
-        "poi_id": "RAL-04_osm_node_2470635859",
-        "poi_name": "Common Grounds Café & Creamery",
-        "region": "RAL-04",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality",
-          "education_research"
-        ],
-        "latitude": 35.7696433,
-        "longitude": -78.6765448
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-04_osm_way_177166351",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
-        "poi_id": "RAL-04_osm_way_177166351",
-        "poi_name": "James B. Hunt Jr. Library",
-        "region": "RAL-04",
-        "rarity": "common",
-        "basis": [
-          "education_research",
-          "civic_government"
-        ],
-        "latitude": 35.7692962,
-        "longitude": -78.6764433
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-04_osm_node_2470661698",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_779967278",
         "species_id": "extractor_base",
         "species_name": "Scribbit",
-        "poi_id": "RAL-04_osm_node_2470661698",
-        "poi_name": "William and Ida Friday Institute for Educational Innovation",
+        "poi_id": "RAL-04_osm_way_779967278",
+        "poi_name": "The Greens Dog Park",
         "region": "RAL-04",
         "rarity": "common",
         "basis": [
+          "entertainment",
+          "civic_government",
           "education_research"
         ],
-        "latitude": 35.7586559,
-        "longitude": -78.6880202
+        "latitude": 35.7659424,
+        "longitude": -78.6729797
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_11828706834",
-        "species_id": "retriever_base",
-        "species_name": "Searchound",
-        "poi_id": "RAL-01_osm_node_11828706834",
-        "poi_name": "Fallon's Flowers - Main",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_818998163",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-01_osm_node_818998163",
+        "poi_name": "Studio 714 West",
         "region": "RAL-01",
         "rarity": "common",
         "basis": [
-          "retail"
+          "retail",
+          "food_hospitality"
         ],
-        "latitude": 35.7889215,
-        "longitude": -78.6508529
+        "latitude": 35.7889055,
+        "longitude": -78.6498437
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_11828706835",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_7674513211",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-01_osm_node_7674513211",
+        "poi_name": "KFC",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "retail"
+        ],
+        "latitude": 35.9855391,
+        "longitude": -78.8993566
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13252685393",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-02_osm_node_13252685393",
+        "poi_name": "Attun",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7703625,
+        "longitude": -78.6542298
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_1216186410",
         "species_id": "recommender_base",
         "species_name": "Suggestle",
+        "poi_id": "RAL-01_osm_node_1216186410",
+        "poi_name": "San Marcos Pizza and Wings",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 35.7884113,
+        "longitude": -78.6504037
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_185375489",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "DUR-02_osm_way_185375489",
+        "poi_name": "East Campus North Quad",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0081765,
+        "longitude": -78.91465905263746
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_11828706835",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
         "poi_id": "RAL-01_osm_node_11828706835",
         "poi_name": "Peace Street Market",
         "region": "RAL-01",
@@ -5816,42 +6026,140 @@
         "longitude": -78.6503085
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-02_osm_way_493984773",
-        "species_id": "anomaly_base",
-        "species_name": "Quirkle",
-        "poi_id": "DUR-02_osm_way_493984773",
-        "poi_name": "Duke Reclamation Pond",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "civic_government",
-          "education_research"
-        ],
-        "latitude": 36.0032335,
-        "longitude": -78.94860533306468
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:DUR-01_osm_node_7674513211",
-        "species_id": "scheduler_workforce",
-        "species_name": "Shiftshark",
-        "poi_id": "DUR-01_osm_node_7674513211",
-        "poi_name": "KFC",
-        "region": "DUR-01",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_11828706834",
+        "species_id": "generator_conversational",
+        "species_name": "Meowlogue",
+        "poi_id": "RAL-01_osm_node_11828706834",
+        "poi_name": "Fallon's Flowers - Main",
+        "region": "RAL-01",
         "rarity": "rare",
         "basis": [
-          "food_hospitality",
           "retail"
         ],
-        "latitude": 35.9855391,
-        "longitude": -78.8993566
+        "latitude": 35.7889215,
+        "longitude": -78.6508529
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651864",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "RAL-02_osm_node_13719651864",
+        "poi_name": "Sunflower Power Poles",
+        "region": "RAL-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.765447,
+        "longitude": -78.6545913
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651866",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-02_osm_node_13719651866",
+        "poi_name": "Sunflower Power Poles",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7669173,
+        "longitude": -78.6523624
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651863",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-02_osm_node_13719651863",
+        "poi_name": "Sunflower Power Poles",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7646704,
+        "longitude": -78.655744
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03B_osm_way_47776986",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-03B_osm_way_47776986",
+        "poi_name": "Theater In The Park",
+        "region": "RAL-03B",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.784287,
+        "longitude": -78.6624423
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_node_2470661698",
+        "species_id": "retriever_base",
+        "species_name": "Searchound",
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "poi_name": "William and Ida Friday Institute for Educational Innovation",
+        "region": "RAL-04",
+        "rarity": "common",
+        "basis": [
+          "education_research"
+        ],
+        "latitude": 35.7586559,
+        "longitude": -78.6880202
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13376202119",
+        "species_id": "recommender_content",
+        "species_name": "Reelure",
+        "poi_id": "RAL-02_osm_node_13376202119",
+        "poi_name": "Get Well Soon",
+        "region": "RAL-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7697596,
+        "longitude": -78.6572668
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03B_osm_relation_8248496",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-03B_osm_relation_8248496",
+        "poi_name": "Pullen Aquatic Center",
+        "region": "RAL-03B",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7809338,
+        "longitude": -78.66150114165659
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_13256603674",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-03A_osm_node_13256603674",
+        "poi_name": "Wolf Village Market",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "education_research"
+        ],
+        "latitude": 35.7861204,
+        "longitude": -78.6851183
       }
     ]
   },
   "simulation": {
-    "dates": "2026-10-01 through 2026-10-14",
+    "dates": "2026-10-18 through 2026-11-18",
     "observed_species": [
       "anomaly_base",
+      "anomaly_fraud",
+      "anomaly_machine",
       "anomaly_network",
       "detector_base",
       "detector_defect",
@@ -5859,28 +6167,38 @@
       "extractor_archive",
       "extractor_base",
       "extractor_government",
+      "extractor_history",
       "extractor_research",
+      "extractor_specimen",
       "forecast_base",
       "forecast_crowd",
       "forecast_stock",
-      "forecast_transit",
       "generator_base",
+      "generator_catalog",
+      "generator_classroom_chatbot",
       "generator_conversational",
       "generator_creative",
       "generator_document",
       "generator_learning",
+      "generator_lesson_planner",
+      "recommender_adaptive_learning",
+      "recommender_ai_curator",
       "recommender_base",
       "recommender_content",
       "recommender_learning",
       "recommender_menu",
       "recommender_product",
+      "recommender_research",
       "retriever_base",
       "retriever_knowledge",
       "retriever_product",
       "retriever_records",
       "retriever_research",
+      "retriever_semantic_search",
       "scheduler_base",
       "scheduler_delivery",
+      "scheduler_traffic_signal",
+      "scheduler_transit",
       "scheduler_workforce"
     ],
     "observed_habitats": [
@@ -5894,14 +6212,6 @@
       "transportation"
     ],
     "unobserved_non_signature_species": [
-      {
-        "id": "anomaly_fraud",
-        "name": "Swindlisk"
-      },
-      {
-        "id": "anomaly_machine",
-        "name": "Geargoyle"
-      },
       {
         "id": "anomaly_vitals",
         "name": "Beatling"
@@ -5919,12 +6229,12 @@
         "name": "Wardwisp"
       },
       {
-        "id": "scheduler_hospital",
-        "name": "Wardray"
+        "id": "forecast_transit",
+        "name": "Commutoracle"
       },
       {
-        "id": "scheduler_transit",
-        "name": "Routeopus"
+        "id": "scheduler_hospital",
+        "name": "Wardray"
       }
     ],
     "unreachable_non_signature_species": [
@@ -5949,6 +6259,6 @@
         "name": "Wardray"
       }
     ],
-    "note": "Healthcare-only forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. These are coverage limitations, not claims of 39 reachable forms."
+    "note": "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. Ten Signatures have real placement eligibility; all twelve occur over the Demo rotation. These are coverage limitations, not claims of 51 real-world reachable forms."
   }
 }

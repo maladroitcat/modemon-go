@@ -52,6 +52,8 @@ or unsafe provenance produces a visible source-review warning, not a replacement
 link or invented project. Link health is checked separately from browser navigation
 QA; tests do not pretend mocked third-party content is evidence.
 
-Signature discovery and spawn eligibility are unchanged. Browser QA seeds previously
-discovered IDs solely to exercise future detail rendering; it does not add a schedule,
-POI crosswalk, encounter, or capture. All 12 forms remain absent from generated worlds.
+The original issue-19 rendering review did not activate encounters. Issue 21 now
+provides a separate owner-approved crosswalk/schedule for all twelve forms, with
+individual safety gates; see [SIGNATURE_ENCOUNTERS.md](SIGNATURE_ENCOUNTERS.md).
+The standalone rendering regression still seeds discoveries only, while additional
+browser tests exercise actual scheduled encounters, captures and escapes.

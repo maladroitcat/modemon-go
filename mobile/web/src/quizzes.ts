@@ -75,8 +75,8 @@ export function difficultyQuestionsFor(
 ): GroundedQuestion[] {
   if (!isDifficulty(difficulty)) throw Error("Unknown quiz difficulty");
   const species = data.modedex.modemon[spawn.speciesId];
-  if (!species || species.stage >= 3)
-    throw Error("Quizzes require a non-Signature Modémon");
+  if (!species || (species.stage === 3 && !data.signatures?.entries.some((e) => e.species_id === spawn.speciesId)))
+    throw Error("Quizzes require a canonical Modémon with explicit Signature approval");
   const basic: GroundedQuestion[] = questionsFor(spawn, data).map((q, i) => {
     const topic = (["role", "input_data", "output_data"] as const)[i];
     const option_sources = q.options.map((value) => {

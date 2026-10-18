@@ -58,6 +58,19 @@ export type Runtime = {
   pois: Poi[];
   precedence: { winner: string; loser: string }[];
   habitats: Record<string, string>;
+  signatures?: {
+    version: string;
+    schedule: { period_days: number; epoch: string };
+    entries: {
+      species_id: string;
+      poi_id: string;
+      safety_status: string;
+      placement: { lat: number; lon: number; x: number; y: number } | null;
+      association_note: string;
+      evidence_url: string;
+      blocked_dates: string[];
+    }[];
+  };
 };
 export type Spawn = {
   id: string;
@@ -192,14 +205,104 @@ export function maximumInCircle(
   }
   return maximum;
 }
-export function buildWorld(data: Runtime, date = dayKey()): Spawn[] {
+export function scheduledSignatures(
+  data: Runtime,
+  date = dayKey(),
+  mode: "real" | "demo" = "real",
+): Spawn[] {
+  const config = data.signatures;
+  if (!config) return [];
+  const ordinal = Math.floor(
+    (Date.parse(date + "T12:00:00Z") -
+      Date.parse(config.schedule.epoch + "T12:00:00Z")) /
+      86400000,
+  );
+  if (
+    !Number.isFinite(ordinal) ||
+    !Number.isInteger(config.schedule.period_days) ||
+    config.schedule.period_days < 2
+  )
+    throw Error("Invalid Signature schedule");
+  const period = config.schedule.period_days;
+  const block = Math.floor(ordinal / period);
+  const day = ((ordinal % period) + period) % period;
+  const anchors = [...new Set(config.entries.map((e) => e.poi_id))].sort();
+  const result: Spawn[] = [];
+  for (const id of anchors) {
+    const seed = `${config.version}:${id}`;
+    if (day !== hash(seed + ":day") % period) continue;
+    const choices = config.entries
+      .filter((e) => e.poi_id === id)
+      .sort((a, b) => a.species_id.localeCompare(b.species_id));
+    const index =
+      (((block + hash(seed + ":species")) % choices.length) + choices.length) %
+      choices.length;
+    const chosen = choices[index];
+    const source = data.pois.find((p) => p.id === id);
+    const species = data.modedex.modemon[chosen.species_id];
+    if (
+      !source?.eligible || !source.special_destination ||
+      species?.stage !== 3 || !species.signature
+    )
+      throw Error(`Invalid approved Signature mapping: ${chosen.species_id}`);
+    const safe =
+      chosen.safety_status === "mapped_public_approach" && chosen.placement;
+    if (chosen.blocked_dates.includes(date) || (!safe && mode !== "demo"))
+      continue;
+    if (!safe && chosen.safety_status !== "withheld_pending_safe_approach") continue;
+    const poi = {
+      ...source, ...(safe || {}), association_note: chosen.association_note,
+    };
+    if (safe && resolvedRegion(data, poi.lon, poi.lat) !== source.region)
+      throw Error(`Signature approach outside resolved parent: ${id}`);
+    result.push({
+      id: `${rules.version}:${config.version}:${date}:${id}:${chosen.species_id}`,
+      date,
+      speciesId: chosen.species_id,
+      rarity: "signature",
+      poi,
+      basis: [...species.habitats],
+    });
+  }
+  return result.sort(
+    (a, b) =>
+      hash(`${config.version}:${date}:${a.poi.id}`) -
+        hash(`${config.version}:${date}:${b.poi.id}`) ||
+      a.id.localeCompare(b.id),
+  );
+}
+
+export function buildWorld(
+  data: Runtime,
+  date = dayKey(),
+  mode: "real" | "demo" = "real",
+): Spawn[] {
   const salt = `${rules.version}:${data.data_version}:${date}`;
   const candidates = data.pois
     .filter((p) => p.eligible)
     .map((p) => ({ p, rank: hash(`${salt}:${p.id}`) }))
     .sort((a, b) => a.rank - b.rank || a.p.id.localeCompare(b.p.id));
   const accepted: Spawn[] = [];
+  const fits = (p: Poi) => {
+    const nearby = accepted.filter(
+      (s) => Math.hypot(s.poi.x - p.x, s.poi.y - p.y) <=
+        (rules.densityRadiusMeters + rules.densityProjectionGuardMeters) * 2,
+    );
+    return maximumInCircle([...nearby.map((s) => s.poi), p]) <=
+      rules.maximumInCircle;
+  };
+  // Signature slots are admitted first; neither an escape nor a capture backfills
+  // their slot or rerolls the date. Ordinary IDs and quiz seeds remain unchanged.
+  for (const signature of scheduledSignatures(data, date, mode))
+    if (fits(signature.poi)) accepted.push(signature);
   for (const { p } of candidates) {
+    if (accepted.some((s) => s.poi.id === p.id)) continue;
+    // Never direct ordinary encounters to a known unsafe Signature anchor either.
+    if (data.signatures?.entries.some(
+      (e) => e.poi_id === p.id &&
+        (e.safety_status === "withheld_pending_safe_approach" ||
+          e.blocked_dates.includes(date)),
+    )) continue;
     const basis = [
       ...new Set(
         [p.primary, p.secondary, ...p.zone_habitats].filter(
@@ -216,15 +319,7 @@ export function buildWorld(data: Runtime, date = dayKey()): Spawn[] {
     const pool = eligible.filter(([, s]) => s.stage === (rare ? 2 : 1));
     const choices = pool.length ? pool : eligible;
     if (!choices.length) continue;
-    const nearby = accepted.filter(
-      (s) =>
-        Math.hypot(s.poi.x - p.x, s.poi.y - p.y) <=
-        (rules.densityRadiusMeters + rules.densityProjectionGuardMeters) * 2,
-    );
-    if (
-      maximumInCircle([...nearby.map((s) => s.poi), p]) > rules.maximumInCircle
-    )
-      continue;
+    if (!fits(p)) continue;
     const [speciesId, species] =
       choices[hash(`${salt}:${p.id}:species`) % choices.length];
     accepted.push({

@@ -44,7 +44,8 @@ class WebRuntimeTests(unittest.TestCase):
             self.assertEqual([f['geometry'] for f in features], [f['geometry'] for f in self.payload[key]])
 
     def test_sensitive_and_unapproved_associations_disabled(self):
-        self.assertEqual(self.payload['signatures']['enabled'], [])
+        self.assertEqual(len(self.payload['signatures']['enabled']), 10)
+        self.assertEqual(len(self.payload['signatures']['demo_enabled']), 12)
         self.assertEqual(self.payload['art']['approved'], {})
         self.assertFalse(any(p['eligible'] for p in self.payload['pois'] if p['region'] == 'RAL-05'))
         for p in self.payload['pois']:

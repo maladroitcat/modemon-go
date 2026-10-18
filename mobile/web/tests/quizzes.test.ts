@@ -219,7 +219,7 @@ test("missing topics, unsupported sources and invalid modes fail instead of inve
     ([, s]) => s.stage === 3,
   )![0];
   assert.throws(() =>
-    difficultyQuestionsFor({ ...spawn, speciesId: signature }, data, "expert"),
+    difficultyQuestionsFor({ ...spawn, speciesId: signature }, { ...data, signatures: undefined }, "expert"),
   );
 });
 

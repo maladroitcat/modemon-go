@@ -14,12 +14,17 @@ const count = (values: string[]) =>
       .map((v) => [v, values.filter((x) => x === v).length]),
   );
 const reachable = new Set<string>(),
-  habitats = new Set<string>();
-for (let d = 1; d <= 14; d++)
-  for (const s of buildWorld(data, `2026-10-${String(d).padStart(2, "0")}`)) {
+  habitats = new Set<string>(),
+  demoSignatures = new Set<string>();
+const dates = Array.from({ length: 32 }, (_, i) => new Date(Date.parse(date + "T12:00:00Z") + i * 86400000).toISOString().slice(0, 10));
+for (const day of dates) {
+  for (const s of buildWorld(data, day)) {
     reachable.add(s.speciesId);
     s.basis.forEach((h) => habitats.add(h));
   }
+  for (const s of buildWorld(data, day, "demo"))
+    if (s.rarity === "signature") demoSignatures.add(s.speciesId);
+}
 const report = {
   date,
   timezone: "America/New_York",
@@ -37,14 +42,16 @@ const report = {
       id,
       name: s.name,
       habitats: s.habitats,
-      question_count: 3,
+      question_counts: { novice: 3, intermediate: 5, expert: 7 },
     })),
   signatures: {
-    enabled: [],
-    disabled: Object.entries(data.modedex.modemon)
-      .filter(([, s]) => s.stage === 3)
-      .map(([id, s]) => ({ id, name: s.name })),
-    reason: "No approved deployment-to-destination schedule/crosswalk.",
+    version: data.signatures!.version,
+    schedule: data.signatures!.schedule,
+    approved_mappings: data.signatures!.entries,
+    real_enabled: data.signatures!.entries.filter((e) => e.placement).map((e) => e.species_id),
+    real_withheld: data.signatures!.entries.filter((e) => !e.placement).map((e) => ({ id: e.species_id, name: data.modedex.modemon[e.species_id].name, reason: e.association_note })),
+    demo_observed: [...demoSignatures].sort(),
+    reason: "Explicit owner-approved associations. Real placement requires reviewed outdoor access evidence; Durham Station remains Demo-only during construction.",
   },
   artwork: {
     approved_creature_images: 0,
@@ -83,7 +90,7 @@ const report = {
     })),
   },
   simulation: {
-    dates: "2026-10-01 through 2026-10-14",
+    dates: `${dates[0]} through ${dates.at(-1)}`,
     observed_species: [...reachable].sort(),
     observed_habitats: [...habitats].sort(),
     unobserved_non_signature_species: Object.entries(data.modedex.modemon)
@@ -102,7 +109,7 @@ const report = {
           ),
       )
       .map(([id, s]) => ({ id, name: s.name })),
-    note: "Healthcare-only forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. These are coverage limitations, not claims of 39 reachable forms.",
+    note: "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. Ten Signatures have real placement eligibility; all twelve occur over the Demo rotation. These are coverage limitations, not claims of 51 real-world reachable forms.",
   },
 };
 writeFileSync(
