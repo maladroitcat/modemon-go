@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Modémon GO",
+    "slug": "modemon-go",
+    "scheme": "modemon-go",
+    "version": "0.1.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-router",
+      ["expo-location", {
+        "locationWhenInUsePermission": "Modémon GO uses your location while the app is open to center the map. Your location history is not saved.",
+        "locationAlwaysAndWhenInUsePermission": false,
+        "locationAlwaysPermission": false,
+        "motionUsagePermission": false,
+        "locationFullAccuracyPermission": false,
+        "isIosBackgroundLocationEnabled": false,
+        "isAndroidBackgroundLocationEnabled": false,
+        "isAndroidForegroundServiceEnabled": false,
+        "isAndroidMotionActivityEnabled": false
+      }]
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "blockedPermissions": ["android.permission.ACCESS_BACKGROUND_LOCATION", "android.permission.FOREGROUND_SERVICE_LOCATION"],
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

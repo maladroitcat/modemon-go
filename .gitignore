@@ -4,3 +4,18 @@ __pycache__/
 .venv/
 venv/
 .env
+
+# Mobile / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+npm-debug.log*
+.env.*
+!*.example
+mobile/ios/
+mobile/android/
