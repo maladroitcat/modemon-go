@@ -1,0 +1,136 @@
+version: 1
+status: research_only_pending_owner_review
+review_date: '2026-10-18'
+coverage_evidence: data/research/workbook_full_review.json
+method: >-
+  Refreshed all three homepages and every linked unit TOC; fetched and indexed
+  all 360 unique discovered lesson bodies. Read the relevant hits and competing
+  component lessons for each of the 21 prior review entries. Keyword occurrence
+  is a search lead, never an automatic relevance decision. This exhausts the
+  currently discoverable TOC corpus, not hypothetical unpublished material.
+discovery_notes: >-
+  Domain-restricted search did not reveal extra lesson URLs. Data Science and
+  Deep Learning sitemap.xml returned 404; Explainable AI returned HTML rather
+  than an XML sitemap. The discovery surface is explicitly the public homepages
+  and all 15 linked unit TOCs. No failed lesson fetches remain in the corpus.
+
+# These are rejected competing interpretations, not additional proposed links.
+rejected_keyword_matches:
+  - url: https://datascienceworkbook.com/engineering/data-pipelines/orchestration-and-dags
+    reason: Teaches data-pipeline dependency scheduling, not staffing, vehicle capacity, or route-assignment constraints.
+  - url: https://deeplearningworkbook.com/neural-networks/training/optimizers
+    reason: Teaches neural parameter updates, not operational route or worker assignment.
+  - url: https://deeplearningworkbook.com/nlp/multimodal/mixture-of-experts
+    reason: Routing chooses neural experts for tokens, not vehicles or trips.
+  - url: https://explainableaiworkbook.com/04-adversarial-ai/03-adversarial-defenses/02-certified-defenses
+    reason: MILP is mentioned as a neural robustness verification option; the lesson does not teach allocation objectives or operational constraint formulation.
+  - url: https://explainableaiworkbook.com/04-adversarial-ai/01-introduction-to-hacking/02-hacking-an-ai-system
+    reason: A conversational prompt-attack example is not instruction on dialogue state, booking slots, or trip confirmation.
+
+# Each reviewed ID joins its exact scope/rationale from the workbook overlay.
+species:
+  anomaly_machine:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [autoencoders, time_features, shap]
+    finding: Retain the explicit autoencoder component; reconstruction and temporal features are useful without claiming a maintenance pipeline.
+  anomaly_network:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [autoencoders, outliers, shap]
+    finding: Prefer the directly canonical autoencoder mechanism over a generic security analogy; no intrusion classifier is inferred.
+  recommender_ai_curator:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [llm, recommender_types, prompt_inspection]
+    finding: LLM generation plus prompt perturbation supports canonical generation and prompt inspection, not the entire curatorial process.
+  recommender_learning:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [recommender_types, similarity, llm]
+    finding: Profile-to-resource matching is genuine recommendation coverage, even without knowledge tracing or proof of learning gain.
+  recommender_adaptive_learning:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [llm, recommender_types, prompt_inspection]
+    finding: Keep the LLM feedback component; the lesson does not establish the project's adaptation method or effectiveness.
+  extractor_base:
+    previous_outcome: unresolved
+    outcome: workbook_component
+    considered_lessons: [sequence_tagging, transformer_practice, llm]
+    finding: A concrete word-to-entity-tag example explains one extraction task; its RNN is illustrative, not a canon change.
+  extractor_medical:
+    previous_outcome: unresolved
+    outcome: workbook_component
+    considered_lessons: [transformer_practice, sequence_tagging, llm]
+    finding: Contextual encoder interpretation is a canonical technique component, with explicit limits for clinical terms, negation, and validation.
+  extractor_government:
+    previous_outcome: unresolved
+    outcome: workbook_component
+    considered_lessons: [transformer_practice, sequence_tagging, multimodal_inputs]
+    finding: Underlying transformer text interpretation is a useful foundation for a canonical layout-aware transformer; spatial layout and OCR remain untaught.
+  extractor_research:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [topics, sequence_tagging, transformer_practice]
+    finding: Topic discovery is explicitly canonical and substantively taught; retain it rather than require coverage of every extraction step.
+  extractor_history:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [topics, provenance, tfidf]
+    finding: Theme discovery is an educational pattern-analysis illustration, not a claim that the redlining project used topic modeling.
+  extractor_archive:
+    previous_outcome: unresolved
+    outcome: workbook_component
+    considered_lessons: [multimodal_inputs, transformer_practice, detection]
+    finding: Accept a narrowly labeled multimodal-input foundation because vision-language models are canonical; do not present it as handwriting instruction.
+  extractor_specimen:
+    previous_outcome: unresolved
+    outcome: genuine_gap
+    considered_lessons: [multimodal_inputs, transformer_practice, detection]
+    finding: The corpus contains no optical-character, handwriting, or transcription lesson. Generic image detection does not teach text recognition; no museum architecture is documented to justify a model-specific workbook match.
+  scheduler_base:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [rl, time_features]
+    finding: RL is explicitly canonical and has a substantive decision-making lesson; retain it with a component-only label.
+  scheduler_hospital:
+    previous_outcome: unresolved
+    outcome: genuine_gap
+    considered_lessons: [rl, time_features]
+    finding: Input forecasts are not the resource-allocation component. Pipeline scheduling and the isolated robustness-MILP mention do not teach hospital staffing/resource constraints.
+  scheduler_transit:
+    previous_outcome: unresolved
+    outcome: genuine_gap
+    considered_lessons: [rl, time_features]
+    finding: No lesson teaches vehicle routing constraints, route assignment, or dispatch; neural token routing and gradient optimizers are different operations.
+  scheduler_transit_flow:
+    previous_outcome: unresolved
+    outcome: workbook_component
+    considered_lessons: [time_features, time_series, rl]
+    finding: Temporal features meaningfully explain inputs to the explicitly canonical predictive component, not priority allocation or the GoDurham implementation.
+  scheduler_ride_booking:
+    previous_outcome: unresolved
+    outcome: genuine_gap
+    considered_lessons: [llm, sequence_tagging, transformer_practice]
+    finding: Generic language-model or sequence examples do not teach booking slots, dialogue state, and confirmation; canon does not identify an LLM architecture.
+  scheduler_traffic_signal:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [detection, yolo, time_features]
+    finding: Retain perception-task instruction, without claiming that a particular detector or controller is installed in Raleigh.
+  scheduler_workforce:
+    previous_outcome: unresolved
+    outcome: genuine_gap
+    considered_lessons: [rl, time_features]
+    finding: No substantive worker-assignment, shift-coverage, preference-constraint or integer-scheduling lesson was found.
+  scheduler_delivery:
+    previous_outcome: unresolved
+    outcome: genuine_gap
+    considered_lessons: [rl, time_features]
+    finding: No vehicle-routing, capacity, stop-sequence or delivery-window lesson was found; gradient descent and DAG orchestration are not substitutes.
+  generator_catalog:
+    previous_outcome: partial
+    outcome: workbook_component
+    considered_lessons: [llm, agent_traces, provenance, prompt_inspection]
+    finding: Generation plus agent trace/approval auditing is a useful pair of canonical components, without claiming catalog standards or an exact NC State workflow.

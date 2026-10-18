@@ -1,0 +1,94 @@
+{
+  "https://developers.google.com/optimization/routing": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "Vehicle Routing",
+    "content_sha256": "81c7111f7dadbfca470932255dbda0a3846e90a1f49dccf3c39d3e59211bdc69",
+    "final_url": "https://developers.google.com/optimization/routing",
+    "http_status": 200,
+    "media_type": "html",
+    "observed_headings": [
+      "Vehicle Routing Stay organized with collections Save and categorize content based on your preferences."
+    ],
+    "verification_terms_found": {
+      "constraints": true,
+      "fleet": true,
+      "time windows": true,
+      "vehicles": true
+    },
+    "verified_at_utc": "2026-10-18T22:22:07.196708+00:00"
+  },
+  "https://developers.google.com/optimization/routing/vrptw": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "Vehicle Routing Problem with Time Windows",
+    "content_sha256": "99eb267c6fb210eb4ce40431fbc863512487199574f56d82e3929376382cea14",
+    "final_url": "https://developers.google.com/optimization/routing/vrptw",
+    "http_status": 200,
+    "media_type": "html",
+    "observed_headings": [
+      "Vehicle Routing Problem with Time Windows Stay organized with collections Save and categorize content based on your preferences."
+    ],
+    "verification_terms_found": {
+      "constraints": true,
+      "time windows": true,
+      "travel times": true,
+      "vehicles": true
+    },
+    "verified_at_utc": "2026-10-18T22:22:12.127908+00:00"
+  },
+  "https://developers.google.com/optimization/scheduling/employee_scheduling": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "Employee Scheduling",
+    "content_sha256": "80565157fc5ba627d3e6076c74b34c10f5d57a536fb79186e7a6f593c03be29c",
+    "final_url": "https://developers.google.com/optimization/scheduling/employee_scheduling",
+    "http_status": 200,
+    "media_type": "html",
+    "observed_headings": [
+      "Employee Scheduling Stay organized with collections Save and categorize content based on your preferences."
+    ],
+    "verification_terms_found": {
+      "CP-SAT": true,
+      "constraints": true,
+      "nurse": true,
+      "shift": true
+    },
+    "verified_at_utc": "2026-10-18T22:22:06.263172+00:00"
+  },
+  "https://huggingface.co/docs/transformers/model_doc/trocr": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "TrOCR",
+    "content_sha256": "0e32e0c39effafc5bb26624ec6e23e0f6aa65558693466940c86312a07c4ee5c",
+    "final_url": "https://huggingface.co/docs/transformers/model_doc/trocr",
+    "http_status": 200,
+    "media_type": "html",
+    "observed_headings": [
+      "Transformers",
+      "TrOCR"
+    ],
+    "verification_terms_found": {
+      "generated_text": true,
+      "optical character recognition": true,
+      "trocr-base-handwritten": true
+    },
+    "verified_at_utc": "2026-10-18T22:22:05.182164+00:00"
+  },
+  "https://web.stanford.edu/~jurafsky/slp3/K.pdf": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "Frame-Based Dialogue Systems",
+    "content_sha256": "6ddb59eb40d656a5c6241166625e3d5599bd8f5fad320b614bff8a08ba67596b",
+    "discovery_url": "https://web.stanford.edu/~jurafsky/slp3/index.html",
+    "final_url": "https://web.stanford.edu/~jurafsky/slp3/K.pdf",
+    "http_status": 200,
+    "media_type": "pdf",
+    "observed_headings": [
+      "Frame-Based Dialogue Systems"
+    ],
+    "verification_terms_found": {
+      "confirmation": true,
+      "dialogue": true,
+      "frame": true,
+      "slot": true,
+      "travel": true
+    },
+    "verified_at_utc": "2026-10-18T22:22:09.342269+00:00"
+  }
+}

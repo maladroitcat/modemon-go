@@ -1,4 +1,20 @@
 {
+  "agent_traces": {
+    "article_title": "XAI in Agentic AI Systems",
+    "final_url": "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/05-xai-in-agentic-ai-systems",
+    "http_status": 200,
+    "main_text_sha256": "16c44d63f59917954a78eaac715b8860073a17b420f6a20d2ad7388bae32164b",
+    "toc_link_label": "5 . XAI in Agentic AI Systems \u2192",
+    "toc_url": "https://explainableaiworkbook.com/02-explainable-machine-learning",
+    "url": "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/05-xai-in-agentic-ai-systems",
+    "verification_terms_found": {
+      "approval": true,
+      "failures": true,
+      "tool calls": true,
+      "trace": true
+    },
+    "verified_at_utc": "2026-10-18T22:18:43.823185+00:00"
+  },
   "autoencoders": {
     "article_title": "Autoencoders and the Generation Problem",
     "final_url": "https://deeplearningworkbook.com/generative-ai/vaes/autoencoder-review",
@@ -12,7 +28,7 @@
       "encoder": true,
       "reconstruction error": true
     },
-    "verified_at_utc": "2026-10-18T16:52:37.786183+00:00"
+    "verified_at_utc": "2026-10-18T22:18:45.294586+00:00"
   },
   "detection": {
     "article_title": "Introduction",
@@ -27,7 +43,7 @@
       "classification": true,
       "confidence score": true
     },
-    "verified_at_utc": "2026-10-18T16:52:39.186900+00:00"
+    "verified_at_utc": "2026-10-18T22:18:46.644062+00:00"
   },
   "diffusion": {
     "article_title": "The Diffusion Intuition",
@@ -42,7 +58,7 @@
       "image": true,
       "noise": true
     },
-    "verified_at_utc": "2026-10-18T16:52:39.921642+00:00"
+    "verified_at_utc": "2026-10-18T22:18:47.348307+00:00"
   },
   "generative": {
     "article_title": "From Predicting to Creating",
@@ -57,7 +73,7 @@
       "distribution": true,
       "generative": true
     },
-    "verified_at_utc": "2026-10-18T16:52:40.598377+00:00"
+    "verified_at_utc": "2026-10-18T22:18:48.028433+00:00"
   },
   "gradcam": {
     "article_title": "Grad-CAM and Variants",
@@ -72,7 +88,7 @@
       "convolutional": true,
       "heatmap": true
     },
-    "verified_at_utc": "2026-10-18T16:52:42.102705+00:00"
+    "verified_at_utc": "2026-10-18T22:18:48.718040+00:00"
   },
   "llm": {
     "article_title": "What Is a Large Language Model?",
@@ -87,7 +103,7 @@
       "language model": true,
       "prompt": true
     },
-    "verified_at_utc": "2026-10-18T16:52:43.463610+00:00"
+    "verified_at_utc": "2026-10-18T22:18:50.092290+00:00"
   },
   "logistic": {
     "article_title": "Logistic Regression",
@@ -102,7 +118,7 @@
       "sigmoid": true,
       "threshold": true
     },
-    "verified_at_utc": "2026-10-18T16:52:44.829179+00:00"
+    "verified_at_utc": "2026-10-18T22:18:51.425490+00:00"
   },
   "lstm": {
     "article_title": "Long Short-Term Memory (LSTM)",
@@ -117,7 +133,23 @@
       "gates": true,
       "vanishing gradient": true
     },
-    "verified_at_utc": "2026-10-18T16:52:45.486216+00:00"
+    "verified_at_utc": "2026-10-18T22:18:52.129376+00:00"
+  },
+  "multimodal_inputs": {
+    "article_title": "Beyond Language \u2014 Multimodal Models",
+    "final_url": "https://deeplearningworkbook.com/nlp/multimodal/multimodal-intro",
+    "http_status": 200,
+    "main_text_sha256": "a493003b98c6ac87492aba044609dec37214f183360366131142e36455fdb032",
+    "toc_link_label": "1 . Beyond Language \u2014 Multimodal Models \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/multimodal/multimodal-intro",
+    "verification_terms_found": {
+      "Images": true,
+      "screenshots": true,
+      "tokens": true,
+      "transformer": true
+    },
+    "verified_at_utc": "2026-10-18T22:18:52.784644+00:00"
   },
   "outliers": {
     "article_title": "Detecting Outliers",
@@ -133,7 +165,23 @@
       "fraud": true,
       "sensor": true
     },
-    "verified_at_utc": "2026-10-18T16:52:47.006997+00:00"
+    "verified_at_utc": "2026-10-18T22:18:54.312830+00:00"
+  },
+  "prompt_inspection": {
+    "article_title": "XAI in LLM Prompting",
+    "final_url": "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/03-xai-in-llm-prompting",
+    "http_status": 200,
+    "main_text_sha256": "b99e9d253342b8ebf8a9e23c8475854f280c45f49e7f42c106b90dd9174f560c",
+    "toc_link_label": "3 . XAI in LLM Prompting \u2192",
+    "toc_url": "https://explainableaiworkbook.com/02-explainable-machine-learning",
+    "url": "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/03-xai-in-llm-prompting",
+    "verification_terms_found": {
+      "demonstrations": true,
+      "faithfulness": true,
+      "perturbation": true,
+      "prompt": true
+    },
+    "verified_at_utc": "2026-10-18T22:18:54.994757+00:00"
   },
   "provenance": {
     "article_title": "Provenance",
@@ -149,7 +197,7 @@
       "source": true,
       "transformations": true
     },
-    "verified_at_utc": "2026-10-18T16:52:48.459561+00:00"
+    "verified_at_utc": "2026-10-18T22:18:56.273395+00:00"
   },
   "rag": {
     "article_title": "Retrieval-Augmented Generation (RAG)",
@@ -165,7 +213,7 @@
       "prompt": true,
       "retrieve": true
     },
-    "verified_at_utc": "2026-10-18T16:52:49.112272+00:00"
+    "verified_at_utc": "2026-10-18T22:18:56.952459+00:00"
   },
   "recommender_intro": {
     "article_title": "Why Recommendation Systems?",
@@ -180,7 +228,7 @@
       "content": true,
       "personalized information filters": true
     },
-    "verified_at_utc": "2026-10-18T16:52:50.429727+00:00"
+    "verified_at_utc": "2026-10-18T22:18:58.602820+00:00"
   },
   "recommender_types": {
     "article_title": "Types of Recommendation Systems",
@@ -195,7 +243,7 @@
       "Content-Based Filtering": true,
       "Hybrid Systems": true
     },
-    "verified_at_utc": "2026-10-18T16:52:51.081963+00:00"
+    "verified_at_utc": "2026-10-18T22:18:59.601188+00:00"
   },
   "rl": {
     "article_title": "Introduction to Reinforcement Learning",
@@ -211,7 +259,22 @@
       "policy": true,
       "reward": true
     },
-    "verified_at_utc": "2026-10-18T16:52:52.400547+00:00"
+    "verified_at_utc": "2026-10-18T22:19:01.562237+00:00"
+  },
+  "sequence_tagging": {
+    "article_title": "Recurrent Neural Network (RNN)",
+    "final_url": "https://deeplearningworkbook.com/nlp/rnns/rnn-architecture",
+    "http_status": 200,
+    "main_text_sha256": "3d1dffbd57a9657763edd2b4df2084528b562017bbdfe1bdf9ea9e025a5acc14",
+    "toc_link_label": "2 . Recurrent Neural Network (RNN) \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/rnns/rnn-architecture",
+    "verification_terms_found": {
+      "Sequence-to-Sequence": true,
+      "named entity tagging": true,
+      "output": true
+    },
+    "verified_at_utc": "2026-10-18T22:19:02.249035+00:00"
   },
   "shap": {
     "article_title": "SHAP",
@@ -226,7 +289,7 @@
       "baseline": true,
       "feature": true
     },
-    "verified_at_utc": "2026-10-18T16:52:53.122100+00:00"
+    "verified_at_utc": "2026-10-18T22:19:02.999782+00:00"
   },
   "similarity": {
     "article_title": "NLP Applications:Text Similarity",
@@ -241,7 +304,7 @@
       "Semantic similarity": true,
       "cosine": true
     },
-    "verified_at_utc": "2026-10-18T16:52:53.767392+00:00"
+    "verified_at_utc": "2026-10-18T22:19:03.736703+00:00"
   },
   "tfidf": {
     "article_title": "TF-IDF and N-grams",
@@ -256,7 +319,7 @@
       "Term Frequency": true,
       "search": true
     },
-    "verified_at_utc": "2026-10-18T16:52:54.427902+00:00"
+    "verified_at_utc": "2026-10-18T22:19:04.435740+00:00"
   },
   "time_features": {
     "article_title": "Feature Engineering for Time Series",
@@ -271,7 +334,7 @@
       "Rolling statistics": true,
       "Seasonal features": true
     },
-    "verified_at_utc": "2026-10-18T16:52:55.163318+00:00"
+    "verified_at_utc": "2026-10-18T22:19:05.132886+00:00"
   },
   "time_series": {
     "article_title": "Time Series",
@@ -286,7 +349,7 @@
       "sequential": true,
       "time": true
     },
-    "verified_at_utc": "2026-10-18T16:52:55.841261+00:00"
+    "verified_at_utc": "2026-10-18T22:19:05.806681+00:00"
   },
   "topics": {
     "article_title": "NLP Applications:Topic Modeling",
@@ -301,7 +364,23 @@
       "keywords": true,
       "topics": true
     },
-    "verified_at_utc": "2026-10-18T16:52:56.490476+00:00"
+    "verified_at_utc": "2026-10-18T22:19:06.479052+00:00"
+  },
+  "transformer_practice": {
+    "article_title": "Transformers in Practice",
+    "final_url": "https://deeplearningworkbook.com/nlp/attention-transformer/transformer-types-inference",
+    "http_status": 200,
+    "main_text_sha256": "ea010ac58031251493617dbba68b394cb3930ec67ca2e932dc8ac6151b0c569f",
+    "toc_link_label": "5 . Transformers in Practice \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/attention-transformer/transformer-types-inference",
+    "verification_terms_found": {
+      "Encoder-only": true,
+      "NER": true,
+      "contextual": true,
+      "information extraction": true
+    },
+    "verified_at_utc": "2026-10-18T22:19:07.160647+00:00"
   },
   "unet": {
     "article_title": "U-Net",
@@ -316,7 +395,7 @@
       "segmentation": true,
       "skip connections": true
     },
-    "verified_at_utc": "2026-10-18T16:52:57.157988+00:00"
+    "verified_at_utc": "2026-10-18T22:19:07.822105+00:00"
   },
   "vector": {
     "article_title": "Vector Databases and RAG",
@@ -331,7 +410,7 @@
       "cosine": true,
       "embedding": true
     },
-    "verified_at_utc": "2026-10-18T16:52:58.673778+00:00"
+    "verified_at_utc": "2026-10-18T22:19:09.161677+00:00"
   },
   "yolo": {
     "article_title": "YOLO and Faster R-CNN",
@@ -346,6 +425,6 @@
       "YOLO": true,
       "region": true
     },
-    "verified_at_utc": "2026-10-18T16:52:59.355363+00:00"
+    "verified_at_utc": "2026-10-18T22:19:09.834477+00:00"
   }
 }

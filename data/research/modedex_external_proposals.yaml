@@ -1,0 +1,86 @@
+version: 1
+approval_status: PENDING_OWNER_APPROVAL
+policy: >-
+  Research proposals only, not approved mappings. Every species/reference pair
+  requires individual explicit owner approval. URL verification is not approval.
+  These URLs never populate the workbook overlay, canonical Modedex, or runtime.
+proposals:
+  extractor_specimen:
+    name: Specimunk
+    approval_status: PENDING_OWNER_APPROVAL
+    publisher: Hugging Face, Transformers documentation
+    article_title: TrOCR
+    proposed_url: https://huggingface.co/docs/transformers/model_doc/trocr
+    relevant_topic: Handwritten image-to-text recognition
+    match_rationale: Demonstrates converting a handwritten image into text, directly illustrating the canonical recognition task.
+    confidence: high
+    scope_label: Educational OCR example, not the museum's documented architecture
+    why_workbooks_insufficient: All 360 lesson bodies were reviewed; none teaches OCR, handwriting recognition, or transcription. Generic image detection is not character recognition, and no museum model architecture is documented to justify choosing a specific workbook architecture.
+    limitations: TrOCR is an illustrative method, not a claim about the museum project. Scientific labels and field extraction require additional domain validation; documentation is code-oriented.
+    verification_terms: [optical character recognition, trocr-base-handwritten, generated_text]
+  scheduler_hospital:
+    name: Wardray
+    approval_status: PENDING_OWNER_APPROVAL
+    publisher: Google for Developers, OR-Tools
+    article_title: Employee Scheduling
+    proposed_url: https://developers.google.com/optimization/scheduling/employee_scheduling
+    relevant_topic: Constraint-based nurse shift allocation
+    match_rationale: Models nurse coverage and shift constraints, a concrete hospital scheduling component using a canonical technique family.
+    confidence: high
+    scope_label: Staff-allocation component, not all hospital resources or emergency care
+    why_workbooks_insufficient: Preferred lessons teach neural optimization, pipeline dependencies, or mention MILP for robustness, but not operational staffing constraints. Forecast features alone do not teach assignments.
+    limitations: Does not model beds, equipment, triage, or emergency replanning; examples are educational, not clinical instructions or evidence of a local deployment.
+    verification_terms: [nurse, shift, constraints, CP-SAT]
+  scheduler_transit:
+    name: Routeopus
+    approval_status: PENDING_OWNER_APPROVAL
+    publisher: Google for Developers, OR-Tools
+    article_title: Vehicle Routing
+    proposed_url: https://developers.google.com/optimization/routing
+    relevant_topic: Fleet routing objectives and constraints
+    match_rationale: Explains route costs, fleet constraints, and routing problem types, directly supporting the canonical routing component.
+    confidence: high
+    scope_label: Vehicle-routing foundation, not a complete public-transit dispatch system
+    why_workbooks_insufficient: No preferred lesson teaches operational vehicle routing. Neural expert routing, HTTP routing, and pipeline scheduling are unrelated; time-series inputs do not determine feasible routes.
+    limitations: Introductory rather than a transit timetable tutorial; does not establish service equity, accessibility, live traffic handling, or a specific operator's technology.
+    verification_terms: [fleet, vehicles, constraints, time windows]
+  scheduler_ride_booking:
+    name: Cabcrab
+    approval_status: PENDING_OWNER_APPROVAL
+    publisher: Daniel Jurafsky and James H. Martin, Speech and Language Processing (Stanford-hosted draft)
+    article_title: Frame-Based Dialogue Systems
+    proposed_url: https://web.stanford.edu/~jurafsky/slp3/K.pdf
+    discovery_url: https://web.stanford.edu/~jurafsky/slp3/index.html
+    relevant_topic: Task-oriented dialogue, slots, state, and confirmation
+    match_rationale: Teaches collecting travel details through dialogue and confirming the intended task, closely matching booking-request interpretation.
+    confidence: high
+    scope_label: Task-oriented dialogue component, not GoDurham's implemented architecture
+    why_workbooks_insufficient: No preferred lesson teaches booking slots, dialogue-state tracking, or confirmation. Generic LLM and prompt-security material would imply an unsupported architecture or explain a different task.
+    limitations: An illustrative frame-based design, not proof that GoDurham uses it. The current book links this appendix; PDF navigation is less mobile-friendly than HTML.
+    verification_terms: [slot, frame, dialogue, confirmation, travel]
+  scheduler_workforce:
+    name: Shiftshark
+    approval_status: PENDING_OWNER_APPROVAL
+    publisher: Google for Developers, OR-Tools
+    article_title: Employee Scheduling
+    proposed_url: https://developers.google.com/optimization/scheduling/employee_scheduling
+    relevant_topic: Shift coverage and worker preferences
+    match_rationale: Demonstrates assigning workers under coverage, workload, and preference constraints, directly matching the canonical scheduling job.
+    confidence: high
+    scope_label: Constrained shift-assignment component, not a fairness guarantee
+    why_workbooks_insufficient: No preferred lesson substantively teaches worker assignment or shift-coverage constraints. Data-pipeline ordering and neural optimizer updates do not fill this gap.
+    limitations: Educational constraints are simplified; labor rules, skills, demand uncertainty, and fairness still need explicit modeling. Sharing Wardray's URL does not share owner approval.
+    verification_terms: [nurse, shift, constraints, CP-SAT]
+  scheduler_delivery:
+    name: Parcelprawn
+    approval_status: PENDING_OWNER_APPROVAL
+    publisher: Google for Developers, OR-Tools
+    article_title: Vehicle Routing Problem with Time Windows
+    proposed_url: https://developers.google.com/optimization/routing/vrptw
+    relevant_topic: Routes constrained by service time windows
+    match_rationale: Shows how travel times and required visit windows constrain routes, directly illustrating delivery scheduling.
+    confidence: high
+    scope_label: Time-window routing component, not a full real-time delivery service
+    why_workbooks_insufficient: No preferred lesson teaches delivery stop sequences or operational time windows. Gradient optimization, token routing, and DAG ordering do not represent vehicle-routing constraints.
+    limitations: The worked example does not include every capacity, labor, map-quality, or live-traffic concern in canonical limitations; code is more advanced than a lay introduction.
+    verification_terms: [time windows, travel times, vehicles, constraints]

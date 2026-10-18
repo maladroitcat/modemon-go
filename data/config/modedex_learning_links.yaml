@@ -193,6 +193,46 @@ lessons:
     toc_url: https://explainableaiworkbook.com/06-transparent-ai
     url: https://explainableaiworkbook.com/06-transparent-ai/01-transparency/02-provenance
     verification_terms: [source, transformations, quality, lineage]
+  sequence_tagging:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: Recurrent Neural Networks
+    article_title: Recurrent Neural Network (RNN)
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/rnns/rnn-architecture
+    verification_terms: [named entity tagging, Sequence-to-Sequence, output]
+  transformer_practice:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: Attention and Transformers
+    article_title: Transformers in Practice
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/attention-transformer/transformer-types-inference
+    verification_terms: [Encoder-only, NER, information extraction, contextual]
+  multimodal_inputs:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: Multimodal Models
+    article_title: Beyond Language — Multimodal Models
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/multimodal/multimodal-intro
+    verification_terms: [tokens, Images, transformer, screenshots]
+  prompt_inspection:
+    workbook: Explainable AI Workbook
+    unit: Explainable Machine Learning
+    chapter: Large Language Model Explanations
+    article_title: XAI in LLM Prompting
+    toc_url: https://explainableaiworkbook.com/02-explainable-machine-learning
+    url: https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/03-xai-in-llm-prompting
+    verification_terms: [perturbation, prompt, demonstrations, faithfulness]
+  agent_traces:
+    workbook: Explainable AI Workbook
+    unit: Explainable Machine Learning
+    chapter: Large Language Model Explanations
+    article_title: XAI in Agentic AI Systems
+    toc_url: https://explainableaiworkbook.com/02-explainable-machine-learning
+    url: https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/05-xai-in-agentic-ai-systems
+    verification_terms: [trace, tool calls, approval, failures]
 
 # Keys are canonical semantic species IDs, never creature-name-derived IDs.
 # Every optional secondary has a separate educational purpose, not filler.
@@ -268,18 +308,20 @@ species:
     secondary_rationale: Explains vibration and temporal signal features independently of the reconstruction model.
     confidence: medium
     match_scope: representative_technique
+    scope_label: Autoencoder reconstruction component, not a complete maintenance-alert system
     rationale: Canon lists autoencoders; the lesson explains compression, reconstruction, and reconstruction error useful for understanding this option.
     limitations: Does not teach an anomaly threshold, predictive maintenance, or remaining-life estimation; framing is generative modeling.
     review_required: true
   anomaly_network:
     name: Netnark
-    primary_lesson: outliers
-    secondary_lesson: autoencoders
-    secondary_rationale: Explains the compression and reconstruction mechanism of a second canonical model option.
+    primary_lesson: autoencoders
+    secondary_lesson: outliers
+    secondary_rationale: Adds the distinct distinction between unusual observations, measurement errors, and genuine incidents.
     confidence: medium
-    match_scope: related_context
-    rationale: Unusual-observation detection gives a useful foundation for traffic-pattern alerts without inventing an attack classifier.
-    limitations: No dedicated network intrusion lesson was found; outliers are not proof of a security incident.
+    match_scope: representative_technique
+    scope_label: Autoencoder model component, not a network-intrusion tutorial
+    rationale: Autoencoders are explicitly canonical; compression, reconstruction, and reconstruction error explain a genuine model component rather than a vague security analogy.
+    limitations: Does not teach network features or alert thresholds, establish malicious activity, or identify an installed security model.
     review_required: true
   forecast_base:
     name: Forespirit
@@ -350,8 +392,11 @@ species:
   recommender_ai_curator:
     name: Muselect
     primary_lesson: llm
+    secondary_lesson: prompt_inspection
+    secondary_rationale: Teaches changing prompts and comparing output behavior, directly supporting the canonical prompt-inspection explanation method.
     confidence: medium
     match_scope: representative_technique
+    scope_label: Language-generation and prompt-inspection components, not a museum-curation system
     rationale: Explains the canonical LLM concept behind a language-driven AI curator.
     limitations: Not an art-curation tutorial or evidence for the Nasher project; its existing Signature provenance remains separate.
     review_required: true
@@ -360,6 +405,7 @@ species:
     primary_lesson: recommender_types
     confidence: medium
     match_scope: representative_technique
+    scope_label: Content-based learning-resource recommendation component, not knowledge tracing
     rationale: Content-based recommendation explains matching learning resources to a learner's stated interests and resource features.
     limitations: Does not teach knowledge tracing or prove learning gains; examples are not education-specific.
     review_required: true
@@ -368,6 +414,7 @@ species:
     primary_lesson: llm
     confidence: medium
     match_scope: representative_technique
+    scope_label: LLM feedback-generation component, not evidence of adaptive learning effectiveness
     rationale: Provides a foundation for the canonically listed LLM option in personalized learning guidance.
     limitations: Not an EcoJourneys lesson or evidence about its implementation, adaptation quality, or student outcomes.
     review_required: true
@@ -389,36 +436,37 @@ species:
     review_required: false
   extractor_base:
     name: Scribbit
-    primary_lesson: null
-    confidence: low
-    match_scope: unresolved
-    rationale: No direct OCR, document-layout, or named-entity extraction lesson was found in the inspected tables of contents.
-    limitations: General LLM material alone would not explain turning a document into structured fields.
-    candidate_lessons: [llm]
+    primary_lesson: sequence_tagging
+    confidence: medium
+    match_scope: task
+    scope_label: Named-entity sequence-tagging component illustrated with an RNN, not OCR
+    rationale: The lesson explicitly pairs each word with an entity tag, illustrating how source text becomes structured entities, a canonical task for Scribbit.
+    limitations: The RNN is the lesson's illustration, not a newly asserted canonical architecture. Does not teach scanning, handwriting, page layout, or a complete extraction pipeline.
     review_required: true
   extractor_medical:
     name: Clinink
-    primary_lesson: null
-    confidence: low
-    match_scope: unresolved
-    rationale: A dedicated clinical entity or medical-record extraction lesson was not identified.
-    limitations: Generic NLP or LLM introductions do not teach clinical extraction, terminology, or validation.
-    candidate_lessons: [llm]
+    primary_lesson: transformer_practice
+    confidence: medium
+    match_scope: representative_technique
+    scope_label: Encoder text-understanding component for NER, not clinical validation
+    rationale: Teaches contextual encoder representations and explicitly identifies NER and information extraction as uses; transformers are already canonical for Clinink.
+    limitations: Does not teach clinical ontologies, negation handling, protected health-data processing, or validated medical extraction. No particular clinical model is inferred.
     review_required: true
   extractor_government:
     name: Bureaucritter
-    primary_lesson: null
-    confidence: low
-    match_scope: unresolved
-    rationale: No lesson directly teaches OCR, layout-aware field detection, or structured government-form extraction.
-    limitations: Pixel detection and data-pipeline orchestration are not substitutes for document-layout extraction.
-    candidate_lessons: []
+    primary_lesson: transformer_practice
+    confidence: medium
+    match_scope: representative_technique
+    scope_label: Transformer text-interpretation foundation, not spatial document layout or OCR
+    rationale: A layout-aware transformer is explicitly canonical. The lesson teaches the underlying encoder representation and text-understanding component without claiming to teach the added document-layout machinery.
+    limitations: Not a form-understanding tutorial; does not teach reading scans, spatial layout embeddings, field validation, or government-specific record requirements.
     review_required: true
   extractor_research:
     name: Scholarat
     primary_lesson: topics
     confidence: medium
     match_scope: representative_technique
+    scope_label: Topic-discovery component, not every entity or relation extraction stage
     rationale: Topic modeling is explicitly canonical and the lesson explains deriving topics and keywords from document collections.
     limitations: Covers one part of Scholarat's role, not named-entity or relation extraction.
     review_required: true
@@ -429,23 +477,25 @@ species:
     secondary_rationale: Adds source and transformation lineage, independently relevant when analyzing historical archives.
     confidence: medium
     match_scope: related_context
+    scope_label: Illustrative document-theme analysis, not a documented redlining-project algorithm
     rationale: Finding themes in text collections offers related context for historical pattern analysis.
     limitations: Topic modeling is not asserted as the Friday Institute project's method; no redlining-specific lesson was found.
     review_required: true
   extractor_archive:
     name: Manusqueak
-    primary_lesson: null
-    confidence: low
-    match_scope: unresolved
-    rationale: No dedicated handwriting-recognition or archive-transcription lesson was found.
-    limitations: General vision and tokenization lessons would not explain reading handwritten documents.
-    candidate_lessons: []
+    primary_lesson: multimodal_inputs
+    confidence: medium
+    match_scope: input_representation
+    scope_label: Vision-language input foundation, not handwriting recognition or transcription accuracy
+    rationale: Vision-language models are explicitly canonical; the lesson explains how image and language inputs can be represented together for multimodal systems.
+    limitations: A short foundational lesson, not an OCR or handwriting tutorial; does not establish that any archive uses a particular multimodal model.
     review_required: true
   extractor_specimen:
     name: Specimunk
     primary_lesson: null
     confidence: low
     match_scope: unresolved
+    scope_label: Genuine gap in handwriting recognition and OCR
     rationale: No lesson directly teaches handwritten specimen-label transcription or field extraction.
     limitations: Do not infer the museum project's undocumented OCR architecture from generic workbook material.
     candidate_lessons: []
@@ -455,6 +505,7 @@ species:
     primary_lesson: rl
     confidence: medium
     match_scope: representative_technique
+    scope_label: Reinforcement-learning decision component, not constraint programming or complete scheduling
     rationale: Reinforcement learning is explicitly canonical and the lesson explains choosing actions using rewards and policies.
     limitations: Only one possible technique; does not teach resource scheduling, linear programming, or constraints.
     review_required: true
@@ -463,6 +514,7 @@ species:
     primary_lesson: null
     confidence: low
     match_scope: unresolved
+    scope_label: Genuine gap in operational resource-allocation constraints
     rationale: No direct constraint-programming, mixed-integer, or hospital-resource scheduling lesson was found.
     limitations: Forecasting predicts demand but does not itself allocate beds, staff, or appointments.
     candidate_lessons: []
@@ -472,24 +524,26 @@ species:
     primary_lesson: null
     confidence: low
     match_scope: unresolved
+    scope_label: Genuine gap in vehicle routing and dispatch constraints
     rationale: No direct routing or real-time transit scheduling lesson was found.
     limitations: ML training optimization and DAG orchestration do not explain vehicle scheduling.
     candidate_lessons: []
     review_required: true
   scheduler_transit_flow:
     name: Flowfin
-    primary_lesson: null
-    confidence: low
-    match_scope: unresolved
-    rationale: No lesson directly explains real-time transit decision support and service optimization.
-    limitations: A time-series input lesson would not explain this Signature's operational scheduling role or GoDurham's actual technology.
-    candidate_lessons: [time_features]
+    primary_lesson: time_features
+    confidence: medium
+    match_scope: input_representation
+    scope_label: Temporal inputs to the predictive component, not transit-priority optimization
+    rationale: Canon includes a predictive model using bus positions, schedules, and on-time performance; lagged values and rolling features explain meaningful temporal inputs to that component.
+    limitations: Does not specify GoDurham's actual features, architecture, or controller. Forecasting inputs do not themselves allocate signal priority or prove travel-time benefits.
     review_required: true
   scheduler_ride_booking:
     name: Cabcrab
     primary_lesson: null
     confidence: low
     match_scope: unresolved
+    scope_label: Genuine gap in task-oriented dialogue and trip-booking state
     rationale: No lesson directly addresses conversational ride booking integrated with scheduling.
     limitations: Canon says conversational AI, not a specific LLM architecture; linking an LLM lesson as a direct model match would overstate support.
     candidate_lessons: [llm]
@@ -499,6 +553,7 @@ species:
     primary_lesson: detection
     confidence: medium
     match_scope: task
+    scope_label: Vehicle-detection perception component, not signal optimization or a documented installed detector
     rationale: Explains the object-location perception subtask that can support estimating traffic from images.
     limitations: Does not explain signal optimization or identify the Raleigh system's architecture, camera hardware, or installed detector.
     review_required: true
@@ -507,6 +562,7 @@ species:
     primary_lesson: null
     confidence: low
     match_scope: unresolved
+    scope_label: Genuine gap in worker-assignment and shift constraints
     rationale: No lesson teaches staff-assignment constraints, integer programming, or shift optimization.
     limitations: Demand forecasting is an input to, not a replacement for, workforce scheduling.
     candidate_lessons: []
@@ -516,6 +572,7 @@ species:
     primary_lesson: null
     confidence: low
     match_scope: unresolved
+    scope_label: Genuine gap in delivery routing and time-window constraints
     rationale: No verified vehicle-routing, scheduling, or combinatorial-optimization lesson was found.
     limitations: Gradient descent for model training does not solve the routing problem represented here.
     candidate_lessons: []
@@ -585,10 +642,11 @@ species:
   generator_catalog:
     name: Catalogar
     primary_lesson: llm
-    secondary_lesson: provenance
-    secondary_rationale: Separately teaches tracking the sources and transformations of generated catalog metadata.
+    secondary_lesson: agent_traces
+    secondary_rationale: Independently teaches auditing tool calls, failed steps, and approval decisions in the canonically listed agent-assisted workflow.
     confidence: medium
     match_scope: representative_technique
+    scope_label: LLM generation and agent-audit components, not catalog standards or exact project implementation
     rationale: Explains a canonically listed model option for generating structured catalog content.
     limitations: Does not teach library catalog standards or establish the NC State project's implementation and outputs.
     review_required: true

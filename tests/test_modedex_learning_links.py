@@ -55,7 +55,7 @@ class WorkbookResearchTests(unittest.TestCase):
     def test_partial_and_unresolved_matches_are_reviewed_not_forced(self):
         rows = research.rows_for(self.data, self.canon)
         unresolved = [r for r in rows if not r["primary_url"]]
-        self.assertEqual(len(unresolved), 11)
+        self.assertEqual(len(unresolved), 6)
         for row in unresolved:
             self.assertEqual(row["confidence"], "low")
             self.assertEqual(row["match_scope"], "unresolved")
