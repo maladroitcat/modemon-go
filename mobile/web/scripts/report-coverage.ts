@@ -51,14 +51,14 @@ const report = {
     real_enabled: data.signatures!.entries.filter((e) => e.placement).map((e) => e.species_id),
     real_withheld: data.signatures!.entries.filter((e) => !e.placement).map((e) => ({ id: e.species_id, name: data.modedex.modemon[e.species_id].name, reason: e.association_note })),
     demo_observed: [...demoSignatures].sort(),
-    reason: "Explicit owner-approved associations. Real placement requires reviewed outdoor access evidence; Durham Station remains Demo-only during construction.",
+    reason: "Explicit owner-approved associations. All twelve have reviewed outdoor placement evidence; Durham Station uses the alternative sidewalk by GoDurham stop 6680, not the construction area. On-site closures always override a marker.",
   },
   artwork: {
-    approved_creature_images: 0,
-    missing_creature_images: 51,
+    approved_creature_images: Object.keys(data.art?.approved ?? {}).length,
+    missing_creature_images: 51 - Object.keys(data.art?.approved ?? {}).length,
     used_concepts: [],
     reason:
-      "design.md explicitly marks both existing Seeklet concepts awaiting approval. All rendered creatures use a labeled missing-art placeholder.",
+      "Issue 23 approves the 51 local creature masters and logo. Old Seeklet concepts are not used. Responsive transparent derivatives load on demand, with PNG and explicit missing-art fallbacks.",
   },
   eligible_anchor_counts: count(
     data.pois.filter((p) => p.eligible).map((p) => p.region),
@@ -109,7 +109,7 @@ const report = {
           ),
       )
       .map(([id, s]) => ({ id, name: s.name })),
-    note: "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. Ten Signatures have real placement eligibility; all twelve occur over the Demo rotation. These are coverage limitations, not claims of 51 real-world reachable forms.",
+    note: "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. All twelve Signatures have real placement eligibility and occur over the Demo rotation. Art coverage is 51/51, not a claim of 51 real-world reachable forms.",
   },
 };
 writeFileSync(

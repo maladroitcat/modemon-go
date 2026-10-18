@@ -1,6 +1,6 @@
 {
   "quiz_version": 2,
-  "canonical_runtime_sha256": "c0c319cef7e5474a5678c5b5239ef9fff363ebe9063d4ae8a3d4c08949970dd2",
+  "canonical_runtime_sha256": "4e5c89dfcfd556213e04c80217f337493e47552cc2316306199a3107c7327fbe",
   "fixture_date": "2026-10-17",
   "fixture_encounter_id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_13785804101",
   "enabled_species": 51,

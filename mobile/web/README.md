@@ -14,7 +14,7 @@ Public HTTPS: **https://modemon-go-playable.astralgnat19.chatgpt.site**
    Choose Raleigh or Durham, select an anonymous encounter, then choose
    **Simulate walking here (Demo)** and **Enter encounter**.
 3. Enable the camera if appropriate, or use the complete non-camera encounter.
-   Tap the labeled creature placeholder, read its Modédex entry, then Capture.
+   Tap the creature, read its Modédex entry, then Capture.
 4. Choose Novice (3 questions), Intermediate (5), or Expert (7).
    Answer every question; too few correct escapes for that exact encounter/day.
    Read feedback, show the result, then reload to check the
@@ -123,17 +123,20 @@ late permission resolution. Non-camera play is fully equivalent. No 3D AR claim.
 
 Exact species IDs/names, eligible POI IDs/names, daily encounters, habitat coverage,
 and individually withheld forms are recorded in [coverage.json](coverage.json),
-including a 32-day rotation audit. All 51 entries now have quiz support; ten Signatures have
+including a 32-day rotation audit. All 51 entries now have quiz support; all twelve Signatures have
 real placement eligibility and all twelve are available over the Demo rotation.
 Five Healthcare-only ordinary forms have no suitable public anchors under the
 conservative access policy. Eight of nine habitats appeared; Healthcare did not.
 There are **551** eligible association anchors across seven regions. Today's
 rotation is not promised to expose every enabled species or every habitat.
 
-**0 approved creature assets; 51 missing-art records.** Both Seeklet concept images
-remain untracked and untouched; their design note explicitly says awaiting
-approval. Every rendered creature uses an honestly labeled placeholder. No new
-creative artwork or inferred deployed architectures. Signature coordinates derive
+**51 approved creature assets and the local logo.** Full-resolution masters are
+byte-preserved under `assets/`; responsive transparent WebP derivatives and PNG
+fallbacks are committed under `web/public/art`. Old Seeklet concepts remain unused
+and untouched. Images load lazily in encounters and discoveries, never on anonymous
+map markers. Missing images have an explicit placeholder. See
+[artwork pipeline](../../assets/ARTWORK_README.md). No new creative artwork or
+inferred deployed architectures. Signature coordinates derive
 from individually reviewed OSM pedestrian nodes, not invented locations.
 
 OSM street tiles are attributed and browser-cached normally. No bulk download,

@@ -564,23 +564,31 @@
         "species_id": "extractor_specimen"
       },
       {
-        "association_note": "Use the outdoor pedestrian plaza near Hunt Library, not restricted library spaces. Respect campus signs, public hours and closures; you do not need to enter. This represents university-library projects, not technology installed at this point.",
-        "blocked_dates": [
-          "2026-10-19"
-        ],
+        "association_note": "Use the public Partners Way sidewalk near Hunt Library, not restricted library spaces. Respect signs and walkway closures; you do not need to enter. This represents university-library projects, not technology installed at this point.",
+        "blocked_dates": [],
         "evidence_url": "https://www.lib.ncsu.edu/hunt/visit",
-        "osm_node_id": 3011697025,
-        "osm_way_id": 329540779,
+        "osm_node_id": 3011732374,
+        "osm_way_id": 297302728,
         "placement": {
-          "lat": 35.7693604,
-          "lon": -78.6760505,
-          "x": 638891.921,
-          "y": 224059.144
+          "lat": 35.7693246,
+          "lon": -78.6767274,
+          "x": 638830.73,
+          "y": 224054.972
         },
         "poi_id": "RAL-04_osm_way_177166351",
         "project_source_url": "https://www.lib.ncsu.edu/projects/refreshing-software-and-technology-lending-descriptions-agent-based-ai",
-        "review_note": "Outdoor paved pedestrian area; library public-access page also announces October 19 closure for electrical work. Suppress that date conservatively. No field inspection.",
+        "review_note": "Separately mapped concrete street sidewalk outside the building. The official notice closes Hunt Library on October 19, not Partners Way. Building closure alone does not close this public street approach; any actual sidewalk restriction still overrides gameplay. No field inspection.",
         "safety_status": "mapped_public_approach",
+        "site_notices": [
+          {
+            "end_date": "2026-10-19",
+            "message": "Hunt Library announces an October 19, 2026 closure for electrical work. You do not need to enter the site. Use the public Partners Way sidewalk only if open and follow posted restrictions.",
+            "scope": "associated_building",
+            "source_url": "https://www.lib.ncsu.edu/hunt/visit",
+            "start_date": "2026-10-19",
+            "title": "The associated site may be closed"
+          }
+        ],
         "species_id": "generator_catalog"
       },
       {
@@ -656,23 +664,31 @@
         "species_id": "recommender_ai_curator"
       },
       {
-        "association_note": "Use the outdoor pedestrian plaza near Hunt Library, not restricted library spaces. Respect campus signs, public hours and closures; you do not need to enter. This represents university-library projects, not technology installed at this point.",
-        "blocked_dates": [
-          "2026-10-19"
-        ],
+        "association_note": "Use the public Partners Way sidewalk near Hunt Library, not restricted library spaces. Respect signs and walkway closures; you do not need to enter. This represents university-library projects, not technology installed at this point.",
+        "blocked_dates": [],
         "evidence_url": "https://www.lib.ncsu.edu/hunt/visit",
-        "osm_node_id": 3011697025,
-        "osm_way_id": 329540779,
+        "osm_node_id": 3011732374,
+        "osm_way_id": 297302728,
         "placement": {
-          "lat": 35.7693604,
-          "lon": -78.6760505,
-          "x": 638891.921,
-          "y": 224059.144
+          "lat": 35.7693246,
+          "lon": -78.6767274,
+          "x": 638830.73,
+          "y": 224054.972
         },
         "poi_id": "RAL-04_osm_way_177166351",
         "project_source_url": "https://www.lib.ncsu.edu/databases/keenious-research-explorer/guide",
-        "review_note": "Outdoor paved pedestrian area; library public-access page also announces October 19 closure for electrical work. Suppress that date conservatively. No field inspection.",
+        "review_note": "Separately mapped concrete street sidewalk outside the building. The official notice closes Hunt Library on October 19, not Partners Way. Building closure alone does not close this public street approach; any actual sidewalk restriction still overrides gameplay. No field inspection.",
         "safety_status": "mapped_public_approach",
+        "site_notices": [
+          {
+            "end_date": "2026-10-19",
+            "message": "Hunt Library announces an October 19, 2026 closure for electrical work. You do not need to enter the site. Use the public Partners Way sidewalk only if open and follow posted restrictions.",
+            "scope": "associated_building",
+            "source_url": "https://www.lib.ncsu.edu/hunt/visit",
+            "start_date": "2026-10-19",
+            "title": "The associated site may be closed"
+          }
+        ],
         "species_id": "recommender_research"
       },
       {
@@ -694,16 +710,37 @@
         "species_id": "retriever_semantic_search"
       },
       {
-        "association_note": "DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station.",
+        "association_note": "Use the public Great Jones Street sidewalk by GoDurham stop 6680 at Main Street, not Durham Station's construction area. Stand aside from waiting passengers and keep the sidewalk clear. Do not enter platforms, bus lanes, roads or restricted areas. GoDurham system association only, not a deployment at this coordinate.",
         "blocked_dates": [],
+        "evidence_dataset": "durham_alternatives",
         "evidence_url": "https://godurhamtransit.org/durham-station-renovations/",
-        "osm_node_id": null,
-        "osm_way_id": null,
-        "placement": null,
+        "maximum_offset_meters": 300,
+        "minimum_station_distance_meters": 150,
+        "official_stop_id": 6680,
+        "ordinary_anchor_withheld": true,
+        "osm_node_id": 6358493025,
+        "osm_stop_id": 6509747516,
+        "osm_way_id": 679054726,
+        "placement": {
+          "lat": 35.997788,
+          "lon": -78.9053247,
+          "x": 618137.365,
+          "y": 249359.353
+        },
         "poi_id": "DUR-01_osm_node_5844548329",
         "project_source_url": "https://godurhamaccess.org/godurham-access-ada-paratransit",
-        "review_note": "October 12 site update describes concrete work on the west and platform work on the north. The displaced passenger area and changing works do not establish a safe game-lingering location. A mapped footpath alone is insufficient here. Re-review individually before real activation.",
-        "safety_status": "withheld_pending_safe_approach",
+        "review_note": "Owner authorizes nearby public bus-stop approaches in issue 23. Official GoDurham stop API confirms stop 6680 at the same location as OSM node 6509747516. Selected concrete sidewalk node is about 5m from that stop, outside building and construction polygons and over 150m from the station anchor. Construction parcel east across Great Jones Street is not the selected sidewalk; do not cross toward it. Desk evidence, not field inspection; posted restrictions override this placement.",
+        "safety_status": "mapped_public_approach",
+        "site_notices": [
+          {
+            "end_date": null,
+            "message": "Durham Station remains active during substantial renovation. Use the alternative public sidewalk by GoDurham stop 6680 on Great Jones Street at Main Street. You do not need to enter the site. Stay away from station construction, platforms and bus operating areas; follow current signs and skip any closed walkway.",
+            "scope": "nearby_construction",
+            "source_url": "https://godurhamtransit.org/durham-station-renovations/",
+            "start_date": "2026-10-18",
+            "title": "Durham Station construction"
+          }
+        ],
         "species_id": "scheduler_ride_booking"
       },
       {
@@ -725,16 +762,37 @@
         "species_id": "scheduler_traffic_signal"
       },
       {
-        "association_note": "DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station.",
+        "association_note": "Use the public Great Jones Street sidewalk by GoDurham stop 6680 at Main Street, not Durham Station's construction area. Stand aside from waiting passengers and keep the sidewalk clear. Do not enter platforms, bus lanes, roads or restricted areas. GoDurham system association only, not a deployment at this coordinate.",
         "blocked_dates": [],
+        "evidence_dataset": "durham_alternatives",
         "evidence_url": "https://godurhamtransit.org/durham-station-renovations/",
-        "osm_node_id": null,
-        "osm_way_id": null,
-        "placement": null,
+        "maximum_offset_meters": 300,
+        "minimum_station_distance_meters": 150,
+        "official_stop_id": 6680,
+        "ordinary_anchor_withheld": true,
+        "osm_node_id": 6358493025,
+        "osm_stop_id": 6509747516,
+        "osm_way_id": 679054726,
+        "placement": {
+          "lat": 35.997788,
+          "lon": -78.9053247,
+          "x": 618137.365,
+          "y": 249359.353
+        },
         "poi_id": "DUR-01_osm_node_5844548329",
         "project_source_url": "https://www.govtech.com/transportation/durham-n-c-looks-to-ai-to-boost-transit-performance",
-        "review_note": "October 12 site update describes concrete work on the west and platform work on the north. The displaced passenger area and changing works do not establish a safe game-lingering location. A mapped footpath alone is insufficient here. Re-review individually before real activation.",
-        "safety_status": "withheld_pending_safe_approach",
+        "review_note": "Owner authorizes nearby public bus-stop approaches in issue 23. Official GoDurham stop API confirms stop 6680 at the same location as OSM node 6509747516. Selected concrete sidewalk node is about 5m from that stop, outside building and construction polygons and over 150m from the station anchor. Construction parcel east across Great Jones Street is not the selected sidewalk; do not cross toward it. Desk evidence, not field inspection; posted restrictions override this placement.",
+        "safety_status": "mapped_public_approach",
+        "site_notices": [
+          {
+            "end_date": null,
+            "message": "Durham Station remains active during substantial renovation. Use the alternative public sidewalk by GoDurham stop 6680 on Great Jones Street at Main Street. You do not need to enter the site. Stay away from station construction, platforms and bus operating areas; follow current signs and skip any closed walkway.",
+            "scope": "nearby_construction",
+            "source_url": "https://godurhamtransit.org/durham-station-renovations/",
+            "start_date": "2026-10-18",
+            "title": "Durham Station construction"
+          }
+        ],
         "species_id": "scheduler_transit_flow"
       }
     ],
@@ -748,20 +806,11 @@
       "recommender_ai_curator",
       "recommender_research",
       "retriever_semantic_search",
-      "scheduler_traffic_signal"
+      "scheduler_ride_booking",
+      "scheduler_traffic_signal",
+      "scheduler_transit_flow"
     ],
-    "real_withheld": [
-      {
-        "id": "scheduler_ride_booking",
-        "name": "Cabcrab",
-        "reason": "DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station."
-      },
-      {
-        "id": "scheduler_transit_flow",
-        "name": "Flowfin",
-        "reason": "DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station."
-      }
-    ],
+    "real_withheld": [],
     "demo_observed": [
       "extractor_history",
       "extractor_specimen",
@@ -776,13 +825,13 @@
       "scheduler_traffic_signal",
       "scheduler_transit_flow"
     ],
-    "reason": "Explicit owner-approved associations. Real placement requires reviewed outdoor access evidence; Durham Station remains Demo-only during construction."
+    "reason": "Explicit owner-approved associations. All twelve have reviewed outdoor placement evidence; Durham Station uses the alternative sidewalk by GoDurham stop 6680, not the construction area. On-site closures always override a marker."
   },
   "artwork": {
-    "approved_creature_images": 0,
-    "missing_creature_images": 51,
+    "approved_creature_images": 51,
+    "missing_creature_images": 0,
     "used_concepts": [],
-    "reason": "design.md explicitly marks both existing Seeklet concepts awaiting approval. All rendered creatures use a labeled missing-art placeholder."
+    "reason": "Issue 23 approves the 51 local creature masters and logo. Old Seeklet concepts are not used. Responsive transparent derivatives load on demand, with PNG and explicit missing-art fallbacks."
   },
   "eligible_anchor_counts": {
     "DUR-01": 153,
@@ -5355,8 +5404,8 @@
         "basis": [
           "education_research"
         ],
-        "latitude": 35.7693604,
-        "longitude": -78.6760505
+        "latitude": 35.7693246,
+        "longitude": -78.6767274
       },
       {
         "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_1437667189",
@@ -5923,20 +5972,18 @@
         "longitude": -78.6735556
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_779967278",
-        "species_id": "extractor_base",
-        "species_name": "Scribbit",
-        "poi_id": "RAL-04_osm_way_779967278",
-        "poi_name": "The Greens Dog Park",
-        "region": "RAL-04",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13376189193",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-02_osm_node_13376189193",
+        "poi_name": "Dux",
+        "region": "RAL-02",
         "rarity": "common",
         "basis": [
-          "entertainment",
-          "civic_government",
-          "education_research"
+          "entertainment"
         ],
-        "latitude": 35.7659424,
-        "longitude": -78.6729797
+        "latitude": 35.7694174,
+        "longitude": -78.6613106
       },
       {
         "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_818998163",
@@ -6040,6 +6087,21 @@
         "longitude": -78.6508529
       },
       {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_677320792",
+        "species_id": "recommender_learning",
+        "species_name": "Curriquill",
+        "poi_id": "RAL-04_osm_way_677320792",
+        "poi_name": "The StateView Hotel, Autograph Collection",
+        "region": "RAL-04",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality",
+          "education_research"
+        ],
+        "latitude": 35.7641033,
+        "longitude": -78.678102
+      },
+      {
         "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651864",
         "species_id": "forecast_crowd",
         "species_name": "Gathergeist",
@@ -6108,20 +6170,6 @@
         ],
         "latitude": 35.7586559,
         "longitude": -78.6880202
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13376202119",
-        "species_id": "recommender_content",
-        "species_name": "Reelure",
-        "poi_id": "RAL-02_osm_node_13376202119",
-        "poi_name": "Get Well Soon",
-        "region": "RAL-02",
-        "rarity": "rare",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.7697596,
-        "longitude": -78.6572668
       },
       {
         "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03B_osm_relation_8248496",
@@ -6197,8 +6245,10 @@
       "retriever_semantic_search",
       "scheduler_base",
       "scheduler_delivery",
+      "scheduler_ride_booking",
       "scheduler_traffic_signal",
       "scheduler_transit",
+      "scheduler_transit_flow",
       "scheduler_workforce"
     ],
     "observed_habitats": [
@@ -6259,6 +6309,6 @@
         "name": "Wardray"
       }
     ],
-    "note": "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. Ten Signatures have real placement eligibility; all twelve occur over the Demo rotation. These are coverage limitations, not claims of 51 real-world reachable forms."
+    "note": "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. All twelve Signatures have real placement eligibility and occur over the Demo rotation. Art coverage is 51/51, not a claim of 51 real-world reachable forms."
   }
 }

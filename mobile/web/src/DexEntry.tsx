@@ -1,18 +1,22 @@
 import { ExternalLink } from "lucide-react";
 import type { Species } from "./engine";
 import { signatureProject } from "./signatures";
+import { Creature } from "./Art";
 
 export default function DexEntry({
   species: s,
   habitatTitle,
+  modemonId,
 }: {
   species: Species;
   habitatTitle: (id: string) => string;
+  modemonId?: string;
 }) {
   const project = signatureProject(s);
   return (
     <article className="dex-entry">
       <h2>{s.name}</h2>
+      {modemonId && <Creature modemonId={modemonId} name={s.name} className="dex-art" />}
       <p className="eyebrow">
         {s.role} · {s.rarity}
       </p>

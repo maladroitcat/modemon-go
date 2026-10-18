@@ -143,11 +143,14 @@ def build_payload(root=ROOT):
         precedence=precedence, habitats=HABITATS, pois=sorted(anchors, key=lambda p: p['id']),
         signatures=build_signatures(root, dex, anchors, curation, region_shapes,
                                     precedence, project, unit_to_m),
-        art=dict(approved={}, reason='Local Seeklet images are concepts awaiting approval; no final artwork is approved.'))
+        art=dict(approved={key: True for key in json.loads((root / 'assets/artwork_sources.json').read_text())['records']
+                           if key != 'logo'}, logo_approved=True))
     if (hashes != {f: hashlib.sha256((root / f).read_bytes()).hexdigest() for f in INPUTS}
             or (root / WORLD_IDENTITY).read_bytes() != identity_bytes):
         raise RuntimeError('Canonical input changed during build')
     result['source_hashes'].update(result['signatures']['source_hashes'])
+    result['source_hashes'].update({path: hashlib.sha256((root / path).read_bytes()).hexdigest()
+                                    for path in ('assets/artwork_sources.json', 'mobile/web/src/data/art.json')})
     result['content_version'] = hashlib.sha256(json.dumps(result['source_hashes'], sort_keys=True).encode()).hexdigest()[:16]
     return result
 

@@ -33,9 +33,12 @@ for (const spawn of bySpecies.values()) for (const mode of Object.keys(quizModes
     await expect(page.getByRole("button", { name: "Enter encounter", exact: true })).toBeDisabled();
     await expect(page.getByRole("dialog").getByText("DEMO LOCATION — not your GPS", { exact: true })).toBeVisible();
     if (spawn.poi.id === "DUR-01_osm_node_5844548329")
-      await expect(page.getByText(/DEMO ONLY: real encounters at Durham Station/)).toBeVisible();
+      await expect(page.getByRole("note", { name: "Site access notice" })).toContainText("GoDurham stop 6680");
     await page.getByRole("button", { name: "Simulate walking here (Demo)", exact: true }).click();
     await page.getByRole("button", { name: "Enter encounter", exact: true }).click();
+    const art = page.getByRole("img", { name: species.name, exact: true });
+    await expect.poll(() => art.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+    await expect(art).toHaveAttribute("src", new RegExp(`/art/${spawn.speciesId}\\.`));
     await page.getByRole("button", { name: /^Inspect / }).click();
     const project = signatureProject(species)!;
     await expect(page.locator(".signature-inspiration")).toHaveText(project.introduction!);
@@ -73,8 +76,8 @@ for (const spawn of bySpecies.values()) for (const mode of Object.keys(quizModes
   });
 }
 
-test("real Signature uses outdoor placement and requires GPS plus an explicit safe-approach acknowledgement", async ({ page, context }) => {
-  const spawn = [...bySpecies.values()].find((s) => s.speciesId === "extractor_specimen")!;
+for (const id of ["extractor_specimen", "scheduler_ride_booking", "scheduler_transit_flow"]) test(`${id}: real Signature uses outdoor placement and requires GPS plus an explicit safe-approach acknowledgement`, async ({ page, context }) => {
+  const spawn = [...bySpecies.values()].find((s) => s.speciesId === id)!;
   await page.clock.setFixedTime(new Date(`${spawn.date}T16:00:00Z`));
   await context.grantPermissions(["geolocation"]);
   await context.setGeolocation({ latitude: spawn.poi.lat, longitude: spawn.poi.lon, accuracy: 5 });
@@ -87,12 +90,18 @@ test("real Signature uses outdoor placement and requires GPS plus an explicit sa
   await page.getByRole("checkbox").check();
   await page.getByRole("button", { name: "Start Playing", exact: true }).click();
   await page.getByRole("button", { name: /Allow foreground location/ }).click();
+  await page.getByRole("combobox", { name: "Browse city" }).selectOption(spawn.poi.region.startsWith("RAL") ? "Raleigh" : "Durham");
   await page.locator(`.encounter-row[data-poi-id="${spawn.poi.id}"]`).click();
+  if (id.startsWith("scheduler_")) {
+    await expect(page.getByRole("note", { name: "Site access notice" })).toContainText("GoDurham stop 6680");
+    await expect(page.getByRole("link", { name: "Official access notice", exact: true }))
+      .toHaveAttribute("href", "https://godurhamtransit.org/durham-station-renovations/");
+  }
   await expect(page.getByText(/You're close enough to discover/)).toBeVisible();
   await expect(page.getByRole("button", { name: "Enter encounter", exact: true })).toBeDisabled();
   await page.getByRole("checkbox", { name: /I am stopped safely on an open public pedestrian approach/ }).check();
   await page.getByRole("button", { name: "Enter encounter", exact: true }).click();
-  await expect(page.getByRole("button", { name: "Inspect Specimunk" })).toBeVisible();
+  await expect(page.getByRole("button", { name: `Inspect ${data.modedex.modemon[id].name}` })).toBeVisible();
 });
 
 test("Demo date preview exposes the full rare rotation without faking GPS or resetting saved attempts", async ({ page }) => {

@@ -89,11 +89,7 @@ test("demo full capture survives reload; real collection stays separate", async 
   await page
     .getByRole("button", { name: "Use without camera", exact: true })
     .click();
-  await expect(
-    page.getByLabel(
-      `Artwork unavailable for ${data.modedex.modemon[s.speciesId].name}`,
-    ),
-  ).toBeVisible();
+  await expect(page.getByRole("img", { name: data.modedex.modemon[s.speciesId].name, exact: true })).toBeVisible();
   await quiz(page);
   for (const [i, q] of questionsFor(s, data).entries()) {
     await expect(
@@ -477,6 +473,16 @@ test("long Modédex panels scroll and Capture stays reachable on small mobile sc
     await page
       .getByRole("button", { name: "Enter encounter", exact: true })
       .click();
+    await expect(page.getByRole("img", { name: data.modedex.modemon[s.speciesId].name, exact: true })).toBeVisible();
+    await expect.poll(() => page.getByRole("img", { name: data.modedex.modemon[s.speciesId].name, exact: true })
+      .evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+    const imageBounds = await page.locator(".creature-art img").boundingBox();
+    const sceneBounds = await page.locator(".camera-scene").boundingBox();
+    expect(imageBounds!.x).toBeGreaterThanOrEqual(sceneBounds!.x);
+    expect(imageBounds!.y).toBeGreaterThanOrEqual(sceneBounds!.y);
+    expect(imageBounds!.x + imageBounds!.width).toBeLessThanOrEqual(sceneBounds!.x + sceneBounds!.width);
+    expect(imageBounds!.y + imageBounds!.height).toBeLessThanOrEqual(sceneBounds!.y + sceneBounds!.height);
+    await page.screenshot({ path: info.outputPath(`art-overlay-${viewport.width}x${viewport.height}.png`) });
     await page.getByRole("button", { name: /^Inspect / }).click();
     const modal = page.getByRole("dialog"),
       capture = page.getByRole("button", {

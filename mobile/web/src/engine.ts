@@ -48,6 +48,7 @@ export type Poi = {
 };
 export type Runtime = {
   data_version: string;
+  art?: { approved: Record<string, boolean> };
   modedex: {
     modemon: Record<string, Species>;
     families?: Record<string, { name: string }>;
@@ -69,8 +70,18 @@ export type Runtime = {
       association_note: string;
       evidence_url: string;
       blocked_dates: string[];
+      ordinary_anchor_withheld?: boolean;
+      site_notices?: SiteNotice[];
     }[];
   };
+};
+export type SiteNotice = {
+  title: string;
+  message: string;
+  scope: "associated_building" | "nearby_construction";
+  source_url: string;
+  start_date: string;
+  end_date: string | null;
 };
 export type Spawn = {
   id: string;
@@ -79,6 +90,7 @@ export type Spawn = {
   rarity: string;
   poi: Poi;
   basis: string[];
+  siteNotices?: SiteNotice[];
 };
 export type Fix = {
   lat: number;
@@ -262,6 +274,7 @@ export function scheduledSignatures(
       rarity: "signature",
       poi,
       basis: [...species.habitats],
+      siteNotices: (chosen.site_notices ?? []).filter((n) => n.start_date <= date && (!n.end_date || n.end_date >= date)),
     });
   }
   return result.sort(
@@ -301,6 +314,7 @@ export function buildWorld(
     if (data.signatures?.entries.some(
       (e) => e.poi_id === p.id &&
         (e.safety_status === "withheld_pending_safe_approach" ||
+          e.ordinary_anchor_withheld ||
           e.blocked_dates.includes(date)),
     )) continue;
     const basis = [

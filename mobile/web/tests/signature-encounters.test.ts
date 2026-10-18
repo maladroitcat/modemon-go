@@ -60,7 +60,7 @@ test("one scarce slot per anchor, all shared species rotate, deterministic under
   assert.ok(dates.some((date) => scheduledSignatures(data, date).length === 0));
 });
 
-test("mapped safe positions replace centroids only for encounters; real construction withheld, demo explicit", () => {
+test("mapped safe positions replace centroids; alternatives avoid the real station construction", () => {
   for (const date of dates) {
     for (const s of scheduledSignatures(data, date)) {
       assert.equal(resolvedRegion(data, s.poi.lon, s.poi.lat), s.poi.region);
@@ -69,11 +69,11 @@ test("mapped safe positions replace centroids only for encounters; real construc
       assert.match(s.poi.association_note, /outdoor|public/);
       assert.equal(interaction(s, { ...s.poi, accuracy: 0, timestamp: 100000 }, 100000).allowed, true);
       assert.equal(interaction(s, { ...s.poi, lat: s.poi.lat + .0009, accuracy: 0, timestamp: 100000 }, 100000).allowed, false);
-      assert.notEqual(s.poi.id, crosswalk.scheduler_ride_booking);
+      if (s.poi.id === crosswalk.scheduler_ride_booking) assert.match(s.poi.association_note, /GoDurham stop 6680/);
     }
-    assert.ok(buildWorld(data, date).every((s) => s.poi.id !== crosswalk.scheduler_ride_booking));
+    assert.ok(buildWorld(data, date).every((s) => s.poi.id !== crosswalk.scheduler_ride_booking || s.rarity === "signature"));
   }
-  assert.ok(rotation.some((s) => s.speciesId === "scheduler_ride_booking" && /DEMO ONLY.*construction/.test(s.poi.association_note)));
+  assert.equal(new Set(dates.flatMap((date) => scheduledSignatures(data, date)).map((s) => s.speciesId)).size, 12);
   assert.ok(scheduledSignatures(data, "2026-10-19", "demo").every((s) => s.poi.id !== crosswalk.generator_catalog));
   const closed = structuredClone(data);
   closed.signatures!.entries.filter((e) => e.poi_id === crosswalk.generator_catalog).forEach((e) => e.blocked_dates.push("2026-10-18"));
@@ -82,6 +82,19 @@ test("mapped safe positions replace centroids only for encounters; real construc
   const broken = structuredClone(data);
   broken.signatures!.entries.forEach((e) => { e.safety_status = "unknown"; e.placement = null; });
   assert.deepEqual(dates.flatMap((date) => scheduledSignatures(broken, date, "real")), []);
+});
+
+test("closure notices are date-scoped, linked and do not override an independently safe open approach", () => {
+  const candidate = structuredClone(data);
+  const hunt = candidate.signatures!.entries.filter((e) => e.poi_id === crosswalk.generator_catalog);
+  // Put the actual sourced closure on an eligible calendar day without changing
+  // production's approved four-day calendar, which doesn't schedule Hunt on 19th.
+  for (const e of hunt) e.site_notices![0] = { ...e.site_notices![0], start_date: "2026-10-18", end_date: "2026-10-18" };
+  const s = scheduledSignatures(candidate, "2026-10-18").find((s) => s.poi.id === crosswalk.generator_catalog)!;
+  assert.ok(s);
+  assert.equal(s.siteNotices!.length, 1);
+  assert.equal(s.siteNotices![0].source_url, "https://www.lib.ncsu.edu/hunt/visit");
+  assert.equal(scheduledSignatures(candidate, "2026-10-22").find((s) => s.poi.id === crosswalk.generator_catalog)!.siteNotices!.length, 0);
 });
 
 test("Signature priority precedes ordinary markers, global disk cap and one marker per anchor hold in both modes", () => {

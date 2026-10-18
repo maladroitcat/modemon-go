@@ -102,8 +102,8 @@ The expanded issue-21 playable suite has 114 cases across Chromium and mobile We
 not physical iPhone Safari tests; owner field/device acceptance remains necessary.
 Five Healthcare-only forms still have no suitable public gameplay anchors under
 the existing conservative policy, but their quiz content is validated. All twelve
-Signatures now have explicit approved mappings; ten have real outdoor placements,
-and the two Durham Station forms are Demo-only pending safety review. See
+Signatures now have explicit approved mappings and real outdoor placements;
+the two Durham Station forms use the alternative public sidewalk by GoDurham stop 6680. See
 [SIGNATURE_ENCOUNTERS.md](SIGNATURE_ENCOUNTERS.md). No quiz claim extends their
 deployment provenance or locations.
 

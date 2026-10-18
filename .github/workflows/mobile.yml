@@ -2,7 +2,7 @@ name: Mobile and playable web
 
 on:
   pull_request:
-    paths: ['mobile/**', 'data/config/modedex.yaml', 'data/processed/modedex.json', 'scripts/build_web_runtime.py', 'scripts/signature_placements.py', 'scripts/fetch_signature_access.py', 'tests/test_signature_placements.py', 'tests/test_web_runtime.py', 'tests/test_playtest_copy.py', 'requirements.txt', '.github/workflows/mobile.yml']
+    paths: ['mobile/**', 'assets/**', 'data/config/modedex.yaml', 'data/processed/modedex.json', 'scripts/build_game_art.py', 'scripts/build_web_runtime.py', 'scripts/signature_placements.py', 'scripts/fetch_signature_access.py', 'tests/test_game_art.py', 'tests/test_signature_placements.py', 'tests/test_web_runtime.py', 'tests/test_playtest_copy.py', 'requirements.txt', '.github/workflows/mobile.yml']
   workflow_dispatch:
 
 permissions:

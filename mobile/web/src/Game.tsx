@@ -22,6 +22,7 @@ import "./style.css";
 import bundle from "./data/runtime.json";
 import QuizFeedback from "./QuizFeedback";
 import DexEntry from "./DexEntry";
+import { Brand, Creature } from "./Art";
 import {
   approximateDistance,
   extraLocationSafety,
@@ -53,6 +54,7 @@ import {
   type Spawn,
 } from "./engine";
 import { quizModes, type Difficulty } from "./quizzes";
+import { safeProjectUrl } from "./signatures";
 
 const data = bundle as unknown as Runtime;
 const safetyKey = "modemon-go:playable:safety:v1";
@@ -184,23 +186,13 @@ function Map({
   );
 }
 
-function Creature({ name }: { name: string }) {
-  return (
-    <div
-      className="creature-fallback"
-      aria-label={`Artwork unavailable for ${name}`}
-    >
-      <span className="fallback-symbol">?</span>
-      <strong>{name}</strong>
-      <small>Artwork unavailable</small>
-    </div>
-  );
-}
 function CameraScene({
+  modemonId,
   name,
   onTap,
   onExit,
 }: {
+  modemonId: string;
   name: string;
   onTap: () => void;
   onExit: () => void;
@@ -282,7 +274,7 @@ function CameraScene({
             onTap();
           }}
         >
-          <Creature name={name} />
+          <Creature modemonId={modemonId} name={name} />
         </button>
       </div>
       <p role="status">{status}</p>
@@ -340,6 +332,10 @@ export default function App() {
     );
   const [feedback, setFeedback] = useState<number | null>(null),
     [dexId, setDexId] = useState<string | null>(null);
+  const modal = useRef<HTMLElement>(null);
+  useEffect(() => {
+    modal.current?.scrollTo({ top: 0 });
+  }, [phase, selected?.id]);
   useEffect(() => {
     let current = true;
     const refresh = (probe = false) => {
@@ -524,7 +520,7 @@ export default function App() {
     return (
       <>
         <header>
-          <h1>Modémon GO</h1>
+          <Brand />
           <span>Explore. Learn. Collect.</span>
         </header>
         <main className="onboarding">
@@ -575,7 +571,7 @@ export default function App() {
   return (
     <>
       <header>
-        <h1>Modémon GO</h1>
+        <Brand />
         <span>{counts} captured</span>
       </header>
       {mode === "demo" && (
@@ -742,6 +738,7 @@ export default function App() {
                 Back to discoveries
               </button>
               <DexEntry
+                modemonId={dexId}
                 species={data.modedex.modemon[dexId]}
                 habitatTitle={title}
               />
@@ -758,6 +755,7 @@ export default function App() {
                   key={id}
                   onClick={() => setDexId(id)}
                 >
+                  <Creature modemonId={id} name={data.modedex.modemon[id]?.name ?? id} className="dex-thumbnail" />
                   {data.modedex.modemon[id]?.name ?? id}
                   <small>
                     {
@@ -794,8 +792,8 @@ export default function App() {
             Read player-safety notice
           </button>
           <p>
-            Prototype limitations: artwork is unavailable pending approval.
-            Durham Station Signatures are Demo-only while a safe approach is unverified during construction.
+            {Object.keys(bundle.art.approved).length < 51 && <>Prototype limitations: artwork is unavailable pending approval.</>}
+            Durham Station Signatures use an alternative public sidewalk by GoDurham stop 6680; do not enter station construction.
             Browser progress is not
             synchronized across devices. Real-world access and opening hours are
             not guaranteed; skip unsafe or inaccessible places.
@@ -821,6 +819,7 @@ export default function App() {
         <div className="modal-backdrop">
           <section
             className="encounter-modal"
+            ref={modal}
             role="dialog"
             aria-modal="true"
             aria-labelledby="encounter-title"
@@ -839,6 +838,15 @@ export default function App() {
                 : data.modedex.modemon[selected.speciesId].name}
             </h2>
             <p>{placeLabel(data, selected.poi)}</p>
+            {selected.siteNotices?.map((notice) => (
+              <aside className="site-availability" role="note" aria-label="Site access notice" key={notice.source_url}>
+                <strong>{notice.title}</strong>
+                <p>{notice.message}</p>
+                {safeProjectUrl(notice.source_url) && (
+                  <a href={notice.source_url} target="_blank" rel="noopener noreferrer">Official access notice</a>
+                )}
+              </aside>
+            ))}
             {mode === "demo" && (
               <p className="demo-inline">DEMO LOCATION — not your GPS</p>
             )}
@@ -905,6 +913,7 @@ export default function App() {
             )}
             {phase === "scene" && (
               <CameraScene
+                modemonId={selected.speciesId}
                 name={data.modedex.modemon[selected.speciesId].name}
                 onTap={() => setPhase("info")}
                 onExit={close}
@@ -913,6 +922,7 @@ export default function App() {
             {phase === "info" && (
               <>
                 <DexEntry
+                  modemonId={selected.speciesId}
                   species={data.modedex.modemon[selected.speciesId]}
                   habitatTitle={title}
                 />

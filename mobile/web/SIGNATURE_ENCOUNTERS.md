@@ -4,7 +4,7 @@ This is a gameplay association overlay, not new research or geographic data.
 The owner approved all twelve mappings in
 <https://github.com/maladroitcat/modemon-go/issues/21>.
 Canonical Modedex facts, source URLs, POI identities, regions, zones and habitat
-assignments are read-only. No creature artwork is approved; placeholders remain.
+assignments are read-only. Issue 23 integrates the owner's 51 approved images and logo.
 
 ## Explicit crosswalk
 
@@ -12,16 +12,16 @@ assignments are read-only. No creature artwork is approved; placeholders remain.
 | --- | --- | --- | --- |
 | extractor_history | Archivole | RAL-04_osm_node_2470661698 | Friday Institute sidewalk |
 | extractor_specimen | Specimunk | RAL-01_osm_way_197842115 | Bicentennial Mall pedestrian space |
-| generator_catalog | Catalogar | RAL-04_osm_way_177166351 | Hunt Library outdoor plaza |
+| generator_catalog | Catalogar | RAL-04_osm_way_177166351 | Partners Way public sidewalk |
 | generator_classroom_chatbot | Lecturlynx | RAL-04_osm_node_2470661698 | Friday Institute sidewalk |
 | generator_lesson_planner | Planthera | RAL-04_osm_node_2470661698 | Friday Institute sidewalk |
 | recommender_adaptive_learning | Mentamorph | RAL-04_osm_node_2470661698 | Friday Institute sidewalk |
 | recommender_ai_curator | Muselect | DUR-02_osm_way_30424777 | Nasher outdoor sidewalk |
-| recommender_research | Referaptor | RAL-04_osm_way_177166351 | Hunt Library outdoor plaza |
+| recommender_research | Referaptor | RAL-04_osm_way_177166351 | Partners Way public sidewalk |
 | retriever_semantic_search | Semantiff | DUR-02_osm_way_391474817 | Perkins outdoor walkway |
-| scheduler_ride_booking | Cabcrab | DUR-01_osm_node_5844548329 | Withheld individually; Demo only |
+| scheduler_ride_booking | Cabcrab | DUR-01_osm_node_5844548329 | Great Jones St sidewalk by GoDurham stop 6680 |
 | scheduler_traffic_signal | Signalquid | RAL-01_osm_node_13659913892 | West Street sidewalk near RUS BUS |
-| scheduler_transit_flow | Flowfin | DUR-01_osm_node_5844548329 | Withheld individually; Demo only |
+| scheduler_transit_flow | Flowfin | DUR-01_osm_node_5844548329 | Great Jones St sidewalk by GoDurham stop 6680 |
 
 ## Safety evidence and limits
 
@@ -36,7 +36,8 @@ The runtime builder derives coordinates directly from that selected node.
 Validation rejects non-primary/ineligible destinations, unknown/missing species,
 incomplete responses, restricted ways, road crossings, indoor/tunnel/golf ways,
 points in building footprints, points outside their resolved canonical parent,
-and offsets exceeding the configured 200m association limit. The runtime keeps
+and offsets exceeding the configured 200m association limit (explicitly 300m only
+for the approved Durham alternative, with a 150m station separation). The runtime keeps
 the canonical POI unchanged and applies the outdoor placement only to the
 Signature encounter. Its distance display and interaction gate use that approach,
 not the building centroid. The real flow also requires an affirmative public-path
@@ -52,15 +53,26 @@ institute interior, adjacent K-12 school or private golf paths.
 
 The [GoDurham renovation update](https://godurhamtransit.org/durham-station-renovations/)
 reviewed October 18 describes ongoing construction, west-side concrete work and
-north platform work. A suitable unaffected pedestrian game association spot was
-not established. **Only Cabcrab and Flowfin real placements are withheld** pending
-that review. No fallback to the station centroid or ordinary station encounter is
-allowed. In Demo they use the canonical association coordinate, with a prominent
-DEMO ONLY construction notice; this is not a safe real placement approval.
+north platform work. Do not approach that work. Both Durham forms instead use
+OSM sidewalk way 679054726, node 6358493025, beside stop node 6509747516/ref 6680.
+The stop is independently matched to GoDurham's official rider-alert stop list in
+`config/godurham_stop_evidence.json`. `config/durham_pedestrian_alternatives_osm.json`
+preserves the broader alternative search. Stops 6305/6672 were not corroborated
+in that current agency list and were not selected. The chosen point is about
+210m from the original station association, outside mapped buildings and
+construction. A separate mapped construction parcel is about 22.5m east across
+Great Jones Street: do not cross into it. This is desk evidence, not proof of
+today's fences or passenger conditions. Real entry still requires GPS proximity
+and affirmative open-path acknowledgment. Both modes show the linked station
+construction notice. No ordinary fallback to the station centroid is allowed.
 
 The [Hunt visitor page](https://www.lib.ncsu.edu/hunt/visit) announces an October 19,
-2026 electrical-work closure. Its two mappings have that date blocked in both
-modes. Museums and libraries have published visitor hours; these encounters are
+2026 electrical-work building closure. The selected street-side Partners Way
+sidewalk (way 297302728/node 3011732374) is a separate outdoor approach, not the
+building/plaza entrance. The associated-building closure is a date-scoped linked
+notice on October 19, not an automatic sidewalk closure. It explicitly states
+that entry is unnecessary. Actual walkway closures remain blocking; `blocked_dates`
+is still supported and tested. Museums and libraries have published visitor hours; these encounters are
 outdoor associations, not an invitation to enter after hours. Re-review evidence
 when conditions change. Refreshing OSM never automatically approves a new point:
 `python3 -B scripts/fetch_signature_access.py` only updates the evidence snapshot;
@@ -94,8 +106,8 @@ in that day's new world. There is no new reroll or reset option.
 ## Demo and capture QA
 
 Demo is opt-in and uses its own browser progress key. Both cities use the same
-daily scheduling and density model; the two withheld Durham forms are explicitly
-simulation-only. A **Demo rotation (simulated date)** selector previews today and
+daily scheduling and density model, including all twelve real-eligible forms.
+A **Demo rotation (simulated date)** selector previews today and
 the next fifteen days. It does not change the real GPS date or erase any previous
 attempt. Reload defaults the preview to today; reselecting a preview date resumes
 its existing attempt. This is an educational testing sandbox, not real movement.
@@ -137,4 +149,4 @@ Unit tests also cover exact crosswalk, every shared-anchor cycle, scarcity,
 priority, global density, invalid access evidence and unchanged source hashes.
 
 No spawn pools, rarity probabilities beyond this explicitly requested calendar,
-new artwork, native behavior changes or automatic merge are introduced here.
+new creative artwork, native behavior changes or automatic merge are introduced here.

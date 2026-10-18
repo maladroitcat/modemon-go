@@ -1,4 +1,5 @@
 version: signature-associations-v1
+placement_policy_version: 2
 approval_issue: https://github.com/maladroitcat/modemon-go/issues/21
 # One eligible day per four-day block per anchor, rotating species each block.
 # These are educational association points, never deployment coordinates.
@@ -25,12 +26,19 @@ anchors:
     blocked_dates: []
   RAL-04_osm_way_177166351:
     safety_status: mapped_public_approach
-    osm_way_id: 329540779
-    osm_node_id: 3011697025
+    osm_way_id: 297302728
+    osm_node_id: 3011732374
     evidence_url: https://www.lib.ncsu.edu/hunt/visit
-    association_note: Use the outdoor pedestrian plaza near Hunt Library, not restricted library spaces. Respect campus signs, public hours and closures; you do not need to enter. This represents university-library projects, not technology installed at this point.
-    review_note: Outdoor paved pedestrian area; library public-access page also announces October 19 closure for electrical work. Suppress that date conservatively. No field inspection.
-    blocked_dates: ['2026-10-19']
+    association_note: Use the public Partners Way sidewalk near Hunt Library, not restricted library spaces. Respect signs and walkway closures; you do not need to enter. This represents university-library projects, not technology installed at this point.
+    review_note: Separately mapped concrete street sidewalk outside the building. The official notice closes Hunt Library on October 19, not Partners Way. Building closure alone does not close this public street approach; any actual sidewalk restriction still overrides gameplay. No field inspection.
+    blocked_dates: []
+    site_notices:
+      - title: The associated site may be closed
+        scope: associated_building
+        start_date: '2026-10-19'
+        end_date: '2026-10-19'
+        source_url: https://www.lib.ncsu.edu/hunt/visit
+        message: Hunt Library announces an October 19, 2026 closure for electrical work. You do not need to enter the site. Use the public Partners Way sidewalk only if open and follow posted restrictions.
   DUR-02_osm_way_30424777:
     safety_status: mapped_public_approach
     osm_way_id: 667053135
@@ -48,13 +56,26 @@ anchors:
     review_note: Mapped footway outside building footprints; library policy includes public visitors with time restrictions. No field inspection.
     blocked_dates: []
   DUR-01_osm_node_5844548329:
-    safety_status: withheld_pending_safe_approach
-    osm_way_id: null
-    osm_node_id: null
+    safety_status: mapped_public_approach
+    evidence_dataset: durham_alternatives
+    osm_way_id: 679054726
+    osm_node_id: 6358493025
+    osm_stop_id: 6509747516
+    official_stop_id: 6680
+    ordinary_anchor_withheld: true
+    maximum_offset_meters: 300
+    minimum_station_distance_meters: 150
     evidence_url: https://godurhamtransit.org/durham-station-renovations/
-    association_note: 'DEMO ONLY: real encounters at Durham Station are withheld during construction until a safe public pedestrian approach is verified. Do not approach construction, platforms, bus lanes, blocked entrances or transit operating areas for the game. GoDurham system association only, not a deployment at the station.'
-    review_note: October 12 site update describes concrete work on the west and platform work on the north. The displaced passenger area and changing works do not establish a safe game-lingering location. A mapped footpath alone is insufficient here. Re-review individually before real activation.
+    association_note: Use the public Great Jones Street sidewalk by GoDurham stop 6680 at Main Street, not Durham Station's construction area. Stand aside from waiting passengers and keep the sidewalk clear. Do not enter platforms, bus lanes, roads or restricted areas. GoDurham system association only, not a deployment at this coordinate.
+    review_note: Owner authorizes nearby public bus-stop approaches in issue 23. Official GoDurham stop API confirms stop 6680 at the same location as OSM node 6509747516. Selected concrete sidewalk node is about 5m from that stop, outside building and construction polygons and over 150m from the station anchor. Construction parcel east across Great Jones Street is not the selected sidewalk; do not cross toward it. Desk evidence, not field inspection; posted restrictions override this placement.
     blocked_dates: []
+    site_notices:
+      - title: Durham Station construction
+        scope: nearby_construction
+        start_date: '2026-10-18'
+        end_date: null
+        source_url: https://godurhamtransit.org/durham-station-renovations/
+        message: Durham Station remains active during substantial renovation. Use the alternative public sidewalk by GoDurham stop 6680 on Great Jones Street at Main Street. You do not need to enter the site. Stay away from station construction, platforms and bus operating areas; follow current signs and skip any closed walkway.
   RAL-01_osm_node_13659913892:
     safety_status: mapped_public_approach
     osm_way_id: 196797586
