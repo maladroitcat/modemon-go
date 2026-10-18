@@ -1,4 +1,6 @@
 geopandas==0.14.3
+# GeoPandas 0.14 reads fiona.path, removed in Fiona 1.10.
+fiona==1.9.6
 shapely==2.0.3
 pyproj==3.6.1
 requests==2.32.3
