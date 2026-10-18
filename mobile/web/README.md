@@ -30,10 +30,19 @@ remote real-world capture. Never approach an unsafe or inaccessible location.
 `scripts/build_web_runtime.py` reads canonical files only. It exports exact region,
 zone, and neutral geometries; compact POI association points/context/access flags;
 all 51 Modédex entries; all 17 curated destinations; explicit region precedence;
-source SHA-256 digests and a deterministic data version. No raw cells, contribution
+source SHA-256 digests and deterministic content/gameplay versions. No raw cells, contribution
 tables, Python runtime, backend, player account, or geolocation history ships.
 The version includes the explicit `public-anchors-v1` bridge policy; bump that
 policy when changing eligibility, and bump gameplay rules when changing scoring.
+
+`content_version` tracks the full canonical input bytes. The gameplay fingerprint
+excludes only Modédex `dex_entry` prose, so editorial fixes cannot reroll daily
+encounters or reset saved attempts. `config/world_identity.json` explicitly aliases
+the unchanged PR #16 gameplay fingerprint to its already-published data version
+`0f51a954e4340dea`. Other structured content still participates in the fingerprint;
+new gameplay data receives a new version. Do not update that compatibility alias
+merely to make a changed world look unchanged. Frozen worlds, quizzes, and browser
+progress fixtures verify the original identity independently of the new copy.
 
 The browser uses Turf for boundary-inclusive polygon lookup and Leaflet for a
 normal pannable/zoomable street map. The native map and native onboarding routes
@@ -80,6 +89,9 @@ canonical role, input, and output fields. Distractors come from other families;
 duplicate exact options are removed. Wording identifies the canonical Modédex as
 the source rather than claiming a technique is exclusive to one job. Feedback
 shows the correct answer and canonical input/output explanation after every answer.
+Correct feedback is green with a check icon and "Correct."; incorrect feedback is
+red with a cross icon and "Not quite.". Text and live announcements distinguish
+the states without depending on color. The answer and capture rules are unchanged.
 
 Browser local storage writes each answer before progressing. Encounter IDs include
 date/version/POI; closing and re-entering resumes answered-question progress, and
@@ -155,3 +167,9 @@ Physical iPhone Safari remains an **owner acceptance gate**: open the public URL
 on an unrelated iPhone, complete a Demo capture and reload, then test camera allow/
 deny and real GPS from a safe field location. Playwright WebKit is not a physical
 iPhone test. See [QA.md](QA.md) for the verification record and open decisions.
+
+Issue [#17](https://github.com/maladroitcat/modemon-go/issues/17) follow-up:
+[playtest review](PLAYTEST_REVIEW.md) and the complete
+[51-entry before/after introduction audit](INTRODUCTION_REVIEW.md). Region display
+names and approximate distances replace internal IDs and location-gate jargon in
+encounter text; the original GPS gate and additional curated safety notes remain.
