@@ -1,0 +1,648 @@
+version: 1
+status: research_only_pending_owner_review
+canonical_source: data/config/modedex.yaml
+policy: >-
+  Educational concept matches only, not evidence of real-world deployment.
+  No UI integration is authorized by this overlay. Null primary lessons are
+  intentional gaps. Medium-confidence and partial matches require review.
+
+# URLs were discovered from the live unit tables of contents, not guessed.
+# Article titles below preserve the live H1, including its punctuation.
+lessons:
+  detection:
+    workbook: Deep Learning Workbook
+    unit: Computer Vision
+    chapter: Object Detection
+    article_title: Introduction
+    toc_url: https://deeplearningworkbook.com/computer-vision
+    url: https://deeplearningworkbook.com/computer-vision/object-detection/beyond-classification
+    verification_terms: [bounding box, confidence score, classification]
+  yolo:
+    workbook: Deep Learning Workbook
+    unit: Computer Vision
+    chapter: Object Detection
+    article_title: YOLO and Faster R-CNN
+    toc_url: https://deeplearningworkbook.com/computer-vision
+    url: https://deeplearningworkbook.com/computer-vision/object-detection/yolo-rcnn
+    verification_terms: [YOLO, Faster R-CNN, region]
+  unet:
+    workbook: Deep Learning Workbook
+    unit: Computer Vision
+    chapter: Segmentation
+    article_title: U-Net
+    toc_url: https://deeplearningworkbook.com/computer-vision
+    url: https://deeplearningworkbook.com/computer-vision/segmentation/unet
+    verification_terms: [biomedical, segmentation, skip connections]
+  gradcam:
+    workbook: Explainable AI Workbook
+    unit: Explainable Machine Learning
+    chapter: Attribution-Based Explanations
+    article_title: Grad-CAM and Variants
+    toc_url: https://explainableaiworkbook.com/02-explainable-machine-learning
+    url: https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/02-grad-cam-and-variants
+    verification_terms: [heatmap, convolutional, class]
+  outliers:
+    workbook: Data Science Workbook
+    unit: Data Storytelling
+    chapter: Preprocessing
+    article_title: Detecting Outliers
+    toc_url: https://datascienceworkbook.com/data-storytelling
+    url: https://datascienceworkbook.com/data-storytelling/preprocessing/detecting-outliers
+    verification_terms: [Z-score, IQR, fraud, sensor]
+  autoencoders:
+    workbook: Deep Learning Workbook
+    unit: Generative AI
+    chapter: Variational Autoencoders
+    article_title: Autoencoders and the Generation Problem
+    toc_url: https://deeplearningworkbook.com/generative-ai
+    url: https://deeplearningworkbook.com/generative-ai/vaes/autoencoder-review
+    verification_terms: [encoder, decoder, reconstruction error]
+  logistic:
+    workbook: Explainable AI Workbook
+    unit: Interpretable Machine Learning
+    chapter: Regression
+    article_title: Logistic Regression
+    toc_url: https://explainableaiworkbook.com/01-interpretable-machine-learning
+    url: https://explainableaiworkbook.com/01-interpretable-machine-learning/01-regression/03-logistic-regression
+    verification_terms: [sigmoid, probability, threshold]
+  shap:
+    workbook: Explainable AI Workbook
+    unit: Explainable Machine Learning
+    chapter: Local Explanations
+    article_title: SHAP
+    toc_url: https://explainableaiworkbook.com/02-explainable-machine-learning
+    url: https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/04-shap
+    verification_terms: [Shapley, feature, baseline]
+  time_series:
+    workbook: Data Science Workbook
+    unit: Data Storytelling
+    chapter: Information Representation
+    article_title: Time Series
+    toc_url: https://datascienceworkbook.com/data-storytelling
+    url: https://datascienceworkbook.com/data-storytelling/information-representation/historical-time-series
+    verification_terms: [sample rate, sequential, time]
+  time_features:
+    workbook: Data Science Workbook
+    unit: Data Storytelling
+    chapter: Feature Engineering
+    article_title: Feature Engineering for Time Series
+    toc_url: https://datascienceworkbook.com/data-storytelling
+    url: https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features
+    verification_terms: [Lagged features, Rolling statistics, Seasonal features]
+  lstm:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: Recurrent Neural Networks
+    article_title: Long Short-Term Memory (LSTM)
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/rnns/lstm
+    verification_terms: [cell state, gates, vanishing gradient]
+  recommender_intro:
+    workbook: Deep Learning Workbook
+    unit: Recommendation Systems
+    chapter: Introduction to Recommenders
+    article_title: Why Recommendation Systems?
+    toc_url: https://deeplearningworkbook.com/recsys
+    url: https://deeplearningworkbook.com/recsys/intro-recommenders/why-recommenders
+    verification_terms: [personalized information filters, commerce, content]
+  recommender_types:
+    workbook: Deep Learning Workbook
+    unit: Recommendation Systems
+    chapter: Introduction to Recommenders
+    article_title: Types of Recommendation Systems
+    toc_url: https://deeplearningworkbook.com/recsys
+    url: https://deeplearningworkbook.com/recsys/intro-recommenders/types-of-recommenders
+    verification_terms: [Content-Based Filtering, Collaborative Filtering, Hybrid Systems]
+  similarity:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: NLP Implementation
+    article_title: NLP Applications:Text Similarity
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/nlp-implementation/text-similarity
+    verification_terms: [Lexical similarity, Semantic similarity, cosine]
+  llm:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: LLMs + RAG
+    article_title: What Is a Large Language Model?
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/llms-beyond/what-is-an-llm
+    verification_terms: [language model, generate, prompt]
+  topics:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: NLP Implementation
+    article_title: NLP Applications:Topic Modeling
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/nlp-implementation/topic-modeling
+    verification_terms: [topics, Latent Dirichlet Allocation, keywords]
+  tfidf:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: Traditional Approaches to NLP
+    article_title: TF-IDF and N-grams
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/traditional-toolkit/tfidf-ngrams
+    verification_terms: [Term Frequency, Inverse Document Frequency, search]
+  rag:
+    workbook: Deep Learning Workbook
+    unit: Natural Language Processing
+    chapter: LLMs + RAG
+    article_title: Retrieval-Augmented Generation (RAG)
+    toc_url: https://deeplearningworkbook.com/nlp
+    url: https://deeplearningworkbook.com/nlp/llms-beyond/rag
+    verification_terms: [retrieve, prompt, chunking, evaluation]
+  vector:
+    workbook: Data Science Workbook
+    unit: Data/ML Engineering
+    chapter: Data Storage
+    article_title: Vector Databases and RAG
+    toc_url: https://datascienceworkbook.com/engineering
+    url: https://datascienceworkbook.com/engineering/data-storage/vector-databases-and-rag
+    verification_terms: [embedding, approximate nearest-neighbor, cosine]
+  generative:
+    workbook: Deep Learning Workbook
+    unit: Generative AI
+    chapter: Introduction to Generative AI
+    article_title: From Predicting to Creating
+    toc_url: https://deeplearningworkbook.com/generative-ai
+    url: https://deeplearningworkbook.com/generative-ai/intro-generative-ml/discriminative-vs-generative
+    verification_terms: [discriminative, generative, distribution]
+  diffusion:
+    workbook: Deep Learning Workbook
+    unit: Generative AI
+    chapter: Diffusion Models
+    article_title: The Diffusion Intuition
+    toc_url: https://deeplearningworkbook.com/generative-ai
+    url: https://deeplearningworkbook.com/generative-ai/diffusion-models/diffusion-intuition
+    verification_terms: [noise, denoising, image]
+  rl:
+    workbook: Explainable AI Workbook
+    unit: AI Alignment
+    chapter: Learning Human Preferences
+    article_title: Introduction to Reinforcement Learning
+    toc_url: https://explainableaiworkbook.com/05-ai-alignment
+    url: https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/01-introduction-to-reinforcement-learning
+    verification_terms: [agent, reward, policy, action]
+  provenance:
+    workbook: Explainable AI Workbook
+    unit: Transparent AI
+    chapter: Transparency
+    article_title: Provenance
+    toc_url: https://explainableaiworkbook.com/06-transparent-ai
+    url: https://explainableaiworkbook.com/06-transparent-ai/01-transparency/02-provenance
+    verification_terms: [source, transformations, quality, lineage]
+
+# Keys are canonical semantic species IDs, never creature-name-derived IDs.
+# Every optional secondary has a separate educational purpose, not filler.
+species:
+  detector_base:
+    name: Seeklet
+    primary_lesson: detection
+    confidence: high
+    match_scope: task
+    rationale: Introduces finding objects, locating them, and reporting confidence, directly matching Seeklet's image-to-detections job.
+    limitations: Not an exhaustive survey of every representative detector architecture.
+    review_required: false
+  detector_disease:
+    name: Pathogaze
+    primary_lesson: unet
+    secondary_lesson: gradcam
+    secondary_rationale: Explains regional evidence heatmaps for CNN predictions, distinct from learning how segmentation works.
+    confidence: high
+    match_scope: representative_technique
+    rationale: U-Net is explicitly canonical and the lesson teaches biomedical pixel-level segmentation.
+    limitations: Does not establish clinical safety or a diagnosis; Grad-CAM is not validation of every architecture listed in canon.
+    review_required: false
+  detector_pedestrian:
+    name: Crowdseer
+    primary_lesson: yolo
+    confidence: high
+    match_scope: representative_technique
+    rationale: Teaches two canonically listed detectors and their localization and speed trade-offs for detecting people in frames.
+    limitations: Does not teach pedestrian tracking or establish any real installation.
+    review_required: false
+  detector_defect:
+    name: Inspectra
+    primary_lesson: yolo
+    secondary_lesson: gradcam
+    secondary_rationale: Adds inspection of CNN image evidence rather than another detection tutorial.
+    confidence: high
+    match_scope: representative_technique
+    rationale: YOLO is a canonical representative model for finding visible defects; the lesson covers object localization.
+    limitations: Uses general object-detection examples, not industrial defect validation or all anomaly-based methods.
+    review_required: false
+  anomaly_base:
+    name: Quirkle
+    primary_lesson: outliers
+    confidence: high
+    match_scope: task
+    rationale: Accessible introduction to unusual observations and statistical thresholds, including why an unusual point is not necessarily an error.
+    limitations: Does not teach Isolation Forest or one-class SVM; covers the canonical statistical-thresholding option.
+    review_required: false
+  anomaly_fraud:
+    name: Swindlisk
+    primary_lesson: logistic
+    secondary_lesson: shap
+    secondary_rationale: Separately teaches feature attribution for explaining an individual risk score.
+    confidence: high
+    match_scope: representative_technique
+    rationale: Logistic regression is a canonical fraud-classification technique; the lesson explains probability and decision thresholds.
+    limitations: Educational examples are not a fraud system, and neither probabilities nor SHAP establish wrongdoing.
+    review_required: false
+  anomaly_vitals:
+    name: Beatling
+    primary_lesson: outliers
+    secondary_lesson: time_features
+    secondary_rationale: Adds temporal windows and signal features needed to interpret changing vital measurements.
+    confidence: high
+    match_scope: representative_technique
+    rationale: Statistical thresholding directly matches Beatling's monitoring role, including distinguishing unusual readings from measurement problems.
+    limitations: Not medical guidance, clinical alert validation, or a lesson on every listed sequence model.
+    review_required: false
+  anomaly_machine:
+    name: Geargoyle
+    primary_lesson: autoencoders
+    secondary_lesson: time_features
+    secondary_rationale: Explains vibration and temporal signal features independently of the reconstruction model.
+    confidence: medium
+    match_scope: representative_technique
+    rationale: Canon lists autoencoders; the lesson explains compression, reconstruction, and reconstruction error useful for understanding this option.
+    limitations: Does not teach an anomaly threshold, predictive maintenance, or remaining-life estimation; framing is generative modeling.
+    review_required: true
+  anomaly_network:
+    name: Netnark
+    primary_lesson: outliers
+    secondary_lesson: autoencoders
+    secondary_rationale: Explains the compression and reconstruction mechanism of a second canonical model option.
+    confidence: medium
+    match_scope: related_context
+    rationale: Unusual-observation detection gives a useful foundation for traffic-pattern alerts without inventing an attack classifier.
+    limitations: No dedicated network intrusion lesson was found; outliers are not proof of a security incident.
+    review_required: true
+  forecast_base:
+    name: Forespirit
+    primary_lesson: time_series
+    confidence: high
+    match_scope: input_representation
+    rationale: Introduces ordered measurements and sampling, the essential input foundation for learning demand from historical observations.
+    limitations: An introductory foundation, not an ARIMA or forecasting-model tutorial.
+    review_required: false
+  forecast_patient:
+    name: Wardwisp
+    primary_lesson: time_features
+    confidence: high
+    match_scope: input_representation
+    rationale: Calendar, lag, and rolling features explain how past patient counts and recurring demand patterns become model inputs.
+    limitations: Does not teach count regression, hospital allocation, or clinical decision-making.
+    review_required: false
+  forecast_transit:
+    name: Commutoracle
+    primary_lesson: time_features
+    secondary_lesson: lstm
+    secondary_rationale: Explains memory and gates in the explicitly listed LSTM model, beyond creating temporal input features.
+    confidence: high
+    match_scope: input_representation
+    rationale: Lag and seasonal features connect historical ridership to the transit forecasting task.
+    limitations: LSTM lesson uses NLP framing; it is a representative architecture explanation, not a transit deployment claim.
+    review_required: false
+  forecast_stock:
+    name: Coinjurer
+    primary_lesson: time_features
+    confidence: high
+    match_scope: input_representation
+    rationale: Lagged sales and seasonal features directly support understanding inventory-demand forecasting inputs.
+    limitations: Does not teach stock-market trading or all listed forecasting algorithms.
+    review_required: false
+  forecast_crowd:
+    name: Gathergeist
+    primary_lesson: time_features
+    confidence: high
+    match_scope: input_representation
+    rationale: Recurring calendar patterns and recent-count windows are useful inputs for crowd-demand prediction.
+    limitations: Not a crowd safety or causal-impact lesson.
+    review_required: false
+  recommender_base:
+    name: Suggestle
+    primary_lesson: recommender_intro
+    confidence: high
+    match_scope: task
+    rationale: An accessible explanation of personalized filtering and why everyday services recommend items.
+    limitations: No promise that recommendations understand a person's needs or interests perfectly.
+    review_required: false
+  recommender_product:
+    name: Cartivore
+    primary_lesson: recommender_types
+    confidence: high
+    match_scope: representative_technique
+    rationale: Directly compares the canonical content-based and collaborative approaches used to suggest products.
+    limitations: Not a two-tower implementation lesson.
+    review_required: false
+  recommender_content:
+    name: Reelure
+    primary_lesson: recommender_types
+    confidence: high
+    match_scope: representative_technique
+    rationale: Content and collaborative filtering match Reelure's media recommendation role and expose cold-start and filter-bubble trade-offs.
+    limitations: Does not teach the canonical sequence-model option.
+    review_required: false
+  recommender_ai_curator:
+    name: Muselect
+    primary_lesson: llm
+    confidence: medium
+    match_scope: representative_technique
+    rationale: Explains the canonical LLM concept behind a language-driven AI curator.
+    limitations: Not an art-curation tutorial or evidence for the Nasher project; its existing Signature provenance remains separate.
+    review_required: true
+  recommender_learning:
+    name: Curriquill
+    primary_lesson: recommender_types
+    confidence: medium
+    match_scope: representative_technique
+    rationale: Content-based recommendation explains matching learning resources to a learner's stated interests and resource features.
+    limitations: Does not teach knowledge tracing or prove learning gains; examples are not education-specific.
+    review_required: true
+  recommender_adaptive_learning:
+    name: Mentamorph
+    primary_lesson: llm
+    confidence: medium
+    match_scope: representative_technique
+    rationale: Provides a foundation for the canonically listed LLM option in personalized learning guidance.
+    limitations: Not an EcoJourneys lesson or evidence about its implementation, adaptation quality, or student outcomes.
+    review_required: true
+  recommender_research:
+    name: Referaptor
+    primary_lesson: similarity
+    confidence: high
+    match_scope: representative_technique
+    rationale: Semantic embeddings and document similarity directly match finding research related to a passage or interest.
+    limitations: Workbook explanation is not evidence of Keenious internals or any specific installed architecture.
+    review_required: false
+  recommender_menu:
+    name: Nibblet
+    primary_lesson: recommender_types
+    confidence: high
+    match_scope: representative_technique
+    rationale: Content-based and collaborative preference matching directly explain recommendation options in the canonical menu role.
+    limitations: Does not enforce allergies, dietary safety, or restaurant-specific constraints.
+    review_required: false
+  extractor_base:
+    name: Scribbit
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No direct OCR, document-layout, or named-entity extraction lesson was found in the inspected tables of contents.
+    limitations: General LLM material alone would not explain turning a document into structured fields.
+    candidate_lessons: [llm]
+    review_required: true
+  extractor_medical:
+    name: Clinink
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: A dedicated clinical entity or medical-record extraction lesson was not identified.
+    limitations: Generic NLP or LLM introductions do not teach clinical extraction, terminology, or validation.
+    candidate_lessons: [llm]
+    review_required: true
+  extractor_government:
+    name: Bureaucritter
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No lesson directly teaches OCR, layout-aware field detection, or structured government-form extraction.
+    limitations: Pixel detection and data-pipeline orchestration are not substitutes for document-layout extraction.
+    candidate_lessons: []
+    review_required: true
+  extractor_research:
+    name: Scholarat
+    primary_lesson: topics
+    confidence: medium
+    match_scope: representative_technique
+    rationale: Topic modeling is explicitly canonical and the lesson explains deriving topics and keywords from document collections.
+    limitations: Covers one part of Scholarat's role, not named-entity or relation extraction.
+    review_required: true
+  extractor_history:
+    name: Archivole
+    primary_lesson: topics
+    secondary_lesson: provenance
+    secondary_rationale: Adds source and transformation lineage, independently relevant when analyzing historical archives.
+    confidence: medium
+    match_scope: related_context
+    rationale: Finding themes in text collections offers related context for historical pattern analysis.
+    limitations: Topic modeling is not asserted as the Friday Institute project's method; no redlining-specific lesson was found.
+    review_required: true
+  extractor_archive:
+    name: Manusqueak
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No dedicated handwriting-recognition or archive-transcription lesson was found.
+    limitations: General vision and tokenization lessons would not explain reading handwritten documents.
+    candidate_lessons: []
+    review_required: true
+  extractor_specimen:
+    name: Specimunk
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No lesson directly teaches handwritten specimen-label transcription or field extraction.
+    limitations: Do not infer the museum project's undocumented OCR architecture from generic workbook material.
+    candidate_lessons: []
+    review_required: true
+  scheduler_base:
+    name: Plancton
+    primary_lesson: rl
+    confidence: medium
+    match_scope: representative_technique
+    rationale: Reinforcement learning is explicitly canonical and the lesson explains choosing actions using rewards and policies.
+    limitations: Only one possible technique; does not teach resource scheduling, linear programming, or constraints.
+    review_required: true
+  scheduler_hospital:
+    name: Wardray
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No direct constraint-programming, mixed-integer, or hospital-resource scheduling lesson was found.
+    limitations: Forecasting predicts demand but does not itself allocate beds, staff, or appointments.
+    candidate_lessons: []
+    review_required: true
+  scheduler_transit:
+    name: Routeopus
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No direct routing or real-time transit scheduling lesson was found.
+    limitations: ML training optimization and DAG orchestration do not explain vehicle scheduling.
+    candidate_lessons: []
+    review_required: true
+  scheduler_transit_flow:
+    name: Flowfin
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No lesson directly explains real-time transit decision support and service optimization.
+    limitations: A time-series input lesson would not explain this Signature's operational scheduling role or GoDurham's actual technology.
+    candidate_lessons: [time_features]
+    review_required: true
+  scheduler_ride_booking:
+    name: Cabcrab
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No lesson directly addresses conversational ride booking integrated with scheduling.
+    limitations: Canon says conversational AI, not a specific LLM architecture; linking an LLM lesson as a direct model match would overstate support.
+    candidate_lessons: [llm]
+    review_required: true
+  scheduler_traffic_signal:
+    name: Signalquid
+    primary_lesson: detection
+    confidence: medium
+    match_scope: task
+    rationale: Explains the object-location perception subtask that can support estimating traffic from images.
+    limitations: Does not explain signal optimization or identify the Raleigh system's architecture, camera hardware, or installed detector.
+    review_required: true
+  scheduler_workforce:
+    name: Shiftshark
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No lesson teaches staff-assignment constraints, integer programming, or shift optimization.
+    limitations: Demand forecasting is an input to, not a replacement for, workforce scheduling.
+    candidate_lessons: []
+    review_required: true
+  scheduler_delivery:
+    name: Parcelprawn
+    primary_lesson: null
+    confidence: low
+    match_scope: unresolved
+    rationale: No verified vehicle-routing, scheduling, or combinatorial-optimization lesson was found.
+    limitations: Gradient descent for model training does not solve the routing problem represented here.
+    candidate_lessons: []
+    review_required: true
+  generator_base:
+    name: Purrrompt
+    primary_lesson: generative
+    confidence: high
+    match_scope: task
+    rationale: Accessible introduction to creating new outputs rather than only classifying existing observations.
+    limitations: Introductory contrast, not an exhaustive guide to all canonical generative techniques.
+    review_required: false
+  generator_learning:
+    name: Learnx
+    primary_lesson: llm
+    secondary_lesson: rag
+    secondary_rationale: Adds the independent canonical grounding technique of retrieving source material before generating educational text.
+    confidence: high
+    match_scope: representative_technique
+    rationale: Explains the language-model mechanism behind generating explanations and learning material.
+    limitations: Does not establish curriculum quality, correctness, or learning effectiveness.
+    review_required: false
+  generator_lesson_planner:
+    name: Planthera
+    primary_lesson: llm
+    confidence: high
+    match_scope: representative_technique
+    rationale: LLMs are explicitly canonical; the lesson explains text generation relevant to drafting lesson plans.
+    limitations: Not evidence about a particular Friday Institute tool, and generated plans still need educator review.
+    review_required: false
+  generator_conversational:
+    name: Meowlogue
+    primary_lesson: llm
+    secondary_lesson: rag
+    secondary_rationale: Explains grounded answers using retrieved documents rather than another general chatbot introduction.
+    confidence: high
+    match_scope: representative_technique
+    rationale: Language-model prompting and generation explain the core conversational assistant capability.
+    limitations: Does not teach every tool-calling or safety mechanism listed in canon.
+    review_required: false
+  generator_classroom_chatbot:
+    name: Lecturlynx
+    primary_lesson: llm
+    confidence: high
+    match_scope: representative_technique
+    rationale: Directly explains the canonically listed language-model concept used to construct a prompt-based chatbot.
+    limitations: Does not verify classroom effectiveness, child safety, or a specific Friday Institute deployment.
+    review_required: false
+  generator_creative:
+    name: Articlaw
+    primary_lesson: diffusion
+    confidence: high
+    match_scope: representative_technique
+    rationale: Diffusion is a canonical representative method; the lesson explains image creation by progressive denoising.
+    limitations: Not a claim that all creative generation uses diffusion or that this teaches every multimodal technique.
+    review_required: false
+  generator_document:
+    name: Quillcat
+    primary_lesson: llm
+    secondary_lesson: rag
+    secondary_rationale: Adds source-grounding for factual document drafts, independently of language generation.
+    confidence: high
+    match_scope: representative_technique
+    rationale: Explains the canonical LLM mechanism behind producing document drafts from instructions.
+    limitations: Generated documents may still contain unsupported facts and require review.
+    review_required: false
+  generator_catalog:
+    name: Catalogar
+    primary_lesson: llm
+    secondary_lesson: provenance
+    secondary_rationale: Separately teaches tracking the sources and transformations of generated catalog metadata.
+    confidence: medium
+    match_scope: representative_technique
+    rationale: Explains a canonically listed model option for generating structured catalog content.
+    limitations: Does not teach library catalog standards or establish the NC State project's implementation and outputs.
+    review_required: true
+  retriever_base:
+    name: Searchound
+    primary_lesson: tfidf
+    confidence: high
+    match_scope: representative_technique
+    rationale: An accessible, explicit canonical technique for weighting informative words when finding relevant documents.
+    limitations: Not a BM25, neural reranking, or full search-engine tutorial.
+    review_required: false
+  retriever_research:
+    name: Labraquery
+    primary_lesson: similarity
+    secondary_lesson: vector
+    secondary_rationale: Adds storage and nearest-neighbor indexing for searching larger document collections.
+    confidence: high
+    match_scope: representative_technique
+    rationale: Explains lexical versus meaning-based matching for retrieving research relevant to a query.
+    limitations: Does not teach the entire canonical reranking pipeline or assess research quality.
+    review_required: false
+  retriever_semantic_search:
+    name: Semantiff
+    primary_lesson: similarity
+    confidence: high
+    match_scope: representative_technique
+    rationale: Embeddings and semantic similarity directly match this Signature's meaning-based search role.
+    limitations: Educational concept only, not evidence about Duke Libraries' specific model or deployment location.
+    review_required: false
+  retriever_records:
+    name: Dachshundex
+    primary_lesson: similarity
+    secondary_lesson: provenance
+    secondary_rationale: Adds lineage and source-quality considerations important when returning records.
+    confidence: high
+    match_scope: representative_technique
+    rationale: Compares lexical and semantic document matching, both useful for retrieving requested records.
+    limitations: Does not teach access control, metadata indexing, or establish that a returned record is current.
+    review_required: false
+  retriever_knowledge:
+    name: Cognicollie
+    primary_lesson: rag
+    confidence: high
+    match_scope: representative_technique
+    rationale: Canon explicitly includes a RAG retrieval pipeline; the lesson explains how relevant source chunks are located and supplied to an answer generator.
+    limitations: Cognicollie's role is retrieval, not a change to a Generator species; generation is downstream context.
+    review_required: false
+  retriever_product:
+    name: Bargainbeagle
+    primary_lesson: similarity
+    secondary_lesson: vector
+    secondary_rationale: Adds approximate-nearest-neighbor indexing, another explicitly canonical technique, beyond the similarity concept.
+    confidence: high
+    match_scope: representative_technique
+    rationale: Lexical and meaning-based matching explain finding products that fit a search query rather than recommending preferences.
+    limitations: Lesson examples are documents, not product catalogs; does not claim price or availability accuracy.
+    review_required: false

@@ -1,0 +1,351 @@
+{
+  "autoencoders": {
+    "article_title": "Autoencoders and the Generation Problem",
+    "final_url": "https://deeplearningworkbook.com/generative-ai/vaes/autoencoder-review",
+    "http_status": 200,
+    "main_text_sha256": "d9f0d2b3c60ed33fc56307a1a8dfe21869fb6a56c94f3aedc0bf5c7bb70567d4",
+    "toc_link_label": "1 . Autoencoders and the Generation Problem \u2192",
+    "toc_url": "https://deeplearningworkbook.com/generative-ai",
+    "url": "https://deeplearningworkbook.com/generative-ai/vaes/autoencoder-review",
+    "verification_terms_found": {
+      "decoder": true,
+      "encoder": true,
+      "reconstruction error": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:37.786183+00:00"
+  },
+  "detection": {
+    "article_title": "Introduction",
+    "final_url": "https://deeplearningworkbook.com/computer-vision/object-detection/beyond-classification",
+    "http_status": 200,
+    "main_text_sha256": "44b9e1323cc70d1abe1764242226416a91d608344fd71d5be667140fdde534c8",
+    "toc_link_label": "1 . Introduction \u2192",
+    "toc_url": "https://deeplearningworkbook.com/computer-vision",
+    "url": "https://deeplearningworkbook.com/computer-vision/object-detection/beyond-classification",
+    "verification_terms_found": {
+      "bounding box": true,
+      "classification": true,
+      "confidence score": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:39.186900+00:00"
+  },
+  "diffusion": {
+    "article_title": "The Diffusion Intuition",
+    "final_url": "https://deeplearningworkbook.com/generative-ai/diffusion-models/diffusion-intuition",
+    "http_status": 200,
+    "main_text_sha256": "4772b3c7a1221c7399fece160fdf670117cb45b613396cd7ba34e9e5099a5deb",
+    "toc_link_label": "1 . The Diffusion Intuition \u2192",
+    "toc_url": "https://deeplearningworkbook.com/generative-ai",
+    "url": "https://deeplearningworkbook.com/generative-ai/diffusion-models/diffusion-intuition",
+    "verification_terms_found": {
+      "denoising": true,
+      "image": true,
+      "noise": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:39.921642+00:00"
+  },
+  "generative": {
+    "article_title": "From Predicting to Creating",
+    "final_url": "https://deeplearningworkbook.com/generative-ai/intro-generative-ml/discriminative-vs-generative",
+    "http_status": 200,
+    "main_text_sha256": "090376e60048021ee6e039a68007dd83be8a965fa2b41d715f25124bb370ed7b",
+    "toc_link_label": "1 . From Predicting to Creating \u2192",
+    "toc_url": "https://deeplearningworkbook.com/generative-ai",
+    "url": "https://deeplearningworkbook.com/generative-ai/intro-generative-ml/discriminative-vs-generative",
+    "verification_terms_found": {
+      "discriminative": true,
+      "distribution": true,
+      "generative": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:40.598377+00:00"
+  },
+  "gradcam": {
+    "article_title": "Grad-CAM and Variants",
+    "final_url": "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/02-grad-cam-and-variants",
+    "http_status": 200,
+    "main_text_sha256": "f3259ad6bc68abe2ca22702ec408627ef237d9d18513b1d3fa8ee086fecc249f",
+    "toc_link_label": "2 . Grad-CAM and Variants \u2192",
+    "toc_url": "https://explainableaiworkbook.com/02-explainable-machine-learning",
+    "url": "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/02-grad-cam-and-variants",
+    "verification_terms_found": {
+      "class": true,
+      "convolutional": true,
+      "heatmap": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:42.102705+00:00"
+  },
+  "llm": {
+    "article_title": "What Is a Large Language Model?",
+    "final_url": "https://deeplearningworkbook.com/nlp/llms-beyond/what-is-an-llm",
+    "http_status": 200,
+    "main_text_sha256": "fd484f2adf4e9cd06e8bf518eb14c92ccdf0a608c6930501ae43a05d4d082b88",
+    "toc_link_label": "1 . What Is a Large Language Model? \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/llms-beyond/what-is-an-llm",
+    "verification_terms_found": {
+      "generate": true,
+      "language model": true,
+      "prompt": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:43.463610+00:00"
+  },
+  "logistic": {
+    "article_title": "Logistic Regression",
+    "final_url": "https://explainableaiworkbook.com/01-interpretable-machine-learning/01-regression/03-logistic-regression",
+    "http_status": 200,
+    "main_text_sha256": "8fc07ff08840649ed7437ecae5dafb56262003c2b8064fc97b2bdf5a7134ee5a",
+    "toc_link_label": "3 . Logistic Regression \u2192",
+    "toc_url": "https://explainableaiworkbook.com/01-interpretable-machine-learning",
+    "url": "https://explainableaiworkbook.com/01-interpretable-machine-learning/01-regression/03-logistic-regression",
+    "verification_terms_found": {
+      "probability": true,
+      "sigmoid": true,
+      "threshold": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:44.829179+00:00"
+  },
+  "lstm": {
+    "article_title": "Long Short-Term Memory (LSTM)",
+    "final_url": "https://deeplearningworkbook.com/nlp/rnns/lstm",
+    "http_status": 200,
+    "main_text_sha256": "1939400ba9a9bed881a47abb34336625eb51c26b35a9130ad314eedc74f54911",
+    "toc_link_label": "4 . Long Short-Term Memory (LSTM) \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/rnns/lstm",
+    "verification_terms_found": {
+      "cell state": true,
+      "gates": true,
+      "vanishing gradient": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:45.486216+00:00"
+  },
+  "outliers": {
+    "article_title": "Detecting Outliers",
+    "final_url": "https://datascienceworkbook.com/data-storytelling/preprocessing/detecting-outliers",
+    "http_status": 200,
+    "main_text_sha256": "c28a28882f6c6a672a6175969bdfcd96a6979b4302482c23aed1d4040a427456",
+    "toc_link_label": "4 . Detecting Outliers \u2192",
+    "toc_url": "https://datascienceworkbook.com/data-storytelling",
+    "url": "https://datascienceworkbook.com/data-storytelling/preprocessing/detecting-outliers",
+    "verification_terms_found": {
+      "IQR": true,
+      "Z-score": true,
+      "fraud": true,
+      "sensor": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:47.006997+00:00"
+  },
+  "provenance": {
+    "article_title": "Provenance",
+    "final_url": "https://explainableaiworkbook.com/06-transparent-ai/01-transparency/02-provenance",
+    "http_status": 200,
+    "main_text_sha256": "34a6eeb7be3249fe2bd5f667739e2a158d03203e48fe964fd7fcdb1041fc6574",
+    "toc_link_label": "2 . Provenance \u2192",
+    "toc_url": "https://explainableaiworkbook.com/06-transparent-ai",
+    "url": "https://explainableaiworkbook.com/06-transparent-ai/01-transparency/02-provenance",
+    "verification_terms_found": {
+      "lineage": true,
+      "quality": true,
+      "source": true,
+      "transformations": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:48.459561+00:00"
+  },
+  "rag": {
+    "article_title": "Retrieval-Augmented Generation (RAG)",
+    "final_url": "https://deeplearningworkbook.com/nlp/llms-beyond/rag",
+    "http_status": 200,
+    "main_text_sha256": "76b8220cbb729b25abb4580c781d87e2bff7b9e8cc652780191e6eaca012203a",
+    "toc_link_label": "3 . Retrieval-Augmented Generation (RAG) \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/llms-beyond/rag",
+    "verification_terms_found": {
+      "chunking": true,
+      "evaluation": true,
+      "prompt": true,
+      "retrieve": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:49.112272+00:00"
+  },
+  "recommender_intro": {
+    "article_title": "Why Recommendation Systems?",
+    "final_url": "https://deeplearningworkbook.com/recsys/intro-recommenders/why-recommenders",
+    "http_status": 200,
+    "main_text_sha256": "40795cafb8d555883e3ff890c1bc62dbd82d7d98b38b175aed5f7403f1325030",
+    "toc_link_label": "1 . Why Recommendation Systems? \u2192",
+    "toc_url": "https://deeplearningworkbook.com/recsys",
+    "url": "https://deeplearningworkbook.com/recsys/intro-recommenders/why-recommenders",
+    "verification_terms_found": {
+      "commerce": true,
+      "content": true,
+      "personalized information filters": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:50.429727+00:00"
+  },
+  "recommender_types": {
+    "article_title": "Types of Recommendation Systems",
+    "final_url": "https://deeplearningworkbook.com/recsys/intro-recommenders/types-of-recommenders",
+    "http_status": 200,
+    "main_text_sha256": "fa737e5ed925fdeeb9bffdfc7fb6ce3751427335df51313ed718da900060fcfc",
+    "toc_link_label": "3 . Types of Recommendation Systems \u2192",
+    "toc_url": "https://deeplearningworkbook.com/recsys",
+    "url": "https://deeplearningworkbook.com/recsys/intro-recommenders/types-of-recommenders",
+    "verification_terms_found": {
+      "Collaborative Filtering": true,
+      "Content-Based Filtering": true,
+      "Hybrid Systems": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:51.081963+00:00"
+  },
+  "rl": {
+    "article_title": "Introduction to Reinforcement Learning",
+    "final_url": "https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/01-introduction-to-reinforcement-learning",
+    "http_status": 200,
+    "main_text_sha256": "605e4ac75be471c56446ce98a48ffad90640b81a1353f821e88825292c1f1a02",
+    "toc_link_label": "1 . Introduction to Reinforcement Learning \u2192",
+    "toc_url": "https://explainableaiworkbook.com/05-ai-alignment",
+    "url": "https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/01-introduction-to-reinforcement-learning",
+    "verification_terms_found": {
+      "action": true,
+      "agent": true,
+      "policy": true,
+      "reward": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:52.400547+00:00"
+  },
+  "shap": {
+    "article_title": "SHAP",
+    "final_url": "https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/04-shap",
+    "http_status": 200,
+    "main_text_sha256": "e50bad9aa593fcf0caa077a1fecaaae06b6fd5182a08ab358bd8eb906663e715",
+    "toc_link_label": "4 . SHAP \u2192",
+    "toc_url": "https://explainableaiworkbook.com/02-explainable-machine-learning",
+    "url": "https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/04-shap",
+    "verification_terms_found": {
+      "Shapley": true,
+      "baseline": true,
+      "feature": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:53.122100+00:00"
+  },
+  "similarity": {
+    "article_title": "NLP Applications:Text Similarity",
+    "final_url": "https://deeplearningworkbook.com/nlp/nlp-implementation/text-similarity",
+    "http_status": 200,
+    "main_text_sha256": "18312e6f86804d42aeb61644c8ed86b2d6e1d7d0acf239df7594e4cbbf22c05c",
+    "toc_link_label": "6 . NLP Applications:Text Similarity \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/nlp-implementation/text-similarity",
+    "verification_terms_found": {
+      "Lexical similarity": true,
+      "Semantic similarity": true,
+      "cosine": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:53.767392+00:00"
+  },
+  "tfidf": {
+    "article_title": "TF-IDF and N-grams",
+    "final_url": "https://deeplearningworkbook.com/nlp/traditional-toolkit/tfidf-ngrams",
+    "http_status": 200,
+    "main_text_sha256": "d4f8d4ab82bb70c14177a3c9907ba95bb2e431b8bee4f43d2793ebe9c4a468d8",
+    "toc_link_label": "2 . TF-IDF and N-grams \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/traditional-toolkit/tfidf-ngrams",
+    "verification_terms_found": {
+      "Inverse Document Frequency": true,
+      "Term Frequency": true,
+      "search": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:54.427902+00:00"
+  },
+  "time_features": {
+    "article_title": "Feature Engineering for Time Series",
+    "final_url": "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features",
+    "http_status": 200,
+    "main_text_sha256": "c63b9f9b61f6b867ce8ceb3649a269d8aea640329bc6f3ae087d02a206c1fe26",
+    "toc_link_label": "4 . Feature Engineering for Time Series \u2192",
+    "toc_url": "https://datascienceworkbook.com/data-storytelling",
+    "url": "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features",
+    "verification_terms_found": {
+      "Lagged features": true,
+      "Rolling statistics": true,
+      "Seasonal features": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:55.163318+00:00"
+  },
+  "time_series": {
+    "article_title": "Time Series",
+    "final_url": "https://datascienceworkbook.com/data-storytelling/information-representation/historical-time-series",
+    "http_status": 200,
+    "main_text_sha256": "eded87d72b9cef9a38f6a6ebe6b69841634b71c706f9693ab7027cf4e232aae4",
+    "toc_link_label": "4 . Time Series \u2192",
+    "toc_url": "https://datascienceworkbook.com/data-storytelling",
+    "url": "https://datascienceworkbook.com/data-storytelling/information-representation/historical-time-series",
+    "verification_terms_found": {
+      "sample rate": true,
+      "sequential": true,
+      "time": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:55.841261+00:00"
+  },
+  "topics": {
+    "article_title": "NLP Applications:Topic Modeling",
+    "final_url": "https://deeplearningworkbook.com/nlp/nlp-implementation/topic-modeling",
+    "http_status": 200,
+    "main_text_sha256": "3ede230bb95f8d459662fe7f87fb4bb9cb9fc0a58cc71526502fd61d71b9e09d",
+    "toc_link_label": "8 . NLP Applications:Topic Modeling \u2192",
+    "toc_url": "https://deeplearningworkbook.com/nlp",
+    "url": "https://deeplearningworkbook.com/nlp/nlp-implementation/topic-modeling",
+    "verification_terms_found": {
+      "Latent Dirichlet Allocation": true,
+      "keywords": true,
+      "topics": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:56.490476+00:00"
+  },
+  "unet": {
+    "article_title": "U-Net",
+    "final_url": "https://deeplearningworkbook.com/computer-vision/segmentation/unet",
+    "http_status": 200,
+    "main_text_sha256": "9ddce77acfd7dbc90a4700fc97b43673e85e4e0faa8c9b82283b3762ed9d97f8",
+    "toc_link_label": "2 . U-Net \u2192",
+    "toc_url": "https://deeplearningworkbook.com/computer-vision",
+    "url": "https://deeplearningworkbook.com/computer-vision/segmentation/unet",
+    "verification_terms_found": {
+      "biomedical": true,
+      "segmentation": true,
+      "skip connections": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:57.157988+00:00"
+  },
+  "vector": {
+    "article_title": "Vector Databases and RAG",
+    "final_url": "https://datascienceworkbook.com/engineering/data-storage/vector-databases-and-rag",
+    "http_status": 200,
+    "main_text_sha256": "f12cd91d50de4cc2ce1c603829b7d948882b23622a10cffa3ea02a3a2bc37d66",
+    "toc_link_label": "5 . Vector Databases and RAG \u2192",
+    "toc_url": "https://datascienceworkbook.com/engineering",
+    "url": "https://datascienceworkbook.com/engineering/data-storage/vector-databases-and-rag",
+    "verification_terms_found": {
+      "approximate nearest-neighbor": true,
+      "cosine": true,
+      "embedding": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:58.673778+00:00"
+  },
+  "yolo": {
+    "article_title": "YOLO and Faster R-CNN",
+    "final_url": "https://deeplearningworkbook.com/computer-vision/object-detection/yolo-rcnn",
+    "http_status": 200,
+    "main_text_sha256": "a538e3f3154660264b2463c35f1bf2e3b1d939af1bd602133efb98da2b343c9d",
+    "toc_link_label": "3 . YOLO and Faster R-CNN \u2192",
+    "toc_url": "https://deeplearningworkbook.com/computer-vision",
+    "url": "https://deeplearningworkbook.com/computer-vision/object-detection/yolo-rcnn",
+    "verification_terms_found": {
+      "Faster R-CNN": true,
+      "YOLO": true,
+      "region": true
+    },
+    "verified_at_utc": "2026-10-18T16:52:59.355363+00:00"
+  }
+}

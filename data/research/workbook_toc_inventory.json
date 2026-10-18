@@ -1,0 +1,1652 @@
+{
+  "https://datascienceworkbook.com/data-storytelling": {
+    "headings": [
+      [
+        "h2",
+        "Data Storytelling"
+      ],
+      [
+        "h1",
+        "Data Storytelling"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://datascienceworkbook.com/data-storytelling/data-risks-bias-ethics/mitigating-bias",
+        "4 . Mitigating Data Bias \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/data-risks-bias-ethics/privacy-and-regulations",
+        "7 . Privacy and Regulations \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/data-risks-bias-ethics/responsible-ai-framework",
+        "2 . Frameworks for Responsible AI \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/data-risks-bias-ethics/six-sources-of-bias",
+        "3 . Six Sources of Bias \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/data-risks-bias-ethics/transparency-interpretability-explainability",
+        "6 . Transparency, Interpretability, Explainability \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/data-risks-bias-ethics/why-this-chapter-matters",
+        "1 . Why This Chapter Matters \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/exploratory-data-analysis/data-quality",
+        "3 . Data Quality \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/exploratory-data-analysis/descriptive-statistics",
+        "2 . Descriptive Statistics \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/exploratory-data-analysis/opening-questions",
+        "1 . The Questions That Open a Dataset \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/exploratory-data-analysis/variable-relationships",
+        "4 . Variable Relationships \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/exploratory-data-analysis/visualization-in-eda",
+        "5 . Visualization in EDA \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/exploratory-data-analysis/worked-example-iris",
+        "6 . Worked Example: The Iris Dataset \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/feature-engineering/dimensionality-reduction",
+        "7 . Dimensionality Reduction \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/feature-engineering/feature-selection",
+        "8 . Feature Selection \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/feature-engineering/image-features",
+        "5 . Feature Engineering for Images \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/feature-engineering/tabular-features",
+        "3 . Feature Engineering for Tabular Data \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/feature-engineering/text-features",
+        "6 . Feature Engineering for Text \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features",
+        "4 . Feature Engineering for Time Series \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/feature-engineering/what-feature-engineering-is",
+        "1 . Feature Engineering \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/historical-time-series",
+        "4 . Time Series \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/images-and-video",
+        "6 . Images and Video \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/representation-is-compression",
+        "9 . Representation Is Compression \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/sensor-data",
+        "5 . Sensor Data \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/tabular-data-and-encoding",
+        "3 . Tabular Data \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/text",
+        "7 . Text \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/user-behavior-and-combined-types",
+        "8 . User Behavior and Combined Data Types \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/why-computers-speak-in-numbers",
+        "1 . Why Computers Speak in Numbers \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/information-representation/why-converting-ideas-is-hard",
+        "2 . Why Converting Ideas Into Numbers Is Hard \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preparing-data/cross-validation",
+        "2 . Cross-Validation \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preparing-data/data-leakage",
+        "3 . Data Leakage: The Silent Killer \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preparing-data/versioning-and-reproducibility",
+        "4 . Versioning and Reproducibility \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preparing-data/why-three-splits",
+        "1 . Why Three Splits, Not Two \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preprocessing/data-quality-assessment",
+        "6 . The Data Quality Assessment \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preprocessing/detecting-outliers",
+        "4 . Detecting Outliers \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preprocessing/handling-outliers-and-transforms",
+        "5 . Handling Outliers and Transforming Data \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preprocessing/missing-features",
+        "1 . Missing Features: Two Cautionary Tales \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preprocessing/missing-values",
+        "2 . Missing Values: MCAR, MAR, and MNAR \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/preprocessing/missingness-as-feature",
+        "3 . When Missingness Is a Feature \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/apis",
+        "4 . APIs \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/data-organization",
+        "9 . Data Organization \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/hardware-and-sensors",
+        "5 . Hardware and Sensors \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/irb",
+        "7 . IRB \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/labeling-data",
+        "6 . Labeling Data \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/sampling-bias",
+        "8 . Sampling Bias \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/surveys",
+        "1 . Surveys \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/user-data-and-apps",
+        "3 . User Data and User-Generated Apps \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/sourcing-data/web-scraping",
+        "2 . Web Scraping \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/telling-stories/box-plot-lesson",
+        "1 . The Box Plot Lesson \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/telling-stories/plot-to-narrative",
+        "4 . From Plot to Narrative \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/data-storytelling/telling-stories/visualization-toolkit",
+        "2 . The Visualization Toolkit \u2192"
+      ]
+    ]
+  },
+  "https://datascienceworkbook.com/engineering": {
+    "headings": [
+      [
+        "h2",
+        "Data/ML Engineering"
+      ],
+      [
+        "h1",
+        "Data/ML Engineering"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://datascienceworkbook.com/engineering/data-pipelines/big-data-hadoop-spark-hive",
+        "4 . Big Data: Hadoop, Spark, and Hive \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-pipelines/cloud-warehouses",
+        "5 . The Cloud Warehouses \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-pipelines/designing-a-pipeline",
+        "6 . Designing a Pipeline \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-pipelines/etl-the-central-abstraction",
+        "2 . ETL: The Central Abstraction \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-pipelines/orchestration-and-dags",
+        "3 . Orchestration and DAGs \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-pipelines/what-is-data-engineering",
+        "1 . What is Data Engineering? \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-storage/nosql-and-when-relational-stops-fitting",
+        "4 . NoSQL: When Relational Stops Fitting \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-storage/relational-databases-and-sql",
+        "3 . Relational Databases and SQL \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-storage/vector-databases-and-rag",
+        "5 . Vector Databases and RAG \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-storage/warehouses-lakes-and-how-to-choose",
+        "6 . Warehouses, Lakes, and How to Choose \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-storage/what-kind-of-data",
+        "2 . What Kind of Data? \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/data-storage/why-storage-is-the-whole-story",
+        "1 . Why Storage Is the Whole Story \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/ml-pipelines/cicd-and-versioning",
+        "3 . CI/CD and Versioning Everything \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/ml-pipelines/docker-and-deployment",
+        "2 . Docker and Deployment Options \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/ml-pipelines/from-notebook-to-the-world",
+        "1 . From Notebook to the World \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/ml-pipelines/monitoring-and-drift",
+        "4 . Monitoring and Data Drift \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/ml-pipelines/prototypes-demos-and-your-portfolio",
+        "6 . Prototypes, Demos, and Your Portfolio \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/engineering/ml-pipelines/scalability-cost-and-security",
+        "5 . Scalability, Cost, and Security \u2192"
+      ]
+    ]
+  },
+  "https://datascienceworkbook.com/statistics": {
+    "headings": [
+      [
+        "h2",
+        "Statistics"
+      ],
+      [
+        "h1",
+        "Statistics"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://datascienceworkbook.com/statistics/anova/beyond-two-groups",
+        "1 . Beyond Two Groups \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/anova/partitioning-variability",
+        "2 . The Logic: Partitioning Variability \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/anova/post-hoc-tests",
+        "3 . Post Hoc Tests \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/bayesian-statistics/a-different-way-to-think-about-belief",
+        "1 . A Different Way to Think About Belief \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/bayesian-statistics/bayes-theorem",
+        "2 . Bayes' Theorem \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/bayesian-statistics/when-to-use-bayesian",
+        "3 . When to Use Bayesian Methods \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/class-balancing/class-balancing-decision-framework",
+        "4 . A Decision Framework \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/class-balancing/oversampling",
+        "2 . Oversampling: Random and SMOTE \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/class-balancing/pizza-and-hamburgers",
+        "1 . A Story About Pizza and Hamburgers \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/class-balancing/undersampling",
+        "3 . Undersampling: Random and Tomek Links \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/hypothesis-testing/multiple-comparisons",
+        "6 . The Multiple Comparisons Problem \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/hypothesis-testing/p-hacking",
+        "5 . P-Hacking and Why \u03b1 Comes First \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/hypothesis-testing/p-values",
+        "4 . P-Values, Carefully \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/hypothesis-testing/six-steps-of-hypothesis-testing",
+        "2 . Overview of Hypothesis Testing \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/hypothesis-testing/type-1-and-type-2-errors",
+        "3 . Type 1 and Type 2 Errors \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/model-evaluation/evaluation-checklist",
+        "5 . The Evaluation Checklist \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/model-evaluation/goodness-of-fit",
+        "2 . Goodness-of-Fit: R\u00b2, AIC, and BIC \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/model-evaluation/how-good-is-my-model",
+        "1 . How Good Is My Model, Actually? \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/model-evaluation/residual-analysis",
+        "3 . Residual Analysis and Confidence Intervals \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/model-evaluation/simpsons-paradox",
+        "4 . Simpson's Paradox \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/nonparametric-tests/chi-square",
+        "4 . The Chi-Square Test \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/nonparametric-tests/mann-whitney",
+        "3 . Mann-Whitney U Test \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/nonparametric-tests/test-decision-tree",
+        "5 . The Test Decision Tree \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/nonparametric-tests/when-assumptions-wont-hold",
+        "1 . When the Assumptions Won't Hold \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/nonparametric-tests/wilcoxon-signed-rank",
+        "2 . Wilcoxon Signed-Rank Test \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/parametric-tests/checking-assumptions",
+        "2 . Checking the Assumptions \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/parametric-tests/independent-samples-t",
+        "5 . Independent Samples and Welch's t-Test \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/parametric-tests/one-sample-t",
+        "4 . The One-Sample t-Test \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/parametric-tests/paired-t-test",
+        "6 . The Paired Samples t-Test \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/parametric-tests/the-most-important-rule",
+        "1 . The Most Important Rule \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/parametric-tests/z-scores",
+        "3 . Z-Scores \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/power-analysis/effect-size",
+        "3 . Determining Effect Size \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/power-analysis/power-analysis-in-python",
+        "4 . Power Analysis in Python \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/power-analysis/statistical-power",
+        "2 . Statistical Power \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/power-analysis/the-practical-question",
+        "1 . The Practical Question \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/practical-statistics/descriptive-statistics-foundations",
+        "3 . Descriptive Statistics \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/practical-statistics/descriptive-vs-inferential",
+        "4 . Descriptive vs. Inferential Statistics \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/practical-statistics/how-much-data",
+        "5 . The \"How Much Data\" Question \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/practical-statistics/population-vs-sample",
+        "2 . Population vs. Sample \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/practical-statistics/what-statistics-buys-you",
+        "1 . What Statistics Buys You \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/probability-distributions/continuous-distributions",
+        "3 . Continuous Distributions \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/probability-distributions/discrete-distributions",
+        "2 . Discrete Distributions \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/probability-distributions/distributions-across-ml",
+        "5 . Distributions Across the ML Stack \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/probability-distributions/shape-of-uncertainty",
+        "1 . The Shape of Uncertainty \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/probability-distributions/student-t-distribution",
+        "4 . The Student's t-Distribution \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/regression/interpreting-regression-coefficients",
+        "3 . Interpreting Regression Coefficients \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/regression/multiple-regression",
+        "4 . Multiple Regression \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/regression/residuals-and-ols",
+        "2 . Residuals and Ordinary Least Squares \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/regression/the-setup",
+        "1 . The Setup \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/sampling/non-probability-sampling",
+        "3 . Non-Probability Sampling \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/sampling/probability-sampling",
+        "2 . Probability Sampling \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/sampling/stratified-sampling-for-imbalanced-ml",
+        "4 . Stratified Sampling for Imbalanced ML \u2192"
+      ],
+      [
+        "https://datascienceworkbook.com/statistics/sampling/you-will-always-be-sampling",
+        "1 . You Will Always Be Sampling \u2192"
+      ]
+    ]
+  },
+  "https://deeplearningworkbook.com/computer-vision": {
+    "headings": [
+      [
+        "h2",
+        "Computer Vision"
+      ],
+      [
+        "h1",
+        "Computer Vision"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://deeplearningworkbook.com/computer-vision/architectures/inception-densenet",
+        "3 . Inception, DenseNet, and the Efficiency Era \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/architectures/lenet-alexnet",
+        "1 . LeNet to AlexNet: From Proof of Concept to Revolution \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/architectures/vgg-resnet",
+        "2 . VGGNet, Accuracy Saturation, and the ResNet Breakthrough \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/cnns/cnn-architecture",
+        "5 . Convolutional Neural Network \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/cnns/conv-layers",
+        "3 . Convolutional Layers \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/cnns/convolution",
+        "2 . Convolution \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/cnns/peek-inside-cnn",
+        "6 . A Peek Inside a CNN \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/cnns/pooling",
+        "4 . Pooling Layers \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/cnns/problem-with-mlp",
+        "1 . The Problem \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/evaluation/beyond-accuracy",
+        "1 . Evaluating Image Classification \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/evaluation/error-analysis",
+        "4 . Error Analysis and Computational Efficiency \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/evaluation/map-detection",
+        "2 . Evaluating Object Detection \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/evaluation/miou-segmentation",
+        "3 . Evaluating Image Segmentation \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/frontier/diffusion-models",
+        "3 . Diffusion Models \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/frontier/grounding-dino-sam",
+        "2 . Grounding DINO and SAM \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/frontier/vision-transformers",
+        "1 . Vision Transformers \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/object-detection/anchors-nms",
+        "2 . Anchor Boxes and Non-Maximum Suppression \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/object-detection/beyond-classification",
+        "1 . Introduction \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/object-detection/yolo-rcnn",
+        "3 . YOLO and Faster R-CNN \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/segmentation/beyond-unet",
+        "3 . Other Segmentation Architectures \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/segmentation/every-pixel",
+        "1 . Semantic v. Instance Segmentation \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/segmentation/unet",
+        "2 . U-Net \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/traditional-cv/hand-crafted-features",
+        "2 . Feature Engineering \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/traditional-cv/models-and-limits",
+        "3 . Traditional Models for Computer Vision \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/transfer-learning/data-augmentation",
+        "3 . Data Augmentation \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/transfer-learning/features-are-transferable",
+        "1 . CNNs as Feature Extractors \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/transfer-learning/how-transfer-learning-works",
+        "2 . Transfer Learning \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/what-is-cv/application-landscape",
+        "2 . What We Can Do With Computer Vision \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/what-is-cv/images-as-numbers",
+        "3 . How Images Become Numbers \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/what-is-cv/seeing-is-hard",
+        "1 . Seeing Is (Much) Harder Than It Looks \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/computer-vision/what-is-cv/why-cv-is-hard",
+        "4 . Why Computer Vision Is Hard \u2192"
+      ]
+    ]
+  },
+  "https://deeplearningworkbook.com/generative-ai": {
+    "headings": [
+      [
+        "h2",
+        "Generative AI"
+      ],
+      [
+        "h1",
+        "Generative AI"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://deeplearningworkbook.com/generative-ai/challenges/adversarial",
+        "5 . Adversarial Attacks \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/challenges/bias",
+        "1 . Training Data Bias \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/challenges/data-drift",
+        "4 . Data Drift and Model Drift \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/challenges/mode-collapse",
+        "2 . GAN Mode Collapse \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/challenges/vae-overfitting",
+        "3 . VAE Overfitting \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/diffusion-models/diffusion-intuition",
+        "1 . The Diffusion Intuition \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/diffusion-models/latent-stable-diffusion",
+        "2 . Latent Stable Diffusion Architecture \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/evaluation-deployment/choosing-architecture",
+        "1 . Choosing the Right Architecture \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/evaluation-deployment/evaluation-metrics",
+        "2 . Evaluating Generative Models \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/gans/conditional-gans",
+        "3 . Conditional GANs and Applications \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/gans/gan-setup",
+        "1 . The GAN Framework \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/gans/gan-training",
+        "2 . Adversarial Training and the Min-Max Objective \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/intro-generative-ml/discriminative-vs-generative",
+        "1 . From Predicting to Creating \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/transformers-generative/transformers-as-generators",
+        "1 . Transformers as Generative Models \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/vaes/autoencoder-review",
+        "1 . Autoencoders and the Generation Problem \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/generative-ai/vaes/vae-architecture",
+        "2 . Variational Autoencoders \u2192"
+      ]
+    ]
+  },
+  "https://deeplearningworkbook.com/neural-networks": {
+    "headings": [
+      [
+        "h2",
+        "Introduction to Neural Networks"
+      ],
+      [
+        "h1",
+        "Introduction to Neural Networks"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://deeplearningworkbook.com/neural-networks/foundations/activation-functions",
+        "6 . Activation Functions \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/foundations/history",
+        "1 . A Story 90 Years in the Making \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/foundations/mlp",
+        "4 . The Multi-Layer Perceptron \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/foundations/perceptron",
+        "3 . The Perceptron and Its Limits \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/foundations/the-neuron",
+        "2 . The Artificial Neuron \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/foundations/weights-and-biases",
+        "5 . Weights and Biases \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/foundations/what-is-deep-learning",
+        "7 . Deep Learning \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/training/backpropagation",
+        "4 . Backpropagation \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/training/gradient-descent",
+        "2 . Gradient Descent \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/training/learning-rate",
+        "3 . The Learning Rate \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/training/loss-functions",
+        "1 . Loss Functions \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/training/optimizers",
+        "5 . Optimization Algorithms \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/neural-networks/training/training-challenges",
+        "6 . Training Challenges and How to Overcome Them \u2192"
+      ]
+    ]
+  },
+  "https://deeplearningworkbook.com/nlp": {
+    "headings": [
+      [
+        "h2",
+        "Natural Language Processing"
+      ],
+      [
+        "h1",
+        "Natural Language Processing"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://deeplearningworkbook.com/nlp/attention-transformer/problem-static-embeddings",
+        "1 . The Problem We Haven't Solved \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/attention-transformer/qkv-multihead",
+        "3 . Queries, Keys, Values, and Multi-Head Attention \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/attention-transformer/self-attention",
+        "2 . Self-Attention as Reweighting \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/attention-transformer/transformer-architecture",
+        "4 . The Transformer Architecture \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/attention-transformer/transformer-types-inference",
+        "5 . Transformers in Practice \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/llms-beyond/curse-of-evaluation",
+        "4 . The Curse of Evaluation \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/llms-beyond/dimensionality-reduction",
+        "1 . Visualizing Embedding Spaces \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/llms-beyond/rag",
+        "3 . Retrieval-Augmented Generation (RAG) \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/llms-beyond/similarity-metrics",
+        "3 . Similarity Metrics and the Limits of Cosine \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/llms-beyond/what-is-an-llm",
+        "1 . What Is a Large Language Model? \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/multimodal/clip",
+        "3 . CLIP: Connecting Text and Images \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/multimodal/mixture-of-experts",
+        "4 . Mixture of Experts \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/multimodal/multimodal-intro",
+        "1 . Beyond Language \u2014 Multimodal Models \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/multimodal/vision-transformer",
+        "2 . The Vision Transformer (ViT) \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/nlp-implementation/data-augmentation",
+        "2 . Text Data Augmentation \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/nlp-implementation/data-splitting",
+        "4 . Data Splitting Best Practices \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/nlp-implementation/imbalanced-data",
+        "3 . Handling Class Imbalance \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/nlp-implementation/summarization",
+        "7 . NLP Applications: Text Summarization \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/nlp-implementation/text-similarity",
+        "6 . NLP Applications:Text Similarity \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/nlp-implementation/topic-modeling",
+        "8 . NLP Applications:Topic Modeling \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/nlp-implementation/transfer-learning",
+        "5 . Transfer Learning and Fine-Tuning Strategies \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/nlp-implementation/variable-length-sequences",
+        "1 . Handling Variable-Length Sequences \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/rnns/feed-forward-problem",
+        "1 . Feed-Forward Networks Are Forgetful \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/rnns/gru",
+        "5 . Gated Recurrent Unit (GRU) \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/rnns/lstm",
+        "4 . Long Short-Term Memory (LSTM) \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/rnns/rnn-architecture",
+        "2 . Recurrent Neural Network (RNN) \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/rnns/rnn-limitations",
+        "6 . Limitations and Opportunities \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/rnns/vanishing-gradient",
+        "3 . Backpropagation Through Time and the Vanishing Gradient \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/text-preprocessing/preprocessing-pipeline",
+        "1 . The Preprocessing Pipeline \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/text-preprocessing/stemming-lemmatization",
+        "4 . Stemming and Lemmatization \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/text-preprocessing/stop-words",
+        "3 . Stop Words \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/text-preprocessing/tokenization",
+        "2 . Tokenization \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/traditional-toolkit/bag-of-words",
+        "1 . Bag of Words \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/traditional-toolkit/hidden-markov-models",
+        "3 . Hidden Markov Models \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/traditional-toolkit/tfidf-ngrams",
+        "2 . TF-IDF and N-grams \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/traditional-toolkit/when-to-use-traditional",
+        "4 . When to Still Use Traditional ML for NLP \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/welcome-to-nlp/roadmap",
+        "3 . The Roadmap \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/welcome-to-nlp/why-text-is-harder",
+        "2 . Why Text Is Harder Than It Looks \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/word-embeddings/the-catch",
+        "4 . The Limitation of Word Embeddings \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/word-embeddings/vector-arithmetic",
+        "3 . The Most Famous Equation in NLP \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/word-embeddings/why-better-representation",
+        "1 . Why We Need a Better Representation \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/nlp/word-embeddings/word2vec",
+        "2 . Word2Vec \u2192"
+      ]
+    ]
+  },
+  "https://deeplearningworkbook.com/recsys": {
+    "headings": [
+      [
+        "h2",
+        "Recommendation Systems"
+      ],
+      [
+        "h1",
+        "Recommendation Systems"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://deeplearningworkbook.com/recsys/implementation/data",
+        "1 . Data Challenges \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/implementation/deployment",
+        "3 . Deployment \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/implementation/evaluation",
+        "2 . Evaluation \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/implementation/netflix-case-study",
+        "4 . Case Study: Netflix \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/intro-recommenders/the-data",
+        "2 . The Data \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/intro-recommenders/traditional-nearest-neighbors",
+        "4 . Review of Traditional Approaches: Nearest Neighbors \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/intro-recommenders/types-of-recommenders",
+        "3 . Types of Recommendation Systems \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/intro-recommenders/why-recommenders",
+        "1 . Why Recommendation Systems? \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/nn-recommenders/autoencoders",
+        "4 . Autoencoders for Collaborative Filtering \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/nn-recommenders/gnns",
+        "5 . Graph Neural Networks \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/nn-recommenders/ncf",
+        "3 . Neural Collaborative Filtering \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/nn-recommenders/pmf",
+        "2 . Probabilistic Matrix Factorization \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/nn-recommenders/sequences-transformers",
+        "6 . Sequential Recommendations and Transformers \u2192"
+      ],
+      [
+        "https://deeplearningworkbook.com/recsys/nn-recommenders/why-dl",
+        "1 . Why Deep Learning? \u2192"
+      ]
+    ]
+  },
+  "https://explainableaiworkbook.com/00-why-explainable-ai": {
+    "headings": [
+      [
+        "h2",
+        "Why Explainable AI?"
+      ],
+      [
+        "h1",
+        "Why Explainable AI?"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/01-why-is-this-book-called-explainable-ai/01-whats-a-black-box",
+        "1 . What's a \"Black Box\"? \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/01-why-is-this-book-called-explainable-ai/02-interpretability-explainability-transparency",
+        "2 . Transparency, Interpretability, Explainability \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/01-why-is-this-book-called-explainable-ai/03-note-on-book",
+        "3 . A Note on This Book's Name \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/02-why-do-we-need-explainable-ai/01-bias-and-fairness",
+        "1 . Bias and Fairness \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/02-why-do-we-need-explainable-ai/02-trust-and-adoption",
+        "2 . Trust and Adoption \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/02-why-do-we-need-explainable-ai/03-accountability",
+        "3 . Accountability \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/02-why-do-we-need-explainable-ai/04-safety-and-reliability",
+        "4 . Safety and Reliability \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/02-why-do-we-need-explainable-ai/05-debugging-and-model-improvement",
+        "5 . Debugging and Model Improvement \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/00-why-explainable-ai/02-why-do-we-need-explainable-ai/07-human-ai-collaboration",
+        "7 . Human-AI Collaboration \u2192"
+      ]
+    ]
+  },
+  "https://explainableaiworkbook.com/01-interpretable-machine-learning": {
+    "headings": [
+      [
+        "h2",
+        "Interpretable Machine Learning"
+      ],
+      [
+        "h1",
+        "Interpretable Machine Learning"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/01-regression/01-linear-regression",
+        "1 . Linear Regression \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/01-regression/02-sparse-models",
+        "2 . Sparse Models \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/01-regression/03-logistic-regression",
+        "3 . Logistic Regression \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/01-regression/04-generalized-models-glms-gams",
+        "4 . Generalized Models: GLMs and GAMs \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/02-trees-and-rules/01-decision-trees",
+        "1 . Decision Trees \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/02-trees-and-rules/02-sparse-decision-trees-gosdt",
+        "2 . Sparse Decision Trees (GOSDT) \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/02-trees-and-rules/03-decision-rules",
+        "3 . Decision Rules \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/02-trees-and-rules/04-rulefit",
+        "4 . RuleFit \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/03-neural-networks/01-prototype-based-nn-protopnet",
+        "1 . Prototype-Based Neural Networks (ProtoPNet) \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/03-neural-networks/02-monotonic-nn-mononet",
+        "2 . Monotonic Neural Networks (MonoNet) \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/01-interpretable-machine-learning/03-neural-networks/03-kolmogorov-arnold-networks-kan",
+        "3 . Kolmogorov-Arnold Networks (KAN) \u2192"
+      ]
+    ]
+  },
+  "https://explainableaiworkbook.com/02-explainable-machine-learning": {
+    "headings": [
+      [
+        "h2",
+        "Explainable Machine Learning"
+      ],
+      [
+        "h1",
+        "Explainable Machine Learning"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/01-lime",
+        "1 . LIME \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/02-anchors",
+        "2 . Anchors \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/03-shapley-values",
+        "3 . Shapley Values \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/04-shap",
+        "4 . SHAP \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/05-ice-plots",
+        "5 . ICE Plots \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/02-global-explanations/01-feature-decomposition",
+        "1 . Feature Decomposition \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/02-global-explanations/02-feature-interaction",
+        "2 . Feature Interaction \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/02-global-explanations/03-permutation-feature-importance",
+        "3 . Permutation Feature Importance \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/02-global-explanations/04-partial-dependence-plots",
+        "4 . Partial Dependence Plots \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/02-global-explanations/05-accumulated-local-effects-plots",
+        "5 . Accumulated Local Effects Plots \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/03-example-based-explanations/01-prototype-based-explanations",
+        "1 . Prototype-Based Explanations \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/03-example-based-explanations/02-counterfactual-explanations",
+        "2 . Counterfactual Explanations \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/03-example-based-explanations/03-influential-instances",
+        "3 . Influential Instances \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/01-saliency-maps",
+        "1 . Saliency Maps \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/02-grad-cam-and-variants",
+        "2 . Grad-CAM and Variants \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/03-integrated-gradients",
+        "3 . Integrated Gradients \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/04-layer-wise-relevance-propagation",
+        "4 . Layer-Wise Relevance Propagation \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/05-occlusion-methods",
+        "5 . Occlusion Methods \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/05-concept-based-explanations/01-concept-activation-vectors-tcav",
+        "1 . Concept Activation Vectors (TCAV) \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/05-concept-based-explanations/02-concept-bottleneck-models",
+        "2 . Concept Bottleneck Models \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/05-concept-based-explanations/03-network-dissection",
+        "3 . Network Dissection \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/06-representation-based-explanations/01-feature-visualization",
+        "1 . Feature Visualization \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/07-attention-based-explanations/01-visualizing-attention",
+        "1 . Visualizing Attention \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/07-attention-based-explanations/02-attention-as-explanation-debate",
+        "2 . The Attention-as-Explanation Debate \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/07-attention-based-explanations/03-attention-vs-attribution",
+        "3 . Attention vs. Attribution \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/01-introduction-and-challenges",
+        "1 . Introduction and Challenges \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/02-xai-in-llm-fine-tuning",
+        "2 . XAI in LLM Fine-Tuning \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/03-xai-in-llm-prompting",
+        "3 . XAI in LLM Prompting \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/04-xai-in-llm-knowledge-augmentation-rag",
+        "4 . XAI in LLM Knowledge Augmentation (RAG) \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/08-large-language-model-explanations/05-xai-in-agentic-ai-systems",
+        "5 . XAI in Agentic AI Systems \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/09-evaluating-explanations/01-fidelity",
+        "1 . Fidelity \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/09-evaluating-explanations/02-faithfulness",
+        "2 . Faithfulness \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/09-evaluating-explanations/03-completeness",
+        "3 . Completeness \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/09-evaluating-explanations/04-stability-robustness",
+        "4 . Stability and Robustness \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/02-explainable-machine-learning/09-evaluating-explanations/05-human-usefulness",
+        "5 . Human Usefulness \u2192"
+      ]
+    ]
+  },
+  "https://explainableaiworkbook.com/03-mechanistic-interpretability": {
+    "headings": [
+      [
+        "h2",
+        "Mechanistic Interpretability"
+      ],
+      [
+        "h1",
+        "Mechanistic Interpretability"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/01-foundations-of-mechanistic-interpretability/01-overview-of-mechanistic-interpretability",
+        "1 . Overview \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/01-foundations-of-mechanistic-interpretability/02-core-hypotheses-of-mechanistic-interpretability",
+        "2 . Core Hypotheses \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/01-foundations-of-mechanistic-interpretability/03-methods",
+        "3 . Methods \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/02-features/01-overview-of-features",
+        "1 . Overview \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/02-features/02-mechanisms",
+        "2 . Mechanisms \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/02-features/03-evidence",
+        "3 . Evidence \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/03-circuits/01-overview-of-circuits",
+        "1 . Overview \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/03-circuits/02-mechanisms",
+        "2 . Mechanisms \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/03-circuits/03-evidence",
+        "3 . Evidence \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/04-the-representation-problem/01-neurons-and-polysemanticity",
+        "1 . Neurons and Polysemanticity \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/04-the-representation-problem/02-superposition-and-interference",
+        "2 . Superposition and Interference \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/05-representation-learning/01-sparse-representations",
+        "1 . Sparse Representations \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/05-representation-learning/02-feature-discovery",
+        "2 . Feature Discovery \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/06-mechanistic-interventions/01-feature-clamping",
+        "1 . Feature Clamping \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/06-mechanistic-interventions/02-feature-steering",
+        "2 . Feature Steering \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/07-scaling-mechanistic-interpretability/01-mechanistic-interpretability-in-llms",
+        "1 . Mechanistic Interpretability in LLMs \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/03-mechanistic-interpretability/07-scaling-mechanistic-interpretability/02-scaling-sparse-autoencoders",
+        "2 . Scaling Sparse Autoencoders and Challenges \u2192"
+      ]
+    ]
+  },
+  "https://explainableaiworkbook.com/04-adversarial-ai": {
+    "headings": [
+      [
+        "h2",
+        "Adversarial AI"
+      ],
+      [
+        "h1",
+        "Adversarial AI"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/01-introduction-to-hacking/01-can-you-fool-the-model",
+        "1 . Can You Fool the Model? \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/01-introduction-to-hacking/02-hacking-an-ai-system",
+        "2 . Hacking an AI System \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/01-introduction-to-hacking/03-threat-models",
+        "3 . Threat Models \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/01-introduction-to-hacking/04-attack-surfaces",
+        "4 . Attack Surfaces Across an AI System \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/02-adversarial-attacks/01-map-of-adversarial-attacks",
+        "1 . A Map of Adversarial Attacks \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/02-adversarial-attacks/02-white-box-and-black-box-attacks",
+        "2 . White-Box and Black-Box Attacks \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/02-adversarial-attacks/03-evasion-and-fgsm",
+        "3 . Evasion and the Fast Gradient Sign Method \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/02-adversarial-attacks/04-one-pixel-attacks",
+        "4 . One-Pixel Attacks \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/02-adversarial-attacks/05-adversarial-patches",
+        "5 . Adversarial Patch Attacks \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/02-adversarial-attacks/06-extraction-and-inference",
+        "6 . Extraction and Inference Attacks \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/02-adversarial-attacks/07-poisoning-and-backdoors",
+        "7 . Poisoning and Backdoors \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/02-adversarial-attacks/08-prompt-injection-and-sycophancy",
+        "8 . Prompt Injection and Sycophancy \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/03-adversarial-defenses/01-adversarial-training",
+        "1 . Adversarial Training \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/03-adversarial-defenses/02-certified-defenses",
+        "2 . Certified Defenses \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/03-adversarial-defenses/03-defensive-distillation",
+        "3 . Defensive Distillation \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/03-adversarial-defenses/04-evaluating-robustness",
+        "4 . Evaluating Robustness \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/04-red-teaming/01-what-is-red-teaming",
+        "1 . What Is Red Teaming? \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/04-adversarial-ai/04-red-teaming/02-red-teaming-implementation",
+        "2 . Red Teaming Implementation \u2192"
+      ]
+    ]
+  },
+  "https://explainableaiworkbook.com/05-ai-alignment": {
+    "headings": [
+      [
+        "h2",
+        "AI Alignment"
+      ],
+      [
+        "h1",
+        "AI Alignment"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/01-the-alignment-problem/01-what-is-alignment",
+        "1 . What is Alignment? \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/01-the-alignment-problem/02-misalignment",
+        "2 . Misalignment \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/01-the-alignment-problem/03-misalignment-failure-modes",
+        "3 . Misalignment Failure Modes \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/01-introduction-to-reinforcement-learning",
+        "1 . Introduction to Reinforcement Learning \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/02-human-feedback",
+        "2 . Human Feedback \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/03-reinforcement-learning-from-human-feedback-rlhf",
+        "3 . Reinforcement Learning from Human Feedback (RLHF) \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/04-reinforcement-learning-from-ai-feedback-rlaif",
+        "4 . Reinforcement Learning from AI Feedback (RLAIF) \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/05-constitutional-ai",
+        "5 . Constitutional AI \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/03-learning-to-generalize-beyond-training/01-distribution-shift",
+        "1 . Distribution Shift \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/03-learning-to-generalize-beyond-training/02-goal-generalization",
+        "2 . Goal Generalization \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/03-learning-to-generalize-beyond-training/03-adversarial-training",
+        "3 . Adversarial Training \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/03-learning-to-generalize-beyond-training/04-cooperative-training",
+        "4 . Cooperative Training \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/04-alignment-assurance/01-safety-evaluations",
+        "1 . Safety Evaluations \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/04-alignment-assurance/02-human-values-verification",
+        "2 . Human Values Verification \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/04-alignment-assurance/03-see-also",
+        "3 . See Also: Red Teaming, Interpretability, and Monitoring \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/05-human-values-and-ethics/01-value-alignment",
+        "1 . Value Alignment \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/05-human-values-and-ethics/02-moral-ai",
+        "2 . Moral AI \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/05-ai-alignment/governance-overview/01-ai-governance",
+        "1 . AI Governance \u2192"
+      ]
+    ]
+  },
+  "https://explainableaiworkbook.com/06-transparent-ai": {
+    "headings": [
+      [
+        "h2",
+        "Transparent AI"
+      ],
+      [
+        "h1",
+        "Transparent AI"
+      ]
+    ],
+    "lessons": [
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/01-transparency/01-traceability",
+        "1 . Traceability \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/01-transparency/02-provenance",
+        "2 . Provenance \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/01-transparency/03-data",
+        "3 . Data \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/01-transparency/04-documentation",
+        "4 . Documentation \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/02-accountability/01-auditability",
+        "1 . Auditability \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/02-accountability/02-monitoring",
+        "2 . Monitoring \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/02-accountability/03-logging",
+        "3 . Logging \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/02-accountability/04-incident-response",
+        "4 . Incident Response \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/03-failure-analysis/01-dataset-bias",
+        "1 . Dataset Bias \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/03-failure-analysis/02-shortcut-learning",
+        "2 . Shortcut Learning \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/03-failure-analysis/03-spurious-correlations",
+        "3 . Spurious Correlations \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/03-failure-analysis/04-distribution-shift",
+        "4 . Distribution Shift \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/04-transparency-in-modern-ai-systems/01-rag-systems",
+        "1 . RAG Systems \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/04-transparency-in-modern-ai-systems/02-agentic-systems",
+        "2 . Agentic Systems \u2192"
+      ],
+      [
+        "https://explainableaiworkbook.com/06-transparent-ai/04-transparency-in-modern-ai-systems/03-multi-agent-systems",
+        "3 . Multi-Agent Systems \u2192"
+      ]
+    ]
+  }
+}
