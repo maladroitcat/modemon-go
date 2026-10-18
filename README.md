@@ -8,7 +8,19 @@ The approved product contract is [issue #9](https://github.com/maladroitcat/mode
 The first mobile implementation is scoped by [issue #10](https://github.com/maladroitcat/modemon-go/issues/10).
 Product decisions in those issues are not all implemented features.
 
-## Mobile foundation
+## Playable Browser Preview
+
+**https://modemon-go-playable.astralgnat19.chatgpt.site** opens without login,
+Expo Go, or a native build. Acknowledge safety, explicitly opt into Demo Mode for
+remote testing, select an encounter, simulate walking to it, read the Modédex, and
+answer three questions. Two correct captures; progress survives reload in the
+same browser. Real GPS mode retains its proximity gate.
+
+See [playable web documentation](mobile/web/README.md), [coverage](mobile/web/coverage.json),
+and [QA](mobile/web/QA.md). Creature art and Signature encounters are not approved/
+enabled. Physical iPhone Safari acceptance remains separate from automated WebKit.
+
+## Native Mobile Foundation
 
 `mobile/` is an independent Expo + React Native + TypeScript app using Expo
 Router. It contains Welcome / Start Playing, foreground-location permission with
@@ -23,8 +35,8 @@ npm start
 ```
 
 See [mobile/README.md](mobile/README.md) for physical-device setup, native map
-credentials, browser-preview limitations, privacy behavior, and acceptance checks.
-The browser preview intentionally does not pretend to render a native map.
+credentials, privacy behavior, and acceptance checks. The web route loads the
+playable browser experience; native routes and the native map remain unchanged.
 
 ```sh
 cd mobile
@@ -35,10 +47,10 @@ npx expo install --check
 npx expo export --platform all --output-dir dist
 ```
 
-There are no spawns, active encounters, region rendering, capture mechanics,
-camera access, accounts, backend, telemetry, or bundled analysis datasets in this
-foundation. Modédex, Encounter, and the offline nearby list are explicit
-placeholders. Only the safety-notice version is persisted; no GPS history is saved.
+The native foundation still has placeholder encounter/Modédex screens. The public
+web experience implements daily encounters, camera/non-camera play, capture quizzes,
+and browser-local collections. Neither implementation stores GPS history or uses
+a player account, project backend, or telemetry.
 
 ## Canonical research and content
 
@@ -52,9 +64,9 @@ Python pipelines and human-edited configuration remain authoritative:
   [human curation](data/SPECIAL_POI_CURATION_README.md).
 - [Canonical Modédex](data/MODEDEX_README.md): YAML content validated into JSON.
 
-The mobile app does not import these datasets yet. A compact, versioned data
-bridge is a separate future task; do not ship raw research inputs or contribution
-tables inside the app.
+`scripts/build_web_runtime.py` generates a compact, hash-versioned browser bridge
+from these read-only inputs. Raw research inputs and contribution tables are not
+shipped. Canonical content and analytical geometry remain unchanged.
 
 With Python 3.12 and the pinned requirements installed in your project environment:
 

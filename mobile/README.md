@@ -1,10 +1,16 @@
-# Modémon GO mobile foundation
+# Modémon GO Native Foundation And Playable Web
+
+For the public playable browser experience from issue #15, use
+**https://modemon-go-playable.astralgnat19.chatgpt.site** and read
+[web/README.md](web/README.md). Web progress, camera, and gameplay are documented
+separately; this native guide does not claim that they exist on native.
 
 Implements [task #10](https://github.com/maladroitcat/modemon-go/issues/10), following
 the approved [product contract #9](https://github.com/maladroitcat/modemon-go/issues/9).
 Base commit: `b10409d9a7a1453b05eb435709544db40a8080e7` from updated `main`.
-Branch: `dev/mobile-foundation`. No canonical Python, content, or geography files
-are modified or imported by the app.
+Foundation branch: `dev/mobile-foundation`; playable branch: `dev/playable-web-mvp`.
+No canonical data is modified. Only the web target reads the generated runtime
+bundle; native modules do not import browser gameplay data.
 
 ## Toolchain and installation
 
@@ -29,9 +35,9 @@ npm ci
 npm start
 ```
 
-For browser-only onboarding QA: `npm run web -- --port 8082`.
-The web fallback explicitly says that the native map is unavailable. It does not
-render a fake street map or prove that iOS/Android map gestures work.
+For Expo web QA: `npm run web -- --port 8082`. It now loads the same playable game
+as `npm run play:web` (port 5173), including a real Leaflet street map. Browser
+checks do not prove that native iOS/Android map gestures work.
 
 ## Physical-device setup
 
@@ -128,8 +134,9 @@ npx expo export --platform all --output-dir dist
 `npm run check` combines typecheck, lint, and the 18 Node tests. Playwright runs
 five browser tests against localhost:8082 (starts the server if needed). It covers
 denial, existing permission, safety gating, persisted/rejected storage, direct
-links, tab navigation, and narrow/landscape/desktop onboarding. Device coordinates
-are simulated only in tests, never as a runtime demo location.
+links, tab navigation, and narrow/landscape/desktop onboarding. The separate web
+experience has opt-in Demo Mode; simulated coordinates are never called real GPS.
+Native device coordinates are not simulated at runtime.
 
 TypeScript explicitly includes owned source/tests and excludes generated exports:
 the minified production bundle is not TypeScript input. Build outputs, test
@@ -148,7 +155,7 @@ Doctor result. The generated launcher icons are Expo template placeholders with
 the template license retained in `LICENSE`, not approved game artwork. Existing
 untracked concept art is intentionally neither consumed nor committed.
 
-Next proposed task, requiring product-owner approval: the compact, versioned,
-validated data bridge described in #9. It is not implemented here. This branch
-does not add backend/auth, GPS history, telemetry, spawn rules/markers, camera,
-capture, Signature assignments, or research-data migration.
+The compact read-only bridge and browser encounter/capture loop now exist under
+[web/](web/README.md). Native gameplay expansion remains future work. Neither
+target adds accounts/backend, GPS history, telemetry, or unapproved Signature
+assignments. Existing concepts remain untracked, untouched, and unapproved.
