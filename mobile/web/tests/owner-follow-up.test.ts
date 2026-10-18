@@ -116,7 +116,7 @@ test("standalone Signature detail renders accessible canonical links and safe mi
     configFile: false,
     root: fileURLToPath(new URL("..", import.meta.url)),
     server: { middlewareMode: true, hmr: false, ws: false },
-    esbuild: { jsx: "automatic" },
+    oxc: { jsx: { runtime: "automatic" } },
   });
   try {
     const { default: DexEntry } = await vite.ssrLoadModule("/src/DexEntry.tsx");
