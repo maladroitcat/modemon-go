@@ -3,8 +3,9 @@ approval_status: PENDING_OWNER_APPROVAL
 policy: >-
   Only uncovered non-Signature forms need outside references. Preserve every
   existing workbook match unchanged. All 12 Signatures already have sufficient
-  canonical project sources. Each proposal below requires individual owner
-  approval; verification is not approval. No proposal enters canon or the app.
+  canonical project sources. Owner decisions are recorded separately and apply
+  only to exact reviewed references. Verification is not approval. No reference
+  enters canon or the app through this research layer.
 proposals:
   scheduler_hospital:
     name: Wardray
@@ -25,19 +26,19 @@ proposals:
   scheduler_transit:
     name: Routeopus
     approval_status: PENDING_OWNER_APPROVAL
-    publisher: MIT News, Massachusetts Institute of Technology
-    article_title: Software that knows the risks
-    proposed_url: https://news.mit.edu/2015/planning-algorithms-evaluate-probability-of-success-0115
-    relevant_topic: Planning workable transit schedules under travel uncertainty
-    match_rationale: Starts with a familiar trip-planning example and explains bus scheduling that balances arrival requirements, uncertain travel times, and alternatives when a timetable cannot work.
-    confidence: medium
-    scope_label: Risk-aware planning and bus-scheduling illustration, not a full transit system
+    publisher: Optibus
+    article_title: Can Artificial Intelligence Prevent Bus Bunching?
+    proposed_url: https://blog.optibus.com/transportation/can-artificial-intelligence-prevent-bus-bunching
+    relevant_topic: AI-assisted bus timetable reliability
+    match_rationale: Explains buses arriving together, then how historical traffic and boarding data support delay predictions and timetable improvements that balance reliability and cost.
+    confidence: high
+    scope_label: Bus timetable improvement, not complete crew scheduling
     audience: general_public_no_ml_prerequisites
-    resource_type: plain_language_research_news
-    accessibility_reason: Public HTML research news answers what planning software does and where it helps, using everyday journeys and buses rather than coding exercises.
+    resource_type: concept_overview
+    accessibility_reason: Public HTML article starts with a familiar bus-stop problem, defines headway, and explains prediction plus schedule adjustment without code or equations.
     why_workbooks_insufficient: No preserved workbook match explains operational vehicle scheduling. Expert routing, HTTP routing, and time-series inputs do not explain choosing a feasible bus timetable.
-    limitations: A 2015 research illustration, not evidence about a current transit agency. Later sections introduce graphs and probability and are more technical than the opening examples. Covers risk-aware planning rather than every transit scheduling task.
-    verification_terms: [bus, constraints, planner, alternatives]
+    limitations: Vendor-authored 2018 explainer; dated generalizations about transit practice are not current facts. Focuses on reliability, not every scheduling constraint, and does not promise to eliminate delays or establish local deployment.
+    verification_terms: [bus bunching, timetable, predictions, trade-offs]
   scheduler_workforce:
     name: Shiftshark
     approval_status: PENDING_OWNER_APPROVAL

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify/render pending external research, never add links to the app or canon."""
+"""Audit readings and render explicit owner decisions; never ship links."""
 import argparse
 import hashlib
 import json
@@ -15,8 +15,10 @@ from scripts.audit_workbook_lessons import Page
 from scripts.build_workbook_research_review import ROOT, RESEARCH, csv_text, protected_hashes
 
 PENDING = "PENDING_OWNER_APPROVAL"
+APPROVED = "APPROVED_BY_OWNER"
+OWNER_DECISIONS = RESEARCH / "modedex_external_owner_decisions.yaml"
 # Network safety allowlist for this research only, NOT source-use approval.
-RESEARCH_HOSTS = {"news.mit.edu", "www.ibm.com"}
+RESEARCH_HOSTS = {"news.mit.edu", "www.ibm.com", "blog.optibus.com"}
 FIELDS = {"name", "approval_status", "publisher", "article_title", "proposed_url",
           "relevant_topic", "match_rationale", "confidence", "scope_label",
           "why_workbooks_insufficient", "limitations", "verification_terms",
@@ -24,7 +26,7 @@ FIELDS = {"name", "approval_status", "publisher", "article_title", "proposed_url
 
 
 class ExternalPage(Page):
-    """Read semantic main content or IBM's explicitly marked article sections."""
+    """Read main content or the publishers' explicitly marked article sections."""
 
     def __init__(self):
         super().__init__()
@@ -33,7 +35,8 @@ class ExternalPage(Page):
     def handle_starttag(self, tag, attrs):
         if tag == "div":
             classes = dict(attrs).get("class", "").split()
-            if self.article_div_depth or any(c.startswith("body-article-") for c in classes):
+            if (self.article_div_depth or "post-body" in classes
+                    or any(c.startswith("body-article-") for c in classes)):
                 self.article_div_depth += 1
         super().handle_starttag(tag, attrs)
 
@@ -90,6 +93,35 @@ def load_inputs():
             read_yaml(RESEARCH / "workbook_component_review.yaml"))
 
 
+def owner_decision_fields(data, ledger):
+    """Bind human approval to an exact species/URL, independently of HTTP checks."""
+    commit = ledger.get("reviewed_commit", "")
+    if (ledger.get("version") != 1 or len(commit) != 40
+            or any(c not in "0123456789abcdef" for c in commit)
+            or not ledger.get("decision_source") or not ledger.get("policy")):
+        raise ValueError("Owner decisions need source attribution and the reviewed commit")
+    decisions = ledger["decisions"]
+    if set(decisions) != set(data["proposals"]):
+        raise ValueError("Owner decision ledger must cover exactly the four reviewed species")
+    result = {}
+    for key, row in decisions.items():
+        if set(row) != {"decision", "reference_url", "note"} or not row["note"].strip():
+            raise ValueError(f"Incomplete owner decision: {key}")
+        check_external_url(row["reference_url"])
+        if row["decision"] == "approved":
+            if row["reference_url"] != data["proposals"][key]["proposed_url"]:
+                raise ValueError(f"Changed URL cannot inherit owner approval: {key}")
+            status = APPROVED
+        elif row["decision"] == "held_for_replacement":
+            status = ("HELD_FOR_REPLACEMENT" if row["reference_url"] == data["proposals"][key]["proposed_url"]
+                      else PENDING)
+        else:
+            raise ValueError(f"Unknown owner decision: {key}")
+        result[key] = {"approval_status": status, "owner_reviewed_commit": commit,
+                       "owner_reviewed_url": row["reference_url"], "owner_decision_note": row["note"]}
+    return result
+
+
 def validate(data, workbooks, canon, review, evidence=None):
     if data["approval_status"] != PENDING:
         raise ValueError("Research cannot approve external references")
@@ -138,11 +170,14 @@ def get(url):
     return response
 
 
-def verify(data):
+def verify(data, previous=None):
     evidence = {}
     for row in data["proposals"].values():
         url = row["proposed_url"]
         if url in evidence:
+            continue
+        if previous is not None and url in previous:
+            evidence[url] = previous[url]
             continue
         time.sleep(.5)
         response = get(url)
@@ -169,12 +204,14 @@ def render(root=RESEARCH):
     data, workbooks, canon, review = load_inputs()
     evidence = json.loads((RESEARCH / "external_reference_verification.json").read_text(encoding="utf-8"))
     validate(data, workbooks, canon, review, evidence)
-    rows = [{"species_id": key, **row} for key, row in sorted(data["proposals"].items())]
+    decisions = owner_decision_fields(data, read_yaml(OWNER_DECISIONS))
+    rows = [{"species_id": key, **row, **decisions[key]} for key, row in sorted(data["proposals"].items())]
     fields = list(dict.fromkeys(k for row in rows for k in row))
     root.mkdir(parents=True, exist_ok=True)
     (root / "modedex_external_owner_review.csv").write_text(csv_text(rows, fields), encoding="utf-8")
-    lines = ["# Table B: External Fallbacks - PENDING_OWNER_APPROVAL", "",
-             "Every row is PENDING_OWNER_APPROVAL. Verified does not mean approved. No row populates a Modedex, workbook-mapping, or runtime link.", "",
+    lines = ["# Table B: Outside Readings and Owner Decisions", "",
+             "Wardray, Shiftshark, and Parcelprawn are APPROVED_BY_OWNER for their exact educational references reviewed at 79dd9ce. Routeopus's replacement remains PENDING_OWNER_APPROVAL. The prior MIT trip-planning article was held as insufficiently direct. See [owner decision ledger](modedex_external_owner_decisions.yaml).", "",
+             "Approval is recorded from explicit human decisions, never inferred from verification. No row populates a Modedex, workbook-mapping, or runtime link. This does not authorize UI integration, merging, or deployment.", "",
              "Only four uncovered non-Signatures need outside references. All 45 existing workbook matches are unchanged, including component-level matches. All 12 Signatures already have sufficient canonical real-project sources and receive no supplementary proposals. See [scope accounting](modedex_reference_scope.json).", "",
              "These public HTML articles explain what the AI-assisted job is, what it does, and where it is used; they are not implementation tutorials. Relevance and reading-level judgments remain reviewable.", "",
              "| Species | Status | Exact proposed title / URL | Publisher | Topic / rationale | Confidence / scope | General-audience suitability | Why workbook coverage was insufficient | Limits |", "|---|---|---|---|---|---|---|---|---|"]
@@ -188,22 +225,28 @@ def render(root=RESEARCH):
                  r["why_workbooks_insufficient"], r["limitations"]]
         lines.append("| " + " | ".join(map(esc, cells)) + " |")
     lines += ["", "Confidence describes educational topic fit, not approval, clinical validity, production suitability, or proof of a Signature deployment. Source evidence is in external_reference_verification.json; existing Signature project URLs remain unchanged and separate.",
-              "", "Owner decisions: accept/reject each species/reference pair or request alternatives. A future explicitly authorized change would be needed before any approved external link could enter the app. This research renderer has no approval or deployment command.", ""]
+              "", "Owner decision needed: approve/reject the Routeopus replacement. The other three exact references already have approval. A future explicitly authorized change would be needed before readings enter the app. This renderer cannot grant approval, merge, or deploy.", ""]
     (root / "modedex_external_owner_review.md").write_text("\n".join(lines), encoding="utf-8")
     (root / "modedex_reference_scope.json").write_text(
         json.dumps(reference_scope(workbooks, canon, review), indent=2, sort_keys=True) + "\n", encoding="utf-8")
     if protected_hashes() != before:
         raise ValueError("Protected canonical input changed during external research rendering")
-    print(f"Rendered {len(rows)} external proposals, all {PENDING}; no approved links written.")
+    approved = sum(row["approval_status"] == APPROVED for row in rows)
+    print(f"Rendered {len(rows)} readings: {approved} explicitly owner-approved; {len(rows)-approved} awaiting approval; no app links written.")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--verify", action="store_true", help="Explicit live network audit; does not approve anything")
+    network = parser.add_mutually_exclusive_group()
+    network.add_argument("--verify", action="store_true", help="Live audit of all four readings; does not approve anything")
+    network.add_argument("--verify-new", action="store_true", help="Audit only uncached replacement URLs; preserve existing evidence")
     args = parser.parse_args()
     data, workbooks, canon, review = load_inputs()
     validate(data, workbooks, canon, review)
-    if args.verify:
-        evidence = verify(data)
+    if args.verify or args.verify_new:
+        previous = (json.loads((RESEARCH / "external_reference_verification.json").read_text(encoding="utf-8"))
+                    if args.verify_new else None)
+        evidence = verify(data, previous)
+        validate(data, workbooks, canon, review, evidence)
         (RESEARCH / "external_reference_verification.json").write_text(json.dumps(evidence, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     render()

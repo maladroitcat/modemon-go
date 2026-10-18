@@ -13,7 +13,9 @@ Signature project evidence is changed. No links are integrated, merged, or deplo
   Shiftshark, and Parcelprawn.
 - Outside proposals must explain what this kind of AI does and where it is used
   for an everyday reader, not teach implementation.
-- **Every outside reference is PENDING_OWNER_APPROVAL**, including verified URLs.
+- Wardray, Shiftshark, and Parcelprawn's exact outside references were explicitly
+  approved by the owner after reviewing commit `79dd9ce`. Routeopus's replacement
+  remains **PENDING_OWNER_APPROVAL**. Verification never grants approval.
   No desire for 51 supplementary links overrides this policy.
 
 ## Scope Accounting
@@ -28,8 +30,9 @@ that earlier review. Those matches are not reverted or reassessed.
 
 Of the current six blank workbook fields, two belong to Signatures (Specimunk,
 Cabcrab) and need no extra links. Only the other four require outside research.
-Thus **35 of 39 non-Signatures have workbook matches**, four have pending outside
-proposals, and **12 of 12 Signatures have canonical project provenance**.
+Thus **35 of 39 non-Signatures have workbook matches**, three have owner-approved
+outside references, one has a pending replacement, and **12 of 12 Signatures have
+canonical project provenance**.
 The machine-readable [scope audit](research/modedex_reference_scope.json)
 derives this accounting from canonical stages and historical review metadata.
 
@@ -47,24 +50,37 @@ derives this accounting from canonical stages and historical review metadata.
   title, publisher, exact URL, rationale, audience suitability, confidence,
   limitations, and why the workbook review did not cover that job.
 - [Editable outside proposals](research/modedex_external_proposals.yaml) are
-  research metadata only, not an approved application link catalog.
+  research metadata only, not an application link catalog. Their original
+  pending status records that research/verification cannot confer approval.
+- [Owner decision ledger](research/modedex_external_owner_decisions.yaml) records
+  the three approvals and the held MIT Routeopus article against the exact URLs
+  and reviewed commit. Table B joins those decisions to report effective status.
+  Changing an approved URL fails validation instead of inheriting approval.
 - [Outside verification](research/external_reference_verification.json) records
   HTTP status, exact observed title, URL, inspected topic terms, response hash,
   and verification time. Working links do not constitute owner approval.
 
-### Proposed Reading
+### Readings and Owner Status
 
-| Species | Publisher / exact article | Purpose |
+| Species | Publisher / exact article | Owner status |
 |---|---|---|
-| Wardray | MIT News: [Robot helps nurses schedule tasks on labor floor](https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713) | Familiar hospital examples show AI suggesting nurse assignments and patient room moves. |
-| Routeopus | MIT News: [Software that knows the risks](https://news.mit.edu/2015/planning-algorithms-evaluate-probability-of-success-0115) | Everyday travel and bus examples explain scheduling under uncertain journey times. |
-| Shiftshark | IBM Think: [What is contact center workforce optimization?](https://www.ibm.com/think/topics/contact-center-workforce-optimization) | Explains matching staff, skills, availability, and demand to schedules. |
-| Parcelprawn | IBM Think: [What is dispatch management?](https://www.ibm.com/think/topics/dispatch-management) | Explains coordinating delivery assignments and routes, including AI assistance and human oversight. |
+| Wardray | MIT News: [Robot helps nurses schedule tasks on labor floor](https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713) | APPROVED_BY_OWNER |
+| Routeopus | Optibus: [Can Artificial Intelligence Prevent Bus Bunching?](https://blog.optibus.com/transportation/can-artificial-intelligence-prevent-bus-bunching) | PENDING_OWNER_APPROVAL |
+| Shiftshark | IBM Think: [What is contact center workforce optimization?](https://www.ibm.com/think/topics/contact-center-workforce-optimization) | APPROVED_BY_OWNER |
+| Parcelprawn | IBM Think: [What is dispatch management?](https://www.ibm.com/think/topics/dispatch-management) | APPROVED_BY_OWNER |
 
-**All four are PENDING_OWNER_APPROVAL.** The MIT articles are dated research
-examples, not evidence of current production deployment. Routeopus's later
-graph/probability discussion is more technical than its accessible opening.
-IBM's articles are vendor-authored and broader than scheduling alone.
+Routeopus's previous MIT risk-aware trip-planning article was held by the owner
+because it was not directly about public transit scheduling. The replacement
+connects bus delays to prediction-informed timetable improvements, with no code.
+The alternative Optibus optimization announcement was less suitable for beginners
+because of its operational jargon; arrival-prediction-only sources do not explain
+schedule adjustment. No replacement is approved by this research choice.
+
+The hospital article is a dated research example, not evidence of current
+clinical deployment. The 2018 Optibus article is vendor-authored, focuses on
+timetable reliability rather than complete crew scheduling, and contains dated
+generalizations about transit practice. IBM's articles are also vendor-authored
+and broader than scheduling alone.
 Not all automation or optimization is machine learning, and no source establishes
 local deployment, safe clinical practice, equitable staffing, or guaranteed results.
 These limitations are explicit per proposal rather than silently overstated.
@@ -100,8 +116,10 @@ With the existing Python requirements installed, from the repository root:
 ```sh
 # Offline bookkeeping only: preserves all existing workbook match values.
 python3 -B -m scripts.build_workbook_research_review
-# Explicit live audit of ONLY the four pending non-Signature outside sources:
-python3 -B -m scripts.review_external_learning_references --verify
+# Live audit of only new URLs; keeps approved-source evidence unchanged:
+python3 -B -m scripts.review_external_learning_references --verify-new
+# Optional explicit refresh of all four outside sources (not approval):
+# python3 -B -m scripts.review_external_learning_references --verify
 # Deterministic offline Table B and scope-audit rendering:
 python3 -B -m scripts.review_external_learning_references
 python3 -B -m unittest discover -s tests -v
@@ -117,23 +135,26 @@ SHA-256 tests freeze the workbook YAML, inventory CSV, and workbook verification
 snapshot. The protected-source manifest checks all pre-existing configuration and
 processed datasets; renderers verify before/after hashes. Tests also enforce
 non-Signature-only proposals, general-audience resource types, deterministic
-reports, pending-only status, and absence of proposed URLs from the game/canon.
+reports, explicit exact-URL owner approvals separated from network verification,
+and absence of outside reading URLs from the game/canon.
 
 ## Owner Decisions Needed
 
-Approve or reject each of the four Table B species/reference pairs, or request
-different plain-language sources. No further workbook reassessment or Signature
-supplement is requested. A later explicitly authorized task would be required
-to integrate approved readings into the app. This research has no approval,
-integration, merge, or deployment command.
+Approve or reject the Routeopus replacement, or request another direct
+public-transit scheduling explainer. Wardray, Shiftshark, and Parcelprawn need no
+repeat approval for the unchanged references. No workbook reassessment or
+Signature supplement is requested. A later explicitly authorized task would be
+required to integrate readings into the app. Approval of readings is not approval
+to merge or deploy. This research has no automatic approval, integration, merge,
+or deployment command.
 
 ## Attribution
 
 Preferred workbooks: [Explainable AI Workbook](https://explainableaiworkbook.com/),
 [Data Science Workbook](https://datascienceworkbook.com/), and
 [Deep Learning Workbook](https://deeplearningworkbook.com/), maintained by
-Dr. Brinnae Bent. Pending outside references credit MIT News / Massachusetts
-Institute of Technology and IBM Think individually. Consult original publishers'
+Dr. Brinnae Bent. Outside references credit MIT News / Massachusetts Institute of
+Technology, IBM Think, and Optibus individually. Consult original publishers'
 attribution and licensing terms before reuse. We link to originals and retain
 audit metadata, not article bodies. Project relevance judgments do not imply
 publisher endorsement.

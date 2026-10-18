@@ -82,6 +82,7 @@ class SourceReviewTests(unittest.TestCase):
             self.assertTrue(row["reason"])
 
     def test_every_external_reference_including_evidence_remains_pending(self):
+        # Research/HTTP evidence cannot grant approval; the owner ledger is separate.
         external.validate(self.data, self.workbooks, self.canon, self.review, self.evidence)
         self.assertEqual(len(self.data["proposals"]), 4)
         self.assertEqual(len(self.evidence), 4)
@@ -182,6 +183,78 @@ class SourceReviewTests(unittest.TestCase):
         page = external.ExternalPage()
         page.feed('<main>Real <div>main</div></main><nav>skip</nav>')
         self.assertEqual(" ".join(page.parts), "Real  main")
+        page = external.ExternalPage()
+        page.feed('<nav>fake timetable</nav><div class="section post-body">'
+                  'Bus <div>schedule</div></div><aside>ignore</aside>')
+        self.assertEqual(" ".join(page.parts), "Bus  schedule")
+
+    def test_owner_approved_three_exact_references_and_not_the_routeopus_replacement(self):
+        ledger = external.read_yaml(external.OWNER_DECISIONS)
+        self.assertEqual(ledger["reviewed_commit"], "79dd9ceb7297d9a1201fdefbdc8a2d6f4243fd2d")
+        fields = external.owner_decision_fields(self.data, ledger)
+        approved = {key for key, row in fields.items() if row["approval_status"] == external.APPROVED}
+        self.assertEqual(approved, {"scheduler_hospital", "scheduler_workforce", "scheduler_delivery"})
+        self.assertEqual(fields["scheduler_transit"]["approval_status"], external.PENDING)
+        self.assertNotEqual(fields["scheduler_transit"]["owner_reviewed_url"],
+                            self.data["proposals"]["scheduler_transit"]["proposed_url"])
+
+    def test_approved_reference_records_are_unchanged_from_owner_reviewed_commit(self):
+        expected = {
+            "scheduler_hospital": "f61c1459ccdba0c5f081cfb24b2acbc07c7bfcdc74a3933569ae4b1a27170565",
+            "scheduler_workforce": "dbe3a0042018ca1a83a9a0bb8e1596d9db467a4852e02a4694feda96073444d1",
+            "scheduler_delivery": "7e9e37fac9c47d24a4b6cc6603932c52242f67044a440821a6890eaf4cf7e0ce",
+        }
+        for key, digest in expected.items():
+            row = self.data["proposals"][key]
+            self.assertEqual(hashlib.sha256(json.dumps(row, sort_keys=True).encode()).hexdigest(), digest)
+
+    def test_changed_url_cannot_inherit_owner_approval(self):
+        ledger = external.read_yaml(external.OWNER_DECISIONS)
+        for key in ("scheduler_hospital", "scheduler_workforce", "scheduler_delivery"):
+            changed = copy.deepcopy(self.data)
+            changed["proposals"][key]["proposed_url"] = self.data["proposals"]["scheduler_transit"]["proposed_url"]
+            with self.assertRaisesRegex(ValueError, "cannot inherit owner approval"):
+                external.owner_decision_fields(changed, ledger)
+
+    def test_owner_ledger_requires_exact_coverage_provenance_and_known_decisions(self):
+        original = external.read_yaml(external.OWNER_DECISIONS)
+        changed = copy.deepcopy(original)
+        changed["decisions"].pop("scheduler_hospital")
+        with self.assertRaisesRegex(ValueError, "exactly the four"):
+            external.owner_decision_fields(self.data, changed)
+        changed = copy.deepcopy(original)
+        changed["reviewed_commit"] = ""
+        with self.assertRaisesRegex(ValueError, "source attribution"):
+            external.owner_decision_fields(self.data, changed)
+        changed = copy.deepcopy(original)
+        changed["decisions"]["scheduler_transit"]["decision"] = "auto_approved"
+        with self.assertRaisesRegex(ValueError, "Unknown owner decision"):
+            external.owner_decision_fields(self.data, changed)
+        changed_data = copy.deepcopy(self.data)
+        changed_data["proposals"]["scheduler_transit"]["proposed_url"] = original["decisions"]["scheduler_transit"]["reference_url"]
+        self.assertEqual(external.owner_decision_fields(changed_data, original)["scheduler_transit"]["approval_status"],
+                         "HELD_FOR_REPLACEMENT")
+
+    def test_live_replacement_audit_reuses_approved_evidence_and_drops_held_article(self):
+        key = "scheduler_transit"
+        row = self.data["proposals"][key]
+        old_url = external.read_yaml(external.OWNER_DECISIONS)["decisions"][key]["reference_url"]
+        previous = {url: item for url, item in self.evidence.items() if url != row["proposed_url"]}
+        previous[old_url] = {"old": "held article"}
+        body = (" ".join(row["verification_terms"]) + " ") * 25
+        html = '<h1>' + row["article_title"] + '</h1><div class="section post-body">' + body + '</div>'
+        with patch.object(external, "get") as get, patch.object(external.time, "sleep"):
+            get.return_value.text = html
+            get.return_value.content = html.encode()
+            get.return_value.status_code = 200
+            get.return_value.url = row["proposed_url"]
+            result = external.verify(self.data, previous)
+            get.assert_called_once_with(row["proposed_url"])
+        self.assertNotIn(old_url, result)
+        self.assertEqual(result[row["proposed_url"]]["approval_status"], external.PENDING)
+        for other, item in self.data["proposals"].items():
+            if other != key:
+                self.assertEqual(result[item["proposed_url"]], previous[item["proposed_url"]])
 
     def test_stale_signature_source_evidence_is_rejected(self):
         changed = copy.deepcopy(self.evidence)

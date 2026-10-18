@@ -1,0 +1,24 @@
+version: 1
+reviewed_commit: 79dd9ceb7297d9a1201fdefbdc8a2d6f4243fd2d
+decision_source: Project owner's explicit instruction in the PR 29 follow-up conversation
+policy: >-
+  Approval applies only to the exact species/reference pair reviewed by the
+  owner. It does not authorize UI integration, a merge, or deployment. A changed
+  URL cannot inherit approval. Network verification never grants approval.
+decisions:
+  scheduler_hospital:
+    decision: approved
+    reference_url: https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713
+    note: Owner approved Wardray's MIT News hospital-scheduling educational reference.
+  scheduler_workforce:
+    decision: approved
+    reference_url: https://www.ibm.com/think/topics/contact-center-workforce-optimization
+    note: Owner approved Shiftshark's IBM Think workforce-optimization educational reference.
+  scheduler_delivery:
+    decision: approved
+    reference_url: https://www.ibm.com/think/topics/dispatch-management
+    note: Owner approved Parcelprawn's IBM Think dispatch-management educational reference.
+  scheduler_transit:
+    decision: held_for_replacement
+    reference_url: https://news.mit.edu/2015/planning-algorithms-evaluate-probability-of-success-0115
+    note: Owner held the accessible MIT trip-planning article because it is not directly about public transit scheduling; a replacement requires fresh owner approval.

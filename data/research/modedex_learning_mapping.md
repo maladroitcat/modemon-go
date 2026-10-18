@@ -2,11 +2,11 @@
 
 Research only. No links are wired into the game; no canonical fields were changed.
 
-51 inventoried; 45 existing workbook matches preserved unchanged; 4 uncovered non-Signatures need outside-reference review. All 12 Signatures already have sufficient canonical project links. There are 6 blank workbook fields, not six outstanding species. Historical scope/confidence metadata is preserved: {'high': 30, 'low': 6, 'medium': 15}; 21 historical review rows.
+51 inventoried; 45 existing workbook matches preserved unchanged; 4 non-Signatures have no workbook match (see Table B for owner decisions). All 12 Signatures already have sufficient canonical project links. There are 6 blank workbook fields, not six outstanding species. Historical scope/confidence metadata is preserved: {'high': 30, 'low': 6, 'medium': 15}; 21 historical review rows.
 
 All existing workbook matches are accepted as-is under the owner's final policy; no reassessment or replacement is proposed. Original scope labels, confidence, limitations, and historical review flags below remain unchanged for provenance. A component lesson is not a claim of complete system coverage or deployment. Blank Signature workbook fields do not require supplementary links.
 
-External fallback proposals are exclusively in [Table B](modedex_external_owner_review.md), all marked PENDING_OWNER_APPROVAL. They do not fill nulls in this table or enter the application.
+Outside references and explicit owner decisions are exclusively in [Table B](modedex_external_owner_review.md): three references approved, Routeopus replacement pending. They do not fill nulls in this table or enter the application.
 
 The CSV inventory also contains verbatim canonical roles, algorithms, tasks, inputs, outputs, habitats, limitations, explainability and separate Signature project sources.
 
