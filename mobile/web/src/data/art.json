@@ -1,0 +1,2553 @@
+{
+  "creatures": {
+    "anomaly_base": {
+      "alpha_bbox": [
+        14,
+        25,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/anomaly_base.png",
+      "original_filename": "quirkle.png",
+      "outputs": [
+        {
+          "bytes": 4886,
+          "height": 96,
+          "path": "/art/anomaly_base.13cb6983e812.96.webp",
+          "sha256": "8538d321f171f5ca6bc36df64ca58e450c5974d70b74a5c1b26ba1c8b13b41e5",
+          "width": 96
+        },
+        {
+          "bytes": 20936,
+          "height": 320,
+          "path": "/art/anomaly_base.13cb6983e812.320.webp",
+          "sha256": "0cb940c1b0bac78c96ef780c95ba4f1f70917ff96e04e591ba2f00cf9295ea32",
+          "width": 320
+        },
+        {
+          "bytes": 84485,
+          "height": 320,
+          "path": "/art/anomaly_base.13cb6983e812.320.png",
+          "sha256": "14e595791ccc378a6d8c8f9cd297d1771d68b390fae66d26fcae009179db1b52",
+          "width": 320
+        },
+        {
+          "bytes": 52720,
+          "height": 640,
+          "path": "/art/anomaly_base.13cb6983e812.640.webp",
+          "sha256": "2543ae82d013ace82c27c7b45c0afc628019458448c9788dc253d74bc7e3fde7",
+          "width": 640
+        }
+      ],
+      "sha256": "13cb6983e812b40858584dbd84ea11a5b8d8fcdb81003d7f461eca7a63c012f9",
+      "urls": {
+        "png_320": "/art/anomaly_base.13cb6983e812.320.png",
+        "webp_320": "/art/anomaly_base.13cb6983e812.320.webp",
+        "webp_640": "/art/anomaly_base.13cb6983e812.640.webp",
+        "webp_96": "/art/anomaly_base.13cb6983e812.96.webp"
+      },
+      "width": 1254
+    },
+    "anomaly_fraud": {
+      "alpha_bbox": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/anomaly_fraud.png",
+      "original_filename": "swindlisk.png",
+      "outputs": [
+        {
+          "bytes": 5580,
+          "height": 96,
+          "path": "/art/anomaly_fraud.a6e2d281f662.96.webp",
+          "sha256": "fd5e68d9941fad75ec0cd1a7dc9d3d28702f8a3178d770b2ec66e4b8652b6edf",
+          "width": 96
+        },
+        {
+          "bytes": 22988,
+          "height": 320,
+          "path": "/art/anomaly_fraud.a6e2d281f662.320.webp",
+          "sha256": "0be115d24ac9437a50a04fd150a6a568ff55147ab97c24f9132d308dffcdd289",
+          "width": 320
+        },
+        {
+          "bytes": 104167,
+          "height": 320,
+          "path": "/art/anomaly_fraud.a6e2d281f662.320.png",
+          "sha256": "e42e47519da53b18c0d2512862adcfd790ac2f05cbb76f852752201100d80fef",
+          "width": 320
+        },
+        {
+          "bytes": 60474,
+          "height": 640,
+          "path": "/art/anomaly_fraud.a6e2d281f662.640.webp",
+          "sha256": "f00dfad3edad849ee3eaf8d697b2add79a2a9e2c8c2c146f590f68dd76e32d5d",
+          "width": 640
+        }
+      ],
+      "sha256": "a6e2d281f662812786026dbd58974dc5fe09a11482d972043346ce8f54e1dfc4",
+      "urls": {
+        "png_320": "/art/anomaly_fraud.a6e2d281f662.320.png",
+        "webp_320": "/art/anomaly_fraud.a6e2d281f662.320.webp",
+        "webp_640": "/art/anomaly_fraud.a6e2d281f662.640.webp",
+        "webp_96": "/art/anomaly_fraud.a6e2d281f662.96.webp"
+      },
+      "width": 1254
+    },
+    "anomaly_machine": {
+      "alpha_bbox": [
+        0,
+        23,
+        1312,
+        1181
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/anomaly_machine.png",
+      "original_filename": "geargoyle.png",
+      "outputs": [
+        {
+          "bytes": 5332,
+          "height": 96,
+          "path": "/art/anomaly_machine.94d2db9b39a6.96.webp",
+          "sha256": "e68489f49f7bf47ced71552326eee4bb913a3db38a42d5e2aadeddd8bb4bd5b4",
+          "width": 96
+        },
+        {
+          "bytes": 24674,
+          "height": 320,
+          "path": "/art/anomaly_machine.94d2db9b39a6.320.webp",
+          "sha256": "6b708b92654b92048f8f8c33d9bd11dc10820881be69270fa981f6081c797e0b",
+          "width": 320
+        },
+        {
+          "bytes": 103710,
+          "height": 320,
+          "path": "/art/anomaly_machine.94d2db9b39a6.320.png",
+          "sha256": "d0a2bb93a680af0b0e67365a21ebbe2ca46e21fa225a33777656ee810689d698",
+          "width": 320
+        },
+        {
+          "bytes": 62302,
+          "height": 640,
+          "path": "/art/anomaly_machine.94d2db9b39a6.640.webp",
+          "sha256": "64fbbd2c02a3e04df492b15aa65b407cfef24cedb173e0f469210d5db112f038",
+          "width": 640
+        }
+      ],
+      "sha256": "94d2db9b39a618c1181e9d981948beb3931fb60903c77437935593d9e21ec5cb",
+      "urls": {
+        "png_320": "/art/anomaly_machine.94d2db9b39a6.320.png",
+        "webp_320": "/art/anomaly_machine.94d2db9b39a6.320.webp",
+        "webp_640": "/art/anomaly_machine.94d2db9b39a6.640.webp",
+        "webp_96": "/art/anomaly_machine.94d2db9b39a6.96.webp"
+      },
+      "width": 1312
+    },
+    "anomaly_network": {
+      "alpha_bbox": [
+        0,
+        19,
+        1536,
+        1024
+      ],
+      "height": 1024,
+      "master": "assets/modemon/approved/originals/anomaly_network.png",
+      "original_filename": "netnark.png",
+      "outputs": [
+        {
+          "bytes": 4880,
+          "height": 96,
+          "path": "/art/anomaly_network.13e966cb965d.96.webp",
+          "sha256": "87fc51abf3eda246e1ec98b3d32927253a53a1a1e4c6683588424eab0a0aea56",
+          "width": 96
+        },
+        {
+          "bytes": 23586,
+          "height": 320,
+          "path": "/art/anomaly_network.13e966cb965d.320.webp",
+          "sha256": "c7773fb2f7ab40b1d50ad98816d98f33276022529a1dcda28ad36b92dcfc215b",
+          "width": 320
+        },
+        {
+          "bytes": 80579,
+          "height": 320,
+          "path": "/art/anomaly_network.13e966cb965d.320.png",
+          "sha256": "cf6a611c1bb07f4278a6710d0eb6a51f0415304448c895b38f826211f35ce29f",
+          "width": 320
+        },
+        {
+          "bytes": 64778,
+          "height": 640,
+          "path": "/art/anomaly_network.13e966cb965d.640.webp",
+          "sha256": "b81e8e40eaae6e66b4b51bf6236f9877b0cc476c127206159dd9c694376794ca",
+          "width": 640
+        }
+      ],
+      "sha256": "13e966cb965d3d8369503a87605077280701cceda167dedc097d0ac3e6f89c8b",
+      "urls": {
+        "png_320": "/art/anomaly_network.13e966cb965d.320.png",
+        "webp_320": "/art/anomaly_network.13e966cb965d.320.webp",
+        "webp_640": "/art/anomaly_network.13e966cb965d.640.webp",
+        "webp_96": "/art/anomaly_network.13e966cb965d.96.webp"
+      },
+      "width": 1536
+    },
+    "anomaly_vitals": {
+      "alpha_bbox": [
+        24,
+        35,
+        1254,
+        1230
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/anomaly_vitals.png",
+      "original_filename": "beatling.png",
+      "outputs": [
+        {
+          "bytes": 6066,
+          "height": 96,
+          "path": "/art/anomaly_vitals.5381d94b6c54.96.webp",
+          "sha256": "dbe74885f95ad73ad24ab77b7c22133cfeef1f01a909c169fb869c49d728afbc",
+          "width": 96
+        },
+        {
+          "bytes": 26774,
+          "height": 320,
+          "path": "/art/anomaly_vitals.5381d94b6c54.320.webp",
+          "sha256": "94fe2c0180b010293a4b3082dc45e1c2c12974499bb8d6c54edd2f56c0b26c87",
+          "width": 320
+        },
+        {
+          "bytes": 109842,
+          "height": 320,
+          "path": "/art/anomaly_vitals.5381d94b6c54.320.png",
+          "sha256": "fbc98b71f294d45690ea5012ef6a631ac5ea5721001944dfca33c6c43730a766",
+          "width": 320
+        },
+        {
+          "bytes": 65730,
+          "height": 640,
+          "path": "/art/anomaly_vitals.5381d94b6c54.640.webp",
+          "sha256": "028797bc49be30bfccd320f715d08a20abbdf98938b4ddf5f4f321654df42587",
+          "width": 640
+        }
+      ],
+      "sha256": "5381d94b6c5481510ae324f65eeb3235f6ec634974f57b1a86387c72a83febe3",
+      "urls": {
+        "png_320": "/art/anomaly_vitals.5381d94b6c54.320.png",
+        "webp_320": "/art/anomaly_vitals.5381d94b6c54.320.webp",
+        "webp_640": "/art/anomaly_vitals.5381d94b6c54.640.webp",
+        "webp_96": "/art/anomaly_vitals.5381d94b6c54.96.webp"
+      },
+      "width": 1254
+    },
+    "detector_base": {
+      "alpha_bbox": [
+        1,
+        6,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/detector_base.png",
+      "original_filename": "seeklet.png",
+      "outputs": [
+        {
+          "bytes": 6532,
+          "height": 96,
+          "path": "/art/detector_base.6827f9b513ec.96.webp",
+          "sha256": "1e5e35cdbceb1e549ef682154f5c574f9baa44b5b6a0138fa36172eddcca1dcc",
+          "width": 96
+        },
+        {
+          "bytes": 31052,
+          "height": 320,
+          "path": "/art/detector_base.6827f9b513ec.320.webp",
+          "sha256": "6d5a923292661bbab80a05278a6b1674e773213dd50c4b4ba285967318da489a",
+          "width": 320
+        },
+        {
+          "bytes": 126669,
+          "height": 320,
+          "path": "/art/detector_base.6827f9b513ec.320.png",
+          "sha256": "3266ebe47f430ae8e6ea317d65eac2b1443d8f6bd72ce9658586efd0e13854c0",
+          "width": 320
+        },
+        {
+          "bytes": 75534,
+          "height": 640,
+          "path": "/art/detector_base.6827f9b513ec.640.webp",
+          "sha256": "4a7d6570b3b39d9ae99f538c34e67adb32be814826527c6ed0975c3c050f2a82",
+          "width": 640
+        }
+      ],
+      "sha256": "6827f9b513ec9253beb10eb923c851521d6c642667c7857cad1bd2696497a194",
+      "urls": {
+        "png_320": "/art/detector_base.6827f9b513ec.320.png",
+        "webp_320": "/art/detector_base.6827f9b513ec.320.webp",
+        "webp_640": "/art/detector_base.6827f9b513ec.640.webp",
+        "webp_96": "/art/detector_base.6827f9b513ec.96.webp"
+      },
+      "width": 1254
+    },
+    "detector_defect": {
+      "alpha_bbox": [
+        29,
+        19,
+        1207,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/detector_defect.png",
+      "original_filename": "inspectra.png",
+      "outputs": [
+        {
+          "bytes": 5846,
+          "height": 96,
+          "path": "/art/detector_defect.797ce59b15df.96.webp",
+          "sha256": "7974afb9ad2611c0b601bdf0a43285b68114919d667e30529f434af5fed5e1a8",
+          "width": 96
+        },
+        {
+          "bytes": 23616,
+          "height": 320,
+          "path": "/art/detector_defect.797ce59b15df.320.webp",
+          "sha256": "4f6bf6e0c7e53ef3807e75b30a6dbae390399618d49b84e7459c81405d765f1f",
+          "width": 320
+        },
+        {
+          "bytes": 91964,
+          "height": 320,
+          "path": "/art/detector_defect.797ce59b15df.320.png",
+          "sha256": "97eeb9f72e793ed4f729d31e6b61764648c2245e473a414d7dd5a9ca61b5d11a",
+          "width": 320
+        },
+        {
+          "bytes": 58938,
+          "height": 640,
+          "path": "/art/detector_defect.797ce59b15df.640.webp",
+          "sha256": "327e276b395532ed62df08cbc54c21fcda9d1f0625bc806fef454c284d82f39e",
+          "width": 640
+        }
+      ],
+      "sha256": "797ce59b15dfdf218a90110bdc2583b271a3be0692c70eb39a0878b3ec1c9b28",
+      "urls": {
+        "png_320": "/art/detector_defect.797ce59b15df.320.png",
+        "webp_320": "/art/detector_defect.797ce59b15df.320.webp",
+        "webp_640": "/art/detector_defect.797ce59b15df.640.webp",
+        "webp_96": "/art/detector_defect.797ce59b15df.96.webp"
+      },
+      "width": 1254
+    },
+    "detector_disease": {
+      "alpha_bbox": [
+        1,
+        6,
+        1351,
+        1148
+      ],
+      "height": 1164,
+      "master": "assets/modemon/approved/originals/detector_disease.png",
+      "original_filename": "pathogaze.png",
+      "outputs": [
+        {
+          "bytes": 5302,
+          "height": 96,
+          "path": "/art/detector_disease.2fe575fb0c2f.96.webp",
+          "sha256": "f9e27d3298a9c800c1f45c2fe2dfec40305bb16548c819de68c469a14e0eab2c",
+          "width": 96
+        },
+        {
+          "bytes": 20940,
+          "height": 320,
+          "path": "/art/detector_disease.2fe575fb0c2f.320.webp",
+          "sha256": "4450c1de7616e5d8605bf2227815eb98fc393c74180224fe54f518ff0d880a94",
+          "width": 320
+        },
+        {
+          "bytes": 78348,
+          "height": 320,
+          "path": "/art/detector_disease.2fe575fb0c2f.320.png",
+          "sha256": "151fa36ddda0114a8a552d94663dff6fd5069cc029adea42088ec05fe135a934",
+          "width": 320
+        },
+        {
+          "bytes": 53118,
+          "height": 640,
+          "path": "/art/detector_disease.2fe575fb0c2f.640.webp",
+          "sha256": "be4a4144cff2fc4a9981938d8e0267c5ae3e3c1b5a9eeecf7baef37714135903",
+          "width": 640
+        }
+      ],
+      "sha256": "2fe575fb0c2fa167e60ae289dfbabf7c6982e1a798ed7af7f541596965c4d85e",
+      "urls": {
+        "png_320": "/art/detector_disease.2fe575fb0c2f.320.png",
+        "webp_320": "/art/detector_disease.2fe575fb0c2f.320.webp",
+        "webp_640": "/art/detector_disease.2fe575fb0c2f.640.webp",
+        "webp_96": "/art/detector_disease.2fe575fb0c2f.96.webp"
+      },
+      "width": 1351
+    },
+    "detector_pedestrian": {
+      "alpha_bbox": [
+        25,
+        3,
+        1298,
+        1199
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/detector_pedestrian.png",
+      "original_filename": "crowdseer.png",
+      "outputs": [
+        {
+          "bytes": 5462,
+          "height": 96,
+          "path": "/art/detector_pedestrian.a7f8d13b1d04.96.webp",
+          "sha256": "dd9545291f4ee22359795cb4c6379fed2a79b46d94c8ace3f6e8afc986e7fbd9",
+          "width": 96
+        },
+        {
+          "bytes": 23798,
+          "height": 320,
+          "path": "/art/detector_pedestrian.a7f8d13b1d04.320.webp",
+          "sha256": "50c1cdedd4c10d82fd9465a6358a2dc8f520c6c2cf44305c360cceb6cac96ace",
+          "width": 320
+        },
+        {
+          "bytes": 78562,
+          "height": 320,
+          "path": "/art/detector_pedestrian.a7f8d13b1d04.320.png",
+          "sha256": "896fddffbf157110161d39ed99694bef0dda590df2ab503811aeb163159f7838",
+          "width": 320
+        },
+        {
+          "bytes": 61232,
+          "height": 640,
+          "path": "/art/detector_pedestrian.a7f8d13b1d04.640.webp",
+          "sha256": "2737c2c71e29d843f877078fdbcd1d0ab08cc477522998e889301821a0ec0ff1",
+          "width": 640
+        }
+      ],
+      "sha256": "a7f8d13b1d043fdfb1f3bb611dffe2ca8e78f70f135d109e320d67ad2f07a3a5",
+      "urls": {
+        "png_320": "/art/detector_pedestrian.a7f8d13b1d04.320.png",
+        "webp_320": "/art/detector_pedestrian.a7f8d13b1d04.320.webp",
+        "webp_640": "/art/detector_pedestrian.a7f8d13b1d04.640.webp",
+        "webp_96": "/art/detector_pedestrian.a7f8d13b1d04.96.webp"
+      },
+      "width": 1312
+    },
+    "extractor_archive": {
+      "alpha_bbox": [
+        17,
+        21,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/extractor_archive.png",
+      "original_filename": "manusqueak.png",
+      "outputs": [
+        {
+          "bytes": 5516,
+          "height": 96,
+          "path": "/art/extractor_archive.2a2a16d2fa98.96.webp",
+          "sha256": "a608b3aecb915c40f947d318f262b28a5ee8d432aad06c038dc67458423af6d4",
+          "width": 96
+        },
+        {
+          "bytes": 25532,
+          "height": 320,
+          "path": "/art/extractor_archive.2a2a16d2fa98.320.webp",
+          "sha256": "d011ac232b32c68945eb85ce208d1efc9c12ccffbdec133e54e6913c139432a4",
+          "width": 320
+        },
+        {
+          "bytes": 96334,
+          "height": 320,
+          "path": "/art/extractor_archive.2a2a16d2fa98.320.png",
+          "sha256": "f0a87f84d77bd8db8da0d32d9c07f12ef0961678b469b3b8a279a5e9fc4f0600",
+          "width": 320
+        },
+        {
+          "bytes": 70192,
+          "height": 640,
+          "path": "/art/extractor_archive.2a2a16d2fa98.640.webp",
+          "sha256": "2605c1225318fa2aefe35ef5f60233d91de0f1b816b9f2c44098a0ddc600fed4",
+          "width": 640
+        }
+      ],
+      "sha256": "2a2a16d2fa9887302ceff9daba839166ecd4d06ee573cf717554aadd1e1a9cd5",
+      "urls": {
+        "png_320": "/art/extractor_archive.2a2a16d2fa98.320.png",
+        "webp_320": "/art/extractor_archive.2a2a16d2fa98.320.webp",
+        "webp_640": "/art/extractor_archive.2a2a16d2fa98.640.webp",
+        "webp_96": "/art/extractor_archive.2a2a16d2fa98.96.webp"
+      },
+      "width": 1254
+    },
+    "extractor_base": {
+      "alpha_bbox": [
+        0,
+        0,
+        1312,
+        1186
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/extractor_base.png",
+      "original_filename": "scribbit.png",
+      "outputs": [
+        {
+          "bytes": 6094,
+          "height": 96,
+          "path": "/art/extractor_base.643dfda38018.96.webp",
+          "sha256": "b680bf3775344d2046f3889d039f70a3a7d3b1eee83cdfa35981824f91d6c1ab",
+          "width": 96
+        },
+        {
+          "bytes": 29744,
+          "height": 320,
+          "path": "/art/extractor_base.643dfda38018.320.webp",
+          "sha256": "eddba91bfe0c86da891514c2cb9bafe0fe5958c281dfe57c3eac85191fc13a30",
+          "width": 320
+        },
+        {
+          "bytes": 127064,
+          "height": 320,
+          "path": "/art/extractor_base.643dfda38018.320.png",
+          "sha256": "947103f87700ee3e9642584ca8c09a87013903775dbb9f9381e0f8c7bfd470b8",
+          "width": 320
+        },
+        {
+          "bytes": 79484,
+          "height": 640,
+          "path": "/art/extractor_base.643dfda38018.640.webp",
+          "sha256": "44d892c6be24a5ae488329ba030bab82dc183e5ad73b1a8a32d0ec0d81732cc6",
+          "width": 640
+        }
+      ],
+      "sha256": "643dfda38018ed1b64ad1198eb7dea5a466d5efc0fda8f205c09fb5a98352eaf",
+      "urls": {
+        "png_320": "/art/extractor_base.643dfda38018.320.png",
+        "webp_320": "/art/extractor_base.643dfda38018.320.webp",
+        "webp_640": "/art/extractor_base.643dfda38018.640.webp",
+        "webp_96": "/art/extractor_base.643dfda38018.96.webp"
+      },
+      "width": 1312
+    },
+    "extractor_government": {
+      "alpha_bbox": [
+        18,
+        47,
+        1356,
+        1127
+      ],
+      "height": 1159,
+      "master": "assets/modemon/approved/originals/extractor_government.png",
+      "original_filename": "bureaucritter.png",
+      "outputs": [
+        {
+          "bytes": 4200,
+          "height": 96,
+          "path": "/art/extractor_government.8c126a2ca057.96.webp",
+          "sha256": "d834be7763977cd0aa9a0aed42c1e9a45797fabcc581e54a7cf69ba838f2d99a",
+          "width": 96
+        },
+        {
+          "bytes": 18636,
+          "height": 320,
+          "path": "/art/extractor_government.8c126a2ca057.320.webp",
+          "sha256": "4a4d4da22f42cc6c66b921bc66748cba9fae566c53e9b0f4c78a289d35748e9d",
+          "width": 320
+        },
+        {
+          "bytes": 89067,
+          "height": 320,
+          "path": "/art/extractor_government.8c126a2ca057.320.png",
+          "sha256": "c7de5f84a290a92447bf0caeaf13213c1e82bbd3a617eb563f5a56cd52f947df",
+          "width": 320
+        },
+        {
+          "bytes": 42442,
+          "height": 640,
+          "path": "/art/extractor_government.8c126a2ca057.640.webp",
+          "sha256": "2c3a4387a3ad7d496c483349a8f4033c1bc90818e652b6cce26aa9558ac41694",
+          "width": 640
+        }
+      ],
+      "sha256": "8c126a2ca0578655ddf78c6a21b1e31666218b77559e2f81a2d2e8174b7f84eb",
+      "urls": {
+        "png_320": "/art/extractor_government.8c126a2ca057.320.png",
+        "webp_320": "/art/extractor_government.8c126a2ca057.320.webp",
+        "webp_640": "/art/extractor_government.8c126a2ca057.640.webp",
+        "webp_96": "/art/extractor_government.8c126a2ca057.96.webp"
+      },
+      "width": 1356
+    },
+    "extractor_history": {
+      "alpha_bbox": [
+        10,
+        10,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/extractor_history.png",
+      "original_filename": "archivole.png",
+      "outputs": [
+        {
+          "bytes": 6540,
+          "height": 96,
+          "path": "/art/extractor_history.d16b6e549140.96.webp",
+          "sha256": "8503564657e2ef4ee53c24f3973d53e185ec04e405229cf2a9e2af5a8da0cd16",
+          "width": 96
+        },
+        {
+          "bytes": 32436,
+          "height": 320,
+          "path": "/art/extractor_history.d16b6e549140.320.webp",
+          "sha256": "d757924ed3f2ddd2b13134b47e484a49dc5bb6b3c87a7907ea5c573302421c2e",
+          "width": 320
+        },
+        {
+          "bytes": 144663,
+          "height": 320,
+          "path": "/art/extractor_history.d16b6e549140.320.png",
+          "sha256": "748ad4476d7015cf66e727acc3a8e463a274eec9b60503ba19cccb901b9187ef",
+          "width": 320
+        },
+        {
+          "bytes": 84866,
+          "height": 640,
+          "path": "/art/extractor_history.d16b6e549140.640.webp",
+          "sha256": "908c8920eb261e028276dc0586026c8ec8c175928126c11e7c1a4c20c3a2b71d",
+          "width": 640
+        }
+      ],
+      "sha256": "d16b6e549140dcb9c96527d40e4c31fdb6f55d52bff7a7109f27c20798f11fb3",
+      "urls": {
+        "png_320": "/art/extractor_history.d16b6e549140.320.png",
+        "webp_320": "/art/extractor_history.d16b6e549140.320.webp",
+        "webp_640": "/art/extractor_history.d16b6e549140.640.webp",
+        "webp_96": "/art/extractor_history.d16b6e549140.96.webp"
+      },
+      "width": 1254
+    },
+    "extractor_medical": {
+      "alpha_bbox": [
+        0,
+        16,
+        1236,
+        1236
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/extractor_medical.png",
+      "original_filename": "clinink.png",
+      "outputs": [
+        {
+          "bytes": 6548,
+          "height": 96,
+          "path": "/art/extractor_medical.d28ed1a4ed12.96.webp",
+          "sha256": "928571cf4f8152d77e6c52d707a163ee5957b0f1c4a7bd73efce99fcd5caf8e7",
+          "width": 96
+        },
+        {
+          "bytes": 28700,
+          "height": 320,
+          "path": "/art/extractor_medical.d28ed1a4ed12.320.webp",
+          "sha256": "4d7ebf2612ec0f42497e6f6c3a43b4eb3a36d6bbad9816314c34cbf8ef05d4d8",
+          "width": 320
+        },
+        {
+          "bytes": 109258,
+          "height": 320,
+          "path": "/art/extractor_medical.d28ed1a4ed12.320.png",
+          "sha256": "82b3ef433608209eadfcc9342cedeae3d2c53caf2ba0b9a8a71cc7b13aa474d6",
+          "width": 320
+        },
+        {
+          "bytes": 72946,
+          "height": 640,
+          "path": "/art/extractor_medical.d28ed1a4ed12.640.webp",
+          "sha256": "62151e23df314daea699224f619f9e49ccb501f4c7e5e6b67fef1b78d1029853",
+          "width": 640
+        }
+      ],
+      "sha256": "d28ed1a4ed12d2204bd75fe6f0faf387d6195beedfa5ef09a532096c54537d31",
+      "urls": {
+        "png_320": "/art/extractor_medical.d28ed1a4ed12.320.png",
+        "webp_320": "/art/extractor_medical.d28ed1a4ed12.320.webp",
+        "webp_640": "/art/extractor_medical.d28ed1a4ed12.640.webp",
+        "webp_96": "/art/extractor_medical.d28ed1a4ed12.96.webp"
+      },
+      "width": 1254
+    },
+    "extractor_research": {
+      "alpha_bbox": [
+        11,
+        0,
+        1312,
+        1199
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/extractor_research.png",
+      "original_filename": "scholarat.png",
+      "outputs": [
+        {
+          "bytes": 5614,
+          "height": 96,
+          "path": "/art/extractor_research.694fcf865e27.96.webp",
+          "sha256": "f7ff730953940462d81fee86800083bf1859a686f5c8d7264b4550222f95fa0c",
+          "width": 96
+        },
+        {
+          "bytes": 25120,
+          "height": 320,
+          "path": "/art/extractor_research.694fcf865e27.320.webp",
+          "sha256": "19c49c8631995a999314709b590dac0c9a6b055b5b8b5a75693065654191ef04",
+          "width": 320
+        },
+        {
+          "bytes": 84975,
+          "height": 320,
+          "path": "/art/extractor_research.694fcf865e27.320.png",
+          "sha256": "20d9949d64ee1d0827f2ac5c6b75553d75a662f3042f3e9403ab33eae28cf000",
+          "width": 320
+        },
+        {
+          "bytes": 63532,
+          "height": 640,
+          "path": "/art/extractor_research.694fcf865e27.640.webp",
+          "sha256": "26987248ffa140da9c7aa48c74079e62623e8cd46489bfe029e6dc7a35ce3846",
+          "width": 640
+        }
+      ],
+      "sha256": "694fcf865e27e6f3b9aea3d603de34652713cacca6c229924768b804b6337bdf",
+      "urls": {
+        "png_320": "/art/extractor_research.694fcf865e27.320.png",
+        "webp_320": "/art/extractor_research.694fcf865e27.320.webp",
+        "webp_640": "/art/extractor_research.694fcf865e27.640.webp",
+        "webp_96": "/art/extractor_research.694fcf865e27.96.webp"
+      },
+      "width": 1312
+    },
+    "extractor_specimen": {
+      "alpha_bbox": [
+        0,
+        15,
+        1312,
+        1175
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/extractor_specimen.png",
+      "original_filename": "specimunk.png",
+      "outputs": [
+        {
+          "bytes": 5238,
+          "height": 96,
+          "path": "/art/extractor_specimen.466423e54c72.96.webp",
+          "sha256": "fa89685c8c3e76fc859fcb714a12984a4d1197b208779d77c005ae9d5a26f649",
+          "width": 96
+        },
+        {
+          "bytes": 26596,
+          "height": 320,
+          "path": "/art/extractor_specimen.466423e54c72.320.webp",
+          "sha256": "289be5627659dd477d18910b005126b9196a2362fa0e64b497f55a18406806a2",
+          "width": 320
+        },
+        {
+          "bytes": 132231,
+          "height": 320,
+          "path": "/art/extractor_specimen.466423e54c72.320.png",
+          "sha256": "73cfbd310f333c13665bce2b50788a27dc70379396de269065c4c1fd117006e6",
+          "width": 320
+        },
+        {
+          "bytes": 71974,
+          "height": 640,
+          "path": "/art/extractor_specimen.466423e54c72.640.webp",
+          "sha256": "34e7e600e537403982053a19d09ea55b0a73502fca178acc433efdf1c68b31d0",
+          "width": 640
+        }
+      ],
+      "sha256": "466423e54c72dad53da3addee4e032a43e5d04fe6f6f83eea43c3a7040b86b6b",
+      "urls": {
+        "png_320": "/art/extractor_specimen.466423e54c72.320.png",
+        "webp_320": "/art/extractor_specimen.466423e54c72.320.webp",
+        "webp_640": "/art/extractor_specimen.466423e54c72.640.webp",
+        "webp_96": "/art/extractor_specimen.466423e54c72.96.webp"
+      },
+      "width": 1312
+    },
+    "forecast_base": {
+      "alpha_bbox": [
+        0,
+        6,
+        1242,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/forecast_base.png",
+      "original_filename": "forespirit.png",
+      "outputs": [
+        {
+          "bytes": 7292,
+          "height": 96,
+          "path": "/art/forecast_base.edfd2ad74011.96.webp",
+          "sha256": "acb19af7dafce8a78658ccd0354674ef0c8aee508276783e836bf2c63233cc21",
+          "width": 96
+        },
+        {
+          "bytes": 35700,
+          "height": 320,
+          "path": "/art/forecast_base.edfd2ad74011.320.webp",
+          "sha256": "b5a1ce593290163504fd41c779249d123a731592951ae3e98dc9f3f4cca1e908",
+          "width": 320
+        },
+        {
+          "bytes": 126380,
+          "height": 320,
+          "path": "/art/forecast_base.edfd2ad74011.320.png",
+          "sha256": "6cb92c0e1460a72e3029078362e46046203a4bf8fe207a31070f0a9e537406ae",
+          "width": 320
+        },
+        {
+          "bytes": 90262,
+          "height": 640,
+          "path": "/art/forecast_base.edfd2ad74011.640.webp",
+          "sha256": "4e78a7b02a46c5cbfe8b5231ab0f7ed9e607b17e9a191f52372bb8624b6e8b51",
+          "width": 640
+        }
+      ],
+      "sha256": "edfd2ad74011eb53e55d31fcdb54ef85a1ab39c3a7ab801f42490fd6efb565ff",
+      "urls": {
+        "png_320": "/art/forecast_base.edfd2ad74011.320.png",
+        "webp_320": "/art/forecast_base.edfd2ad74011.320.webp",
+        "webp_640": "/art/forecast_base.edfd2ad74011.640.webp",
+        "webp_96": "/art/forecast_base.edfd2ad74011.96.webp"
+      },
+      "width": 1254
+    },
+    "forecast_crowd": {
+      "alpha_bbox": [
+        0,
+        19,
+        1244,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/forecast_crowd.png",
+      "original_filename": "gathergeist.png",
+      "outputs": [
+        {
+          "bytes": 5762,
+          "height": 96,
+          "path": "/art/forecast_crowd.63afddd7ad7c.96.webp",
+          "sha256": "01a0f07fc271df0aab007f749f9fcc1ca17e9edeaf2f40da85ddcd9ba697f218",
+          "width": 96
+        },
+        {
+          "bytes": 26902,
+          "height": 320,
+          "path": "/art/forecast_crowd.63afddd7ad7c.320.webp",
+          "sha256": "0ba88f31fc6dc9f17b57a422e4e900e8b74b54c1bf8e8856bfda5e413448b899",
+          "width": 320
+        },
+        {
+          "bytes": 112082,
+          "height": 320,
+          "path": "/art/forecast_crowd.63afddd7ad7c.320.png",
+          "sha256": "473f2be6d40a58b614c8af9b8cb7c10346df5d61a1d9c900d70da5d0f8ade0ad",
+          "width": 320
+        },
+        {
+          "bytes": 64562,
+          "height": 640,
+          "path": "/art/forecast_crowd.63afddd7ad7c.640.webp",
+          "sha256": "db413e51adf70ffe8c4d9b36c96984ce766b1074562749b92b67cddb963c4ee1",
+          "width": 640
+        }
+      ],
+      "sha256": "63afddd7ad7c8f5e253775addf7d8d89fbe8212b4549a0d30fe674815a436304",
+      "urls": {
+        "png_320": "/art/forecast_crowd.63afddd7ad7c.320.png",
+        "webp_320": "/art/forecast_crowd.63afddd7ad7c.320.webp",
+        "webp_640": "/art/forecast_crowd.63afddd7ad7c.640.webp",
+        "webp_96": "/art/forecast_crowd.63afddd7ad7c.96.webp"
+      },
+      "width": 1254
+    },
+    "forecast_patient": {
+      "alpha_bbox": [
+        0,
+        19,
+        1296,
+        1173
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/forecast_patient.png",
+      "original_filename": "wardwisp.png",
+      "outputs": [
+        {
+          "bytes": 6562,
+          "height": 96,
+          "path": "/art/forecast_patient.cf4d6ec41d43.96.webp",
+          "sha256": "4d67231f9085f9a9e7f1e81daeed0288566b8cf6a4680d7cd4c619dc9f968737",
+          "width": 96
+        },
+        {
+          "bytes": 33088,
+          "height": 320,
+          "path": "/art/forecast_patient.cf4d6ec41d43.320.webp",
+          "sha256": "7d28827162555fe9267dfb2a64ec4ff9273c618c86d950ec812f65ebc8f48d8d",
+          "width": 320
+        },
+        {
+          "bytes": 111100,
+          "height": 320,
+          "path": "/art/forecast_patient.cf4d6ec41d43.320.png",
+          "sha256": "126e2553ec53e02dafa1631c8e525705bb77d4ad3c83f2372bd005759e665e54",
+          "width": 320
+        },
+        {
+          "bytes": 81038,
+          "height": 640,
+          "path": "/art/forecast_patient.cf4d6ec41d43.640.webp",
+          "sha256": "6855515eefe650522e90b650689f57f80110cba0f45af17f146c80f9df600516",
+          "width": 640
+        }
+      ],
+      "sha256": "cf4d6ec41d4322bc228d4ea9ca8076ab5e2ef22e893241590dc624d48f850c4f",
+      "urls": {
+        "png_320": "/art/forecast_patient.cf4d6ec41d43.320.png",
+        "webp_320": "/art/forecast_patient.cf4d6ec41d43.320.webp",
+        "webp_640": "/art/forecast_patient.cf4d6ec41d43.640.webp",
+        "webp_96": "/art/forecast_patient.cf4d6ec41d43.96.webp"
+      },
+      "width": 1312
+    },
+    "forecast_stock": {
+      "alpha_bbox": [
+        30,
+        5,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/forecast_stock.png",
+      "original_filename": "coinjurer.png",
+      "outputs": [
+        {
+          "bytes": 6710,
+          "height": 96,
+          "path": "/art/forecast_stock.99e9b961625d.96.webp",
+          "sha256": "33b06531f3efc042744cd9914d8dbc0f64c2c35fd461d6304a897aeb895fe41b",
+          "width": 96
+        },
+        {
+          "bytes": 33998,
+          "height": 320,
+          "path": "/art/forecast_stock.99e9b961625d.320.webp",
+          "sha256": "f396d46c950880929357d318480dfb5ae5607f1f712a0698260c4fab1f94d669",
+          "width": 320
+        },
+        {
+          "bytes": 119169,
+          "height": 320,
+          "path": "/art/forecast_stock.99e9b961625d.320.png",
+          "sha256": "78b275a840d4303a2e4ab969ae72ca9330bbda87c2e019c889455411f66a833f",
+          "width": 320
+        },
+        {
+          "bytes": 85786,
+          "height": 640,
+          "path": "/art/forecast_stock.99e9b961625d.640.webp",
+          "sha256": "9581696a423b1cb6f326530a5e4fa11d9026ed895c266ad90030d4b0e93bfb07",
+          "width": 640
+        }
+      ],
+      "sha256": "99e9b961625da66919b4e0dfc5a5e09702d5826939f5be7f31b2e00f6b2c840e",
+      "urls": {
+        "png_320": "/art/forecast_stock.99e9b961625d.320.png",
+        "webp_320": "/art/forecast_stock.99e9b961625d.320.webp",
+        "webp_640": "/art/forecast_stock.99e9b961625d.640.webp",
+        "webp_96": "/art/forecast_stock.99e9b961625d.96.webp"
+      },
+      "width": 1254
+    },
+    "forecast_transit": {
+      "alpha_bbox": [
+        20,
+        14,
+        1247,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/forecast_transit.png",
+      "original_filename": "commutoracle.png",
+      "outputs": [
+        {
+          "bytes": 7676,
+          "height": 96,
+          "path": "/art/forecast_transit.588c819301f3.96.webp",
+          "sha256": "50e84d8cb0722930ba63c20b1adb5e0778bf431cd132e9d2206513b20ded16be",
+          "width": 96
+        },
+        {
+          "bytes": 38260,
+          "height": 320,
+          "path": "/art/forecast_transit.588c819301f3.320.webp",
+          "sha256": "bb90b3348c637c0639ca24b3dc2b54db63e2ebce3c96c19431c792917c805f75",
+          "width": 320
+        },
+        {
+          "bytes": 136708,
+          "height": 320,
+          "path": "/art/forecast_transit.588c819301f3.320.png",
+          "sha256": "783c993defa9064f9f7e57870e45e57e6e170ce55c361de55be82960fede2e16",
+          "width": 320
+        },
+        {
+          "bytes": 98172,
+          "height": 640,
+          "path": "/art/forecast_transit.588c819301f3.640.webp",
+          "sha256": "05e9aa70eb158757243db1e56eca1a2e560aa079d9153d118873adbb1827d670",
+          "width": 640
+        }
+      ],
+      "sha256": "588c819301f3c9cafd061d86cbc288e2a1ebafd319b90e3697b26db254513356",
+      "urls": {
+        "png_320": "/art/forecast_transit.588c819301f3.320.png",
+        "webp_320": "/art/forecast_transit.588c819301f3.320.webp",
+        "webp_640": "/art/forecast_transit.588c819301f3.640.webp",
+        "webp_96": "/art/forecast_transit.588c819301f3.96.webp"
+      },
+      "width": 1254
+    },
+    "generator_base": {
+      "alpha_bbox": [
+        1,
+        0,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/generator_base.png",
+      "original_filename": "purrrompt.png",
+      "outputs": [
+        {
+          "bytes": 6576,
+          "height": 96,
+          "path": "/art/generator_base.64312ec5895a.96.webp",
+          "sha256": "3528944b81352c4a7c190231f5f51897cd1cd7ab4a8a41738c1e2d18ef37bb4d",
+          "width": 96
+        },
+        {
+          "bytes": 35436,
+          "height": 320,
+          "path": "/art/generator_base.64312ec5895a.320.webp",
+          "sha256": "cc288e6771a3e6b0a95a2ae33d26a265ef1a4b2bfa151f397b08a7feb9b89feb",
+          "width": 320
+        },
+        {
+          "bytes": 114349,
+          "height": 320,
+          "path": "/art/generator_base.64312ec5895a.320.png",
+          "sha256": "99b9faf8a493b9602f08139de4ee3957b739034ab977a808d8a75082300a2921",
+          "width": 320
+        },
+        {
+          "bytes": 94902,
+          "height": 640,
+          "path": "/art/generator_base.64312ec5895a.640.webp",
+          "sha256": "f26d00799bdb7f98375cc8e435256e6e35a938267a527eb6bfd90a533cf59bdc",
+          "width": 640
+        }
+      ],
+      "sha256": "64312ec5895a664770003cc17049ef1ce8eef5372803b29b337ecbc5fe10cdc8",
+      "urls": {
+        "png_320": "/art/generator_base.64312ec5895a.320.png",
+        "webp_320": "/art/generator_base.64312ec5895a.320.webp",
+        "webp_640": "/art/generator_base.64312ec5895a.640.webp",
+        "webp_96": "/art/generator_base.64312ec5895a.96.webp"
+      },
+      "width": 1254
+    },
+    "generator_catalog": {
+      "alpha_bbox": [
+        0,
+        14,
+        1240,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/generator_catalog.png",
+      "original_filename": "catalogar.png",
+      "outputs": [
+        {
+          "bytes": 6578,
+          "height": 96,
+          "path": "/art/generator_catalog.20ea6b5a013e.96.webp",
+          "sha256": "5f956479da8f83ac24e5c1675a07a645a9e767a0946f135fa468f995b422ab74",
+          "width": 96
+        },
+        {
+          "bytes": 30722,
+          "height": 320,
+          "path": "/art/generator_catalog.20ea6b5a013e.320.webp",
+          "sha256": "2f63aef2c2d62e63c5d735cd5d93511537f672f0162be069287ac6771aaccaac",
+          "width": 320
+        },
+        {
+          "bytes": 123855,
+          "height": 320,
+          "path": "/art/generator_catalog.20ea6b5a013e.320.png",
+          "sha256": "8cc062234d11e8a6ab1a8c2f57aa96558decef6d9460bdff17aadbd6192c49f9",
+          "width": 320
+        },
+        {
+          "bytes": 78070,
+          "height": 640,
+          "path": "/art/generator_catalog.20ea6b5a013e.640.webp",
+          "sha256": "2567186bcc4ed7409b6a947783d9edd5e2e764eeaecf71d1d2bebb03205c241b",
+          "width": 640
+        }
+      ],
+      "sha256": "20ea6b5a013efe5999aa30336c71eb5bdbbee7500ee51566bed3d0f8cc355a7c",
+      "urls": {
+        "png_320": "/art/generator_catalog.20ea6b5a013e.320.png",
+        "webp_320": "/art/generator_catalog.20ea6b5a013e.320.webp",
+        "webp_640": "/art/generator_catalog.20ea6b5a013e.640.webp",
+        "webp_96": "/art/generator_catalog.20ea6b5a013e.96.webp"
+      },
+      "width": 1254
+    },
+    "generator_classroom_chatbot": {
+      "alpha_bbox": [
+        0,
+        1,
+        1253,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/generator_classroom_chatbot.png",
+      "original_filename": "lecturlynx.png",
+      "outputs": [
+        {
+          "bytes": 6548,
+          "height": 96,
+          "path": "/art/generator_classroom_chatbot.5148ee12b527.96.webp",
+          "sha256": "71231dc6bc457818bab63d599a35e09b07f5455caaa86cc6243fce287a220d4a",
+          "width": 96
+        },
+        {
+          "bytes": 28924,
+          "height": 320,
+          "path": "/art/generator_classroom_chatbot.5148ee12b527.320.webp",
+          "sha256": "6aa587c5765fca4a2bd5bad4c1e10bcda83b200988646534ab51f42b6a8368f6",
+          "width": 320
+        },
+        {
+          "bytes": 101578,
+          "height": 320,
+          "path": "/art/generator_classroom_chatbot.5148ee12b527.320.png",
+          "sha256": "cf695ba41554ebdb72c4bc07bbf7b647c75cd85bfb803ac66da7da200ae42e1b",
+          "width": 320
+        },
+        {
+          "bytes": 74768,
+          "height": 640,
+          "path": "/art/generator_classroom_chatbot.5148ee12b527.640.webp",
+          "sha256": "f682fa393c66e831b0afce4e54f207efe548f47afddf6bfb87b4156c5a4fb706",
+          "width": 640
+        }
+      ],
+      "sha256": "5148ee12b5274f292b747d781eeb9b3fd3061236f896b39ee0c5942555aeab4d",
+      "urls": {
+        "png_320": "/art/generator_classroom_chatbot.5148ee12b527.320.png",
+        "webp_320": "/art/generator_classroom_chatbot.5148ee12b527.320.webp",
+        "webp_640": "/art/generator_classroom_chatbot.5148ee12b527.640.webp",
+        "webp_96": "/art/generator_classroom_chatbot.5148ee12b527.96.webp"
+      },
+      "width": 1254
+    },
+    "generator_conversational": {
+      "alpha_bbox": [
+        22,
+        1,
+        1178,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/generator_conversational.png",
+      "original_filename": "meowlogue.png",
+      "outputs": [
+        {
+          "bytes": 5362,
+          "height": 96,
+          "path": "/art/generator_conversational.63a520209117.96.webp",
+          "sha256": "5b8c8d478f2240199a1b6f70106d86d7f5cbe9997bf8298ef1eefa8fffae3a46",
+          "width": 96
+        },
+        {
+          "bytes": 20960,
+          "height": 320,
+          "path": "/art/generator_conversational.63a520209117.320.webp",
+          "sha256": "bc1f606faeb3a1d26a6ee9dec4b77d41277ff0474a8ce4ac5d1042708914412f",
+          "width": 320
+        },
+        {
+          "bytes": 86283,
+          "height": 320,
+          "path": "/art/generator_conversational.63a520209117.320.png",
+          "sha256": "d796cf93616aa609a7aca0243aab421f2742d1f0c8cbeb137d9c26297133d517",
+          "width": 320
+        },
+        {
+          "bytes": 50674,
+          "height": 640,
+          "path": "/art/generator_conversational.63a520209117.640.webp",
+          "sha256": "0f775876c450f8938e1caa346ce6e912bc71a3e272870f7c502d5e4b7c1bade1",
+          "width": 640
+        }
+      ],
+      "sha256": "63a520209117867b4972e8c6b87eb9f2c41dec83090e4dc4652b98c0b8184673",
+      "urls": {
+        "png_320": "/art/generator_conversational.63a520209117.320.png",
+        "webp_320": "/art/generator_conversational.63a520209117.320.webp",
+        "webp_640": "/art/generator_conversational.63a520209117.640.webp",
+        "webp_96": "/art/generator_conversational.63a520209117.96.webp"
+      },
+      "width": 1254
+    },
+    "generator_creative": {
+      "alpha_bbox": [
+        70,
+        9,
+        1220,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/generator_creative.png",
+      "original_filename": "articlaw.png",
+      "outputs": [
+        {
+          "bytes": 5562,
+          "height": 96,
+          "path": "/art/generator_creative.c4941266181d.96.webp",
+          "sha256": "51cd8e9dd6cf74ed8df31c07222013740fdd2b3b99162e1b3ebe944391b79e6a",
+          "width": 96
+        },
+        {
+          "bytes": 24630,
+          "height": 320,
+          "path": "/art/generator_creative.c4941266181d.320.webp",
+          "sha256": "8145bd6e2c99458fd6b9a538fe73c09bfe1d671b3296370d49f44f7cd5226b16",
+          "width": 320
+        },
+        {
+          "bytes": 104724,
+          "height": 320,
+          "path": "/art/generator_creative.c4941266181d.320.png",
+          "sha256": "a71959eb360dee26ca809f2ba8c6e5270a4279217d4f560d83f68fb1275a5219",
+          "width": 320
+        },
+        {
+          "bytes": 59710,
+          "height": 640,
+          "path": "/art/generator_creative.c4941266181d.640.webp",
+          "sha256": "b3e53e05bcc695b0a722e2e26aa48f843c11ef0e2495b91c6ec983302d2499f0",
+          "width": 640
+        }
+      ],
+      "sha256": "c4941266181d56fd879b8c5e51c1032a74b362a55f7a2cbd0c6ab8aa7cdab0ed",
+      "urls": {
+        "png_320": "/art/generator_creative.c4941266181d.320.png",
+        "webp_320": "/art/generator_creative.c4941266181d.320.webp",
+        "webp_640": "/art/generator_creative.c4941266181d.640.webp",
+        "webp_96": "/art/generator_creative.c4941266181d.96.webp"
+      },
+      "width": 1254
+    },
+    "generator_document": {
+      "alpha_bbox": [
+        24,
+        17,
+        1523,
+        1008
+      ],
+      "height": 1024,
+      "master": "assets/modemon/approved/originals/generator_document.png",
+      "original_filename": "quillcat.png",
+      "outputs": [
+        {
+          "bytes": 3998,
+          "height": 96,
+          "path": "/art/generator_document.de24dd985373.96.webp",
+          "sha256": "abd05f6dabf78de1ad7cb74738db60bae705e8a5899049fc6138a3987a4b30ed",
+          "width": 96
+        },
+        {
+          "bytes": 16974,
+          "height": 320,
+          "path": "/art/generator_document.de24dd985373.320.webp",
+          "sha256": "ddb4f1cc2e48eada69f26498e567b3ccf414d5fb997567065da0fd06de68c449",
+          "width": 320
+        },
+        {
+          "bytes": 67553,
+          "height": 320,
+          "path": "/art/generator_document.de24dd985373.320.png",
+          "sha256": "aa814827e67fede673d6ecd9e4519b2be01d6faa5139a8e920e92e90ead1e23b",
+          "width": 320
+        },
+        {
+          "bytes": 41764,
+          "height": 640,
+          "path": "/art/generator_document.de24dd985373.640.webp",
+          "sha256": "30372630eb4271f3d863e22e1de55d22f574379a2f2f2a4e355d52e098abaf0b",
+          "width": 640
+        }
+      ],
+      "sha256": "de24dd985373e89f4f374fbd4c09f4318b22fddc4ecb1aec432541674951fffe",
+      "urls": {
+        "png_320": "/art/generator_document.de24dd985373.320.png",
+        "webp_320": "/art/generator_document.de24dd985373.320.webp",
+        "webp_640": "/art/generator_document.de24dd985373.640.webp",
+        "webp_96": "/art/generator_document.de24dd985373.96.webp"
+      },
+      "width": 1536
+    },
+    "generator_learning": {
+      "alpha_bbox": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "height": 1024,
+      "master": "assets/modemon/approved/originals/generator_learning.png",
+      "original_filename": "learnx.png",
+      "outputs": [
+        {
+          "bytes": 4750,
+          "height": 96,
+          "path": "/art/generator_learning.ea05b43f28f8.96.webp",
+          "sha256": "b2786ee118be1e5e833199515c0ca909d9ffba007718a4d458ad596783e4307f",
+          "width": 96
+        },
+        {
+          "bytes": 27194,
+          "height": 320,
+          "path": "/art/generator_learning.ea05b43f28f8.320.webp",
+          "sha256": "a49aacdfc07d707f80fa8be1d6d3f378c05ac3cf68834e4d5aed2781f478bee6",
+          "width": 320
+        },
+        {
+          "bytes": 112654,
+          "height": 320,
+          "path": "/art/generator_learning.ea05b43f28f8.320.png",
+          "sha256": "5591bfa0db2120dfd658c0795abdf9820c32862ff6230219a8ab6b7a4bef6948",
+          "width": 320
+        },
+        {
+          "bytes": 70430,
+          "height": 640,
+          "path": "/art/generator_learning.ea05b43f28f8.640.webp",
+          "sha256": "6590b3cef637b7adb84bf3700d975cc0c1fbe68c98cb70b3486bb17204c44fdb",
+          "width": 640
+        }
+      ],
+      "sha256": "ea05b43f28f809d99f74ef1e623cfac17fc017f1569438296f54c5a7bbed6e4a",
+      "urls": {
+        "png_320": "/art/generator_learning.ea05b43f28f8.320.png",
+        "webp_320": "/art/generator_learning.ea05b43f28f8.320.webp",
+        "webp_640": "/art/generator_learning.ea05b43f28f8.640.webp",
+        "webp_96": "/art/generator_learning.ea05b43f28f8.96.webp"
+      },
+      "width": 1536
+    },
+    "generator_lesson_planner": {
+      "alpha_bbox": [
+        12,
+        1,
+        1333,
+        1022
+      ],
+      "height": 1024,
+      "master": "assets/modemon/approved/originals/generator_lesson_planner.png",
+      "original_filename": "planthera.png",
+      "outputs": [
+        {
+          "bytes": 4130,
+          "height": 96,
+          "path": "/art/generator_lesson_planner.614f6e646ac8.96.webp",
+          "sha256": "759f184c877f8ba25dc24d24633e11b7177fc5bfde463f3f81d4e7ffc22ff7ce",
+          "width": 96
+        },
+        {
+          "bytes": 18362,
+          "height": 320,
+          "path": "/art/generator_lesson_planner.614f6e646ac8.320.webp",
+          "sha256": "d36e436f8fe976ce666c3e9cbc4910243af8a345760d064de807630f91707932",
+          "width": 320
+        },
+        {
+          "bytes": 60163,
+          "height": 320,
+          "path": "/art/generator_lesson_planner.614f6e646ac8.320.png",
+          "sha256": "a3372a5d4cea71191501a85e279f1134454984bf4762a5ff40c4c0a3f94e81c9",
+          "width": 320
+        },
+        {
+          "bytes": 51806,
+          "height": 640,
+          "path": "/art/generator_lesson_planner.614f6e646ac8.640.webp",
+          "sha256": "1385264dd3f22750fe8de36de25aeabbad957fafdc73847fb4716ac153f1bfac",
+          "width": 640
+        }
+      ],
+      "sha256": "614f6e646ac8c7e2ec3e6f07b0efee56f32c7a64c714beade3d271c06ac0e9fd",
+      "urls": {
+        "png_320": "/art/generator_lesson_planner.614f6e646ac8.320.png",
+        "webp_320": "/art/generator_lesson_planner.614f6e646ac8.320.webp",
+        "webp_640": "/art/generator_lesson_planner.614f6e646ac8.640.webp",
+        "webp_96": "/art/generator_lesson_planner.614f6e646ac8.96.webp"
+      },
+      "width": 1536
+    },
+    "recommender_adaptive_learning": {
+      "alpha_bbox": [
+        0,
+        0,
+        1246,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/recommender_adaptive_learning.png",
+      "original_filename": "mentamorph.png",
+      "outputs": [
+        {
+          "bytes": 5892,
+          "height": 96,
+          "path": "/art/recommender_adaptive_learning.6636c2e1f7d5.96.webp",
+          "sha256": "b6442786152f06ec5da02b11cc7213f57af7cf8ad488180d0399af7f2de736c7",
+          "width": 96
+        },
+        {
+          "bytes": 27752,
+          "height": 320,
+          "path": "/art/recommender_adaptive_learning.6636c2e1f7d5.320.webp",
+          "sha256": "1b19005afc0baa470eea0c17e6cd7bdc02b0e2baff17822396e03edf59d28e7e",
+          "width": 320
+        },
+        {
+          "bytes": 111772,
+          "height": 320,
+          "path": "/art/recommender_adaptive_learning.6636c2e1f7d5.320.png",
+          "sha256": "4e9de8630b7cf38e0c6b56202d524136ca536015d62e534fc4dc65a695dd4a1c",
+          "width": 320
+        },
+        {
+          "bytes": 74258,
+          "height": 640,
+          "path": "/art/recommender_adaptive_learning.6636c2e1f7d5.640.webp",
+          "sha256": "295a542741cd276bdc84ff837592a57f199dda0109127661d5ea86bf665b8efb",
+          "width": 640
+        }
+      ],
+      "sha256": "6636c2e1f7d55e4997744468fe181ba30bbfbdf67b9b58cf440ebad541ea31c0",
+      "urls": {
+        "png_320": "/art/recommender_adaptive_learning.6636c2e1f7d5.320.png",
+        "webp_320": "/art/recommender_adaptive_learning.6636c2e1f7d5.320.webp",
+        "webp_640": "/art/recommender_adaptive_learning.6636c2e1f7d5.640.webp",
+        "webp_96": "/art/recommender_adaptive_learning.6636c2e1f7d5.96.webp"
+      },
+      "width": 1254
+    },
+    "recommender_ai_curator": {
+      "alpha_bbox": [
+        7,
+        0,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/recommender_ai_curator.png",
+      "original_filename": "muselect.png",
+      "outputs": [
+        {
+          "bytes": 8366,
+          "height": 96,
+          "path": "/art/recommender_ai_curator.eff7a35e2c09.96.webp",
+          "sha256": "c49007da496a71fa55da229b20020e421b5673d178a46d9e2c216bf33b19d4cb",
+          "width": 96
+        },
+        {
+          "bytes": 44978,
+          "height": 320,
+          "path": "/art/recommender_ai_curator.eff7a35e2c09.320.webp",
+          "sha256": "917bfa9d1c12f2d75c4bfdcee3257bcd2b8f6e59ac58e11b0fcef4e481e2c243",
+          "width": 320
+        },
+        {
+          "bytes": 169632,
+          "height": 320,
+          "path": "/art/recommender_ai_curator.eff7a35e2c09.320.png",
+          "sha256": "a56c85e9714dda0efd8b8c1fdbbbf8992427c7fa215f5ed098c3a68a362a6f69",
+          "width": 320
+        },
+        {
+          "bytes": 124136,
+          "height": 640,
+          "path": "/art/recommender_ai_curator.eff7a35e2c09.640.webp",
+          "sha256": "db3e53d95d2fd7603742bf1804677cff8b11d9fd41d4d4db202b97e2fcf91ea5",
+          "width": 640
+        }
+      ],
+      "sha256": "eff7a35e2c09aacd03f87622673299b228dfaf3841c1107baca91c9545222301",
+      "urls": {
+        "png_320": "/art/recommender_ai_curator.eff7a35e2c09.320.png",
+        "webp_320": "/art/recommender_ai_curator.eff7a35e2c09.320.webp",
+        "webp_640": "/art/recommender_ai_curator.eff7a35e2c09.640.webp",
+        "webp_96": "/art/recommender_ai_curator.eff7a35e2c09.96.webp"
+      },
+      "width": 1254
+    },
+    "recommender_base": {
+      "alpha_bbox": [
+        17,
+        0,
+        1254,
+        1240
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/recommender_base.png",
+      "original_filename": "suggestle.png",
+      "outputs": [
+        {
+          "bytes": 6450,
+          "height": 96,
+          "path": "/art/recommender_base.5213479139a6.96.webp",
+          "sha256": "50ff2dd0538994ef88c92f0d714471711283c5e23d6cd8b50d1c709c03602cfa",
+          "width": 96
+        },
+        {
+          "bytes": 28578,
+          "height": 320,
+          "path": "/art/recommender_base.5213479139a6.320.webp",
+          "sha256": "cf4f516bc6d330a550f9facbb94fba8e5727f000032b02bbf70273f77821f90b",
+          "width": 320
+        },
+        {
+          "bytes": 115966,
+          "height": 320,
+          "path": "/art/recommender_base.5213479139a6.320.png",
+          "sha256": "c9258c2cc473fc9e3aca0960b79e823acff7e4ccc34d14a0f45eca66f818c064",
+          "width": 320
+        },
+        {
+          "bytes": 74374,
+          "height": 640,
+          "path": "/art/recommender_base.5213479139a6.640.webp",
+          "sha256": "59f6b93bd2d50579c31817e77d72f16efa44725762d2b0d9624f1f4580918278",
+          "width": 640
+        }
+      ],
+      "sha256": "5213479139a65692d0f881ed8ca807b11b26c19e8d2526f118a970d04e302496",
+      "urls": {
+        "png_320": "/art/recommender_base.5213479139a6.320.png",
+        "webp_320": "/art/recommender_base.5213479139a6.320.webp",
+        "webp_640": "/art/recommender_base.5213479139a6.640.webp",
+        "webp_96": "/art/recommender_base.5213479139a6.96.webp"
+      },
+      "width": 1254
+    },
+    "recommender_content": {
+      "alpha_bbox": [
+        0,
+        9,
+        1244,
+        1245
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/recommender_content.png",
+      "original_filename": "reelure.png",
+      "outputs": [
+        {
+          "bytes": 7130,
+          "height": 96,
+          "path": "/art/recommender_content.7a540f6f2878.96.webp",
+          "sha256": "313f2e0bd948ace2a965bb68a87a6d91c3b8eaf6994ab07beeb70c6a87a9200e",
+          "width": 96
+        },
+        {
+          "bytes": 34726,
+          "height": 320,
+          "path": "/art/recommender_content.7a540f6f2878.320.webp",
+          "sha256": "00358e9cdeb7dedab1e1c9877f6999299d11f6155dd1219d6c1d8c3e04ad3961",
+          "width": 320
+        },
+        {
+          "bytes": 136434,
+          "height": 320,
+          "path": "/art/recommender_content.7a540f6f2878.320.png",
+          "sha256": "88013837948c28037a8d34cd19d0981af76b6cb013985f1382d518b8ca2c85c7",
+          "width": 320
+        },
+        {
+          "bytes": 91386,
+          "height": 640,
+          "path": "/art/recommender_content.7a540f6f2878.640.webp",
+          "sha256": "d2610020f2a1927a8fc4dc3c6f0f9c39772f7458808cc50352e438436122fd38",
+          "width": 640
+        }
+      ],
+      "sha256": "7a540f6f28782a8639405c4df1c1bd63b201be0efad045461a596674afa7e224",
+      "urls": {
+        "png_320": "/art/recommender_content.7a540f6f2878.320.png",
+        "webp_320": "/art/recommender_content.7a540f6f2878.320.webp",
+        "webp_640": "/art/recommender_content.7a540f6f2878.640.webp",
+        "webp_96": "/art/recommender_content.7a540f6f2878.96.webp"
+      },
+      "width": 1254
+    },
+    "recommender_learning": {
+      "alpha_bbox": [
+        19,
+        0,
+        1254,
+        1243
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/recommender_learning.png",
+      "original_filename": "curriquill.png",
+      "outputs": [
+        {
+          "bytes": 5488,
+          "height": 96,
+          "path": "/art/recommender_learning.3465aeb0689d.96.webp",
+          "sha256": "4608c925e9c2ad5f6edbe750b67d51736f8bb21ac0f40e7512fa99e6396ff2aa",
+          "width": 96
+        },
+        {
+          "bytes": 28868,
+          "height": 320,
+          "path": "/art/recommender_learning.3465aeb0689d.320.webp",
+          "sha256": "7f6f798ea1e5437527d388cef78015cf2a7bc922f1fb2148269b8515ff3c6ffb",
+          "width": 320
+        },
+        {
+          "bytes": 132045,
+          "height": 320,
+          "path": "/art/recommender_learning.3465aeb0689d.320.png",
+          "sha256": "fb0103dc2fd0349b970cfb2a30d0daccbbc92a3d309c3a9fba925794aadd3b80",
+          "width": 320
+        },
+        {
+          "bytes": 78414,
+          "height": 640,
+          "path": "/art/recommender_learning.3465aeb0689d.640.webp",
+          "sha256": "c78daee76c033f86baadfc4e9fd3063e164be1b26a6249be5117202ade534f88",
+          "width": 640
+        }
+      ],
+      "sha256": "3465aeb0689d21623608bfe91f6f25a0fd6f17773a5e46f02caf4e225e868777",
+      "urls": {
+        "png_320": "/art/recommender_learning.3465aeb0689d.320.png",
+        "webp_320": "/art/recommender_learning.3465aeb0689d.320.webp",
+        "webp_640": "/art/recommender_learning.3465aeb0689d.640.webp",
+        "webp_96": "/art/recommender_learning.3465aeb0689d.96.webp"
+      },
+      "width": 1254
+    },
+    "recommender_menu": {
+      "alpha_bbox": [
+        36,
+        48,
+        1237,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/recommender_menu.png",
+      "original_filename": "nibblet.png",
+      "outputs": [
+        {
+          "bytes": 5394,
+          "height": 96,
+          "path": "/art/recommender_menu.6ed5877ac3d8.96.webp",
+          "sha256": "f063e83e0f1da510b3ed275ae76d841eda4120225c3339723dd1e4bbc2051bb6",
+          "width": 96
+        },
+        {
+          "bytes": 23854,
+          "height": 320,
+          "path": "/art/recommender_menu.6ed5877ac3d8.320.webp",
+          "sha256": "435fc454d8a30c2634da890d6778a8afe1868e4da96554b2ee58757dd9ac56fe",
+          "width": 320
+        },
+        {
+          "bytes": 101399,
+          "height": 320,
+          "path": "/art/recommender_menu.6ed5877ac3d8.320.png",
+          "sha256": "c69400584dc0e2811912a069b90ee841979610b985745981c1d951fee0e0f979",
+          "width": 320
+        },
+        {
+          "bytes": 57452,
+          "height": 640,
+          "path": "/art/recommender_menu.6ed5877ac3d8.640.webp",
+          "sha256": "f2d022e2935ce203b0c8ed70dea470938d65d7f42d7b1fd2a179f96ccdb33304",
+          "width": 640
+        }
+      ],
+      "sha256": "6ed5877ac3d8f7de671771588183e82505157303a3abdf98099e35d3e9c8039c",
+      "urls": {
+        "png_320": "/art/recommender_menu.6ed5877ac3d8.320.png",
+        "webp_320": "/art/recommender_menu.6ed5877ac3d8.320.webp",
+        "webp_640": "/art/recommender_menu.6ed5877ac3d8.640.webp",
+        "webp_96": "/art/recommender_menu.6ed5877ac3d8.96.webp"
+      },
+      "width": 1254
+    },
+    "recommender_product": {
+      "alpha_bbox": [
+        25,
+        0,
+        1227,
+        1244
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/recommender_product.png",
+      "original_filename": "cartivore.png",
+      "outputs": [
+        {
+          "bytes": 6896,
+          "height": 96,
+          "path": "/art/recommender_product.3684a46cb9da.96.webp",
+          "sha256": "dfca487f1083fa0ce62dc3a913d01ae6f065b6db78af6fd5e54a56ebbd136d2a",
+          "width": 96
+        },
+        {
+          "bytes": 32050,
+          "height": 320,
+          "path": "/art/recommender_product.3684a46cb9da.320.webp",
+          "sha256": "3f7280e4a3ae10d939cc1d59ffbdf4debdd52fba96545e9f8fce5117e2fad3b5",
+          "width": 320
+        },
+        {
+          "bytes": 129694,
+          "height": 320,
+          "path": "/art/recommender_product.3684a46cb9da.320.png",
+          "sha256": "30b9c140686b43616d69fb0c9634a6b5c2ffd13e4b08db7c65362999e88625f9",
+          "width": 320
+        },
+        {
+          "bytes": 84126,
+          "height": 640,
+          "path": "/art/recommender_product.3684a46cb9da.640.webp",
+          "sha256": "2745d8490b29c7be3ec68ebc62bda94e892ebe36b8664264608af1957d636c24",
+          "width": 640
+        }
+      ],
+      "sha256": "3684a46cb9da78d0378f18c9c2251523a5d8968f74880bc072b4a1c6342fefed",
+      "urls": {
+        "png_320": "/art/recommender_product.3684a46cb9da.320.png",
+        "webp_320": "/art/recommender_product.3684a46cb9da.320.webp",
+        "webp_640": "/art/recommender_product.3684a46cb9da.640.webp",
+        "webp_96": "/art/recommender_product.3684a46cb9da.96.webp"
+      },
+      "width": 1254
+    },
+    "recommender_research": {
+      "alpha_bbox": [
+        0,
+        0,
+        1301,
+        1199
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/recommender_research.png",
+      "original_filename": "referaptor.png",
+      "outputs": [
+        {
+          "bytes": 6010,
+          "height": 96,
+          "path": "/art/recommender_research.3f8bd7d7d5f2.96.webp",
+          "sha256": "b2b8734d37ea275160540dd44130cbb35932cc47b5b67387c31b45df8c600c2d",
+          "width": 96
+        },
+        {
+          "bytes": 32718,
+          "height": 320,
+          "path": "/art/recommender_research.3f8bd7d7d5f2.320.webp",
+          "sha256": "a6c11704fde8b10c8589e13e8d6c03360d8c137762c3af43b391fd8f60914f28",
+          "width": 320
+        },
+        {
+          "bytes": 126124,
+          "height": 320,
+          "path": "/art/recommender_research.3f8bd7d7d5f2.320.png",
+          "sha256": "b6bf97f12ae99ce4b102907d6ffe46764c44acfaf2aff6202a9c391b52b84f10",
+          "width": 320
+        },
+        {
+          "bytes": 89706,
+          "height": 640,
+          "path": "/art/recommender_research.3f8bd7d7d5f2.640.webp",
+          "sha256": "4d898bdc1c4514b21aec4da35f576d797b4d2c1ad2e98ce52fd180192e976238",
+          "width": 640
+        }
+      ],
+      "sha256": "3f8bd7d7d5f282cce5697ff4d919fdf0f823c47492c0038901e1a76e23dedfcb",
+      "urls": {
+        "png_320": "/art/recommender_research.3f8bd7d7d5f2.320.png",
+        "webp_320": "/art/recommender_research.3f8bd7d7d5f2.320.webp",
+        "webp_640": "/art/recommender_research.3f8bd7d7d5f2.640.webp",
+        "webp_96": "/art/recommender_research.3f8bd7d7d5f2.96.webp"
+      },
+      "width": 1312
+    },
+    "retriever_base": {
+      "alpha_bbox": [
+        0,
+        0,
+        1286,
+        1199
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/retriever_base.png",
+      "original_filename": "searchound.png",
+      "outputs": [
+        {
+          "bytes": 6486,
+          "height": 96,
+          "path": "/art/retriever_base.615e7419a3ce.96.webp",
+          "sha256": "510fa6939850559b98e54939ac6ee639ac98839f4269b7af587a1f2cd6cfc255",
+          "width": 96
+        },
+        {
+          "bytes": 26322,
+          "height": 320,
+          "path": "/art/retriever_base.615e7419a3ce.320.webp",
+          "sha256": "4983b00f40672a906e4e4058a22adc813782ace028892481ff4e482c831f241c",
+          "width": 320
+        },
+        {
+          "bytes": 107722,
+          "height": 320,
+          "path": "/art/retriever_base.615e7419a3ce.320.png",
+          "sha256": "7e7c72e32ca53a856a9ca24128f6f8b4f04b4829db4de691139020d4fe496922",
+          "width": 320
+        },
+        {
+          "bytes": 60508,
+          "height": 640,
+          "path": "/art/retriever_base.615e7419a3ce.640.webp",
+          "sha256": "f41df0d41c7836c67db79058752b760d8b15ac0715d6fd196586e7df3b7d58cc",
+          "width": 640
+        }
+      ],
+      "sha256": "615e7419a3cef4f79b2f641449441fcb190b7b322d1fdd19afafafead0a9a6e8",
+      "urls": {
+        "png_320": "/art/retriever_base.615e7419a3ce.320.png",
+        "webp_320": "/art/retriever_base.615e7419a3ce.320.webp",
+        "webp_640": "/art/retriever_base.615e7419a3ce.640.webp",
+        "webp_96": "/art/retriever_base.615e7419a3ce.96.webp"
+      },
+      "width": 1312
+    },
+    "retriever_knowledge": {
+      "alpha_bbox": [
+        0,
+        9,
+        1246,
+        1221
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/retriever_knowledge.png",
+      "original_filename": "cognicollie.png",
+      "outputs": [
+        {
+          "bytes": 5352,
+          "height": 96,
+          "path": "/art/retriever_knowledge.180b0dd470dc.96.webp",
+          "sha256": "b361ef83752074d8e0664d5d6a18acb4d713eb8a727f15d35f05be8e846dddce",
+          "width": 96
+        },
+        {
+          "bytes": 23876,
+          "height": 320,
+          "path": "/art/retriever_knowledge.180b0dd470dc.320.webp",
+          "sha256": "b8ef94e969be05a247991278d9aab51bf452238f824f64fa04d48993954cc9dd",
+          "width": 320
+        },
+        {
+          "bytes": 99250,
+          "height": 320,
+          "path": "/art/retriever_knowledge.180b0dd470dc.320.png",
+          "sha256": "ba33d12a51d9d5742debdf242088868d3b8b1314c1995500214ef9ef20afbf3f",
+          "width": 320
+        },
+        {
+          "bytes": 59758,
+          "height": 640,
+          "path": "/art/retriever_knowledge.180b0dd470dc.640.webp",
+          "sha256": "257c56f9d0b118f4fce7ce182b46f11a026ec2ebfa7033522e77a2bab035b779",
+          "width": 640
+        }
+      ],
+      "sha256": "180b0dd470dc15078f973a72089f4dd15a6214c6831633965fa019063c4dc1a4",
+      "urls": {
+        "png_320": "/art/retriever_knowledge.180b0dd470dc.320.png",
+        "webp_320": "/art/retriever_knowledge.180b0dd470dc.320.webp",
+        "webp_640": "/art/retriever_knowledge.180b0dd470dc.640.webp",
+        "webp_96": "/art/retriever_knowledge.180b0dd470dc.96.webp"
+      },
+      "width": 1254
+    },
+    "retriever_product": {
+      "alpha_bbox": [
+        49,
+        25,
+        1239,
+        1226
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/retriever_product.png",
+      "original_filename": "bargainbeagle.png",
+      "outputs": [
+        {
+          "bytes": 6474,
+          "height": 96,
+          "path": "/art/retriever_product.1a7b13900c8c.96.webp",
+          "sha256": "d21a7204cbcfba13fbabe4808ad75427bb0addf1ba7628ac9d4eb79876e79047",
+          "width": 96
+        },
+        {
+          "bytes": 27338,
+          "height": 320,
+          "path": "/art/retriever_product.1a7b13900c8c.320.webp",
+          "sha256": "6d1798929b022693e3d7f9c7c82284e38fee5fcb1b785886c5eaf959982be118",
+          "width": 320
+        },
+        {
+          "bytes": 114012,
+          "height": 320,
+          "path": "/art/retriever_product.1a7b13900c8c.320.png",
+          "sha256": "29f6ab4017ffba614029f575d51816df11d046a80ed505b9d351e09e3bc92875",
+          "width": 320
+        },
+        {
+          "bytes": 63990,
+          "height": 640,
+          "path": "/art/retriever_product.1a7b13900c8c.640.webp",
+          "sha256": "00d767644e6b1107d9ffd4e65396b237f5a964c927ceb6270068f69f9a04f708",
+          "width": 640
+        }
+      ],
+      "sha256": "1a7b13900c8c4e1b59ecc74d33961ec559ce39a36a4d12a90dea44dc1dd41ad3",
+      "urls": {
+        "png_320": "/art/retriever_product.1a7b13900c8c.320.png",
+        "webp_320": "/art/retriever_product.1a7b13900c8c.320.webp",
+        "webp_640": "/art/retriever_product.1a7b13900c8c.640.webp",
+        "webp_96": "/art/retriever_product.1a7b13900c8c.96.webp"
+      },
+      "width": 1254
+    },
+    "retriever_records": {
+      "alpha_bbox": [
+        0,
+        18,
+        1522,
+        1024
+      ],
+      "height": 1024,
+      "master": "assets/modemon/approved/originals/retriever_records.png",
+      "original_filename": "dachshundex.png",
+      "outputs": [
+        {
+          "bytes": 3958,
+          "height": 96,
+          "path": "/art/retriever_records.8ddd280c3bcb.96.webp",
+          "sha256": "cf63826d505b4a4bcd8624057429cd1a3c2d7943516789e1f0e3795e3f592294",
+          "width": 96
+        },
+        {
+          "bytes": 16208,
+          "height": 320,
+          "path": "/art/retriever_records.8ddd280c3bcb.320.webp",
+          "sha256": "5df5405622be8a61fed64fda3ed6ef33c49591f45cb38b29ec8c685c37d72582",
+          "width": 320
+        },
+        {
+          "bytes": 62836,
+          "height": 320,
+          "path": "/art/retriever_records.8ddd280c3bcb.320.png",
+          "sha256": "1cf670e10969e3890ab84c644c4ae1a9251a89d5b2b905bb267f721be3d76d26",
+          "width": 320
+        },
+        {
+          "bytes": 39746,
+          "height": 640,
+          "path": "/art/retriever_records.8ddd280c3bcb.640.webp",
+          "sha256": "63616f24c667f729b4c9ce697970dccbe7ebdf6f10f422420ff7d373d9f62c29",
+          "width": 640
+        }
+      ],
+      "sha256": "8ddd280c3bcb357802ca65f62ef6e2bf287be43dbe10c0807221087e40bf4f3e",
+      "urls": {
+        "png_320": "/art/retriever_records.8ddd280c3bcb.320.png",
+        "webp_320": "/art/retriever_records.8ddd280c3bcb.320.webp",
+        "webp_640": "/art/retriever_records.8ddd280c3bcb.640.webp",
+        "webp_96": "/art/retriever_records.8ddd280c3bcb.96.webp"
+      },
+      "width": 1536
+    },
+    "retriever_research": {
+      "alpha_bbox": [
+        14,
+        0,
+        1522,
+        1024
+      ],
+      "height": 1024,
+      "master": "assets/modemon/approved/originals/retriever_research.png",
+      "original_filename": "labraquery.png",
+      "outputs": [
+        {
+          "bytes": 4036,
+          "height": 96,
+          "path": "/art/retriever_research.31317c41d8e8.96.webp",
+          "sha256": "5dd7d7a70161973c15d40e52f157d953bf8e94e96e51a64a0e1dbc19525c5715",
+          "width": 96
+        },
+        {
+          "bytes": 18602,
+          "height": 320,
+          "path": "/art/retriever_research.31317c41d8e8.320.webp",
+          "sha256": "4ffa13d51c9d95b1f18c944d498ad4d375551ff1bc92838435ac2d7c5e089f6c",
+          "width": 320
+        },
+        {
+          "bytes": 68513,
+          "height": 320,
+          "path": "/art/retriever_research.31317c41d8e8.320.png",
+          "sha256": "e2d9ea2ff82557f8589362aa5884499cff1b86f99fe19611215d3cbefc8d0fde",
+          "width": 320
+        },
+        {
+          "bytes": 47522,
+          "height": 640,
+          "path": "/art/retriever_research.31317c41d8e8.640.webp",
+          "sha256": "3f94c09db1bbd8fa57559eef5ea00729567469ebb8bc6c4a3c0aeb076c3558e9",
+          "width": 640
+        }
+      ],
+      "sha256": "31317c41d8e87a66ef47c792d404114588da5260c217595a07593ffa589bbd5b",
+      "urls": {
+        "png_320": "/art/retriever_research.31317c41d8e8.320.png",
+        "webp_320": "/art/retriever_research.31317c41d8e8.320.webp",
+        "webp_640": "/art/retriever_research.31317c41d8e8.640.webp",
+        "webp_96": "/art/retriever_research.31317c41d8e8.96.webp"
+      },
+      "width": 1536
+    },
+    "retriever_semantic_search": {
+      "alpha_bbox": [
+        0,
+        23,
+        1254,
+        1238
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/retriever_semantic_search.png",
+      "original_filename": "semantiff.png",
+      "outputs": [
+        {
+          "bytes": 7122,
+          "height": 96,
+          "path": "/art/retriever_semantic_search.74fe9e542a4e.96.webp",
+          "sha256": "c11819f81bd8f2ca16198307eeb7f60bc7fdcd8cdd64a2e58a5798bc5f3465fd",
+          "width": 96
+        },
+        {
+          "bytes": 34130,
+          "height": 320,
+          "path": "/art/retriever_semantic_search.74fe9e542a4e.320.webp",
+          "sha256": "0f486584218a1c70b28e6d3695c01f74bf8fbfb44b2e55683243c52d70d017d4",
+          "width": 320
+        },
+        {
+          "bytes": 139127,
+          "height": 320,
+          "path": "/art/retriever_semantic_search.74fe9e542a4e.320.png",
+          "sha256": "1272da91cf952c39dde121a19a98184063c8596681845bb441f0da94c33d695a",
+          "width": 320
+        },
+        {
+          "bytes": 85096,
+          "height": 640,
+          "path": "/art/retriever_semantic_search.74fe9e542a4e.640.webp",
+          "sha256": "c5ed2275030c5d40f558e1d534e0716b1df8ff2083f77a1bfc53d58ad8520b24",
+          "width": 640
+        }
+      ],
+      "sha256": "74fe9e542a4e15cd91c767cfd85d6cde194f6c548ff2d71568eb3b77ddd62708",
+      "urls": {
+        "png_320": "/art/retriever_semantic_search.74fe9e542a4e.320.png",
+        "webp_320": "/art/retriever_semantic_search.74fe9e542a4e.320.webp",
+        "webp_640": "/art/retriever_semantic_search.74fe9e542a4e.640.webp",
+        "webp_96": "/art/retriever_semantic_search.74fe9e542a4e.96.webp"
+      },
+      "width": 1254
+    },
+    "scheduler_base": {
+      "alpha_bbox": [
+        0,
+        49,
+        1238,
+        1218
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/scheduler_base.png",
+      "original_filename": "plancton.png",
+      "outputs": [
+        {
+          "bytes": 7030,
+          "height": 96,
+          "path": "/art/scheduler_base.a21c2b432bdc.96.webp",
+          "sha256": "0225766033334ffc9e761f677bfc1857ec8b2c0863ebae78a364c14a8af49b31",
+          "width": 96
+        },
+        {
+          "bytes": 34372,
+          "height": 320,
+          "path": "/art/scheduler_base.a21c2b432bdc.320.webp",
+          "sha256": "69191a06795968d2fc8793843b5297ec5a3bb361a1034f4bac26e89d97547d6d",
+          "width": 320
+        },
+        {
+          "bytes": 129632,
+          "height": 320,
+          "path": "/art/scheduler_base.a21c2b432bdc.320.png",
+          "sha256": "17b6642546fe24f5aaa6740c00d0407f1d1467a7bac3148f95c5573a492adb77",
+          "width": 320
+        },
+        {
+          "bytes": 87294,
+          "height": 640,
+          "path": "/art/scheduler_base.a21c2b432bdc.640.webp",
+          "sha256": "d8c0a7517b272ffd6ebe49e2c81b4d275a2dacbe1e25fd19ee53697dc3c31e0a",
+          "width": 640
+        }
+      ],
+      "sha256": "a21c2b432bdc8d521b39f02acb9e0fa8075a379a7f1cc1c442a91dfed90c8fda",
+      "urls": {
+        "png_320": "/art/scheduler_base.a21c2b432bdc.320.png",
+        "webp_320": "/art/scheduler_base.a21c2b432bdc.320.webp",
+        "webp_640": "/art/scheduler_base.a21c2b432bdc.640.webp",
+        "webp_96": "/art/scheduler_base.a21c2b432bdc.96.webp"
+      },
+      "width": 1254
+    },
+    "scheduler_delivery": {
+      "alpha_bbox": [
+        16,
+        39,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/scheduler_delivery.png",
+      "original_filename": "parcelprawn.png",
+      "outputs": [
+        {
+          "bytes": 6950,
+          "height": 96,
+          "path": "/art/scheduler_delivery.13e5ae4384ce.96.webp",
+          "sha256": "92e3314fb8d70a29f861026f6be7412fdb414d29f83613fa38f569f87d0469b6",
+          "width": 96
+        },
+        {
+          "bytes": 33014,
+          "height": 320,
+          "path": "/art/scheduler_delivery.13e5ae4384ce.320.webp",
+          "sha256": "f947dfe2597c9625baa33b4dda5a194b4a439f7bb3aae025f925b9c135ed4be8",
+          "width": 320
+        },
+        {
+          "bytes": 98657,
+          "height": 320,
+          "path": "/art/scheduler_delivery.13e5ae4384ce.320.png",
+          "sha256": "a8b60eab9df9ee14d74869215755ad18d888b915e7b345004c480f5180106023",
+          "width": 320
+        },
+        {
+          "bytes": 87886,
+          "height": 640,
+          "path": "/art/scheduler_delivery.13e5ae4384ce.640.webp",
+          "sha256": "350240ae11704ee91cb30ba5c603acf8bad78cf0b82fb4b30977d476afdca992",
+          "width": 640
+        }
+      ],
+      "sha256": "13e5ae4384ce21df714bee315285948cc7d30dc8d7abfed930ed38714ce7c73e",
+      "urls": {
+        "png_320": "/art/scheduler_delivery.13e5ae4384ce.320.png",
+        "webp_320": "/art/scheduler_delivery.13e5ae4384ce.320.webp",
+        "webp_640": "/art/scheduler_delivery.13e5ae4384ce.640.webp",
+        "webp_96": "/art/scheduler_delivery.13e5ae4384ce.96.webp"
+      },
+      "width": 1254
+    },
+    "scheduler_hospital": {
+      "alpha_bbox": [
+        0,
+        6,
+        1254,
+        1239
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/scheduler_hospital.png",
+      "original_filename": "wardray.png",
+      "outputs": [
+        {
+          "bytes": 5802,
+          "height": 96,
+          "path": "/art/scheduler_hospital.12503f41d744.96.webp",
+          "sha256": "1ff8b8ec4c51c5a124d73c74e0414bda02f6b47094a922e825cea058963d149c",
+          "width": 96
+        },
+        {
+          "bytes": 26326,
+          "height": 320,
+          "path": "/art/scheduler_hospital.12503f41d744.320.webp",
+          "sha256": "c82876d888d843648935e7bda0ed455ea5f5251dd2ca2a2cef19530c6d9f6c15",
+          "width": 320
+        },
+        {
+          "bytes": 103404,
+          "height": 320,
+          "path": "/art/scheduler_hospital.12503f41d744.320.png",
+          "sha256": "36e8a2ed037ca5089a4b2e416104789eb406eafd09889f3b1f2ed793bb307129",
+          "width": 320
+        },
+        {
+          "bytes": 67866,
+          "height": 640,
+          "path": "/art/scheduler_hospital.12503f41d744.640.webp",
+          "sha256": "d1ad5653584773606a5456d769fa83623ae303a526f9612ed939ce6fc1f6cc21",
+          "width": 640
+        }
+      ],
+      "sha256": "12503f41d744444194dd2391ea718a019ea2a44e34cd6688e45ce9ab338fcce7",
+      "urls": {
+        "png_320": "/art/scheduler_hospital.12503f41d744.320.png",
+        "webp_320": "/art/scheduler_hospital.12503f41d744.320.webp",
+        "webp_640": "/art/scheduler_hospital.12503f41d744.640.webp",
+        "webp_96": "/art/scheduler_hospital.12503f41d744.96.webp"
+      },
+      "width": 1254
+    },
+    "scheduler_ride_booking": {
+      "alpha_bbox": [
+        0,
+        23,
+        1290,
+        1199
+      ],
+      "height": 1199,
+      "master": "assets/modemon/approved/originals/scheduler_ride_booking.png",
+      "original_filename": "cabcrab.png",
+      "outputs": [
+        {
+          "bytes": 5496,
+          "height": 96,
+          "path": "/art/scheduler_ride_booking.8cac3daa46b7.96.webp",
+          "sha256": "401ec675b18a44877cb0a661f5c85156d05d918aaeb286330b67334a6b61de92",
+          "width": 96
+        },
+        {
+          "bytes": 24448,
+          "height": 320,
+          "path": "/art/scheduler_ride_booking.8cac3daa46b7.320.webp",
+          "sha256": "24e4cb287f619984a917233dcfeb53bdea07499d2cd33630d3d1f7ffbc580223",
+          "width": 320
+        },
+        {
+          "bytes": 95780,
+          "height": 320,
+          "path": "/art/scheduler_ride_booking.8cac3daa46b7.320.png",
+          "sha256": "66b0bb429622a7920667da610bb085ccdd81c6109a660bb334faff5dd53fee7d",
+          "width": 320
+        },
+        {
+          "bytes": 63286,
+          "height": 640,
+          "path": "/art/scheduler_ride_booking.8cac3daa46b7.640.webp",
+          "sha256": "847fa21fa7e2bf820420bd9d678d335c6637576a40e6ecbbc4b4d73c2c6872a6",
+          "width": 640
+        }
+      ],
+      "sha256": "8cac3daa46b7c2899ac57b7a0d0984debdbc622cd915b04434a9f8e2602f316c",
+      "urls": {
+        "png_320": "/art/scheduler_ride_booking.8cac3daa46b7.320.png",
+        "webp_320": "/art/scheduler_ride_booking.8cac3daa46b7.320.webp",
+        "webp_640": "/art/scheduler_ride_booking.8cac3daa46b7.640.webp",
+        "webp_96": "/art/scheduler_ride_booking.8cac3daa46b7.96.webp"
+      },
+      "width": 1312
+    },
+    "scheduler_traffic_signal": {
+      "alpha_bbox": [
+        33,
+        23,
+        1283,
+        1207
+      ],
+      "height": 1207,
+      "master": "assets/modemon/approved/originals/scheduler_traffic_signal.png",
+      "original_filename": "signalquid.png",
+      "outputs": [
+        {
+          "bytes": 5182,
+          "height": 96,
+          "path": "/art/scheduler_traffic_signal.84059b78a4c6.96.webp",
+          "sha256": "c79eeb17112bb1ac6f634c843b1fe2cd0c71ceb436caadbbb29138b6cc3a0e95",
+          "width": 96
+        },
+        {
+          "bytes": 20396,
+          "height": 320,
+          "path": "/art/scheduler_traffic_signal.84059b78a4c6.320.webp",
+          "sha256": "383aca7e965f0c298f8b00a9f4e3e6298dd63cd3e3eb845bb1c326dcc6686ba0",
+          "width": 320
+        },
+        {
+          "bytes": 75244,
+          "height": 320,
+          "path": "/art/scheduler_traffic_signal.84059b78a4c6.320.png",
+          "sha256": "9da82e41e13590152b1d23a56d6648957443ab9a291750577bd74997b2826f92",
+          "width": 320
+        },
+        {
+          "bytes": 52654,
+          "height": 640,
+          "path": "/art/scheduler_traffic_signal.84059b78a4c6.640.webp",
+          "sha256": "04e72d7b991167c05a377b6fc153f7a8e38af67dc8b1edbb4909bab9566ea6cb",
+          "width": 640
+        }
+      ],
+      "sha256": "84059b78a4c69a735936be3f30cf83ce505f1a0f7febfc22f50f4d0679027e97",
+      "urls": {
+        "png_320": "/art/scheduler_traffic_signal.84059b78a4c6.320.png",
+        "webp_320": "/art/scheduler_traffic_signal.84059b78a4c6.320.webp",
+        "webp_640": "/art/scheduler_traffic_signal.84059b78a4c6.640.webp",
+        "webp_96": "/art/scheduler_traffic_signal.84059b78a4c6.96.webp"
+      },
+      "width": 1303
+    },
+    "scheduler_transit": {
+      "alpha_bbox": [
+        0,
+        15,
+        1236,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/scheduler_transit.png",
+      "original_filename": "routeopus.png",
+      "outputs": [
+        {
+          "bytes": 6064,
+          "height": 96,
+          "path": "/art/scheduler_transit.4988bda0f477.96.webp",
+          "sha256": "fffd6fe08057fe75800216f3e35027f509ccb491978c1e8ab98ebc268b7fb5dc",
+          "width": 96
+        },
+        {
+          "bytes": 27402,
+          "height": 320,
+          "path": "/art/scheduler_transit.4988bda0f477.320.webp",
+          "sha256": "fa2f6a3f1d9c998375fd5d8bf178ad55bb40e48d40d8f46c3148ba31177e6601",
+          "width": 320
+        },
+        {
+          "bytes": 119734,
+          "height": 320,
+          "path": "/art/scheduler_transit.4988bda0f477.320.png",
+          "sha256": "fbaaa3e3ef877b444e36e51642b1aa05aee0365ecd0c383529d25b8790bbe253",
+          "width": 320
+        },
+        {
+          "bytes": 69984,
+          "height": 640,
+          "path": "/art/scheduler_transit.4988bda0f477.640.webp",
+          "sha256": "e623df8f8bbea3cde46feff7e6928c7ac22c3c541ba72cdce395619b003a71b7",
+          "width": 640
+        }
+      ],
+      "sha256": "4988bda0f4772dfdcbc455e6f3ca8ca2b3c7439c03fb5c4a68b2fd3e60451036",
+      "urls": {
+        "png_320": "/art/scheduler_transit.4988bda0f477.320.png",
+        "webp_320": "/art/scheduler_transit.4988bda0f477.320.webp",
+        "webp_640": "/art/scheduler_transit.4988bda0f477.640.webp",
+        "webp_96": "/art/scheduler_transit.4988bda0f477.96.webp"
+      },
+      "width": 1254
+    },
+    "scheduler_transit_flow": {
+      "alpha_bbox": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/scheduler_transit_flow.png",
+      "original_filename": "flowfin.png",
+      "outputs": [
+        {
+          "bytes": 6026,
+          "height": 96,
+          "path": "/art/scheduler_transit_flow.37d341d33e78.96.webp",
+          "sha256": "ea8fc414783f5a24c0994f5a8a77561f451c272e839b1b5f7ca7cf1fc66e8f15",
+          "width": 96
+        },
+        {
+          "bytes": 27058,
+          "height": 320,
+          "path": "/art/scheduler_transit_flow.37d341d33e78.320.webp",
+          "sha256": "77bade93fafd8b804e1fe1be9070f543ca621455e6b29e1cfb01f96e38b69a66",
+          "width": 320
+        },
+        {
+          "bytes": 110811,
+          "height": 320,
+          "path": "/art/scheduler_transit_flow.37d341d33e78.320.png",
+          "sha256": "15295e6ce89f1dd2ae67442c466a0a2ce3f06668f1f498aad2a60a89d1b65409",
+          "width": 320
+        },
+        {
+          "bytes": 69514,
+          "height": 640,
+          "path": "/art/scheduler_transit_flow.37d341d33e78.640.webp",
+          "sha256": "daf10386ef4d52628eb90b9b3dfa844866f6821f746d5ca82049579973b08919",
+          "width": 640
+        }
+      ],
+      "sha256": "37d341d33e78449e1ba907d5cb4f056156e13dff0269d17b5db181badbc6d7f8",
+      "urls": {
+        "png_320": "/art/scheduler_transit_flow.37d341d33e78.320.png",
+        "webp_320": "/art/scheduler_transit_flow.37d341d33e78.320.webp",
+        "webp_640": "/art/scheduler_transit_flow.37d341d33e78.640.webp",
+        "webp_96": "/art/scheduler_transit_flow.37d341d33e78.96.webp"
+      },
+      "width": 1254
+    },
+    "scheduler_workforce": {
+      "alpha_bbox": [
+        0,
+        77,
+        1254,
+        1220
+      ],
+      "height": 1254,
+      "master": "assets/modemon/approved/originals/scheduler_workforce.png",
+      "original_filename": "shiftshark.png",
+      "outputs": [
+        {
+          "bytes": 3786,
+          "height": 96,
+          "path": "/art/scheduler_workforce.b46f70886a04.96.webp",
+          "sha256": "c16928d443baa2ac9d80507f78d9f3f06a75e4305c357bfde885b808341def9d",
+          "width": 96
+        },
+        {
+          "bytes": 15390,
+          "height": 320,
+          "path": "/art/scheduler_workforce.b46f70886a04.320.webp",
+          "sha256": "5f310143090409fcb3c682241ef84289bcea2c88493d78a3cd848d311cf81b97",
+          "width": 320
+        },
+        {
+          "bytes": 65461,
+          "height": 320,
+          "path": "/art/scheduler_workforce.b46f70886a04.320.png",
+          "sha256": "0a1cd0463e143635267a4c67b89724e5c1a4f552d3699b373e9ae1c81d542420",
+          "width": 320
+        },
+        {
+          "bytes": 37376,
+          "height": 640,
+          "path": "/art/scheduler_workforce.b46f70886a04.640.webp",
+          "sha256": "9cf0950e11da5cb0a6ce145796354b503d60274cf21d153957c5522ca2efd8b7",
+          "width": 640
+        }
+      ],
+      "sha256": "b46f70886a04097892d1caf320174d91dbcd8ec0180bace77bde6523e0f86b1f",
+      "urls": {
+        "png_320": "/art/scheduler_workforce.b46f70886a04.320.png",
+        "webp_320": "/art/scheduler_workforce.b46f70886a04.320.webp",
+        "webp_640": "/art/scheduler_workforce.b46f70886a04.640.webp",
+        "webp_96": "/art/scheduler_workforce.b46f70886a04.96.webp"
+      },
+      "width": 1254
+    }
+  },
+  "logo": {
+    "alpha_bbox": [
+      0,
+      23,
+      1748,
+      887
+    ],
+    "height": 887,
+    "master": "assets/brand/originals/modemon-go.png",
+    "original_filename": "modemongologo.png",
+    "outputs": [
+      {
+        "bytes": 5078,
+        "height": 48,
+        "path": "/art/logo.1f6d1bf77300.96.webp",
+        "sha256": "61dcc6a18924a460898114258deb88cf17c1d75a2487e4f094f26775bacd4bb5",
+        "width": 96
+      },
+      {
+        "bytes": 23914,
+        "height": 160,
+        "path": "/art/logo.1f6d1bf77300.320.webp",
+        "sha256": "e6b75f3edb8c33c24cda488498535ee5ac75a945e486dbd9b144f93209e9c9e3",
+        "width": 320
+      },
+      {
+        "bytes": 78980,
+        "height": 160,
+        "path": "/art/logo.1f6d1bf77300.320.png",
+        "sha256": "f07dfe7061184131f9dcd378dfd5742b8cd16921623dbfabe7ed2f13e0582f17",
+        "width": 320
+      },
+      {
+        "bytes": 56336,
+        "height": 320,
+        "path": "/art/logo.1f6d1bf77300.640.webp",
+        "sha256": "f23969e57edf4c828217e17d783b9d0da29f4970357404286c649fa41cd26ce3",
+        "width": 640
+      }
+    ],
+    "sha256": "1f6d1bf77300edd664eff69d9be54d5936a177c1004f629922293b7d7e906dfe",
+    "urls": {
+      "png_320": "/art/logo.1f6d1bf77300.320.png",
+      "webp_320": "/art/logo.1f6d1bf77300.320.webp",
+      "webp_640": "/art/logo.1f6d1bf77300.640.webp",
+      "webp_96": "/art/logo.1f6d1bf77300.96.webp"
+    },
+    "width": 1774
+  },
+  "version": 1
+}

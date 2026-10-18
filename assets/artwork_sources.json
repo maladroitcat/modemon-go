@@ -1,0 +1,270 @@
+{
+  "approval_issue": 23,
+  "excluded_concepts": [
+    "assets/modemon/concepts/detector_base/v01.png",
+    "assets/modemon/concepts/detector_base/v02.png"
+  ],
+  "records": {
+    "anomaly_base": {
+      "master": "assets/modemon/approved/originals/anomaly_base.png",
+      "original_filename": "quirkle.png",
+      "sha256": "13cb6983e812b40858584dbd84ea11a5b8d8fcdb81003d7f461eca7a63c012f9"
+    },
+    "anomaly_fraud": {
+      "master": "assets/modemon/approved/originals/anomaly_fraud.png",
+      "original_filename": "swindlisk.png",
+      "sha256": "a6e2d281f662812786026dbd58974dc5fe09a11482d972043346ce8f54e1dfc4"
+    },
+    "anomaly_machine": {
+      "master": "assets/modemon/approved/originals/anomaly_machine.png",
+      "original_filename": "geargoyle.png",
+      "sha256": "94d2db9b39a618c1181e9d981948beb3931fb60903c77437935593d9e21ec5cb"
+    },
+    "anomaly_network": {
+      "master": "assets/modemon/approved/originals/anomaly_network.png",
+      "original_filename": "netnark.png",
+      "sha256": "13e966cb965d3d8369503a87605077280701cceda167dedc097d0ac3e6f89c8b"
+    },
+    "anomaly_vitals": {
+      "master": "assets/modemon/approved/originals/anomaly_vitals.png",
+      "original_filename": "beatling.png",
+      "sha256": "5381d94b6c5481510ae324f65eeb3235f6ec634974f57b1a86387c72a83febe3"
+    },
+    "detector_base": {
+      "master": "assets/modemon/approved/originals/detector_base.png",
+      "original_filename": "seeklet.png",
+      "sha256": "6827f9b513ec9253beb10eb923c851521d6c642667c7857cad1bd2696497a194"
+    },
+    "detector_defect": {
+      "master": "assets/modemon/approved/originals/detector_defect.png",
+      "original_filename": "inspectra.png",
+      "sha256": "797ce59b15dfdf218a90110bdc2583b271a3be0692c70eb39a0878b3ec1c9b28"
+    },
+    "detector_disease": {
+      "master": "assets/modemon/approved/originals/detector_disease.png",
+      "original_filename": "pathogaze.png",
+      "sha256": "2fe575fb0c2fa167e60ae289dfbabf7c6982e1a798ed7af7f541596965c4d85e"
+    },
+    "detector_pedestrian": {
+      "master": "assets/modemon/approved/originals/detector_pedestrian.png",
+      "original_filename": "crowdseer.png",
+      "sha256": "a7f8d13b1d043fdfb1f3bb611dffe2ca8e78f70f135d109e320d67ad2f07a3a5"
+    },
+    "extractor_archive": {
+      "master": "assets/modemon/approved/originals/extractor_archive.png",
+      "original_filename": "manusqueak.png",
+      "sha256": "2a2a16d2fa9887302ceff9daba839166ecd4d06ee573cf717554aadd1e1a9cd5"
+    },
+    "extractor_base": {
+      "master": "assets/modemon/approved/originals/extractor_base.png",
+      "original_filename": "scribbit.png",
+      "sha256": "643dfda38018ed1b64ad1198eb7dea5a466d5efc0fda8f205c09fb5a98352eaf"
+    },
+    "extractor_government": {
+      "master": "assets/modemon/approved/originals/extractor_government.png",
+      "original_filename": "bureaucritter.png",
+      "sha256": "8c126a2ca0578655ddf78c6a21b1e31666218b77559e2f81a2d2e8174b7f84eb"
+    },
+    "extractor_history": {
+      "master": "assets/modemon/approved/originals/extractor_history.png",
+      "original_filename": "archivole.png",
+      "sha256": "d16b6e549140dcb9c96527d40e4c31fdb6f55d52bff7a7109f27c20798f11fb3"
+    },
+    "extractor_medical": {
+      "master": "assets/modemon/approved/originals/extractor_medical.png",
+      "original_filename": "clinink.png",
+      "sha256": "d28ed1a4ed12d2204bd75fe6f0faf387d6195beedfa5ef09a532096c54537d31"
+    },
+    "extractor_research": {
+      "master": "assets/modemon/approved/originals/extractor_research.png",
+      "original_filename": "scholarat.png",
+      "sha256": "694fcf865e27e6f3b9aea3d603de34652713cacca6c229924768b804b6337bdf"
+    },
+    "extractor_specimen": {
+      "master": "assets/modemon/approved/originals/extractor_specimen.png",
+      "original_filename": "specimunk.png",
+      "sha256": "466423e54c72dad53da3addee4e032a43e5d04fe6f6f83eea43c3a7040b86b6b"
+    },
+    "forecast_base": {
+      "master": "assets/modemon/approved/originals/forecast_base.png",
+      "original_filename": "forespirit.png",
+      "sha256": "edfd2ad74011eb53e55d31fcdb54ef85a1ab39c3a7ab801f42490fd6efb565ff"
+    },
+    "forecast_crowd": {
+      "master": "assets/modemon/approved/originals/forecast_crowd.png",
+      "original_filename": "gathergeist.png",
+      "sha256": "63afddd7ad7c8f5e253775addf7d8d89fbe8212b4549a0d30fe674815a436304"
+    },
+    "forecast_patient": {
+      "master": "assets/modemon/approved/originals/forecast_patient.png",
+      "original_filename": "wardwisp.png",
+      "sha256": "cf4d6ec41d4322bc228d4ea9ca8076ab5e2ef22e893241590dc624d48f850c4f"
+    },
+    "forecast_stock": {
+      "master": "assets/modemon/approved/originals/forecast_stock.png",
+      "original_filename": "coinjurer.png",
+      "sha256": "99e9b961625da66919b4e0dfc5a5e09702d5826939f5be7f31b2e00f6b2c840e"
+    },
+    "forecast_transit": {
+      "master": "assets/modemon/approved/originals/forecast_transit.png",
+      "original_filename": "commutoracle.png",
+      "sha256": "588c819301f3c9cafd061d86cbc288e2a1ebafd319b90e3697b26db254513356"
+    },
+    "generator_base": {
+      "master": "assets/modemon/approved/originals/generator_base.png",
+      "original_filename": "purrrompt.png",
+      "sha256": "64312ec5895a664770003cc17049ef1ce8eef5372803b29b337ecbc5fe10cdc8"
+    },
+    "generator_catalog": {
+      "master": "assets/modemon/approved/originals/generator_catalog.png",
+      "original_filename": "catalogar.png",
+      "sha256": "20ea6b5a013efe5999aa30336c71eb5bdbbee7500ee51566bed3d0f8cc355a7c"
+    },
+    "generator_classroom_chatbot": {
+      "master": "assets/modemon/approved/originals/generator_classroom_chatbot.png",
+      "original_filename": "lecturlynx.png",
+      "sha256": "5148ee12b5274f292b747d781eeb9b3fd3061236f896b39ee0c5942555aeab4d"
+    },
+    "generator_conversational": {
+      "master": "assets/modemon/approved/originals/generator_conversational.png",
+      "original_filename": "meowlogue.png",
+      "sha256": "63a520209117867b4972e8c6b87eb9f2c41dec83090e4dc4652b98c0b8184673"
+    },
+    "generator_creative": {
+      "master": "assets/modemon/approved/originals/generator_creative.png",
+      "original_filename": "articlaw.png",
+      "sha256": "c4941266181d56fd879b8c5e51c1032a74b362a55f7a2cbd0c6ab8aa7cdab0ed"
+    },
+    "generator_document": {
+      "master": "assets/modemon/approved/originals/generator_document.png",
+      "original_filename": "quillcat.png",
+      "sha256": "de24dd985373e89f4f374fbd4c09f4318b22fddc4ecb1aec432541674951fffe"
+    },
+    "generator_learning": {
+      "master": "assets/modemon/approved/originals/generator_learning.png",
+      "original_filename": "learnx.png",
+      "sha256": "ea05b43f28f809d99f74ef1e623cfac17fc017f1569438296f54c5a7bbed6e4a"
+    },
+    "generator_lesson_planner": {
+      "master": "assets/modemon/approved/originals/generator_lesson_planner.png",
+      "original_filename": "planthera.png",
+      "sha256": "614f6e646ac8c7e2ec3e6f07b0efee56f32c7a64c714beade3d271c06ac0e9fd"
+    },
+    "logo": {
+      "master": "assets/brand/originals/modemon-go.png",
+      "original_filename": "modemongologo.png",
+      "sha256": "1f6d1bf77300edd664eff69d9be54d5936a177c1004f629922293b7d7e906dfe"
+    },
+    "recommender_adaptive_learning": {
+      "master": "assets/modemon/approved/originals/recommender_adaptive_learning.png",
+      "original_filename": "mentamorph.png",
+      "sha256": "6636c2e1f7d55e4997744468fe181ba30bbfbdf67b9b58cf440ebad541ea31c0"
+    },
+    "recommender_ai_curator": {
+      "master": "assets/modemon/approved/originals/recommender_ai_curator.png",
+      "original_filename": "muselect.png",
+      "sha256": "eff7a35e2c09aacd03f87622673299b228dfaf3841c1107baca91c9545222301"
+    },
+    "recommender_base": {
+      "master": "assets/modemon/approved/originals/recommender_base.png",
+      "original_filename": "suggestle.png",
+      "sha256": "5213479139a65692d0f881ed8ca807b11b26c19e8d2526f118a970d04e302496"
+    },
+    "recommender_content": {
+      "master": "assets/modemon/approved/originals/recommender_content.png",
+      "original_filename": "reelure.png",
+      "sha256": "7a540f6f28782a8639405c4df1c1bd63b201be0efad045461a596674afa7e224"
+    },
+    "recommender_learning": {
+      "master": "assets/modemon/approved/originals/recommender_learning.png",
+      "original_filename": "curriquill.png",
+      "sha256": "3465aeb0689d21623608bfe91f6f25a0fd6f17773a5e46f02caf4e225e868777"
+    },
+    "recommender_menu": {
+      "master": "assets/modemon/approved/originals/recommender_menu.png",
+      "original_filename": "nibblet.png",
+      "sha256": "6ed5877ac3d8f7de671771588183e82505157303a3abdf98099e35d3e9c8039c"
+    },
+    "recommender_product": {
+      "master": "assets/modemon/approved/originals/recommender_product.png",
+      "original_filename": "cartivore.png",
+      "sha256": "3684a46cb9da78d0378f18c9c2251523a5d8968f74880bc072b4a1c6342fefed"
+    },
+    "recommender_research": {
+      "master": "assets/modemon/approved/originals/recommender_research.png",
+      "original_filename": "referaptor.png",
+      "sha256": "3f8bd7d7d5f282cce5697ff4d919fdf0f823c47492c0038901e1a76e23dedfcb"
+    },
+    "retriever_base": {
+      "master": "assets/modemon/approved/originals/retriever_base.png",
+      "original_filename": "searchound.png",
+      "sha256": "615e7419a3cef4f79b2f641449441fcb190b7b322d1fdd19afafafead0a9a6e8"
+    },
+    "retriever_knowledge": {
+      "master": "assets/modemon/approved/originals/retriever_knowledge.png",
+      "original_filename": "cognicollie.png",
+      "sha256": "180b0dd470dc15078f973a72089f4dd15a6214c6831633965fa019063c4dc1a4"
+    },
+    "retriever_product": {
+      "master": "assets/modemon/approved/originals/retriever_product.png",
+      "original_filename": "bargainbeagle.png",
+      "sha256": "1a7b13900c8c4e1b59ecc74d33961ec559ce39a36a4d12a90dea44dc1dd41ad3"
+    },
+    "retriever_records": {
+      "master": "assets/modemon/approved/originals/retriever_records.png",
+      "original_filename": "dachshundex.png",
+      "sha256": "8ddd280c3bcb357802ca65f62ef6e2bf287be43dbe10c0807221087e40bf4f3e"
+    },
+    "retriever_research": {
+      "master": "assets/modemon/approved/originals/retriever_research.png",
+      "original_filename": "labraquery.png",
+      "sha256": "31317c41d8e87a66ef47c792d404114588da5260c217595a07593ffa589bbd5b"
+    },
+    "retriever_semantic_search": {
+      "master": "assets/modemon/approved/originals/retriever_semantic_search.png",
+      "original_filename": "semantiff.png",
+      "sha256": "74fe9e542a4e15cd91c767cfd85d6cde194f6c548ff2d71568eb3b77ddd62708"
+    },
+    "scheduler_base": {
+      "master": "assets/modemon/approved/originals/scheduler_base.png",
+      "original_filename": "plancton.png",
+      "sha256": "a21c2b432bdc8d521b39f02acb9e0fa8075a379a7f1cc1c442a91dfed90c8fda"
+    },
+    "scheduler_delivery": {
+      "master": "assets/modemon/approved/originals/scheduler_delivery.png",
+      "original_filename": "parcelprawn.png",
+      "sha256": "13e5ae4384ce21df714bee315285948cc7d30dc8d7abfed930ed38714ce7c73e"
+    },
+    "scheduler_hospital": {
+      "master": "assets/modemon/approved/originals/scheduler_hospital.png",
+      "original_filename": "wardray.png",
+      "sha256": "12503f41d744444194dd2391ea718a019ea2a44e34cd6688e45ce9ab338fcce7"
+    },
+    "scheduler_ride_booking": {
+      "master": "assets/modemon/approved/originals/scheduler_ride_booking.png",
+      "original_filename": "cabcrab.png",
+      "sha256": "8cac3daa46b7c2899ac57b7a0d0984debdbc622cd915b04434a9f8e2602f316c"
+    },
+    "scheduler_traffic_signal": {
+      "master": "assets/modemon/approved/originals/scheduler_traffic_signal.png",
+      "original_filename": "signalquid.png",
+      "sha256": "84059b78a4c69a735936be3f30cf83ce505f1a0f7febfc22f50f4d0679027e97"
+    },
+    "scheduler_transit": {
+      "master": "assets/modemon/approved/originals/scheduler_transit.png",
+      "original_filename": "routeopus.png",
+      "sha256": "4988bda0f4772dfdcbc455e6f3ca8ca2b3c7439c03fb5c4a68b2fd3e60451036"
+    },
+    "scheduler_transit_flow": {
+      "master": "assets/modemon/approved/originals/scheduler_transit_flow.png",
+      "original_filename": "flowfin.png",
+      "sha256": "37d341d33e78449e1ba907d5cb4f056156e13dff0269d17b5db181badbc6d7f8"
+    },
+    "scheduler_workforce": {
+      "master": "assets/modemon/approved/originals/scheduler_workforce.png",
+      "original_filename": "shiftshark.png",
+      "sha256": "b46f70886a04097892d1caf320174d91dbcd8ec0180bace77bde6523e0f86b1f"
+    }
+  },
+  "version": 1
+}
