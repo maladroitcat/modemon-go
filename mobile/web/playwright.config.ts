@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+import { fileURLToPath } from "node:url";
 export default defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: false,
@@ -26,6 +27,7 @@ export default defineConfig({
     ? undefined
     : {
         command: "npm run play:web -- --port 5173",
+        cwd: fileURLToPath(new URL('..', import.meta.url)),
         url: "http://127.0.0.1:5173",
         reuseExistingServer: !process.env.CI,
         timeout: 120000,
