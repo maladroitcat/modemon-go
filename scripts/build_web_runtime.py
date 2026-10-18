@@ -12,6 +12,7 @@ from shapely.geometry import Point, shape
 ROOT = Path(__file__).resolve().parents[1]
 DESTINATION = ROOT / 'mobile/web/src/data/runtime.json'
 POLICY_VERSION = 'public-anchors-v1'
+WORLD_IDENTITY = 'mobile/web/config/world_identity.json'
 HABITATS = dict(zip(
     ['Healthcare', 'Finance', 'Retail', 'Food & Hospitality', 'Education & Research',
      'Transportation', 'Civic & Government', 'Entertainment', 'Office & Business'],
@@ -24,8 +25,28 @@ INPUTS = ['data/processed/' + f for f in (
     'special_poi_candidate_scores.csv')] + ['data/config/region_resolution.yaml']
 
 
+def gameplay_fingerprint(hashes, dex):
+    """Copy edits must not reroll encounters or change persisted attempt IDs."""
+    structured = {**dex, 'modemon': {
+        key: {field: value for field, value in record.items() if field != 'dex_entry'}
+        for key, record in dex['modemon'].items()}}
+    sources = {**hashes, 'data/processed/modedex.json': hashlib.sha256(
+        json.dumps(structured, sort_keys=True, separators=(',', ':')).encode()).hexdigest()}
+    return hashlib.sha256(json.dumps(dict(sources=sources, policy=POLICY_VERSION),
+                                     sort_keys=True).encode()).hexdigest()
+
+
 def build_payload(root=ROOT):
     hashes = {f: hashlib.sha256((root / f).read_bytes()).hexdigest() for f in INPUTS}
+    identity_bytes = (root / WORLD_IDENTITY).read_bytes()
+    identity = json.loads(identity_bytes)
+    if (set(identity) != {'schema_version', 'legacy_data_version', 'gameplay_fingerprint'}
+            or identity['schema_version'] != 1
+            or not isinstance(identity['legacy_data_version'], str)
+            or len(identity['legacy_data_version']) != 16
+            or not isinstance(identity['gameplay_fingerprint'], str)
+            or len(identity['gameplay_fingerprint']) != 64):
+        raise ValueError('Invalid compatibility identity; do not silently reset player progress')
     def load(name):
         return json.loads((root / 'data/processed' / name).read_text())
     def table(name):
@@ -36,6 +57,9 @@ def build_payload(root=ROOT):
     neutral = load('habitat_unclassified_areas.geojson')['features']
     pois = load('pois_labeled.geojson')['features']
     dex = load('modedex.json')
+    fingerprint = gameplay_fingerprint(hashes, dex)
+    data_version = (identity['legacy_data_version']
+                    if fingerprint == identity['gameplay_fingerprint'] else fingerprint[:16])
     if (len(regions), len(zones), len(pois), len(dex['modemon'])) != (8, 62, 927, 51):
         raise ValueError('Unexpected canonical counts; review runtime bridge before changing baseline')
     precedence = yaml.safe_load((root / 'data/config/region_resolution.yaml').read_text())['overlap_precedence']
@@ -105,15 +129,17 @@ def build_payload(root=ROOT):
                     properties={k: feature['properties'][k] for k in fields})
     result = dict(
         version=1, bridge_policy_version=POLICY_VERSION,
-        data_version=hashlib.sha256(json.dumps(dict(sources=hashes, policy=POLICY_VERSION), sort_keys=True).encode()).hexdigest()[:16],
-        source_hashes=hashes, modedex=dex,
+        data_version=data_version, gameplay_fingerprint=fingerprint,
+        content_version=hashlib.sha256(json.dumps(dict(sources=hashes, policy=POLICY_VERSION), sort_keys=True).encode()).hexdigest()[:16],
+        source_hashes={**hashes, WORLD_IDENTITY: hashlib.sha256(identity_bytes).hexdigest()}, modedex=dex,
         regions=[compact(r, ['region_id', 'display_name', 'parent_city']) for r in regions],
         zones=[compact(z, ['zone_id', 'region_id', 'habitat_primary', 'dominant_secondary_habitat']) for z in zones],
         neutral=[compact(n, ['region_id']) for n in neutral],
         precedence=precedence, habitats=HABITATS, pois=sorted(anchors, key=lambda p: p['id']),
         signatures=dict(enabled=[], reason='No approved explicit Signature-to-destination schedule/crosswalk. All 12 forms remain disabled.'),
         art=dict(approved={}, reason='Local Seeklet images are concepts awaiting approval; no final artwork is approved.'))
-    if hashes != {f: hashlib.sha256((root / f).read_bytes()).hexdigest() for f in INPUTS}:
+    if (hashes != {f: hashlib.sha256((root / f).read_bytes()).hexdigest() for f in INPUTS}
+            or (root / WORLD_IDENTITY).read_bytes() != identity_bytes):
         raise RuntimeError('Canonical input changed during build')
     return result
 

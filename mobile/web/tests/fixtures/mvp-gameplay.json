@@ -1,0 +1,84 @@
+{
+  "baseline_commit": "1d24c9e29600d098e0e981d0a532d89c9083f72a",
+  "data_version": "0f51a954e4340dea",
+  "world_sha256": {
+    "2026-10-01": "2e7556eb992ac2eb518c26591d2e9b295a60690a1466a8be6a327569853e78a1",
+    "2026-10-02": "454270b97d9e6a91b1ea88beb0c6a5673fa72b6794797078edac16159ed323d6",
+    "2026-10-03": "f5392f36c5c5f9dca82a85843a9907dd657be7f634ce3d1d94144f90e29c7f61",
+    "2026-10-04": "f125cd78da1dc77479cac16505083ed280a2c27dc8eb9c1387b0108a549f5d14",
+    "2026-10-05": "fd80a2610438807b715e914e25fda33c2f8f4f2a4a0d7cfaa579ba02cb559418",
+    "2026-10-06": "9da1bfa33844a05b32d72c1da1df63ce42b8fa96caa58b8b32613292f59701b0",
+    "2026-10-07": "9754ec229348f94940ee914bcfc90dac23cd3c6f5cdad51cf58b0f56b4d06cf8",
+    "2026-10-08": "f05571526e4ee74364740391118f4aea68fd3f640db245c5b75230082836de7a",
+    "2026-10-09": "4ed4c5c207a4346819cd1678aaea83ea48a856488452d672e8f1c2316a0ad3e0",
+    "2026-10-10": "9bfd9b7bddf7e1e6a59c1c86f953db3f2244ca2858a3b15471b831522c450464",
+    "2026-10-11": "c66e8012b91cf21b30b6cbbcea6ed295177b8d4c8191fc7300443770798824fb",
+    "2026-10-12": "0cc2d7474233c6c2ac4d2a8cdd3ccfb0ec363f1f96e1fa884c5c537ae95de05b",
+    "2026-10-13": "ff5a3f31912274497d4ad103fe7cd22a92d3eaeb42f014b9a1d2789f74877789",
+    "2026-10-14": "4b6e7c2e2a816cd2beef4d78c7861156b5d9e6d28f640d27cb329554c11ea1df",
+    "2026-10-17": "18b96bff69dd0e7556172133d36e7d865393ed0f9b9cd6cb4bfc176675327643",
+    "2026-10-18": "f2cb0424d2bc7f74e60ef0c9f36aa4e6dbd1cbf14fb4340c271cd851d6bd94c6"
+  },
+  "question_bank_sha256": "cb0f4e188f5d3f6ea533073028920c7151cbf94e0d6b781dfba3adaba2e7a499",
+  "saved_progress": {
+    "version": 1,
+    "discovered": [
+      "detector_base",
+      "forecast_base",
+      "scheduler_base"
+    ],
+    "attempts": {
+      "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_13785804101": {
+        "answers": [
+          3,
+          1,
+          1
+        ],
+        "status": "captured",
+        "speciesId": "detector_base",
+        "poiName": "Ammi's Dessert Boutique and Chai House",
+        "date": "2026-10-17"
+      },
+      "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_way_47760017": {
+        "answers": [
+          3,
+          2,
+          1
+        ],
+        "status": "escaped",
+        "speciesId": "scheduler_base",
+        "poiName": "One Of One Boutique",
+        "date": "2026-10-17"
+      },
+      "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_3248743375": {
+        "answers": [
+          0
+        ],
+        "status": "in_progress",
+        "speciesId": "forecast_base",
+        "poiName": "The PIzza Times",
+        "date": "2026-10-17"
+      }
+    }
+  },
+  "saved_encounters": [
+    {
+      "id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_13785804101",
+      "poi_id": "RAL-01_osm_node_13785804101",
+      "name": "Ammi's Dessert Boutique and Chai House",
+      "speciesId": "detector_base"
+    },
+    {
+      "id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_way_47760017",
+      "poi_id": "RAL-01_osm_way_47760017",
+      "name": "One Of One Boutique",
+      "speciesId": "scheduler_base"
+    },
+    {
+      "id": "playable-v1:0f51a954e4340dea:2026-10-17:RAL-01_osm_node_3248743375",
+      "poi_id": "RAL-01_osm_node_3248743375",
+      "name": "The PIzza Times",
+      "speciesId": "forecast_base"
+    }
+  ]
+}
