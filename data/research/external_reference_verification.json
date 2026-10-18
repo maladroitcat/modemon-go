@@ -1,0 +1,74 @@
+{
+  "https://blog.optibus.com/transportation/can-artificial-intelligence-prevent-bus-bunching": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "Can Artificial Intelligence Prevent Bus Bunching?",
+    "content_sha256": "b431d4bcbecf2fbe0ff27e2817817f7fb7ec78b80124a3f71aa9262edd716122",
+    "final_url": "https://blog.optibus.com/transportation/can-artificial-intelligence-prevent-bus-bunching",
+    "http_status": 200,
+    "media_type": "html",
+    "observed_headings": [
+      "Can Artificial Intelligence Prevent Bus Bunching?"
+    ],
+    "verification_terms_found": {
+      "bus bunching": true,
+      "predictions": true,
+      "timetable": true,
+      "trade-offs": true
+    },
+    "verified_at_utc": "2026-10-18T23:39:48.003581+00:00"
+  },
+  "https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "Robot helps nurses schedule tasks on labor floor",
+    "content_sha256": "1b5eb345aeb947b9c2f7750d9f5fee5045ac7c730021555be7ee4f998ff15a69",
+    "final_url": "https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713",
+    "http_status": 200,
+    "media_type": "html",
+    "observed_headings": [
+      "Robot helps nurses schedule tasks on labor floor"
+    ],
+    "verification_terms_found": {
+      "nurses": true,
+      "patients": true,
+      "recommendations": true,
+      "scheduling": true
+    },
+    "verified_at_utc": "2026-10-18T22:59:51.226251+00:00"
+  },
+  "https://www.ibm.com/think/topics/contact-center-workforce-optimization": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "What is contact center workforce optimization?",
+    "content_sha256": "643d5c89e948f84c87b280ffc5d215c67210f1275a26d1a7913c361865dbbf2e",
+    "final_url": "https://www.ibm.com/think/topics/contact-center-workforce-optimization",
+    "http_status": 200,
+    "media_type": "html",
+    "observed_headings": [
+      "What is contact center workforce optimization?"
+    ],
+    "verification_terms_found": {
+      "AI": true,
+      "preferences": true,
+      "scheduling": true,
+      "staffing": true
+    },
+    "verified_at_utc": "2026-10-18T22:59:54.186894+00:00"
+  },
+  "https://www.ibm.com/think/topics/dispatch-management": {
+    "approval_status": "PENDING_OWNER_APPROVAL",
+    "article_title": "What is dispatch management?",
+    "content_sha256": "ec6649028b3da4a43abc4fc9caf31a186c2bb45ee0acb6f0c3a5e200ee98695b",
+    "final_url": "https://www.ibm.com/think/topics/dispatch-management",
+    "http_status": 200,
+    "media_type": "html",
+    "observed_headings": [
+      "What is dispatch management?"
+    ],
+    "verification_terms_found": {
+      "AI": true,
+      "delivery": true,
+      "human": true,
+      "route": true
+    },
+    "verified_at_utc": "2026-10-18T22:59:54.932465+00:00"
+  }
+}

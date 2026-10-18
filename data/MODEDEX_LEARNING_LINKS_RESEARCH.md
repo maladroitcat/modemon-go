@@ -1,115 +1,160 @@
-# Modedex Workbook Links: Research Only
+# Modedex Learning References: Research Only
 
-Issue #26 proposal, pending product-owner review. No game screens, canonical
-Modedex content, quiz answers, assets, geography, or Signature evidence changed.
-This branch is independent of the camera-preference implementation in issue #25.
+Issue #26 / PR #29. No UI, canonical Modedex, quiz, artwork, geography, or
+Signature project evidence is changed. No links are integrated, merged, or deployed.
+
+## Final Owner Policy
+
+- Preserve **all 45 existing workbook matches unchanged**, including accepted
+  component-level matches and existing Signature workbook matches.
+- All **12 Signature Modemon already have sufficient canonical real-world project
+  links**. Do not research or propose supplementary sources for them.
+- Research only the **four uncovered non-Signatures**: Wardray, Routeopus,
+  Shiftshark, and Parcelprawn.
+- Outside proposals must explain what this kind of AI does and where it is used
+  for an everyday reader, not teach implementation.
+- Wardray, Shiftshark, and Parcelprawn's exact outside references were explicitly
+  approved by the owner after reviewing commit `79dd9ce`. Routeopus's replacement
+  remains **PENDING_OWNER_APPROVAL**. Verification never grants approval.
+  No desire for 51 supplementary links overrides this policy.
+
+## Scope Accounting
+
+The original 40-match inventory had 11 blank workbook fields: three Signatures
+(Specimunk, Flowfin, Cabcrab) and eight non-Signatures (Scribbit, Clinink,
+Bureaucritter, Manusqueak, Wardray, Routeopus, Shiftshark, Parcelprawn).
+
+The existing PR now has 45 matches, which the owner accepts as-is. Scribbit,
+Clinink, Bureaucritter, Manusqueak, and Flowfin gained scoped workbook matches in
+that earlier review. Those matches are not reverted or reassessed.
+
+Of the current six blank workbook fields, two belong to Signatures (Specimunk,
+Cabcrab) and need no extra links. Only the other four require outside research.
+Thus **35 of 39 non-Signatures have workbook matches**, three have owner-approved
+outside references, one has a pending replacement, and **12 of 12 Signatures have
+canonical project provenance**.
+The machine-readable [scope audit](research/modedex_reference_scope.json)
+derives this accounting from canonical stages and historical review metadata.
 
 ## Review Artifacts
 
-- [51-row mapping](research/modedex_learning_mapping.md): every canonical species,
-  its represented job, precise lesson title/link, rationale, confidence, boundary,
-  and independently justified secondary lesson where useful.
-- [Canonical inventory and mapping CSV](research/modedex_learning_inventory.csv):
-  also includes the unchanged `family_id`, `stage`, `role`, `ai_tasks`,
-  `models_algorithms`, `input_data`, `output_data`, habitats, explanation methods,
-  and limitations. These are the actual source field names; there are no invented
-  `model_family`, `algorithms`, `inputs`, or `outputs` fields in canon.
-- [Review queue](research/modedex_learning_review_queue.csv): partial and
-  unresolved matches. An unresolved entry intentionally has no primary URL.
-- [Separate editable overlay](config/modedex_learning_links.yaml): one keyed
-  decision per canonical species plus a shared exact-lesson catalog. Resolving
-  catalog references gives the full title, workbook, unit, chapter, and URL.
-- [Live verification](research/workbook_lesson_verification.json): HTTP status,
-  final URL, actual article H1, live TOC membership, inspected content terms,
-  body-text hash, and UTC verification time. No lesson bodies are republished.
-- [TOC discovery inventory](research/workbook_toc_inventory.json): exact links
-  found while inspecting all 15 live unit tables of contents across the three
-  authorized workbooks. This records the search surface, not proof that no future
-  lesson could fill a gap.
+- [Table A](research/modedex_learning_mapping.md) preserves all 45 existing
+  matches, exact URLs, rationales, component scope labels, and optional secondary
+  lessons. Null workbook fields are never filled with outside proposals.
+- [Workbook YAML](config/modedex_learning_links.yaml),
+  [51-row inventory](research/modedex_learning_inventory.csv), and
+  [workbook verification](research/workbook_lesson_verification.json) remain
+  byte-for-byte unchanged by this final clarification.
+- [Table B](research/modedex_external_owner_review.md) and its
+  [CSV](research/modedex_external_owner_review.csv) contain four proposals with
+  title, publisher, exact URL, rationale, audience suitability, confidence,
+  limitations, and why the workbook review did not cover that job.
+- [Editable outside proposals](research/modedex_external_proposals.yaml) are
+  research metadata only, not an application link catalog. Their original
+  pending status records that research/verification cannot confer approval.
+- [Owner decision ledger](research/modedex_external_owner_decisions.yaml) records
+  the three approvals and the held MIT Routeopus article against the exact URLs
+  and reviewed commit. Table B joins those decisions to report effective status.
+  Changing an approved URL fails validation instead of inheriting approval.
+- [Outside verification](research/external_reference_verification.json) records
+  HTTP status, exact observed title, URL, inspected topic terms, response hash,
+  and verification time. Working links do not constitute owner approval.
 
-## Selection Method
+### Readings and Owner Status
 
-Research was performed October 18, 2026. Discovered exact article links from
-the live workbooks, read their body content, checked the actual H1/topic coverage,
-and matched against each species' documented job, input/output and representative
-techniques. HTTP success alone is not a relevance test. No homepage placeholders,
-fabricated chapter slugs, or links outside the three owner-authorized sites are
-proposed. The verification helper checks only these domains over HTTPS, identifies
-the application, and spaces requests; regular tests are offline.
+| Species | Publisher / exact article | Owner status |
+|---|---|---|
+| Wardray | MIT News: [Robot helps nurses schedule tasks on labor floor](https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713) | APPROVED_BY_OWNER |
+| Routeopus | Optibus: [Can Artificial Intelligence Prevent Bus Bunching?](https://blog.optibus.com/transportation/can-artificial-intelligence-prevent-bus-bunching) | PENDING_OWNER_APPROVAL |
+| Shiftshark | IBM Think: [What is contact center workforce optimization?](https://www.ibm.com/think/topics/contact-center-workforce-optimization) | APPROVED_BY_OWNER |
+| Parcelprawn | IBM Think: [What is dispatch management?](https://www.ibm.com/think/topics/dispatch-management) | APPROVED_BY_OWNER |
 
-High confidence means a direct task, input-representation concept, or explicitly
-canonical representative technique. It does **not** mean a lesson covers every
-algorithm in that record. Foundational articles are preferred for common forms.
-Medium means partial technique or related-context coverage that needs review;
-low means unresolved. Every row records what the lesson does **not** establish.
-Optional second articles add a distinct purpose such as explaining a prediction,
-preserving lineage, or understanding a retrieval index, not extra link volume.
+Routeopus's previous MIT risk-aware trip-planning article was held by the owner
+because it was not directly about public transit scheduling. The replacement
+connects bus delays to prediction-informed timetable improvements, with no code.
+The alternative Optibus optimization announcement was less suitable for beginners
+because of its operational jargon; arrival-prediction-only sources do not explain
+schedule adjustment. No replacement is approved by this research choice.
 
-Specific caveats worth owner attention:
+The hospital article is a dated research example, not evidence of current
+clinical deployment. The 2018 Optibus article is vendor-authored, focuses on
+timetable reliability rather than complete crew scheduling, and contains dated
+generalizations about transit practice. IBM's articles are also vendor-authored
+and broader than scheduling alone.
+Not all automation or optimization is machine learning, and no source establishes
+local deployment, safe clinical practice, equitable staffing, or guaranteed results.
+These limitations are explicit per proposal rather than silently overstated.
 
-- Scheduling: neural-network optimizers and data-pipeline DAG orchestration are
-  not vehicle routing, mixed-integer programming, or operational staff scheduling.
-  Wardray, Routeopus, Flowfin, Cabcrab, Shiftshark and Parcelprawn remain unresolved.
-  Plancton has a partial RL match because RL is explicitly canonical; Signalquid
-  has a partial perception-subtask match, not a traffic-control algorithm lesson.
-- Extraction: Scribbit, Clinink, Bureaucritter, Manusqueak and Specimunk remain
-  unresolved. General NLP is not OCR, clinical entity extraction, layout analysis,
-  or handwriting recognition. Scholarat has an explicit topic-modeling match;
-  Archivole's thematic-text-analysis match is only contextual and needs review.
-- Time Series is an accessible input foundation, not an ARIMA tutorial. Temporal
-  features explain model inputs, not forecasting accuracy. The LSTM secondary
-  teaches an explicitly canonical architecture in NLP framing, not a transit
-  implementation.
-- Generic LLM coverage is partial for Muselect, Mentamorph and Catalogar where
-  specialized curation, adaptive learning, or catalog standards are not taught.
-- Geargoyle's autoencoder lesson explains reconstruction, but not anomaly
-  thresholds or maintenance decisions; Netnark has no network-security-specific
-  article. Both stay in review.
+## Preserved Historical Research
 
-## Signature Claim Boundary
+The prior review inspected the public discovered corpus of 360 lessons across
+15 unit TOCs (123 Explainable AI, 121 Data Science, 116 Deep Learning).
+[TOC inventory](research/workbook_toc_inventory.json) and
+[body-audit metadata](research/workbook_full_review.json) remain unchanged.
+The [21-species component review](research/workbook_component_review.yaml) and
+[21-row review queue](research/modedex_learning_review_queue.csv) are **historical**,
+not instructions to revisit accepted workbook matches or research Signatures.
+Their old confidence/review flags are retained for provenance, not a new approval
+request. Search terms alone were never proof of topic relevance.
 
-Workbook links are educational supporting material, **not evidence about a
-Signature project's deployed architecture or exact location**. The inventory
-keeps all 12 original `signature.source_url` values in a separate
-`signature_project_source_url` column. These research links never replace them.
-Cabcrab is not assumed to use an LLM; Signalquid is not assumed to use YOLO.
-No research finding authorizes a new deployment claim, spawn, or POI mapping.
+The former code-oriented outside proposals and supplementary Signature proposals
+have been withdrawn from the current Table B and verification evidence. Their
+history remains in Git. No new Signature sources were researched for this revision.
+
+## Claim Boundary
+
+Canonical `signature.source_url` values remain separate and unchanged.
+Existing project links already satisfy all 12 Signatures. Educational readings
+do not identify a project's deployed architecture, prove current local usage,
+or imply that a system runs at a gameplay coordinate. No canonical algorithm
+list or research fact is altered by a proposed reading.
 
 ## Reproduction and Checks
 
-From the repository root with the existing Python requirements installed:
+With the existing Python requirements installed, from the repository root:
 
 ```sh
-# Explicit network audit; run when refreshing the research, not on every test.
-python3 -B scripts/audit_workbook_lessons.py --output data/research/workbook_lesson_verification.json
-# Optional new TOC discovery snapshot (network):
-python3 -B scripts/audit_workbook_lessons.py --discover --output data/research/workbook_toc_inventory.json
-# Deterministic offline review artifacts; no app data is written:
+# Offline bookkeeping only: preserves all existing workbook match values.
 python3 -B -m scripts.build_workbook_research_review
+# Live audit of only new URLs; keeps approved-source evidence unchanged:
+python3 -B -m scripts.review_external_learning_references --verify-new
+# Optional explicit refresh of all four outside sources (not approval):
+# python3 -B -m scripts.review_external_learning_references --verify
+# Deterministic offline Table B and scope-audit rendering:
+python3 -B -m scripts.review_external_learning_references
 python3 -B -m unittest discover -s tests -v
 ```
 
-`modedex_learning_source_hashes.json` records every pre-existing configuration and
-processed canonical file; render checks before/after hashes and tests compare the
-committed baseline. CSV inventory values are joined directly from canon, not
-manually rewritten. Live verification can change over time; offline tests prove
-snapshot consistency, not permanent future site availability.
+No PDF package is needed. Historical workbook-crawl helpers are retained for
+provenance; rerunning or revising preferred matches is not part of this task.
+The HTML audit checks article content rather than navigation; unexpected redirects,
+title changes, missing terms, or stale/out-of-scope evidence fail validation.
+Tests are offline. Snapshots cannot guarantee future public availability.
 
-## Review Decisions Needed
+SHA-256 tests freeze the workbook YAML, inventory CSV, and workbook verification
+snapshot. The protected-source manifest checks all pre-existing configuration and
+processed datasets; renderers verify before/after hashes. Tests also enforce
+non-Signature-only proposals, general-audience resource types, deterministic
+reports, explicit exact-URL owner approvals separated from network verification,
+and absence of outside reading URLs from the game/canon.
 
-Approve or revise the 51-row proposal before any UI integration. In particular,
-decide whether partial concept links should be shown with a narrower label, or
-withheld until direct lessons exist. The 11 unresolved species must not acquire
-generic fallback links merely to achieve 100% coverage. Candidate lessons on an
-unresolved row are review leads, not recommended or active links. Whether and how
-undiscovered Modedex entries show future links remains a separate product decision.
+## Owner Decisions Needed
+
+Approve or reject the Routeopus replacement, or request another direct
+public-transit scheduling explainer. Wardray, Shiftshark, and Parcelprawn need no
+repeat approval for the unchanged references. No workbook reassessment or
+Signature supplement is requested. A later explicitly authorized task would be
+required to integrate readings into the app. Approval of readings is not approval
+to merge or deploy. This research has no automatic approval, integration, merge,
+or deployment command.
 
 ## Attribution
 
-Sources: [Explainable AI Workbook](https://explainableaiworkbook.com/),
+Preferred workbooks: [Explainable AI Workbook](https://explainableaiworkbook.com/),
 [Data Science Workbook](https://datascienceworkbook.com/), and
 [Deep Learning Workbook](https://deeplearningworkbook.com/), maintained by
-Dr. Brinnae Bent. See each site's current attribution/license notices. This
-research links to original lessons and stores titles, discovery metadata, and
-verification hashes, not copies of the lessons. Relevance rationales are project
-research judgments and should not imply workbook-author endorsement.
+Dr. Brinnae Bent. Outside references credit MIT News / Massachusetts Institute of
+Technology, IBM Think, and Optibus individually. Consult original publishers'
+attribution and licensing terms before reuse. We link to originals and retain
+audit metadata, not article bodies. Project relevance judgments do not imply
+publisher endorsement.

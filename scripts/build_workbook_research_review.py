@@ -70,6 +70,8 @@ def validate(data, canon, evidence):
             raise ValueError(f"Unresolved entry must not imply an approved link: {key}")
         if row["confidence"] != "high" and row["review_required"] is not True:
             raise ValueError(f"Weak/partial match needs review: {key}")
+        if row["review_required"] and not row.get("scope_label", "").strip():
+            raise ValueError(f"Review entry needs an honest component/gap scope label: {key}")
         if secondary and (secondary == primary or not row.get("secondary_rationale", "").strip()):
             raise ValueError(f"Secondary needs an independent purpose: {key}")
         for ref in [primary, secondary, *row.get("candidate_lessons", [])]:
@@ -90,6 +92,7 @@ def rows_for(data, canon):
         # Signature evidence is context only, never a workbook lesson or source.
         result["signature_project_source_url"] = (original.get("signature") or {}).get("source_url", "")
         result.update({field: row[field] for field in ("confidence", "match_scope", "rationale", "limitations", "review_required")})
+        result["scope_label"] = row.get("scope_label", row["match_scope"].replace("_", " "))
         for kind in ("primary", "secondary"):
             ref = row.get(f"{kind}_lesson")
             lesson = data["lessons"].get(ref, {})
@@ -124,28 +127,33 @@ def render(root=RESEARCH):
     queue = [r for r in rows if r["review_required"]]
     (root / "modedex_learning_review_queue.csv").write_text(csv_text(queue, fields), encoding="utf-8")
     linked = sum(bool(r["primary_lesson_id"]) for r in rows)
+    uncovered = [r for r in rows if r["stage"] < 3 and not r["primary_lesson_id"]]
     counts = Counter(r["confidence"] for r in rows)
-    lines = ["# Modedex Workbook Mapping: Owner Review", "",
+    lines = ["# Table A: Preferred Workbook Mappings", "",
              "Research only. No links are wired into the game; no canonical fields were changed.", "",
-             f"51 inventoried; {linked} proposed primary links; {51-linked} unresolved; {len(queue)} review rows. Confidence: {dict(sorted(counts.items()))}.", "",
-             "High means a direct task, input concept, or explicitly canonical representative technique, not complete coverage of every algorithm or a deployment claim. Medium means partial/contextual coverage. Null lessons are intentional gaps, not broken URLs.", "",
+             f"51 inventoried; {linked} existing workbook matches preserved unchanged; {len(uncovered)} non-Signatures have no workbook match (see Table B for owner decisions). All 12 Signatures already have sufficient canonical project links. There are {51-linked} blank workbook fields, not six outstanding species. Historical scope/confidence metadata is preserved: {dict(sorted(counts.items()))}; {len(queue)} historical review rows.", "",
+             "All existing workbook matches are accepted as-is under the owner's final policy; no reassessment or replacement is proposed. Original scope labels, confidence, limitations, and historical review flags below remain unchanged for provenance. A component lesson is not a claim of complete system coverage or deployment. Blank Signature workbook fields do not require supplementary links.", "",
+             "Outside references and explicit owner decisions are exclusively in [Table B](modedex_external_owner_review.md): three references approved, Routeopus replacement pending. They do not fill nulls in this table or enter the application.", "",
              "The CSV inventory also contains verbatim canonical roles, algorithms, tasks, inputs, outputs, habitats, limitations, explainability and separate Signature project sources.", "",
              "| Species ID / name | Represented job | Proposed lesson | Confidence / scope | Match rationale and boundary | Optional second lesson |", "|---|---|---|---|---|---|"]
     def escape(value):
         return str(value).replace("|", "\\|").replace("\n", " ")
     for r in rows:
         primary = f'[{r["primary_article_title"]}]({r["primary_url"]})' if r["primary_url"] else "**UNRESOLVED**"
+        if not r["primary_url"] and r["stage"] == 3:
+            primary = f'Canonical project source sufficient: [existing provenance]({r["signature_project_source_url"]})'
         if r["primary_url"]:
             primary += f'<br>{r["primary_workbook"]}: {r["primary_unit"]} / {r["primary_chapter"]}'
         secondary = f'[{r["secondary_article_title"]}]({r["secondary_url"]}) — {r["secondary_rationale"]}' if r["secondary_url"] else "—"
-        lines.append("| " + " | ".join(map(escape, [f'`{r["species_id"]}`<br>{r["name"]}', r["role"], primary, f'{r["confidence"]} / {r["match_scope"]}', r["rationale"] + " Boundary: " + r["limitations"], secondary])) + " |")
-    lines += ["", "## Unresolved IDs", "", *[f'- `{r["species_id"]}` ({r["name"]}): {r["rationale"]}' for r in rows if not r["primary_lesson_id"]],
+        lines.append("| " + " | ".join(map(escape, [f'`{r["species_id"]}`<br>{r["name"]}', r["role"], primary, f'{r["confidence"]}: {r["scope_label"]}<br>({r["match_scope"]})', r["rationale"] + " Boundary: " + r["limitations"], secondary])) + " |")
+    lines += ["", "## Uncovered Non-Signature IDs Only", "", *[f'- `{r["species_id"]}` ({r["name"]}): {r["rationale"]}' for r in uncovered],
+              "", "All 12 Signature forms retain their canonical real-world project sources. Existing Signature workbook matches are also preserved unchanged, but no new supplementary sources are researched or proposed for them.",
               "", "## Integrity", "", "Protected configuration and processed canonical files were SHA-256 checked before/after rendering and are unchanged. See modedex_learning_source_hashes.json. Live lesson checks are recorded separately; none are evidence of a Signature deployment.", ""]
     (root / "modedex_learning_mapping.md").write_text("\n".join(lines), encoding="utf-8")
     if protected_hashes() != before:
         raise ValueError("Protected canonical input changed during research render")
     (root / "modedex_learning_source_hashes.json").write_text(json.dumps(before, sort_keys=True, indent=2) + "\n", encoding="utf-8")
-    print(f"Inventoried {len(rows)}; proposed {linked}; unresolved {51-linked}; review {len(queue)}; protected files unchanged.")
+    print(f"Inventoried {len(rows)}; preserved workbook matches {linked}; uncovered non-Signatures {len(uncovered)}; all 12 Signature project sources retained; protected files unchanged.")
 
 
 if __name__ == "__main__":
