@@ -21,6 +21,7 @@ import "leaflet/dist/leaflet.css";
 import "./style.css";
 import bundle from "./data/runtime.json";
 import QuizFeedback from "./QuizFeedback";
+import DexEntry from "./DexEntry";
 import {
   approximateDistance,
   extraLocationSafety,
@@ -313,45 +314,6 @@ function CameraScene({
   );
 }
 
-function DexEntry({ id }: { id: string }) {
-  const s = data.modedex.modemon[id];
-  return (
-    <article className="dex-entry">
-      <h2>{s.name}</h2>
-      <p className="eyebrow">
-        {s.role} · {s.rarity}
-      </p>
-      <p>{s.dex_entry}</p>
-      <dl>
-        <dt>Habitats</dt>
-        <dd>{s.habitats.map(title).join(", ")}</dd>
-        <dt>AI tasks</dt>
-        <dd>{s.ai_tasks.join(", ")}</dd>
-        <dt>Representative techniques</dt>
-        <dd>{s.models_algorithms.join(", ")}</dd>
-        <dt>Input</dt>
-        <dd>{s.input_data}</dd>
-        <dt>Output</dt>
-        <dd>{s.output_data}</dd>
-        <dt>Limitations</dt>
-        <dd>
-          <ul>
-            {s.biases_limitations.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-        </dd>
-        <dt>Explainability</dt>
-        <dd>{s.explainability.join(", ")}</dd>
-      </dl>
-      <p className="muted">
-        Educational context, not a claim that this place deploys a particular AI
-        system.
-      </p>
-    </article>
-  );
-}
-
 export default function App() {
   const [ready, setReady] = useState(() => read(safetyKey) === "1");
   const [agreed, setAgreed] = useState(false),
@@ -444,7 +406,7 @@ export default function App() {
             timestamp: p.timestamp,
           });
           setLocationStatus(
-            `Real GPS · accuracy ±${Math.round(p.coords.accuracy)} m`,
+            `Real GPS · accuracy ${approximateDistance(p.coords.accuracy)}`,
           );
         },
         (e) => {
@@ -744,7 +706,10 @@ export default function App() {
               <button className="secondary" onClick={() => setDexId(null)}>
                 Back to discoveries
               </button>
-              <DexEntry id={dexId} />
+              <DexEntry
+                species={data.modedex.modemon[dexId]}
+                habitatTitle={title}
+              />
             </>
           ) : (
             <>
@@ -856,8 +821,8 @@ export default function App() {
                   position.accuracy >= 20 && (
                     <p className="muted">
                       Your phone&apos;s location estimate may be off by about{" "}
-                      {Math.round(position.accuracy)} m. Wait for a clearer
-                      signal if the distance seems wrong.
+                      {approximateDistance(position.accuracy)}. Wait for a
+                      clearer signal if the distance seems wrong.
                     </p>
                   )}
                 {mode === "demo" && (
@@ -897,7 +862,10 @@ export default function App() {
             )}
             {phase === "info" && (
               <>
-                <DexEntry id={selected.speciesId} />
+                <DexEntry
+                  species={data.modedex.modemon[selected.speciesId]}
+                  habitatTitle={title}
+                />
                 <fieldset
                   className="difficulty-picker"
                   disabled={
@@ -927,9 +895,7 @@ export default function App() {
                       />
                       <span>
                         <strong>{choice.label}</strong>
-                        <small>
-                          {choice.count} questions · {choice.required} correct
-                        </small>
+                        <small>{choice.count} questions</small>
                       </span>
                     </label>
                   ))}

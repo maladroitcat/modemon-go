@@ -108,3 +108,31 @@ The older dated `coverage.json` snapshot reports the original Novice question
 count. `quiz-audit.json` is the current three-mode content/coverage audit. Human
 review can still improve distractor pedagogy, but must retain source-scoped wording
 and must not infer task-exclusive techniques or unverified deployed systems.
+
+## Owner Follow-up: October 18
+
+The difficulty picker now shows only Novice 3 questions, Intermediate 5 questions,
+and Expert 7 questions. It deliberately omits required-correct counts next to the
+choices. Strict-majority scoring and the existing progress migration remain unchanged;
+in-quiz score/progress, feedback, and final outcomes still explain the result.
+
+Player distance text uses the single `approximateDistance(meters)` display helper:
+feet below an unrounded 0.25 mile (402.336 meters), miles at/above it. Feet under 100
+are rounded to whole feet (positive distances never round to zero); larger feet
+round to tens with US grouping. Miles under one use up to two decimal places, then
+one decimal place. Examples: 75 meters displays roughly 250 ft; 381 meters displays
+1,250 ft. The proximity instruction derives its approximate value from the unchanged
+75-meter rule; a rounded display never grants access. GPS accuracy/uncertainty and
+Demo distances use the same helper. Invalid distances are explicitly unavailable.
+No GIS, accuracy allowance, freshness, or half-mile density calculations changed.
+
+Signature details now explicitly introduce recorded real-world inspiration and link
+to canonical evidence, with safe missing/unsafe-source states. See
+[SIGNATURE_SOURCE_REVIEW.md](SIGNATURE_SOURCE_REVIEW.md) for all sources and two
+recorded-title review flags. Canonical content and provenance are unchanged.
+
+The expanded suite contains 38 browser tests across Chromium/mobile WebKit, including
+all 12 Signature details and links, selector labels without passing thresholds, US
+distance display, and the existing complete quiz/capture/progress regressions.
+Additional unit tests exercise distance boundaries, metric gates, source URL safety,
+and actual standalone detail markup. Physical iPhone Safari acceptance remains separate.

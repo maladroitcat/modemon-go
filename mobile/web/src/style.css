@@ -406,6 +406,25 @@ dd ul {
 .quiz-score {
   font-weight: 600;
 }
+.signature-project {
+  margin: 16px 0;
+}
+.signature-project a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: #145c48;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.signature-project a svg {
+  flex-shrink: 0;
+}
+.signature-project p,
+.signature-inspiration {
+  overflow-wrap: anywhere;
+}
 .feedback--correct {
   background: #eaf4ed;
   border-color: #147d65;

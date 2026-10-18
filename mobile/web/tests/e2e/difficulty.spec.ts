@@ -54,11 +54,14 @@ for (const difficulty of Object.keys(quizModes) as Difficulty[]) {
     }, info) => {
       const spawn = await setup(page);
       await expect(
-        page.getByRole("radio", { name: "Novice 3 questions · 2 correct" }),
+        page.getByRole("radio", { name: "Novice 3 questions" }),
       ).toBeChecked();
+      await expect(page.locator(".difficulty-picker")).not.toContainText(
+        /correct|pass|required|[234] of [357]/i,
+      );
       await page
         .getByRole("radio", {
-          name: `${config.label} ${config.count} questions · ${config.required} correct`,
+          name: `${config.label} ${config.count} questions`,
         })
         .check();
       const saved = await page.evaluate(
@@ -76,7 +79,7 @@ for (const difficulty of Object.keys(quizModes) as Difficulty[]) {
       await reopen(page, spawn.poi.id);
       await expect(
         page.getByRole("radio", {
-          name: `${config.label} ${config.count} questions · ${config.required} correct`,
+          name: `${config.label} ${config.count} questions`,
         }),
       ).toBeChecked();
       await page
@@ -199,7 +202,7 @@ test("difficulty controls and Expert long-answer questions fit narrow, portrait 
   ]) {
     await page.setViewportSize({ width, height });
     const radio = page.getByRole("radio", {
-      name: "Expert 7 questions · 4 correct",
+      name: "Expert 7 questions",
     });
     await radio.check();
     await page

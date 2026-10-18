@@ -15,7 +15,7 @@ Public HTTPS: **https://modemon-go-playable.astralgnat19.chatgpt.site**
    **Simulate walking here (Demo)** and **Enter encounter**.
 3. Enable the camera if appropriate, or use the complete non-camera encounter.
    Tap the labeled creature placeholder, read its Modédex entry, then Capture.
-4. Choose Novice (3 questions, 2 correct), Intermediate (5, 3), or Expert (7, 4).
+4. Choose Novice (3 questions), Intermediate (5), or Expert (7).
    Answer every question; too few correct escapes for that exact encounter/day.
    Read feedback, show the result, then reload to check the
    saved collection. Demo captures are separate from real captures.
@@ -25,6 +25,9 @@ Public HTTPS: **https://modemon-go-playable.astralgnat19.chatgpt.site**
 Real mode requires a fresh foreground fix, accuracy at most 50 m, and distance
 within 75 m plus `min(accuracy / 2, 10 m)`. Denied GPS permits browsing/demo, not
 remote real-world capture. Never approach an unsafe or inaccessible location.
+Player-facing distances and accuracy use rounded feet below 0.25 mile and miles
+above it. The roughly 250 ft instruction is an approximation of the unchanged
+metric interaction rule, not a new fixed 250-foot gate.
 
 ## Architecture
 
@@ -140,6 +143,11 @@ Other limits: client clock controls rotation; device/browser-local progress only
 no current opening-hours enforcement or pedestrian routing; public association
 confidence is not physical-access verification. No signed native build, physical
 iPhone acceptance, background location, service worker, account, or backend.
+
+Signature detail rendering names the real project/use-case from canonical evidence
+and provides "Learn about the real project" with a safe source link. This does not
+unlock encounters or invent site mappings. See [SIGNATURE_SOURCE_REVIEW.md](SIGNATURE_SOURCE_REVIEW.md)
+for source availability and two recorded-title review flags.
 
 ## Reproduce
 
