@@ -25,7 +25,10 @@ class WebRuntimeTests(unittest.TestCase):
 
     def test_deterministic_and_committed_artifact_matches(self):
         self.assertEqual(self.payload, bridge.build_payload())
-        self.assertEqual(self.payload, json.loads(bridge.DESTINATION.read_text()))
+        expected = json.loads(bridge.DESTINATION.read_text())
+        for index, poi in enumerate(self.payload['pois']):
+            self.assertEqual(poi, expected['pois'][index], f"POI mismatch: {poi['id']}")
+        self.assertEqual(self.payload, expected)
 
     def test_all_source_hashes_match_and_sources_unchanged(self):
         bridge.build_payload()
