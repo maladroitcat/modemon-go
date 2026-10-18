@@ -1,13 +1,45 @@
-import { MapPinOff } from 'lucide-react-native';
-import { View } from 'react-native';
-import { colors, Copy, Heading } from './ui';
-import type { MapSurfaceProps } from './map-props';
+import { useEffect, useRef, useState } from "react";
+import "leaflet/dist/leaflet.css";
+import type { MapSurfaceProps } from "./map-props";
 
-// react-native-maps supports iOS/Android, not the browser QA preview.
-export default function MapSurface(_props: MapSurfaceProps) {
-  return <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', gap: 16, padding: 24, backgroundColor: colors.canvas }}>
-    <MapPinOff color={colors.green} size={36} />
-    <Heading>Native map unavailable</Heading>
-    <Copy>Your location is available. Street maps require the iOS or Android app; this browser preview does not render a native map.</Copy>
-  </View>;
+// Native imports resolve MapSurface.native.tsx, not this browser implementation.
+export default function MapSurface({ position }: MapSurfaceProps) {
+  const element = useRef<HTMLDivElement>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    let disposed = false;
+    let cleanup = () => {};
+    import("leaflet")
+      .then((L) => {
+        if (disposed || !element.current) return;
+        const map = L.map(element.current).setView(
+          [position.latitude, position.longitude],
+          15,
+        );
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: "&copy; OpenStreetMap contributors",
+        })
+          .addTo(map)
+          .on("tileerror", () => setFailed(true));
+        cleanup = () => map.remove();
+      })
+      .catch(() => setFailed(true));
+    return () => {
+      disposed = true;
+      cleanup();
+    };
+  }, [position.latitude, position.longitude]);
+  return (
+    <div style={{ flex: 1, minHeight: 280, width: "100%" }}>
+      <div
+        ref={element}
+        style={{ height: 350, width: "100%" }}
+        aria-label="Street map"
+      />
+      {failed && (
+        <p role="status">Street map unavailable. Check your connection.</p>
+      )}
+    </div>
+  );
 }

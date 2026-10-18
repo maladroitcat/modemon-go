@@ -1,0 +1,16 @@
+{
+  "official_source_page": "https://godurhamtransit.org/real-time-stops/",
+  "reviewed_on": "2026-10-18",
+  "source_url": "https://godurham.rideralerts.com/InfoPoint/rest/Stops/GetAllStops",
+  "stops": [
+    {
+      "Description": "Great Jones St at Main St (Museum of Durham Histor",
+      "IsTimePoint": false,
+      "Latitude": 35.99784,
+      "Longitude": -78.90531,
+      "Name": "Great Jones St at Main St (Museum of Dur",
+      "StopId": 6680,
+      "StopRecordId": 1413
+    }
+  ]
+}

@@ -1,0 +1,6314 @@
+{
+  "date": "2026-10-18",
+  "timezone": "America/New_York",
+  "data_version": "0f51a954e4340dea",
+  "canonical": {
+    "species": 51,
+    "regions": 8,
+    "zones": 62,
+    "pois": 927,
+    "curated_special_destinations": 17
+  },
+  "enabled_non_signature_catalog": [
+    {
+      "id": "anomaly_base",
+      "name": "Quirkle",
+      "habitats": [
+        "finance",
+        "healthcare",
+        "transportation",
+        "office_business",
+        "civic_government"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "anomaly_fraud",
+      "name": "Swindlisk",
+      "habitats": [
+        "finance"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "anomaly_machine",
+      "name": "Geargoyle",
+      "habitats": [
+        "transportation",
+        "office_business"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "anomaly_network",
+      "name": "Netnark",
+      "habitats": [
+        "office_business",
+        "civic_government"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "anomaly_vitals",
+      "name": "Beatling",
+      "habitats": [
+        "healthcare"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "detector_base",
+      "name": "Seeklet",
+      "habitats": [
+        "healthcare",
+        "transportation",
+        "retail",
+        "food_hospitality"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "detector_defect",
+      "name": "Inspectra",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "detector_disease",
+      "name": "Pathogaze",
+      "habitats": [
+        "healthcare"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "detector_pedestrian",
+      "name": "Crowdseer",
+      "habitats": [
+        "transportation"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "extractor_archive",
+      "name": "Manusqueak",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "extractor_base",
+      "name": "Scribbit",
+      "habitats": [
+        "healthcare",
+        "civic_government",
+        "education_research"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "extractor_government",
+      "name": "Bureaucritter",
+      "habitats": [
+        "civic_government"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "extractor_medical",
+      "name": "Clinink",
+      "habitats": [
+        "healthcare"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "extractor_research",
+      "name": "Scholarat",
+      "habitats": [
+        "education_research"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "forecast_base",
+      "name": "Forespirit",
+      "habitats": [
+        "healthcare",
+        "transportation",
+        "retail",
+        "entertainment"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "forecast_crowd",
+      "name": "Gathergeist",
+      "habitats": [
+        "entertainment"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "forecast_patient",
+      "name": "Wardwisp",
+      "habitats": [
+        "healthcare"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "forecast_stock",
+      "name": "Coinjurer",
+      "habitats": [
+        "retail"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "forecast_transit",
+      "name": "Commutoracle",
+      "habitats": [
+        "transportation"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "generator_base",
+      "name": "Purrrompt",
+      "habitats": [
+        "education_research",
+        "office_business",
+        "civic_government",
+        "retail",
+        "entertainment"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "generator_conversational",
+      "name": "Meowlogue",
+      "habitats": [
+        "education_research",
+        "office_business",
+        "civic_government",
+        "retail"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "generator_creative",
+      "name": "Articlaw",
+      "habitats": [
+        "entertainment"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "generator_document",
+      "name": "Quillcat",
+      "habitats": [
+        "office_business",
+        "education_research"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "generator_learning",
+      "name": "Learnx",
+      "habitats": [
+        "education_research"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "recommender_base",
+      "name": "Suggestle",
+      "habitats": [
+        "retail",
+        "entertainment",
+        "education_research",
+        "food_hospitality"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "recommender_content",
+      "name": "Reelure",
+      "habitats": [
+        "entertainment"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "recommender_learning",
+      "name": "Curriquill",
+      "habitats": [
+        "education_research"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "recommender_menu",
+      "name": "Nibblet",
+      "habitats": [
+        "food_hospitality"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "recommender_product",
+      "name": "Cartivore",
+      "habitats": [
+        "retail"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "retriever_base",
+      "name": "Searchound",
+      "habitats": [
+        "education_research",
+        "civic_government",
+        "office_business",
+        "retail"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "retriever_knowledge",
+      "name": "Cognicollie",
+      "habitats": [
+        "office_business",
+        "education_research"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "retriever_product",
+      "name": "Bargainbeagle",
+      "habitats": [
+        "retail"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "retriever_records",
+      "name": "Dachshundex",
+      "habitats": [
+        "civic_government"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "retriever_research",
+      "name": "Labraquery",
+      "habitats": [
+        "education_research"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "scheduler_base",
+      "name": "Plancton",
+      "habitats": [
+        "healthcare",
+        "transportation",
+        "office_business",
+        "retail",
+        "food_hospitality",
+        "civic_government"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "scheduler_delivery",
+      "name": "Parcelprawn",
+      "habitats": [
+        "retail",
+        "food_hospitality",
+        "transportation"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "scheduler_hospital",
+      "name": "Wardray",
+      "habitats": [
+        "healthcare"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "scheduler_transit",
+      "name": "Routeopus",
+      "habitats": [
+        "transportation"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    },
+    {
+      "id": "scheduler_workforce",
+      "name": "Shiftshark",
+      "habitats": [
+        "office_business",
+        "retail",
+        "food_hospitality"
+      ],
+      "question_counts": {
+        "novice": 3,
+        "intermediate": 5,
+        "expert": 7
+      }
+    }
+  ],
+  "signatures": {
+    "version": "signature-associations-v1",
+    "schedule": {
+      "epoch": "2026-10-18",
+      "maximum_placement_offset_meters": 200,
+      "period_days": 4
+    },
+    "approved_mappings": [
+      {
+        "association_note": "Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.",
+        "blocked_dates": [],
+        "evidence_url": "https://fi.ncsu.edu/get-involved/contact-us/",
+        "osm_node_id": 3011702458,
+        "osm_way_id": 758590635,
+        "placement": {
+          "lat": 35.7591816,
+          "lon": -78.6864953,
+          "x": 637951.098,
+          "y": 222926.831
+        },
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "project_source_url": "https://fi.ncsu.edu/projects/machine-learning-in-the-history-classroom-using-artificial-intelligence-for-a-student-led-inquiry-into-redlining/",
+        "review_note": "Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "extractor_history"
+      },
+      {
+        "association_note": "Enjoy the public Bicentennial Mall pedestrian space near the museum. Stay clear of entrances and follow posted hours and closures; entering the museum is unnecessary. This is a project association, not a deployment coordinate.",
+        "blocked_dates": [],
+        "evidence_url": "https://naturalsciences.org/visit/hours-admission",
+        "osm_node_id": 2096744258,
+        "osm_way_id": 199747495,
+        "placement": {
+          "lat": 35.7819691,
+          "lon": -78.6390231,
+          "x": 642234.745,
+          "y": 225469.561
+        },
+        "poi_id": "RAL-01_osm_way_197842115",
+        "project_source_url": "https://www.naturalsciences.org/calendar/news/museum-unc-use-ai-to-transform-handwritten-records-about-fish/",
+        "review_note": "Named pedestrian mall outside the museum footprint; public visitor context confirmed by the museum. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "extractor_specimen"
+      },
+      {
+        "association_note": "Use the public Partners Way sidewalk near Hunt Library, not restricted library spaces. Respect signs and walkway closures; you do not need to enter. This represents university-library projects, not technology installed at this point.",
+        "blocked_dates": [],
+        "evidence_url": "https://www.lib.ncsu.edu/hunt/visit",
+        "osm_node_id": 3011732374,
+        "osm_way_id": 297302728,
+        "placement": {
+          "lat": 35.7693246,
+          "lon": -78.6767274,
+          "x": 638830.73,
+          "y": 224054.972
+        },
+        "poi_id": "RAL-04_osm_way_177166351",
+        "project_source_url": "https://www.lib.ncsu.edu/projects/refreshing-software-and-technology-lending-descriptions-agent-based-ai",
+        "review_note": "Separately mapped concrete street sidewalk outside the building. The official notice closes Hunt Library on October 19, not Partners Way. Building closure alone does not close this public street approach; any actual sidewalk restriction still overrides gameplay. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "site_notices": [
+          {
+            "end_date": "2026-10-19",
+            "message": "Hunt Library announces an October 19, 2026 closure for electrical work. You do not need to enter the site. Use the public Partners Way sidewalk only if open and follow posted restrictions.",
+            "scope": "associated_building",
+            "source_url": "https://www.lib.ncsu.edu/hunt/visit",
+            "start_date": "2026-10-19",
+            "title": "The associated site may be closed"
+          }
+        ],
+        "species_id": "generator_catalog"
+      },
+      {
+        "association_note": "Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.",
+        "blocked_dates": [],
+        "evidence_url": "https://fi.ncsu.edu/get-involved/contact-us/",
+        "osm_node_id": 3011702458,
+        "osm_way_id": 758590635,
+        "placement": {
+          "lat": 35.7591816,
+          "lon": -78.6864953,
+          "x": 637951.098,
+          "y": 222926.831
+        },
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "project_source_url": "https://fi.ncsu.edu/news/2025-2026-catalyst-grant-symposium-features-projects-that-advance-ai-integration-in-education/",
+        "review_note": "Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "generator_classroom_chatbot"
+      },
+      {
+        "association_note": "Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.",
+        "blocked_dates": [],
+        "evidence_url": "https://fi.ncsu.edu/get-involved/contact-us/",
+        "osm_node_id": 3011702458,
+        "osm_way_id": 758590635,
+        "placement": {
+          "lat": 35.7591816,
+          "lon": -78.6864953,
+          "x": 637951.098,
+          "y": 222926.831
+        },
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "project_source_url": "https://fi.ncsu.edu/news/2025-2026-catalyst-grant-symposium-features-projects-that-advance-ai-integration-in-education/",
+        "review_note": "Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "generator_lesson_planner"
+      },
+      {
+        "association_note": "Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.",
+        "blocked_dates": [],
+        "evidence_url": "https://fi.ncsu.edu/get-involved/contact-us/",
+        "osm_node_id": 3011702458,
+        "osm_way_id": 758590635,
+        "placement": {
+          "lat": 35.7591816,
+          "lon": -78.6864953,
+          "x": 637951.098,
+          "y": 222926.831
+        },
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "project_source_url": "https://fi.ncsu.edu/news/friday-institute-center-for-educational-informatics-and-engageai-institute-collaborate-to-advance-ai-in-education/",
+        "review_note": "Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "recommender_adaptive_learning"
+      },
+      {
+        "association_note": "Stay on the outdoor museum sidewalk and respect visitor hours, signs and closures. Keep paths and entrances clear; no museum entry is required. The exhibition project inspired this encounter, not a claim that AI runs on this sidewalk.",
+        "blocked_dates": [],
+        "evidence_url": "https://nasher.duke.edu/hours-admission/",
+        "osm_node_id": 13295141461,
+        "osm_way_id": 667053135,
+        "placement": {
+          "lat": 35.9993455,
+          "lon": -78.9294714,
+          "x": 615960.12,
+          "y": 249530.353
+        },
+        "poi_id": "DUR-02_osm_way_30424777",
+        "project_source_url": "https://nasher.duke.edu/exhibitions/act-as-if-you-are-a-curator-an-ai-generated-exhibition/",
+        "review_note": "Mapped sidewalk outside the museum footprint with official public visitor context. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "recommender_ai_curator"
+      },
+      {
+        "association_note": "Use the public Partners Way sidewalk near Hunt Library, not restricted library spaces. Respect signs and walkway closures; you do not need to enter. This represents university-library projects, not technology installed at this point.",
+        "blocked_dates": [],
+        "evidence_url": "https://www.lib.ncsu.edu/hunt/visit",
+        "osm_node_id": 3011732374,
+        "osm_way_id": 297302728,
+        "placement": {
+          "lat": 35.7693246,
+          "lon": -78.6767274,
+          "x": 638830.73,
+          "y": 224054.972
+        },
+        "poi_id": "RAL-04_osm_way_177166351",
+        "project_source_url": "https://www.lib.ncsu.edu/databases/keenious-research-explorer/guide",
+        "review_note": "Separately mapped concrete street sidewalk outside the building. The official notice closes Hunt Library on October 19, not Partners Way. Building closure alone does not close this public street approach; any actual sidewalk restriction still overrides gameplay. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "site_notices": [
+          {
+            "end_date": "2026-10-19",
+            "message": "Hunt Library announces an October 19, 2026 closure for electrical work. You do not need to enter the site. Use the public Partners Way sidewalk only if open and follow posted restrictions.",
+            "scope": "associated_building",
+            "source_url": "https://www.lib.ncsu.edu/hunt/visit",
+            "start_date": "2026-10-19",
+            "title": "The associated site may be closed"
+          }
+        ],
+        "species_id": "recommender_research"
+      },
+      {
+        "association_note": "Use the outdoor campus walkway near Perkins Library. Do not enter card-controlled or restricted areas; respect posted public hours and closures. Duke Libraries research discovery is the educational association, not a system installed at this point.",
+        "blocked_dates": [],
+        "evidence_url": "https://library.duke.edu/using/policies/access-and-security",
+        "osm_node_id": 1999513309,
+        "osm_way_id": 189308234,
+        "placement": {
+          "lat": 36.0026502,
+          "lon": -78.9388994,
+          "x": 615109.861,
+          "y": 249896.46
+        },
+        "poi_id": "DUR-02_osm_way_391474817",
+        "project_source_url": "https://guides.library.duke.edu/c.php?g=1351161&p=10927310",
+        "review_note": "Mapped footway outside building footprints; library policy includes public visitors with time restrictions. No field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "retriever_semantic_search"
+      },
+      {
+        "association_note": "Use the public Great Jones Street sidewalk by GoDurham stop 6680 at Main Street, not Durham Station's construction area. Stand aside from waiting passengers and keep the sidewalk clear. Do not enter platforms, bus lanes, roads or restricted areas. GoDurham system association only, not a deployment at this coordinate.",
+        "blocked_dates": [],
+        "evidence_dataset": "durham_alternatives",
+        "evidence_url": "https://godurhamtransit.org/durham-station-renovations/",
+        "maximum_offset_meters": 300,
+        "minimum_station_distance_meters": 150,
+        "official_stop_id": 6680,
+        "ordinary_anchor_withheld": true,
+        "osm_node_id": 6358493025,
+        "osm_stop_id": 6509747516,
+        "osm_way_id": 679054726,
+        "placement": {
+          "lat": 35.997788,
+          "lon": -78.9053247,
+          "x": 618137.365,
+          "y": 249359.353
+        },
+        "poi_id": "DUR-01_osm_node_5844548329",
+        "project_source_url": "https://godurhamaccess.org/godurham-access-ada-paratransit",
+        "review_note": "Owner authorizes nearby public bus-stop approaches in issue 23. Official GoDurham stop API confirms stop 6680 at the same location as OSM node 6509747516. Selected concrete sidewalk node is about 5m from that stop, outside building and construction polygons and over 150m from the station anchor. Construction parcel east across Great Jones Street is not the selected sidewalk; do not cross toward it. Desk evidence, not field inspection; posted restrictions override this placement.",
+        "safety_status": "mapped_public_approach",
+        "site_notices": [
+          {
+            "end_date": null,
+            "message": "Durham Station remains active during substantial renovation. Use the alternative public sidewalk by GoDurham stop 6680 on Great Jones Street at Main Street. You do not need to enter the site. Stay away from station construction, platforms and bus operating areas; follow current signs and skip any closed walkway.",
+            "scope": "nearby_construction",
+            "source_url": "https://godurhamtransit.org/durham-station-renovations/",
+            "start_date": "2026-10-18",
+            "title": "Durham Station construction"
+          }
+        ],
+        "species_id": "scheduler_ride_booking"
+      },
+      {
+        "association_note": "Use the public West Street concrete sidewalk near RUS BUS. Stay out of bus lanes, roadways and operating areas, and keep entrances clear. Follow signs and closures. This is a Raleigh transportation-system association, not a claim about a particular signal or camera here.",
+        "blocked_dates": [],
+        "evidence_url": "https://raleighnc.gov/transportation/services/bus-service-raleigh-union-station",
+        "osm_node_id": 11048642686,
+        "osm_way_id": 196797586,
+        "placement": {
+          "lat": 35.7778597,
+          "lon": -78.6459797,
+          "x": 641607.473,
+          "y": 225011.379
+        },
+        "poi_id": "RAL-01_osm_node_13659913892",
+        "project_source_url": "https://raleighnc.gov/transportation/news/ai-pilot-program-raleigh-move",
+        "review_note": "Mapped concrete street sidewalk outside the station building, not the bus-station center. Official transit page provides public station context; no field inspection.",
+        "safety_status": "mapped_public_approach",
+        "species_id": "scheduler_traffic_signal"
+      },
+      {
+        "association_note": "Use the public Great Jones Street sidewalk by GoDurham stop 6680 at Main Street, not Durham Station's construction area. Stand aside from waiting passengers and keep the sidewalk clear. Do not enter platforms, bus lanes, roads or restricted areas. GoDurham system association only, not a deployment at this coordinate.",
+        "blocked_dates": [],
+        "evidence_dataset": "durham_alternatives",
+        "evidence_url": "https://godurhamtransit.org/durham-station-renovations/",
+        "maximum_offset_meters": 300,
+        "minimum_station_distance_meters": 150,
+        "official_stop_id": 6680,
+        "ordinary_anchor_withheld": true,
+        "osm_node_id": 6358493025,
+        "osm_stop_id": 6509747516,
+        "osm_way_id": 679054726,
+        "placement": {
+          "lat": 35.997788,
+          "lon": -78.9053247,
+          "x": 618137.365,
+          "y": 249359.353
+        },
+        "poi_id": "DUR-01_osm_node_5844548329",
+        "project_source_url": "https://www.govtech.com/transportation/durham-n-c-looks-to-ai-to-boost-transit-performance",
+        "review_note": "Owner authorizes nearby public bus-stop approaches in issue 23. Official GoDurham stop API confirms stop 6680 at the same location as OSM node 6509747516. Selected concrete sidewalk node is about 5m from that stop, outside building and construction polygons and over 150m from the station anchor. Construction parcel east across Great Jones Street is not the selected sidewalk; do not cross toward it. Desk evidence, not field inspection; posted restrictions override this placement.",
+        "safety_status": "mapped_public_approach",
+        "site_notices": [
+          {
+            "end_date": null,
+            "message": "Durham Station remains active during substantial renovation. Use the alternative public sidewalk by GoDurham stop 6680 on Great Jones Street at Main Street. You do not need to enter the site. Stay away from station construction, platforms and bus operating areas; follow current signs and skip any closed walkway.",
+            "scope": "nearby_construction",
+            "source_url": "https://godurhamtransit.org/durham-station-renovations/",
+            "start_date": "2026-10-18",
+            "title": "Durham Station construction"
+          }
+        ],
+        "species_id": "scheduler_transit_flow"
+      }
+    ],
+    "real_enabled": [
+      "extractor_history",
+      "extractor_specimen",
+      "generator_catalog",
+      "generator_classroom_chatbot",
+      "generator_lesson_planner",
+      "recommender_adaptive_learning",
+      "recommender_ai_curator",
+      "recommender_research",
+      "retriever_semantic_search",
+      "scheduler_ride_booking",
+      "scheduler_traffic_signal",
+      "scheduler_transit_flow"
+    ],
+    "real_withheld": [],
+    "demo_observed": [
+      "extractor_history",
+      "extractor_specimen",
+      "generator_catalog",
+      "generator_classroom_chatbot",
+      "generator_lesson_planner",
+      "recommender_adaptive_learning",
+      "recommender_ai_curator",
+      "recommender_research",
+      "retriever_semantic_search",
+      "scheduler_ride_booking",
+      "scheduler_traffic_signal",
+      "scheduler_transit_flow"
+    ],
+    "reason": "Explicit owner-approved associations. All twelve have reviewed outdoor placement evidence; Durham Station uses the alternative sidewalk by GoDurham stop 6680, not the construction area. On-site closures always override a marker."
+  },
+  "artwork": {
+    "approved_creature_images": 51,
+    "missing_creature_images": 0,
+    "used_concepts": [],
+    "reason": "Issue 23 approves the 51 local creature masters and logo. Old Seeklet concepts are not used. Responsive transparent derivatives load on demand, with PNG and explicit missing-art fallbacks."
+  },
+  "eligible_anchor_counts": {
+    "DUR-01": 153,
+    "DUR-02": 52,
+    "RAL-01": 277,
+    "RAL-02": 17,
+    "RAL-03A": 26,
+    "RAL-03B": 7,
+    "RAL-04": 19
+  },
+  "eligible_anchors": [
+    {
+      "poi_id": "DUR-01_osm_node_11936048785",
+      "name": "Little Free Library",
+      "region": "DUR-01",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_11955982836",
+      "name": "Yonderlust Cafe",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_11955982837",
+      "name": "Yonderlust",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_1202897086",
+      "name": "Morgan Imports",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12176992838",
+      "name": "Thaiangle",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12300639055",
+      "name": "Nikos",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12363048099",
+      "name": "Unleashed, the Dog & Cat Store",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12363048100",
+      "name": "Mode",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12469564902",
+      "name": "Cugino Forno Durham",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12552934103",
+      "name": "Queeny's",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12561407598",
+      "name": "Two Roosters Ice Cream Durham",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12623643601",
+      "name": "Dashi Ramen",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12824120801",
+      "name": "Durham Food Hall",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality",
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_12860921230",
+      "name": "Twin Suns Tattoo",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_13015714201",
+      "name": "Fonda Lupita",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_13376513931",
+      "name": "Durham Armory",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_13408586201",
+      "name": "Press Coffee, Crepes & Cocktails",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_13457152014",
+      "name": "Yours",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_13555949301",
+      "name": "Hatch Burritos",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_13556224801",
+      "name": "TaTaco Inc",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_13674638391",
+      "name": "Ashleigh Bakes Daily",
+      "region": "DUR-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_13894874602",
+      "name": "Simon Says Dip This",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_14051458101",
+      "name": "M Hansik",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_1520441350",
+      "name": "Toast",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_1598397282",
+      "name": "Public Hardware",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_1605913761",
+      "name": "Tobacco Road Sports Cafe",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_1605913948",
+      "name": "Mellow Mushroom",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_1659112336",
+      "name": "Dolly's Vintage",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_1764663734",
+      "name": "Cooperativa Latina",
+      "region": "DUR-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2012463902",
+      "name": "Pizzeria Toro",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2266164066",
+      "name": "The Parlour",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_227144929",
+      "name": "Durham Farmer's Market",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2295007375",
+      "name": "Loaf",
+      "region": "DUR-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2612382905",
+      "name": "Jack",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2627670478",
+      "name": "Pompieri Pizza",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2639591502",
+      "name": "The Pit",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2824997593",
+      "name": "Bullseye Bicycle",
+      "region": "DUR-01",
+      "habitats": [
+        "retail",
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2824997594",
+      "name": "Viceroy",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2881677872",
+      "name": "Mid-South Fencing Club",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_2903642919",
+      "name": "Moe's Southwest Grill",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_299507889",
+      "name": "Torero's Mexican Restaurant",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_299513078",
+      "name": "Rue Cler",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3011325972",
+      "name": "Jackie Moore Salon",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3019454195",
+      "name": "Truist",
+      "region": "DUR-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3042465478",
+      "name": "Daisy Cakes",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_316546627",
+      "name": "Turtle",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_317887282",
+      "name": "Major the bull",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3403814894",
+      "name": "21c Museum Hotel",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3672062439",
+      "name": "Hayti Heritage Center",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3838090703",
+      "name": "Schoolkids Records",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3838090704",
+      "name": "Indio",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3838090705",
+      "name": "Hamilton Hill",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3838090706",
+      "name": "Bull City Art & Frame Company",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3838090707",
+      "name": "James Kennedy Antiques",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_3931043858",
+      "name": "Whetstone Apartments",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_398938445",
+      "name": "The Little Dipper",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_4086669922",
+      "name": "QueenBurger",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_412144662",
+      "name": "Self-Help Credit Union",
+      "region": "DUR-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_4202449596",
+      "name": "Moshi Moshi",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_5108643721",
+      "name": "M Sushi",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_5108643821",
+      "name": "M Kokko",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_5638168922",
+      "name": "It’s a Southern Thing",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_5785084918",
+      "name": "Ethereal Tattoo Gallery",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_5792518473",
+      "name": "Slush",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_5792518477",
+      "name": "M Tempura",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_5792518484",
+      "name": "Rock Paper Scissors Salon",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_5844548329",
+      "name": "Durham Station",
+      "region": "DUR-01",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_6053387309",
+      "name": "Old Durham Mural",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_6600829206",
+      "name": "Ninth Street Bakery",
+      "region": "DUR-01",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_6737259048",
+      "name": "Neomonde",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_6737268458",
+      "name": "Sacred Mandala",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_6737268588",
+      "name": "Bulldega Urban Market",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_6737271803",
+      "name": "Visionary Leadership in the New South",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_6737445588",
+      "name": "Winding Out",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_685493947",
+      "name": "El Rodeo",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_685505785",
+      "name": "SunTrust",
+      "region": "DUR-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_685507980",
+      "name": "Wentworth & Leggett Bookshop",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_7024572472",
+      "name": "Durham",
+      "region": "DUR-01",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_7070686673",
+      "name": "CPSC Little Free Library",
+      "region": "DUR-01",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_7115942134",
+      "name": "Mount Merrill",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_7115942155",
+      "name": "Pixel Wall Durham",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_7417421614",
+      "name": "Grace Garden",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_7674513211",
+      "name": "KFC",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_880747379",
+      "name": "Posh the Salon",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_880747450",
+      "name": "Vert and Vogue",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_881029843",
+      "name": "Torero's",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_9096770036",
+      "name": "Choice Tattoo",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_922818428",
+      "name": "Ninth Street Bakery",
+      "region": "DUR-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_924020952",
+      "name": "Motorco Music Hall",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_964857673",
+      "name": "Piedmont Inspired Food",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_relation_10358993",
+      "name": "Durham",
+      "region": "DUR-01",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_relation_74128",
+      "name": "Duke Tower",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_1063459660",
+      "name": "SpringHill Suites Durham City View",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_1063459664",
+      "name": "Extra Space Storage",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_118815913",
+      "name": "Durham Skate Park",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_119349652",
+      "name": "J C's Kitchen",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_119349698",
+      "name": "Mezcalito Durham",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_119349714",
+      "name": "The Fruit",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_1257259441",
+      "name": "Mount Merrill",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_127665464",
+      "name": "Domino's",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_137952246",
+      "name": "Black Wall Street Gardens",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_1525385048",
+      "name": "Morris Green Park",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_239265411",
+      "name": "Family Fare",
+      "region": "DUR-01",
+      "habitats": [
+        "transportation",
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_239265422",
+      "name": "BP",
+      "region": "DUR-01",
+      "habitats": [
+        "transportation",
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_239265423",
+      "name": "In & Out Food Mart",
+      "region": "DUR-01",
+      "habitats": [
+        "transportation",
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_291756489",
+      "name": "Downtown Durham Dog Park",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30284476",
+      "name": "Brightleaf Square",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30840589",
+      "name": "North Carolina State Employee Credit Union",
+      "region": "DUR-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30840697",
+      "name": "Durham Bookcases & Other Cool Wood Stuff",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30841024",
+      "name": "Mateo",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30885936",
+      "name": "Skewers Bar and Grill",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30886227",
+      "name": "PNC Bank",
+      "region": "DUR-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30886281",
+      "name": "Museum of Durham History",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30886366",
+      "name": "Durham Marriott City Center",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30980020",
+      "name": "Carolina Theatre",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30980030",
+      "name": "Durham Arts Council",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_30980036",
+      "name": "Unscripted Hotel",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_31345342",
+      "name": "Rose's Meat Market and Sweet Shop",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_31345349",
+      "name": "Maverick's Smokehouse and Taproom",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_31350058",
+      "name": "Goorsha",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_31350117",
+      "name": "Residence Inn Durham McPherson/Duke University Medical Center Area",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_32118671",
+      "name": "Downtown YMCA",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_32118683",
+      "name": "Mr. Tire",
+      "region": "DUR-01",
+      "habitats": [
+        "retail",
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_32118755",
+      "name": "The Durham Hotel",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_32348044",
+      "name": "Durham County Library - Main Library",
+      "region": "DUR-01",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_324544661",
+      "name": "Bar Virgile",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_33052346",
+      "name": "Historic Durham Athletic Park",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_34134056",
+      "name": "Bull City Burger",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_36887968",
+      "name": "Accent Hardwood Flooring",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_36887978",
+      "name": "The Rickhouse",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_36888000",
+      "name": "Bull City Running Company",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_400530002",
+      "name": "Aloft Durham Downtown",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_400530129",
+      "name": "Diamond View Park",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_404801052",
+      "name": "Self-Help Credit Union",
+      "region": "DUR-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_433493705",
+      "name": "Durham Bulls Athletic Park",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_44481452",
+      "name": "Cooperativa Latina",
+      "region": "DUR-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_515431845",
+      "name": "11-foot-8 Bridge",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_618332788",
+      "name": "Durham Visitor Information Center",
+      "region": "DUR-01",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_65178063",
+      "name": "Miel Bon Bons I Fine Chocolate & Macarons l Extraordinary Desserts",
+      "region": "DUR-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_67861976",
+      "name": "Central Park",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_67861979",
+      "name": "Central Park",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_78334473",
+      "name": "Kings Sandwich Shop",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_78334492",
+      "name": "Trinity Food Mart #4",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_79059885",
+      "name": "Cocoa Cinnamon",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_79059905",
+      "name": "Hutchins Garage",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_79086571",
+      "name": "The Pit Durham Event Venue",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_79086590",
+      "name": "Hughes Plumbing",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_80747499",
+      "name": "Mangum Street Mini Mart",
+      "region": "DUR-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_821937893",
+      "name": "Pelican's SnoBalls",
+      "region": "DUR-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_858704426",
+      "name": "Prairie Island / Carolina Xeriscape",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_858704427",
+      "name": "Victory Garden",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_99027985",
+      "name": "Durham Performing Arts Center",
+      "region": "DUR-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_way_99028585",
+      "name": "Durham Station Transportation Center",
+      "region": "DUR-01",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_10049645128",
+      "name": "Panera Bread",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_12983032933",
+      "name": "Saladelia Cafe",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_12983037646",
+      "name": "Saladelia Cafe",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_13339410049",
+      "name": "Memorial Gym",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_1424781767",
+      "name": "Pitchfork Provisions",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_319195120",
+      "name": "Medical Center Library",
+      "region": "DUR-02",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_367910963",
+      "name": "Page Auditorium",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_4376977801",
+      "name": "JB Duke Hotel",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_4376977802",
+      "name": "R. David Thomas Executive Conference Center",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_4870054736",
+      "name": "R.J. Reynolds Industries Theater",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_4870054737",
+      "name": "Sheafer Laboratory Theater",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_4870054738",
+      "name": "Griffith Film Theater",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_4870054740",
+      "name": "James B. Duke",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_4870085351",
+      "name": "B.N. Duke",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_553748730",
+      "name": "Beyu Blue",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_5651995412",
+      "name": "Panda Express",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_5651995413",
+      "name": "Il Forno",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_5651995414",
+      "name": "Au Bon Pain",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_5651995415",
+      "name": "Tandoor",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_5651995416",
+      "name": "The Loop Pizza Grill",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_5791152077",
+      "name": "Brody Theater",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_6548008133",
+      "name": "McDonald's",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_6548035047",
+      "name": "Sazón",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_6548035048",
+      "name": "The Skillet",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_6548035049",
+      "name": "Farmstead",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_6548035050",
+      "name": "Ginger and Soy",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_6548035051",
+      "name": "JB's Roast",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_6548035052",
+      "name": "Devil's Krafthouse",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_185375489",
+      "name": "East Campus North Quad",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_185378060",
+      "name": "East Campus South Quad",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_27435263",
+      "name": "Lilly Library",
+      "region": "DUR-02",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_27466267",
+      "name": "Brodie Recreation Center",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_30424777",
+      "name": "Nasher Museum of Art",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_34714205",
+      "name": "Ambler Tennis Stadium",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_36884323",
+      "name": "Card Gymnasium",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_36884382",
+      "name": "Sheffield Tennis Center",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_36884389",
+      "name": "Intramural Building",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_36884459",
+      "name": "Wilson Recreation Center",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_391474817",
+      "name": "Perkins Library",
+      "region": "DUR-02",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_44055991",
+      "name": "Rubenstein Library",
+      "region": "DUR-02",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_44055992",
+      "name": "Bostock Library",
+      "region": "DUR-02",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_479409755",
+      "name": "Harrington Quad",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_479661385",
+      "name": "LSRC Quad",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_493984773",
+      "name": "Duke Reclamation Pond",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_509731372",
+      "name": "Medical Center Garden",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_625075122",
+      "name": "Duke Softball Stadium",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_625121109",
+      "name": "Baldwin Auditorium",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_625303125",
+      "name": "William D Murray Building",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_625303127",
+      "name": "Scott Family Pavilion",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_664165390",
+      "name": "Wallace Wade Stadium",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_697187543",
+      "name": "Twinnies Cafe",
+      "region": "DUR-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_way_923463968",
+      "name": "Jack Katz Stadium",
+      "region": "DUR-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_10049367856",
+      "name": "Cashpoints",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_10120181528",
+      "name": "Charles Aycock",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_10120181529",
+      "name": "Zebulon Baird Vance",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_10120181530",
+      "name": "Charles Duncan McIver",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_10120181531",
+      "name": "Worth Bagley",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_10537162720",
+      "name": "The Rainbow Luncheonette",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1055457666",
+      "name": "Big Ed's City Market Restaurant",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1055457677",
+      "name": "Artspace",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1055457691",
+      "name": "Woody's at City Market",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11024123405",
+      "name": "Yellow Dog Bread Company",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11045427405",
+      "name": "Boulted Bread",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11191339170",
+      "name": "Amitie Macaron Cafe",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11274794692",
+      "name": "Custom Engraving & Trophy",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11274809175",
+      "name": "Oakwood Pizza Box",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11283746284",
+      "name": "Oak City Cycling",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11295970101",
+      "name": "Fifi and Talbot",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11295980332",
+      "name": "Hightide Salon",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11296027077",
+      "name": "Black & White",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11296048793",
+      "name": "Tuscan Blu",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11301177049",
+      "name": "Chido Taco",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11390147476",
+      "name": "Raleigh Memorial Auditorium",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11500412490",
+      "name": "Jolie",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11500412491",
+      "name": "Cora",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11500412492",
+      "name": "Gallicchio's Market and Eatery",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11500412493",
+      "name": "Standard Beer + Food",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11500412495",
+      "name": "So & So Books",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11680850865",
+      "name": "Little Native Coffee Co.",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11828706834",
+      "name": "Fallon's Flowers - Main",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11828706835",
+      "name": "Peace Street Market",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11986844634",
+      "name": "Tempo by Hilton Raleigh Downtown",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_11986844635",
+      "name": "Homewood Suites by Hilton Raleigh Downtown",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186217",
+      "name": "Sushi O Bistro",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186227",
+      "name": "Sullivan's Steakhouse",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186268",
+      "name": "La Placita",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186384",
+      "name": "My Way Tavern",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186407",
+      "name": "Sushi Blues Cafe",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186410",
+      "name": "San Marcos Pizza and Wings",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186442",
+      "name": "Burger Village",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186462",
+      "name": "McDonald's",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186465",
+      "name": "The Cupcake Shoppe Bakery",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_1216186476",
+      "name": "MoJoe's Burger Joint",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_12242308685",
+      "name": "Bad Cat Coffee Co",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_12242308686",
+      "name": "Opa Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_12242308687",
+      "name": "Iyla's Southern Kitchen",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_12368496501",
+      "name": "Daijobu",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_12674019595",
+      "name": "Longleaf Swine",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_12677423101",
+      "name": "LaGana Burgers",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_12817372201",
+      "name": "Thairapy 101 Salon",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13030096288",
+      "name": "Domino's",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13065226301",
+      "name": "The Bike Library Storefront",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13544497320",
+      "name": "City Market Sushi",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13603089130",
+      "name": "Anise Pho",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13603089132",
+      "name": "Wonderland Kitchen & Cocktails",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13603134935",
+      "name": "Ziba’s Kitchen",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13603163221",
+      "name": "DeMos Pizzeria & Deli",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13659913892",
+      "name": "Raleigh Union Station Bus Facility",
+      "region": "RAL-01",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13759005004",
+      "name": "Unleashed, the Dog & Cat Store",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13785760340",
+      "name": "Raleigh Lace Museum and Kristin S Conrad Lace Center",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13785804101",
+      "name": "Ammi's Dessert Boutique and Chai House",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_13944143901",
+      "name": "Mustang House",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14042090054",
+      "name": "The Bike Library",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14046279601",
+      "name": "Veloce Italian Market",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14108194128",
+      "name": "Courtland and Cait Fabrics",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14108194129",
+      "name": "Molly's Wax Shop",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14108194130",
+      "name": "The Bird's Nest Beauty Parlor",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14110970061",
+      "name": "Han-Dee Hugo's",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14111037235",
+      "name": "Edge Of Urge",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14138737101",
+      "name": "Kokoro Ramen & Izakaya",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14164692833",
+      "name": "Press Coffee, Crepes & Cocktails",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14227731190",
+      "name": "Jubala Coffee",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_14232394212",
+      "name": "Vidrio",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2072382353",
+      "name": "Flying Saucer Draught Emporium",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2072382489",
+      "name": "The Roast Grill",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2072383501",
+      "name": "Second Empire Restaurant and Tavern",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2072412051",
+      "name": "John Montgomery Violins Inc",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2072416037",
+      "name": "Wilson's Outdoor Equipment, Inc.",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2098187833",
+      "name": "Mulino Italian Kitchen & Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2144920174",
+      "name": "The Pit",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2147107893",
+      "name": "Sitti Authentic Lebanese",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2153542348",
+      "name": "Bad Daddy's Burger Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2198231992",
+      "name": "Mecca Restaurant",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2198232041",
+      "name": "Carroll's Kitchen",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2335652036",
+      "name": "Meymandi Concert Hall",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2335652040",
+      "name": "Fletcher Opera Theater",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2335652044",
+      "name": "Kennedy Theater",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2335652048",
+      "name": "Memorial Auditorium",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2335652065",
+      "name": "Betty Ray McCain Art Gallery",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2566339186",
+      "name": "Bida Manda",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2566339187",
+      "name": "The Pour House Music Hall & Record Shop",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2566377007",
+      "name": "El Rodeo Mexican Restaurant",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2566388184",
+      "name": "42nd Street Oyster Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2731382547",
+      "name": "Caffe Luna",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2782527413",
+      "name": "Gravy Italian-American Kitchen",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2782527698",
+      "name": "Wells Fargo",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2921397004",
+      "name": "Askew Taylor",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2921397008",
+      "name": "Revolver",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2921397009",
+      "name": "Clark Art",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2921397015",
+      "name": "Kelly Odom",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2921397017",
+      "name": "Rye Bar & Southern Kitchen",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2921397021",
+      "name": "Sono",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2921397022",
+      "name": "Starbucks",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_2921397023",
+      "name": "Tesoro Hair Design",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3157442920",
+      "name": "Element Gastropub",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248742644",
+      "name": "Crema",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248742646",
+      "name": "BB&T",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248742653",
+      "name": "Capital Bank",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248742656",
+      "name": "Jimmy V's Osteria + Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248743361",
+      "name": "PNC Bank",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248743362",
+      "name": "ORO Restaurant & Lounge",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248743367",
+      "name": "Christian Science Reading Room",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248743373",
+      "name": "Unorthodox Vintage",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248743374",
+      "name": "The ZEN Succulent",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248743375",
+      "name": "The PIzza Times",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3248743384",
+      "name": "Newbridge Bank",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3305289271",
+      "name": "DECO Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3305442675",
+      "name": "Berkeley Cafe",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3305442700",
+      "name": "311 Gallery",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3305510862",
+      "name": "LGBT Center of Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "civic_government",
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3305510899",
+      "name": "William-Cozart, Inc.",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3307013373",
+      "name": "Clyde Cooper's BBQ",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3307013445",
+      "name": "Raleigh Denim Workshop + Curatory",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3307013446",
+      "name": "anthony ulinski studio and gallery",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658363",
+      "name": "Alter EGO Style House",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658364",
+      "name": "Blake Street Shops & Studios",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658366",
+      "name": "Blackbird Books and Coffee",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658368",
+      "name": "Krav Maga Ralelgh",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658369",
+      "name": "Lisa Stewart + CalligraphyPets",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658567",
+      "name": "The Design Gallery Salon",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658569",
+      "name": "The Remedy Diner",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658571",
+      "name": "VanNess & Fellows Tattoo Boutique",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658572",
+      "name": "Vic's Italian Restaurant",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311658573",
+      "name": "cimos",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3311663688",
+      "name": "Centro",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3623985411",
+      "name": "Runologie",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_367909237",
+      "name": "Finch Library",
+      "region": "RAL-01",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_367911067",
+      "name": "Leggett Theater",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3691453629",
+      "name": "La Placita",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3691470161",
+      "name": "Puerro's Italian Bistro",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3691476947",
+      "name": "SMASH",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3691491947",
+      "name": "Dirty V",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3752759687",
+      "name": "A Place at the Table",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3796331874",
+      "name": "Death & Taxes",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4128436170",
+      "name": "Cuya",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4377037912",
+      "name": "Raleigh Guest Suites",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4377037913",
+      "name": "Friendship Inn Capitol",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4422082640",
+      "name": "Seaboard Wine and Tasting Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4422082641",
+      "name": "O2 Fitness Seaboard",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4422082642",
+      "name": "Ace Hardware",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4507482552",
+      "name": "Sir Walter Coffee & Kitchen",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4533068540",
+      "name": "Wells Fargo",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_4544087503",
+      "name": "42 & Lawrence",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_5534686937",
+      "name": "Red Hat Armadillo",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_5534689364",
+      "name": "Sosta Coffee Shop",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_5534689365",
+      "name": "Oak City Meatball Shoppe",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_5808092229",
+      "name": "The North Carolina State Library",
+      "region": "RAL-01",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_6173340585",
+      "name": "Whiskey Kitchen",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_6250338365",
+      "name": "Amorino",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_6441803385",
+      "name": "Brewery Bhavana",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_6724586187",
+      "name": "Gallery C",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7022986934",
+      "name": "Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7105802413",
+      "name": "Manhattan Cafe",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7105920248",
+      "name": "Sir Walter Coffee",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7106005797",
+      "name": "Hargett Room",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7106005810",
+      "name": "Blount Room",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7106006234",
+      "name": "MoFu Shoppe",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7243408469",
+      "name": "Four Thirty 9",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7638258822",
+      "name": "George Washington",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7638258823",
+      "name": "Presidents North Carolina Gave the Nation",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7869310945",
+      "name": "Publix",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7963884489",
+      "name": "Beanie & Cecil Baby",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7967845005",
+      "name": "Crawford and Son",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7967845006",
+      "name": "Sugar Euphoria",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8038223139",
+      "name": "Imurj",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_818998163",
+      "name": "Studio 714 West",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8406512958",
+      "name": "Weaver Street Market",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8406516151",
+      "name": "Urban Outfitters",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8408747752",
+      "name": "Father & Son Antiques",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409041070",
+      "name": "Joja Nails",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409082530",
+      "name": "Barcelona Wine Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409103919",
+      "name": "Heirloom - Coffee, Tea, Sake",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409103920",
+      "name": "Oak Steakhouse Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409103921",
+      "name": "O-Ku Sushi",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409113030",
+      "name": "Retro Modern Furnishings",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409113031",
+      "name": "Sorry State Records",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409132516",
+      "name": "Arch & Edge - Cosmetic Tattooing and Esthetics",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409139162",
+      "name": "The Flourish Market",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409141378",
+      "name": "Videri Chocolate Factory - Chocolate Bean to Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409155414",
+      "name": "The Junction Salon & Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409155415",
+      "name": "Tasty Beverage Company",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409155416",
+      "name": "The Venue Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409195058",
+      "name": "Quercus Studio",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409195059",
+      "name": "Apex Outfitter & Board Co.",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409195060",
+      "name": "Raleigh Raw Juice Bar & Cafe",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8409210392",
+      "name": "Bridge Club",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8411949001",
+      "name": "Sam Jones BBQ",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8412005325",
+      "name": "Cold Off the Press",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8412019819",
+      "name": "Rebus Works and pH seven",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8412038451",
+      "name": "Raleigh Embroidery",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8412051451",
+      "name": "Wye Hill Kitchen & Brewing",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8412066310",
+      "name": "Taverna Agora Greek Kitchen & Bar",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8412079404",
+      "name": "Good Day Good Night",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8412188099",
+      "name": "Gabriel Ryder Salon",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8726101270",
+      "name": "Five Star Restaurant",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8726101272",
+      "name": "Paul And Jack Bakery",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8726110036",
+      "name": "Jersey Mike's Subs",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_8865972717",
+      "name": "Iris Coffee Lab",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_9039089912",
+      "name": "Libations 317",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_9203569343",
+      "name": "Two Roosters",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_9204992815",
+      "name": "Arrow Downtown Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_9684234288",
+      "name": "Messer Transmission Inc",
+      "region": "RAL-01",
+      "habitats": [
+        "retail",
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_relation_10356072",
+      "name": "Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_relation_4144751",
+      "name": "Red Hat Tower",
+      "region": "RAL-01",
+      "habitats": [
+        "office_business"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_1017266990",
+      "name": "McDonald's",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_1292169085",
+      "name": "Hyatt House",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_135692670",
+      "name": "Red Hat Amphitheater",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_135692672",
+      "name": "Red Hat Amphitheater",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_135692673",
+      "name": "Atlantic Union Bank Convention Center",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_1468147068",
+      "name": "Pop-Pup Dog Park",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_148163972",
+      "name": "North Carolina Museum of Natural Sciences: Nature Research Center",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_1544185838",
+      "name": "North Carolina Freedom Park",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_189846068",
+      "name": "Union Square",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_197533234",
+      "name": "North Carolina Museum of History",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_197842115",
+      "name": "North Carolina Museum of Natural Sciences",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_199739106",
+      "name": "The Longleaf Hotel",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_199752515",
+      "name": "Merrimon-Wynne House",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_209632643",
+      "name": "First Citizens Bank",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_209632660",
+      "name": "Morning Times",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_209632661",
+      "name": "Munjo Munjo",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_288587395",
+      "name": "Fire Wok",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_297829071",
+      "name": "Central Downtown Plaza",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_310324647",
+      "name": "Jimmy John's",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_310324648",
+      "name": "Pita Bowl",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_310454536",
+      "name": "PNC Plaza",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_318468748",
+      "name": "Mechanics and Farmers Bank",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_323712276",
+      "name": "Capital Club 16",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_323712280",
+      "name": "Kimbrell's Furniture",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_323712282",
+      "name": "City of Raleigh Museum (COR Museum)",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_323712283",
+      "name": "The Big Easy",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_323712286",
+      "name": "The Mahler",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_323712287",
+      "name": "North State Bank",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_323749771",
+      "name": "CrossFit Invoke",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_323758992",
+      "name": "Sheraton Raleigh Hotel",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_33106140",
+      "name": "Nash Square",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_33106144",
+      "name": "Moore Square",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_33106184",
+      "name": "Raymond G. Lanier Park",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_336073286",
+      "name": "Poole's Diner",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_368141450",
+      "name": "Hampton Inn & Suites Raleigh Downtown",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_378543220",
+      "name": "Marbles IMAX",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_468197031",
+      "name": "TreeTunes",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_468197033",
+      "name": "Sun Sprouts",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_468197036",
+      "name": "Marbles Courtyard",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47728337",
+      "name": "Lee Hansley Gallery",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47732380",
+      "name": "Parkview Restaurant",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47732386",
+      "name": "CAM Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47759870",
+      "name": "Martin Marietta Center for the Performing Arts",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47759898",
+      "name": "Gringo A Go Go",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47759950",
+      "name": "Hartwell",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47759988",
+      "name": "Pope House Museum",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47760005",
+      "name": "Raleigh Marriott City Center",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47760017",
+      "name": "One Of One Boutique",
+      "region": "RAL-01",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47760082",
+      "name": "Marbles Kids Museum",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47776414",
+      "name": "State Employees Credit Union",
+      "region": "RAL-01",
+      "habitats": [
+        "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47776442",
+      "name": "Char Grill",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47776449",
+      "name": "Hotel Indigo Raleigh Downtown",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47776588",
+      "name": "Convivium Raleigh",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47777115",
+      "name": "Mellow Mushroom",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47777120",
+      "name": "Subway",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47777124",
+      "name": "Sahara Hookah Cafe",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47777242",
+      "name": "Krispy Kreme",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_47777255",
+      "name": "Starbucks",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_577302114",
+      "name": "Edison Apartment Courtyard & Dog Park",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_577302117",
+      "name": "Red Hat Outdoor Terrace & Park",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_577303149",
+      "name": "Roofdeck Park",
+      "region": "RAL-01",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_674997948",
+      "name": "Residence Inn Raleigh Downtown",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_770940248",
+      "name": "The Casso, Raleigh, A Tribute Portfolio Hotel",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_843579903",
+      "name": "AC Hotel by Marriott Raleigh Downtown",
+      "region": "RAL-01",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_way_99028919",
+      "name": "GoRaleigh Station",
+      "region": "RAL-01",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13252685393",
+      "name": "Attun",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13376172195",
+      "name": "Coffee Bar",
+      "region": "RAL-02",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13376172196",
+      "name": "House of Many Porches Market",
+      "region": "RAL-02",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13376189193",
+      "name": "Dux",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13376202119",
+      "name": "Get Well Soon",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13376217657",
+      "name": "Daddy Bird Eye",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13376234927",
+      "name": "Dix",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13376238496",
+      "name": "Dax",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13376265868",
+      "name": "Mother Strong Tail",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13719651863",
+      "name": "Sunflower Power Poles",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13719651864",
+      "name": "Sunflower Power Poles",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_13719651866",
+      "name": "Sunflower Power Poles",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_node_8786724894",
+      "name": "Big Field",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_way_1079247651",
+      "name": "Sunflower Field",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_way_1092763893",
+      "name": "Dog Park at Dix Park",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_way_194996668",
+      "name": "Dorothea Dix Park",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-02_osm_way_583072635",
+      "name": "Gipson Play Plaza",
+      "region": "RAL-02",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_12652673293",
+      "name": "Riparian Buffer",
+      "region": "RAL-03A",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_12652680239",
+      "name": "Non-Native Plants",
+      "region": "RAL-03A",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_13256603674",
+      "name": "Wolf Village Market",
+      "region": "RAL-03A",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_13325136659",
+      "name": "SOL Garden",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_14214327186",
+      "name": "NC State Crafts Center",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_14214327187",
+      "name": "NC State University Theatre",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_14215021908",
+      "name": "David Thompson Statue",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_1437667189",
+      "name": "Wolfpack Outfitters",
+      "region": "RAL-03A",
+      "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_2915315335",
+      "name": "Floodplains",
+      "region": "RAL-03A",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_2915315336",
+      "name": "Urban Wildlife",
+      "region": "RAL-03A",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_6993756773",
+      "name": "Starbucks",
+      "region": "RAL-03A",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_node_7706101071",
+      "name": "Bike Route",
+      "region": "RAL-03A",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_1562223081",
+      "name": "NC State University",
+      "region": "RAL-03A",
+      "habitats": [
+        "food_hospitality",
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_238493964",
+      "name": "Carmichael Gymnasium",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_238493965",
+      "name": "Carmichael Gymnasium",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_238494315",
+      "name": "Carmichael Recreation Center",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_239913307",
+      "name": "Lee Field",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_297307412",
+      "name": "Wolf Plaza",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_33076658",
+      "name": "Weisiger Brown Athletic Facility",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_468521308",
+      "name": "Tri-Towers Common Area",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_47837907",
+      "name": "Case Academic Center",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_47837910",
+      "name": "Thompson Hall",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_47917962",
+      "name": "Fountain Dining Hall",
+      "region": "RAL-03A",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_47948195",
+      "name": "Price Music Center",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment",
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_555447298",
+      "name": "Parents Park",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03A_osm_way_578649946",
+      "name": "Stafford Commons",
+      "region": "RAL-03A",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-03B_osm_relation_8248496",
+      "name": "Pullen Aquatic Center",
+      "region": "RAL-03B",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03B_osm_way_47776986",
+      "name": "Theater In The Park",
+      "region": "RAL-03B",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03B_osm_way_47933086",
+      "name": "Pullen Place",
+      "region": "RAL-03B",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-03B_osm_way_47933092",
+      "name": "Carousel",
+      "region": "RAL-03B",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03B_osm_way_583700646",
+      "name": "Pullen Park Amusement Center",
+      "region": "RAL-03B",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03B_osm_way_583703196",
+      "name": "Pullen Community Center",
+      "region": "RAL-03B",
+      "habitats": [
+        "civic_government",
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-03B_osm_way_942676234",
+      "name": "Fountain Terrace",
+      "region": "RAL-03B",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_node_11161470206",
+      "name": "Social Fabric",
+      "region": "RAL-04",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_node_13706327099",
+      "name": "321 Coffee - NC State Centennial",
+      "region": "RAL-04",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_node_2104454759",
+      "name": "Disc Golf Course",
+      "region": "RAL-04",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_node_2470635859",
+      "name": "Common Grounds Café & Creamery",
+      "region": "RAL-04",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_node_2470637788",
+      "name": "Port City Java Coffeehouse Café",
+      "region": "RAL-04",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_node_2470661698",
+      "name": "William and Ida Friday Institute for Educational Innovation",
+      "region": "RAL-04",
+      "habitats": [
+        "education_research"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_node_3011712773",
+      "name": "On the Oval Culinary Creations",
+      "region": "RAL-04",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_node_5267029052",
+      "name": "NC Japan Center",
+      "region": "RAL-04",
+      "habitats": [
+        "civic_government",
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_relation_8545666",
+      "name": "College of Engineering EB II / Oval Dr",
+      "region": "RAL-04",
+      "habitats": [
+        "transportation"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_1219349711",
+      "name": "Reds and Whites",
+      "region": "RAL-04",
+      "habitats": [
+        "entertainment"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_177166351",
+      "name": "James B. Hunt Jr. Library",
+      "region": "RAL-04",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_382297658",
+      "name": "Information Booth",
+      "region": "RAL-04",
+      "habitats": [
+        "education_research",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_426252345",
+      "name": "The Oval",
+      "region": "RAL-04",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_584475103",
+      "name": "Venture Courtyard",
+      "region": "RAL-04",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_584475823",
+      "name": "Lake Raleigh Picnic Area",
+      "region": "RAL-04",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_584475824",
+      "name": "Textiles Courtyard",
+      "region": "RAL-04",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_677320792",
+      "name": "The StateView Hotel, Autograph Collection",
+      "region": "RAL-04",
+      "habitats": [
+        "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_779967278",
+      "name": "The Greens Dog Park",
+      "region": "RAL-04",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    },
+    {
+      "poi_id": "RAL-04_osm_way_967122917",
+      "name": "Hunt Rain Garden",
+      "region": "RAL-04",
+      "habitats": [
+        "entertainment",
+        "civic_government"
+      ]
+    }
+  ],
+  "daily_world": {
+    "total": 56,
+    "maximum_in_half_mile_circle": 7,
+    "by_region": {
+      "DUR-01": 10,
+      "DUR-02": 12,
+      "RAL-01": 11,
+      "RAL-02": 7,
+      "RAL-03A": 7,
+      "RAL-03B": 2,
+      "RAL-04": 7
+    },
+    "by_rarity": {
+      "common": 41,
+      "rare": 13,
+      "signature": 2
+    },
+    "spawns": [
+      {
+        "encounter_id": "playable-v1:signature-associations-v1:2026-10-18:RAL-01_osm_way_197842115:extractor_specimen",
+        "species_id": "extractor_specimen",
+        "species_name": "Specimunk",
+        "poi_id": "RAL-01_osm_way_197842115",
+        "poi_name": "North Carolina Museum of Natural Sciences",
+        "region": "RAL-01",
+        "rarity": "signature",
+        "basis": [
+          "education_research"
+        ],
+        "latitude": 35.7819691,
+        "longitude": -78.6390231
+      },
+      {
+        "encounter_id": "playable-v1:signature-associations-v1:2026-10-18:RAL-04_osm_way_177166351:generator_catalog",
+        "species_id": "generator_catalog",
+        "species_name": "Catalogar",
+        "poi_id": "RAL-04_osm_way_177166351",
+        "poi_name": "James B. Hunt Jr. Library",
+        "region": "RAL-04",
+        "rarity": "signature",
+        "basis": [
+          "education_research"
+        ],
+        "latitude": 35.7693246,
+        "longitude": -78.6767274
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_1437667189",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-03A_osm_node_1437667189",
+        "poi_name": "Wolfpack Outfitters",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "education_research"
+        ],
+        "latitude": 35.7836276,
+        "longitude": -78.6706981
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743374",
+        "species_id": "retriever_base",
+        "species_name": "Searchound",
+        "poi_id": "RAL-01_osm_node_3248743374",
+        "poi_name": "The ZEN Succulent",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "entertainment"
+        ],
+        "latitude": 35.7779671,
+        "longitude": -78.6383899
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743362",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "RAL-01_osm_node_3248743362",
+        "poi_name": "ORO Restaurant & Lounge",
+        "region": "RAL-01",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality",
+          "entertainment"
+        ],
+        "latitude": 35.7767563,
+        "longitude": -78.6385031
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743375",
+        "species_id": "detector_defect",
+        "species_name": "Inspectra",
+        "poi_id": "RAL-01_osm_node_3248743375",
+        "poi_name": "The PIzza Times",
+        "region": "RAL-01",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality",
+          "entertainment"
+        ],
+        "latitude": 35.7779011,
+        "longitude": -78.6383926
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743361",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-01_osm_node_3248743361",
+        "poi_name": "PNC Bank",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "finance",
+          "entertainment"
+        ],
+        "latitude": 35.7766537,
+        "longitude": -78.639084
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_2072382353",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-01_osm_node_2072382353",
+        "poi_name": "Flying Saucer Draught Emporium",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 35.7799487,
+        "longitude": -78.6447955
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3796331874",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-01_osm_node_3796331874",
+        "poi_name": "Death & Taxes",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "entertainment"
+        ],
+        "latitude": 35.7782232,
+        "longitude": -78.6404347
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2824997593",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-01_osm_node_2824997593",
+        "poi_name": "Bullseye Bicycle",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "transportation",
+          "food_hospitality"
+        ],
+        "latitude": 35.997173,
+        "longitude": -78.9037512
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_515431845",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-01_osm_way_515431845",
+        "poi_name": "11-foot-8 Bridge",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "retail"
+        ],
+        "latitude": 35.9990755,
+        "longitude": -78.91013157889192
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2881677872",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "DUR-01_osm_node_2881677872",
+        "poi_name": "Mid-South Fencing Club",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "retail"
+        ],
+        "latitude": 36.001588,
+        "longitude": -78.9085699
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_13408586201",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "DUR-01_osm_node_13408586201",
+        "poi_name": "Press Coffee, Crepes & Cocktails",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "entertainment"
+        ],
+        "latitude": 35.9925892,
+        "longitude": -78.9042868
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_67861979",
+        "species_id": "extractor_base",
+        "species_name": "Scribbit",
+        "poi_id": "DUR-01_osm_way_67861979",
+        "poi_name": "Central Park",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government"
+        ],
+        "latitude": 36.0005859,
+        "longitude": -78.9007278
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2295007375",
+        "species_id": "scheduler_workforce",
+        "species_name": "Shiftshark",
+        "poi_id": "DUR-01_osm_node_2295007375",
+        "poi_name": "Loaf",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "retail",
+          "food_hospitality"
+        ],
+        "latitude": 35.9957292,
+        "longitude": -78.9006724
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_3403814894",
+        "species_id": "scheduler_workforce",
+        "species_name": "Shiftshark",
+        "poi_id": "DUR-01_osm_node_3403814894",
+        "poi_name": "21c Museum Hotel",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 35.9959825,
+        "longitude": -78.901846
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_10049645128",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "DUR-02_osm_node_10049645128",
+        "poi_name": "Panera Bread",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 36.0006478,
+        "longitude": -78.9395462
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_way_1092763893",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "RAL-02_osm_way_1092763893",
+        "poi_name": "Dog Park at Dix Park",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government"
+        ],
+        "latitude": 35.7708442,
+        "longitude": -78.6624865
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_8786724894",
+        "species_id": "generator_creative",
+        "species_name": "Articlaw",
+        "poi_id": "RAL-02_osm_node_8786724894",
+        "poi_name": "Big Field",
+        "region": "RAL-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment",
+          "civic_government"
+        ],
+        "latitude": 35.7690985,
+        "longitude": -78.6623781
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_426252345",
+        "species_id": "extractor_base",
+        "species_name": "Scribbit",
+        "poi_id": "RAL-04_osm_way_426252345",
+        "poi_name": "The Oval",
+        "region": "RAL-04",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government",
+          "education_research"
+        ],
+        "latitude": 35.7705113,
+        "longitude": -78.6749236
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_821937893",
+        "species_id": "detector_defect",
+        "species_name": "Inspectra",
+        "poi_id": "DUR-01_osm_way_821937893",
+        "poi_name": "Pelican's SnoBalls",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality",
+          "retail"
+        ],
+        "latitude": 35.9869655,
+        "longitude": -78.89836661942675
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_297307412",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-03A_osm_way_297307412",
+        "poi_name": "Wolf Plaza",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government",
+          "education_research"
+        ],
+        "latitude": 35.7849862,
+        "longitude": -78.67201417096571
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_36884323",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "DUR-02_osm_way_36884323",
+        "poi_name": "Card Gymnasium",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.9973603,
+        "longitude": -78.94141976428665
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_2915315335",
+        "species_id": "generator_conversational",
+        "species_name": "Meowlogue",
+        "poi_id": "RAL-03A_osm_node_2915315335",
+        "poi_name": "Floodplains",
+        "region": "RAL-03A",
+        "rarity": "rare",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 35.7802182,
+        "longitude": -78.6686583
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_36884382",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "DUR-02_osm_way_36884382",
+        "poi_name": "Sheffield Tennis Center",
+        "region": "DUR-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.9969604,
+        "longitude": -78.93949360279355
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_2915315336",
+        "species_id": "anomaly_base",
+        "species_name": "Quirkle",
+        "poi_id": "RAL-03A_osm_node_2915315336",
+        "poi_name": "Urban Wildlife",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 35.7806993,
+        "longitude": -78.669533
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_13339410049",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "DUR-02_osm_node_13339410049",
+        "poi_name": "Memorial Gym",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.007492,
+        "longitude": -78.9169166
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4376977802",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "DUR-02_osm_node_4376977802",
+        "poi_name": "R. David Thomas Executive Conference Center",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "education_research"
+        ],
+        "latitude": 36.0032833,
+        "longitude": -78.9423809
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_44055992",
+        "species_id": "extractor_base",
+        "species_name": "Scribbit",
+        "poi_id": "DUR-02_osm_way_44055992",
+        "poi_name": "Bostock Library",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 36.002964,
+        "longitude": -78.938293
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4376977801",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-02_osm_node_4376977801",
+        "poi_name": "JB Duke Hotel",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "education_research"
+        ],
+        "latitude": 35.9976328,
+        "longitude": -78.9466296
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_119349698",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-01_osm_way_119349698",
+        "poi_name": "Mezcalito Durham",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 35.98910765,
+        "longitude": -78.89554118956246
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_44055991",
+        "species_id": "anomaly_base",
+        "species_name": "Quirkle",
+        "poi_id": "DUR-02_osm_way_44055991",
+        "poi_name": "Rubenstein Library",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 36.0018044,
+        "longitude": -78.93868538995032
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_47948195",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-03A_osm_way_47948195",
+        "poi_name": "Price Music Center",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "education_research"
+        ],
+        "latitude": 35.78407955,
+        "longitude": -78.67171719877949
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_625075122",
+        "species_id": "generator_creative",
+        "species_name": "Articlaw",
+        "poi_id": "DUR-02_osm_way_625075122",
+        "poi_name": "Duke Softball Stadium",
+        "region": "DUR-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0089418,
+        "longitude": -78.91825358810799
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_239913307",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-03A_osm_way_239913307",
+        "poi_name": "Lee Field",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government",
+          "education_research"
+        ],
+        "latitude": 35.7866641,
+        "longitude": -78.6786312905521
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_382297658",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "RAL-04_osm_way_382297658",
+        "poi_name": "Information Booth",
+        "region": "RAL-04",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 35.7745518,
+        "longitude": -78.6792142
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_625121109",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "DUR-02_osm_way_625121109",
+        "poi_name": "Baldwin Auditorium",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0090688,
+        "longitude": -78.9146329
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_node_2104454759",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-04_osm_node_2104454759",
+        "poi_name": "Disc Golf Course",
+        "region": "RAL-04",
+        "rarity": "common",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 35.7666882,
+        "longitude": -78.6768523
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4870085351",
+        "species_id": "recommender_content",
+        "species_name": "Reelure",
+        "poi_id": "DUR-02_osm_node_4870085351",
+        "poi_name": "B.N. Duke",
+        "region": "DUR-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0084392,
+        "longitude": -78.9146492
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_relation_8545666",
+        "species_id": "retriever_base",
+        "species_name": "Searchound",
+        "poi_id": "RAL-04_osm_relation_8545666",
+        "poi_name": "College of Engineering EB II / Oval Dr",
+        "region": "RAL-04",
+        "rarity": "common",
+        "basis": [
+          "transportation",
+          "education_research"
+        ],
+        "latitude": 35.7721303,
+        "longitude": -78.6735556
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13376189193",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-02_osm_node_13376189193",
+        "poi_name": "Dux",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7694174,
+        "longitude": -78.6613106
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_818998163",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-01_osm_node_818998163",
+        "poi_name": "Studio 714 West",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "food_hospitality"
+        ],
+        "latitude": 35.7889055,
+        "longitude": -78.6498437
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_7674513211",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-01_osm_node_7674513211",
+        "poi_name": "KFC",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "retail"
+        ],
+        "latitude": 35.9855391,
+        "longitude": -78.8993566
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13252685393",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-02_osm_node_13252685393",
+        "poi_name": "Attun",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7703625,
+        "longitude": -78.6542298
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_1216186410",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-01_osm_node_1216186410",
+        "poi_name": "San Marcos Pizza and Wings",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 35.7884113,
+        "longitude": -78.6504037
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_185375489",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "DUR-02_osm_way_185375489",
+        "poi_name": "East Campus North Quad",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0081765,
+        "longitude": -78.91465905263746
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_11828706835",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-01_osm_node_11828706835",
+        "poi_name": "Peace Street Market",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "food_hospitality"
+        ],
+        "latitude": 35.7888673,
+        "longitude": -78.6503085
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_11828706834",
+        "species_id": "generator_conversational",
+        "species_name": "Meowlogue",
+        "poi_id": "RAL-01_osm_node_11828706834",
+        "poi_name": "Fallon's Flowers - Main",
+        "region": "RAL-01",
+        "rarity": "rare",
+        "basis": [
+          "retail"
+        ],
+        "latitude": 35.7889215,
+        "longitude": -78.6508529
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_677320792",
+        "species_id": "recommender_learning",
+        "species_name": "Curriquill",
+        "poi_id": "RAL-04_osm_way_677320792",
+        "poi_name": "The StateView Hotel, Autograph Collection",
+        "region": "RAL-04",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality",
+          "education_research"
+        ],
+        "latitude": 35.7641033,
+        "longitude": -78.678102
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651864",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "RAL-02_osm_node_13719651864",
+        "poi_name": "Sunflower Power Poles",
+        "region": "RAL-02",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.765447,
+        "longitude": -78.6545913
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651866",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-02_osm_node_13719651866",
+        "poi_name": "Sunflower Power Poles",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7669173,
+        "longitude": -78.6523624
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651863",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-02_osm_node_13719651863",
+        "poi_name": "Sunflower Power Poles",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7646704,
+        "longitude": -78.655744
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03B_osm_way_47776986",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-03B_osm_way_47776986",
+        "poi_name": "Theater In The Park",
+        "region": "RAL-03B",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.784287,
+        "longitude": -78.6624423
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_node_2470661698",
+        "species_id": "retriever_base",
+        "species_name": "Searchound",
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "poi_name": "William and Ida Friday Institute for Educational Innovation",
+        "region": "RAL-04",
+        "rarity": "common",
+        "basis": [
+          "education_research"
+        ],
+        "latitude": 35.7586559,
+        "longitude": -78.6880202
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03B_osm_relation_8248496",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-03B_osm_relation_8248496",
+        "poi_name": "Pullen Aquatic Center",
+        "region": "RAL-03B",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7809338,
+        "longitude": -78.66150114165659
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_13256603674",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-03A_osm_node_13256603674",
+        "poi_name": "Wolf Village Market",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "education_research"
+        ],
+        "latitude": 35.7861204,
+        "longitude": -78.6851183
+      }
+    ]
+  },
+  "simulation": {
+    "dates": "2026-10-18 through 2026-11-18",
+    "observed_species": [
+      "anomaly_base",
+      "anomaly_fraud",
+      "anomaly_machine",
+      "anomaly_network",
+      "detector_base",
+      "detector_defect",
+      "detector_pedestrian",
+      "extractor_archive",
+      "extractor_base",
+      "extractor_government",
+      "extractor_history",
+      "extractor_research",
+      "extractor_specimen",
+      "forecast_base",
+      "forecast_crowd",
+      "forecast_stock",
+      "generator_base",
+      "generator_catalog",
+      "generator_classroom_chatbot",
+      "generator_conversational",
+      "generator_creative",
+      "generator_document",
+      "generator_learning",
+      "generator_lesson_planner",
+      "recommender_adaptive_learning",
+      "recommender_ai_curator",
+      "recommender_base",
+      "recommender_content",
+      "recommender_learning",
+      "recommender_menu",
+      "recommender_product",
+      "recommender_research",
+      "retriever_base",
+      "retriever_knowledge",
+      "retriever_product",
+      "retriever_records",
+      "retriever_research",
+      "retriever_semantic_search",
+      "scheduler_base",
+      "scheduler_delivery",
+      "scheduler_ride_booking",
+      "scheduler_traffic_signal",
+      "scheduler_transit",
+      "scheduler_transit_flow",
+      "scheduler_workforce"
+    ],
+    "observed_habitats": [
+      "civic_government",
+      "education_research",
+      "entertainment",
+      "finance",
+      "food_hospitality",
+      "office_business",
+      "retail",
+      "transportation"
+    ],
+    "unobserved_non_signature_species": [
+      {
+        "id": "anomaly_vitals",
+        "name": "Beatling"
+      },
+      {
+        "id": "detector_disease",
+        "name": "Pathogaze"
+      },
+      {
+        "id": "extractor_medical",
+        "name": "Clinink"
+      },
+      {
+        "id": "forecast_patient",
+        "name": "Wardwisp"
+      },
+      {
+        "id": "forecast_transit",
+        "name": "Commutoracle"
+      },
+      {
+        "id": "scheduler_hospital",
+        "name": "Wardray"
+      }
+    ],
+    "unreachable_non_signature_species": [
+      {
+        "id": "anomaly_vitals",
+        "name": "Beatling"
+      },
+      {
+        "id": "detector_disease",
+        "name": "Pathogaze"
+      },
+      {
+        "id": "extractor_medical",
+        "name": "Clinink"
+      },
+      {
+        "id": "forecast_patient",
+        "name": "Wardwisp"
+      },
+      {
+        "id": "scheduler_hospital",
+        "name": "Wardray"
+      }
+    ],
+    "note": "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. All twelve Signatures have real placement eligibility and occur over the Demo rotation. Art coverage is 51/51, not a claim of 51 real-world reachable forms."
+  }
+}

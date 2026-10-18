@@ -1,0 +1,99 @@
+version: signature-associations-v1
+placement_policy_version: 2
+approval_issue: https://github.com/maladroitcat/modemon-go/issues/21
+# One eligible day per four-day block per anchor, rotating species each block.
+# These are educational association points, never deployment coordinates.
+schedule:
+  period_days: 4
+  epoch: '2026-10-18'
+  maximum_placement_offset_meters: 200
+anchors:
+  RAL-04_osm_node_2470661698:
+    safety_status: mapped_public_approach
+    osm_way_id: 758590635
+    osm_node_id: 3011702458
+    evidence_url: https://fi.ncsu.edu/get-involved/contact-us/
+    association_note: Use the outdoor Main Campus Drive sidewalk near the Friday Institute, not the building or nearby school or private golf paths. Stay on public paths, respect signs and event restrictions, and keep the sidewalk clear. The project association does not mean the system runs here.
+    review_note: Owner-approved campus destination plus mapped concrete, lit sidewalk. No field inspection or indoor access guarantee. Offset from canonical POI is deliberate; no coordinate snapping.
+    blocked_dates: []
+  RAL-01_osm_way_197842115:
+    safety_status: mapped_public_approach
+    osm_way_id: 199747495
+    osm_node_id: 2096744258
+    evidence_url: https://naturalsciences.org/visit/hours-admission
+    association_note: Enjoy the public Bicentennial Mall pedestrian space near the museum. Stay clear of entrances and follow posted hours and closures; entering the museum is unnecessary. This is a project association, not a deployment coordinate.
+    review_note: Named pedestrian mall outside the museum footprint; public visitor context confirmed by the museum. No field inspection.
+    blocked_dates: []
+  RAL-04_osm_way_177166351:
+    safety_status: mapped_public_approach
+    osm_way_id: 297302728
+    osm_node_id: 3011732374
+    evidence_url: https://www.lib.ncsu.edu/hunt/visit
+    association_note: Use the public Partners Way sidewalk near Hunt Library, not restricted library spaces. Respect signs and walkway closures; you do not need to enter. This represents university-library projects, not technology installed at this point.
+    review_note: Separately mapped concrete street sidewalk outside the building. The official notice closes Hunt Library on October 19, not Partners Way. Building closure alone does not close this public street approach; any actual sidewalk restriction still overrides gameplay. No field inspection.
+    blocked_dates: []
+    site_notices:
+      - title: The associated site may be closed
+        scope: associated_building
+        start_date: '2026-10-19'
+        end_date: '2026-10-19'
+        source_url: https://www.lib.ncsu.edu/hunt/visit
+        message: Hunt Library announces an October 19, 2026 closure for electrical work. You do not need to enter the site. Use the public Partners Way sidewalk only if open and follow posted restrictions.
+  DUR-02_osm_way_30424777:
+    safety_status: mapped_public_approach
+    osm_way_id: 667053135
+    osm_node_id: 13295141461
+    evidence_url: https://nasher.duke.edu/hours-admission/
+    association_note: Stay on the outdoor museum sidewalk and respect visitor hours, signs and closures. Keep paths and entrances clear; no museum entry is required. The exhibition project inspired this encounter, not a claim that AI runs on this sidewalk.
+    review_note: Mapped sidewalk outside the museum footprint with official public visitor context. No field inspection.
+    blocked_dates: []
+  DUR-02_osm_way_391474817:
+    safety_status: mapped_public_approach
+    osm_way_id: 189308234
+    osm_node_id: 1999513309
+    evidence_url: https://library.duke.edu/using/policies/access-and-security
+    association_note: Use the outdoor campus walkway near Perkins Library. Do not enter card-controlled or restricted areas; respect posted public hours and closures. Duke Libraries research discovery is the educational association, not a system installed at this point.
+    review_note: Mapped footway outside building footprints; library policy includes public visitors with time restrictions. No field inspection.
+    blocked_dates: []
+  DUR-01_osm_node_5844548329:
+    safety_status: mapped_public_approach
+    evidence_dataset: durham_alternatives
+    osm_way_id: 679054726
+    osm_node_id: 6358493025
+    osm_stop_id: 6509747516
+    official_stop_id: 6680
+    ordinary_anchor_withheld: true
+    maximum_offset_meters: 300
+    minimum_station_distance_meters: 150
+    evidence_url: https://godurhamtransit.org/durham-station-renovations/
+    association_note: Use the public Great Jones Street sidewalk by GoDurham stop 6680 at Main Street, not Durham Station's construction area. Stand aside from waiting passengers and keep the sidewalk clear. Do not enter platforms, bus lanes, roads or restricted areas. GoDurham system association only, not a deployment at this coordinate.
+    review_note: Owner authorizes nearby public bus-stop approaches in issue 23. Official GoDurham stop API confirms stop 6680 at the same location as OSM node 6509747516. Selected concrete sidewalk node is about 5m from that stop, outside building and construction polygons and over 150m from the station anchor. Construction parcel east across Great Jones Street is not the selected sidewalk; do not cross toward it. Desk evidence, not field inspection; posted restrictions override this placement.
+    blocked_dates: []
+    site_notices:
+      - title: Durham Station construction
+        scope: nearby_construction
+        start_date: '2026-10-18'
+        end_date: null
+        source_url: https://godurhamtransit.org/durham-station-renovations/
+        message: Durham Station remains active during substantial renovation. Use the alternative public sidewalk by GoDurham stop 6680 on Great Jones Street at Main Street. You do not need to enter the site. Stay away from station construction, platforms and bus operating areas; follow current signs and skip any closed walkway.
+  RAL-01_osm_node_13659913892:
+    safety_status: mapped_public_approach
+    osm_way_id: 196797586
+    osm_node_id: 11048642686
+    evidence_url: https://raleighnc.gov/transportation/services/bus-service-raleigh-union-station
+    association_note: Use the public West Street concrete sidewalk near RUS BUS. Stay out of bus lanes, roadways and operating areas, and keep entrances clear. Follow signs and closures. This is a Raleigh transportation-system association, not a claim about a particular signal or camera here.
+    review_note: Mapped concrete street sidewalk outside the station building, not the bus-station center. Official transit page provides public station context; no field inspection.
+    blocked_dates: []
+mappings:
+  extractor_history: RAL-04_osm_node_2470661698
+  extractor_specimen: RAL-01_osm_way_197842115
+  generator_catalog: RAL-04_osm_way_177166351
+  generator_classroom_chatbot: RAL-04_osm_node_2470661698
+  generator_lesson_planner: RAL-04_osm_node_2470661698
+  recommender_adaptive_learning: RAL-04_osm_node_2470661698
+  recommender_ai_curator: DUR-02_osm_way_30424777
+  recommender_research: RAL-04_osm_way_177166351
+  retriever_semantic_search: DUR-02_osm_way_391474817
+  scheduler_ride_booking: DUR-01_osm_node_5844548329
+  scheduler_traffic_signal: RAL-01_osm_node_13659913892
+  scheduler_transit_flow: DUR-01_osm_node_5844548329
