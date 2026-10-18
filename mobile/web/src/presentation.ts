@@ -1,5 +1,6 @@
 import type { Fix, Poi, Runtime, Spawn } from "./engine.ts";
 import { interaction } from "./engine.ts";
+import { rules } from "./rules.ts";
 
 export function regionLabel(data: Runtime, id: string) {
   return (
@@ -20,8 +21,16 @@ export function markerLabel(data: Runtime, spawn: Spawn) {
   return `Mystery Modémon · ${rarityLabel(spawn.rarity)} · ${placeLabel(data, spawn.poi)}`;
 }
 export function approximateDistance(meters: number) {
-  if (meters >= 1000) return `${Math.round(meters / 100) / 10} km`;
-  return `${meters >= 100 ? Math.round(meters / 10) * 10 : Math.round(meters)} m`;
+  if (!Number.isFinite(meters) || meters < 0) return "distance unavailable";
+  const miles = meters / 1609.344;
+  if (meters >= 1609.344 / 4)
+    return `${new Intl.NumberFormat("en-US", { maximumFractionDigits: miles < 1 ? 2 : 1 }).format(miles)} mi`;
+  const feet = meters / 0.3048;
+  const rounded =
+    feet < 100
+      ? Math.max(meters > 0 ? 1 : 0, Math.round(feet))
+      : Math.round(feet / 10) * 10;
+  return `${new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(rounded)} ft`;
 }
 
 // These are presentation messages only. The existing interaction() result still
@@ -44,7 +53,7 @@ export function proximityCopy(
     return "Your phone's location estimate is not accurate or recent enough yet. Wait somewhere safe and try location again.";
   return gate.allowed
     ? `You're about ${approximateDistance(gate.meters)} away. You're close enough to discover this Modémon.`
-    : `You're about ${approximateDistance(gate.meters)} away. Get within roughly 75 m to discover this Modémon, but only if there is a safe public way to get closer.`;
+    : `You're about ${approximateDistance(gate.meters)} away. Get within roughly ${approximateDistance(rules.interactionMeters)} to discover this Modémon, but only if there is a safe public way to get closer.`;
 }
 export const publicLocationSafety =
   "This Modémon is linked to the nearby location. Stay in public areas; you don't need to enter the business.";

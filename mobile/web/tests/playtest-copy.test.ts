@@ -84,8 +84,8 @@ test("player labels use actual region names and never expose region IDs", () => 
   assert.equal(regionLabel(data, "unknown"), "the nearby game area");
 });
 test("friendly approximate distance and GPS guidance does not change the 75m gate", () => {
-  assert.equal(approximateDistance(381), "380 m");
-  assert.equal(approximateDistance(1250), "1.3 km");
+  assert.equal(approximateDistance(381), "1,250 ft");
+  assert.equal(approximateDistance(1250), "0.78 mi");
   const fix = {
     lat: spawn.poi.lat + 0.0034,
     lon: spawn.poi.lon,
@@ -94,8 +94,8 @@ test("friendly approximate distance and GPS guidance does not change the 75m gat
   };
   const gate = interaction(spawn, fix, 100000);
   const message = proximityCopy("real", fix, gate);
-  assert.match(message, /You're about 380 m away/);
-  assert.match(message, /roughly 75 m/);
+  assert.match(message, /You're about 1,240 ft away/);
+  assert.match(message, /roughly 250 ft/);
   assert.doesNotMatch(message, /tolerance|foreground|GPS fix/);
   assert.equal(gate.allowed, false);
   assert.match(

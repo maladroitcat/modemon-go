@@ -21,6 +21,7 @@ import "leaflet/dist/leaflet.css";
 import "./style.css";
 import bundle from "./data/runtime.json";
 import QuizFeedback from "./QuizFeedback";
+import DexEntry from "./DexEntry";
 import {
   approximateDistance,
   extraLocationSafety,
@@ -34,7 +35,9 @@ import {
 import { safetyNotice } from "../../src/content/safety";
 import {
   answerQuestion,
-  beginAttempt,
+  startAttempt,
+  changeDifficulty,
+  attemptRules,
   buildWorld,
   dayKey,
   distance,
@@ -42,13 +45,14 @@ import {
   habitatAt,
   interaction,
   persist,
-  questionsFor,
+  questionsForAttempt,
   readProgress,
   type Fix,
   type Progress,
   type Runtime,
   type Spawn,
 } from "./engine";
+import { quizModes, type Difficulty } from "./quizzes";
 
 const data = bundle as unknown as Runtime;
 const safetyKey = "modemon-go:playable:safety:v1";
@@ -310,45 +314,6 @@ function CameraScene({
   );
 }
 
-function DexEntry({ id }: { id: string }) {
-  const s = data.modedex.modemon[id];
-  return (
-    <article className="dex-entry">
-      <h2>{s.name}</h2>
-      <p className="eyebrow">
-        {s.role} · {s.rarity}
-      </p>
-      <p>{s.dex_entry}</p>
-      <dl>
-        <dt>Habitats</dt>
-        <dd>{s.habitats.map(title).join(", ")}</dd>
-        <dt>AI tasks</dt>
-        <dd>{s.ai_tasks.join(", ")}</dd>
-        <dt>Representative techniques</dt>
-        <dd>{s.models_algorithms.join(", ")}</dd>
-        <dt>Input</dt>
-        <dd>{s.input_data}</dd>
-        <dt>Output</dt>
-        <dd>{s.output_data}</dd>
-        <dt>Limitations</dt>
-        <dd>
-          <ul>
-            {s.biases_limitations.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-        </dd>
-        <dt>Explainability</dt>
-        <dd>{s.explainability.join(", ")}</dd>
-      </dl>
-      <p className="muted">
-        Educational context, not a claim that this place deploys a particular AI
-        system.
-      </p>
-    </article>
-  );
-}
-
 export default function App() {
   const [ready, setReady] = useState(() => read(safetyKey) === "1");
   const [agreed, setAgreed] = useState(false),
@@ -441,7 +406,7 @@ export default function App() {
             timestamp: p.timestamp,
           });
           setLocationStatus(
-            `Real GPS · accuracy ±${Math.round(p.coords.accuracy)} m`,
+            `Real GPS · accuracy ${approximateDistance(p.coords.accuracy)}`,
           );
         },
         (e) => {
@@ -523,14 +488,16 @@ export default function App() {
       selected &&
       interaction(selected, position, clock).allowed &&
       !storageError &&
-      save(beginAttempt(progress, selected))
+      save(startAttempt(progress, selected, data))
     )
       setPhase("scene");
   }
   const attempt = selected ? progress.attempts[selected.id] : null;
+  const captureMode = attemptRules(attempt);
   const quiz = useMemo(
-    () => (selected ? questionsFor(selected, data) : []),
-    [selected],
+    () =>
+      selected && attempt ? questionsForAttempt(selected, data, attempt) : [],
+    [selected, attempt],
   );
   const gate = selected ? interaction(selected, position, clock) : null;
   const counts = Object.values(progress.attempts).filter(
@@ -739,7 +706,10 @@ export default function App() {
               <button className="secondary" onClick={() => setDexId(null)}>
                 Back to discoveries
               </button>
-              <DexEntry id={dexId} />
+              <DexEntry
+                species={data.modedex.modemon[dexId]}
+                habitatTitle={title}
+              />
             </>
           ) : (
             <>
@@ -851,8 +821,8 @@ export default function App() {
                   position.accuracy >= 20 && (
                     <p className="muted">
                       Your phone&apos;s location estimate may be off by about{" "}
-                      {Math.round(position.accuracy)} m. Wait for a clearer
-                      signal if the distance seems wrong.
+                      {approximateDistance(position.accuracy)}. Wait for a
+                      clearer signal if the distance seems wrong.
                     </p>
                   )}
                 {mode === "demo" && (
@@ -892,7 +862,50 @@ export default function App() {
             )}
             {phase === "info" && (
               <>
-                <DexEntry id={selected.speciesId} />
+                <DexEntry
+                  species={data.modedex.modemon[selected.speciesId]}
+                  habitatTitle={title}
+                />
+                <fieldset
+                  className="difficulty-picker"
+                  disabled={
+                    !!storageError ||
+                    !!attempt?.answers.length ||
+                    captureMode.legacy
+                  }
+                >
+                  <legend>Capture difficulty</legend>
+                  {Object.entries(quizModes).map(([key, choice]) => (
+                    <label key={key}>
+                      <input
+                        type="radio"
+                        name="capture-difficulty"
+                        value={key}
+                        checked={captureMode.difficulty === key}
+                        onChange={() =>
+                          save(
+                            changeDifficulty(
+                              progress,
+                              selected,
+                              data,
+                              key as Difficulty,
+                            ),
+                          )
+                        }
+                      />
+                      <span>
+                        <strong>{choice.label}</strong>
+                        <small>{choice.count} questions</small>
+                      </span>
+                    </label>
+                  ))}
+                </fieldset>
+                {(!!attempt?.answers.length || captureMode.legacy) && (
+                  <p>
+                    {captureMode.label} is locked for this encounter. Your saved
+                    answers will resume.
+                  </p>
+                )}
                 <button
                   disabled={!!storageError}
                   onClick={() => {
@@ -904,12 +917,20 @@ export default function App() {
                     );
                   }}
                 >
-                  Capture · 3 questions
+                  Capture · {captureMode.count} questions
                 </button>
               </>
             )}
             {phase === "quiz" && (
               <>
+                <p className="quiz-score" role="status">
+                  {captureMode.label} ·{" "}
+                  {attempt?.answers.filter(
+                    (answer, i) => answer === quiz[i].correct,
+                  ).length ?? 0}{" "}
+                  correct from {attempt?.answers.length ?? 0} answered · Need{" "}
+                  {captureMode.required} of {captureMode.count}
+                </p>
                 {feedback !== null && attempt && (
                   <QuizFeedback
                     correct={
@@ -928,7 +949,8 @@ export default function App() {
                 {feedback === null && attempt?.status === "in_progress" && (
                   <section>
                     <p>
-                      Question {attempt.answers.length + 1} of 3 · at least 2
+                      Question {attempt.answers.length + 1} of{" "}
+                      {captureMode.count} · at least {captureMode.required}{" "}
                       correct to capture
                     </p>
                     <h3>{quiz[attempt.answers.length].prompt}</h3>

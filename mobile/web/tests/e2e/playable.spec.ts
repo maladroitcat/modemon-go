@@ -430,7 +430,7 @@ test("tap dialogs and marker tooltips use friendly place, distance and safety wo
     modal.getByText(placeLabel(data, s.poi), { exact: true }),
   ).toBeVisible();
   await expect(modal).toContainText(
-    "You're about 380 m away. Get within roughly 75 m",
+    "You're about 1,250 ft away. Get within roughly 250 ft",
   );
   await expect(modal).toContainText(
     "Stay in public areas; you don't need to enter the business.",
