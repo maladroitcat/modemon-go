@@ -46,7 +46,8 @@
     "test:e2e": "playwright test",
     "check": "npm run typecheck && npm run lint && npm test",
     "play:web": "vite web --host 127.0.0.1",
-    "build:playable": "vite build web",
+    "build:playable": "npm run validate:quizzes && vite build web",
+    "validate:quizzes": "node --experimental-strip-types web/scripts/validate-quizzes.ts",
     "check:playable": "tsc -p web/tsconfig.json && eslint web/src web/tests web/scripts web/vite.config.ts web/playwright.config.ts",
     "test:playable": "node --experimental-strip-types --test web/tests/*.test.ts",
     "test:playable:e2e": "playwright test --config web/playwright.config.ts"

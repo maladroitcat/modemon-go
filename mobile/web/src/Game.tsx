@@ -34,7 +34,9 @@ import {
 import { safetyNotice } from "../../src/content/safety";
 import {
   answerQuestion,
-  beginAttempt,
+  startAttempt,
+  changeDifficulty,
+  attemptRules,
   buildWorld,
   dayKey,
   distance,
@@ -42,13 +44,14 @@ import {
   habitatAt,
   interaction,
   persist,
-  questionsFor,
+  questionsForAttempt,
   readProgress,
   type Fix,
   type Progress,
   type Runtime,
   type Spawn,
 } from "./engine";
+import { quizModes, type Difficulty } from "./quizzes";
 
 const data = bundle as unknown as Runtime;
 const safetyKey = "modemon-go:playable:safety:v1";
@@ -523,14 +526,16 @@ export default function App() {
       selected &&
       interaction(selected, position, clock).allowed &&
       !storageError &&
-      save(beginAttempt(progress, selected))
+      save(startAttempt(progress, selected, data))
     )
       setPhase("scene");
   }
   const attempt = selected ? progress.attempts[selected.id] : null;
+  const captureMode = attemptRules(attempt);
   const quiz = useMemo(
-    () => (selected ? questionsFor(selected, data) : []),
-    [selected],
+    () =>
+      selected && attempt ? questionsForAttempt(selected, data, attempt) : [],
+    [selected, attempt],
   );
   const gate = selected ? interaction(selected, position, clock) : null;
   const counts = Object.values(progress.attempts).filter(
@@ -893,6 +898,48 @@ export default function App() {
             {phase === "info" && (
               <>
                 <DexEntry id={selected.speciesId} />
+                <fieldset
+                  className="difficulty-picker"
+                  disabled={
+                    !!storageError ||
+                    !!attempt?.answers.length ||
+                    captureMode.legacy
+                  }
+                >
+                  <legend>Capture difficulty</legend>
+                  {Object.entries(quizModes).map(([key, choice]) => (
+                    <label key={key}>
+                      <input
+                        type="radio"
+                        name="capture-difficulty"
+                        value={key}
+                        checked={captureMode.difficulty === key}
+                        onChange={() =>
+                          save(
+                            changeDifficulty(
+                              progress,
+                              selected,
+                              data,
+                              key as Difficulty,
+                            ),
+                          )
+                        }
+                      />
+                      <span>
+                        <strong>{choice.label}</strong>
+                        <small>
+                          {choice.count} questions · {choice.required} correct
+                        </small>
+                      </span>
+                    </label>
+                  ))}
+                </fieldset>
+                {(!!attempt?.answers.length || captureMode.legacy) && (
+                  <p>
+                    {captureMode.label} is locked for this encounter. Your saved
+                    answers will resume.
+                  </p>
+                )}
                 <button
                   disabled={!!storageError}
                   onClick={() => {
@@ -904,12 +951,20 @@ export default function App() {
                     );
                   }}
                 >
-                  Capture · 3 questions
+                  Capture · {captureMode.count} questions
                 </button>
               </>
             )}
             {phase === "quiz" && (
               <>
+                <p className="quiz-score" role="status">
+                  {captureMode.label} ·{" "}
+                  {attempt?.answers.filter(
+                    (answer, i) => answer === quiz[i].correct,
+                  ).length ?? 0}{" "}
+                  correct from {attempt?.answers.length ?? 0} answered · Need{" "}
+                  {captureMode.required} of {captureMode.count}
+                </p>
                 {feedback !== null && attempt && (
                   <QuizFeedback
                     correct={
@@ -928,7 +983,8 @@ export default function App() {
                 {feedback === null && attempt?.status === "in_progress" && (
                   <section>
                     <p>
-                      Question {attempt.answers.length + 1} of 3 · at least 2
+                      Question {attempt.answers.length + 1} of{" "}
+                      {captureMode.count} · at least {captureMode.required}{" "}
                       correct to capture
                     </p>
                     <h3>{quiz[attempt.answers.length].prompt}</h3>

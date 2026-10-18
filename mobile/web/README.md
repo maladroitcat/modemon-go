@@ -15,8 +15,9 @@ Public HTTPS: **https://modemon-go-playable.astralgnat19.chatgpt.site**
    **Simulate walking here (Demo)** and **Enter encounter**.
 3. Enable the camera if appropriate, or use the complete non-camera encounter.
    Tap the labeled creature placeholder, read its Modédex entry, then Capture.
-4. Answer exactly three questions. Two correct captures; fewer escapes for that
-   exact encounter/day. Read feedback, show the result, then reload to check the
+4. Choose Novice (3 questions, 2 correct), Intermediate (5, 3), or Expert (7, 4).
+   Answer every question; too few correct escapes for that exact encounter/day.
+   Read feedback, show the result, then reload to check the
    saved collection. Demo captures are separate from real captures.
 5. Report the browser/iOS version, mode, date, POI, and steps at issue #15. Do not
    attach private GPS coordinates, images of people, or clinical spaces.
@@ -84,11 +85,13 @@ this build. **RAL-05 has zero encounters intentionally**, pending a safe anchor.
 
 ## Quizzes And Persistence
 
-All 39 non-Signature entries have three distinct deterministic MCQs using their
-canonical role, input, and output fields. Distractors come from other families;
-duplicate exact options are removed. Wording identifies the canonical Modédex as
-the source rather than claiming a technique is exclusive to one job. Feedback
-shows the correct answer and canonical input/output explanation after every answer.
+All 39 non-Signature entries support Novice (3 questions, 2 correct), Intermediate
+(5 questions, 3 correct), and Expert (7 questions, 4 correct). Novice tests role,
+input, and output; Intermediate adds family, habitat, and representative techniques;
+Expert adds supported inspection/explainability and limitations. All answers and
+distractors come from canonical structured fields, with source-scoped wording rather
+than claims of exclusive techniques or actual POI deployments. Every item has four
+distinct choices. Feedback shows the correct answer and a source-grounded explanation.
 Correct feedback is green with a check icon and "Correct."; incorrect feedback is
 red with a cross icon and "Not quite.". Text and live announcements distinguish
 the states without depending on color. The answer and capture rules are unchanged.
@@ -101,6 +104,12 @@ visible in the Modédex. Separate real/demo keys; coordinates are never persiste
 Storage denial/corruption is explicit and disables capture rather than claiming a
 save. Clearing site data or changing browser loses progress. No cloud sync or
 anti-cheat claim; this is a local educational prototype.
+
+Difficulty and the full question bank are saved before the first answer; difficulty
+locks after the first answer. Outer progress v2 prevents older clients from writing
+incompatible three-question results. Existing v1 attempts remain readable under their
+original Novice rules without regrading captures or escapes. See [QUIZZES.md](QUIZZES.md)
+for the compatibility policy and [quiz-audit.json](quiz-audit.json) for all 117 banks.
 
 Camera access requires a gesture and HTTPS, requests video only, uses `playsInline`,
 and never records/uploads frames. Tracks stop on exit/background/pagehide, including
@@ -144,6 +153,7 @@ npm ci
 npm run check
 npm run check:playable
 npm run test:playable
+npm run validate:quizzes
 npx playwright install chromium webkit
 npm run test:e2e
 npm run test:playable:e2e
