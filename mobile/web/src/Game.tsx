@@ -55,6 +55,7 @@ import {
 } from "./engine";
 import { quizModes, type Difficulty } from "./quizzes";
 import { safeProjectUrl } from "./signatures";
+import { cameraOff, cameraPreferences, EncounterCamera } from "./camera";
 
 const data = bundle as unknown as Runtime;
 const safetyKey = "modemon-go:playable:safety:v1";
@@ -197,65 +198,33 @@ function CameraScene({
   onTap: () => void;
   onExit: () => void;
 }) {
-  const video = useRef<HTMLVideoElement>(null),
-    stream = useRef<MediaStream | null>(null),
-    generation = useRef(0);
-  const [status, setStatus] = useState(
-    "Camera off. The non-camera encounter is available.",
-  );
-  const stop = useCallback(() => {
-    generation.current++;
-    stream.current?.getTracks().forEach((t) => t.stop());
-    stream.current = null;
-    if (video.current) video.current.srcObject = null;
-  }, []);
+  const video = useRef<HTMLVideoElement>(null);
+  const camera = useRef<EncounterCamera | null>(null);
+  const [cameraState, setCameraState] = useState(cameraOff);
   useEffect(() => {
+    const controller = new EncounterCamera({
+      preferences: cameraPreferences,
+      video: () => video.current,
+      getUserMedia: (constraints) => navigator.mediaDevices.getUserMedia(constraints),
+      available: () => isSecureContext && !!navigator.mediaDevices?.getUserMedia,
+      hidden: () => document.hidden,
+      changed: setCameraState,
+    });
+    camera.current = controller;
+    void controller.autoStart();
     const visibility = () => {
-      if (document.hidden) {
-        stop();
-        setStatus("Camera paused while the page is hidden.");
-      }
+      if (document.hidden) controller.pause();
     };
+    const pagehide = () => controller.pause();
     document.addEventListener("visibilitychange", visibility);
-    window.addEventListener("pagehide", stop);
+    window.addEventListener("pagehide", pagehide);
     return () => {
-      stop();
+      controller.dispose();
+      camera.current = null;
       document.removeEventListener("visibilitychange", visibility);
-      window.removeEventListener("pagehide", stop);
+      window.removeEventListener("pagehide", pagehide);
     };
-  }, [stop]);
-  async function start() {
-    stop();
-    const token = generation.current;
-    try {
-      if (!isSecureContext || !navigator.mediaDevices?.getUserMedia)
-        throw Error("Camera requires a supported HTTPS browser.");
-      setStatus("Requesting camera permission...");
-      const camera = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: { ideal: "environment" } },
-        audio: false,
-      });
-      if (token !== generation.current || document.hidden) {
-        camera.getTracks().forEach((t) => t.stop());
-        return;
-      }
-      stream.current = camera;
-      if (video.current) {
-        video.current.srcObject = camera;
-        await video.current.play();
-      }
-      if (token !== generation.current || document.hidden) {
-        stop();
-        return;
-      }
-      setStatus("Camera active. No video is recorded or uploaded.");
-    } catch {
-      stop();
-      setStatus(
-        "Camera unavailable or denied. Use the non-camera encounter below.",
-      );
-    }
-  }
+  }, []);
   return (
     <>
       <div className="camera-scene">
@@ -270,23 +239,22 @@ function CameraScene({
           className="creature-tap"
           aria-label={`Inspect ${name}`}
           onClick={() => {
-            stop();
+            camera.current?.pause();
             onTap();
           }}
         >
           <Creature modemonId={modemonId} name={name} />
         </button>
       </div>
-      <p role="status">{status}</p>
+      <p role="status">{cameraState.status}</p>
       <div className="actions">
-        <button onClick={start}>
+        <button disabled={cameraState.pending || cameraState.active} onClick={() => { void camera.current?.start(); }}>
           <Camera size={18} /> Enable camera
         </button>
         <button
           className="secondary"
           onClick={() => {
-            stop();
-            setStatus("Non-camera encounter.");
+            camera.current?.disable();
           }}
         >
           <CameraOff size={18} /> Use without camera
@@ -294,7 +262,7 @@ function CameraScene({
         <button
           className="secondary"
           onClick={() => {
-            stop();
+            camera.current?.pause();
             onExit();
           }}
         >
