@@ -11,11 +11,11 @@ const signatures = Object.entries(data.modedex.modemon).filter(
   ([, s]) => s.stage === 3,
 );
 
-test("all twelve standalone Signature details identify documented inspiration and link accessibly without enabling encounters", async ({
+test("all twelve standalone Signature details identify documented inspiration and link accessibly without creating captures", async ({
   page,
 }, info) => {
-  // Future discovered entries are seeded for rendering QA only; no spawn/schedule
-  // or capture is created. The production discovery gate is unchanged.
+  // Discovered entries are seeded for rendering QA only; no capture is created.
+  // Production encounters now use the separately approved issue-21 crosswalk.
   await page.addInitScript(
     (ids) => {
       localStorage.setItem(
@@ -94,8 +94,12 @@ test("all twelve standalone Signature details identify documented inspiration an
   }
   await page.getByRole("button", { name: "Map", exact: true }).click();
   await expect(page.locator("header")).toContainText("0 captured");
-  for (const row of await page.locator(".encounter-row").all())
-    await expect(row).not.toContainText(/Signature/);
+  for (const row of await page.locator(".encounter-row").all()) {
+    const poiId = await row.getAttribute("data-poi-id");
+    if ((await row.innerText()).includes("Signature"))
+      expect(data.signatures!.entries.some((e) => e.poi_id === poiId)).toBe(true);
+    for (const [, species] of signatures) await expect(row).not.toContainText(species.name);
+  }
 });
 
 test("real GPS accuracy, nearby distances, Demo distances and map instructions use US display units", async ({

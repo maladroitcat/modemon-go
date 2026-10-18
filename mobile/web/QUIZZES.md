@@ -43,8 +43,8 @@ same five and appends inspection and limitation questions. New basic feedback ex
 only the asked field, rather than giving away the next input/output answer. Legacy
 feedback remains unchanged for already-saved attempts.
 
-`npm run validate:quizzes` checks all **39 non-Signature entries x 3 modes = 117
-banks**, containing **585 question instances** for a fixed audit encounter. It fails
+`npm run validate:quizzes` checks all **51 entries x 3 modes = 153
+banks**, containing **765 question instances** for a fixed audit encounter. It fails
 on missing topics, fewer than four supported options, duplicate/another listed correct
 choice, unsupported provenance, or options longer than 180 characters. Current maximum
 option length is **106 characters**; no missing topics, duplicate options, or excessive
@@ -90,7 +90,7 @@ server-enforced anti-cheat system; manual storage edits are not prevented.
 
 ## QA And Limits
 
-Unit tests cover all 117 banks, every correct/incorrect partition of 3/5/7 answers,
+Unit tests cover all 153 banks, every correct/incorrect partition of 3/5/7 answers,
 strict-majority boundaries, no early completion, snapshot and difficulty locks,
 old captures/escapes/in-progress fixtures, corrupted data, source integrity, and
 unchanged frozen worlds. Browser tests run pass and fail boundaries for all modes,
@@ -98,14 +98,17 @@ reload before/after answers, Demo/real switching, disabled mode controls after a
 answer, color/text/icon feedback, and long options at 320 x 568, 393 x 852, and
 844 x 390. Existing native and playable regressions remain required.
 
-The full playable suite has 34 tests across Chromium and mobile WebKit. These are
+The expanded issue-21 playable suite has 114 cases across Chromium and mobile WebKit. These are
 not physical iPhone Safari tests; owner field/device acceptance remains necessary.
 Five Healthcare-only forms still have no suitable public gameplay anchors under
-the existing conservative policy, but their quiz content is validated. Signatures
-remain disabled. No quiz claim extends their deployment provenance or locations.
+the existing conservative policy, but their quiz content is validated. All twelve
+Signatures now have explicit approved mappings; ten have real outdoor placements,
+and the two Durham Station forms are Demo-only pending safety review. See
+[SIGNATURE_ENCOUNTERS.md](SIGNATURE_ENCOUNTERS.md). No quiz claim extends their
+deployment provenance or locations.
 
-The older dated `coverage.json` snapshot reports the original Novice question
-count. `quiz-audit.json` is the current three-mode content/coverage audit. Human
+`coverage.json` reports scheduled geography/species coverage; `quiz-audit.json`
+is the current three-mode question content audit. Human
 review can still improve distractor pedagogy, but must retain source-scoped wording
 and must not infer task-exclusive techniques or unverified deployed systems.
 

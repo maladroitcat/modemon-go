@@ -73,8 +73,9 @@ Global deterministic greedy placement rejects a candidate if any fixed-radius
 It tests pair-defined circle centres, not just circles centred on markers. Uses
 EPSG:2264 projected metres converted from **US survey feet**, with a conservative
 one-metre guard. Captures/escapes remove markers; they never refill or reroll the
-world. Approved scheduled Signatures would need an explicit crosswalk and priority
-integration first; none is enabled in v1.
+world. The issue-21 overlay now admits explicitly approved Signature slots first;
+see [SIGNATURE_ENCOUNTERS.md](SIGNATURE_ENCOUNTERS.md) for all twelve mappings,
+shared-anchor rotation, outdoor placements and individual safety holds.
 
 Generated metric POI helper coordinates are rounded to one millimetre for stable
 macOS/Linux builds. Original latitude/longitude and all polygon geometry remain
@@ -88,7 +89,7 @@ this build. **RAL-05 has zero encounters intentionally**, pending a safe anchor.
 
 ## Quizzes And Persistence
 
-All 39 non-Signature entries support Novice (3 questions, 2 correct), Intermediate
+All 51 entries (including twelve approved Signatures) support Novice (3 questions, 2 correct), Intermediate
 (5 questions, 3 correct), and Expert (7 questions, 4 correct). Novice tests role,
 input, and output; Intermediate adds family, habitat, and representative techniques;
 Expert adds supported inspection/explainability and limitations. All answers and
@@ -112,7 +113,7 @@ Difficulty and the full question bank are saved before the first answer; difficu
 locks after the first answer. Outer progress v2 prevents older clients from writing
 incompatible three-question results. Existing v1 attempts remain readable under their
 original Novice rules without regrading captures or escapes. See [QUIZZES.md](QUIZZES.md)
-for the compatibility policy and [quiz-audit.json](quiz-audit.json) for all 117 banks.
+for the compatibility policy and [quiz-audit.json](quiz-audit.json) for all 153 banks.
 
 Camera access requires a gesture and HTTPS, requests video only, uses `playsInline`,
 and never records/uploads frames. Tracks stop on exit/background/pagehide, including
@@ -121,9 +122,10 @@ late permission resolution. Non-camera play is fully equivalent. No 3D AR claim.
 ## Coverage And Limits
 
 Exact species IDs/names, eligible POI IDs/names, daily encounters, habitat coverage,
-and disabled forms are recorded in [coverage.json](coverage.json). All 51 entries
-are present, 39 have quiz/eligibility support, **31** appeared in the fourteen-day
-simulation. Five Healthcare-only forms have no suitable public anchors under the
+and individually withheld forms are recorded in [coverage.json](coverage.json),
+including a 32-day rotation audit. All 51 entries now have quiz support; ten Signatures have
+real placement eligibility and all twelve are available over the Demo rotation.
+Five Healthcare-only ordinary forms have no suitable public anchors under the
 conservative access policy. Eight of nine habitats appeared; Healthcare did not.
 There are **551** eligible association anchors across seven regions. Today's
 rotation is not promised to expose every enabled species or every habitat.
@@ -131,7 +133,8 @@ rotation is not promised to expose every enabled species or every habitat.
 **0 approved creature assets; 51 missing-art records.** Both Seeklet concept images
 remain untracked and untouched; their design note explicitly says awaiting
 approval. Every rendered creature uses an honestly labeled placeholder. No new
-creative artwork, inferred deployed architectures, or Signature locations.
+creative artwork or inferred deployed architectures. Signature coordinates derive
+from individually reviewed OSM pedestrian nodes, not invented locations.
 
 OSM street tiles are attributed and browser-cached normally. No bulk download,
 offline prefetch, proxy, cache suppression, or offline-launch promise. The public
@@ -145,9 +148,12 @@ confidence is not physical-access verification. No signed native build, physical
 iPhone acceptance, background location, service worker, account, or backend.
 
 Signature detail rendering names the real project/use-case from canonical evidence
-and provides "Learn about the real project" with a safe source link. This does not
-unlock encounters or invent site mappings. See [SIGNATURE_SOURCE_REVIEW.md](SIGNATURE_SOURCE_REVIEW.md)
-for source availability and two recorded-title review flags.
+and provides "Learn about the real project" with a safe source link. See
+[SIGNATURE_SOURCE_REVIEW.md](SIGNATURE_SOURCE_REVIEW.md) for source availability
+and two recorded-title review flags. Encounter approval is separate and explicit
+in [SIGNATURE_ENCOUNTERS.md](SIGNATURE_ENCOUNTERS.md). Demo's labeled simulated-date
+selector lets remote testers explore the rare calendar without changing real GPS
+or resetting previous attempts.
 
 ## Reproduce
 
