@@ -16,7 +16,8 @@ test("logo loads alone on map; all 51 discoveries use correct lazy artwork and f
   }, Object.keys(data.modedex.modemon));
   await page.goto("/");
   await expect(page.locator(".brand-logo img")).toBeVisible();
-  expect(await page.locator(".brand-logo img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  // A visible reserved box can precede image decoding over public HTTPS.
+  await expect.poll(() => page.locator(".brand-logo img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   expect(requests.every((url) => url.includes("/art/logo."))).toBe(true);
   // Panning the live map must not fetch anonymous creatures' images.
   const map = await page.locator(".leaflet-container").boundingBox();
