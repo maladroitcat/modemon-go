@@ -98,8 +98,10 @@ reload before/after answers, Demo/real switching, disabled mode controls after a
 answer, color/text/icon feedback, and long options at 320 x 568, 393 x 852, and
 844 x 390. Existing native and playable regressions remain required.
 
-The expanded issue-21 playable suite has 114 cases across Chromium and mobile WebKit. These are
-not physical iPhone Safari tests; owner field/device acceptance remains necessary.
+Browser-suite counts below are historical issue-specific snapshots. Current
+totals and reproducible commands are in [QA.md](QA.md) and the
+[root test guide](../../README.md#tests-and-checks). Chromium/mobile WebKit checks
+are not physical iPhone Safari tests; owner field/device acceptance is necessary.
 Five Healthcare-only forms still have no suitable public gameplay anchors under
 the existing conservative policy, but their quiz content is validated. All twelve
 Signatures now have explicit approved mappings and real outdoor placements;
@@ -134,7 +136,7 @@ to canonical evidence, with safe missing/unsafe-source states. See
 [SIGNATURE_SOURCE_REVIEW.md](SIGNATURE_SOURCE_REVIEW.md) for all sources and two
 recorded-title review flags. Canonical content and provenance are unchanged.
 
-The expanded suite contains 38 browser tests across Chromium/mobile WebKit, including
+The owner-follow-up milestone added checks across Chromium/mobile WebKit, including
 all 12 Signature details and links, selector labels without passing thresholds, US
 distance display, and the existing complete quiz/capture/progress regressions.
 Additional unit tests exercise distance boundaries, metric gates, source URL safety,

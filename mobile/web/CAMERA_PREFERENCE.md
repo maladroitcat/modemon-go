@@ -36,4 +36,6 @@ Run `npm run check:playable`, `npm run test:playable` and
 late playback, denial, cleanup and single-flight requests; Chromium and mobile
 WebKit tests cover first opt-in, subsequent scenes, reload, off and re-enable.
 Physical iPhone Safari permission/foreground behavior still requires device QA.
-This branch does not deploy or change the existing public version.
+This feature is merged in main and included in the existing public preview.
+See [current QA](QA.md) for verified deployment identity and the remaining
+physical-device checks; this document describes behavior, not a deployment tool.
