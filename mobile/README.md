@@ -7,18 +7,25 @@ separately; this native guide does not claim that they exist on native.
 
 Implements [task #10](https://github.com/maladroitcat/modemon-go/issues/10), following
 the approved [product contract #9](https://github.com/maladroitcat/modemon-go/issues/9).
-Base commit: `b10409d9a7a1453b05eb435709544db40a8080e7` from updated `main`.
-Foundation branch: `dev/mobile-foundation`; playable branch: `dev/playable-web-mvp`.
-No canonical data is modified. Only the web target reads the generated runtime
-bundle; native modules do not import browser gameplay data.
+The foundation and subsequent browser work are merged into main through PR #32.
+Historical foundation/playable branches are not setup inputs. Only the web target
+reads the generated runtime bundle; native modules do not import browser gameplay
+data. Native gameplay remains incomplete despite its playable web route.
+
+For a clean checkout, reproducible content/art builds and browser checks, start
+with [the root guide](../README.md#how-to-run-and-reproduce). The browser has 51
+approved creature images and logo, 12 Signature encounters, three difficulties
+and approved readings. The assets and masters are committed; no untracked art
+or private snapshot is needed.
 
 ## Toolchain and installation
 
 - Node **24.22.0** is recorded in `.node-version`; SDK 58 needs at least 22.13.x.
 - Expo **58.0.14**, React Native **0.88.0**, React **19.3.0**, Expo Router
   **58.0.23**, `expo-location` **58.0.17**, and `react-native-maps` **1.29.11**.
-- AsyncStorage persists only the safety acknowledgment. Lucide supplies temporary
-  interface iconography; there is no creature artwork in this app.
+- Native AsyncStorage persists only safety acknowledgment. Native encounter and
+  Modédex views are placeholders; approved creature artwork is used by the browser
+  game, not an assertion of native encounter support. Lucide supplies UI icons.
 
 Versions were checked against the [SDK 58 reference](https://docs.expo.dev/versions/v58.0.0/),
 [Router installation guide](https://docs.expo.dev/router/installation/),
@@ -67,10 +74,10 @@ Use a physical iOS or Android device for the actual native map/GPS checks.
    returning from Settings, disabled GPS, pan/zoom/recenter, and backgrounding.
 
 If using Expo Go instead, first verify a compatible SDK 58 build at
-[expo.dev/go](https://expo.dev/go). The [SDK 58 release notes](https://expo.dev/changelog/sdk-58)
-say the store builds are still rolling out. Do not assume the store app supports
-this project. Use `npx expo start --go` only with a compatible Expo Go build;
-development binaries are the reliable path when versions differ.
+[expo.dev/go](https://expo.dev/go). Do not assume the installed store app supports
+this project. Use `npx expo start --go` only with a compatible build; development
+binaries are the reliable path when versions differ. Neither is needed for the
+public browser artifact.
 
 ## Onboarding, safety, and privacy
 
@@ -105,8 +112,8 @@ development binaries are the reliable path when versions differ.
 On iOS/Android, a standard `react-native-maps` view starts at the available device
 position and displays the native player-location indicator. Its initial camera
 zoom is just a starting view, not a visibility radius, geofence, or movement
-constraint. Users can pan/zoom normally and explicitly recenter. No region
-geometry, encounter markers, or spawn data exists in this task.
+constraint. Users can pan/zoom normally and explicitly recenter. That native map
+does not render regions, encounters or spawns; those exist in the browser game.
 
 There are loading, permission-denied, GPS-unavailable, and map-startup timeout
 states. The "Map not loading?" action lets the user report tile failure manually
@@ -125,7 +132,6 @@ npm run typecheck
 npm run lint
 npm test
 npx expo install --check
-npx expo-doctor@latest
 npx playwright install chromium
 npm run test:e2e
 npx expo export --platform all --output-dir dist
@@ -152,10 +158,11 @@ environment: `.venv/bin/python -B -m unittest discover -s tests -v`.
 See [QA.md](QA.md) for actual results and unverified native acceptance criteria.
 Upstream dependency advisories remain; they are not waived by a successful Expo
 Doctor result. The generated launcher icons are Expo template placeholders with
-the template license retained in `LICENSE`, not approved game artwork. Existing
-untracked concept art is intentionally neither consumed nor committed.
+the template license retained in `LICENSE`, not approved game artwork. Approved
+browser assets and masters are committed separately; concepts are not consumed.
 
-The compact read-only bridge and browser encounter/capture loop now exist under
+The compact read-only bridge and browser encounter/capture loop are under
 [web/](web/README.md). Native gameplay expansion remains future work. Neither
-target adds accounts/backend, GPS history, telemetry, or unapproved Signature
-assignments. Existing concepts remain untracked, untouched, and unapproved.
+target adds accounts/backend, GPS history, telemetry or unapproved Signature
+assignments. [Current browser QA](web/QA.md) is separate from the
+[historical native handoff](QA.md) and physical native acceptance checklist.

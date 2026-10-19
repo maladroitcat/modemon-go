@@ -12,10 +12,17 @@ python3 -B scripts/build_game_art.py
 python3 -B scripts/build_web_runtime.py
 ```
 
-Install `requirements.txt` first. A fresh checkout uses committed masters, not
+Start with [clean-checkout setup](../README.md#how-to-run-and-reproduce) and activate
+the Python 3.12 environment; the commands above run from the repository root.
+The documented Python commands can use `python` after activation.
+A fresh checkout uses committed masters, not
 the untracked root drops. `--import-local` is the one-time import option: it
 requires exactly one named image per canonical creature and the logo, rejects
 unknown/missing/duplicate matches, and never overwrites a differing master.
+It is not required or appropriate for routine reproduction. Rebuild the runtime
+after art because it hashes the manifest, then build the learning overlay and
+browser app as described in the root guide. Normal launch serves committed
+derivatives and does not need to run the image encoder first.
 
 Full-resolution PNGs live in `modemon/approved/originals/` and
 `brand/originals/`. They are byte-for-byte copies, not recompressed sources.

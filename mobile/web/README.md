@@ -1,7 +1,8 @@
 # Public Playable Web MVP
 
-Issue [#15](https://github.com/maladroitcat/modemon-go/issues/15), stacked on
-`dev/mobile-foundation`, not on an older `main`. Neither PR is auto-merged.
+The playable browser app is merged into main, including approved artwork,
+Signature encounters, camera preference and educational links through PR #32.
+Historical issue/branch handoffs are not the current feature inventory.
 
 Public HTTPS: **https://modemon-go-playable.astralgnat19.chatgpt.site**
 
@@ -19,7 +20,8 @@ Public HTTPS: **https://modemon-go-playable.astralgnat19.chatgpt.site**
    Answer every question; too few correct escapes for that exact encounter/day.
    Read feedback, show the result, then reload to check the
    saved collection. Demo captures are separate from real captures.
-5. Report the browser/iOS version, mode, date, POI, and steps at issue #15. Do not
+5. Report the browser/iOS version, mode, date, POI, and steps in the repository's
+   [issue tracker](https://github.com/maladroitcat/modemon-go/issues). Do not
    attach private GPS coordinates, images of people, or clinical spaces.
 
 Real mode requires a fresh foreground fix, accuracy at most 50 m, and distance
@@ -60,7 +62,8 @@ entry serves the identical component without Expo's larger routing runtime.
 date + canonical data version + rules version seed stable encounter and question
 IDs. Viewport, player position, browser mode, panning, and reload never seed the
 world. Common/rare selection is 70/30 **before** density selection, not a guarantee
-about final proportions. Stage 3 is disabled, not placed at guessed anchors.
+about final proportions. All twelve stage-3 forms use explicit approved outdoor
+associations and the separate rare Signature calendar, never guessed anchors.
 
 Each safe POI receives eligibility from its own primary/secondary habitat plus
 the primary zone context at that location, inside its resolved parent region.
@@ -115,9 +118,22 @@ incompatible three-question results. Existing v1 attempts remain readable under 
 original Novice rules without regrading captures or escapes. See [QUIZZES.md](QUIZZES.md)
 for the compatibility policy and [quiz-audit.json](quiz-audit.json) for all 153 banks.
 
-Camera access requires a gesture and HTTPS, requests video only, uses `playsInline`,
-and never records/uploads frames. Tracks stop on exit/background/pagehide, including
-late permission resolution. Non-camera play is fully equivalent. No 3D AR claim.
+The first successful Enable camera action remembers opt-in. Later encounters
+auto-attempt video only when the page is visible and browser permissions permit;
+this preference does not grant permission or bypass Safari. Use without camera
+always stops it and remembers off; re-enable is available. Failure falls back
+without a retry loop. HTTPS, `playsInline`, stream cleanup and late-permission
+handling are preserved; no frames/audio are recorded or uploaded. Non-camera play
+is equivalent. This is a 2D overlay, not 3D AR. See
+[camera preference](CAMERA_PREFERENCE.md).
+
+All 39 non-Signatures have approved learning sections: 35 workbook primaries,
+four owner-approved external readings, and distinct secondary lessons where
+already supplied. Exact species IDs and approval/source hashes are validated in
+a separate `learning.json` overlay, outside world identity. Partial matches are
+labeled supporting concepts. All 12 Signatures keep **only** canonical project
+links, with no supplemental reading section. Links are keyboard/screen-reader
+accessible, safe new tabs, and not prefetched. See [learning links](LEARNING_LINKS.md).
 
 ## Coverage And Limits
 
@@ -160,10 +176,17 @@ or resetting previous attempts.
 
 ## Reproduce
 
+First follow the [clean-checkout prerequisites and installation](../../README.md#how-to-run-and-reproduce).
+The commands below use the activated Python 3.12 virtualenv from the repository
+root. All source masters and derived game assets are committed; root PNG drops
+and old snapshot workarounds are not required.
+
 ```sh
-# repository root, pinned Python environment
-.venv/bin/python -B scripts/build_web_runtime.py
-.venv/bin/python -B -m unittest discover -s tests -v
+python -B scripts/build_modedex.py
+python -B scripts/build_game_art.py
+python -B scripts/build_web_runtime.py
+python -B scripts/build_modedex_learning.py
+python -B -m unittest discover -s tests -v
 cd mobile
 # Node 24.22.0
 npm ci
@@ -175,7 +198,7 @@ npx playwright install chromium webkit
 npm run test:e2e
 npm run test:playable:e2e
 npm run build:playable
-node --experimental-strip-types web/scripts/report-coverage.ts 2026-10-17
+node --experimental-strip-types web/scripts/report-coverage.ts 2026-10-18
 npx expo export --platform all --output-dir dist
 # Local playable browser entry:
 npm run play:web -- --port 5173
@@ -183,9 +206,17 @@ npm run play:web -- --port 5173
 PLAYABLE_BASE_URL=https://modemon-go-playable.astralgnat19.chatgpt.site npm run test:playable:e2e
 ```
 
+Run local launch and public testing separately; stop the local server with Ctrl-C
+before a public-only test. Linux browser installation can require
+`npx playwright install --with-deps chromium webkit`. The production playable
+artifact is `mobile/web/dist/`; Expo's `mobile/dist/` is a different export.
+For analytical rebuilds and map/table locations see
+[data reproduction](../../data/REPRODUCIBILITY.md).
+
 ## Hosting And Acceptance
 
-`.openai/hosting.json` records the public Sites project, not a credential. Static
+[`.openai/hosting.json`](.openai/hosting.json) inside this web directory records
+the public Sites project, not a credential. Static
 `web/dist` is deployed through an isolated Sites source checkout; the application
 GitHub branch is not merged to deploy. No token or host login is bundled. Rebuild,
 publish that exact artifact with Sites, and rerun public-site tests after updates.
