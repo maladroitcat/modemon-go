@@ -105,7 +105,8 @@ def owner_decision_fields(data, ledger):
         raise ValueError("Owner decision ledger must cover exactly the four reviewed species")
     result = {}
     for key, row in decisions.items():
-        if set(row) != {"decision", "reference_url", "note"} or not row["note"].strip():
+        if (set(row) - {"decision", "reference_url", "note", "reviewed_commit", "decision_source"}
+                or not {"decision", "reference_url", "note"} <= set(row) or not row["note"].strip()):
             raise ValueError(f"Incomplete owner decision: {key}")
         check_external_url(row["reference_url"])
         if row["decision"] == "approved":
@@ -117,14 +118,17 @@ def owner_decision_fields(data, ledger):
                       else PENDING)
         else:
             raise ValueError(f"Unknown owner decision: {key}")
-        result[key] = {"approval_status": status, "owner_reviewed_commit": commit,
+        row_commit = row.get("reviewed_commit", commit)
+        if len(row_commit) != 40 or any(c not in "0123456789abcdef" for c in row_commit):
+            raise ValueError(f"Owner decision needs a valid reviewed commit: {key}")
+        result[key] = {"approval_status": status, "owner_reviewed_commit": row_commit,
                        "owner_reviewed_url": row["reference_url"], "owner_decision_note": row["note"]}
     return result
 
 
 def validate(data, workbooks, canon, review, evidence=None):
-    if data["approval_status"] != PENDING:
-        raise ValueError("Research cannot approve external references")
+    if data["approval_status"] != APPROVED:
+        raise ValueError("Outside references require explicit owner approval")
     gaps = set(reference_scope(workbooks, canon, review)["outside_research_non_signature_ids"])
     if any(key in canon["modemon"] and canon["modemon"][key]["stage"] == 3 for key in data["proposals"]):
         raise ValueError("Signature forms already have sufficient canonical project sources; no supplementary proposals")
@@ -132,9 +136,10 @@ def validate(data, workbooks, canon, review, evidence=None):
         raise ValueError("External proposals must correspond exactly to uncovered non-Signature workbook gaps")
     if evidence is not None and set(evidence) != {row["proposed_url"] for row in data["proposals"].values()}:
         raise ValueError("External evidence must cover only the current non-Signature proposals")
+    decisions = owner_decision_fields(data, read_yaml(OWNER_DECISIONS))
     for key, row in data["proposals"].items():
-        if row["approval_status"] != PENDING:
-            raise ValueError(f"Every external proposal must remain {PENDING}: {key}")
+        if row["approval_status"] != APPROVED or decisions[key]["approval_status"] != APPROVED:
+            raise ValueError(f"Outside reference is not owner-approved: {key}")
         if set(row) - FIELDS:
             raise ValueError(f"Unexpected field could masquerade as approved mapping: {key}")
         for field in FIELDS - {"verification_terms"}:
@@ -210,8 +215,8 @@ def render(root=RESEARCH):
     root.mkdir(parents=True, exist_ok=True)
     (root / "modedex_external_owner_review.csv").write_text(csv_text(rows, fields), encoding="utf-8")
     lines = ["# Table B: Outside Readings and Owner Decisions", "",
-             "Wardray, Shiftshark, and Parcelprawn are APPROVED_BY_OWNER for their exact educational references reviewed at 79dd9ce. Routeopus's replacement remains PENDING_OWNER_APPROVAL. The prior MIT trip-planning article was held as insufficiently direct. See [owner decision ledger](modedex_external_owner_decisions.yaml).", "",
-             "Approval is recorded from explicit human decisions, never inferred from verification. No row populates a Modedex, workbook-mapping, or runtime link. This does not authorize UI integration, merging, or deployment.", "",
+             "All four exact educational references are APPROVED_BY_OWNER. Issue 30 approves the Routeopus Optibus replacement; the previous MIT trip-planning hold is retained in the [owner decision ledger](modedex_external_owner_decisions.yaml).", "",
+             "Approval is recorded from explicit human decisions, never inferred from verification. Issue 30 separately authorizes a validated non-Signature UI overlay and preview deployment, not merging or edits to canonical content. Network-verification snapshots remain evidence, not approval records.", "",
              "Only four uncovered non-Signatures need outside references. All 45 existing workbook matches are unchanged, including component-level matches. All 12 Signatures already have sufficient canonical real-project sources and receive no supplementary proposals. See [scope accounting](modedex_reference_scope.json).", "",
              "These public HTML articles explain what the AI-assisted job is, what it does, and where it is used; they are not implementation tutorials. Relevance and reading-level judgments remain reviewable.", "",
              "| Species | Status | Exact proposed title / URL | Publisher | Topic / rationale | Confidence / scope | General-audience suitability | Why workbook coverage was insufficient | Limits |", "|---|---|---|---|---|---|---|---|---|"]
@@ -225,7 +230,7 @@ def render(root=RESEARCH):
                  r["why_workbooks_insufficient"], r["limitations"]]
         lines.append("| " + " | ".join(map(esc, cells)) + " |")
     lines += ["", "Confidence describes educational topic fit, not approval, clinical validity, production suitability, or proof of a Signature deployment. Source evidence is in external_reference_verification.json; existing Signature project URLs remain unchanged and separate.",
-              "", "Owner decision needed: approve/reject the Routeopus replacement. The other three exact references already have approval. A future explicitly authorized change would be needed before readings enter the app. This renderer cannot grant approval, merge, or deploy.", ""]
+              "", "No outside-reference approval is outstanding. New or changed sources require fresh explicit owner approval. This report renderer cannot grant approval, merge, or deploy; issue 30's separate builder supplies only approved non-Signature links to the UI.", ""]
     (root / "modedex_external_owner_review.md").write_text("\n".join(lines), encoding="utf-8")
     (root / "modedex_reference_scope.json").write_text(
         json.dumps(reference_scope(workbooks, canon, review), indent=2, sort_keys=True) + "\n", encoding="utf-8")

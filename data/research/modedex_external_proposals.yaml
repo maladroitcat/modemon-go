@@ -1,15 +1,16 @@
 version: 1
-approval_status: PENDING_OWNER_APPROVAL
+approval_status: APPROVED_BY_OWNER
 policy: >-
   Only uncovered non-Signature forms need outside references. Preserve every
   existing workbook match unchanged. All 12 Signatures already have sufficient
   canonical project sources. Owner decisions are recorded separately and apply
   only to exact reviewed references. Verification is not approval. No reference
-  enters canon or the app through this research layer.
+  enters canon through this research layer. Issue 30 authorizes a separately
+  validated non-Signature UI overlay using these four approved references.
 proposals:
   scheduler_hospital:
     name: Wardray
-    approval_status: PENDING_OWNER_APPROVAL
+    approval_status: APPROVED_BY_OWNER
     publisher: MIT News, Massachusetts Institute of Technology
     article_title: Robot helps nurses schedule tasks on labor floor
     proposed_url: https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713
@@ -25,7 +26,7 @@ proposals:
     verification_terms: [nurses, scheduling, patients, recommendations]
   scheduler_transit:
     name: Routeopus
-    approval_status: PENDING_OWNER_APPROVAL
+    approval_status: APPROVED_BY_OWNER
     publisher: Optibus
     article_title: Can Artificial Intelligence Prevent Bus Bunching?
     proposed_url: https://blog.optibus.com/transportation/can-artificial-intelligence-prevent-bus-bunching
@@ -41,7 +42,7 @@ proposals:
     verification_terms: [bus bunching, timetable, predictions, trade-offs]
   scheduler_workforce:
     name: Shiftshark
-    approval_status: PENDING_OWNER_APPROVAL
+    approval_status: APPROVED_BY_OWNER
     publisher: IBM Think
     article_title: What is contact center workforce optimization?
     proposed_url: https://www.ibm.com/think/topics/contact-center-workforce-optimization
@@ -57,7 +58,7 @@ proposals:
     verification_terms: [scheduling, staffing, preferences, AI]
   scheduler_delivery:
     name: Parcelprawn
-    approval_status: PENDING_OWNER_APPROVAL
+    approval_status: APPROVED_BY_OWNER
     publisher: IBM Think
     article_title: What is dispatch management?
     proposed_url: https://www.ibm.com/think/topics/dispatch-management

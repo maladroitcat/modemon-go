@@ -1,10 +1,17 @@
 version: 1
-status: research_only_pending_owner_review
+status: owner_approved_non_signature_learning
+authorization:
+  issue_url: https://github.com/maladroitcat/modemon-go/issues/30
+  non_signature_ui: true
+  signature_supplementary_links: false
 canonical_source: data/config/modedex.yaml
 policy: >-
   Educational concept matches only, not evidence of real-world deployment.
-  No UI integration is authorized by this overlay. Null primary lessons are
-  intentional gaps. Medium-confidence and partial matches require review.
+  All existing matches are owner-approved unchanged. Issue 30 authorizes a
+  separate non-Signature learning overlay, with honest supporting-concept scope.
+  Null workbook lessons use only exact owner-approved outside references.
+  Signatures retain only canonical real-project links in the UI. Historical
+  confidence and review flags remain provenance, not outstanding approval gates.
 
 # URLs were discovered from the live unit tables of contents, not guessed.
 # Article titles below preserve the live H1, including its punctuation.

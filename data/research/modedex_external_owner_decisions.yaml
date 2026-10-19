@@ -3,8 +3,16 @@ reviewed_commit: 79dd9ceb7297d9a1201fdefbdc8a2d6f4243fd2d
 decision_source: Project owner's explicit instruction in the PR 29 follow-up conversation
 policy: >-
   Approval applies only to the exact species/reference pair reviewed by the
-  owner. It does not authorize UI integration, a merge, or deployment. A changed
-  URL cannot inherit approval. Network verification never grants approval.
+  owner. A changed URL cannot inherit approval. Network verification never
+  grants approval. Issue 30 separately authorizes non-Signature UI integration
+  and preview deployment, not a merge into main.
+implementation_authorization: https://github.com/maladroitcat/modemon-go/issues/30
+history:
+  - species_id: scheduler_transit
+    decision: held_for_replacement
+    reference_url: https://news.mit.edu/2015/planning-algorithms-evaluate-probability-of-success-0115
+    reviewed_commit: 79dd9ceb7297d9a1201fdefbdc8a2d6f4243fd2d
+    note: Held because the article was not directly about public transit scheduling; superseded by the explicitly approved Optibus reference in issue 30.
 decisions:
   scheduler_hospital:
     decision: approved
@@ -19,6 +27,8 @@ decisions:
     reference_url: https://www.ibm.com/think/topics/dispatch-management
     note: Owner approved Parcelprawn's IBM Think dispatch-management educational reference.
   scheduler_transit:
-    decision: held_for_replacement
-    reference_url: https://news.mit.edu/2015/planning-algorithms-evaluate-probability-of-success-0115
-    note: Owner held the accessible MIT trip-planning article because it is not directly about public transit scheduling; a replacement requires fresh owner approval.
+    decision: approved
+    reference_url: https://blog.optibus.com/transportation/can-artificial-intelligence-prevent-bus-bunching
+    reviewed_commit: dd92870d3c66c5583f9fc90f25e5e74754506e9f
+    decision_source: https://github.com/maladroitcat/modemon-go/issues/30
+    note: Owner explicitly approved the replacement Optibus bus-scheduling reference in issue 30.

@@ -438,6 +438,43 @@ dd ul {
 .signature-inspiration {
   overflow-wrap: anywhere;
 }
+.learning-links {
+  margin: 20px 0;
+  border-top: 1px solid #bed3cb;
+  padding-top: 12px;
+}
+.learning-links ul {
+  list-style: none;
+  padding: 0;
+}
+.learning-links li + li {
+  margin-top: 16px;
+}
+.learning-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 0;
+  color: #145c48;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.learning-links a span {
+  min-width: 0;
+}
+.learning-links a svg {
+  flex-shrink: 0;
+}
+.learning-links small {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+}
+.learning-links p {
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
 .feedback--correct {
   background: #eaf4ed;
   border-color: #147d65;

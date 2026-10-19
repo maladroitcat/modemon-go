@@ -81,24 +81,24 @@ class SourceReviewTests(unittest.TestCase):
             self.assertIn(row["url"], self.corpus["pages"])
             self.assertTrue(row["reason"])
 
-    def test_every_external_reference_including_evidence_remains_pending(self):
+    def test_every_external_reference_has_owner_approval_separate_from_network_evidence(self):
         # Research/HTTP evidence cannot grant approval; the owner ledger is separate.
         external.validate(self.data, self.workbooks, self.canon, self.review, self.evidence)
         self.assertEqual(len(self.data["proposals"]), 4)
         self.assertEqual(len(self.evidence), 4)
         for row in self.data["proposals"].values():
-            self.assertEqual(row["approval_status"], external.PENDING)
+            self.assertEqual(row["approval_status"], external.APPROVED)
             self.assertEqual(self.evidence[row["proposed_url"]]["approval_status"], external.PENDING)
 
     def test_verification_does_not_confer_approval(self):
         for key in GAP_IDS:
             changed = copy.deepcopy(self.data)
-            changed["proposals"][key]["approval_status"] = "APPROVED"
-            with self.assertRaisesRegex(ValueError, "must remain PENDING_OWNER_APPROVAL"):
+            changed["proposals"][key]["approval_status"] = external.PENDING
+            with self.assertRaisesRegex(ValueError, "not owner-approved"):
                 external.validate(changed, self.workbooks, self.canon, self.review, self.evidence)
         changed = copy.deepcopy(self.data)
-        changed["approval_status"] = "APPROVED"
-        with self.assertRaisesRegex(ValueError, "cannot approve"):
+        changed["approval_status"] = external.PENDING
+        with self.assertRaisesRegex(ValueError, "require explicit owner approval"):
             external.validate(changed, self.workbooks, self.canon, self.review)
 
     def test_external_proposals_cannot_masquerade_as_shipped_mappings(self):
@@ -135,12 +135,15 @@ class SourceReviewTests(unittest.TestCase):
 
     def test_all_existing_workbook_matches_and_snapshots_are_byte_frozen(self):
         expected = {
-            "data/config/modedex_learning_links.yaml": "3a0f58da272eebe6a356904d5cfb37b9255f31690518a5b44f33d7c1a5bab81d",
             "data/research/modedex_learning_inventory.csv": "67473fda6038a4afb1f89f9ea9035b8c31fa4ab6e9d78ed1fd493b14c6251a90",
             "data/research/workbook_lesson_verification.json": "33b1715f36ad2eb9d3bb9a6cc562204b2aefbb05c8d1ba2dd3c43f8745356a98",
         }
         for path, digest in expected.items():
             self.assertEqual(hashlib.sha256((external.ROOT / path).read_bytes()).hexdigest(), digest, path)
+        # Issue 30 changes authorization metadata, not a single approved match.
+        mappings = {k: self.workbooks[k] for k in ("lessons", "species")}
+        self.assertEqual(hashlib.sha256(json.dumps(mappings, sort_keys=True).encode()).hexdigest(),
+                         "3b5b689c6eff404eb6273fa29603774294033cbbd4401858100e6deb6df1d181")
 
     def test_scope_intersection_excludes_all_twelve_signatures(self):
         scope = external.reference_scope(self.workbooks, self.canon, self.review)
@@ -188,15 +191,16 @@ class SourceReviewTests(unittest.TestCase):
                   'Bus <div>schedule</div></div><aside>ignore</aside>')
         self.assertEqual(" ".join(page.parts), "Bus  schedule")
 
-    def test_owner_approved_three_exact_references_and_not_the_routeopus_replacement(self):
+    def test_owner_approved_all_four_exact_references_including_issue30_routeopus_decision(self):
         ledger = external.read_yaml(external.OWNER_DECISIONS)
         self.assertEqual(ledger["reviewed_commit"], "79dd9ceb7297d9a1201fdefbdc8a2d6f4243fd2d")
         fields = external.owner_decision_fields(self.data, ledger)
         approved = {key for key, row in fields.items() if row["approval_status"] == external.APPROVED}
-        self.assertEqual(approved, {"scheduler_hospital", "scheduler_workforce", "scheduler_delivery"})
-        self.assertEqual(fields["scheduler_transit"]["approval_status"], external.PENDING)
-        self.assertNotEqual(fields["scheduler_transit"]["owner_reviewed_url"],
-                            self.data["proposals"]["scheduler_transit"]["proposed_url"])
+        self.assertEqual(approved, GAP_IDS)
+        self.assertEqual(fields["scheduler_transit"]["owner_reviewed_commit"], "dd92870d3c66c5583f9fc90f25e5e74754506e9f")
+        self.assertEqual(fields["scheduler_transit"]["owner_reviewed_url"],
+                         self.data["proposals"]["scheduler_transit"]["proposed_url"])
+        self.assertEqual(ledger["history"][0]["decision"], "held_for_replacement")
 
     def test_approved_reference_records_are_unchanged_from_owner_reviewed_commit(self):
         expected = {
@@ -205,7 +209,7 @@ class SourceReviewTests(unittest.TestCase):
             "scheduler_delivery": "7e9e37fac9c47d24a4b6cc6603932c52242f67044a440821a6890eaf4cf7e0ce",
         }
         for key, digest in expected.items():
-            row = self.data["proposals"][key]
+            row = {**self.data["proposals"][key], "approval_status": external.PENDING}
             self.assertEqual(hashlib.sha256(json.dumps(row, sort_keys=True).encode()).hexdigest(), digest)
 
     def test_changed_url_cannot_inherit_owner_approval(self):
@@ -230,15 +234,15 @@ class SourceReviewTests(unittest.TestCase):
         changed["decisions"]["scheduler_transit"]["decision"] = "auto_approved"
         with self.assertRaisesRegex(ValueError, "Unknown owner decision"):
             external.owner_decision_fields(self.data, changed)
-        changed_data = copy.deepcopy(self.data)
-        changed_data["proposals"]["scheduler_transit"]["proposed_url"] = original["decisions"]["scheduler_transit"]["reference_url"]
-        self.assertEqual(external.owner_decision_fields(changed_data, original)["scheduler_transit"]["approval_status"],
+        held = copy.deepcopy(original)
+        held["decisions"]["scheduler_transit"]["decision"] = "held_for_replacement"
+        self.assertEqual(external.owner_decision_fields(self.data, held)["scheduler_transit"]["approval_status"],
                          "HELD_FOR_REPLACEMENT")
 
     def test_live_replacement_audit_reuses_approved_evidence_and_drops_held_article(self):
         key = "scheduler_transit"
         row = self.data["proposals"][key]
-        old_url = external.read_yaml(external.OWNER_DECISIONS)["decisions"][key]["reference_url"]
+        old_url = external.read_yaml(external.OWNER_DECISIONS)["history"][0]["reference_url"]
         previous = {url: item for url, item in self.evidence.items() if url != row["proposed_url"]}
         previous[old_url] = {"old": "held article"}
         body = (" ".join(row["verification_terms"]) + " ") * 25
