@@ -1,0 +1,482 @@
+{
+  "source_hashes": {
+    "data/config/modedex.yaml": "8175b509c2ef45684b6bc063b23beea0b78c055779fe2aaadfe7a0cd6a9678b3",
+    "data/config/modedex_learning_links.yaml": "0b8228530c934056b16d749695efa13fe0f365b0e1ad981450fc3c065a63da17",
+    "data/research/external_reference_verification.json": "83556335f9589fc350317bac97f8b6e46dd94644577be8f9caaaad7564075d3f",
+    "data/research/modedex_external_owner_decisions.yaml": "7a771d57b2a067c5a6fd8838abc6bcdd41ee788666548cdb597d94cf30bbbf6c",
+    "data/research/modedex_external_proposals.yaml": "a052abede4af41e688a6fe432fbfd92ed5ab9db69ea8bad52a28bce38365d729",
+    "data/research/workbook_component_review.yaml": "dd66471147bbefbb1af64f8ec6b4327a5f3780a3eb24c79b7d666db4fb1b16e0",
+    "data/research/workbook_lesson_verification.json": "33b1715f36ad2eb9d3bb9a6cc562204b2aefbb05c8d1ba2dd3c43f8745356a98"
+  },
+  "species": {
+    "anomaly_base": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Task overview; educational context, not evidence of a particular deployment.",
+        "source": "Data Science Workbook",
+        "title": "Detecting Outliers",
+        "url": "https://datascienceworkbook.com/data-storytelling/preprocessing/detecting-outliers"
+      },
+      "secondary": null
+    },
+    "anomaly_fraud": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Explainable AI Workbook",
+        "title": "Logistic Regression",
+        "url": "https://explainableaiworkbook.com/01-interpretable-machine-learning/01-regression/03-logistic-regression"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Separately teaches feature attribution for explaining an individual risk score.",
+        "source": "Explainable AI Workbook",
+        "title": "SHAP",
+        "url": "https://explainableaiworkbook.com/02-explainable-machine-learning/01-local-explanations/04-shap"
+      }
+    },
+    "anomaly_machine": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Autoencoder reconstruction component, not a complete maintenance-alert system. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Autoencoders and the Generation Problem",
+        "url": "https://deeplearningworkbook.com/generative-ai/vaes/autoencoder-review"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Explains vibration and temporal signal features independently of the reconstruction model.",
+        "source": "Data Science Workbook",
+        "title": "Feature Engineering for Time Series",
+        "url": "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features"
+      }
+    },
+    "anomaly_network": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Autoencoder model component, not a network-intrusion tutorial. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Autoencoders and the Generation Problem",
+        "url": "https://deeplearningworkbook.com/generative-ai/vaes/autoencoder-review"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Adds the distinct distinction between unusual observations, measurement errors, and genuine incidents.",
+        "source": "Data Science Workbook",
+        "title": "Detecting Outliers",
+        "url": "https://datascienceworkbook.com/data-storytelling/preprocessing/detecting-outliers"
+      }
+    },
+    "anomaly_vitals": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Data Science Workbook",
+        "title": "Detecting Outliers",
+        "url": "https://datascienceworkbook.com/data-storytelling/preprocessing/detecting-outliers"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Adds temporal windows and signal features needed to interpret changing vital measurements.",
+        "source": "Data Science Workbook",
+        "title": "Feature Engineering for Time Series",
+        "url": "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features"
+      }
+    },
+    "detector_base": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Task overview; educational context, not evidence of a particular deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Introduction",
+        "url": "https://deeplearningworkbook.com/computer-vision/object-detection/beyond-classification"
+      },
+      "secondary": null
+    },
+    "detector_defect": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "YOLO and Faster R-CNN",
+        "url": "https://deeplearningworkbook.com/computer-vision/object-detection/yolo-rcnn"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Adds inspection of CNN image evidence rather than another detection tutorial.",
+        "source": "Explainable AI Workbook",
+        "title": "Grad-CAM and Variants",
+        "url": "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/02-grad-cam-and-variants"
+      }
+    },
+    "detector_disease": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "U-Net",
+        "url": "https://deeplearningworkbook.com/computer-vision/segmentation/unet"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Explains regional evidence heatmaps for CNN predictions, distinct from learning how segmentation works.",
+        "source": "Explainable AI Workbook",
+        "title": "Grad-CAM and Variants",
+        "url": "https://explainableaiworkbook.com/02-explainable-machine-learning/04-attribution-based-explanations/02-grad-cam-and-variants"
+      }
+    },
+    "detector_pedestrian": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "YOLO and Faster R-CNN",
+        "url": "https://deeplearningworkbook.com/computer-vision/object-detection/yolo-rcnn"
+      },
+      "secondary": null
+    },
+    "extractor_archive": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Vision-language input foundation, not handwriting recognition or transcription accuracy. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Beyond Language — Multimodal Models",
+        "url": "https://deeplearningworkbook.com/nlp/multimodal/multimodal-intro"
+      },
+      "secondary": null
+    },
+    "extractor_base": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Task overview; educational context, not evidence of a particular deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Recurrent Neural Network (RNN)",
+        "url": "https://deeplearningworkbook.com/nlp/rnns/rnn-architecture"
+      },
+      "secondary": null
+    },
+    "extractor_government": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Transformer text-interpretation foundation, not spatial document layout or OCR. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Transformers in Practice",
+        "url": "https://deeplearningworkbook.com/nlp/attention-transformer/transformer-types-inference"
+      },
+      "secondary": null
+    },
+    "extractor_medical": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Encoder text-understanding component for NER, not clinical validation. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Transformers in Practice",
+        "url": "https://deeplearningworkbook.com/nlp/attention-transformer/transformer-types-inference"
+      },
+      "secondary": null
+    },
+    "extractor_research": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Topic-discovery component, not every entity or relation extraction stage. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "NLP Applications:Topic Modeling",
+        "url": "https://deeplearningworkbook.com/nlp/nlp-implementation/topic-modeling"
+      },
+      "secondary": null
+    },
+    "forecast_base": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: input representation. This is not a description of the complete system or a specific deployment.",
+        "source": "Data Science Workbook",
+        "title": "Time Series",
+        "url": "https://datascienceworkbook.com/data-storytelling/information-representation/historical-time-series"
+      },
+      "secondary": null
+    },
+    "forecast_crowd": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: input representation. This is not a description of the complete system or a specific deployment.",
+        "source": "Data Science Workbook",
+        "title": "Feature Engineering for Time Series",
+        "url": "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features"
+      },
+      "secondary": null
+    },
+    "forecast_patient": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: input representation. This is not a description of the complete system or a specific deployment.",
+        "source": "Data Science Workbook",
+        "title": "Feature Engineering for Time Series",
+        "url": "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features"
+      },
+      "secondary": null
+    },
+    "forecast_stock": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: input representation. This is not a description of the complete system or a specific deployment.",
+        "source": "Data Science Workbook",
+        "title": "Feature Engineering for Time Series",
+        "url": "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features"
+      },
+      "secondary": null
+    },
+    "forecast_transit": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: input representation. This is not a description of the complete system or a specific deployment.",
+        "source": "Data Science Workbook",
+        "title": "Feature Engineering for Time Series",
+        "url": "https://datascienceworkbook.com/data-storytelling/feature-engineering/time-series-features"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Explains memory and gates in the explicitly listed LSTM model, beyond creating temporal input features.",
+        "source": "Deep Learning Workbook",
+        "title": "Long Short-Term Memory (LSTM)",
+        "url": "https://deeplearningworkbook.com/nlp/rnns/lstm"
+      }
+    },
+    "generator_base": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Task overview; educational context, not evidence of a particular deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "From Predicting to Creating",
+        "url": "https://deeplearningworkbook.com/generative-ai/intro-generative-ml/discriminative-vs-generative"
+      },
+      "secondary": null
+    },
+    "generator_conversational": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "What Is a Large Language Model?",
+        "url": "https://deeplearningworkbook.com/nlp/llms-beyond/what-is-an-llm"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Explains grounded answers using retrieved documents rather than another general chatbot introduction.",
+        "source": "Deep Learning Workbook",
+        "title": "Retrieval-Augmented Generation (RAG)",
+        "url": "https://deeplearningworkbook.com/nlp/llms-beyond/rag"
+      }
+    },
+    "generator_creative": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "The Diffusion Intuition",
+        "url": "https://deeplearningworkbook.com/generative-ai/diffusion-models/diffusion-intuition"
+      },
+      "secondary": null
+    },
+    "generator_document": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "What Is a Large Language Model?",
+        "url": "https://deeplearningworkbook.com/nlp/llms-beyond/what-is-an-llm"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Adds source-grounding for factual document drafts, independently of language generation.",
+        "source": "Deep Learning Workbook",
+        "title": "Retrieval-Augmented Generation (RAG)",
+        "url": "https://deeplearningworkbook.com/nlp/llms-beyond/rag"
+      }
+    },
+    "generator_learning": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "What Is a Large Language Model?",
+        "url": "https://deeplearningworkbook.com/nlp/llms-beyond/what-is-an-llm"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Adds the independent canonical grounding technique of retrieving source material before generating educational text.",
+        "source": "Deep Learning Workbook",
+        "title": "Retrieval-Augmented Generation (RAG)",
+        "url": "https://deeplearningworkbook.com/nlp/llms-beyond/rag"
+      }
+    },
+    "recommender_base": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Task overview; educational context, not evidence of a particular deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Why Recommendation Systems?",
+        "url": "https://deeplearningworkbook.com/recsys/intro-recommenders/why-recommenders"
+      },
+      "secondary": null
+    },
+    "recommender_content": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Types of Recommendation Systems",
+        "url": "https://deeplearningworkbook.com/recsys/intro-recommenders/types-of-recommenders"
+      },
+      "secondary": null
+    },
+    "recommender_learning": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Content-based learning-resource recommendation component, not knowledge tracing. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Types of Recommendation Systems",
+        "url": "https://deeplearningworkbook.com/recsys/intro-recommenders/types-of-recommenders"
+      },
+      "secondary": null
+    },
+    "recommender_menu": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Types of Recommendation Systems",
+        "url": "https://deeplearningworkbook.com/recsys/intro-recommenders/types-of-recommenders"
+      },
+      "secondary": null
+    },
+    "recommender_product": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Types of Recommendation Systems",
+        "url": "https://deeplearningworkbook.com/recsys/intro-recommenders/types-of-recommenders"
+      },
+      "secondary": null
+    },
+    "retriever_base": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "TF-IDF and N-grams",
+        "url": "https://deeplearningworkbook.com/nlp/traditional-toolkit/tfidf-ngrams"
+      },
+      "secondary": null
+    },
+    "retriever_knowledge": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "Retrieval-Augmented Generation (RAG)",
+        "url": "https://deeplearningworkbook.com/nlp/llms-beyond/rag"
+      },
+      "secondary": null
+    },
+    "retriever_product": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "NLP Applications:Text Similarity",
+        "url": "https://deeplearningworkbook.com/nlp/nlp-implementation/text-similarity"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Adds approximate-nearest-neighbor indexing, another explicitly canonical technique, beyond the similarity concept.",
+        "source": "Data Science Workbook",
+        "title": "Vector Databases and RAG",
+        "url": "https://datascienceworkbook.com/engineering/data-storage/vector-databases-and-rag"
+      }
+    },
+    "retriever_records": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "NLP Applications:Text Similarity",
+        "url": "https://deeplearningworkbook.com/nlp/nlp-implementation/text-similarity"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Adds lineage and source-quality considerations important when returning records.",
+        "source": "Explainable AI Workbook",
+        "title": "Provenance",
+        "url": "https://explainableaiworkbook.com/06-transparent-ai/01-transparency/02-provenance"
+      }
+    },
+    "retriever_research": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: representative technique. This is not a description of the complete system or a specific deployment.",
+        "source": "Deep Learning Workbook",
+        "title": "NLP Applications:Text Similarity",
+        "url": "https://deeplearningworkbook.com/nlp/nlp-implementation/text-similarity"
+      },
+      "secondary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Adds storage and nearest-neighbor indexing for searching larger document collections.",
+        "source": "Data Science Workbook",
+        "title": "Vector Databases and RAG",
+        "url": "https://datascienceworkbook.com/engineering/data-storage/vector-databases-and-rag"
+      }
+    },
+    "scheduler_base": {
+      "primary": {
+        "kind": "workbook",
+        "scope_note": "Supporting concept: Reinforcement-learning decision component, not constraint programming or complete scheduling. This is not a description of the complete system or a specific deployment.",
+        "source": "Explainable AI Workbook",
+        "title": "Introduction to Reinforcement Learning",
+        "url": "https://explainableaiworkbook.com/05-ai-alignment/02-learning-human-preferences/01-introduction-to-reinforcement-learning"
+      },
+      "secondary": null
+    },
+    "scheduler_delivery": {
+      "primary": {
+        "kind": "external",
+        "scope_note": "Related example: Delivery dispatch context, not a complete live routing service. Not evidence of a deployment at this place.",
+        "source": "IBM Think",
+        "title": "What is dispatch management?",
+        "url": "https://www.ibm.com/think/topics/dispatch-management"
+      },
+      "secondary": null
+    },
+    "scheduler_hospital": {
+      "primary": {
+        "kind": "external",
+        "scope_note": "Related example: Hospital scheduling research example, not a complete hospital system. Not evidence of a deployment at this place.",
+        "source": "MIT News, Massachusetts Institute of Technology",
+        "title": "Robot helps nurses schedule tasks on labor floor",
+        "url": "https://news.mit.edu/2016/robot-helps-nurses-schedule-tasks-on-labor-floor-0713"
+      },
+      "secondary": null
+    },
+    "scheduler_transit": {
+      "primary": {
+        "kind": "external",
+        "scope_note": "Related example: Bus timetable improvement, not complete crew scheduling. Not evidence of a deployment at this place.",
+        "source": "Optibus",
+        "title": "Can Artificial Intelligence Prevent Bus Bunching?",
+        "url": "https://blog.optibus.com/transportation/can-artificial-intelligence-prevent-bus-bunching"
+      },
+      "secondary": null
+    },
+    "scheduler_workforce": {
+      "primary": {
+        "kind": "external",
+        "scope_note": "Related example: Workforce scheduling in a contact-center context, not every staffing system. Not evidence of a deployment at this place.",
+        "source": "IBM Think",
+        "title": "What is contact center workforce optimization?",
+        "url": "https://www.ibm.com/think/topics/contact-center-workforce-optimization"
+      },
+      "secondary": null
+    }
+  },
+  "version": 1
+}

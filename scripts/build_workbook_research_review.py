@@ -36,8 +36,11 @@ def check_url(url):
 
 
 def validate(data, canon, evidence):
-    if data["status"] != "research_only_pending_owner_review":
-        raise ValueError("This artifact is research only, not UI approval")
+    if (data["status"] != "owner_approved_non_signature_learning"
+            or data.get("authorization") != {
+                "issue_url": "https://github.com/maladroitcat/modemon-go/issues/30",
+                "non_signature_ui": True, "signature_supplementary_links": False}):
+        raise ValueError("Learning overlay needs explicit non-Signature-only owner authorization")
     species, lessons = data["species"], data["lessons"]
     if len(species) != 51 or set(species) != set(canon["modemon"]):
         raise ValueError("Research must inventory exactly all 51 canonical IDs")
@@ -130,10 +133,10 @@ def render(root=RESEARCH):
     uncovered = [r for r in rows if r["stage"] < 3 and not r["primary_lesson_id"]]
     counts = Counter(r["confidence"] for r in rows)
     lines = ["# Table A: Preferred Workbook Mappings", "",
-             "Research only. No links are wired into the game; no canonical fields were changed.", "",
+             "All existing matches are approved by the owner. Issue 30 authorizes a separate non-Signature UI learning overlay; canonical fields are unchanged.", "",
              f"51 inventoried; {linked} existing workbook matches preserved unchanged; {len(uncovered)} non-Signatures have no workbook match (see Table B for owner decisions). All 12 Signatures already have sufficient canonical project links. There are {51-linked} blank workbook fields, not six outstanding species. Historical scope/confidence metadata is preserved: {dict(sorted(counts.items()))}; {len(queue)} historical review rows.", "",
              "All existing workbook matches are accepted as-is under the owner's final policy; no reassessment or replacement is proposed. Original scope labels, confidence, limitations, and historical review flags below remain unchanged for provenance. A component lesson is not a claim of complete system coverage or deployment. Blank Signature workbook fields do not require supplementary links.", "",
-             "Outside references and explicit owner decisions are exclusively in [Table B](modedex_external_owner_review.md): three references approved, Routeopus replacement pending. They do not fill nulls in this table or enter the application.", "",
+             "All four outside references are approved in [Table B](modedex_external_owner_review.md). They do not fill workbook nulls in this table; a separate validated UI overlay joins only non-Signature references.", "",
              "The CSV inventory also contains verbatim canonical roles, algorithms, tasks, inputs, outputs, habitats, limitations, explainability and separate Signature project sources.", "",
              "| Species ID / name | Represented job | Proposed lesson | Confidence / scope | Match rationale and boundary | Optional second lesson |", "|---|---|---|---|---|---|"]
     def escape(value):

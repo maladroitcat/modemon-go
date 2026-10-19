@@ -2,6 +2,7 @@ import { ExternalLink } from "lucide-react";
 import type { Species } from "./engine";
 import { signatureProject } from "./signatures";
 import { Creature } from "./Art";
+import LearningLinks from "./LearningLinks";
 
 export default function DexEntry({
   species: s,
@@ -86,6 +87,7 @@ export default function DexEntry({
         <dt>Explainability</dt>
         <dd>{s.explainability.join(", ")}</dd>
       </dl>
+      <LearningLinks modemonId={modemonId} species={s} />
       <p className="muted">
         Educational context, not a claim that this place deploys a particular AI
         system.
