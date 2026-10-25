@@ -1,5 +1,15 @@
 # Task 001 QA handoff
 
+**Historical native-foundation record, not the current browser feature list.**
+The original results and limitations below are retained as milestone evidence.
+Subsequent browser gameplay, 51 approved artworks, 12 Signature encounters,
+three quiz modes, camera preference and learning links are merged through PR #32.
+Use [current web QA](web/QA.md), [clean-checkout setup](../README.md#how-to-run-and-reproduce)
+and [native setup](README.md) for today's workflow. Native gameplay placeholders
+and physical-device acceptance limits still apply; old test/advisory counts are
+not current release metrics. The former proposed data-bridge task is complete
+for web, not a remaining prerequisite.
+
 Scope: [#10](https://github.com/maladroitcat/modemon-go/issues/10), governed by
 [#9](https://github.com/maladroitcat/modemon-go/issues/9). Branch
 `dev/mobile-foundation`, based on updated `main` at
