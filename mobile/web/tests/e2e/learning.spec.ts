@@ -111,7 +111,7 @@ if (process.env.EXPECTED_APPLICATION_SHA) test("public deployment serves the exp
   expect(response.status()).toBe(200);
   const provenance = await response.json();
   expect(provenance.application_commit).toBe(process.env.EXPECTED_APPLICATION_SHA);
-  expect(provenance.application_branch).toBe("dev/modedex-learning-links");
+  expect(provenance.application_branch).toBe(process.env.EXPECTED_APPLICATION_BRANCH ?? "feat/engagement-progression");
   expect(provenance.optimized_creature_count).toBe(51);
   expect(provenance.logo_present).toBe(true);
   const overlay = readFileSync(new URL("../../src/data/learning.json", import.meta.url));
