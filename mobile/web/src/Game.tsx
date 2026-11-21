@@ -91,7 +91,7 @@ function Map({
   world: Spawn[];
   collected: ReadonlySet<string>;
   position: Fix | null;
-  onSelect: (s: Spawn) => void;
+  onSelect: (s: Spawn, trigger?: HTMLElement) => void;
   city: string;
 }) {
   const container = useRef<HTMLDivElement>(null),
@@ -147,7 +147,7 @@ function Map({
         alt: markerLabel(data, spawn, isCollected),
         title: markerLabel(data, spawn, isCollected),
       }).addTo(group);
-      marker.on("click", () => onSelect(spawn));
+      marker.on("click", () => onSelect(spawn, marker.getElement()));
       const el = marker.getElement();
       el?.setAttribute("role", "button");
       el?.setAttribute("aria-label", markerLabel(data, spawn, isCollected));
@@ -317,9 +317,10 @@ export default function App() {
     return () => clearTimeout(timer);
   }, [celebrations, selected]);
   const modal = useRef<HTMLElement>(null);
+  const encounterTrigger = useRef<HTMLElement | null>(null);
   useEffect(() => {
     if (!selected || !modal.current) return;
-    const previous = document.activeElement as HTMLElement | null;
+    const previous = encounterTrigger.current;
     const panel = modal.current;
     panel.querySelector<HTMLButtonElement>(".close")?.focus();
     const keydown = (event: KeyboardEvent) => {
@@ -470,7 +471,10 @@ export default function App() {
         ? distance(position, a.poi) - distance(position, b.poi)
         : a.id.localeCompare(b.id),
     );
-  const open = useCallback((s: Spawn) => {
+  const open = useCallback((s: Spawn, trigger?: HTMLElement) => {
+    // Safari does not necessarily focus a button on pointer activation. Retain
+    // the actual trigger so Escape restores focus consistently across browsers.
+    encounterTrigger.current = trigger ?? (document.activeElement as HTMLElement | null);
     setPublicApproach(false);
     setSelected(s);
     setPhase("nearby");
@@ -721,7 +725,7 @@ export default function App() {
                   className={`encounter-row secondary${history.collected.has(s.speciesId) ? " collected" : ""}`}
                   data-poi-id={s.poi.id}
                   key={s.id}
-                  onClick={() => open(s)}
+                  onClick={(event) => open(s, event.currentTarget)}
                 >
                   <span className={`rarity-dot ${s.rarity}${history.collected.has(s.speciesId) ? " collected" : ""}`} aria-hidden="true" />
                   <span>

@@ -138,6 +138,20 @@ test("coverage audit faithfully warns for blocked goals without reducing require
   assert.equal(find(emptyProgress(), "model-master").total, 51);
 });
 
+test("canonical catalog extensions automatically enter overall, family and rarity requirements", () => {
+  const extended: Runtime = { ...data, modedex: { ...data.modedex,
+    families: { ...data.modedex.families, future: { name: "Future Family" } },
+    modemon: { ...data.modedex.modemon,
+      future_species: { ...data.modedex.modemon.detector_base, family_id: "future" } } } };
+  const goals = calculateAchievements(emptyProgress(), extended);
+  assert.equal(goals.find((a) => a.id === "model-master")!.total, 52);
+  assert.equal(goals.find((a) => a.id === "master-scholar")!.total, 52);
+  assert.equal(goals.find((a) => a.id === "common-collector")!.total, 9);
+  assert.equal(goals.find((a) => a.id === "connoisseur")!.total, 9);
+  assert.equal(goals.find((a) => a.id === "family-future")!.name, "Future Family Family Expert");
+  assert.equal(goals.find((a) => a.id === "family-future")!.total, 1);
+});
+
 test("every one of 51 stable species IDs has 2–3 distinct concise illustrative examples", () => {
   assert.deepEqual(Object.keys(everydayExamples).sort(), entries.map(([id]) => id).sort());
   for (const [id, items] of Object.entries(everydayExamples)) {

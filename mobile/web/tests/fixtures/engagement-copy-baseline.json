@@ -1,5 +1,5 @@
 {
-  "reason": "Authorized engagement update: new map legend and collected labels; trading-card headings move canonical fields into panels. Original issue23 fixture remains unchanged. Engine, quizzes and safety hashes still use that fixture.",
+  "reason": "Authorized engagement update: new map legend and collected labels; trading-card headings move canonical fields into panels. Original issue23 fixture remains unchanged, including quiz, feedback and Signature-source hashes. Separate frozen-world and safety suites preserve gameplay contracts.",
   "jsx": {
     "Game.tsx": [
       "Street tiles unavailable. Retry your connection; the encounter list remains available.",

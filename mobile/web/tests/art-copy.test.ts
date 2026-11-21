@@ -9,8 +9,9 @@ const baseline = JSON.parse(readFileSync(new URL("./fixtures/issue23-copy-baseli
   jsx: Record<string, string[]>; hashes: Record<string, string>;
 };
 // The engagement brief explicitly replaces the map legend and educational
-// layout. Freeze that new UI separately; keep the original protected gameplay,
-// quiz and safety hashes and the historical fixture intact.
+// layout. Freeze that new UI separately; keep the original quiz, feedback and
+// Signature-source hashes and the historical fixture intact. Separate frozen
+// world and safety suites still protect gameplay and safety contracts.
 const engagement = JSON.parse(readFileSync(new URL("./fixtures/engagement-copy-baseline.json", import.meta.url), "utf8")) as typeof baseline;
 function jsxText(text: string) {
   const file = ts.createSourceFile("component.tsx", text, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
@@ -26,7 +27,7 @@ function jsxText(text: string) {
   return values;
 }
 
-test("approved engagement UI wording and original gameplay, quiz and safety hashes remain frozen", () => {
+test("approved engagement UI wording and original quiz, feedback and Signature hashes remain frozen", () => {
   for (const [file, expected] of Object.entries({ ...baseline.hashes, ...engagement.hashes }))
     assert.equal(createHash("sha256").update(source(file)).digest("hex"), expected, file);
   assert.deepEqual(jsxText(source("DexEntry.tsx")), engagement.jsx["DexEntry.tsx"]);

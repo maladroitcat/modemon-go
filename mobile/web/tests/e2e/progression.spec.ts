@@ -93,6 +93,7 @@ for (const difficulty of ["novice", "intermediate", "expert"] as const) {
     await expect(marker(page, other, true)).not.toHaveAttribute("aria-label", new RegExp(data.modedex.modemon[target.speciesId].name));
     if (difficulty === "novice") {
       await page.screenshot({ path: info.outputPath("collected-and-new-map.png"), fullPage: true });
+      await page.locator(".map-frame").screenshot({ path: info.outputPath("map-marker-comparison.png") });
     }
     await page.reload();
     await expect(row(page)).toHaveCount(0);
@@ -145,7 +146,9 @@ test("legacy history, mastery accumulation, Hoarder transition and one nonblocki
   await expect(page.getByRole("article", { name: "Hoarder", exact: true })).toContainText("Earned · Complete");
   await expect(page.getByRole("article", { name: "Hoarder", exact: true })).toContainText("5 of 5");
   await expect(page.getByRole("article", { name: "Master Scholar", exact: true })).toContainText("1 of 51");
+  await page.setViewportSize({ width: 960, height: 800 });
   await page.screenshot({ path: info.outputPath("trainer-gallery.png"), fullPage: true });
+  await page.setViewportSize({ width: 393, height: 852 });
   await page.reload();
   await expect(notice).toHaveCount(0);
   await page.getByRole("button", { name: "Badges", exact: true }).click();
@@ -166,6 +169,30 @@ test("failed and unfinished captures stay uncollected; real captures do not colo
   await expect(page.locator(".mastery-badges")).toHaveCount(0);
   await page.getByRole("button", { name: "Exit Demo Mode", exact: true }).click();
   await expect(row(page)).toContainText("Previously collected species");
+});
+
+test("one capture combines simultaneous collection and family awards without replaying history", async ({ page }) => {
+  const past = Array.from({ length: 32 }, (_, i) =>
+    new Date(Date.parse(date + "T12:00:00Z") - (i + 1) * 86400000).toISOString().slice(0, 10));
+  const pool = past.flatMap((d) => buildWorld(data, d, "demo"));
+  let p = emptyProgress();
+  for (const [id, s] of Object.entries(data.modedex.modemon)) {
+    if (id === target.speciesId || (s.rarity !== "common" && s.family_id !== "recommender")) continue;
+    const previous = pool.find((encounter) => encounter.speciesId === id);
+    expect(previous, `${id} has a deterministic eligible prior encounter`).toBeTruthy();
+    p = captured(p, previous!);
+  }
+  await setup(page, p);
+  await expect(page.locator(".achievement-notice")).toHaveCount(0);
+  await enter(page);
+  await complete(page, "novice");
+  const notice = page.locator(".achievement-notice");
+  await expect(notice).toHaveCount(1);
+  await expect(notice).toContainText("Common Collector");
+  await expect(notice).toContainText("Recommender Family Expert");
+  await expect(notice).not.toContainText("Connoisseur");
+  await page.reload();
+  await expect(notice).toHaveCount(0);
 });
 
 test("portrait, landscape, both cities and keyboard-accessible badge information", async ({ page }) => {
