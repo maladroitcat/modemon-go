@@ -5480,7 +5480,7 @@
     ],
     "scope": "outdoor_public_association_only",
     "source_hashes": {
-      "mobile/web/config/healthcare_approvals.yaml": "6132cc1d25fc0f5be02d7643f573afb076170ae9533a72fc1a5c8e17d60d70fc"
+      "mobile/web/config/healthcare_approvals.yaml": "c1a5385fc28ff78a41337c9056b677bc560c3e1be5f0f067c4a3c4acb6f9778a"
     },
     "version": "healthcare-public-associations-v1"
   },

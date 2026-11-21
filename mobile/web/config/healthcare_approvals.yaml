@@ -6,11 +6,10 @@ approval_instruction: okay you can include the duke department of health the nc 
   student health center, and all those that don't have a reasoning except for the
   hemp farmacy locations
 scope: outdoor_public_association_only
-association_note: Use an open public sidewalk or campus path near this location. Do
-  not enter healthcare buildings, treatment areas, private grounds or patient-only
-  spaces for the game. Keep entrances and paths clear and respect signs, hours and
-  closures. If no safe public approach is available, skip this encounter. This is
-  an educational association, not evidence of AI deployed here.
+association_note: Use an open public sidewalk or campus path. Do not enter healthcare
+  buildings, treatment areas, private grounds or patient-only spaces. Keep entrances
+  clear and follow signs and closures. Skip this encounter if no safe public approach
+  is available.
 excluded_poi_ids:
 - RAL-01_osm_way_47663698
 - RAL-01_osm_node_8412073792
@@ -36,9 +35,8 @@ locations:
   override_exclusions:
   - unclassified_or_habitat_review
   - public_approach_not_established
-  source_note: The source OSM record marks the location name/existence as uncertain.
-    This owner approval is for an outdoor campus association; the name has not been
-    independently verified.
+  source_note: The source location name/existence is unverified. Skip this encounter
+    if you cannot identify a safe public approach.
 - poi_id: RAL-01_osm_node_14232394214
   name: Gladwell Orthodontics
   override_exclusions:
@@ -70,5 +68,4 @@ locations:
   - human_curation_exclusion
   - human_curation_rejected
   - public_approach_not_established
-  source_note: Owner approval supersedes the prior rejection only for an outdoor public
-    approach. Medical, mental-health and patient-only areas remain excluded.
+  source_note: Medical, mental-health and patient-only areas remain excluded.

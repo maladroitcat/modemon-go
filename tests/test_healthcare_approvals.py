@@ -104,7 +104,7 @@ class HealthcareApprovalTests(unittest.TestCase):
         self.assertEqual(metadata['source_hashes'][CONFIG], hashlib.sha256((ROOT / CONFIG).read_bytes()).hexdigest())
         self.assertEqual(updated, self.payload['pois'])
         duke = next(p for p in updated if p['id'] == 'DUR-02_osm_node_5808304716')
-        self.assertIn('name/existence as uncertain', duke['association_note'])
+        self.assertIn('name/existence is unverified', duke['association_note'])
 
 
 if __name__ == '__main__':

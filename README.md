@@ -116,9 +116,11 @@ exact-SHA verification, test results and physical-device limitations.
 | Readings | **39** non-Signatures: 35 workbook primaries + 4 approved outside readings; **12** Signatures: only canonical project links |
 
 All 51 have art, content and validated quizzes, **not guaranteed spawns today or
-everywhere**. Five Healthcare-only ordinary forms lack accepted public anchors;
+everywhere**. Twelve existing Healthcare locations have owner approval for
+outdoor public associations from 2026-11-21, giving the five Healthcare-only
+species eligible anchors. See [Healthcare approvals](mobile/web/HEALTHCARE_ENCOUNTERS.md).
 WakeMed/RAL-05 intentionally has no encounters. [Coverage](mobile/web/coverage.json)
-is a fixed-date 32-day audit, not a live promise. Discovered entries and encounter
+records fixed-date 32-day and extended Healthcare audits, not a live promise. Discovered entries and encounter
 inspection unlock details; the Modédex does not reveal unencountered identities.
 
 ## Architecture and Resources

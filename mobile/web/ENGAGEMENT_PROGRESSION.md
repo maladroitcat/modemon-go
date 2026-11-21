@@ -51,12 +51,13 @@ there is no `special` rarity. New species automatically enter applicable totals.
 No achievement or mastery state is separately persisted. Corrupt/blocked storage
 still disables capture without deleting saved data.
 
-`engine.ts`, `quizzes.ts`, `rules.ts`, canonical YAML/schema, generated runtime,
-learning overlay and source citations are unchanged. The eight regions, all
-927 POIs, existing habitat eligibility, 75 m rule, accuracy checks, density,
-daily rotation, rarity probabilities, optional camera and quiz thresholds stay
-under their original contracts. Frozen ordinary worlds, quiz banks and legacy
-progress fixtures continue to test those contracts.
+Canonical YAML/schema, `quizzes.ts`, `rules.ts`, learning links and source
+citations are unchanged. All eight regions, 927 source POIs, coordinates and
+habitat assignments remain intact. The subsequent owner-approved Healthcare
+overlay enables twelve existing locations from 2026-11-21; the engine applies
+that effective date using existing rarity and density rules. The 75 m gate, GPS
+accuracy checks, camera and quiz thresholds are preserved. Historical frozen
+worlds, quiz banks and legacy progress fixtures continue to pass.
 
 The old issue-23 UI snapshot intentionally predates the requested new legend
 and card layout. `engagement-copy-baseline.json` freezes the new UI wording
@@ -66,10 +67,20 @@ frozen-world and safety suites protect gameplay contracts. The new card renderin
 test additionally verifies every canonical educational field and Signature
 source for all 51 entries.
 
-## Coverage audit
+## Current coverage
 
-The existing public-anchor policy leaves these five ordinary species without
-eligible locations in either mode. All five are canonical **Rare** species:
+The owner’s subsequent approval of twelve existing Healthcare locations resolves
+the missing-anchor gap described below. All 51 species now have eligible
+locations, with 563 eligible anchors in total. Both Hemp Farmacy records and
+other unapproved clinical sites remain excluded. The updated 32-day audit sees
+49 species; a longer 128-day audit confirms actual encounters for all five
+formerly unavailable species. Daily rotations still limit what appears today.
+See [the exact approvals, effective date and audit](HEALTHCARE_ENCOUNTERS.md).
+
+## Historical coverage audit — before owner approval
+
+Before the 2026-11-21 owner approval, these five ordinary species had no eligible
+locations in either mode. All five are canonical **Rare** species:
 
 | Stable ID | Modémon | Canonical family |
 | --- | --- | --- |
@@ -79,15 +90,15 @@ eligible locations in either mode. All five are canonical **Rare** species:
 | `forecast_patient` | Wardwisp | Demand Forecaster |
 | `scheduler_hospital` | Wardray | Scheduler |
 
-These are missing eligible anchors, rather than simply absent from a short
-rotation sample. `speciesWithoutAnchors()` derives that advisory from runtime
+These were missing eligible anchors, rather than simply absent from a short
+rotation sample. The conditions below are retained as the pre-approval audit. `speciesWithoutAnchors()` derives that advisory from runtime
 habitats, eligible public POIs and approved Signature placements. It is never
 used by the encounter generator and does not reduce completion requirements.
-The affected cards display a non-alarming coverage explanation. Already-saved
+The affected cards displayed a non-alarming coverage explanation. Already-saved
 qualifying successes still count, including any historical records for these
 species; the advisory counts only requirements still missing for that player.
 
-| Currently unattainable through normal play | Canonical requirement | Coverage ceiling |
+| Unattainable before owner approval | Canonical requirement | Coverage ceiling |
 | --- | ---: | ---: |
 | Model Master | 51 species | 46 |
 | Master Scholar | 51 Expert-mastered species | 46 |
@@ -104,7 +115,8 @@ Expert (8), and Retriever Family Expert (6) have no such missing-anchor
 requirement. This is not a promise about any particular day's rotation.
 Commutoracle (`forecast_transit`) was unobserved in the existing 32-day report
 but **does** have eligible anchors and is not counted as inaccessible.
-No placements or spawn rules were changed to make goals attainable.
+The later, explicitly authorized access additions resolve these historical
+limits without changing canonical achievement requirements.
 
 ## Validation and review artifacts
 
@@ -125,15 +137,19 @@ and focus restoration, source links and reachable Capture controls.
 | `npm ci` | Passed with pinned lockfile; no dependency changes |
 | `npm run check` | Passed: native TypeScript, lint and 18 unit tests |
 | `npm run check:playable` | Passed: browser TypeScript and lint |
-| `npm run test:playable` | Passed: 64 tests |
+| `npm run test:playable` | Passed: 67 tests |
 | `npm run validate:quizzes` | Passed: 153 banks, 765 questions |
 | `npm run validate:learning` | Passed: 35 workbook + 4 approved outside readings; 12 Signature exclusions |
 | `npm run test:e2e` | Passed: 5 Expo browser tests |
-| `npm run test:playable:e2e` | Passed: 160 Chromium/WebKit tests in 5 minutes, no retries |
-| `npm run build:playable` | Passed: 472,162 gzip JS bytes / 550,000 budget; 27,673 CSS bytes / 30,000 budget |
-| `.venv/bin/python -B -m unittest discover -s tests -v` | Passed: 160 tests |
+| `npm run test:playable:e2e` | Passed: 164 Chromium/WebKit tests in 5.2 minutes, no retries |
+| `npm run build:playable` | Passed: 474,677 gzip JS bytes / 550,000 budget; 27,673 CSS bytes / 30,000 budget |
+| `.venv/bin/python -B -m unittest discover -s tests -v` | Passed: 165 tests |
 | `npx expo export --platform all --output-dir dist` | Passed: web, iOS and Android bundles |
 | `npx expo install --check` | Online check reports existing pinned-version drift; see below |
+
+After shortening the Healthcare encounter instructions for mobile readability,
+the four focused Chromium/WebKit cases, all 67 browser unit tests, all 165 Python
+tests and the production build were rechecked successfully.
 
 The sandbox initially blocked npm registry access and local server binding.
 Rerunning those operations with the normal tool approval succeeded. The initial
@@ -164,6 +180,8 @@ in automated captures; anonymous markers and canonical boundaries remain visible
 | Three independently earned mastery badges | [Mastery](screenshots/engagement/species-mastery.png) |
 | Trainer achievement gallery | [Gallery](screenshots/engagement/trainer-gallery.png) |
 | Newly earned Hoarder notification | [Unlock](screenshots/engagement/achievement-unlock.png) |
+| Current Healthcare collection coverage | [Coverage](screenshots/engagement/healthcare-coverage.png) |
+| Student Health outdoor public approach | [Access](screenshots/engagement/student-health-public-approach.png) |
 
 No public deployment was performed. Mobile Safari on a physical iPhone,
 field GPS, safe public approaches and camera permission behavior still need
