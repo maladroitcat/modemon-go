@@ -590,8 +590,95 @@ footer {
   border: 4px double #102653;
 }
 .rarity-dot.signature {
+  background: #ffe239;
   border: 2px solid #102653;
   border-radius: 2px;
+}
+.pin.collected,
+.pin.signature.collected,
+.rarity-dot.collected,
+.rarity-dot.signature.collected {
+  background: #64748b;
+  color: white;
+}
+.collected-label { color: #334155; font-weight: 650; }
+.encounter-row.collected { background: #f1f5f9; }
+.trading-card {
+  --card-accent: #147d65;
+  border: 3px solid var(--card-accent);
+  border-radius: 18px;
+  padding: 14px;
+  background: white;
+  box-shadow: 0 5px 18px #10265312;
+  margin: 16px 0;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.trading-card.rarity-rare { --card-accent: #2462cd; }
+.trading-card.rarity-signature { --card-accent: #946b00; }
+.card-header { background: #edf8ff; padding: 14px; border-radius: 10px; }
+.card-header h2 { margin: 12px 0; }
+.card-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0; font-weight: 650; font-size: .875rem; }
+.rarity-tag { border: 1px solid var(--card-accent); border-radius: 20px; padding: 4px 10px; background: white; }
+.rarity-tag.signature { background: #fff0a3; }
+.card-panel { margin: 14px 0; border: 1px solid #c6deed; border-radius: 10px; padding: 14px; background: #f7fbff; }
+.card-panel > h3 { display: flex; align-items: center; gap: 8px; margin: -14px -14px 12px; padding: 12px 14px; border-radius: 9px 9px 0 0; background: #dff3ff; color: #123d85; }
+.card-panel > h3 svg { flex-shrink: 0; }
+.card-panel dl { margin: 0; }
+.card-panel dt:first-child { margin-top: 0; }
+.card-panel ul { padding-left: 20px; line-height: 1.6; }
+.card-panel li + li { margin-top: 8px; }
+.card-panel p { margin: 8px 0; }
+.card-limitations { background: #fff8eb; border-color: #dbb66d; }
+.card-limitations > h3 { background: #ffebbc; color: #634509; }
+.everyday-example { border-left: 3px solid #147d65; padding: 0 0 0 12px; margin: 18px 0; }
+.everyday-example h4 { font-size: 1rem; margin: 0; }
+.trading-card small, .trading-card .muted { font-size: .875rem; }
+.trading-card .learning-links { border: 0; padding: 0; }
+.mastery-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.mastery-badge { display: inline-flex; align-items: center; gap: 5px; border: 1px solid #a4b1c0; border-radius: 8px; padding: 7px; background: #edf1f5; color: #45546a; font-size: .875rem; }
+.mastery-badge svg { flex-shrink: 0; }
+.mastery-badge.novice.earned { background: #dff5e7; border-color: #147d65; color: #15523b; }
+.mastery-badge.intermediate.earned { background: #dfefff; border-color: #2462cd; color: #123d85; }
+.mastery-badge.expert.earned { background: #fff0a3; border-color: #946b00; color: #634509; }
+.badge-state { display: block; font-size: .75rem; }
+.dex-row-info { min-width: 0; flex: 1; }
+.dex-row { flex-wrap: wrap; }
+.dex-row > small { font-size: .875rem; }
+.compact { gap: 4px; margin: 8px 0 0; }
+.compact .mastery-badge { padding: 4px; font-size: .75rem; gap: 3px; }
+.compact .mastery-badge svg { width: 14px; height: 14px; }
+.compact .badge-state { display: none; }
+.trainer-badges { max-width: 960px; }
+.achievement-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 255px), 1fr)); gap: 14px; }
+.achievement-card { padding: 16px; border: 1px solid #b4c9df; border-radius: 12px; background: white; min-width: 0; }
+.achievement-card.earned { border: 2px solid #946b00; background: #fffbea; }
+.achievement-heading { display: flex; align-items: center; gap: 10px; }
+.achievement-heading h3 { margin: 6px 0; }
+.achievement-icon { display: grid; place-items: center; border-radius: 50%; padding: 10px; background: #e8eff7; color: #45546a; }
+.earned .achievement-icon { background: #ffe239; color: #634509; }
+.achievement-state { display: inline-flex; align-items: center; gap: 5px; font-size: .875rem; font-weight: 650; }
+.achievement-count { font-weight: 650; }
+.achievement-card progress { width: 100%; height: 12px; accent-color: #147d65; }
+.coverage-note { border-left: 3px solid #946b00; padding-left: 10px; font-size: .875rem; color: #634509; }
+.achievement-notice { position: fixed; z-index: 1050; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); margin: auto; max-width: 520px; display: flex; gap: 8px; justify-content: space-between; padding: 14px; border: 2px solid #946b00; border-radius: 12px; background: #fff8cf; box-shadow: 0 4px 20px #10265333; }
+.achievement-notice strong { display: flex; align-items: center; gap: 8px; }
+.achievement-notice p { margin: 6px 0; }
+.achievement-notice button { margin: 0; align-self: flex-start; padding: 8px; }
+.achievement-notice small { font-size: .875rem; }
+@media (max-width: 600px) {
+  nav button { flex-direction: column; gap: 3px; }
+}
+@media (max-width: 360px) {
+  nav button { flex-direction: column; gap: 3px; margin: 4px 2px; padding: 8px 3px; }
+  .trading-card { padding: 8px; }
+  .card-header, .card-panel { padding: 12px; }
+  .card-panel > h3 { margin: -12px -12px 12px; padding: 12px; }
+  .dex-row .dex-thumbnail { flex-basis: 48px; width: 48px; height: 48px; }
+  .dex-row > small { flex-basis: 100%; margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trading-card, .achievement-notice, .mastery-badge { animation: none; transition: none; }
 }
 .site-availability {
   background: #fff8cf;

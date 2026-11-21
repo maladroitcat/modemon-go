@@ -14,6 +14,7 @@ import {
   Settings,
   X,
   LocateFixed,
+  Trophy,
 } from "lucide-react";
 import L from "leaflet";
 import type { FeatureCollection } from "geojson";
@@ -22,6 +23,8 @@ import "./style.css";
 import bundle from "./data/runtime.json";
 import QuizFeedback from "./QuizFeedback";
 import DexEntry from "./DexEntry";
+import { captureHistory, calculateAchievements, newlyUnlocked, type Achievement } from "./achievements";
+import { MasteryBadges, TrainerBadges, AchievementNotice } from "./Badges";
 import { Brand, Creature } from "./Art";
 import {
   approximateDistance,
@@ -80,11 +83,13 @@ function ErrorText({ children }: { children: React.ReactNode }) {
 
 function Map({
   world,
+  collected,
   position,
   onSelect,
   city,
 }: {
   world: Spawn[];
+  collected: ReadonlySet<string>;
   position: Fix | null;
   onSelect: (s: Spawn) => void;
   city: string;
@@ -129,27 +134,28 @@ function Map({
     if (!map.current) return;
     const group = L.layerGroup().addTo(map.current);
     for (const spawn of world) {
-      const color = colors[spawn.rarity as keyof typeof colors];
+      const isCollected = collected.has(spawn.speciesId);
+      const color = isCollected ? "#64748b" : colors[spawn.rarity as keyof typeof colors];
       const icon = L.divIcon({
         className: "encounter-pin",
-        html: `<span class="pin ${spawn.rarity}" style="--pin:${color}" aria-hidden="true">?</span>`,
+        html: `<span class="pin ${spawn.rarity}${isCollected ? " collected" : ""}" style="--pin:${color}" aria-hidden="true">?</span>`,
         iconSize: [36, 42],
         iconAnchor: [18, 42],
       });
       const marker = L.marker([spawn.poi.lat, spawn.poi.lon], {
         icon,
-        alt: markerLabel(data, spawn),
-        title: markerLabel(data, spawn),
+        alt: markerLabel(data, spawn, isCollected),
+        title: markerLabel(data, spawn, isCollected),
       }).addTo(group);
       marker.on("click", () => onSelect(spawn));
       const el = marker.getElement();
       el?.setAttribute("role", "button");
-      el?.setAttribute("aria-label", markerLabel(data, spawn));
+      el?.setAttribute("aria-label", markerLabel(data, spawn, isCollected));
     }
     return () => {
       group.remove();
     };
-  }, [world, onSelect, city]);
+  }, [world, collected, onSelect, city]);
   useEffect(() => {
     if (!map.current || !position) return;
     const dot = L.circleMarker([position.lat, position.lon], {
@@ -300,7 +306,46 @@ export default function App() {
     );
   const [feedback, setFeedback] = useState<number | null>(null),
     [dexId, setDexId] = useState<string | null>(null);
+  const [celebrations, setCelebrations] = useState<Achievement[]>([]);
+  const history = useMemo(() => captureHistory(progress), [progress]);
+  const achievements = useMemo(() => calculateAchievements(progress, data), [progress]);
+  // Only local save transitions celebrate. Loading history or another mode does
+  // not replay old awards. Wait until the encounter closes to avoid its controls.
+  useEffect(() => {
+    if (!celebrations.length || selected) return;
+    const timer = setTimeout(() => setCelebrations([]), 9000);
+    return () => clearTimeout(timer);
+  }, [celebrations, selected]);
   const modal = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!selected || !modal.current) return;
+    const previous = document.activeElement as HTMLElement | null;
+    const panel = modal.current;
+    panel.querySelector<HTMLButtonElement>(".close")?.focus();
+    const keydown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSelected(null);
+        setPhase("nearby");
+        setFeedback(null);
+      }
+      if (event.key !== "Tab") return;
+      const controls = Array.from(panel.querySelectorAll<HTMLElement>(
+        'button:not(:disabled), a[href], input:not(:disabled), select:not(:disabled)',
+      )).filter((el) => el.getClientRects().length > 0);
+      const first = controls[0], last = controls.at(-1);
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault(); last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first?.focus();
+      }
+    };
+    panel.addEventListener("keydown", keydown);
+    return () => {
+      panel.removeEventListener("keydown", keydown);
+      if (previous?.isConnected) previous.focus();
+      else document.querySelector<HTMLButtonElement>('nav button')?.focus();
+    };
+  }, [selected]);
   useEffect(() => {
     modal.current?.scrollTo({ top: 0 });
   }, [phase, selected?.id]);
@@ -435,6 +480,9 @@ export default function App() {
   const save = (p: Progress) => {
     try {
       persist(localStorage, mode, p);
+      const unlocked = newlyUnlocked(achievements, calculateAchievements(p, data));
+      if (unlocked.length) setCelebrations((pending) =>
+        [...pending, ...unlocked.filter((a) => !pending.some((item) => item.id === a.id))]);
       setProgress(p);
       setStorageError("");
       return true;
@@ -447,6 +495,9 @@ export default function App() {
   };
   function switchMode(next: string) {
     setMode(next);
+    setProgress(emptyProgress());
+    setDexId(null);
+    setCelebrations([]);
     setSelected(null);
     setPhase("nearby");
     setDemoFix(null);
@@ -559,6 +610,7 @@ export default function App() {
         {[
           ["map", "Map", Compass],
           ["dex", "Modédex", BookOpen],
+          ["badges", "Badges", Trophy],
           ["settings", "Settings", Settings],
         ].map(([key, label, Icon]) => {
           const C = Icon as typeof Compass;
@@ -634,7 +686,7 @@ export default function App() {
               </label>
             )}
           </div>
-          <Map world={active} position={position} onSelect={open} city={city} />
+          <Map collected={history.collected} world={active} position={position} onSelect={open} city={city} />
           <main className="nearby">
             {mode === "demo" && (
               <p>
@@ -658,20 +710,23 @@ export default function App() {
             <h2>Nearby encounters</h2>
             <p>
               Question marks hide the Modémon until you enter. Common markers
-              are green; Rare markers are blue. New encounters arrive each day (
+              are green; Rare markers are blue; Signature markers are gold.
+              Gray markers mean a previously collected species; question marks still hide its identity.
+              New encounters arrive each day (
               {day}, Eastern time).
             </p>
             <div className="encounter-list">
               {available.map((s) => (
                 <button
-                  className="encounter-row secondary"
+                  className={`encounter-row secondary${history.collected.has(s.speciesId) ? " collected" : ""}`}
                   data-poi-id={s.poi.id}
                   key={s.id}
                   onClick={() => open(s)}
                 >
-                  <span className={`rarity-dot ${s.rarity}`} />
+                  <span className={`rarity-dot ${s.rarity}${history.collected.has(s.speciesId) ? " collected" : ""}`} aria-hidden="true" />
                   <span>
                     Mystery Modémon · {rarityLabel(s.rarity)}
+                    {history.collected.has(s.speciesId) && <small className="collected-label">Previously collected species</small>}
                     <small>{placeLabel(data, s.poi)}</small>
                   </span>
                   <span>
@@ -706,6 +761,9 @@ export default function App() {
                 Back to discoveries
               </button>
               <DexEntry
+                showExamples
+                familyName={data.modedex.families?.[data.modedex.modemon[dexId].family_id]?.name}
+                mastery={history.mastery.get(dexId)}
                 modemonId={dexId}
                 species={data.modedex.modemon[dexId]}
                 habitatTitle={title}
@@ -724,13 +782,11 @@ export default function App() {
                   onClick={() => setDexId(id)}
                 >
                   <Creature modemonId={id} name={data.modedex.modemon[id]?.name ?? id} className="dex-thumbnail" />
-                  {data.modedex.modemon[id]?.name ?? id}
+                  <span className="dex-row-info">{data.modedex.modemon[id]?.name ?? id}
+                  {history.collected.has(id) && <MasteryBadges compact earned={history.mastery.get(id)} />}
+                  </span>
                   <small>
-                    {
-                      Object.values(progress.attempts).filter(
-                        (a) => a.speciesId === id && a.status === "captured",
-                      ).length
-                    }{" "}
+                    {history.counts.get(id) ?? 0}{" "}
                     captured
                   </small>
                 </button>
@@ -744,6 +800,7 @@ export default function App() {
           )}
         </main>
       )}
+      {tab === "badges" && <TrainerBadges achievements={achievements} demo={mode === "demo"} />}
       {tab === "settings" && (
         <main>
           <h2>Settings & privacy</h2>
@@ -890,6 +947,7 @@ export default function App() {
             {phase === "info" && (
               <>
                 <DexEntry
+                  familyName={data.modedex.families?.[data.modedex.modemon[selected.speciesId].family_id]?.name}
                   modemonId={selected.speciesId}
                   species={data.modedex.modemon[selected.speciesId]}
                   habitatTitle={title}
@@ -1030,6 +1088,7 @@ export default function App() {
           </section>
         </div>
       )}
+      {!selected && celebrations.length > 0 && <AchievementNotice achievements={celebrations} onDismiss={() => setCelebrations([])} />}
       <footer>
         Modémon GO · Educational prototype · No encounter is worth an unsafe
         approach.
