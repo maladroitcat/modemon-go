@@ -17,6 +17,16 @@ const reachable = new Set<string>(),
   habitats = new Set<string>(),
   demoSignatures = new Set<string>();
 const dates = Array.from({ length: 32 }, (_, i) => new Date(Date.parse(date + "T12:00:00Z") + i * 86400000).toISOString().slice(0, 10));
+const healthcareOnly = Object.entries(data.modedex.modemon).filter(([, s]) =>
+  s.stage < 3 && s.habitats.length === 1 && s.habitats[0] === "healthcare").map(([id]) => id);
+const healthcareFirst = new Map<string, { species_id: string; name: string; date: string; poi_id: string; poi_name: string }>();
+// Longer audit distinguishes infrequent rotation from missing location coverage.
+const extendedDates = Array.from({ length: 128 }, (_, i) =>
+  new Date(Date.parse(date + "T12:00:00Z") + i * 86400000).toISOString().slice(0, 10));
+for (const day of extendedDates) {
+  for (const s of buildWorld(data, day)) if (healthcareOnly.includes(s.speciesId) && !healthcareFirst.has(s.speciesId))
+    healthcareFirst.set(s.speciesId, { species_id: s.speciesId, name: data.modedex.modemon[s.speciesId].name, date: day, poi_id: s.poi.id, poi_name: s.poi.name });
+}
 for (const day of dates) {
   for (const s of buildWorld(data, day)) {
     reachable.add(s.speciesId);
@@ -71,6 +81,12 @@ const report = {
       region: p.region,
       habitats: [p.primary, p.secondary].filter(Boolean),
     })),
+  healthcare_approvals: data.healthcare_approvals,
+  healthcare_rotation_audit: {
+    dates: `${extendedDates[0]} through ${extendedDates.at(-1)}`,
+    first_observed: [...healthcareFirst.values()],
+    unobserved_species: healthcareOnly.filter((id) => !healthcareFirst.has(id)),
+  },
   daily_world: {
     total: world.length,
     maximum_in_half_mile_circle: maximumInCircle(world.map((s) => s.poi)),
@@ -109,7 +125,7 @@ const report = {
           ),
       )
       .map(([id, s]) => ({ id, name: s.name })),
-    note: "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. All twelve Signatures have real placement eligibility and occur over the Demo rotation. Art coverage is 51/51, not a claim of 51 real-world reachable forms.",
+    note: "Twelve existing Healthcare associations have explicit owner approval for outdoor public approaches, effective 2026-11-21. Both Hemp Farmacy records and all other unapproved sensitive facilities remain excluded. Eligible anchors establish possibility; any day's rotation still follows the existing rarity and density rules. RAL-05 remains empty. All twelve Signatures retain their reviewed placements and calendar.",
   },
 };
 writeFileSync(

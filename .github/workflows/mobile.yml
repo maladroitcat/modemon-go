@@ -50,7 +50,15 @@ jobs:
       - run: npm run test:playable
       - run: node --experimental-strip-types web/scripts/validate-quizzes.ts --write
       - run: git diff --exit-code -- web/quiz-audit.json
-      - run: npx expo install --check
+      # Strict check against the SDK compatibility map bundled with pinned Expo.
+      # The online endpoint can suggest newer patches without a package change.
+      - name: Verify pinned Expo SDK dependency compatibility
+        run: EXPO_OFFLINE=1 npx expo install --check
+      - name: Report newer Expo package recommendations
+        run: |
+          if ! npx expo install --check; then
+            echo "::warning::Expo recommends newer patch versions than the pinned dependencies. The strict pinned-SDK compatibility check passed; review package upgrades separately."
+          fi
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:e2e
       - run: npm run test:playable:e2e

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-11-21",
   "timezone": "America/New_York",
   "data_version": "0f51a954e4340dea",
   "canonical": {
@@ -834,11 +834,11 @@
     "reason": "Issue 23 approves the 51 local creature masters and logo. Old Seeklet concepts are not used. Responsive transparent derivatives load on demand, with PNG and explicit missing-art fallbacks."
   },
   "eligible_anchor_counts": {
-    "DUR-01": 153,
-    "DUR-02": 52,
-    "RAL-01": 277,
+    "DUR-01": 157,
+    "DUR-02": 53,
+    "RAL-01": 283,
     "RAL-02": 17,
-    "RAL-03A": 26,
+    "RAL-03A": 27,
     "RAL-03B": 7,
     "RAL-04": 19
   },
@@ -1023,11 +1023,27 @@
       ]
     },
     {
+      "poi_id": "DUR-01_osm_node_13917907872",
+      "name": "Bull City Veterinary Hospital",
+      "region": "DUR-01",
+      "habitats": [
+        "healthcare"
+      ]
+    },
+    {
       "poi_id": "DUR-01_osm_node_14051458101",
       "name": "M Hansik",
       "region": "DUR-01",
       "habitats": [
         "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_14165026701",
+      "name": "Urban Tails Veterinary Hospital",
+      "region": "DUR-01",
+      "habitats": [
+        "healthcare"
       ]
     },
     {
@@ -1067,6 +1083,15 @@
       "name": "Dolly's Vintage",
       "region": "DUR-01",
       "habitats": [
+        "retail"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_1659112337",
+      "name": "Main Street Pharmacy",
+      "region": "DUR-01",
+      "habitats": [
+        "healthcare",
         "retail"
       ]
     },
@@ -1515,6 +1540,15 @@
       "region": "DUR-01",
       "habitats": [
         "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "DUR-01_osm_node_7674513212",
+      "name": "Walgreens",
+      "region": "DUR-01",
+      "habitats": [
+        "healthcare",
+        "retail"
       ]
     },
     {
@@ -2263,6 +2297,14 @@
       "region": "DUR-02",
       "habitats": [
         "entertainment"
+      ]
+    },
+    {
+      "poi_id": "DUR-02_osm_node_5808304716",
+      "name": "Duke Department of Health",
+      "region": "DUR-02",
+      "habitats": [
+        "healthcare"
       ]
     },
     {
@@ -3099,6 +3141,14 @@
       ]
     },
     {
+      "poi_id": "RAL-01_osm_node_14232394214",
+      "name": "Gladwell Orthodontics",
+      "region": "RAL-01",
+      "habitats": [
+        "healthcare"
+      ]
+    },
+    {
       "poi_id": "RAL-01_osm_node_2072382353",
       "name": "Flying Saucer Draught Emporium",
       "region": "RAL-01",
@@ -3404,6 +3454,14 @@
       ]
     },
     {
+      "poi_id": "RAL-01_osm_node_3248743365",
+      "name": "Downtown Dental",
+      "region": "RAL-01",
+      "habitats": [
+        "healthcare"
+      ]
+    },
+    {
       "poi_id": "RAL-01_osm_node_3248743367",
       "name": "Christian Science Reading Room",
       "region": "RAL-01",
@@ -3441,6 +3499,15 @@
       "region": "RAL-01",
       "habitats": [
         "finance"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_3305289269",
+      "name": "CVS Pharmacy",
+      "region": "RAL-01",
+      "habitats": [
+        "healthcare",
+        "retail"
       ]
     },
     {
@@ -3727,6 +3794,15 @@
       ]
     },
     {
+      "poi_id": "RAL-01_osm_node_4533068539",
+      "name": "Glenwood South Pharmacy & Market",
+      "region": "RAL-01",
+      "habitats": [
+        "healthcare",
+        "retail"
+      ]
+    },
+    {
       "poi_id": "RAL-01_osm_node_4533068540",
       "name": "Wells Fargo",
       "region": "RAL-01",
@@ -3911,6 +3987,15 @@
       "habitats": [
         "retail",
         "food_hospitality"
+      ]
+    },
+    {
+      "poi_id": "RAL-01_osm_node_7967845007",
+      "name": "Person Street Pharmacy",
+      "region": "RAL-01",
+      "habitats": [
+        "healthcare",
+        "retail"
       ]
     },
     {
@@ -4680,6 +4765,14 @@
       ]
     },
     {
+      "poi_id": "RAL-01_osm_way_47776939",
+      "name": "Oak Heart Veterinary Hospital",
+      "region": "RAL-01",
+      "habitats": [
+        "healthcare"
+      ]
+    },
+    {
       "poi_id": "RAL-01_osm_way_47777115",
       "name": "Mellow Mushroom",
       "region": "RAL-01",
@@ -5107,6 +5200,14 @@
       ]
     },
     {
+      "poi_id": "RAL-03A_osm_way_47917752",
+      "name": "Student Health Center",
+      "region": "RAL-03A",
+      "habitats": [
+        "healthcare"
+      ]
+    },
+    {
       "poi_id": "RAL-03A_osm_way_47917962",
       "name": "Fountain Dining Hall",
       "region": "RAL-03A",
@@ -5361,236 +5462,192 @@
       ]
     }
   ],
+  "healthcare_approvals": {
+    "approval_date": "2026-11-21",
+    "approved_poi_ids": [
+      "DUR-01_osm_node_13917907872",
+      "DUR-01_osm_node_14165026701",
+      "DUR-01_osm_node_1659112337",
+      "DUR-01_osm_node_7674513212",
+      "DUR-02_osm_node_5808304716",
+      "RAL-01_osm_node_14232394214",
+      "RAL-01_osm_node_3248743365",
+      "RAL-01_osm_node_3305289269",
+      "RAL-01_osm_node_4533068539",
+      "RAL-01_osm_node_7967845007",
+      "RAL-01_osm_way_47776939",
+      "RAL-03A_osm_way_47917752"
+    ],
+    "scope": "outdoor_public_association_only",
+    "source_hashes": {
+      "mobile/web/config/healthcare_approvals.yaml": "c1a5385fc28ff78a41337c9056b677bc560c3e1be5f0f067c4a3c4acb6f9778a"
+    },
+    "version": "healthcare-public-associations-v1"
+  },
+  "healthcare_rotation_audit": {
+    "dates": "2026-11-21 through 2027-03-28",
+    "first_observed": [
+      {
+        "species_id": "anomaly_vitals",
+        "name": "Beatling",
+        "date": "2026-11-23",
+        "poi_id": "DUR-01_osm_node_7674513212",
+        "poi_name": "Walgreens"
+      },
+      {
+        "species_id": "scheduler_hospital",
+        "name": "Wardray",
+        "date": "2026-12-08",
+        "poi_id": "RAL-03A_osm_way_47917752",
+        "poi_name": "Student Health Center"
+      },
+      {
+        "species_id": "forecast_patient",
+        "name": "Wardwisp",
+        "date": "2026-12-14",
+        "poi_id": "DUR-01_osm_node_14165026701",
+        "poi_name": "Urban Tails Veterinary Hospital"
+      },
+      {
+        "species_id": "detector_disease",
+        "name": "Pathogaze",
+        "date": "2027-01-10",
+        "poi_id": "RAL-01_osm_node_4533068539",
+        "poi_name": "Glenwood South Pharmacy & Market"
+      },
+      {
+        "species_id": "extractor_medical",
+        "name": "Clinink",
+        "date": "2027-02-04",
+        "poi_id": "DUR-01_osm_node_14165026701",
+        "poi_name": "Urban Tails Veterinary Hospital"
+      }
+    ],
+    "unobserved_species": []
+  },
   "daily_world": {
     "total": 56,
     "maximum_in_half_mile_circle": 7,
     "by_region": {
-      "DUR-01": 10,
-      "DUR-02": 12,
-      "RAL-01": 11,
+      "DUR-01": 11,
+      "DUR-02": 11,
+      "RAL-01": 12,
       "RAL-02": 7,
       "RAL-03A": 7,
       "RAL-03B": 2,
-      "RAL-04": 7
+      "RAL-04": 6
     },
     "by_rarity": {
-      "common": 41,
-      "rare": 13,
-      "signature": 2
+      "common": 35,
+      "rare": 21
     },
     "spawns": [
       {
-        "encounter_id": "playable-v1:signature-associations-v1:2026-10-18:RAL-01_osm_way_197842115:extractor_specimen",
-        "species_id": "extractor_specimen",
-        "species_name": "Specimunk",
-        "poi_id": "RAL-01_osm_way_197842115",
-        "poi_name": "North Carolina Museum of Natural Sciences",
-        "region": "RAL-01",
-        "rarity": "signature",
-        "basis": [
-          "education_research"
-        ],
-        "latitude": 35.7819691,
-        "longitude": -78.6390231
-      },
-      {
-        "encounter_id": "playable-v1:signature-associations-v1:2026-10-18:RAL-04_osm_way_177166351:generator_catalog",
-        "species_id": "generator_catalog",
-        "species_name": "Catalogar",
-        "poi_id": "RAL-04_osm_way_177166351",
-        "poi_name": "James B. Hunt Jr. Library",
-        "region": "RAL-04",
-        "rarity": "signature",
-        "basis": [
-          "education_research"
-        ],
-        "latitude": 35.7693246,
-        "longitude": -78.6767274
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_1437667189",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "RAL-03A_osm_node_1437667189",
-        "poi_name": "Wolfpack Outfitters",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "retail",
-          "education_research"
-        ],
-        "latitude": 35.7836276,
-        "longitude": -78.6706981
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743374",
-        "species_id": "retriever_base",
-        "species_name": "Searchound",
-        "poi_id": "RAL-01_osm_node_3248743374",
-        "poi_name": "The ZEN Succulent",
-        "region": "RAL-01",
-        "rarity": "common",
-        "basis": [
-          "retail",
-          "entertainment"
-        ],
-        "latitude": 35.7779671,
-        "longitude": -78.6383899
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743362",
-        "species_id": "forecast_crowd",
-        "species_name": "Gathergeist",
-        "poi_id": "RAL-01_osm_node_3248743362",
-        "poi_name": "ORO Restaurant & Lounge",
-        "region": "RAL-01",
-        "rarity": "rare",
-        "basis": [
-          "food_hospitality",
-          "entertainment"
-        ],
-        "latitude": 35.7767563,
-        "longitude": -78.6385031
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743375",
-        "species_id": "detector_defect",
-        "species_name": "Inspectra",
-        "poi_id": "RAL-01_osm_node_3248743375",
-        "poi_name": "The PIzza Times",
-        "region": "RAL-01",
-        "rarity": "rare",
-        "basis": [
-          "food_hospitality",
-          "entertainment"
-        ],
-        "latitude": 35.7779011,
-        "longitude": -78.6383926
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3248743361",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_way_625303125",
         "species_id": "generator_base",
         "species_name": "Purrrompt",
-        "poi_id": "RAL-01_osm_node_3248743361",
-        "poi_name": "PNC Bank",
-        "region": "RAL-01",
+        "poi_id": "DUR-02_osm_way_625303125",
+        "poi_name": "William D Murray Building",
+        "region": "DUR-02",
         "rarity": "common",
         "basis": [
-          "finance",
           "entertainment"
         ],
-        "latitude": 35.7766537,
-        "longitude": -78.639084
+        "latitude": 35.99631325,
+        "longitude": -78.94292859689757
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_2072382353",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "RAL-01_osm_node_2072382353",
-        "poi_name": "Flying Saucer Draught Emporium",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_3157442920",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "RAL-01_osm_node_3157442920",
+        "poi_name": "Element Gastropub",
         "region": "RAL-01",
         "rarity": "common",
         "basis": [
           "food_hospitality"
         ],
-        "latitude": 35.7799487,
-        "longitude": -78.6447955
+        "latitude": 35.7743758,
+        "longitude": -78.638974
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_3796331874",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-01_osm_node_3796331874",
-        "poi_name": "Death & Taxes",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_way_137952246",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "DUR-01_osm_way_137952246",
+        "poi_name": "Black Wall Street Gardens",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government",
+          "food_hospitality"
+        ],
+        "latitude": 35.995395,
+        "longitude": -78.9006706029032
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_367911067",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-01_osm_node_367911067",
+        "poi_name": "Leggett Theater",
         "region": "RAL-01",
         "rarity": "common",
         "basis": [
-          "food_hospitality",
-          "entertainment"
+          "entertainment",
+          "education_research"
         ],
-        "latitude": 35.7782232,
-        "longitude": -78.6404347
+        "latitude": 35.7891,
+        "longitude": -78.6374
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2824997593",
-        "species_id": "detector_base",
-        "species_name": "Seeklet",
-        "poi_id": "DUR-01_osm_node_2824997593",
-        "poi_name": "Bullseye Bicycle",
-        "region": "DUR-01",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_7638258822",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-01_osm_node_7638258822",
+        "poi_name": "George Washington",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.779962,
+        "longitude": -78.6391284
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_2921397015",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-01_osm_node_2921397015",
+        "poi_name": "Kelly Odom",
+        "region": "RAL-01",
         "rarity": "common",
         "basis": [
           "retail",
-          "transportation",
           "food_hospitality"
         ],
-        "latitude": 35.997173,
-        "longitude": -78.9037512
+        "latitude": 35.78193,
+        "longitude": -78.6472722
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_515431845",
-        "species_id": "detector_base",
-        "species_name": "Seeklet",
-        "poi_id": "DUR-01_osm_way_515431845",
-        "poi_name": "11-foot-8 Bridge",
-        "region": "DUR-01",
-        "rarity": "common",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_7022986934",
+        "species_id": "forecast_transit",
+        "species_name": "Commutoracle",
+        "poi_id": "RAL-01_osm_node_7022986934",
+        "poi_name": "Raleigh",
+        "region": "RAL-01",
+        "rarity": "rare",
         "basis": [
-          "entertainment",
-          "retail"
+          "transportation"
         ],
-        "latitude": 35.9990755,
-        "longitude": -78.91013157889192
+        "latitude": 35.7772936,
+        "longitude": -78.647651
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2881677872",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-01_osm_node_2881677872",
-        "poi_name": "Mid-South Fencing Club",
-        "region": "DUR-01",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "retail"
-        ],
-        "latitude": 36.001588,
-        "longitude": -78.9085699
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_13408586201",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "DUR-01_osm_node_13408586201",
-        "poi_name": "Press Coffee, Crepes & Cocktails",
-        "region": "DUR-01",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality",
-          "entertainment"
-        ],
-        "latitude": 35.9925892,
-        "longitude": -78.9042868
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_67861979",
-        "species_id": "extractor_base",
-        "species_name": "Scribbit",
-        "poi_id": "DUR-01_osm_way_67861979",
-        "poi_name": "Central Park",
-        "region": "DUR-01",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "civic_government"
-        ],
-        "latitude": 36.0005859,
-        "longitude": -78.9007278
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_2295007375",
-        "species_id": "scheduler_workforce",
-        "species_name": "Shiftshark",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_node_2295007375",
+        "species_id": "recommender_product",
+        "species_name": "Cartivore",
         "poi_id": "DUR-01_osm_node_2295007375",
         "poi_name": "Loaf",
         "region": "DUR-01",
@@ -5603,201 +5660,246 @@
         "longitude": -78.9006724
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_3403814894",
-        "species_id": "scheduler_workforce",
-        "species_name": "Shiftshark",
-        "poi_id": "DUR-01_osm_node_3403814894",
-        "poi_name": "21c Museum Hotel",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_node_317887282",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "DUR-01_osm_node_317887282",
+        "poi_name": "Major the bull",
         "region": "DUR-01",
-        "rarity": "rare",
-        "basis": [
-          "food_hospitality"
-        ],
-        "latitude": 35.9959825,
-        "longitude": -78.901846
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_10049645128",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
-        "poi_id": "DUR-02_osm_node_10049645128",
-        "poi_name": "Panera Bread",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality"
-        ],
-        "latitude": 36.0006478,
-        "longitude": -78.9395462
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_way_1092763893",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
-        "poi_id": "RAL-02_osm_way_1092763893",
-        "poi_name": "Dog Park at Dix Park",
-        "region": "RAL-02",
         "rarity": "common",
         "basis": [
           "entertainment",
-          "civic_government"
+          "food_hospitality"
         ],
-        "latitude": 35.7708442,
-        "longitude": -78.6624865
+        "latitude": 35.9964834,
+        "longitude": -78.9017079
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_8786724894",
-        "species_id": "generator_creative",
-        "species_name": "Articlaw",
-        "poi_id": "RAL-02_osm_node_8786724894",
-        "poi_name": "Big Field",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_3305510899",
+        "species_id": "scheduler_delivery",
+        "species_name": "Parcelprawn",
+        "poi_id": "RAL-01_osm_node_3305510899",
+        "poi_name": "William-Cozart, Inc.",
+        "region": "RAL-01",
+        "rarity": "rare",
+        "basis": [
+          "retail"
+        ],
+        "latitude": 35.7762601,
+        "longitude": -78.6453699
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_node_14165026701",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-01_osm_node_14165026701",
+        "poi_name": "Urban Tails Veterinary Hospital",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "healthcare",
+          "food_hospitality"
+        ],
+        "latitude": 35.9914114,
+        "longitude": -78.8895724
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-02_osm_node_13376189193",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "RAL-02_osm_node_13376189193",
+        "poi_name": "Dux",
         "region": "RAL-02",
         "rarity": "rare",
         "basis": [
-          "entertainment",
-          "civic_government"
+          "entertainment"
         ],
-        "latitude": 35.7690985,
-        "longitude": -78.6623781
+        "latitude": 35.7694174,
+        "longitude": -78.6613106
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_426252345",
-        "species_id": "extractor_base",
-        "species_name": "Scribbit",
-        "poi_id": "RAL-04_osm_way_426252345",
-        "poi_name": "The Oval",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-04_osm_node_2104454759",
+        "species_id": "retriever_research",
+        "species_name": "Labraquery",
+        "poi_id": "RAL-04_osm_node_2104454759",
+        "poi_name": "Disc Golf Course",
         "region": "RAL-04",
-        "rarity": "common",
+        "rarity": "rare",
         "basis": [
-          "entertainment",
-          "civic_government",
-          "education_research"
+          "education_research",
+          "civic_government"
         ],
-        "latitude": 35.7705113,
-        "longitude": -78.6749236
+        "latitude": 35.7666882,
+        "longitude": -78.6768523
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_821937893",
-        "species_id": "detector_defect",
-        "species_name": "Inspectra",
-        "poi_id": "DUR-01_osm_way_821937893",
-        "poi_name": "Pelican's SnoBalls",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_node_881029843",
+        "species_id": "forecast_stock",
+        "species_name": "Coinjurer",
+        "poi_id": "DUR-01_osm_node_881029843",
+        "poi_name": "Torero's",
         "region": "DUR-01",
         "rarity": "rare",
         "basis": [
           "food_hospitality",
           "retail"
         ],
-        "latitude": 35.9869655,
-        "longitude": -78.89836661942675
+        "latitude": 35.9995516,
+        "longitude": -78.9082914
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_297307412",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-03A_osm_way_297307412",
-        "poi_name": "Wolf Plaza",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "civic_government",
-          "education_research"
-        ],
-        "latitude": 35.7849862,
-        "longitude": -78.67201417096571
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_36884323",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-02_osm_way_36884323",
-        "poi_name": "Card Gymnasium",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.9973603,
-        "longitude": -78.94141976428665
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_2915315335",
-        "species_id": "generator_conversational",
-        "species_name": "Meowlogue",
-        "poi_id": "RAL-03A_osm_node_2915315335",
-        "poi_name": "Floodplains",
-        "region": "RAL-03A",
-        "rarity": "rare",
-        "basis": [
-          "education_research",
-          "civic_government"
-        ],
-        "latitude": 35.7802182,
-        "longitude": -78.6686583
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_36884382",
-        "species_id": "forecast_crowd",
-        "species_name": "Gathergeist",
-        "poi_id": "DUR-02_osm_way_36884382",
-        "poi_name": "Sheffield Tennis Center",
-        "region": "DUR-02",
-        "rarity": "rare",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.9969604,
-        "longitude": -78.93949360279355
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_2915315336",
-        "species_id": "anomaly_base",
-        "species_name": "Quirkle",
-        "poi_id": "RAL-03A_osm_node_2915315336",
-        "poi_name": "Urban Wildlife",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "education_research",
-          "civic_government"
-        ],
-        "latitude": 35.7806993,
-        "longitude": -78.669533
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_13339410049",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "DUR-02_osm_node_13339410049",
-        "poi_name": "Memorial Gym",
-        "region": "DUR-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 36.007492,
-        "longitude": -78.9169166
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4376977802",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "DUR-02_osm_node_4376977802",
-        "poi_name": "R. David Thomas Executive Conference Center",
-        "region": "DUR-02",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_8409082530",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "RAL-01_osm_node_8409082530",
+        "poi_name": "Barcelona Wine Bar",
+        "region": "RAL-01",
         "rarity": "common",
         "basis": [
           "food_hospitality",
-          "education_research"
+          "retail"
         ],
-        "latitude": 36.0032833,
-        "longitude": -78.9423809
+        "latitude": 35.7772979,
+        "longitude": -78.645754
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_44055992",
-        "species_id": "extractor_base",
-        "species_name": "Scribbit",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_node_5792518484",
+        "species_id": "retriever_product",
+        "species_name": "Bargainbeagle",
+        "poi_id": "DUR-01_osm_node_5792518484",
+        "poi_name": "Rock Paper Scissors Salon",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "retail",
+          "food_hospitality"
+        ],
+        "latitude": 35.9972452,
+        "longitude": -78.8992644
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_way_47732386",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-01_osm_way_47732386",
+        "poi_name": "CAM Raleigh",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "education_research",
+          "retail"
+        ],
+        "latitude": 35.7768825,
+        "longitude": -78.6456551
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_node_685507980",
+        "species_id": "recommender_product",
+        "species_name": "Cartivore",
+        "poi_id": "DUR-01_osm_node_685507980",
+        "poi_name": "Wentworth & Leggett Bookshop",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "retail"
+        ],
+        "latitude": 35.999949,
+        "longitude": -78.9099809
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_9203569343",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "RAL-01_osm_node_9203569343",
+        "poi_name": "Two Roosters",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "retail"
+        ],
+        "latitude": 35.7903249,
+        "longitude": -78.6347895
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_7967845006",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "RAL-01_osm_node_7967845006",
+        "poi_name": "Sugar Euphoria",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "food_hospitality"
+        ],
+        "latitude": 35.7885189,
+        "longitude": -78.634216
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_7967845007",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "RAL-01_osm_node_7967845007",
+        "poi_name": "Person Street Pharmacy",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "healthcare",
+          "retail"
+        ],
+        "latitude": 35.7890562,
+        "longitude": -78.6341945
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-01_osm_node_7967845005",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-01_osm_node_7967845005",
+        "poi_name": "Crawford and Son",
+        "region": "RAL-01",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "retail"
+        ],
+        "latitude": 35.7888137,
+        "longitude": -78.634202
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_way_44055991",
+        "species_id": "extractor_government",
+        "species_name": "Bureaucritter",
+        "poi_id": "DUR-02_osm_way_44055991",
+        "poi_name": "Rubenstein Library",
+        "region": "DUR-02",
+        "rarity": "rare",
+        "basis": [
+          "education_research",
+          "civic_government"
+        ],
+        "latitude": 36.0018044,
+        "longitude": -78.93868538995032
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-02_osm_node_13376217657",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-02_osm_node_13376217657",
+        "poi_name": "Daddy Bird Eye",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7695446,
+        "longitude": -78.6532619
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_way_44055992",
+        "species_id": "retriever_base",
+        "species_name": "Searchound",
         "poi_id": "DUR-02_osm_way_44055992",
         "poi_name": "Bostock Library",
         "region": "DUR-02",
@@ -5810,111 +5912,182 @@
         "longitude": -78.938293
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4376977801",
-        "species_id": "detector_base",
-        "species_name": "Seeklet",
-        "poi_id": "DUR-02_osm_node_4376977801",
-        "poi_name": "JB Duke Hotel",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_node_5651995412",
+        "species_id": "detector_defect",
+        "species_name": "Inspectra",
+        "poi_id": "DUR-02_osm_node_5651995412",
+        "poi_name": "Panda Express",
         "region": "DUR-02",
-        "rarity": "common",
+        "rarity": "rare",
         "basis": [
-          "food_hospitality",
-          "education_research"
+          "food_hospitality"
         ],
-        "latitude": 35.9976328,
-        "longitude": -78.9466296
+        "latitude": 36.0010509,
+        "longitude": -78.9406246
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_way_119349698",
-        "species_id": "detector_base",
-        "species_name": "Seeklet",
-        "poi_id": "DUR-01_osm_way_119349698",
-        "poi_name": "Mezcalito Durham",
-        "region": "DUR-01",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_node_5651995413",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "DUR-02_osm_node_5651995413",
+        "poi_name": "Il Forno",
+        "region": "DUR-02",
         "rarity": "common",
         "basis": [
           "food_hospitality"
         ],
-        "latitude": 35.98910765,
-        "longitude": -78.89554118956246
+        "latitude": 36.0006766,
+        "longitude": -78.9394659
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_44055991",
-        "species_id": "anomaly_base",
-        "species_name": "Quirkle",
-        "poi_id": "DUR-02_osm_way_44055991",
-        "poi_name": "Rubenstein Library",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_way_33052346",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "DUR-01_osm_way_33052346",
+        "poi_name": "Historic Durham Athletic Park",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0028569,
+        "longitude": -78.9025953
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_node_5651995416",
+        "species_id": "detector_defect",
+        "species_name": "Inspectra",
+        "poi_id": "DUR-02_osm_node_5651995416",
+        "poi_name": "The Loop Pizza Grill",
         "region": "DUR-02",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality"
+        ],
+        "latitude": 36.0008676,
+        "longitude": -78.9407474
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_node_5808304716",
+        "species_id": "detector_base",
+        "species_name": "Seeklet",
+        "poi_id": "DUR-02_osm_node_5808304716",
+        "poi_name": "Duke Department of Health",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "healthcare",
+          "education_research"
+        ],
+        "latitude": 36.0069919,
+        "longitude": -78.9335541
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03A_osm_node_12652673293",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-03A_osm_node_12652673293",
+        "poi_name": "Riparian Buffer",
+        "region": "RAL-03A",
         "rarity": "common",
         "basis": [
           "education_research",
           "civic_government"
         ],
-        "latitude": 36.0018044,
-        "longitude": -78.93868538995032
+        "latitude": 35.7860253,
+        "longitude": -78.6802121
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_47948195",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "RAL-03A_osm_way_47948195",
-        "poi_name": "Price Music Center",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "entertainment",
-          "education_research"
-        ],
-        "latitude": 35.78407955,
-        "longitude": -78.67171719877949
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_625075122",
-        "species_id": "generator_creative",
-        "species_name": "Articlaw",
-        "poi_id": "DUR-02_osm_way_625075122",
-        "poi_name": "Duke Softball Stadium",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_way_27466267",
+        "species_id": "forecast_crowd",
+        "species_name": "Gathergeist",
+        "poi_id": "DUR-02_osm_way_27466267",
+        "poi_name": "Brodie Recreation Center",
         "region": "DUR-02",
         "rarity": "rare",
         "basis": [
           "entertainment"
         ],
-        "latitude": 36.0089418,
-        "longitude": -78.91825358810799
+        "latitude": 36.00764395,
+        "longitude": -78.9170027935682
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_way_239913307",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03A_osm_way_1562223081",
+        "species_id": "scheduler_workforce",
+        "species_name": "Shiftshark",
+        "poi_id": "RAL-03A_osm_way_1562223081",
+        "poi_name": "NC State University",
+        "region": "RAL-03A",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality",
+          "retail",
+          "education_research"
+        ],
+        "latitude": 35.78441505,
+        "longitude": -78.6711803811497
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03B_osm_way_47933086",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "RAL-03B_osm_way_47933086",
+        "poi_name": "Pullen Place",
+        "region": "RAL-03B",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "entertainment"
+        ],
+        "latitude": 35.7792305,
+        "longitude": -78.6630535
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03B_osm_way_47933092",
         "species_id": "generator_base",
         "species_name": "Purrrompt",
-        "poi_id": "RAL-03A_osm_way_239913307",
-        "poi_name": "Lee Field",
-        "region": "RAL-03A",
+        "poi_id": "RAL-03B_osm_way_47933092",
+        "poi_name": "Carousel",
+        "region": "RAL-03B",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 35.7799362,
+        "longitude": -78.6637855
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-02_osm_node_8786724894",
+        "species_id": "anomaly_base",
+        "species_name": "Quirkle",
+        "poi_id": "RAL-02_osm_node_8786724894",
+        "poi_name": "Big Field",
+        "region": "RAL-02",
         "rarity": "common",
         "basis": [
           "entertainment",
-          "civic_government",
-          "education_research"
-        ],
-        "latitude": 35.7866641,
-        "longitude": -78.6786312905521
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_382297658",
-        "species_id": "scheduler_base",
-        "species_name": "Plancton",
-        "poi_id": "RAL-04_osm_way_382297658",
-        "poi_name": "Information Booth",
-        "region": "RAL-04",
-        "rarity": "common",
-        "basis": [
-          "education_research",
           "civic_government"
         ],
-        "latitude": 35.7745518,
-        "longitude": -78.6792142
+        "latitude": 35.7690985,
+        "longitude": -78.6623781
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_625121109",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-02_osm_way_1079247651",
+        "species_id": "retriever_base",
+        "species_name": "Searchound",
+        "poi_id": "RAL-02_osm_way_1079247651",
+        "poi_name": "Sunflower Field",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government"
+        ],
+        "latitude": 35.772381,
+        "longitude": -78.6598974
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_way_625121109",
         "species_id": "forecast_base",
         "species_name": "Forespirit",
         "poi_id": "DUR-02_osm_way_625121109",
@@ -5928,38 +6101,143 @@
         "longitude": -78.9146329
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_node_2104454759",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "RAL-04_osm_node_2104454759",
-        "poi_name": "Disc Golf Course",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_way_625075122",
+        "species_id": "generator_base",
+        "species_name": "Purrrompt",
+        "poi_id": "DUR-02_osm_way_625075122",
+        "poi_name": "Duke Softball Stadium",
+        "region": "DUR-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment"
+        ],
+        "latitude": 36.0089418,
+        "longitude": -78.91825358810799
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-02_osm_way_1092763893",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
+        "poi_id": "RAL-02_osm_way_1092763893",
+        "poi_name": "Dog Park at Dix Park",
+        "region": "RAL-02",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "civic_government"
+        ],
+        "latitude": 35.7708442,
+        "longitude": -78.6624865
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03A_osm_way_47948195",
+        "species_id": "generator_conversational",
+        "species_name": "Meowlogue",
+        "poi_id": "RAL-03A_osm_way_47948195",
+        "poi_name": "Price Music Center",
+        "region": "RAL-03A",
+        "rarity": "rare",
+        "basis": [
+          "entertainment",
+          "education_research"
+        ],
+        "latitude": 35.78407955,
+        "longitude": -78.67171719877949
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-04_osm_way_177166351",
+        "species_id": "extractor_base",
+        "species_name": "Scribbit",
+        "poi_id": "RAL-04_osm_way_177166351",
+        "poi_name": "James B. Hunt Jr. Library",
         "region": "RAL-04",
         "rarity": "common",
         "basis": [
           "education_research",
           "civic_government"
         ],
-        "latitude": 35.7666882,
-        "longitude": -78.6768523
+        "latitude": 35.7692962,
+        "longitude": -78.6764433
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_node_4870085351",
-        "species_id": "recommender_content",
-        "species_name": "Reelure",
-        "poi_id": "DUR-02_osm_node_4870085351",
-        "poi_name": "B.N. Duke",
-        "region": "DUR-02",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_node_4202449596",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "DUR-01_osm_node_4202449596",
+        "poi_name": "Moshi Moshi",
+        "region": "DUR-01",
+        "rarity": "common",
+        "basis": [
+          "retail",
+          "food_hospitality"
+        ],
+        "latitude": 35.990232,
+        "longitude": -78.8906036
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03A_osm_way_238494315",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-03A_osm_way_238494315",
+        "poi_name": "Carmichael Recreation Center",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "entertainment",
+          "education_research"
+        ],
+        "latitude": 35.7826838,
+        "longitude": -78.67159211935527
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03A_osm_way_47917962",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-03A_osm_way_47917962",
+        "poi_name": "Fountain Dining Hall",
+        "region": "RAL-03A",
+        "rarity": "common",
+        "basis": [
+          "food_hospitality",
+          "education_research"
+        ],
+        "latitude": 35.78547335,
+        "longitude": -78.67763957414527
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03A_osm_node_6993756773",
+        "species_id": "extractor_archive",
+        "species_name": "Manusqueak",
+        "poi_id": "RAL-03A_osm_node_6993756773",
+        "poi_name": "Starbucks",
+        "region": "RAL-03A",
         "rarity": "rare",
         "basis": [
-          "entertainment"
+          "food_hospitality",
+          "education_research"
         ],
-        "latitude": 36.0084392,
-        "longitude": -78.9146492
+        "latitude": 35.7834778,
+        "longitude": -78.6707183
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_relation_8545666",
-        "species_id": "retriever_base",
-        "species_name": "Searchound",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_way_821937893",
+        "species_id": "scheduler_workforce",
+        "species_name": "Shiftshark",
+        "poi_id": "DUR-01_osm_way_821937893",
+        "poi_name": "Pelican's SnoBalls",
+        "region": "DUR-01",
+        "rarity": "rare",
+        "basis": [
+          "food_hospitality",
+          "retail"
+        ],
+        "latitude": 35.9869655,
+        "longitude": -78.89836661942675
+      },
+      {
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-04_osm_relation_8545666",
+        "species_id": "forecast_base",
+        "species_name": "Forespirit",
         "poi_id": "RAL-04_osm_relation_8545666",
         "poi_name": "College of Engineering EB II / Oval Dr",
         "region": "RAL-04",
@@ -5972,124 +6250,85 @@
         "longitude": -78.6735556
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13376189193",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-02_osm_node_13376189193",
-        "poi_name": "Dux",
-        "region": "RAL-02",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-04_osm_node_2470661698",
+        "species_id": "extractor_base",
+        "species_name": "Scribbit",
+        "poi_id": "RAL-04_osm_node_2470661698",
+        "poi_name": "William and Ida Friday Institute for Educational Innovation",
+        "region": "RAL-04",
         "rarity": "common",
         "basis": [
-          "entertainment"
+          "education_research"
         ],
-        "latitude": 35.7694174,
-        "longitude": -78.6613106
+        "latitude": 35.7586559,
+        "longitude": -78.6880202
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_818998163",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "RAL-01_osm_node_818998163",
-        "poi_name": "Studio 714 West",
-        "region": "RAL-01",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-03A_osm_node_13256603674",
+        "species_id": "scheduler_base",
+        "species_name": "Plancton",
+        "poi_id": "RAL-03A_osm_node_13256603674",
+        "poi_name": "Wolf Village Market",
+        "region": "RAL-03A",
         "rarity": "common",
         "basis": [
           "retail",
-          "food_hospitality"
+          "education_research"
         ],
-        "latitude": 35.7889055,
-        "longitude": -78.6498437
+        "latitude": 35.7861204,
+        "longitude": -78.6851183
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-01_osm_node_7674513211",
-        "species_id": "detector_base",
-        "species_name": "Seeklet",
-        "poi_id": "DUR-01_osm_node_7674513211",
-        "poi_name": "KFC",
-        "region": "DUR-01",
-        "rarity": "common",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-04_osm_way_584475824",
+        "species_id": "recommender_content",
+        "species_name": "Reelure",
+        "poi_id": "RAL-04_osm_way_584475824",
+        "poi_name": "Textiles Courtyard",
+        "region": "RAL-04",
+        "rarity": "rare",
         "basis": [
-          "food_hospitality",
-          "retail"
+          "entertainment",
+          "civic_government",
+          "education_research"
         ],
-        "latitude": 35.9855391,
-        "longitude": -78.8993566
+        "latitude": 35.7700732,
+        "longitude": -78.678948
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13252685393",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-02_osm_node_13252685393",
-        "poi_name": "Attun",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-02_osm_way_583072635",
+        "species_id": "recommender_base",
+        "species_name": "Suggestle",
+        "poi_id": "RAL-02_osm_way_583072635",
+        "poi_name": "Gipson Play Plaza",
         "region": "RAL-02",
         "rarity": "common",
         "basis": [
-          "entertainment"
+          "entertainment",
+          "civic_government"
         ],
-        "latitude": 35.7703625,
-        "longitude": -78.6542298
+        "latitude": 35.7668685,
+        "longitude": -78.6538661
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_1216186410",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "RAL-01_osm_node_1216186410",
-        "poi_name": "San Marcos Pizza and Wings",
-        "region": "RAL-01",
-        "rarity": "common",
-        "basis": [
-          "food_hospitality"
-        ],
-        "latitude": 35.7884113,
-        "longitude": -78.6504037
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:DUR-02_osm_way_185375489",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "DUR-02_osm_way_185375489",
-        "poi_name": "East Campus North Quad",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-02_osm_way_27435263",
+        "species_id": "retriever_base",
+        "species_name": "Searchound",
+        "poi_id": "DUR-02_osm_way_27435263",
+        "poi_name": "Lilly Library",
         "region": "DUR-02",
         "rarity": "common",
         "basis": [
+          "education_research",
+          "civic_government",
           "entertainment"
         ],
-        "latitude": 36.0081765,
-        "longitude": -78.91465905263746
+        "latitude": 36.00764215,
+        "longitude": -78.91534761850784
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_11828706835",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "RAL-01_osm_node_11828706835",
-        "poi_name": "Peace Street Market",
-        "region": "RAL-01",
-        "rarity": "common",
-        "basis": [
-          "retail",
-          "food_hospitality"
-        ],
-        "latitude": 35.7888673,
-        "longitude": -78.6503085
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-01_osm_node_11828706834",
-        "species_id": "generator_conversational",
-        "species_name": "Meowlogue",
-        "poi_id": "RAL-01_osm_node_11828706834",
-        "poi_name": "Fallon's Flowers - Main",
-        "region": "RAL-01",
-        "rarity": "rare",
-        "basis": [
-          "retail"
-        ],
-        "latitude": 35.7889215,
-        "longitude": -78.6508529
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_way_677320792",
-        "species_id": "recommender_learning",
-        "species_name": "Curriquill",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-04_osm_way_677320792",
+        "species_id": "extractor_archive",
+        "species_name": "Manusqueak",
         "poi_id": "RAL-04_osm_way_677320792",
         "poi_name": "The StateView Hotel, Autograph Collection",
         "region": "RAL-04",
@@ -6102,41 +6341,13 @@
         "longitude": -78.678102
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651864",
-        "species_id": "forecast_crowd",
-        "species_name": "Gathergeist",
-        "poi_id": "RAL-02_osm_node_13719651864",
-        "poi_name": "Sunflower Power Poles",
-        "region": "RAL-02",
-        "rarity": "rare",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.765447,
-        "longitude": -78.6545913
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651866",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "RAL-02_osm_node_13719651866",
-        "poi_name": "Sunflower Power Poles",
-        "region": "RAL-02",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.7669173,
-        "longitude": -78.6523624
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-02_osm_node_13719651863",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:RAL-02_osm_node_13719651863",
+        "species_id": "recommender_content",
+        "species_name": "Reelure",
         "poi_id": "RAL-02_osm_node_13719651863",
         "poi_name": "Sunflower Power Poles",
         "region": "RAL-02",
-        "rarity": "common",
+        "rarity": "rare",
         "basis": [
           "entertainment"
         ],
@@ -6144,71 +6355,30 @@
         "longitude": -78.655744
       },
       {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03B_osm_way_47776986",
-        "species_id": "forecast_base",
-        "species_name": "Forespirit",
-        "poi_id": "RAL-03B_osm_way_47776986",
-        "poi_name": "Theater In The Park",
-        "region": "RAL-03B",
-        "rarity": "common",
+        "encounter_id": "playable-v1:0f51a954e4340dea:2026-11-21:DUR-01_osm_way_239265422",
+        "species_id": "scheduler_workforce",
+        "species_name": "Shiftshark",
+        "poi_id": "DUR-01_osm_way_239265422",
+        "poi_name": "BP",
+        "region": "DUR-01",
+        "rarity": "rare",
         "basis": [
-          "entertainment"
+          "transportation",
+          "retail"
         ],
-        "latitude": 35.784287,
-        "longitude": -78.6624423
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-04_osm_node_2470661698",
-        "species_id": "retriever_base",
-        "species_name": "Searchound",
-        "poi_id": "RAL-04_osm_node_2470661698",
-        "poi_name": "William and Ida Friday Institute for Educational Innovation",
-        "region": "RAL-04",
-        "rarity": "common",
-        "basis": [
-          "education_research"
-        ],
-        "latitude": 35.7586559,
-        "longitude": -78.6880202
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03B_osm_relation_8248496",
-        "species_id": "recommender_base",
-        "species_name": "Suggestle",
-        "poi_id": "RAL-03B_osm_relation_8248496",
-        "poi_name": "Pullen Aquatic Center",
-        "region": "RAL-03B",
-        "rarity": "common",
-        "basis": [
-          "entertainment"
-        ],
-        "latitude": 35.7809338,
-        "longitude": -78.66150114165659
-      },
-      {
-        "encounter_id": "playable-v1:0f51a954e4340dea:2026-10-18:RAL-03A_osm_node_13256603674",
-        "species_id": "generator_base",
-        "species_name": "Purrrompt",
-        "poi_id": "RAL-03A_osm_node_13256603674",
-        "poi_name": "Wolf Village Market",
-        "region": "RAL-03A",
-        "rarity": "common",
-        "basis": [
-          "retail",
-          "education_research"
-        ],
-        "latitude": 35.7861204,
-        "longitude": -78.6851183
+        "latitude": 35.98758385,
+        "longitude": -78.90685672607837
       }
     ]
   },
   "simulation": {
-    "dates": "2026-10-18 through 2026-11-18",
+    "dates": "2026-11-21 through 2026-12-22",
     "observed_species": [
       "anomaly_base",
       "anomaly_fraud",
       "anomaly_machine",
       "anomaly_network",
+      "anomaly_vitals",
       "detector_base",
       "detector_defect",
       "detector_pedestrian",
@@ -6220,7 +6390,9 @@
       "extractor_specimen",
       "forecast_base",
       "forecast_crowd",
+      "forecast_patient",
       "forecast_stock",
+      "forecast_transit",
       "generator_base",
       "generator_catalog",
       "generator_classroom_chatbot",
@@ -6245,6 +6417,7 @@
       "retriever_semantic_search",
       "scheduler_base",
       "scheduler_delivery",
+      "scheduler_hospital",
       "scheduler_ride_booking",
       "scheduler_traffic_signal",
       "scheduler_transit",
@@ -6257,58 +6430,22 @@
       "entertainment",
       "finance",
       "food_hospitality",
+      "healthcare",
       "office_business",
       "retail",
       "transportation"
     ],
     "unobserved_non_signature_species": [
       {
-        "id": "anomaly_vitals",
-        "name": "Beatling"
-      },
-      {
         "id": "detector_disease",
         "name": "Pathogaze"
       },
       {
         "id": "extractor_medical",
         "name": "Clinink"
-      },
-      {
-        "id": "forecast_patient",
-        "name": "Wardwisp"
-      },
-      {
-        "id": "forecast_transit",
-        "name": "Commutoracle"
-      },
-      {
-        "id": "scheduler_hospital",
-        "name": "Wardray"
       }
     ],
-    "unreachable_non_signature_species": [
-      {
-        "id": "anomaly_vitals",
-        "name": "Beatling"
-      },
-      {
-        "id": "detector_disease",
-        "name": "Pathogaze"
-      },
-      {
-        "id": "extractor_medical",
-        "name": "Clinink"
-      },
-      {
-        "id": "forecast_patient",
-        "name": "Wardwisp"
-      },
-      {
-        "id": "scheduler_hospital",
-        "name": "Wardray"
-      }
-    ],
-    "note": "Healthcare-only ordinary forms have no eligible public association anchors under the conservative access filter. RAL-05 has no spawns. All twelve Signatures have real placement eligibility and occur over the Demo rotation. Art coverage is 51/51, not a claim of 51 real-world reachable forms."
+    "unreachable_non_signature_species": [],
+    "note": "Twelve existing Healthcare associations have explicit owner approval for outdoor public approaches, effective 2026-11-21. Both Hemp Farmacy records and all other unapproved sensitive facilities remain excluded. Eligible anchors establish possibility; any day's rotation still follows the existing rarity and density rules. RAL-05 remains empty. All twelve Signatures retain their reviewed placements and calendar."
   }
 }

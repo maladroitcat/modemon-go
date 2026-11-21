@@ -17,8 +17,8 @@ export function rarityLabel(rarity: string) {
     "Mystery"
   );
 }
-export function markerLabel(data: Runtime, spawn: Spawn) {
-  return `Mystery Modémon · ${rarityLabel(spawn.rarity)} · ${placeLabel(data, spawn.poi)}`;
+export function markerLabel(data: Runtime, spawn: Spawn, collected = false) {
+  return `Mystery Modémon · ${rarityLabel(spawn.rarity)} · ${placeLabel(data, spawn.poi)}${collected ? " · Previously collected species" : ""}`;
 }
 export function approximateDistance(meters: number) {
   if (!Number.isFinite(meters) || meters < 0) return "distance unavailable";

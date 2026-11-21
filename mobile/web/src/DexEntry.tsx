@@ -1,30 +1,82 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Sparkles, Workflow, ShieldAlert, ScanEye, Leaf, BookOpen } from "lucide-react";
+import type { ReactNode } from "react";
+import { MasteryBadges } from "./Badges";
+import type { Difficulty } from "./quizzes";
+import { rarityLabel } from "./presentation";
+import { everydayExamples } from "./data/everydayExamples";
 import type { Species } from "./engine";
 import { signatureProject } from "./signatures";
 import { Creature } from "./Art";
 import LearningLinks from "./LearningLinks";
 
+function CardPanel({ title, icon, children, className = "" }: {
+  title: string; icon: ReactNode; children: ReactNode; className?: string;
+}) {
+  return <section className={`card-panel ${className}`}>
+    <h3>{icon}{title}</h3>{children}
+  </section>;
+}
+
 export default function DexEntry({
   species: s,
   habitatTitle,
   modemonId,
+  familyName,
+  showExamples = false,
+  mastery,
 }: {
   species: Species;
   habitatTitle: (id: string) => string;
   modemonId?: string;
+  familyName?: string;
+  showExamples?: boolean;
+  mastery?: ReadonlySet<Difficulty>;
 }) {
   const project = signatureProject(s);
   return (
-    <article className="dex-entry">
+    <article className={`dex-entry trading-card rarity-${s.rarity}`}>
+      <div className="card-header">
+      <p className="card-meta"><span className={`rarity-tag ${s.rarity}`}>{rarityLabel(s.rarity)}</span><span>{familyName ?? s.family_id}</span></p>
       <h2>{s.name}</h2>
       {modemonId && <Creature modemonId={modemonId} name={s.name} className="dex-art" />}
-      <p className="eyebrow">
-        {s.role} · {s.rarity}
-      </p>
+      {mastery && <>
+        <MasteryBadges earned={mastery} />
+        <p className="muted">Earn each badge separately by capturing this species at that quiz difficulty. Beginner uses Novice; higher difficulties do not grant lower badges.</p>
+      </>}
       {project?.introduction && (
         <p className="signature-inspiration">{project.introduction}</p>
       )}
       <p>{s.dex_entry}</p>
+      </div>
+      <CardPanel title="Ability / Job" icon={<Sparkles size={20} aria-hidden="true" />}>
+        <p><strong>{s.role}</strong></p>
+        <dl><dt>AI tasks</dt><dd>{s.ai_tasks.join(", ")}</dd>
+          <dt>Habitats</dt><dd>{s.habitats.map(habitatTitle).join(", ")}</dd></dl>
+      </CardPanel>
+      <CardPanel title="How It Works" icon={<Workflow size={20} aria-hidden="true" />}>
+        <dl>
+          <dt>Input</dt><dd>{s.input_data}</dd>
+          <dt>Output</dt><dd>{s.output_data}</dd>
+          <dt>Representative techniques{project ? " (not deployment claims)" : ""}</dt>
+          <dd>{s.models_algorithms.join(", ")}</dd>
+        </dl>
+      </CardPanel>
+      <CardPanel title="Weaknesses / Limitations" className="card-limitations" icon={<ShieldAlert size={20} aria-hidden="true" />}>
+        <ul>{s.biases_limitations.map((text) => <li key={text}>{text}</li>)}</ul>
+      </CardPanel>
+      <CardPanel title="Explainability" icon={<ScanEye size={20} aria-hidden="true" />}>
+        <ul>{s.explainability.map((text) => <li key={text}>{text}</li>)}</ul>
+      </CardPanel>
+      {showExamples && modemonId && everydayExamples[modemonId] && (
+        <CardPanel title="AI in the Wild" icon={<Leaf size={20} aria-hidden="true" />}>
+          <p className="muted">Illustrative applications, not claims about systems deployed at these places. Documented Signature projects are cited separately below.</p>
+          {everydayExamples[modemonId].map((example) => <div className="everyday-example" key={example.title}>
+            <h4>{example.title}</h4><p>{example.description}</p>
+            <small>{example.illustrative ? "Illustrative scenario" : "Documented example"}</small>
+          </div>)}
+        </CardPanel>
+      )}
+      <CardPanel title="Further Learning" icon={<BookOpen size={20} aria-hidden="true" />}>
       {project && (
         <section
           aria-label="Real project inspiration"
@@ -63,31 +115,8 @@ export default function DexEntry({
           </p>
         </section>
       )}
-      <dl>
-        <dt>Habitats</dt>
-        <dd>{s.habitats.map(habitatTitle).join(", ")}</dd>
-        <dt>AI tasks</dt>
-        <dd>{s.ai_tasks.join(", ")}</dd>
-        <dt>
-          Representative techniques{project ? " (not deployment claims)" : ""}
-        </dt>
-        <dd>{s.models_algorithms.join(", ")}</dd>
-        <dt>Input</dt>
-        <dd>{s.input_data}</dd>
-        <dt>Output</dt>
-        <dd>{s.output_data}</dd>
-        <dt>Limitations</dt>
-        <dd>
-          <ul>
-            {s.biases_limitations.map((text) => (
-              <li key={text}>{text}</li>
-            ))}
-          </ul>
-        </dd>
-        <dt>Explainability</dt>
-        <dd>{s.explainability.join(", ")}</dd>
-      </dl>
       <LearningLinks modemonId={modemonId} species={s} />
+      </CardPanel>
       <p className="muted">
         Educational context, not a claim that this place deploys a particular AI
         system.

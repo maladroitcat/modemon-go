@@ -1,0 +1,71 @@
+# Explicit owner approvals; does not alter canonical POI tags or curation.
+version: healthcare-public-associations-v1
+approval_date: '2026-11-21'
+approval_source: Owner instruction in this Codex session
+approval_instruction: okay you can include the duke department of health the nc state
+  student health center, and all those that don't have a reasoning except for the
+  hemp farmacy locations
+scope: outdoor_public_association_only
+association_note: Use an open public sidewalk or campus path. Do not enter healthcare
+  buildings, treatment areas, private grounds or patient-only spaces. Keep entrances
+  clear and follow signs and closures. Skip this encounter if no safe public approach
+  is available.
+excluded_poi_ids:
+- RAL-01_osm_way_47663698
+- RAL-01_osm_node_8412073792
+locations:
+- poi_id: DUR-01_osm_node_13917907872
+  name: Bull City Veterinary Hospital
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: DUR-01_osm_node_14165026701
+  name: Urban Tails Veterinary Hospital
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: DUR-01_osm_node_1659112337
+  name: Main Street Pharmacy
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: DUR-01_osm_node_7674513212
+  name: Walgreens
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: DUR-02_osm_node_5808304716
+  name: Duke Department of Health
+  override_exclusions:
+  - unclassified_or_habitat_review
+  - public_approach_not_established
+  source_note: The source location name/existence is unverified. Skip this encounter
+    if you cannot identify a safe public approach.
+- poi_id: RAL-01_osm_node_14232394214
+  name: Gladwell Orthodontics
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: RAL-01_osm_node_3248743365
+  name: Downtown Dental
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: RAL-01_osm_node_3305289269
+  name: CVS Pharmacy
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: RAL-01_osm_node_4533068539
+  name: Glenwood South Pharmacy & Market
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: RAL-01_osm_node_7967845007
+  name: Person Street Pharmacy
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: RAL-01_osm_way_47776939
+  name: Oak Heart Veterinary Hospital
+  override_exclusions:
+  - public_approach_not_established
+- poi_id: RAL-03A_osm_way_47917752
+  name: Student Health Center
+  override_exclusions:
+  - sensitive_or_age_restricted_facility
+  - human_curation_exclusion
+  - human_curation_rejected
+  - public_approach_not_established
+  source_note: Medical, mental-health and patient-only areas remain excluded.

@@ -8,6 +8,11 @@ const source = (file: string) => readFileSync(new URL(`../src/${file}`, import.m
 const baseline = JSON.parse(readFileSync(new URL("./fixtures/issue23-copy-baseline.json", import.meta.url), "utf8")) as {
   jsx: Record<string, string[]>; hashes: Record<string, string>;
 };
+// The engagement brief explicitly replaces the map legend and educational
+// layout. Freeze that new UI separately; keep the original quiz, feedback and
+// Signature-source hashes and the historical fixture intact. Separate frozen
+// world and safety suites still protect gameplay and safety contracts.
+const engagement = JSON.parse(readFileSync(new URL("./fixtures/engagement-copy-baseline.json", import.meta.url), "utf8")) as typeof baseline;
 function jsxText(text: string) {
   const file = ts.createSourceFile("component.tsx", text, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
   const values: string[] = [];
@@ -22,15 +27,15 @@ function jsxText(text: string) {
   return values;
 }
 
-test("issue 23 preserves approved UI, Modedex and quiz wording outside explicit availability exceptions", () => {
-  for (const [file, expected] of Object.entries(baseline.hashes))
+test("approved engagement UI wording and original quiz, feedback and Signature hashes remain frozen", () => {
+  for (const [file, expected] of Object.entries({ ...baseline.hashes, ...engagement.hashes }))
     assert.equal(createHash("sha256").update(source(file)).digest("hex"), expected, file);
-  assert.deepEqual(jsxText(source("DexEntry.tsx")), baseline.jsx["DexEntry.tsx"]);
+  assert.deepEqual(jsxText(source("DexEntry.tsx")), engagement.jsx["DexEntry.tsx"]);
   const normalize = (values: string[]) => values.filter((value) =>
     !["?", "Artwork unavailable", "Modémon GO", "Official access notice"].includes(value)
     && !value.startsWith("Prototype limitations:")
     && !value.startsWith("Durham Station Signatures use an alternative"));
-  assert.deepEqual(normalize(jsxText(source("Game.tsx"))), normalize(baseline.jsx["Game.tsx"]));
+  assert.deepEqual(normalize(jsxText(source("Game.tsx"))), normalize(engagement.jsx["Game.tsx"]));
   assert.match(source("Game.tsx"), /Browser progress is not\s+synchronized across devices/);
   const moved = jsxText(source("Art.tsx"));
   for (const value of ["?", "Artwork unavailable", "Modémon GO"]) assert.ok(moved.includes(value));

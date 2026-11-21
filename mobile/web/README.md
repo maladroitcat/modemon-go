@@ -33,13 +33,24 @@ metric interaction rule, not a new fixed 250-foot gate.
 
 ## Architecture
 
-`scripts/build_web_runtime.py` reads canonical files only. It exports exact region,
+The engagement update adds collected-state map/list indicators, trading-card
+Modédex details with two illustrative everyday examples for each of 51 species,
+independent quiz mastery badges and a **Badges** navigation view. All progress
+is derived from existing successful attempts, separately for real and Demo
+modes. See [progression, coverage audit and validation](ENGAGEMENT_PROGRESSION.md)
+for badge rules, the coverage audit and screenshots. The owner’s subsequent
+[Healthcare approvals](HEALTHCARE_ENCOUNTERS.md) resolve the original five-species
+coverage gap through twelve existing outdoor associations.
+
+`scripts/build_web_runtime.py` reads canonical files and reviewed access overlays. It exports exact region,
 zone, and neutral geometries; compact POI association points/context/access flags;
 all 51 Modédex entries; all 17 curated destinations; explicit region precedence;
 source SHA-256 digests and deterministic content/gameplay versions. No raw cells, contribution
 tables, Python runtime, backend, player account, or geolocation history ships.
 The version includes the explicit `public-anchors-v1` bridge policy; bump that
-policy when changing eligibility, and bump gameplay rules when changing scoring.
+policy when changing base eligibility, and bump gameplay rules when changing scoring.
+Individually approved Signature and Healthcare associations use separate versioned
+overlays. Healthcare approvals are dated so historical rotations do not change.
 
 `content_version` tracks the full canonical input bytes. The gameplay fingerprint
 excludes only Modédex `dex_entry` prose, so editorial fixes cannot reroll daily
@@ -87,8 +98,9 @@ exact. The Python requirements pin Fiona 1.9.6 for GeoPandas 0.14 compatibility.
 Sensitive, age-restricted, private, closed, unknown/rejected curated, unclassified,
 and habitat-review candidates are excluded. Public-facing accessibility evidence
 or an approved curated destination is required. No guarantee of current hours or
-safe approach is implied. Clinical facilities and WakeMed are not destinations in
-this build. **RAL-05 has zero encounters intentionally**, pending a safe anchor.
+safe approach is implied. Clinical interiors remain excluded. The owner-approved
+Student Health Center exception is only an outdoor public association with an
+explicit real-mode public-approach acknowledgment. **RAL-05 remains empty**.
 
 ## Quizzes And Persistence
 
@@ -141,9 +153,10 @@ Exact species IDs/names, eligible POI IDs/names, daily encounters, habitat cover
 and individually withheld forms are recorded in [coverage.json](coverage.json),
 including a 32-day rotation audit. All 51 entries now have quiz support; all twelve Signatures have
 real placement eligibility and all twelve are available over the Demo rotation.
-Five Healthcare-only ordinary forms have no suitable public anchors under the
-conservative access policy. Eight of nine habitats appeared; Healthcare did not.
-There are **551** eligible association anchors across seven regions. Today's
+The twelve [owner-approved Healthcare associations](HEALTHCARE_ENCOUNTERS.md)
+provide eligible anchors for all five Healthcare-only ordinary forms. Both Hemp
+Farmacy records remain excluded. All nine habitats appear in the updated audit.
+There are **563** eligible association anchors across seven regions. Today's
 rotation is not promised to expose every enabled species or every habitat.
 
 **51 approved creature assets and the local logo.** Full-resolution masters are
