@@ -33,6 +33,13 @@ metric interaction rule, not a new fixed 250-foot gate.
 
 ## Architecture
 
+The engagement update adds collected-state map/list indicators, trading-card
+Modédex details with two illustrative everyday examples for each of 51 species,
+independent quiz mastery badges and a **Badges** navigation view. All progress
+is derived from existing successful attempts, separately for real and Demo
+modes. See [progression, coverage audit and validation](ENGAGEMENT_PROGRESSION.md)
+for badge rules, the eight currently blocked completion goals and screenshots.
+
 `scripts/build_web_runtime.py` reads canonical files only. It exports exact region,
 zone, and neutral geometries; compact POI association points/context/access flags;
 all 51 Modédex entries; all 17 curated destinations; explicit region precedence;
