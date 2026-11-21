@@ -45,6 +45,13 @@ export type Poi = {
   special_destination: boolean;
   current_status: string;
   access_status: string;
+  public_approach_approval?: {
+    version: string;
+    effective_date: string;
+    previous_exclusions: string[];
+    previous_association_note: string;
+    previous_access_status: string;
+  };
 };
 export type Runtime = {
   data_version: string;
@@ -59,6 +66,13 @@ export type Runtime = {
   pois: Poi[];
   precedence: { winner: string; loser: string }[];
   habitats: Record<string, string>;
+  healthcare_approvals?: {
+    version: string;
+    approval_date: string;
+    scope: string;
+    approved_poi_ids: string[];
+    source_hashes: Record<string, string>;
+  };
   signatures?: {
     version: string;
     schedule: { period_days: number; epoch: string };
@@ -292,7 +306,10 @@ export function buildWorld(
 ): Spawn[] {
   const salt = `${rules.version}:${data.data_version}:${date}`;
   const candidates = data.pois
-    .filter((p) => p.eligible)
+    // A dated access approval must not change historical rotations or their
+    // saved encounters. From that date onward it uses the normal world rules.
+    .filter((p) => p.eligible &&
+      (!p.public_approach_approval || date >= p.public_approach_approval.effective_date))
     .map((p) => ({ p, rank: hash(`${salt}:${p.id}`) }))
     .sort((a, b) => a.rank - b.rank || a.p.id.localeCompare(b.p.id));
   const accepted: Spawn[] = [];

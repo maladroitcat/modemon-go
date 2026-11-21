@@ -129,7 +129,8 @@ test("legacy history, mastery accumulation, Hoarder transition and one nonblocki
   await expect(page.locator(".achievement-notice")).toHaveCount(0);
   await page.getByRole("button", { name: "Badges", exact: true }).click();
   await expect(page.getByRole("article", { name: "Hoarder", exact: true })).toContainText("4 of 5");
-  await expect(page.getByRole("article", { name: "Model Master", exact: true })).toContainText("no eligible public encounter locations");
+  await expect(page.getByRole("article", { name: "Model Master", exact: true })).not.toContainText("no eligible public encounter locations");
+  await expect(page.locator(".coverage-note")).toHaveCount(0);
   await page.getByRole("button", { name: "Map", exact: true }).click();
   await enter(page);
   await complete(page, "expert");

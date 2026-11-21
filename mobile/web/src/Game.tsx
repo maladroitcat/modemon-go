@@ -304,6 +304,8 @@ export default function App() {
     [phase, setPhase] = useState<"nearby" | "scene" | "info" | "quiz">(
       "nearby",
     );
+  const requiresPublicApproach = !!selected &&
+    (selected.rarity === "signature" || !!selected.poi.public_approach_approval);
   const [feedback, setFeedback] = useState<number | null>(null),
     [dexId, setDexId] = useState<string | null>(null);
   const [celebrations, setCelebrations] = useState<Achievement[]>([]);
@@ -515,7 +517,7 @@ export default function App() {
   function enterEncounter() {
     if (
       selected &&
-      (mode === "demo" || selected.rarity !== "signature" || publicApproach) &&
+      (mode === "demo" || !requiresPublicApproach || publicApproach) &&
       interaction(selected, position, clock).allowed &&
       !storageError &&
       save(startAttempt(progress, selected, data))
@@ -885,7 +887,7 @@ export default function App() {
                 {extraLocationSafety(selected.poi) && (
                   <p>{extraLocationSafety(selected.poi)}</p>
                 )}
-                {selected.rarity === "signature" && mode === "real" && (
+                {requiresPublicApproach && mode === "real" && (
                   <label className="safety-check">
                     <input
                       type="checkbox"
@@ -927,7 +929,7 @@ export default function App() {
                 <button
                   disabled={
                     !gate?.allowed || !!storageError ||
-                    (mode === "real" && selected.rarity === "signature" && !publicApproach)
+                    (mode === "real" && requiresPublicApproach && !publicApproach)
                   }
                   onClick={enterEncounter}
                 >

@@ -11,8 +11,10 @@ from shapely.geometry import Point, shape
 
 if __name__ == '__main__':
     from signature_placements import build_signatures
+    from healthcare_approvals import apply_healthcare_approvals
 else:
     from scripts.signature_placements import build_signatures
+    from scripts.healthcare_approvals import apply_healthcare_approvals
 
 ROOT = Path(__file__).resolve().parents[1]
 DESTINATION = ROOT / 'mobile/web/src/data/runtime.json'
@@ -129,6 +131,10 @@ def build_payload(root=ROOT):
             special_destination=human.get('selection_status') == 'primary',
             current_status=human.get('current_status') or 'not_human_verified',
             access_status=scores[p['poi_id']]['candidate_access_status']))
+    # Like Signature associations, reviewed access additions are a separately
+    # versioned overlay. Never rewrite the legacy compatibility alias or hash
+    # new approvals into the base seed, which would reroll every saved encounter.
+    anchors, healthcare = apply_healthcare_approvals(root, anchors)
     def compact(feature, fields):
         return dict(type='Feature', geometry=feature['geometry'],
                     properties={k: feature['properties'][k] for k in fields})
@@ -141,6 +147,7 @@ def build_payload(root=ROOT):
         zones=[compact(z, ['zone_id', 'region_id', 'habitat_primary', 'dominant_secondary_habitat']) for z in zones],
         neutral=[compact(n, ['region_id']) for n in neutral],
         precedence=precedence, habitats=HABITATS, pois=sorted(anchors, key=lambda p: p['id']),
+        healthcare_approvals=healthcare,
         signatures=build_signatures(root, dex, anchors, curation, region_shapes,
                                     precedence, project, unit_to_m),
         art=dict(approved={key: True for key in json.loads((root / 'assets/artwork_sources.json').read_text())['records']
@@ -149,6 +156,7 @@ def build_payload(root=ROOT):
             or (root / WORLD_IDENTITY).read_bytes() != identity_bytes):
         raise RuntimeError('Canonical input changed during build')
     result['source_hashes'].update(result['signatures']['source_hashes'])
+    result['source_hashes'].update(healthcare['source_hashes'])
     result['source_hashes'].update({path: hashlib.sha256((root / path).read_bytes()).hexdigest()
                                     for path in ('assets/artwork_sources.json', 'mobile/web/src/data/art.json')})
     result['content_version'] = hashlib.sha256(json.dumps(result['source_hashes'], sort_keys=True).encode()).hexdigest()[:16]

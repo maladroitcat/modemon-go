@@ -130,12 +130,17 @@ test("mode isolation, serialization, corruption protections and immutable world 
 });
 
 test("coverage audit faithfully warns for blocked goals without reducing requirements", () => {
-  const missing = speciesWithoutAnchors(data);
+  // Keep the original blocked-world test. Only explicitly approved locations
+  // are disabled to reconstruct its pre-approval eligibility.
+  const previous = { ...data, pois: data.pois.map((p) => p.public_approach_approval ? { ...p, eligible: false } : p) };
+  const missing = speciesWithoutAnchors(previous);
   assert.deepEqual([...missing].sort(), ["anomaly_vitals", "detector_disease", "extractor_medical", "forecast_patient", "scheduler_hospital"]);
-  const blocked = calculateAchievements(emptyProgress(), data).filter((a) => a.unavailable);
+  const blocked = calculateAchievements(emptyProgress(), previous).filter((a) => a.unavailable);
   assert.deepEqual(blocked.map((a) => a.id).sort(), ["model-master", "master-scholar", "rare-collector",
     "family-anomaly", "family-detector", "family-extractor", "family-forecast", "family-scheduler"].sort());
   assert.equal(find(emptyProgress(), "model-master").total, 51);
+  assert.equal(speciesWithoutAnchors(data).size, 0);
+  assert.equal(calculateAchievements(emptyProgress(), data).filter((a) => a.unavailable).length, 0);
 });
 
 test("canonical catalog extensions automatically enter overall, family and rarity requirements", () => {
